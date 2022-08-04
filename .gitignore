@@ -3,6 +3,8 @@ node_modules
 
 # next.js
 .next
+.build
+.config
 
 # misc
 .DS_Store
