@@ -21,6 +21,7 @@ export const {
       ...mauve, //headings
     },
     space: {
+      none: '0px',
       'spacing-01': '2px',
       'spacing-02': '4px',
       'spacing-03': '8px',
