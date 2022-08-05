@@ -24,3 +24,10 @@ h5,
 h6 {
   margin: 0;
 }
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
