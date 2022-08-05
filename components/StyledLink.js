@@ -1,6 +1,6 @@
 import { styled } from "../stitches.config.js";
 
-import ExternalLinkLineIcon from 'remixicon-react/ExternalLinkLineIcon';
+import ExternalLinkLineIcon from "remixicon-react/ExternalLinkLineIcon";
 
 const Panel = styled("div", {
   display: "flex",
@@ -8,34 +8,33 @@ const Panel = styled("div", {
   justifyContent: "space-between",
   padding: "$spacing-03",
 
-  '&:hover': {
-    backgroundColor: '$violet3',
+  "&:hover": {
+    backgroundColor: "$violet3",
   },
-  '&:active': {
-    backgroundColor: '$violet4',
+  "&:active": {
+    backgroundColor: "$violet4",
   },
-
 });
 
 const FlexWrapper = styled("div", {
   display: "flex",
-})
+});
 
 const ImageContainer = styled("div", {
-  display: 'flex',
+  display: "flex",
   width: "64px",
   height: "64px",
   paddingRight: "$spacing-03",
 
-  '@bp1': {
+  "@bp1": {
     paddingRight: "$spacing-05",
-  }
-})
+  },
+});
 
 const FlexContainer = styled("div", {
-  display: 'flex',
+  display: "flex",
   alignItems: "center",
-})
+});
 
 const Title = styled("h5", {
   fontSize: "$header-5",
@@ -45,15 +44,15 @@ const Title = styled("h5", {
   color: "$mauve12",
   marginTop: "$none",
   marginBottom: "$spacing-01",
-})
+});
 
 const Description = styled("p", {
-  fontSize: "$body",
+  fontSize: "$subtitle",
   fontWeight: "$regular",
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
   color: "$gray11",
-})
+});
 
 const Icon = styled("div", {
   display: "flex",
@@ -61,15 +60,16 @@ const Icon = styled("div", {
   justifyContent: "center",
   padding: "$spacing-03",
   // backgroundColor: "$violet5",
-})
-
+});
 
 function StyledLink(props) {
   return (
     <a href={props.href} target="_blank">
       <Panel>
         <FlexWrapper>
-          <ImageContainer><img src={props.src}></img></ImageContainer>
+          <ImageContainer>
+            <img src={props.src}></img>
+          </ImageContainer>
           <FlexContainer>
             <div>
               <Title>{props.title}</Title>
@@ -78,11 +78,13 @@ function StyledLink(props) {
           </FlexContainer>
         </FlexWrapper>
         <FlexContainer>
-          <Icon><ExternalLinkLineIcon /></Icon>
+          <Icon>
+            <ExternalLinkLineIcon />
+          </Icon>
         </FlexContainer>
       </Panel>
-    </a >
-  )
+    </a>
+  );
 }
 
 export default StyledLink;

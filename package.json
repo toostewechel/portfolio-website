@@ -3,12 +3,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fm": "prettier --write ."
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.8",
     "next": "^12.2.3",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remixicon-react": "^1.0.0"
