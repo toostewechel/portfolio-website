@@ -20,7 +20,7 @@ const ImageContainer = styled("div", {
   },
 });
 
-const Title = styled("h5", {
+const Title = styled("h3", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
