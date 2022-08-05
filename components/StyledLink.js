@@ -22,12 +22,16 @@ const FlexWrapper = styled("div", {
 
 const ImageContainer = styled("div", {
   display: "flex",
-  width: "64px",
-  height: "64px",
+  width: "48px",
+  height: "48px",
   paddingRight: "$spacing-03",
 
   "@bp1": {
-    paddingRight: "$spacing-05",
+    paddingRight: "$spacing-04",
+    width: "64px",
+    height: "64px",
+
+
   },
 });
 
@@ -42,8 +46,7 @@ const Title = styled("h5", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-  marginTop: "$none",
-  marginBottom: "$spacing-01",
+
 });
 
 const Description = styled("p", {
@@ -59,7 +62,7 @@ const Icon = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   padding: "$spacing-03",
-  // backgroundColor: "$violet5",
+  color: "$violet11",
 });
 
 function StyledLink(props) {
