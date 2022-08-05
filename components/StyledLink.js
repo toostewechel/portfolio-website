@@ -30,8 +30,6 @@ const ImageContainer = styled("div", {
     paddingRight: "$spacing-04",
     width: "64px",
     height: "64px",
-
-
   },
 });
 
@@ -46,7 +44,7 @@ const Title = styled("h5", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-
+  marginBottom: "$spacing-01",
 });
 
 const Description = styled("p", {
@@ -57,12 +55,19 @@ const Description = styled("p", {
   color: "$gray11",
 });
 
-const Icon = styled("div", {
+const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   padding: "$spacing-03",
   color: "$violet11",
+  width: "18px",
+  height: "18px",
+
+  '@bp1': {
+    width: "24px",
+    height: "24px",
+  }
 });
 
 function StyledLink(props) {
@@ -81,9 +86,9 @@ function StyledLink(props) {
           </FlexContainer>
         </FlexWrapper>
         <FlexContainer>
-          <Icon>
+          <DecorativeIcon>
             <ExternalLinkLineIcon />
-          </Icon>
+          </DecorativeIcon>
         </FlexContainer>
       </Panel>
     </a>
