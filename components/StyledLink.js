@@ -23,10 +23,10 @@ const FlexWrapper = styled("div", {
 const ImageContainer = styled("div", {
   display: "flex",
   size: "$7",
-  paddingRight: "$spacing-03",
+  pr: "$spacing-03",
 
   "@bp1": {
-    paddingRight: "$spacing-04",
+    pr: "$spacing-04",
     size: "$8",
   },
 });

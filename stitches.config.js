@@ -47,7 +47,7 @@ export const {
       lg: "1.125rem",
       base: "1rem",
       sm: "0.875rem",
-      xs: "0,75rem",
+      xs: "0.75rem",
     },
     fonts: {
       header: "'Vollkorn', serif",
@@ -60,8 +60,9 @@ export const {
       "extra-bold": 800,
     },
     lineHeights: {
-      header: 1.2,
-      body: 1.5,
+      large: 1.75,
+      base: 1.5,
+      compact: 1.25,
       none: 1,
     },
     letterSpacings: {
@@ -121,6 +122,9 @@ export const {
     my: (value) => ({
       marginTop: value,
       marginBottom: value,
+    }),
+    pr: (value) => ({
+      paddingRight: value,
     }),
     size: (value) => ({
       width: value,

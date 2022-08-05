@@ -1,32 +1,33 @@
 import { styled } from "../stitches.config.js";
 import StyledLink from "../components/StyledLink.js";
+import ListItem from "../components/ListItem.js";
 
 function HomePage() {
   return (
     <div>
-      <StyledLink
-        href="https://www.figma.com/"
-        src="/logo/figma-logo.png"
-        title="Figma"
-        description="The collaborative interface design tool"
+      <ListItem
+        src="/logo/university-twente-logo.png"
+        title="University of Twente"
+        subtitle="Master Industrial Design Engineering"
+        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+        duration="2011 - 2015"
+        location="Enschede, Netherlands"
       />
-      <StyledLink
-        href="https://www.figma.com/"
-        src="/logo/spline3d-logo.png"
-        title="Spline 3D"
-        description="Design tool for 3D web browser experiences"
+      <ListItem
+        src="/logo/university-twente-logo.png"
+        title="University of Twente"
+        subtitle="Master Industrial Design Engineering"
+        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+        duration="2011 - 2015"
+        location="Enschede, Netherlands"
       />
-      <StyledLink
-        href="https://www.figma.com/"
-        src="/logo/adobe-photoshop-logo.png"
-        title="Adobe Illustrator"
-        description="Pixel based graphical design tool"
-      />
-      <StyledLink
-        href="https://www.figma.com/"
-        src="/logo/adobe-illustrator-logo.png"
-        title="Adobe Photoshop"
-        description="Vector based graphical design tool"
+      <ListItem
+        src="/logo/university-twente-logo.png"
+        title="University of Twente"
+        subtitle="Master Industrial Design Engineering"
+        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+        duration="2011 - 2015"
+        location="Enschede, Netherlands"
       />
     </div>
   );
