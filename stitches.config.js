@@ -71,7 +71,16 @@ export const {
       "tracking-wide": "0.025em",
       "tracking-wider": "0.05em",
     },
-    sizes: {},
+    sizes: {
+      1: "2px",
+      2: "4px",
+      3: "8px",
+      4: "16px",
+      5: "24px",
+      6: "32px",
+      7: "48px",
+      8: "64px",
+    },
     borderWidths: {},
     borderStyles: {},
     radii: {},
@@ -87,5 +96,35 @@ export const {
   },
   utils: {
     marginX: (value) => ({ marginLeft: value, marginRight: value }),
+    mb: (value) => ({
+      marginBottom: value,
+    }),
+    m: (value) => ({
+      margin: value,
+    }),
+    mt: (value) => ({
+      marginTop: value,
+    }),
+    mr: (value) => ({
+      marginRight: value,
+    }),
+    mb: (value) => ({
+      marginBottom: value,
+    }),
+    ml: (value) => ({
+      marginLeft: value,
+    }),
+    mx: (value) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    size: (value) => ({
+      width: value,
+      height: value,
+    }),
   },
 });
