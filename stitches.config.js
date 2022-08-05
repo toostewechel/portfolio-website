@@ -39,17 +39,15 @@ export const {
     },
     // Based on Major Third Type Scale, with 16px as base size
     fontSizes: {
-      "header-1": "3.052rem",
-      "header-2": "2.0441rem",
-      "header-3": "1.953rem",
-      "header-4": "1.563rem",
-      "header-5": "1.25rem",
-
-      body: "1.0625rem",
-      subtitle: "0.95rem",
-
-      button: "1rem",
-      caption: "0,75rem",
+      "5xl": "3.052rem",
+      "4xl": "2.0441rem",
+      "3xl": "1.953rem",
+      "2xl": "1.563rem",
+      xl: "1.25rem",
+      lg: "1.125rem",
+      base: "1rem",
+      sm: "0.875rem",
+      xs: "0,75rem",
     },
     fonts: {
       header: "'Vollkorn', serif",
