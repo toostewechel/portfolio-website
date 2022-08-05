@@ -1,5 +1,18 @@
-html, body {
-  font-size: 16px;
+html,
+body {
+  font-size: 14px;
+  @media screen and (min-width: 460px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 640px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 a,
@@ -14,6 +27,11 @@ p {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
