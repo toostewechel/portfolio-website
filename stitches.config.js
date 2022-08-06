@@ -46,8 +46,8 @@ export const {
       xl: "1.25rem",
       lg: "1.125rem",
       base: "1rem",
-      sm: "0.875rem",
-      xs: "0.75rem",
+      sm: "0.95rem",
+      xs: "0.80rem",
     },
     fonts: {
       header: "'Vollkorn', serif",
