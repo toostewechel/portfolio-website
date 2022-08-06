@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import StackLineIcon from "remixicon-react/StackLineIcon";
@@ -21,15 +21,15 @@ const HeaderPanel = styled("div", {
   padding: "$spacing-02",
   borderBottom: "solid 1px $gray6",
 
-  '@bp1': {
+  "@bp1": {
     padding: "$spacing-03",
-  }
-})
+  },
+});
 
 const Flex = styled("div", {
   display: "flex",
   minWidth: "0",
-})
+});
 
 const DecorativeIcon = styled("div", {
   display: "flex",
@@ -40,10 +40,10 @@ const DecorativeIcon = styled("div", {
   height: "24px",
   color: "$blue11",
 
-  '@bp1': {
+  "@bp1": {
     pr: "$spacing-03",
-  }
-})
+  },
+});
 
 const Title = styled("h3", {
   alignSelf: "center",
@@ -67,32 +67,32 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   '&[data-state="closed"]': {
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   '&[data-state="open"]': {
-    backgroundColor: "$violet3"
+    backgroundColor: "$violet3",
   },
-  '&:hover': {
-    backgroundColor: "$violet4"
+  "&:hover": {
+    backgroundColor: "$violet4",
   },
-  '&:active': {
-    backgroundColor: "$violet5"
+  "&:active": {
+    backgroundColor: "$violet5",
   },
-  '&:focus': {
+  "&:focus": {
     outlineColor: "$violet11",
-  }
-})
+  },
+});
 
-const Skill = styled('div', {
-  backgroundColor: '$blue3',
+const Skill = styled("div", {
+  backgroundColor: "$blue3",
   borderRadius: "4px",
   borderLeft: "4px solid $blue11",
   padding: "$spacing-03",
   margin: "$spacing-03 $spacing-02",
 
-  '@bp1': {
+  "@bp1": {
     margin: "$spacing-03",
-  }
+  },
 });
 
 const Label = styled("p", {
@@ -101,8 +101,7 @@ const Label = styled("p", {
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
   color: "$blue11",
-})
-
+});
 
 function SkillsCore(props) {
   const [open, setOpen] = React.useState(true);
@@ -116,7 +115,9 @@ function SkillsCore(props) {
           <Title>5 Core Skills</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>{open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}</IconButton>
+          <IconButton>
+            {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
+          </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
       <Skill>
@@ -137,8 +138,7 @@ function SkillsCore(props) {
         </Skill>
       </CollapsibleContent>
     </Collapsible>
-  )
-};
-
+  );
+}
 
 export default SkillsCore;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
@@ -21,29 +21,28 @@ const HeaderPanel = styled("div", {
   padding: "$spacing-02",
   borderBottom: "solid 1px $gray6",
 
-  '@bp1': {
+  "@bp1": {
     padding: "$spacing-03",
-  }
-})
+  },
+});
 
 const Flex = styled("div", {
   display: "flex",
   minWidth: "0px",
-})
+});
 
 const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   pr: "$spacing-02",
-  width: "24px",
-  height: "24px",
+  size: "$5",
   color: "$violet11",
 
-  '@bp1': {
+  "@bp1": {
     pr: "$spacing-03",
-  }
-})
+  },
+});
 
 const Title = styled("h3", {
   alignSelf: "center",
@@ -67,32 +66,32 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   '&[data-state="closed"]': {
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   '&[data-state="open"]': {
-    backgroundColor: "$violet3"
+    backgroundColor: "$violet3",
   },
-  '&:hover': {
-    backgroundColor: "$violet4"
+  "&:hover": {
+    backgroundColor: "$violet4",
   },
-  '&:active': {
-    backgroundColor: "$violet5"
+  "&:active": {
+    backgroundColor: "$violet5",
   },
-  '&:focus': {
+  "&:focus": {
     outlineColor: "$violet11",
-  }
-})
+  },
+});
 
-const Skill = styled('div', {
-  backgroundColor: '$violet3',
+const Skill = styled("div", {
+  backgroundColor: "$violet3",
   borderRadius: "4px",
   borderLeft: "4px solid $violet11",
   padding: "$spacing-03",
   margin: "$spacing-03 $spacing-02",
 
-  '@bp1': {
+  "@bp1": {
     margin: "$spacing-03",
-  }
+  },
 });
 
 const Label = styled("p", {
@@ -101,8 +100,7 @@ const Label = styled("p", {
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
   color: "$violet11",
-})
-
+});
 
 function SkillsLearning(props) {
   const [open, setOpen] = React.useState(false);
@@ -116,7 +114,9 @@ function SkillsLearning(props) {
           <Title>3 Skills Learning</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>{open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}</IconButton>
+          <IconButton>
+            {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
+          </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
       <Skill>
@@ -131,8 +131,7 @@ function SkillsLearning(props) {
         </Skill>
       </CollapsibleContent>
     </Collapsible>
-  )
-};
-
+  );
+}
 
 export default SkillsLearning;
