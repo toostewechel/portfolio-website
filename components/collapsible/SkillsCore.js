@@ -35,10 +35,14 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  pr: "$spacing-03",
+  pr: "$spacing-02",
   width: "24px",
   height: "24px",
   color: "$blue11",
+
+  '@bp1': {
+    pr: "$spacing-03",
+  }
 })
 
 const Title = styled("h3", {
@@ -84,7 +88,11 @@ const Skill = styled('div', {
   borderRadius: "4px",
   borderLeft: "4px solid $blue11",
   padding: "$spacing-03",
-  margin: "$spacing-03"
+  margin: "$spacing-03 $spacing-02",
+
+  '@bp1': {
+    margin: "$spacing-03",
+  }
 });
 
 const Label = styled("p", {
