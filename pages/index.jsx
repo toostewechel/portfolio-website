@@ -42,7 +42,41 @@ function HomePage() {
       </div>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
-          <Title>My software stack</Title>
+          <Title>Experience & Education</Title>
+          <Paragraph>
+            I can effectively manage the product creation process throughout the
+            different product development stages, from initial concept to
+            product launch.
+          </Paragraph>
+        </div>
+        <ListItem
+          src="/logo/university-twente-logo.png"
+          title="University of Twente"
+          subtitle="Master Industrial Design Engineering"
+          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+          duration="2015 - 2018"
+          location="Enschede, Netherlands"
+        />
+        <ListItem
+          src="/logo/university-twente-logo.png"
+          title="University of Twente"
+          subtitle="Master Industrial Design Engineering"
+          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+          duration="2015 - 2018"
+          location="Enschede, Netherlands"
+        />
+        <ListItem
+          src="/logo/university-twente-logo.png"
+          title="University of Twente"
+          subtitle="Master Industrial Design Engineering"
+          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
+          duration="2015 - 2018"
+          location="Enschede, Netherlands"
+        />
+      </div>
+      <div style={{ marginTop: "32px" }}>
+        <div style={{ padding: "4px" }}>
+          <Title>Software Stack</Title>
           <Paragraph>
             I mainly focus on (learning) industry leading tools and frameworks
             to streamline and optimize my design and development workflow.

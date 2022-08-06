@@ -5,7 +5,7 @@ import MapPin2LineIcon from "remixicon-react/MapPin2LineIcon";
 const Panel = styled("div", {
   display: "flex",
   flexDirection: "row",
-  padding: "$spacing-03",
+  padding: "$spacing-04 $spacing-03",
   borderBottom: "1px solid $gray6",
 });
 
@@ -51,12 +51,13 @@ const Description = styled("p", {
   fontWeight: "$regular",
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
-  lineHeight: "$compact",
+  lineHeight: "$base",
   color: "$gray12",
   maxWidth: "640px",
 
   "@bp1": {
     fontSize: "$base",
+    lineHeight: "$base",
   },
 });
 
