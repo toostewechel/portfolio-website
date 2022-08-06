@@ -3,6 +3,7 @@ import ListItem from "../components/ListItem.js";
 import SkillsCore from "../components/collapsible/SkillsCore.js";
 import SkillsLearning from "../components/collapsible/SkillsLearning.js";
 import StyledLink from "../components/StyledLink.js";
+import ProfessionalAchievements from "../components/tabs/ProfessionalAchievements.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -49,30 +50,7 @@ function HomePage() {
             product launch.
           </Paragraph>
         </div>
-        <ListItem
-          src="/logo/university-twente-logo.png"
-          title="University of Twente"
-          subtitle="Master Industrial Design Engineering"
-          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-          duration="2015 - 2018"
-          location="Enschede, Netherlands"
-        />
-        <ListItem
-          src="/logo/university-twente-logo.png"
-          title="University of Twente"
-          subtitle="Master Industrial Design Engineering"
-          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-          duration="2015 - 2018"
-          location="Enschede, Netherlands"
-        />
-        <ListItem
-          src="/logo/university-twente-logo.png"
-          title="University of Twente"
-          subtitle="Master Industrial Design Engineering"
-          description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-          duration="2015 - 2018"
-          location="Enschede, Netherlands"
-        />
+       <ProfessionalAchievements />
       </div>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
