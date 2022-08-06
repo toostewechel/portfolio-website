@@ -2,17 +2,28 @@ import { styled } from "../stitches.config.js";
 
 import ExternalLinkLineIcon from "remixicon-react/ExternalLinkLineIcon";
 
+const Link = styled("a", {
+  outlineOffset: "2px",
+
+  "&:focus": {
+    outlineColor: "$violet11",
+  },
+});
+
 const Panel = styled("div", {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
-  padding: "$spacing-03",
+  padding: "$spacing-03 $spacing-02",
 
   "&:hover": {
     backgroundColor: "$violet3",
   },
   "&:active": {
     backgroundColor: "$violet4",
+  },
+  "@bp1": {
+    padding: "$spacing-03",
   },
 });
 
@@ -52,7 +63,6 @@ const Description = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  letterSpacing: "$tracking-normal",
   color: "$gray11",
 
   "@bp1": {
@@ -64,10 +74,9 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "$spacing-03",
+  padding: "$spacing-02",
   color: "$violet11",
-  width: "18px",
-  height: "18px",
+  size: "$4",
 
   "@bp1": {
     width: "24px",
@@ -77,7 +86,7 @@ const DecorativeIcon = styled("div", {
 
 function StyledLink(props) {
   return (
-    <a href={props.href} target="_blank">
+    <Link href={props.href} target="_blank">
       <Panel>
         <FlexWrapper>
           <ImageContainer>
@@ -96,7 +105,7 @@ function StyledLink(props) {
           </DecorativeIcon>
         </FlexContainer>
       </Panel>
-    </a>
+    </Link>
   );
 }
 

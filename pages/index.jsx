@@ -1,15 +1,72 @@
 import { styled } from "../stitches.config.js";
-import StyledLink from "../components/StyledLink.js";
 import ListItem from "../components/ListItem.js";
-import SkillsCore from "../components/collapsible/SkillsCore.js"
-import SkillsLearning from "../components/collapsible/SkillsLearning.js"
+import SkillsCore from "../components/collapsible/SkillsCore.js";
+import SkillsLearning from "../components/collapsible/SkillsLearning.js";
+import StyledLink from "../components/StyledLink.js";
 
+const Title = styled("h2", {
+  fontSize: "$3xl",
+  fontWeight: "$extra-bold",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tighter",
+  color: "$mauve12",
+  mb: "$spacing-03",
+
+  "@bp1": {
+    fontSize: "$4xl",
+    mb: "$spacing-02",
+  },
+});
+
+const Paragraph = styled("p", {
+  fontSize: "$base",
+  fontWeight: "$regular",
+  fontFamily: "$default",
+  lineHeight: "$base",
+  letterSpacing: "$tracking-normal",
+  color: "$gray12",
+  maxWidth: "640px",
+  mb: "$spacing-07",
+
+  "@bp1": {
+    fontSize: "$lg",
+  },
+});
 
 function HomePage() {
   return (
     <div>
-      <SkillsCore />
-      <SkillsLearning />
+      <div>
+        <SkillsCore />
+        <SkillsLearning />
+      </div>
+      <div style={{ marginTop: "32px" }}>
+        <div style={{ padding: "4px" }}>
+          <Title>My software stack</Title>
+          <Paragraph>
+            I mainly focus on (learning) industry leading tools and frameworks
+            to streamline and optimize my design and development workflow.
+          </Paragraph>
+        </div>
+        <StyledLink
+          href="https://twitter.com/home"
+          src="/logo/figma-logo.png"
+          title="Figma"
+          description="The collaborative interface design tool"
+        />
+        <StyledLink
+          href="https://twitter.com/home"
+          src="/logo/spline3d-logo.png"
+          title="Spline 3D"
+          description="The collaborative interface design tool"
+        />
+        <StyledLink
+          href="https://twitter.com/home"
+          src="/logo/adobe-illustrator-logo.png"
+          title="Adobe Illustrator"
+          description="The collaborative interface design tool"
+        />
+      </div>
     </div>
   );
 }
