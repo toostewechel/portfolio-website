@@ -50,7 +50,7 @@ function HomePage() {
             product launch.
           </Paragraph>
         </div>
-       <ProfessionalAchievements />
+        <ProfessionalAchievements />
       </div>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>

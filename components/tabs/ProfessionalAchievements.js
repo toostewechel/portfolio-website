@@ -1,42 +1,42 @@
-import * as TabsPrimitive from '@radix-ui/react-tabs';
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { styled } from "../../stitches.config.js";
 import ListItem from "../../components/ListItem.js";
 
 const StyledTabs = styled(TabsPrimitive.Root, {
   display: "flex",
-  flexDirection: 'column',
+  flexDirection: "column",
   width: "100%",
-})
+});
 
 const StyledList = styled(TabsPrimitive.List, {
   display: "flex",
   borderBottom: "1px solid $gray6",
   mb: "$spacing-02",
-})
+});
 
 const StyledTrigger = styled(TabsPrimitive.Trigger, {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   fontFamily: "header",
   fontWeight: "$semi-bold",
   fontSize: "$base",
   padding: "$spacing-04",
   color: "$gray11",
-  '&:hover': { color: "$violet11" },
+  "&:hover": { color: "$violet11" },
   '&[data-state="active"]': {
     color: "$violet11",
     fontWeight: "$bold",
-    boxShadow: 'inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor'
+    boxShadow: "inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor",
   },
   "@bp1": {
     padding: "$spacing-05",
-  }
-})
+  },
+});
 
 const StyledContent = styled(TabsPrimitive.Content, {
   backgroundColor: "white",
-})
+});
 
 // Exports
 export const Tabs = StyledTabs;
@@ -44,10 +44,9 @@ export const TabsList = StyledList;
 export const TabsTrigger = StyledTrigger;
 export const TabsContent = StyledContent;
 
-
 export default () => (
   <Tabs defaultValue="experience">
-    <TabsList >
+    <TabsList>
       <TabsTrigger value="experience">Experience</TabsTrigger>
       <TabsTrigger value="education">Education</TabsTrigger>
       <TabsTrigger value="courses">Courses</TabsTrigger>
@@ -57,7 +56,7 @@ export default () => (
         src="/logo/jouw-omgeving-logo.png"
         title="Jouw Omgeving B.V."
         subtitle="Product Owner"
-        description="Responsible for determining a coherent product vision and strategy, prioritizing and maintaining product roadmap & sprint backlog and overseeing all the development stages."
+        description="Responsible for product vision and strategy, prioritising the roadmap & sprint backlog and overseeing all the development stages from customer wish to production deployment."
         duration="2020 - 2022"
         location="Utrecht, Netherlands"
       />
@@ -65,7 +64,7 @@ export default () => (
         src="/logo/jouw-omgeving-logo.png"
         title="Jouw Omgeving B.V."
         subtitle="Product Designer - UI/UX"
-        description="Responsible for (re)designing platform features, writing user stories and the design and development of a accessible Design System for the Jouw Omgeving platform."
+        description="Responsible for (re)designing platform features, writing user stories and the design off an accessible Design System for the Jouw Omgeving e-Health platform."
         duration="2018 - 2020"
         location="Utrecht, Netherlands"
       />
@@ -114,28 +113,28 @@ export default () => (
     </TabsContent>
     <TabsContent value="courses">
       <ListItem
-        src="/logo/university-twente-logo.png"
-        title="University of Twente"
-        subtitle="Master Industrial Design Engineering"
-        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-        duration="2015 - 2018"
-        location="Enschede, Netherlands"
+        src="/logo/udemy-logo.png"
+        title="Git Complete"
+        subtitle="Mastering the Modern Workflow"
+        description="Learned to build web applications using modern skills, tools and all the best-practices that companies need in developers."
+        duration="16 hours"
+        location="Udemy - Online Learning"
       />
       <ListItem
-        src="/logo/university-twente-logo.png"
-        title="University of Twente"
-        subtitle="Master Industrial Design Engineering"
-        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-        duration="2015 - 2018"
-        location="Enschede, Netherlands"
+        src="/logo/udemy-logo.png"
+        title="Javascript"
+        subtitle="Basics for beginners"
+        description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
+        duration="8 hours"
+        location="Udemy - Online Learning"
       />
       <ListItem
-        src="/logo/university-twente-logo.png"
-        title="University of Twente"
-        subtitle="Master Industrial Design Engineering"
-        description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
-        duration="2015 - 2018"
-        location="Enschede, Netherlands"
+        src="/logo/udemy-logo.png"
+        title="React Front to Back"
+        subtitle="Master React Concepts"
+        description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
+        duration="12 hours"
+        location="Udemy - Online Learning"
       />
     </TabsContent>
   </Tabs>
