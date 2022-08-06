@@ -1,25 +1,18 @@
 import React from 'react';
-import { styled, keyframes } from "../../stitches.config.js";
-import * as Collapsible from "@radix-ui/react-collapsible";
-import CheckboxLineIcon from "remixicon-react/CheckboxLineIcon";
+import { styled } from "../../stitches.config.js";
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
+import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
 
-const open = keyframes({
-  from: { height: 0 },
-  to: { height: 'var(--radix-collapsible-content-height)' },
+const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
+  width: "100%",
 });
 
-const close = keyframes({
-  from: { height: 'var(--radix-collapsible-content-height)' },
-  to: { height: 0 },
-});
-
-const CollapsibleContent = styled(Collapsible.Content, {
-  overflow: 'hidden',
-  '&[data-state="open"]': { animation: `${open} 300ms ease-in` },
-  '&[data-state="closed"]': { animation: `${close} 300ms ease-out` },
-});
+// Exports
+export const Collapsible = StyledCollapsible;
+export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
+export const CollapsibleContent = CollapsiblePrimitive.Content;
 
 const HeaderPanel = styled("div", {
   display: "flex",
@@ -35,6 +28,7 @@ const HeaderPanel = styled("div", {
 
 const Flex = styled("div", {
   display: "flex",
+  minWidth: "0px",
 })
 
 const DecorativeIcon = styled("div", {
@@ -44,7 +38,7 @@ const DecorativeIcon = styled("div", {
   pr: "$spacing-03",
   width: "24px",
   height: "24px",
-  color: "$blue11",
+  color: "$violet11",
 
   '@bp1': {
     pr: "$spacing-02",
@@ -58,10 +52,15 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
 });
 
 const IconButton = styled("button", {
   borderRadius: "4px",
+  outlineOffset: "2px",
+  ml: "$spacing-03",
   padding: "$spacing-02",
   display: "flex",
   alignItems: "center",
@@ -78,14 +77,16 @@ const IconButton = styled("button", {
   },
   '&:active': {
     backgroundColor: "$violet5"
+  },
+  '&:focus': {
+    outlineColor: "$violet11",
   }
-  // Focus & Active state?
 })
 
 const Skill = styled('div', {
-  backgroundColor: '$blue3',
+  backgroundColor: '$violet3',
   borderRadius: "4px",
-  borderLeft: "4px solid $blue11",
+  borderLeft: "4px solid $violet11",
   padding: "$spacing-03",
   margin: "$spacing-03"
 });
@@ -95,39 +96,39 @@ const Label = styled("p", {
   fontWeight: "$regular",
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
-  color: "$blue11",
+  color: "$violet11",
 })
 
-export default () => {
+
+function SkillsLearning(props) {
   const [open, setOpen] = React.useState(false);
-  <Collapsible.Root open={open} onOpenChange={setOpen}>
-    <HeaderPanel>
-      <Flex>
-        <DecorativeIcon>
-          <CheckboxLineIcon></CheckboxLineIcon>
-        </DecorativeIcon>
-        <Title>5 core skills</Title>
-      </Flex>
-      <Collapsible.Trigger asChild>
-        <IconButton>{open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}</IconButton>
-      </Collapsible.Trigger>
-    </HeaderPanel>
-    <Skill>
-      <Label>Discovery process</Label>
-    </Skill>
-    <CollapsibleContent>
+  return (
+    <Collapsible open={open} onOpenChange={setOpen}>
+      <HeaderPanel>
+        <Flex>
+          <DecorativeIcon>
+            <StackOverflowLineIcon></StackOverflowLineIcon>
+          </DecorativeIcon>
+          <Title>3 Skills Learning</Title>
+        </Flex>
+        <CollapsibleTrigger asChild>
+          <IconButton>{open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}</IconButton>
+        </CollapsibleTrigger>
+      </HeaderPanel>
       <Skill>
-        <Label>Problem solving</Label>
+        <Label>Front-End Web Development </Label>
       </Skill>
-      <Skill>
-        <Label>Analytical</Label>
-      </Skill>
-      <Skill>
-        <Label>Agile development (scrum)</Label>
-      </Skill>
-      <Skill>
-        <Label>Software delivery</Label>
-      </Skill>
-    </CollapsibleContent>
-  </Collapsible.Root>
-}
+      <CollapsibleContent>
+        <Skill>
+          <Label>Product Management</Label>
+        </Skill>
+        <Skill>
+          <Label>3D Modelling</Label>
+        </Skill>
+      </CollapsibleContent>
+    </Collapsible>
+  )
+};
+
+
+export default SkillsLearning;

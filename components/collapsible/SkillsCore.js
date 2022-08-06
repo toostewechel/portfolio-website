@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import CheckboxLineIcon from "remixicon-react/CheckboxLineIcon";
+import StackLineIcon from "remixicon-react/StackLineIcon";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
 
@@ -28,6 +28,7 @@ const HeaderPanel = styled("div", {
 
 const Flex = styled("div", {
   display: "flex",
+  minWidth: "0",
 })
 
 const DecorativeIcon = styled("div", {
@@ -38,10 +39,6 @@ const DecorativeIcon = styled("div", {
   width: "24px",
   height: "24px",
   color: "$blue11",
-
-  '@bp1': {
-    pr: "$spacing-02",
-  }
 })
 
 const Title = styled("h3", {
@@ -51,10 +48,15 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
 });
 
 const IconButton = styled("button", {
   borderRadius: "4px",
+  outlineOffset: "2px",
+  ml: "$spacing-03",
   padding: "$spacing-02",
   display: "flex",
   alignItems: "center",
@@ -71,8 +73,10 @@ const IconButton = styled("button", {
   },
   '&:active': {
     backgroundColor: "$violet5"
+  },
+  '&:focus': {
+    outlineColor: "$violet11",
   }
-  // Focus & Active state?
 })
 
 const Skill = styled('div', {
@@ -92,36 +96,36 @@ const Label = styled("p", {
 })
 
 
-function SkillsCollapsible(props) {
-  const [open, setOpen] = React.useState(false);
+function SkillsCore(props) {
+  const [open, setOpen] = React.useState(true);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
           <DecorativeIcon>
-            <CheckboxLineIcon></CheckboxLineIcon>
+            <StackLineIcon></StackLineIcon>
           </DecorativeIcon>
-          <Title>5 core skills</Title>
+          <Title>5 Core Skills</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <IconButton>{open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}</IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
       <Skill>
-        <Label>Discovery process</Label>
+        <Label>Problem Solving</Label>
       </Skill>
       <CollapsibleContent>
         <Skill>
-          <Label>Problem solving</Label>
+          <Label>Design Discovery Process</Label>
         </Skill>
         <Skill>
           <Label>Analytical</Label>
         </Skill>
         <Skill>
-          <Label>Agile development (scrum)</Label>
+          <Label>Agile Development (scrum)</Label>
         </Skill>
         <Skill>
-          <Label>Software delivery</Label>
+          <Label>Software Delivery</Label>
         </Skill>
       </CollapsibleContent>
     </Collapsible>
@@ -129,4 +133,4 @@ function SkillsCollapsible(props) {
 };
 
 
-export default SkillsCollapsible;
+export default SkillsCore;
