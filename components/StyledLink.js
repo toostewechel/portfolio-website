@@ -36,7 +36,7 @@ const ImageContainer = styled("div", {
   size: "$7",
   pr: "$spacing-03",
 
-  "@bp1": {
+  "@bp4": {
     pr: "$spacing-04",
     size: "$8",
   },
@@ -54,7 +54,7 @@ const Title = styled("h3", {
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
 
-  "@bp1": {
+  "@bp4": {
     fontSize: "$xl",
   },
 });
@@ -65,7 +65,7 @@ const Description = styled("p", {
   fontFamily: "$default",
   color: "$gray11",
 
-  "@bp1": {
+  "@bp4": {
     fontSize: "$base",
   },
 });
@@ -78,7 +78,7 @@ const DecorativeIcon = styled("div", {
   color: "$violet11",
   size: "$4",
 
-  "@bp1": {
+  "@bp4": {
     width: "24px",
     height: "24px",
   },
