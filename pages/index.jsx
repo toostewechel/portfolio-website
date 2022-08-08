@@ -1,8 +1,8 @@
 import { styled } from "../stitches.config.js";
 import SkillsCore from "../components/collapsible/SkillsCore.js";
 import SkillsLearning from "../components/collapsible/SkillsLearning.js";
-import ProfessionalAchievements from "../components/tabs/ProfessionalAchievements.js";
-import SoftwareStack from "../components/tabs/SoftwareStack.js";
+import ProfessionalAchievementsTabs from "../components/tabs/ProfessionalAchievementsTabs.js";
+import SoftwareStackTabs from "../components/tabs/SoftwareStackTabs.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -57,7 +57,7 @@ const Flex = styled("div", {
 function HomePage() {
   return (
     <PageLayout>
-      <div style={{ marginBottom: "256px" }}>
+      <div style={{ marginBottom: "256px", marginTop: "256px" }}>
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -89,7 +89,7 @@ function HomePage() {
             product launch.
           </Paragraph>
         </div>
-        <ProfessionalAchievements />
+        <ProfessionalAchievementsTabs />
       </div>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
@@ -99,7 +99,7 @@ function HomePage() {
             to streamline and optimize my design and development workflow.
           </Paragraph>
         </div>
-        <SoftwareStack />
+        <SoftwareStackTabs />
       </div>
     </PageLayout >
   );
