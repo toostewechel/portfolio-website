@@ -4,7 +4,7 @@ import SkillsLearning from "../collapsible/SkillsLearning.js";
 
 const Content = styled("div", {
   gridArea: "cnt",
-  pb: "$spacing-06",
+  pb: "$spacing-05",
 });
 
 const Heading = styled("h2", {
@@ -37,33 +37,27 @@ const Description = styled("p", {
 
 const Image = styled("div", {
   gridArea: "img",
+  justifySelf: "center",
+  padding: "$spacing-03",
 
   "@bp4": {
     justifySelf: "end",
+    padding: "$spacing-06"
   },
 });
 
 const CoreSkillsContainer = styled("div", {
   gridArea: "sc",
-  pr: "$none",
-  pb: "$spacing-03",
-
-  "@bp4": {
-    pr: "$spacing-03",
-  },
 });
 
 const LearningSkillsContainer = styled("div", {
   gridArea: "ls",
-  pl: "$none",
-
-  "@bp4": {
-    pl: "$spacing-03",
-  },
 });
 
 const GridContainer = styled("div", {
   display: "grid",
+  columnGap: "$spacing-06",
+  rowGap: "$spacing-04",
   gridTemplateColumns: "repeat(8, 1fr)",
   gridAutoRows: "minmax(100px, auto)",
   gridTemplateAreas: `
