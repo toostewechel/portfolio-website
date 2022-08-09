@@ -56,7 +56,7 @@ export default () => (
         src="/logo/jouw-omgeving-logo.png"
         title="Jouw Omgeving B.V."
         subtitle="Product Owner"
-        description="Responsible for product vision and strategy, prioritising the roadmap & sprint backlog and overseeing all the development stages from customer wish to production deployment."
+        description="Responsible for product vision & strategy, prioritising the roadmap & sprint backlog and overseeing all the development stages from customer wish to production deployment."
         duration="2020 - 2022"
         location="Utrecht, Netherlands"
       />
@@ -64,7 +64,7 @@ export default () => (
         src="/logo/jouw-omgeving-logo.png"
         title="Jouw Omgeving B.V."
         subtitle="Product Designer - UI/UX"
-        description="Responsible for (re)designing platform features, writing user stories and the design off an accessible Design System for the Jouw Omgeving e-Health platform."
+        description="Responsible for (re)designing platform features, writing user stories and the design of an accessible Design System for the Jouw Omgeving e-Health platform."
         duration="2018 - 2020"
         location="Utrecht, Netherlands"
       />
