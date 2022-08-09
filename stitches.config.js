@@ -126,6 +126,12 @@ export const {
     pr: (value) => ({
       paddingRight: value,
     }),
+    pl: (value) => ({
+      paddingLeft: value,
+    }),
+    pb: (value) => ({
+      paddingBottom: value,
+    }),
     size: (value) => ({
       width: value,
       height: value,

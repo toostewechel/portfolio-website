@@ -4,6 +4,7 @@ import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
+import Skill from "./Skill.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -82,26 +83,6 @@ const IconButton = styled("button", {
   },
 });
 
-const Skill = styled("div", {
-  backgroundColor: "$violet3",
-  borderRadius: "4px",
-  borderLeft: "4px solid $violet11",
-  padding: "$spacing-03",
-  margin: "$spacing-03 $spacing-02",
-
-  "@bp1": {
-    margin: "$spacing-03",
-  },
-});
-
-const Label = styled("p", {
-  fontSize: "$base",
-  fontWeight: "$regular",
-  fontFamily: "$default",
-  letterSpacing: "$tracking-normal",
-  color: "$violet11",
-});
-
 function SkillsLearning(props) {
   const [open, setOpen] = React.useState(false);
   return (
@@ -111,7 +92,7 @@ function SkillsLearning(props) {
           <DecorativeIcon>
             <StackOverflowLineIcon></StackOverflowLineIcon>
           </DecorativeIcon>
-          <Title>3 Skills Learning</Title>
+          <Title>4 Skills Learning</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <IconButton>
@@ -119,16 +100,11 @@ function SkillsLearning(props) {
           </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
-      <Skill>
-        <Label>Front-End Web Development </Label>
-      </Skill>
+      <Skill backgroundColor="violet" label="Front-End Web Development" />
       <CollapsibleContent>
-        <Skill>
-          <Label>Product Management</Label>
-        </Skill>
-        <Skill>
-          <Label>3D Modelling</Label>
-        </Skill>
+        <Skill backgroundColor="violet" label="Product Management" />
+        <Skill backgroundColor="violet" label="3D Modelling" />
+        <Skill backgroundColor="violet" label="Knowledge Management" />
       </CollapsibleContent>
     </Collapsible>
   );

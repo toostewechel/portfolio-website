@@ -4,6 +4,7 @@ import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import StackLineIcon from "remixicon-react/StackLineIcon";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
+import Skill from "./Skill.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -83,28 +84,8 @@ const IconButton = styled("button", {
   },
 });
 
-const Skill = styled("div", {
-  backgroundColor: "$blue3",
-  borderRadius: "4px",
-  borderLeft: "4px solid $blue11",
-  padding: "$spacing-03",
-  margin: "$spacing-03 $spacing-02",
-
-  "@bp1": {
-    margin: "$spacing-03",
-  },
-});
-
-const Label = styled("p", {
-  fontSize: "$base",
-  fontWeight: "$regular",
-  fontFamily: "$default",
-  letterSpacing: "$tracking-normal",
-  color: "$blue11",
-});
-
 function SkillsCore(props) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
@@ -120,22 +101,12 @@ function SkillsCore(props) {
           </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
-      <Skill>
-        <Label>Problem Solving</Label>
-      </Skill>
+      <Skill backgroundColor="blue" label="Problem Solving" />
       <CollapsibleContent>
-        <Skill>
-          <Label>Design Discovery Process</Label>
-        </Skill>
-        <Skill>
-          <Label>Analytical</Label>
-        </Skill>
-        <Skill>
-          <Label>Agile Development (scrum)</Label>
-        </Skill>
-        <Skill>
-          <Label>Software Delivery</Label>
-        </Skill>
+        <Skill backgroundColor="blue" label="Design Discovery Process" />
+        <Skill backgroundColor="blue" label="Analytical" />
+        <Skill backgroundColor="blue" label="Agile Development (scrum)" />
+        <Skill backgroundColor="blue" label="Software Delivery" />
       </CollapsibleContent>
     </Collapsible>
   );
