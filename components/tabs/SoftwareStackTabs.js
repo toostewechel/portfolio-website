@@ -47,12 +47,12 @@ const FlexContainer = styled("div", {
   "@bp3": {
     flexDirection: "row",
     rowGap: "$spacing-04",
-  }
-})
+  },
+});
 
 const Flex = styled("div", {
   width: "100%",
-})
+});
 
 // Exports
 export const Tabs = StyledTabs;

@@ -3,6 +3,7 @@ import SkillsCore from "../components/collapsible/SkillsCore.js";
 import SkillsLearning from "../components/collapsible/SkillsLearning.js";
 import ProfessionalAchievementsTabs from "../components/tabs/ProfessionalAchievementsTabs.js";
 import SoftwareStackTabs from "../components/tabs/SoftwareStackTabs.js";
+import Skillset from "../components/layout-blocks/Skillset.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -37,49 +38,27 @@ const PageLayout = styled("div", {
   maxWidth: "1234px",
   ml: "auto",
   mr: "auto",
-})
+});
 
 const FlexContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   columnGap: "$spacing-05",
 
-  "@bp3": {
+  "@bp4": {
     flexDirection: "row",
     rowGap: "$spacing-04",
-  }
-})
+  },
+});
 
 const Flex = styled("div", {
   width: "100%",
-})
+});
 
 function HomePage() {
   return (
     <PageLayout>
-      <div style={{ marginBottom: "256px", marginTop: "256px" }}>
-        <div style={{
-          display: "flex",
-          flexDirection: "row",
-        }}>
-          <div>
-            <Title>My Skillset</Title>
-            <Paragraph>
-              Modern work demands knowledge transfer: the ability to learn and apply knowledge to complex problems, new situations and domains. That’s why I focus on building knowledge that spans a significant number of areas which enables me to be a better designer, colleague and teamplayer.
-            </Paragraph>
-            <FlexContainer>
-              <Flex>
-                <SkillsCore />
-              </Flex>
-              <SkillsLearning />
-            </FlexContainer>
-          </div>
-          <div>
-            <img src="/images/skillset-web.png" />
-          </div>
-        </div>
-
-      </div>
+      <Skillset />
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
           <Title>Experience & Education</Title>
@@ -101,7 +80,7 @@ function HomePage() {
         </div>
         <SoftwareStackTabs />
       </div>
-    </PageLayout >
+    </PageLayout>
   );
 }
 
