@@ -96,10 +96,6 @@ export const {
     bp4: "(min-width: 1024px)",
   },
   utils: {
-    marginX: (value) => ({ marginLeft: value, marginRight: value }),
-    mb: (value) => ({
-      marginBottom: value,
-    }),
     m: (value) => ({
       margin: value,
     }),
@@ -123,13 +119,27 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
+    p: (value) => ({
+      padding: value,
+    }),
+    pt: (value) => ({
+      paddingTop: value,
+    }),
     pr: (value) => ({
       paddingRight: value,
+    }),
+    pb: (value) => ({
+      paddingBottom: value,
     }),
     pl: (value) => ({
       paddingLeft: value,
     }),
-    pb: (value) => ({
+    px: (value) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value) => ({
+      paddingTop: value,
       paddingBottom: value,
     }),
     size: (value) => ({
