@@ -36,6 +36,7 @@ const Paragraph = styled("p", {
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
+  padding: "4px",
   ml: "auto",
   mr: "auto",
 });
@@ -55,10 +56,17 @@ const Flex = styled("div", {
   width: "100%",
 });
 
+const Spacer = styled("div", {
+  mt: "$spacing-10",
+  mb: "$spacing-10",
+});
+
 function HomePage() {
   return (
     <PageLayout>
-      <Skillset />
+      <Spacer>
+        <Skillset />
+      </Spacer>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
           <Title>Experience & Education</Title>

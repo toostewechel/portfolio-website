@@ -118,7 +118,7 @@ export default () => (
             href="https://reactjs.org/"
             src="/logo/react-logo.png"
             title="React"
-            description="JavaScript library for building interfaces"
+            description="JavaScript library for building UI's"
           />
           <StyledLink
             href="https://www.radix-ui.com/"
