@@ -5,8 +5,12 @@ import MapPin2LineIcon from "remixicon-react/MapPin2LineIcon";
 const Panel = styled("div", {
   display: "flex",
   flexDirection: "row",
-  padding: "$spacing-04 $spacing-03",
+  padding: "$spacing-04 $none",
   borderBottom: "1px solid $gray6",
+
+  "@bp1": {
+    padding: "$spacing-04 $spacing-03",
+  },
 });
 
 const ImageContainer = styled("div", {
