@@ -1,7 +1,7 @@
 import { styled } from "../stitches.config.js";
-import SoftwareStackTabs from "../components/tabs/SoftwareStackTabs.js";
 import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
 import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
+import SoftwareStackBlock from "../components/layout-blocks/SoftwareStackBlock.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -56,8 +56,8 @@ const Flex = styled("div", {
 });
 
 const Spacer = styled("div", {
-  mt: "$spacing-10",
-  mb: "$spacing-10",
+  pt: "$spacing-10",
+  pb: "$spacing-10",
 });
 
 function HomePage() {
@@ -69,16 +69,9 @@ function HomePage() {
       <Spacer>
         <ProfessionalAchievementsBlock />
       </Spacer>
-      <div style={{ marginTop: "32px" }}>
-        <div style={{ padding: "4px" }}>
-          <Title>Software Stack</Title>
-          <Paragraph>
-            I mainly focus on (learning) industry leading tools and frameworks
-            to streamline and optimize my design and development workflow.
-          </Paragraph>
-        </div>
-        <SoftwareStackTabs />
-      </div>
+      <Spacer>
+        <SoftwareStackBlock />
+      </Spacer>
     </PageLayout>
   );
 }
