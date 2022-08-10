@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config.js";
 const SkillTag = styled("div", {
   borderRadius: "4px",
   padding: "$spacing-03",
-  margin: "$spacing-03 $spacing-02",
+  margin: "$spacing-03 $none",
   variants: {
     color: {
       violet: {
@@ -20,7 +20,7 @@ const SkillTag = styled("div", {
   },
 
   "@bp1": {
-    margin: "$spacing-03",
+    margin: "$spacing-03 $spacing-03",
   },
 });
 
