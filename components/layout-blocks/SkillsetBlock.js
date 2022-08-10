@@ -11,11 +11,11 @@ const Content = styled("div", {
 const Image = styled("div", {
   gridArea: "img",
   justifySelf: "center",
-  padding: "$spacing-03",
+  padding: "$spacing-04",
 
   "@bp4": {
     justifySelf: "end",
-    padding: "$spacing-06",
+    pl: "$spacing-12",
   },
 });
 

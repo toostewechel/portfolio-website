@@ -11,7 +11,7 @@ const StyledTabs = styled(TabsPrimitive.Root, {
 const StyledList = styled(TabsPrimitive.List, {
   display: "flex",
   borderBottom: "1px solid $gray6",
-  mb: "$spacing-02",
+  mb: "$spacing-03",
 });
 
 const StyledTrigger = styled(TabsPrimitive.Trigger, {
@@ -75,14 +75,6 @@ export default () => (
         description="Developed and applied a conceptual framework to translate and embed a existing healthcare 'curriculum' into the Jouw Omgeving e-health application."
         duration="2017 - 2018"
         location="Utrecht, Netherlands"
-      />
-      <ListItem
-        src="/logo/jumbo-supermarkten-logo.png"
-        title="Jumbo Supermarkten"
-        subtitle="Warehouse Logistics"
-        description="Various logistic related activities in a Jumbo Warehouse."
-        duration="2009 - 2015"
-        location="Raalte, Netherlands"
       />
     </TabsContent>
     <TabsContent value="education">
