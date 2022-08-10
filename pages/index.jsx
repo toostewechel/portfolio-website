@@ -1,9 +1,7 @@
 import { styled } from "../stitches.config.js";
-import SkillsCore from "../components/collapsible/SkillsCore.js";
-import SkillsLearning from "../components/collapsible/SkillsLearning.js";
-import ProfessionalAchievementsTabs from "../components/tabs/ProfessionalAchievementsTabs.js";
 import SoftwareStackTabs from "../components/tabs/SoftwareStackTabs.js";
-import Skillset from "../components/layout-blocks/Skillset.js";
+import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
+import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -36,6 +34,7 @@ const Paragraph = styled("p", {
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
+  mt: "96px",
   padding: "4px",
   ml: "auto",
   mr: "auto",
@@ -65,19 +64,11 @@ function HomePage() {
   return (
     <PageLayout>
       <Spacer>
-        <Skillset />
+        <SkillsetBlock />
       </Spacer>
-      <div style={{ marginTop: "32px" }}>
-        <div style={{ padding: "4px" }}>
-          <Title>Experience & Education</Title>
-          <Paragraph>
-            I can effectively manage the product creation process throughout the
-            different product development stages, from initial concept to
-            product launch.
-          </Paragraph>
-        </div>
-        <ProfessionalAchievementsTabs />
-      </div>
+      <Spacer>
+        <ProfessionalAchievementsBlock />
+      </Spacer>
       <div style={{ marginTop: "32px" }}>
         <div style={{ padding: "4px" }}>
           <Title>Software Stack</Title>
