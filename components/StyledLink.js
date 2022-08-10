@@ -15,9 +15,12 @@ const Panel = styled("div", {
   flexDirection: "row",
   justifyContent: "space-between",
   padding: "$spacing-03 $spacing-02",
+  borderRadius: "4px",
+  border: "1px solid transparent",
 
   "&:hover": {
     backgroundColor: "$violet3",
+    border: "1px solid $violet4",
   },
   "&:active": {
     backgroundColor: "$violet4",
@@ -37,7 +40,7 @@ const ImageContainer = styled("div", {
   pr: "$spacing-03",
 
   "@bp4": {
-    pr: "$spacing-04",
+    pr: "$spacing-05",
     size: "$8",
   },
 });

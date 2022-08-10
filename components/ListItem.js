@@ -19,7 +19,7 @@ const ImageContainer = styled("div", {
   pr: "$spacing-03",
 
   "@bp1": {
-    pr: "$spacing-04",
+    pr: "$spacing-05",
     size: "$8",
   },
 });
@@ -34,6 +34,7 @@ const Title = styled("h3", {
 
   "@bp1": {
     fontSize: "$xl",
+    mt: "$spacing-02",
   },
 });
 
