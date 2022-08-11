@@ -16,7 +16,7 @@ const Container = styled("div", {
   p: "$spacing-04",
   borderRadius: "4px",
   border: "1px solid transparent",
-  width: "100%",
+  margin: "$spacing-03 $none",
 
   "&:hover": {
     backgroundColor: "$violet3",

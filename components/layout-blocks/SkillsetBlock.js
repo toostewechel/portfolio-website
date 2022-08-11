@@ -59,7 +59,7 @@ const GridContainer = styled("div", {
 
 function SkillsetBlock() {
   return (
-    <GridContainer>
+    <GridContainer id="skillset">
       <Content>
         <ContentBlock
           heading="My Skillset"

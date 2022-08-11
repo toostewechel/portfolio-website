@@ -3,7 +3,7 @@ import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
-import MenuItem from "../components/menu/MenuItem.js";
+import ScrollToMenu from "../components/menu/ScrollToMenu.js";
 
 const Container = styled("div", {
   p: "$spacing-05",
@@ -123,6 +123,7 @@ const Menu = styled("div", {
   display: "flex",
   flexDirection: "column",
   p: "$spacing-05 $none",
+  width: "100%",
 })
 
 const MenuTitle = styled("h3", {
@@ -174,8 +175,7 @@ function QuickMenu(props) {
       </FlexContainer>
       <FlexContainer>
         <Menu>
-          <MenuTitle>Quick Menu</MenuTitle>
-          <MenuItem src="/icons/search-eye-line.svg" label="Values" />
+          <ScrollToMenu />
         </Menu>    
       </FlexContainer>
     </Container>
