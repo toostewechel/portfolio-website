@@ -2,6 +2,7 @@ import { styled } from "../stitches.config.js";
 import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
 import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
 import SoftwareStackBlock from "../components/layout-blocks/SoftwareStackBlock.js";
+import QuickMenu from "../components/QuickMenu.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -63,6 +64,9 @@ const Spacer = styled("div", {
 function HomePage() {
   return (
     <PageLayout>
+      <Spacer>
+        <QuickMenu />
+      </Spacer>
       <Spacer>
         <SkillsetBlock />
       </Spacer>
