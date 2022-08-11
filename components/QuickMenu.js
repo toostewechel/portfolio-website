@@ -3,11 +3,13 @@ import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
+import MenuItem from "../components/menu/MenuItem.js";
+
 const Container = styled("div", {
   p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
-  backgroundColor: "$violet3",
+  backgroundColor: "$gray2",
   borderRadius: "8px",
 })
 
@@ -117,6 +119,25 @@ const Icon = styled("div", {
   },
 })
 
+const Menu = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  p: "$spacing-05 $none",
+})
+
+const MenuTitle = styled("h3", {
+  fontSize: "$xl",
+  fontWeight: "$extra-bold",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tight",
+  color: "$mauve12",
+  mb: "$spacing-01",
+
+  "@bp1": {
+    fontSize: "$2xl",
+    mt: "$spacing-02",
+  },
+})
 
 function QuickMenu(props) {
   return (
@@ -151,7 +172,12 @@ function QuickMenu(props) {
           </SocialIconBar>
         </Card>
       </FlexContainer>
-      <FlexContainer>QuickMenu</FlexContainer>
+      <FlexContainer>
+        <Menu>
+          <MenuTitle>Quick Menu</MenuTitle>
+          <MenuItem src="/icons/search-eye-line.svg" label="Values" />
+        </Menu>    
+      </FlexContainer>
     </Container>
   )
 }
