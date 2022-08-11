@@ -135,12 +135,17 @@ function QuickMenu(props) {
           <SocialIconBar>
             <Link href="https://twitter.com/home">
               <Icon>
-                <GithubFillIcon />
+                <TwitterFillIcon />
               </Icon>
             </Link>
             <Link href="https://twitter.com/home">
               <Icon>
                 <LinkedinFillIcon />
+              </Icon>
+            </Link>
+            <Link href="https://twitter.com/home">
+              <Icon>
+                <GithubFillIcon />
               </Icon>
             </Link>
           </SocialIconBar>
