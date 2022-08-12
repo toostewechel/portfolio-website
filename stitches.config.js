@@ -1,4 +1,12 @@
-import { gray, blue, violet, violetDarkA, green, mauve, whiteA } from "@radix-ui/colors";
+import {
+  gray,
+  blue,
+  violet,
+  violetDarkA,
+  green,
+  mauve,
+  whiteA,
+} from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
 export const {
@@ -39,13 +47,13 @@ export const {
       "spacing-13": "120px",
       "spacing-14": "160px",
     },
-    // Based on Major Third Type Scale, with 16px as base size
+    // Based on Major Third Type Scale, with 18px as base size
     fontSizes: {
-      "5xl": "3.052rem",
-      "4xl": "2.0441rem",
-      "3xl": "1.953rem",
-      "2xl": "1.563rem",
-      xl: "1.25rem",
+      "5xl": "4.209rem",
+      "4xl": "3.157rem",
+      "3xl": "2.369rem",
+      "2xl": "1.777rem",
+      xl: "1.33rem",
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
@@ -62,7 +70,7 @@ export const {
       "extra-bold": 800,
     },
     lineHeights: {
-      large: 1.75,
+      large: 1.65,
       base: 1.5,
       compact: 1.25,
       none: 1,
