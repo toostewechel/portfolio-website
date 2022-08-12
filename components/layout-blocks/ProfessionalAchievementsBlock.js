@@ -10,10 +10,10 @@ const Content = styled("div", {
 
 function ProfessionalAchievementsBlock() {
   return (
-    <Container>
+    <Container id="professional-achievements">
       <Content>
         <ContentBlock
-          heading="Experience & Education"
+          heading="My Experience"
           description="I can effectively manage the product creation process throughout the different product development stages, from initial concept to product launch."
         />
       </Content>

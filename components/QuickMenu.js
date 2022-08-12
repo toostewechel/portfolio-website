@@ -1,3 +1,4 @@
+import React from "react";
 import { styled } from "../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
@@ -9,9 +10,9 @@ const Container = styled("div", {
   p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
-  backgroundColor: "$gray2",
+  backgroundColor: "$violet2",
   borderRadius: "8px",
-})
+});
 
 const Card = styled("div", {
   display: "flex",
@@ -20,19 +21,20 @@ const Card = styled("div", {
   justifyContent: "center",
   textAlign: "center",
   p: "$spacing-05",
-  background: "linear-gradient(180deg, rgba(122, 89, 232, 0.75) 0%, #3913B8 100%)",
+  background:
+    "linear-gradient(180deg, rgba(122, 89, 232, 0.75) 0%, #3913B8 100%)",
   borderRadius: "8px",
   height: "400px",
   width: "100%",
-})
+});
 
 const FlexContainer = styled("div", {
-  display: 'flex'
-})
+  display: "flex",
+});
 
 const ImageContainer = styled("div", {
   mb: "$spacing-05",
-})
+});
 
 const CardTitle = styled("h3", {
   fontSize: "$xl",
@@ -46,7 +48,7 @@ const CardTitle = styled("h3", {
     fontSize: "$2xl",
     mt: "$spacing-02",
   },
-})
+});
 
 const CardDescription = styled("p", {
   fontSize: "$base",
@@ -54,7 +56,7 @@ const CardDescription = styled("p", {
   fontFamily: "$default",
   color: "$violet5",
   mb: "24px",
-})
+});
 
 const StatusBadge = styled("div", {
   display: "flex",
@@ -65,7 +67,7 @@ const StatusBadge = styled("div", {
   backgroundColor: "$violetA4",
   border: "solid 1px $violetA7",
   mb: "$spacing-08",
-})
+});
 
 const Badge = styled("div", {
   width: "13px",
@@ -74,7 +76,7 @@ const Badge = styled("div", {
   backgroundColor: "$green8",
   border: "solid 2px $violet4",
   mr: "$spacing-03",
-})
+});
 
 const BadgeLabel = styled("p", {
   fontSize: "$base",
@@ -83,7 +85,7 @@ const BadgeLabel = styled("p", {
   color: "$violet3",
   mt: "$spacing-01",
   mr: "$spacing-02",
-})
+});
 
 const Link = styled("a", {
   outlineOffset: "2px",
@@ -99,7 +101,7 @@ const SocialIconBar = styled("div", {
   justifyContent: "center",
   gap: "12px",
   width: "100%",
-})
+});
 
 const Icon = styled("div", {
   display: "flex",
@@ -117,14 +119,14 @@ const Icon = styled("div", {
   "&:active": {
     backgroundColor: "rgba(0, 0, 0, 0.2)",
   },
-})
+});
 
 const Menu = styled("div", {
   display: "flex",
   flexDirection: "column",
   p: "$spacing-05 $none",
   width: "100%",
-})
+});
 
 const MenuTitle = styled("h3", {
   fontSize: "$xl",
@@ -138,9 +140,11 @@ const MenuTitle = styled("h3", {
     fontSize: "$2xl",
     mt: "$spacing-02",
   },
-})
+});
 
 function QuickMenu(props) {
+  const badge = React.useState(true);
+
   return (
     <Container>
       <FlexContainer>
@@ -150,10 +154,12 @@ function QuickMenu(props) {
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>
-          <StatusBadge>
-            <Badge />
-            <BadgeLabel>Open to work</BadgeLabel>
-          </StatusBadge>
+          {badge ? (
+            <StatusBadge>
+              <Badge />
+              <BadgeLabel>Open to work</BadgeLabel>
+            </StatusBadge>
+          ) : null}
           <SocialIconBar>
             <Link href="https://twitter.com/home">
               <Icon>
@@ -176,10 +182,10 @@ function QuickMenu(props) {
       <FlexContainer>
         <Menu>
           <ScrollToMenu />
-        </Menu>    
+        </Menu>
       </FlexContainer>
     </Container>
-  )
+  );
 }
 
 export default QuickMenu;

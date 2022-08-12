@@ -36,7 +36,7 @@ const Paragraph = styled("p", {
 const PageLayout = styled("div", {
   maxWidth: "1234px",
   mt: "96px",
-  padding: "4px",
+  padding: "8px",
   ml: "auto",
   mr: "auto",
 });

@@ -9,7 +9,7 @@ const Panel = styled("div", {
   borderBottom: "1px solid $gray6",
 
   "@bp1": {
-    padding: "$spacing-04 $spacing-03",
+    padding: "$spacing-05 $spacing-03",
   },
 });
 
@@ -48,6 +48,7 @@ const Subtitle = styled("p", {
 
   "@bp1": {
     fontSize: "$base",
+    mb: "$spacing-04",
   },
 });
 
@@ -57,11 +58,11 @@ const Description = styled("p", {
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
   lineHeight: "$base",
-  color: "$gray12",
+  color: "$mauve12",
   maxWidth: "640px",
 
   "@bp1": {
-    fontSize: "$base",
+    fontSize: "$lg",
     lineHeight: "$base",
   },
 });

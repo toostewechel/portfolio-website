@@ -16,7 +16,7 @@ const Container = styled("div", {
   p: "$spacing-04",
   borderRadius: "4px",
   border: "1px solid transparent",
-  margin: "$spacing-03 $none",
+  margin: "$spacing-02 $none",
 
   "&:hover": {
     backgroundColor: "$violet3",
@@ -25,11 +25,11 @@ const Container = styled("div", {
   "&:active": {
     backgroundColor: "$violet4",
   },
-})
+});
 
 const Icon = styled("div", {
   size: "$5",
-})
+});
 
 const Label = styled("p", {
   fontSize: "$lg",
@@ -37,17 +37,19 @@ const Label = styled("p", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$violet11",
-})
+});
 
 function MenuItem(props) {
   return (
     <Link href={props.href}>
       <Container>
-        <Icon><img src={props.src} /></Icon>
+        <Icon>
+          <img src={props.src} />
+        </Icon>
         <Label>{props.label}</Label>
       </Container>
     </Link>
-  )
+  );
 }
 
 export default MenuItem;

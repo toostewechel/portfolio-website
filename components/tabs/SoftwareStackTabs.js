@@ -132,7 +132,7 @@ export default () => (
             href="https://www.github.com"
             src="/logo/github-logo.png"
             title="GitHub"
-            description="Software development & version control"
+            description="The complete developer platform"
           />
           <StyledLink
             href="https://hyper.is/"

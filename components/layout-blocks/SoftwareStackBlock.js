@@ -10,16 +10,16 @@ const Content = styled("div", {
 
 function SoftwareStackBlock() {
   return (
-    <Container>
+    <Container id="software-stack">
       <Content>
         <ContentBlock
-          heading="Software Stack"
+          heading="My Software Stack"
           description="I mainly focus on (learning) industry leading tools and frameworks to streamline and optimize my design and development workflow."
         />
       </Content>
       <SoftwareStackTabs />
     </Container>
-  )
+  );
 }
 
 export default SoftwareStackBlock;

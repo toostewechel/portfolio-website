@@ -10,7 +10,7 @@ const Heading = styled("h2", {
 
   "@bp1": {
     fontSize: "$4xl",
-    mb: "$spacing-02",
+    mb: "$spacing-03",
   },
 });
 
@@ -20,11 +20,12 @@ const Description = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$gray12",
+  color: "$mauve12",
   maxWidth: "640px",
 
   "@bp1": {
-    fontSize: "$lg",
+    fontSize: "$xl",
+    lineHeight: "$large",
   },
 });
 

@@ -19,12 +19,8 @@ const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-02",
+  padding: "$spacing-02 $none",
   borderBottom: "solid 1px $gray6",
-
-  "@bp1": {
-    padding: "$spacing-03",
-  },
 });
 
 const Flex = styled("div", {

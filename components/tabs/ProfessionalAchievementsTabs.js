@@ -26,11 +26,11 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   "&:hover": { color: "$violet11" },
   '&[data-state="active"]': {
     color: "$violet11",
-    fontWeight: "$bold",
     boxShadow: "inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor",
   },
   "@bp1": {
     padding: "$spacing-05",
+    fontSize: "$xl",
   },
 });
 

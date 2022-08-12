@@ -54,6 +54,7 @@ const GridContainer = styled("div", {
     "sc sc ls ls img img img img"
     "sc sc ls ls img img img img"
   `,
+    rowGap: "$spacing-06",
   },
 });
 

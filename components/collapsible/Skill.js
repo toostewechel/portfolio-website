@@ -18,10 +18,6 @@ const SkillTag = styled("div", {
       },
     },
   },
-
-  "@bp1": {
-    margin: "$spacing-03 $spacing-03",
-  },
 });
 
 const Label = styled("p", {

@@ -20,7 +20,6 @@ const HeaderPanel = styled("div", {
   justifyContent: "space-between",
   alignItems: "center",
   padding: "$spacing-02",
-  borderBottom: "solid 1px $gray6",
 
   "@bp1": {
     padding: "$spacing-03",
@@ -68,7 +67,7 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   '&[data-state="closed"]': {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
   },
   '&[data-state="open"]': {
     backgroundColor: "$violet3",
@@ -90,23 +89,43 @@ function ScrollToMenu(props) {
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
-          <DecorativeIcon>
-            <StackLineIcon></StackLineIcon>
-          </DecorativeIcon>
           <Title>Quick Menu</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>
-            {open ? <CloseLineIcon /> : <MenuLineIcon />}
-          </IconButton>
+          <IconButton>{open ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
-      <MenuItem href="#skillset" src="/icons/search-eye-line.svg" label="Values" />
       <CollapsibleContent>
-        <MenuItem href="https://twitter.com/home" src="/icons/search-eye-line.svg" label="Values" />
-        <MenuItem href="https://twitter.com/home" src="/icons/search-eye-line.svg" label="Values" />
-        <MenuItem href="https://twitter.com/home" src="/icons/search-eye-line.svg" label="Values" />
-        <MenuItem href="https://twitter.com/home" src="/icons/search-eye-line.svg" label="Values" />
+        <MenuItem
+          href="#values"
+          src="/icons/search-eye-line.svg"
+          label="Values"
+        />
+        <MenuItem
+          href="#skillset"
+          src="/icons/flag-line.svg"
+          label="Skillset"
+        />
+        <MenuItem
+          href="#professional-achievements"
+          src="/icons/settings-line.svg"
+          label="Experience"
+        />
+        <MenuItem
+          href="#software-stack"
+          src="/icons/code-slash-line.svg"
+          label="Software Stack"
+        />
+        <MenuItem
+          href="#interesets"
+          src="/icons/restart-line.svg"
+          label="Interests"
+        />
+        <MenuItem
+          href="#contact"
+          src="/icons/contacts-book-line.svg"
+          label="Contact"
+        />
       </CollapsibleContent>
     </Collapsible>
   );
