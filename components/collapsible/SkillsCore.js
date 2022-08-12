@@ -52,6 +52,10 @@ const Title = styled("h3", {
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
+
+  "@bp1": {
+    fontSize: "$xl;",
+  },
 });
 
 const IconButton = styled("button", {
@@ -89,7 +93,7 @@ function SkillsCore(props) {
           <DecorativeIcon>
             <StackLineIcon></StackLineIcon>
           </DecorativeIcon>
-          <Title>5 Core Skills</Title>
+          <Title>Core</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <IconButton>

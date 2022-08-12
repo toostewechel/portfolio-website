@@ -21,10 +21,14 @@ const Image = styled("div", {
 
 const CoreSkillsContainer = styled("div", {
   gridArea: "sc",
+  display: "flex",
+  alignSelf: "flex-start",
 });
 
 const LearningSkillsContainer = styled("div", {
   gridArea: "ls",
+  display: "flex",
+  alignSelf: "flex-start",
 });
 
 const GridContainer = styled("div", {
@@ -32,7 +36,7 @@ const GridContainer = styled("div", {
   columnGap: "$spacing-06",
   rowGap: "$spacing-04",
   gridTemplateColumns: "repeat(8, 1fr)",
-  gridAutoRows: "minmax(100px, auto)",
+  gridAutoRows: "minmax(125px, auto)",
   gridTemplateAreas: `
     "img img img img img img img img"
     "cnt cnt cnt cnt cnt cnt cnt cnt"
@@ -52,7 +56,7 @@ const GridContainer = styled("div", {
     "cnt cnt cnt cnt img img img img"
     "sc sc ls ls img img img img"
     "sc sc ls ls img img img img"
-    "sc sc ls ls img img img img"
+    
   `,
     rowGap: "$spacing-06",
   },
