@@ -61,7 +61,7 @@ export const {
     },
     fonts: {
       header: "'Vollkorn', serif",
-      default: "'Lato', sans-serif",
+      default: "'Open Sans', sans-serif",
     },
     fontWeights: {
       regular: 400,
