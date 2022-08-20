@@ -1,4 +1,3 @@
-import App from "next/app";
 import { MDXProvider } from "@mdx-js/react";
 import "../styles/styles.css";
 
