@@ -31,7 +31,7 @@ const Card = styled("div", {
   borderRadius: "8px",
   height: "400px",
   width: "100%",
-  minWidth: "320px",
+  // minWidth: "320px",
 });
 
 const FlexContainer = styled("div", {

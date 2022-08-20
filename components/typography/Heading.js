@@ -13,11 +13,15 @@ const StyledHeading = styled("h1", {
         fontSize: "$5xl",
         fontWeight: "$extra-bold",
         letterSpacing: "$tracking-tighter",
+        lineHeight: "$tight",
+        mb: "$spacing-05",
       },
       2: {
         fontSize: "$4xl",
         fontWeight: "$extra-bold",
         letterSpacing: "$tracking-tighter",
+        lineHeight: "$compact",
+        mb: "$spacing-04",
       },
       3: {
         fontSize: "$3xl",

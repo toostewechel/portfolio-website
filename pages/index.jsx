@@ -66,11 +66,6 @@ const Spacer = styled("div", {
 function HomePage() {
   return (
     <PageLayout>
-      <Heading as="h1" title="Heading 1" level="1" />
-      <Heading as="h2" title="Heading 2" level="2" />
-      <Heading as="h3" title="Heading 3" level="3" />
-      <Heading as="h4" title="Heading 4" level="4" />
-      <Heading as="h5" title="Heading 5" level="5" />
       <Spacer>
         <QuickMenu />
       </Spacer>

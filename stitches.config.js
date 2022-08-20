@@ -73,6 +73,7 @@ export const {
       large: 1.65,
       base: 1.5,
       compact: 1.25,
+      tight: 1.1,
       none: 1,
     },
     letterSpacings: {

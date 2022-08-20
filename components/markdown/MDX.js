@@ -1,4 +1,8 @@
 import Heading from "../typography/Heading.js";
+import Paragraph from "../typography/Paragraph.js";
+import UnorderedList from "../typography/UnorderedList.js";
+import OrderedList from "../typography/OrderedList.js";
+import Link from "../typography/Link.js";
 
 function Heading1(props) {
   return <Heading as="h1" title={props.children} level="1" />;
@@ -29,3 +33,27 @@ function Heading5(props) {
 }
 
 export const h5 = Heading5;
+
+function MDXParagraph(props) {
+  return <Paragraph description={props.children} />;
+}
+
+export const p = MDXParagraph;
+
+function MDXul(props) {
+  return <UnorderedList>{props.children}</UnorderedList>;
+}
+
+export const ul = MDXul;
+
+function MDXol(props) {
+  return <OrderedList>{props.children}</OrderedList>;
+}
+
+export const ol = MDXol;
+
+function MDXLink(props) {
+  return <Link href={props.href}>{props.children}</Link>;
+}
+
+export const a = MDXLink;
