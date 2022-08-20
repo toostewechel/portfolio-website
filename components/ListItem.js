@@ -9,7 +9,7 @@ const Panel = styled("div", {
   borderBottom: "1px solid $gray6",
 
   "@bp1": {
-    padding: "$spacing-05 $spacing-03",
+    padding: "$spacing-05 $spacing-04",
   },
 });
 

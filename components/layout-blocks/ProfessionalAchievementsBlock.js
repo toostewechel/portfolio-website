@@ -5,7 +5,7 @@ import ProfessionalAchievementsTabs from "../tabs/ProfessionalAchievementsTabs.j
 const Container = styled("div", {});
 
 const Content = styled("div", {
-  pb: "$spacing-07",
+  pb: "$spacing-09",
 });
 
 function ProfessionalAchievementsBlock() {

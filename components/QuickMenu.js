@@ -12,6 +12,11 @@ const Container = styled("div", {
   flexDirection: "column",
   backgroundColor: "$violet2",
   borderRadius: "8px",
+  maxWidth: "592px",
+
+  "@bp4": {
+    flexDirection: "row",
+  }
 });
 
 const Card = styled("div", {
@@ -26,10 +31,12 @@ const Card = styled("div", {
   borderRadius: "8px",
   height: "400px",
   width: "100%",
+  minWidth: "320px",
 });
 
 const FlexContainer = styled("div", {
   display: "flex",
+  width: "100%",
 });
 
 const ImageContainer = styled("div", {
@@ -126,6 +133,10 @@ const Menu = styled("div", {
   flexDirection: "column",
   p: "$spacing-05 $none",
   width: "100%",
+
+  "@bp4": {
+    pl: "$spacing-05",
+  }
 });
 
 const MenuTitle = styled("h3", {

@@ -1,10 +1,10 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import StackLineIcon from "remixicon-react/StackLineIcon";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import MenuItem from "./MenuItem.js";
+import useMediaQuery from 'beautiful-react-hooks/useMediaQuery';
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -84,7 +84,8 @@ const IconButton = styled("button", {
 });
 
 function ScrollToMenu(props) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
+  
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
