@@ -16,7 +16,7 @@ const Container = styled("div", {
 
   "@bp4": {
     flexDirection: "row",
-  }
+  },
 });
 
 const Card = styled("div", {
@@ -136,7 +136,7 @@ const Menu = styled("div", {
 
   "@bp4": {
     pl: "$spacing-05",
-  }
+  },
 });
 
 const MenuTitle = styled("h3", {

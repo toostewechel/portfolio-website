@@ -7,7 +7,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <MDXProvider components={components}>
       <Component {...pageProps} />
-    </MDXProvider>)
+    </MDXProvider>
+  );
 }
 
 export default MyApp;

@@ -3,6 +3,8 @@ import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
 import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
 import SoftwareStackBlock from "../components/layout-blocks/SoftwareStackBlock.js";
 import QuickMenu from "../components/QuickMenu.js";
+import Link from "next/link";
+import Heading from "../components/typography/Heading.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -64,6 +66,11 @@ const Spacer = styled("div", {
 function HomePage() {
   return (
     <PageLayout>
+      <Heading as="h1" title="Heading 1" level="1" />
+      <Heading as="h2" title="Heading 2" level="2" />
+      <Heading as="h3" title="Heading 3" level="3" />
+      <Heading as="h4" title="Heading 4" level="4" />
+      <Heading as="h5" title="Heading 5" level="5" />
       <Spacer>
         <QuickMenu />
       </Spacer>
@@ -76,6 +83,9 @@ function HomePage() {
       <Spacer>
         <SoftwareStackBlock />
       </Spacer>
+      <Link href="/markdown">
+        <a>Go to link</a>
+      </Link>
     </PageLayout>
   );
 }

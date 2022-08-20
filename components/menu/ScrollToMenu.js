@@ -4,7 +4,7 @@ import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import MenuItem from "./MenuItem.js";
-import useMediaQuery from 'beautiful-react-hooks/useMediaQuery';
+import useMediaQuery from "beautiful-react-hooks/useMediaQuery";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -85,7 +85,7 @@ const IconButton = styled("button", {
 
 function ScrollToMenu(props) {
   const [open, setOpen] = React.useState(true);
-  
+
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
