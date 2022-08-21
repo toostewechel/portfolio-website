@@ -1,6 +1,5 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { styled } from "../../stitches.config.js";
-import ListItem from "../../components/ListItem.js";
 
 const StyledTabs = styled(TabsPrimitive.Root, {
   display: "flex",
@@ -11,7 +10,7 @@ const StyledTabs = styled(TabsPrimitive.Root, {
 const StyledList = styled(TabsPrimitive.List, {
   display: "flex",
   borderBottom: "1px solid $gray6",
-  mb: "$spacing-03",
+  mb: "$spacing-04",
 });
 
 const StyledTrigger = styled(TabsPrimitive.Trigger, {

@@ -14,7 +14,10 @@ const FlexContainer = styled("div", {
 });
 
 const Flex = styled("div", {
-  width: "100%",
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  gap: "$spacing-04",
 });
 
 function SoftwareStackTabs() {
