@@ -2,6 +2,7 @@ import { styled } from "../stitches.config.js";
 import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
 import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
 import SoftwareStackBlock from "../components/layout-blocks/SoftwareStackBlock.js";
+import ContentBlock from "../components/layout-blocks/ContentBlock.js";
 import QuickMenu from "../components/QuickMenu.js";
 import Link from "next/link";
 import Heading from "../components/typography/Heading.js";
@@ -65,23 +66,41 @@ const Spacer = styled("div", {
 
 function HomePage() {
   return (
-    <PageLayout>
-      <Spacer>
-        <QuickMenu />
-      </Spacer>
-      <Spacer>
-        <SkillsetBlock />
-      </Spacer>
-      <Spacer>
-        <ProfessionalAchievementsBlock />
-      </Spacer>
-      <Spacer>
-        <SoftwareStackBlock />
-      </Spacer>
-      <Link href="/markdown">
-        <a>Go to link</a>
-      </Link>
-    </PageLayout>
+    <div>
+      <PageLayout>
+        <Spacer>
+          <QuickMenu />
+        </Spacer>
+        <Spacer></Spacer>
+        <ContentBlock
+          heading="My core values"
+          description="These values guide me when making decisions, building relationships and solving problems."
+        ></ContentBlock>
+      </PageLayout>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "-96px",
+        }}
+      >
+        <img src="/images/values.png" />
+      </div>
+      <PageLayout>
+        <Spacer>
+          <SkillsetBlock />
+        </Spacer>
+        <Spacer>
+          <ProfessionalAchievementsBlock />
+        </Spacer>
+        <Spacer>
+          <SoftwareStackBlock />
+        </Spacer>
+        <Link href="/markdown">
+          <a>Go to link</a>
+        </Link>
+      </PageLayout>
+    </div>
   );
 }
 

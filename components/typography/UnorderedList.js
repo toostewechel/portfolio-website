@@ -8,7 +8,7 @@ const StyledUnorderedList = styled("ul", {
   letterSpacing: "$tracking-normal",
   color: "$gray12",
   mb: "$spacing-07",
-  px: "$spacing-06",
+  paddingInlineStart: "$spacing-06",
   listStyle: "disc",
 
   "@bp2": {

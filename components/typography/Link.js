@@ -16,7 +16,10 @@ const StyledLink = styled("a", {
     borderBottom: "3px dotted $violet11",
   },
   "&:active": {
-    backgroundColor: "$violet11",
+    color: "$violet11",
+  },
+  "&:visited": {
+    color: "$violet11",
   },
 });
 

@@ -8,7 +8,7 @@ const StyledOrderedList = styled("ol", {
   letterSpacing: "$tracking-normal",
   color: "$gray12",
   mb: "$spacing-07",
-  px: "$spacing-06",
+  paddingInlineStart: "$spacing-06",
 
   "@bp2": {
     fontSize: "$xl",

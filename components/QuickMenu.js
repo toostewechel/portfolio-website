@@ -10,9 +10,11 @@ const Container = styled("div", {
   p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
-  backgroundColor: "$violet2",
+  backgroundColor: "$gray2",
   borderRadius: "8px",
   maxWidth: "592px",
+  boxShadow:
+    "0px 100px 80px rgba(87, 70, 175, 0.09), 0px 41.7776px 33.4221px rgba(87, 70, 175, 0.0646969), 0px 22.3363px 17.869px rgba(87, 70, 175, 0.0536497), 0px 12.5216px 10.0172px rgba(87, 70, 175, 0.045), 0px 6.6501px 5.32008px rgba(87, 70, 175, 0.0363503), 0px 2.76726px 2.21381px rgba(87, 70, 175, 0.0253031)",
 
   "@bp4": {
     flexDirection: "row",
