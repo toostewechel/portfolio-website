@@ -75,6 +75,7 @@ function HomePage() {
         <ContentBlock
           heading="My core values"
           description="These values guide me when making decisions, building relationships and solving problems."
+          alignment="center"
         ></ContentBlock>
       </PageLayout>
       <div

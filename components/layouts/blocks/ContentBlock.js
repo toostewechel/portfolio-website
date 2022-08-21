@@ -1,5 +1,19 @@
 import { styled } from "../../../stitches.config.js";
 
+const Container = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+
+  variants: {
+    alignment: {
+      center: {
+        alignItems: "center",
+        textAlign: "center",
+      },
+    },
+  }
+})
+
 const Heading = styled("h2", {
   fontSize: "$3xl",
   fontWeight: "$extra-bold",
@@ -21,7 +35,7 @@ const Description = styled("p", {
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
-  maxWidth: "640px",
+  maxWidth: "720px",
 
   "@bp1": {
     fontSize: "$xl",
@@ -31,10 +45,10 @@ const Description = styled("p", {
 
 function ContentBlock(props) {
   return (
-    <div>
+    <Container alignment={props.alignment}>
       <Heading>{props.heading}</Heading>
       <Description>{props.description}</Description>
-    </div>
+    </Container>
   );
 }
 
