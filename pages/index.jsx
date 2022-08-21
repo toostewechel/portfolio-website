@@ -5,7 +5,6 @@ import SoftwareStackBlock from "../components/about/pageblocks/SoftwareStackBloc
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import QuickMenu from "../components/about/menu/QuickMenu.js";
 import Link from "next/link";
-import Heading from "../components/typography/Heading.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -72,11 +71,13 @@ function HomePage() {
           <QuickMenu />
         </Spacer>
         <Spacer></Spacer>
-        <ContentBlock
-          heading="My core values"
-          description="These values guide me when making decisions, building relationships and solving problems."
-          alignment="center"
-        ></ContentBlock>
+        <div id="values">
+          <ContentBlock
+            heading="My core values"
+            description="These values guide me when making decisions, building relationships and solving problems."
+            alignment="center"
+          ></ContentBlock>
+        </div>
       </PageLayout>
       <div
         style={{
