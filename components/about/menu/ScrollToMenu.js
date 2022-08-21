@@ -1,10 +1,10 @@
 import React from "react";
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import StackLineIcon from "remixicon-react/StackLineIcon";
-import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
-import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
-import Skill from "./Skill.js";
+import MenuLineIcon from "remixicon-react/MenuLineIcon";
+import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import MenuItem from "./MenuItem.js";
+import useMediaQuery from "beautiful-react-hooks/useMediaQuery";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -19,8 +19,11 @@ const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-02 $none",
-  borderBottom: "solid 1px $gray6",
+  padding: "$spacing-02",
+
+  "@bp1": {
+    padding: "$spacing-03",
+  },
 });
 
 const Flex = styled("div", {
@@ -52,10 +55,6 @@ const Title = styled("h3", {
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
-
-  "@bp1": {
-    fontSize: "$xl;",
-  },
 });
 
 const IconButton = styled("button", {
@@ -68,7 +67,7 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   '&[data-state="closed"]': {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
   },
   '&[data-state="open"]': {
     backgroundColor: "$violet3",
@@ -84,32 +83,53 @@ const IconButton = styled("button", {
   },
 });
 
-function SkillsCore(props) {
-  const [open, setOpen] = React.useState(false);
+function ScrollToMenu(props) {
+  const [open, setOpen] = React.useState(true);
+
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
-          <DecorativeIcon>
-            <StackLineIcon></StackLineIcon>
-          </DecorativeIcon>
-          <Title>Core</Title>
+          <Title>Quick Menu</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>
-            {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
-          </IconButton>
+          <IconButton>{open ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
-      <Skill backgroundColor="blue" label="Problem Solving" />
       <CollapsibleContent>
-        <Skill backgroundColor="blue" label="Design Discovery Process" />
-        <Skill backgroundColor="blue" label="Analytical" />
-        <Skill backgroundColor="blue" label="Agile Development (scrum)" />
-        <Skill backgroundColor="blue" label="Software Delivery" />
+        <MenuItem
+          href="#values"
+          src="/icons/search-eye-line.svg"
+          label="Values"
+        />
+        <MenuItem
+          href="#skillset"
+          src="/icons/flag-line.svg"
+          label="Skillset"
+        />
+        <MenuItem
+          href="#professional-achievements"
+          src="/icons/settings-line.svg"
+          label="Experience"
+        />
+        <MenuItem
+          href="#software-stack"
+          src="/icons/code-slash-line.svg"
+          label="Software Stack"
+        />
+        <MenuItem
+          href="#interesets"
+          src="/icons/restart-line.svg"
+          label="Interests"
+        />
+        <MenuItem
+          href="#contact"
+          src="/icons/contacts-book-line.svg"
+          label="Contact"
+        />
       </CollapsibleContent>
     </Collapsible>
   );
 }
 
-export default SkillsCore;
+export default ScrollToMenu;

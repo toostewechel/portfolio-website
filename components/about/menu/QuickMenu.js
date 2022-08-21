@@ -1,10 +1,10 @@
 import React from "react";
-import { styled } from "../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
-import ScrollToMenu from "../components/menu/ScrollToMenu.js";
+import ScrollToMenu from "./ScrollToMenu.js";
 
 const Container = styled("div", {
   p: "$spacing-05",

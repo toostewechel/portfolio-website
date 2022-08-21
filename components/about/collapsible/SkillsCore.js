@@ -1,7 +1,7 @@
 import React from "react";
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
+import StackLineIcon from "remixicon-react/StackLineIcon";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
 import Skill from "./Skill.js";
@@ -25,7 +25,7 @@ const HeaderPanel = styled("div", {
 
 const Flex = styled("div", {
   display: "flex",
-  minWidth: "0px",
+  minWidth: "0",
 });
 
 const DecorativeIcon = styled("div", {
@@ -33,8 +33,9 @@ const DecorativeIcon = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   pr: "$spacing-02",
-  size: "$5",
-  color: "$violet11",
+  width: "24px",
+  height: "24px",
+  color: "$blue11",
 
   "@bp1": {
     pr: "$spacing-03",
@@ -83,16 +84,16 @@ const IconButton = styled("button", {
   },
 });
 
-function SkillsLearning(props) {
+function SkillsCore(props) {
   const [open, setOpen] = React.useState(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
           <DecorativeIcon>
-            <StackOverflowLineIcon></StackOverflowLineIcon>
+            <StackLineIcon></StackLineIcon>
           </DecorativeIcon>
-          <Title>Learning</Title>
+          <Title>Core</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <IconButton>
@@ -100,14 +101,15 @@ function SkillsLearning(props) {
           </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
-      <Skill backgroundColor="violet" label="Front-End Web Development" />
+      <Skill backgroundColor="blue" label="Problem Solving" />
       <CollapsibleContent>
-        <Skill backgroundColor="violet" label="Product Management" />
-        <Skill backgroundColor="violet" label="3D Modelling" />
-        <Skill backgroundColor="violet" label="Knowledge Management" />
+        <Skill backgroundColor="blue" label="Design Discovery Process" />
+        <Skill backgroundColor="blue" label="Analytical" />
+        <Skill backgroundColor="blue" label="Agile Development (scrum)" />
+        <Skill backgroundColor="blue" label="Software Delivery" />
       </CollapsibleContent>
     </Collapsible>
   );
 }
 
-export default SkillsLearning;
+export default SkillsCore;

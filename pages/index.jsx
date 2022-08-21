@@ -1,9 +1,9 @@
 import { styled } from "../stitches.config.js";
-import SkillsetBlock from "../components/layout-blocks/SkillsetBlock.js";
-import ProfessionalAchievementsBlock from "../components/layout-blocks/ProfessionalAchievementsBlock.js";
-import SoftwareStackBlock from "../components/layout-blocks/SoftwareStackBlock.js";
-import ContentBlock from "../components/layout-blocks/ContentBlock.js";
-import QuickMenu from "../components/QuickMenu.js";
+import SkillsetBlock from "../components/about/pageblocks/SkillsetBlock.js";
+import ProfessionalAchievementsBlock from "../components/about/pageblocks/ProfessionalAchievementsBlock.js";
+import SoftwareStackBlock from "../components/about/pageblocks/SoftwareStackBlock.js";
+import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
+import QuickMenu from "../components/about/menu/QuickMenu.js";
 import Link from "next/link";
 import Heading from "../components/typography/Heading.js";
 

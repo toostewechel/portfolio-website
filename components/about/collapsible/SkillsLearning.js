@@ -1,10 +1,10 @@
 import React from "react";
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import MenuLineIcon from "remixicon-react/MenuLineIcon";
-import CloseLineIcon from "remixicon-react/CloseLineIcon";
-import MenuItem from "./MenuItem.js";
-import useMediaQuery from "beautiful-react-hooks/useMediaQuery";
+import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
+import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
+import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
+import Skill from "./Skill.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -19,16 +19,13 @@ const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-02",
-
-  "@bp1": {
-    padding: "$spacing-03",
-  },
+  padding: "$spacing-02 $none",
+  borderBottom: "solid 1px $gray6",
 });
 
 const Flex = styled("div", {
   display: "flex",
-  minWidth: "0",
+  minWidth: "0px",
 });
 
 const DecorativeIcon = styled("div", {
@@ -36,9 +33,8 @@ const DecorativeIcon = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   pr: "$spacing-02",
-  width: "24px",
-  height: "24px",
-  color: "$blue11",
+  size: "$5",
+  color: "$violet11",
 
   "@bp1": {
     pr: "$spacing-03",
@@ -55,6 +51,10 @@ const Title = styled("h3", {
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
+
+  "@bp1": {
+    fontSize: "$xl;",
+  },
 });
 
 const IconButton = styled("button", {
@@ -67,7 +67,7 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   '&[data-state="closed"]': {
-    backgroundColor: "transparent",
+    backgroundColor: "white",
   },
   '&[data-state="open"]': {
     backgroundColor: "$violet3",
@@ -83,53 +83,31 @@ const IconButton = styled("button", {
   },
 });
 
-function ScrollToMenu(props) {
-  const [open, setOpen] = React.useState(true);
-
+function SkillsLearning(props) {
+  const [open, setOpen] = React.useState(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
-          <Title>Quick Menu</Title>
+          <DecorativeIcon>
+            <StackOverflowLineIcon></StackOverflowLineIcon>
+          </DecorativeIcon>
+          <Title>Learning</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>{open ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
+          <IconButton>
+            {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
+          </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
+      <Skill backgroundColor="violet" label="Front-End Web Development" />
       <CollapsibleContent>
-        <MenuItem
-          href="#values"
-          src="/icons/search-eye-line.svg"
-          label="Values"
-        />
-        <MenuItem
-          href="#skillset"
-          src="/icons/flag-line.svg"
-          label="Skillset"
-        />
-        <MenuItem
-          href="#professional-achievements"
-          src="/icons/settings-line.svg"
-          label="Experience"
-        />
-        <MenuItem
-          href="#software-stack"
-          src="/icons/code-slash-line.svg"
-          label="Software Stack"
-        />
-        <MenuItem
-          href="#interesets"
-          src="/icons/restart-line.svg"
-          label="Interests"
-        />
-        <MenuItem
-          href="#contact"
-          src="/icons/contacts-book-line.svg"
-          label="Contact"
-        />
+        <Skill backgroundColor="violet" label="Product Management" />
+        <Skill backgroundColor="violet" label="3D Modelling" />
+        <Skill backgroundColor="violet" label="Knowledge Management" />
       </CollapsibleContent>
     </Collapsible>
   );
 }
 
-export default ScrollToMenu;
+export default SkillsLearning;

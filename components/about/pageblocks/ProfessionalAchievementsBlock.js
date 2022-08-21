@@ -1,6 +1,7 @@
-import { styled } from "../../stitches.config.js";
-import ContentBlock from "./ContentBlock.js";
-import ProfessionalAchievementsTabs from "../tabs/ProfessionalAchievementsTabs.js";
+import { styled } from "../../../stitches.config.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import ProfessionalAchievementsTabs from "../../tabs/ProfessionalAchievementsTabs.js";
+
 
 const Container = styled("div", {});
 

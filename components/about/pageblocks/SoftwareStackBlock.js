@@ -1,6 +1,6 @@
-import { styled } from "../../stitches.config.js";
-import ContentBlock from "./ContentBlock.js";
-import SoftwareStackTabs from "../tabs/SoftwareStackTabs.js";
+import { styled } from "../../../stitches.config.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import SoftwareStackTabs from "../../tabs/SoftwareStackTabs.js";
 
 const Container = styled("div", {});
 

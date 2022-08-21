@@ -1,4 +1,4 @@
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 
 const Link = styled("a", {
   outlineOffset: "2px",

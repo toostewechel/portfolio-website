@@ -1,4 +1,4 @@
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 
 const Heading = styled("h2", {
   fontSize: "$3xl",

@@ -1,7 +1,7 @@
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import SkillsCore from "../collapsible/SkillsCore.js";
 import SkillsLearning from "../collapsible/SkillsLearning.js";
-import ContentBlock from "./ContentBlock.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock.js";
 
 const Content = styled("div", {
   gridArea: "cnt",
