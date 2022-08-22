@@ -10,8 +10,12 @@ const Container = styled("div", {
         alignItems: "center",
         textAlign: "center",
       },
+      left: {
+        alignItems: "start",
+        textAlign: "left",
+      }
     },
-  }
+  },
 })
 
 const Heading = styled("h2", {
