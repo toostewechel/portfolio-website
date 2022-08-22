@@ -18,9 +18,14 @@ const Container = styled("div", {
   border: "1px solid transparent",
   margin: "$spacing-02 $none",
 
-  "&:hover": {
-    backgroundColor: "$violet3",
-    border: "1px solid $violet4",
+  "@bp1": {
+    "&:hover": {
+      scale: 1.02,
+      transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      backgroundColor: "$violet3",
+      border: "1px solid $violet4",
+      boxShadow: "$smooth",
+    },
   },
   "&:active": {
     backgroundColor: "$violet4",
@@ -37,6 +42,7 @@ const Label = styled("p", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$violet11",
+  mt: "$spacing-01",
 });
 
 function MenuItem(props) {

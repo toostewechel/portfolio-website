@@ -13,9 +13,8 @@ const Container = styled("div", {
   backgroundColor: "$gray2",
   borderRadius: "8px",
   maxWidth: "592px",
-  boxShadow:
-    "0px 100px 80px rgba(87, 70, 175, 0.09), 0px 41.7776px 33.4221px rgba(87, 70, 175, 0.0646969), 0px 22.3363px 17.869px rgba(87, 70, 175, 0.0536497), 0px 12.5216px 10.0172px rgba(87, 70, 175, 0.045), 0px 6.6501px 5.32008px rgba(87, 70, 175, 0.0363503), 0px 2.76726px 2.21381px rgba(87, 70, 175, 0.0253031)",
-
+  boxShadow: "$smooth",
+  
   "@bp4": {
     flexDirection: "row",
   },
@@ -33,7 +32,7 @@ const Card = styled("div", {
   borderRadius: "8px",
   height: "400px",
   width: "100%",
-  // minWidth: "320px",
+  boxShadow: "$smooth",
 });
 
 const FlexContainer = styled("div", {
@@ -133,7 +132,7 @@ const Icon = styled("div", {
 const Menu = styled("div", {
   display: "flex",
   flexDirection: "column",
-  p: "$spacing-05 $none",
+  pt: "$spacing-04",
   width: "100%",
 
   "@bp4": {

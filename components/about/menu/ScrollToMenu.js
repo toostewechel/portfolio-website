@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import MenuItem from "./MenuItem.js";
-import useMediaQuery from "beautiful-react-hooks/useMediaQuery";
+import { useMediaQuery } from "beautiful-react-hooks";
+import VisuallyHidden from "../../VisuallyHidden/VisuallyHidden.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
 });
+
+// const StyledTrigger = styled(CollapsiblePrimitive.Trigger, {
+//   '&[data-disabled]': {
+//     backgroundColor: "transparent",
+//   },
+// })
 
 // Exports
 export const Collapsible = StyledCollapsible;
@@ -47,7 +54,7 @@ const DecorativeIcon = styled("div", {
 
 const Title = styled("h3", {
   alignSelf: "center",
-  fontSize: "$lg",
+  fontSize: "$xl",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
@@ -83,52 +90,116 @@ const IconButton = styled("button", {
   },
 });
 
+
+
 function ScrollToMenu(props) {
   const [open, setOpen] = React.useState(true);
+  const [closed, setClosed] = React.useState(false);
+  const isTablet = useMediaQuery("(max-width: 768px)");
+  React.useEffect(() => {
+    setOpen(true);
+  }, []);
+
+  if (!setOpen) {
+    return null;
+  }
+  React.useEffect(() => {
+    setClosed(false);
+  }, []);
+
+  if (!setClosed) {
+    return null;
+  }
 
   return (
-    <Collapsible open={open} onOpenChange={setOpen}>
-      <HeaderPanel>
-        <Flex>
-          <Title>Quick Menu</Title>
-        </Flex>
-        <CollapsibleTrigger asChild>
-          <IconButton>{open ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
-        </CollapsibleTrigger>
-      </HeaderPanel>
-      <CollapsibleContent>
-        <MenuItem
-          href="#values"
-          src="/icons/search-eye-line.svg"
-          label="Values"
-        />
-        <MenuItem
-          href="#skillset"
-          src="/icons/flag-line.svg"
-          label="Skillset"
-        />
-        <MenuItem
-          href="#professional-achievements"
-          src="/icons/settings-line.svg"
-          label="Experience"
-        />
-        <MenuItem
-          href="#software-stack"
-          src="/icons/code-slash-line.svg"
-          label="Software Stack"
-        />
-        <MenuItem
-          href="#interesets"
-          src="/icons/restart-line.svg"
-          label="Interests"
-        />
-        <MenuItem
-          href="#contact"
-          src="/icons/contacts-book-line.svg"
-          label="Contact"
-        />
-      </CollapsibleContent>
-    </Collapsible>
+    <div>
+      {isTablet ? (<Collapsible open={closed} onOpenChange={setClosed}>
+        <HeaderPanel>
+          <Flex>
+            <Title>Quick Menu</Title>
+          </Flex>
+          <CollapsibleTrigger asChild>
+            <IconButton>{closed ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
+          </CollapsibleTrigger>
+        </HeaderPanel>
+        <CollapsibleContent>
+          <MenuItem
+            href="#values"
+            src="/icons/search-eye-line.svg"
+            label="Values"
+          />
+          <MenuItem
+            href="#skillset"
+            src="/icons/flag-line.svg"
+            label="Skillset"
+          />
+          <MenuItem
+            href="#professional-achievements"
+            src="/icons/settings-line.svg"
+            label="Experience"
+          />
+          <MenuItem
+            href="#software-stack"
+            src="/icons/code-slash-line.svg"
+            label="Software Stack"
+          />
+          <MenuItem
+            href="#interesets"
+            src="/icons/restart-line.svg"
+            label="Interests"
+          />
+          <MenuItem
+            href="#contact"
+            src="/icons/contacts-book-line.svg"
+            label="Contact"
+          />
+        </CollapsibleContent>
+      </Collapsible>) : (<Collapsible open={open} onOpenChange={setOpen} disabled>
+        <HeaderPanel>
+          <Flex>
+            <Title>Quick Menu</Title>
+          </Flex>
+          <VisuallyHidden>
+            <CollapsibleTrigger asChild>
+              <IconButton>{open ? <CloseLineIcon /> : <MenuLineIcon />}</IconButton>
+            </CollapsibleTrigger>
+          </VisuallyHidden>
+        </HeaderPanel>
+        <CollapsibleContent>
+          <MenuItem
+            href="#values"
+            src="/icons/search-eye-line.svg"
+            label="Values"
+          />
+          <MenuItem
+            href="#skillset"
+            src="/icons/flag-line.svg"
+            label="Skillset"
+          />
+          <MenuItem
+            href="#professional-achievements"
+            src="/icons/settings-line.svg"
+            label="Experience"
+          />
+          <MenuItem
+            href="#software-stack"
+            src="/icons/code-slash-line.svg"
+            label="Software Stack"
+          />
+          <MenuItem
+            href="#interesets"
+            src="/icons/restart-line.svg"
+            label="Interests"
+          />
+          <MenuItem
+            href="#contact"
+            src="/icons/contacts-book-line.svg"
+            label="Contact"
+          />
+        </CollapsibleContent>
+      </Collapsible>)}
+
+    </div>
   );
 }
 
