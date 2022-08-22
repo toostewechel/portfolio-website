@@ -95,6 +95,9 @@ const Button = styled ("button", {
 
 function ScrollContainerX() {
   const ref = useRef(null);
+  const handleClick = () => {
+    ref.current.scrollLeft = 0;
+  }
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   }
@@ -140,7 +143,7 @@ function ScrollContainerX() {
         </CardContainer>
       </ScrollContainer>
       <div>
-        <Button onClick={() => scroll(-330)}>Left</Button>
+        <Button onClick={handleClick}>Start</Button>
         <Button onClick={() => scroll(330)}>Right</Button>
       </div>
     </Wrapper>
