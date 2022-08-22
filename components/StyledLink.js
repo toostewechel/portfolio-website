@@ -23,7 +23,7 @@ const Panel = styled("div", {
     transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
     backgroundColor: "$violet3",
     border: "1px solid $violet4",
-    boxShadow: "0px 51px 116px rgba(57, 19, 184, 0.08), 0px 21.3066px 48.462px rgba(57, 19, 184, 0.0601401), 0px 11.3915px 25.9101px rgba(57, 19, 184, 0.0533835), 0px 6.38599px 14.525px rgba(57, 19, 184, 0.0481177), 0px 3.39155px 7.71412px rgba(57, 19, 184, 0.0416442), 0px 1.4113px 3.21002px rgba(57, 19, 184, 0.0307161)"
+    boxShadow: "$smooth",
   },
   "&:active": {
     backgroundColor: "$violet4",
