@@ -5,6 +5,7 @@ import SoftwareStackBlock from "../components/about/pageblocks/SoftwareStackBloc
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import QuickMenu from "../components/about/menu/QuickMenu.js";
 import Link from "next/link";
+import ScrollContainerX from "../components/about/scrollcontainer/ScrollContainerX";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -75,19 +76,14 @@ function HomePage() {
           <ContentBlock
             heading="My core values"
             description="These values guide me when making decisions, building relationships and solving problems."
-            alignment="center"
+            alignment={{
+              '@initial': 'left',
+              '@bp4': 'center'
+            }}
           ></ContentBlock>
         </div>
       </PageLayout>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "-96px",
-        }}
-      >
-        <img src="/images/values.png" />
-      </div>
+      <ScrollContainerX />
       <PageLayout>
         <Spacer>
           <SkillsetBlock />
