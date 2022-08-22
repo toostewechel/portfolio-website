@@ -15,12 +15,14 @@
     "@radix-ui/react-accordion": "^1.0.0",
     "@radix-ui/react-collapsible": "^1.0.0",
     "@radix-ui/react-tabs": "^1.0.0",
+    "@radix-ui/react-visually-hidden": "^1.0.0",
     "@stitches/react": "^1.2.8",
-    "beautiful-react-hooks": "^3.10.0",
+    "beautiful-react-hooks": "^3.11.1",
     "next": "^12.2.3",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "remixicon-react": "^1.0.0"
   },
   "devDependencies": {}
