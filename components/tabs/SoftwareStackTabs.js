@@ -22,44 +22,12 @@ const Flex = styled("div", {
 
 function SoftwareStackTabs() {
   return (
-    <Tabs defaultValue="design">
+    <Tabs defaultValue="development">
       <TabsList>
-        <TabsTrigger value="design">Design</TabsTrigger>
         <TabsTrigger value="development">Development</TabsTrigger>
+        <TabsTrigger value="design">Design</TabsTrigger>
         <TabsTrigger value="workflow">Workflow</TabsTrigger>
       </TabsList>
-      <TabsContent value="design">
-        <FlexContainer>
-          <Flex>
-            <StyledLink
-              href="https://www.figma.com/"
-              src="/logo/figma-logo.png"
-              title="Figma"
-              description="The collaborative interface design tool"
-            />
-            <StyledLink
-              href="https://www.adobe.com/products/illustrator.html"
-              src="/logo/adobe-illustrator-logo.png"
-              title="Adobe Illustrator"
-              description="Vector based graphical design tool"
-            />
-          </Flex>
-          <Flex>
-            <StyledLink
-              href="https://www.adobe.com/products/photoshop.html"
-              src="/logo/adobe-photoshop-logo.png"
-              title="Adobe Photoshop"
-              description="Pixel based graphical design tool"
-            />
-            <StyledLink
-              href="https://spline.design/"
-              src="/logo/spline3d-logo.png"
-              title="Spline 3D"
-              description="Design tool for 3D web experiences"
-            />
-          </Flex>
-        </FlexContainer>
-      </TabsContent>
       <TabsContent value="development">
         <FlexContainer>
           <Flex>
@@ -70,10 +38,10 @@ function SoftwareStackTabs() {
               description="The collaborative browser based IDE"
             />
             <StyledLink
-              href="https://code.visualstudio.com/"
-              src="/logo/visual-studio-code-logo.png"
-              title="Visual Studio Code"
-              description="Code editor (IDE)"
+              href="https://stitches.dev/"
+              src="/logo/stitches-logo.png"
+              title="Stitches"
+              description="CSS-in-JS library"
             />
             <StyledLink
               href="https://reactjs.org/"
@@ -106,6 +74,44 @@ function SoftwareStackTabs() {
               src="/logo/nextjs-logo.png"
               title="Next.JS"
               description="The React Framework for Production"
+            />
+             <StyledLink
+              href="https://code.visualstudio.com/"
+              src="/logo/visual-studio-code-logo.png"
+              title="Visual Studio Code"
+              description="Code editor (IDE)"
+            />
+          </Flex>
+        </FlexContainer>
+      </TabsContent>
+      <TabsContent value="design">
+        <FlexContainer>
+          <Flex>
+            <StyledLink
+              href="https://www.figma.com/"
+              src="/logo/figma-logo.png"
+              title="Figma"
+              description="The collaborative interface design tool"
+            />
+            <StyledLink
+              href="https://www.adobe.com/products/illustrator.html"
+              src="/logo/adobe-illustrator-logo.png"
+              title="Adobe Illustrator"
+              description="Vector based graphical design tool"
+            />
+          </Flex>
+          <Flex>
+            <StyledLink
+              href="https://www.adobe.com/products/photoshop.html"
+              src="/logo/adobe-photoshop-logo.png"
+              title="Adobe Photoshop"
+              description="Pixel based graphical design tool"
+            />
+            <StyledLink
+              href="https://spline.design/"
+              src="/logo/spline3d-logo.png"
+              title="Spline 3D"
+              description="Design tool for 3D web experiences"
             />
           </Flex>
         </FlexContainer>
