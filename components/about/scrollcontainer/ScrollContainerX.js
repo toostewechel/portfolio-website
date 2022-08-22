@@ -1,16 +1,13 @@
 import React, { useRef } from "react";
 import { styled } from "../../../stitches.config.js";
-import Card from "./Card.js";
 
-const Wrapper = styled("div", {
-  
-})
+const Wrapper = styled("div", {});
 
 const ScrollContainer = styled("div", {
   display: "flex",
   justifyContent: "left",
   flexWrap: "nowrap",
-  overflowX: "hidden",
+  overflowX: "scroll",
   scrollBehavior: "smooth",
   gap: "16px",
   p: "$spacing-10 $spacing-02",
@@ -19,8 +16,8 @@ const ScrollContainer = styled("div", {
     justifyContent: "center",
     gap: "24px",
     p: "$spacing-13 $spacing-04",
-  }
-})
+  },
+});
 
 const CardContainer = styled("div", {
   display: "flex",
@@ -38,12 +35,11 @@ const CardContainer = styled("div", {
   "@bp4": {
     "&:hover": {
       scale: 1.02,
-      transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
       boxShadow: "$smooth",
     },
-  }
-
-})
+  },
+});
 
 const CardInfo = styled("div", {
   display: "flex",
@@ -54,8 +50,7 @@ const CardInfo = styled("div", {
   padding: "16px",
   width: "100%",
   boxShadow: "$smooth",
-
-})
+});
 
 const Title = styled("p", {
   fontFamily: "$header",
@@ -68,8 +63,7 @@ const Title = styled("p", {
   overflow: "hidden",
   "-webkit-line-clamp": "3",
   "-webkit-box-orient": "vertical",
-
-})
+});
 
 const Paragraph = styled("p", {
   fontSize: "$sm",
@@ -80,65 +74,78 @@ const Paragraph = styled("p", {
 
   "@bp1": {
     fontSize: "base",
-  }
-})
+  },
+});
 
-const Button = styled ("button", {
+const Button = styled("button", {
   padding: "16px",
   backgroundColor: "$violet3",
   mr: "8px",
 
   "&:hover": {
     backgroundColor: "$violet4",
-  }
-})
+  },
+});
 
 function ScrollContainerX() {
   const ref = useRef(null);
   const handleClick = () => {
     ref.current.scrollLeft = 0;
-  }
+  };
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
-  }
+  };
 
   return (
     <Wrapper>
-      <ScrollContainer ref={ref} >
+      <ScrollContainer ref={ref}>
         <CardContainer>
           <CardInfo>
             <Title>Reliable</Title>
-            <Paragraph>I intend to keep my word if someone asks me something</Paragraph>
+            <Paragraph>
+              I intend to keep my word if someone asks me something
+            </Paragraph>
           </CardInfo>
         </CardContainer>
         <CardContainer>
           <CardInfo>
             <Title>Pro-active</Title>
-            <Paragraph>I combine resourcefulness and creativity to make things happen</Paragraph>
+            <Paragraph>
+              I combine resourcefulness and creativity to make things happen
+            </Paragraph>
           </CardInfo>
         </CardContainer>
         <CardContainer>
           <CardInfo>
             <Title>Think win-win</Title>
-            <Paragraph>I always look for solutions that will benefit the majority involved</Paragraph>
+            <Paragraph>
+              I always look for solutions that will benefit the majority
+              involved
+            </Paragraph>
           </CardInfo>
         </CardContainer>
         <CardContainer>
           <CardInfo>
             <Title>Seek to understand</Title>
-            <Paragraph>I have empathy for those around me and respect their point of view</Paragraph>
+            <Paragraph>
+              I have empathy for those around me and respect their point of view
+            </Paragraph>
           </CardInfo>
         </CardContainer>
         <CardContainer>
           <CardInfo>
             <Title>Curious</Title>
-            <Paragraph>I have a desire to explore, investigate and learn new things</Paragraph>
+            <Paragraph>
+              I have a desire to explore, investigate and learn new things
+            </Paragraph>
           </CardInfo>
         </CardContainer>
         <CardContainer>
           <CardInfo>
             <Title>Autonomous</Title>
-            <Paragraph>I Intuitively prioritise work and hold myself accountable</Paragraph>
+            <Paragraph>
+              I Intuitively prioritise work and hold myself accountable
+            </Paragraph>
           </CardInfo>
         </CardContainer>
       </ScrollContainer>

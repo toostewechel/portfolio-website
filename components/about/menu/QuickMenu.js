@@ -14,7 +14,7 @@ const Container = styled("div", {
   borderRadius: "8px",
   maxWidth: "592px",
   boxShadow: "$smooth",
-  
+
   "@bp4": {
     flexDirection: "row",
   },

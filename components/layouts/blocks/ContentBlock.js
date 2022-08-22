@@ -13,10 +13,10 @@ const Container = styled("div", {
       left: {
         alignItems: "start",
         textAlign: "left",
-      }
+      },
     },
   },
-})
+});
 
 const Heading = styled("h2", {
   fontSize: "$3xl",

@@ -38,7 +38,6 @@ const Paragraph = styled("p", {
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
-  mt: "96px",
   padding: "8px",
   ml: "auto",
   mr: "auto",
@@ -64,21 +63,30 @@ const Spacer = styled("div", {
   pb: "$spacing-10",
 });
 
+const Landing = styled("div", {
+  height: "100vh",
+  backgroundImage: "url(/images/wallpaper.png)",
+});
+
 function HomePage() {
   return (
     <div>
+      <Landing>
+        <PageLayout>
+          <div>
+            <QuickMenu />
+          </div>
+        </PageLayout>
+      </Landing>
       <PageLayout>
-        <Spacer>
-          <QuickMenu />
-        </Spacer>
         <Spacer></Spacer>
         <div id="values">
           <ContentBlock
             heading="My core values"
             description="These values guide me when making decisions, building relationships and solving problems."
             alignment={{
-              '@initial': 'left',
-              '@bp4': 'center'
+              "@initial": "left",
+              "@bp4": "center",
             }}
           ></ContentBlock>
         </div>

@@ -75,7 +75,7 @@ function SoftwareStackTabs() {
               title="Next.JS"
               description="The React Framework for Production"
             />
-             <StyledLink
+            <StyledLink
               href="https://code.visualstudio.com/"
               src="/logo/visual-studio-code-logo.png"
               title="Visual Studio Code"
@@ -185,9 +185,7 @@ function SoftwareStackTabs() {
         </FlexContainer>
       </TabsContent>
     </Tabs>
-  )
+  );
 }
 
 export default SoftwareStackTabs;
-
-
