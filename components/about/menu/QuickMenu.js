@@ -120,8 +120,13 @@ const Icon = styled("div", {
   backgroundColor: "rgba(0, 0, 0, 0.1)",
   color: "$violet3",
   borderRadius: "999px",
+  willChange: "transform",
+  transition: "transform 300ms ease-in, scale 300ms ease-in",
 
   "&:hover": {
+    scale: 1.03,
+    transform: "translateY(-4px)",
+    transition: "transform 300ms ease-out, scale 300ms ease-out",
     backgroundColor: "rgba(0, 0, 0, 0.15)",
   },
   "&:active": {
