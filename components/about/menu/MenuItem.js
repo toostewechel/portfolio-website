@@ -17,12 +17,15 @@ const Container = styled("div", {
   borderRadius: "4px",
   border: "1px solid transparent",
   margin: "$spacing-02 $none",
+  willChange: "transform",
+  transition: "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
+
 
   "@bp1": {
     "&:hover": {
       scale: 1.02,
-      transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-      backgroundColor: "$violet3",
+      backgroundColor: "$white",
+      transition: "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
       border: "1px solid $violet4",
       boxShadow: "$smooth",
     },
