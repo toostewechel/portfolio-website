@@ -2,9 +2,14 @@ import { styled } from "../../../stitches.config.js";
 import QuickMenu from "../menu/QuickMenu.js";
 
 const Container = styled("div", {
-  height: "100vh",
-  backgroundImage: "url(/images/wallpaper.png)",
-  backgroundSize: "cover",
+  
+  margin: 0,
+
+  "@bp1": {
+    backgroundImage: "url(/images/wallpaper.png)",
+    backgroundSize: "cover",
+    height: "100vh",
+  }
 })
 
 const MenuWrapper = styled("div", {
