@@ -8,6 +8,7 @@ const Container = styled("div", {
   "@bp1": {
     backgroundImage: "url(/images/wallpaper.png)",
     backgroundSize: "cover",
+    backgroundPosition: "left center",
     height: "100vh",
   }
 })
