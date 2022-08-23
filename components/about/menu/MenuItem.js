@@ -18,20 +18,22 @@ const Container = styled("div", {
   border: "1px solid transparent",
   margin: "$spacing-02 $none",
   willChange: "transform",
-  transition: "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
-
+  transition:
+    "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
 
   "@bp1": {
     "&:hover": {
       scale: 1.02,
-      backgroundColor: "$white",
-      transition: "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
+      backgroundColor: "$violet3",
+      transition:
+        "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
       border: "1px solid $violet4",
       boxShadow: "$smooth",
     },
   },
   "&:active": {
     backgroundColor: "$violet4",
+    scale: 1,
   },
 });
 

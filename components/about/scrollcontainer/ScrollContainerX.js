@@ -13,7 +13,7 @@ const ScrollContainer = styled("div", {
   gap: "16px",
   p: "$spacing-10 $spacing-02",
 
-  "&::-webkit-scrollbar" : {
+  "&::-webkit-scrollbar": {
     display: "none",
   },
 
