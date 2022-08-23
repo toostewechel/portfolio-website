@@ -27,25 +27,6 @@ const IconButtonContainer = styled("div", {
   gap: "$spacing-03",
 });
 
-const IconLink = styled("a", {
-  borderRadius: "100%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "$spacing-03",
-  willChange: "transform",
-  transition:
-    "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
-
-  "&:hover": {
-    scale: 1.05,
-    transition:
-      "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
-    backgroundColor: "$violetA9",
-    boxShadow: "$smooth",
-  },
-});
-
 const ShortcutContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
