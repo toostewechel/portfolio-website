@@ -5,7 +5,9 @@ import {
   violetDarkA,
   green,
   mauve,
+  mauveDarkA,
   whiteA,
+  blackA,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -28,7 +30,9 @@ export const {
       ...violetDarkA,
       ...green,
       ...mauve, //headings
+      ...mauveDarkA,
       ...whiteA,
+      ...blackA,
     },
     space: {
       none: "0px",
@@ -97,11 +101,18 @@ export const {
     borderStyles: {},
     radii: {},
     shadows: {
+      toolbar:
+        "0px 100px 80px rgba(0, 0, 0, 0.0454859), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0652842), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0787009), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.0894223), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0998636), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.12)",
       smooth:
         "0px 36px 80px rgba(0, 0, 0, 0.07), 0px 15.0399px 33.4221px rgba(0, 0, 0, 0.0519299), 0px 8.04107px 17.869px rgba(0, 0, 0, 0.0451911), 0px 4.50776px 10.0172px rgba(0, 0, 0, 0.0399452), 0px 2.39404px 5.32008px rgba(0, 0, 0, 0.0339997), 0px 0.996212px 2.21381px rgba(0, 0, 0, 0.0248306);",
+      inset: "inset 1px 1px 4px rgba(0, 0, 0, 0.3)",
     },
     zIndices: {},
     transitions: {},
+    gradients: {
+      purple:
+        "linear-gradient(314.17deg, #3F1ABC 25.73%, rgba(63, 26, 188, 0.65) 77.9%);",
+    },
   },
   media: {
     bp1: "(min-width: 480px)",
