@@ -5,17 +5,11 @@ import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import MenuItem from "./MenuItem.js";
 import { useMediaQuery } from "beautiful-react-hooks";
-import VisuallyHidden from "../../VisuallyHidden/VisuallyHidden.js";
+import VisuallyHidden from "../../visuallyhidden/VisuallyHidden.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
 });
-
-// const StyledTrigger = styled(CollapsiblePrimitive.Trigger, {
-//   '&[data-disabled]': {
-//     backgroundColor: "transparent",
-//   },
-// })
 
 // Exports
 export const Collapsible = StyledCollapsible;
