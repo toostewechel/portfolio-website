@@ -9,8 +9,13 @@ const ScrollContainer = styled("div", {
   flexWrap: "nowrap",
   overflowX: "scroll",
   scrollBehavior: "smooth",
+  "-webkit-overflow-scrolling": "touch",
   gap: "16px",
   p: "$spacing-10 $spacing-02",
+
+  "&::-webkit-scrollbar" : {
+    display: "none",
+  },
 
   "@bp5": {
     justifyContent: "center",

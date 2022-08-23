@@ -6,6 +6,7 @@ import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import QuickMenu from "../components/about/menu/QuickMenu.js";
 import Link from "next/link";
 import ScrollContainerX from "../components/about/scrollcontainer/ScrollContainerX";
+import Landing from "../components/about/landing/Landing.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -63,21 +64,10 @@ const Spacer = styled("div", {
   pb: "$spacing-10",
 });
 
-const Landing = styled("div", {
-  height: "100vh",
-  backgroundImage: "url(/images/wallpaper.png)",
-});
-
 function HomePage() {
   return (
     <div>
-      <Landing>
-        <PageLayout>
-          <div>
-            <QuickMenu />
-          </div>
-        </PageLayout>
-      </Landing>
+      <Landing />
       <PageLayout>
         <Spacer></Spacer>
         <div id="values">
