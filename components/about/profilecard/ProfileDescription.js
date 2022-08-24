@@ -3,7 +3,6 @@ import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
-import MenuItem from "./MenuItem.js";
 import { useMediaQuery } from "beautiful-react-hooks";
 import VisuallyHidden from "../../visuallyhidden/VisuallyHidden.js";
 
@@ -20,10 +19,10 @@ const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-02",
+  padding: "$spacing-02 $none",
 
   "@bp1": {
-    padding: "$spacing-03",
+    padding: "$spacing-03 $none",
   },
 });
 
@@ -71,7 +70,7 @@ const IconButton = styled("button", {
     backgroundColor: "transparent",
   },
   '&[data-state="open"]': {
-    backgroundColor: "$violet3",
+    backgroundColor: "transparent",
   },
   "&:hover": {
     backgroundColor: "$violet4",
@@ -84,7 +83,29 @@ const IconButton = styled("button", {
   },
 });
 
-function ScrollToMenu(props) {
+const StyledParagraph = styled("p", {
+  fontSize: "$lg",
+  fontWeight: "$regular",
+  fontFamily: "$default",
+  lineHeight: "$base",
+  letterSpacing: "$tracking-normal",
+  color: "$gray12",
+  mb: "$spacing-07",
+
+  "@bp2": {
+    fontSize: "$xl",
+  },
+});
+
+const StyledSpan = styled("span", {
+  backgroundColor: "$crimsonA8",
+  padding: "2px",
+  borderRadius: "4px",
+  color: "$crimson2",
+  boxShadow: "$smooth",
+})
+
+function ProfileDescription(props) {
   const [open, setOpen] = React.useState(true);
   const [closed, setClosed] = React.useState(false);
   const isTablet = useMediaQuery("(max-width: 768px)");
@@ -109,7 +130,7 @@ function ScrollToMenu(props) {
         <Collapsible open={closed} onOpenChange={setClosed}>
           <HeaderPanel>
             <Flex>
-              <Title>Index</Title>
+              <Title>About</Title>
             </Flex>
             <CollapsibleTrigger asChild>
               <IconButton>
@@ -118,43 +139,15 @@ function ScrollToMenu(props) {
             </CollapsibleTrigger>
           </HeaderPanel>
           <CollapsibleContent>
-            <MenuItem
-              href="#values"
-              src="/icons/search-eye-line.svg"
-              label="Values"
-            />
-            <MenuItem
-              href="#skillset"
-              src="/icons/flag-line.svg"
-              label="Skillset"
-            />
-            <MenuItem
-              href="#professional-achievements"
-              src="/icons/settings-line.svg"
-              label="Experience"
-            />
-            <MenuItem
-              href="#software-stack"
-              src="/icons/code-slash-line.svg"
-              label="Software Stack"
-            />
-            <MenuItem
-              href="#interesets"
-              src="/icons/restart-line.svg"
-              label="Interests"
-            />
-            <MenuItem
-              href="#contact"
-              src="/icons/contacts-book-line.svg"
-              label="Contact"
-            />
+            <StyledParagraph>I design and build digital products, by <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured, creative and visual way. </StyledParagraph>
+            <StyledParagraph> I am <StyledSpan>passionate</StyledSpan> about building useful products that have a real impact.</StyledParagraph>
           </CollapsibleContent>
         </Collapsible>
       ) : (
         <Collapsible open={open} onOpenChange={setOpen} disabled>
           <HeaderPanel>
             <Flex>
-              <Title>Index</Title>
+              <Title>About</Title>
             </Flex>
             <VisuallyHidden>
               <CollapsibleTrigger asChild>
@@ -165,36 +158,8 @@ function ScrollToMenu(props) {
             </VisuallyHidden>
           </HeaderPanel>
           <CollapsibleContent>
-            <MenuItem
-              href="#values"
-              src="/icons/search-eye-line.svg"
-              label="Values"
-            />
-            <MenuItem
-              href="#skillset"
-              src="/icons/flag-line.svg"
-              label="Skillset"
-            />
-            <MenuItem
-              href="#professional-achievements"
-              src="/icons/settings-line.svg"
-              label="Experience"
-            />
-            <MenuItem
-              href="#software-stack"
-              src="/icons/code-slash-line.svg"
-              label="Software Stack"
-            />
-            <MenuItem
-              href="#interesets"
-              src="/icons/restart-line.svg"
-              label="Interests"
-            />
-            <MenuItem
-              href="#contact"
-              src="/icons/contacts-book-line.svg"
-              label="Contact"
-            />
+            <StyledParagraph>I design and build digital products, by <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured, creative and visual way. </StyledParagraph>
+            <StyledParagraph> I am <StyledSpan>passionate</StyledSpan> about building useful products that have a real impact.</StyledParagraph>
           </CollapsibleContent>
         </Collapsible>
       )}
@@ -202,4 +167,4 @@ function ScrollToMenu(props) {
   );
 }
 
-export default ScrollToMenu;
+export default ProfileDescription;

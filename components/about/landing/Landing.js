@@ -7,9 +7,11 @@ const Container = styled("div", {
   backgroundColor: "#FFE0B4",
 
   "@bp1": {
-    // backgroundImage: "url(/images/wallpaper.png)",
+    backgroundImage: "url(/images/wallpaper.png)",
+    opacity: 0.9,
     backgroundSize: "contain",
-    backgroundPosition: "left",
+    backgroundPosition: "right center",
+    backgroundRepeat: "no-repeat",
     height: "100vh",
   },
 });

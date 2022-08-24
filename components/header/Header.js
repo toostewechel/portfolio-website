@@ -1,5 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import Toolbar from "./Toolbar.js";
+import React, { useState } from "react";
 
 const Container = styled("div", {
   display: "flex",
@@ -41,7 +42,7 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>Snapshots</Title>
+        <Title>Snapshots.</Title>
       </Box>
       <Toolbar />
       <div style={{width: "96px"}}></div>
