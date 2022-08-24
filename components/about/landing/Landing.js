@@ -1,13 +1,13 @@
 import { styled } from "../../../stitches.config.js";
-import QuickMenu from "../menu/QuickMenu.js";
+import ProfileCard from "../profilecard/ProfileCard.js";
 import Header from "../../header/Header.js";
 
 const Container = styled("div", {
   margin: 0,
-  backgroundColor: "$mauve12",
+  backgroundColor: "#FFE0B4",
 
   "@bp1": {
-    backgroundImage: "url(/images/wallpaper.png)",
+    // backgroundImage: "url(/images/wallpaper.png)",
     backgroundSize: "contain",
     backgroundPosition: "left",
     height: "100vh",
@@ -34,7 +34,7 @@ function Landing() {
         <MenuWrapper>
           <div></div>
           <div>
-            <QuickMenu />
+            <ProfileCard />
           </div>
           <div></div>
         </MenuWrapper>

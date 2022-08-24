@@ -160,7 +160,7 @@ const MenuTitle = styled("h3", {
   },
 });
 
-function QuickMenu(props) {
+function ProfileCard(props) {
   const badge = React.useState(true);
 
   return (
@@ -206,4 +206,4 @@ function QuickMenu(props) {
   );
 }
 
-export default QuickMenu;
+export default ProfileCard;
