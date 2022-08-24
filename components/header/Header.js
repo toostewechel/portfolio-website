@@ -44,6 +44,7 @@ function Header() {
         <Title>Snapshots.me</Title>
       </Box>
       <Toolbar />
+      <div style={{width: "300px"}}></div>
     </Container>
   );
 }

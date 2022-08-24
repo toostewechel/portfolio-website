@@ -48,6 +48,11 @@ const ShortcutLabel = styled("p", {
   p: "$spacing-01 0px",
 });
 
+const Icon = styled("div", {
+  display: "flex",
+  size: "$6",
+})
+
 // Make command character useable in React
 let command = String.fromCodePoint(8984);
 
@@ -62,13 +67,13 @@ function ActiveLink({ children, href, label }) {
     willChange: "transform",
     transition:
       "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
-    backgroundColor: router.asPath === href ? "$violetA11" : "transparent",
+    background: router.asPath === href ? "linear-gradient(180deg, $violetA10, $crimsonA6)" : "transparent",
 
     "&:hover": {
       scale: 1.05,
       transition:
         "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
-      backgroundColor: "$violetA11",
+      background: "linear-gradient(180deg, $violetA10, $crimsonA6)",
       boxShadow: "$smooth",
     },
   });
@@ -95,13 +100,13 @@ function Toolbar(href) {
     <ToolbarContainer>
       <IconButtonContainer>
         <ActiveLink label="About Me" href="/">
-          <img src="/icons/about-me.svg" />
+          <Icon><img src="/icons/about-me.svg" /></Icon>
         </ActiveLink>
         <ActiveLink label="Projects" href="/markdown">
-          <img src="/icons/case-studies.svg" />
+          <Icon><img src="/icons/case-studies.svg" /></Icon>
         </ActiveLink>
         <ActiveLink label="Writing" href="">
-          <img src="/icons/writing.svg" />
+          <Icon><img src="/icons/writing.svg" /></Icon>
         </ActiveLink>
       </IconButtonContainer>
       <ShortcutContainer>

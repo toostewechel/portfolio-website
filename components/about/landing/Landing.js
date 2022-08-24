@@ -4,18 +4,21 @@ import Header from "../../header/Header.js";
 
 const Container = styled("div", {
   margin: 0,
+  backgroundColor: "$mauve12",
 
   "@bp1": {
     backgroundImage: "url(/images/wallpaper.png)",
-    backgroundSize: "cover",
-    backgroundPosition: "left center",
+    backgroundSize: "contain",
+    backgroundPosition: "left",
     height: "100vh",
   },
 });
 
 const MenuWrapper = styled("div", {
   maxWidth: "1234px",
-  m: "0 auto",
+  ml: "auto",
+  mr: "auto",
+  mt: "-124px",
   display: "flex",
   flexDirection: "column",
   flex: "0 0 100%",
