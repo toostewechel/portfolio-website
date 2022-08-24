@@ -8,15 +8,19 @@ import {
 import { useRouter } from "next/router";
 
 const ToolbarContainer = styled("div", {
-  display: "flex",
+  display: "none",
   flexDirection: "row",
   alignItems: "center",
-  borderRadius: "99px",
+  borderRadius: "8px",
   padding: "$spacing-03",
   gap: "$spacing-07",
   background:
     "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
   boxShadow: "$toolbar",
+
+  "@bp1": {
+    display: "flex",
+  }
 });
 
 const IconButtonContainer = styled("div", {
@@ -35,7 +39,7 @@ const ShortcutContainer = styled("div", {
   backgroundColor: "$mauveA5",
   boxShadow: "$inset",
   color: "$mauveA12",
-  borderRadius: "99px",
+  borderRadius: "8px",
 });
 
 const ShortcutLabel = styled("p", {
@@ -59,7 +63,7 @@ let command = String.fromCodePoint(8984);
 function ActiveLink({ children, href, label }) {
   const router = useRouter();
   const IconLink = styled("a", {
-    borderRadius: "100%",
+    borderRadius: "8px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -99,14 +103,26 @@ function Toolbar(href) {
   return (
     <ToolbarContainer>
       <IconButtonContainer>
-        <ActiveLink label="About Me" href="/">
-          <Icon><img src="/icons/about-me.svg" /></Icon>
+        <ActiveLink label="Home" href="#values">
+          <Icon><img src="/icons/home.svg" /></Icon>
         </ActiveLink>
-        <ActiveLink label="Projects" href="/markdown">
+        <ActiveLink label="Core Values" href="#values">
+          <Icon><img src="/icons/values.svg" /></Icon>
+        </ActiveLink>
+        <ActiveLink label="Case Studies" href="#">
           <Icon><img src="/icons/case-studies.svg" /></Icon>
         </ActiveLink>
-        <ActiveLink label="Writing" href="">
+        <ActiveLink label="Experience" href="#professional-achievements">
+          <Icon><img src="/icons/experience.svg" /></Icon>
+        </ActiveLink>
+        <ActiveLink label="Writing" href="#">
           <Icon><img src="/icons/writing.svg" /></Icon>
+        </ActiveLink>
+        <ActiveLink label="Software" href="#software-stack">
+          <Icon><img src="/icons/software.svg" /></Icon>
+        </ActiveLink>
+        <ActiveLink label="Interests" href="">
+          <Icon><img src="/icons/interests.svg" /></Icon>
         </ActiveLink>
       </IconButtonContainer>
       <ShortcutContainer>

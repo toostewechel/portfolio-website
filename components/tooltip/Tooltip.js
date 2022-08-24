@@ -25,9 +25,6 @@ const slideLeftAndFade = keyframes({
 const StyledContent = styled(TooltipPrimitive.Content, {
   borderRadius: "4px",
   padding: "$spacing-03 $spacing-04",
-  fontSize: "$base",
-  fontFamily: "$header",
-  color: "$violet11",
   backgroundColor: "white",
   boxShadow: "$smooth",
   userSelect: "none",
@@ -44,6 +41,13 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   },
 });
 
+const Label = styled("p", {
+  fontSize: "$base",
+  fontFamily: "$header",
+  color: "$violet11",
+  mt: "2px",
+})
+
 const StyledArrow = styled(TooltipPrimitive.Arrow, {
   fill: "white",
 });
@@ -52,7 +56,7 @@ function Content({ children, ...props }) {
   return (
     <TooltipPrimitive.Portal>
       <StyledContent {...props}>
-        {children}
+        <Label>{children}</Label>
         <StyledArrow />
       </StyledContent>
     </TooltipPrimitive.Portal>
