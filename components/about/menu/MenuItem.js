@@ -15,19 +15,15 @@ const Container = styled("div", {
   gap: "$spacing-03",
   p: "$spacing-04",
   borderRadius: "4px",
-  border: "1px solid transparent",
   margin: "$spacing-02 $none",
   willChange: "transform",
-  transition:
-    "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
+  transition: "all, 300ms ease-in",
 
   "@bp1": {
     "&:hover": {
       scale: 1.02,
-      backgroundColor: "$violet3",
-      transition:
-        "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
-      border: "1px solid $violet4",
+      background: "rgba(255, 255, 255, 0.3)",
+      transition: "all, 200ms ease-out",
       boxShadow: "$smooth",
     },
   },
@@ -39,6 +35,7 @@ const Container = styled("div", {
 
 const Icon = styled("div", {
   size: "$5",
+  color: "white",
 });
 
 const Label = styled("p", {

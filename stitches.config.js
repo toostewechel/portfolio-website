@@ -3,11 +3,14 @@ import {
   blue,
   violet,
   violetDarkA,
+  violetA,
   green,
   mauve,
   mauveDarkA,
   whiteA,
   blackA,
+  crimson,
+  crimsonA,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -27,12 +30,15 @@ export const {
       ...gray,
       ...blue,
       ...violet,
+      ...violetA,
       ...violetDarkA,
       ...green,
       ...mauve, //headings
       ...mauveDarkA,
       ...whiteA,
       ...blackA,
+      ...crimson,
+      ...crimsonA,
     },
     space: {
       none: "0px",

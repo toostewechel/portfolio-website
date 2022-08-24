@@ -109,7 +109,7 @@ function ScrollToMenu(props) {
         <Collapsible open={closed} onOpenChange={setClosed}>
           <HeaderPanel>
             <Flex>
-              <Title>Quick Menu</Title>
+              <Title>Index</Title>
             </Flex>
             <CollapsibleTrigger asChild>
               <IconButton>
@@ -154,7 +154,7 @@ function ScrollToMenu(props) {
         <Collapsible open={open} onOpenChange={setOpen} disabled>
           <HeaderPanel>
             <Flex>
-              <Title>Quick Menu</Title>
+              <Title>Index</Title>
             </Flex>
             <VisuallyHidden>
               <CollapsibleTrigger asChild>

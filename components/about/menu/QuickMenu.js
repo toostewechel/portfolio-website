@@ -10,8 +10,9 @@ const Container = styled("div", {
   p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
-  backgroundColor: "$gray2",
+  background: "linear-gradient(30deg, $violetA4, $crimsonA2)",
   borderRadius: "8px",
+  border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
   maxWidth: "592px",
   boxShadow: "$smooth",
 
