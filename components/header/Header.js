@@ -1,5 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import Toolbar from "./Toolbar.js";
+import React, { useState } from "react";
 
 const Container = styled("div", {
   display: "flex",
@@ -33,7 +34,7 @@ const Title = styled("p", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
-  fontSize: "$2xl",
+  fontSize: "$3xl",
   mt: "$spacing-02",
 });
 
@@ -41,10 +42,10 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>Snapshots.me</Title>
+        <Title>Snapshots.</Title>
       </Box>
       <Toolbar />
-      <div style={{width: "300px"}}></div>
+      <div style={{width: "96px"}}></div>
     </Container>
   );
 }

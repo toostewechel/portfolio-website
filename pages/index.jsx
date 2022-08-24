@@ -3,7 +3,6 @@ import SkillsetBlock from "../components/about/pageblocks/SkillsetBlock.js";
 import ProfessionalAchievementsBlock from "../components/about/pageblocks/ProfessionalAchievementsBlock.js";
 import SoftwareStackBlock from "../components/about/pageblocks/SoftwareStackBlock.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
-import QuickMenu from "../components/about/menu/QuickMenu.js";
 import Link from "next/link";
 import ScrollContainerX from "../components/about/scrollcontainer/ScrollContainerX";
 import Landing from "../components/about/landing/Landing.js";

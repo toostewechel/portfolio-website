@@ -14,8 +14,8 @@ const StyledParagraph = styled("p", {
   },
 });
 
-function Paragraph(props) {
-  return <StyledParagraph>{props.description}</StyledParagraph>;
+function Paragraph(children) {
+  return <StyledParagraph>{children}</StyledParagraph>;
 }
 
 export default Paragraph;

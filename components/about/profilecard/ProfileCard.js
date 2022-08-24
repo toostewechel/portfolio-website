@@ -3,14 +3,13 @@ import { styled } from "../../../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
-
-import ScrollToMenu from "./ScrollToMenu.js";
+import ProfileDescription from "./ProfileDescription.js";
 
 const Container = styled("div", {
   p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
-  background: "linear-gradient(30deg, $violetA4, $crimsonA2)",
+  background: "linear-gradient(30deg, $violetA6, $crimsonA5)",
   borderRadius: "8px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
   maxWidth: "592px",
@@ -51,7 +50,6 @@ const CardTitle = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$whiteA12",
-  mb: "$spacing-01",
 
   "@bp1": {
     fontSize: "$2xl",
@@ -146,21 +144,7 @@ const Menu = styled("div", {
   },
 });
 
-const MenuTitle = styled("h3", {
-  fontSize: "$xl",
-  fontWeight: "$extra-bold",
-  fontFamily: "$header",
-  letterSpacing: "$tracking-tight",
-  color: "$mauve12",
-  mb: "$spacing-01",
-
-  "@bp1": {
-    fontSize: "$2xl",
-    mt: "$spacing-02",
-  },
-});
-
-function QuickMenu(props) {
+function ProfileCard(props) {
   const badge = React.useState(true);
 
   return (
@@ -199,11 +183,11 @@ function QuickMenu(props) {
       </FlexContainer>
       <FlexContainer>
         <Menu>
-          <ScrollToMenu />
+          <ProfileDescription />
         </Menu>
       </FlexContainer>
     </Container>
   );
 }
 
-export default QuickMenu;
+export default ProfileCard;
