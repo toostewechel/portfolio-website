@@ -33,7 +33,7 @@ const Title = styled("p", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
-  fontSize: "$2xl",
+  fontSize: "$3xl",
   mt: "$spacing-02",
 });
 
@@ -41,10 +41,10 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>Snapshots.me</Title>
+        <Title>Snapshots</Title>
       </Box>
       <Toolbar />
-      <div style={{width: "300px"}}></div>
+      <div style={{width: "96px"}}></div>
     </Container>
   );
 }
