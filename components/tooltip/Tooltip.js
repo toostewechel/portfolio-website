@@ -29,7 +29,7 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   boxShadow: "$smooth",
   userSelect: "none",
   "@media (prefers-reduced-motion: no-preference)": {
-    animationDuration: "300ms",
+    animationDuration: "200ms",
     animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
     willChange: "transform, opacity",
     '&[data-state="delayed-open"]': {

@@ -63,14 +63,15 @@ const StyledSpan = styled("span", {
   boxShadow: "$smooth",
 })
 
+
 function ContentHeader(props) {
   return (
-    <Container>
-      <Box>
-        <Title>Snapshots / <StyledSpan> Blog </StyledSpan></Title>
-      </Box>
-      <ReadingProgress targetRef={props.targetRef} />
-    </Container>
+      <Container>
+        <Box>
+          <Title>Snapshots / <StyledSpan> Blog </StyledSpan></Title>
+        </Box>
+        <ReadingProgress targetRef={props.targetRef} />
+      </Container>
   );
 }
 

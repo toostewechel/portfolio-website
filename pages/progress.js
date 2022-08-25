@@ -1,15 +1,34 @@
+import { styled } from "../stitches.config.js";
 import { createRef, useEffect, useState } from "react";
 import ReadingProgress from "../components/readingprogress/ReadingProgress.js";
 import ContentHeader from "../components/header/ContentHeader.js";
 import Paragraph from "../components/typography/Paragraph";
+import Landing from "../components/about/landing/Landing.js";
+
+const BackgroundImage = styled("div", {
+  margin: 0,
+  backgroundColor: "#FFE0B4",
+
+  "@bp1": {
+    backgroundImage: "url(/images/wallpaper.png)",
+    opacity: 1,
+    backgroundSize: "contain",
+    backgroundPosition: "-264px center",
+    backgroundRepeat: "no-repeat",
+    height: "100vh",
+  },
+});
+
 
 function Progress() {
   const targetRef = createRef();
   return (
-    <div>
+    <div ref={targetRef}>
       <ContentHeader targetRef={targetRef} />
+      <BackgroundImage />
+      
 
-      <div style={{width: "720px", padding: "32px", marginLeft: "auto", marginRight: "auto",}} ref={targetRef}>
+      <div style={{width: "720px", padding: "32px", marginLeft: "auto", marginRight: "auto",}}>
 
         Capitalism taking over the web
         Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms often referred to as “privately owned walled gardens”. Driven by capitalism, a few big players control the lion’s share of society’s assets and extract the most value. A prime example of the stranglehold companies have over our digital lives is the cloud market, where only four companies own 67% of the global market. Yet, in many ways, these mega-platforms are a positive development. They significantly improved usability and enabled billions of people to discover, create and publish content for near zero marginal cost without becoming experts on the underlying protocols.
