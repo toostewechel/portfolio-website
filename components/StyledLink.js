@@ -17,15 +17,20 @@ const Panel = styled("div", {
   padding: "$spacing-03 $spacing-02",
   borderRadius: "4px",
   border: "1px solid transparent",
+  willChange: "transform",
+  transition:
+    "all, 300ms ease-in",
 
   "&:hover": {
-    scale: 1.02,
-    transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+    transform: "translateY(-2px)",
+    transition:
+      "all, 300ms ease-out",
     backgroundColor: "$violet3",
     border: "1px solid $violet4",
     boxShadow: "$smooth",
   },
   "&:active": {
+    scale: 0.99,
     backgroundColor: "$violet4",
   },
   "@bp1": {
