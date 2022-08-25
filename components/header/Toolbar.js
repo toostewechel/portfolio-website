@@ -8,14 +8,13 @@ import {
 import { useRouter } from "next/router";
 
 const ToolbarContainer = styled("div", {
-  display: "none",
+  display: "f",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "8px",
   padding: "$spacing-03",
   gap: "$spacing-07",
-  background:
-    "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
+  background: "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
   boxShadow: "$toolbar",
 
   "@bp1": {
@@ -40,6 +39,11 @@ const ShortcutContainer = styled("div", {
   boxShadow: "$inset",
   color: "$mauveA12",
   borderRadius: "8px",
+  display: "none",
+
+  "@bp3": {
+    display: "flex",
+  }
 });
 
 const ShortcutLabel = styled("p", {
@@ -54,7 +58,11 @@ const ShortcutLabel = styled("p", {
 
 const Icon = styled("div", {
   display: "flex",
-  size: "$6",
+  size: "$5",
+
+  "@bp1": {
+    size: "$6",
+  }
 })
 
 // Make command character useable in React
@@ -103,7 +111,7 @@ function Toolbar(href) {
   return (
     <ToolbarContainer>
       <IconButtonContainer>
-        <ActiveLink label="Home" href="#values">
+        <ActiveLink label="Home" href="#home">
           <Icon><img src="/icons/home.svg" /></Icon>
         </ActiveLink>
         <ActiveLink label="Core Values" href="#values">

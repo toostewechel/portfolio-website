@@ -4,11 +4,17 @@ import React, { useState } from "react";
 
 const Container = styled("div", {
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column-reverse",
   justifyContent: "space-between",
   padding: "24px",
   backgroundColor: "transparent",
   alignItems: "center",
+
+  "@bp1": {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }
 });
 
 const Box = styled("div", {
@@ -45,7 +51,6 @@ function Header() {
         <Title>Snapshots.</Title>
       </Box>
       <Toolbar />
-      <div style={{width: "96px"}}></div>
     </Container>
   );
 }

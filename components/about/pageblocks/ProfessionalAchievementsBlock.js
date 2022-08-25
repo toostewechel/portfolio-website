@@ -1,8 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 import ContentBlock from "../../layouts/blocks/ContentBlock.js";
 import ProfessionalAchievementsTabs from "../../tabs/ProfessionalAchievementsTabs.js";
-
-const Container = styled("div", {});
+import Section from "../../layouts/blocks/Section.js";
 
 const Content = styled("div", {
   pb: "$spacing-09",
@@ -10,7 +9,7 @@ const Content = styled("div", {
 
 function ProfessionalAchievementsBlock() {
   return (
-    <Container id="professional-achievements">
+    <Section id="professional-achievements">
       <Content>
         <ContentBlock
           heading="My Experience"
@@ -18,7 +17,7 @@ function ProfessionalAchievementsBlock() {
         />
       </Content>
       <ProfessionalAchievementsTabs />
-    </Container>
+    </Section>
   );
 }
 

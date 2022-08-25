@@ -1,6 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 import ProfileCard from "../profilecard/ProfileCard.js";
 import Header from "../../header/Header.js";
+import Section from "../../layouts/blocks/Section.js"
 
 const Container = styled("div", {
   margin: 0,
@@ -8,11 +9,11 @@ const Container = styled("div", {
 
   "@bp1": {
     backgroundImage: "url(/images/wallpaper.png)",
-    opacity: 0.9,
+    opacity: 1,
     backgroundSize: "contain",
     backgroundPosition: "right center",
     backgroundRepeat: "no-repeat",
-    height: "100vh",
+    height: "100%",
   },
 });
 
@@ -30,7 +31,7 @@ const MenuWrapper = styled("div", {
 
 function Landing() {
   return (
-    <div>
+    <Section id="#home">
       <Container>
         <Header></Header>
         <MenuWrapper>
@@ -41,7 +42,7 @@ function Landing() {
           <div></div>
         </MenuWrapper>
       </Container>
-    </div>
+    </Section>
   );
 }
 

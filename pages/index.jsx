@@ -91,7 +91,7 @@ function HomePage() {
         <Spacer>
           <SoftwareStackBlock />
         </Spacer>
-        <Link href="/markdown">
+        <Link href="/progress">
           <a>Go to link</a>
         </Link>
       </PageLayout>
