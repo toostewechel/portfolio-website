@@ -1,13 +1,75 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
+import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import { Provider, Tooltip, TooltipContent, TooltipTrigger } from "../tooltip/Tooltip.js";
 
-const ReadingProgressBar = styled("div", {
-  padding: "23px",
-  position: "sticky",
-  height: "24px",
-  top: 0,
-  backgroundColor: "#ffffff",
-  mb: "24px",
+const ReadingProgressContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  borderRadius: "8px",
+  padding: "$spacing-03",
+  gap: "$spacing-04",
+  background: "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
+  boxShadow: "$toolbar",
+})
+
+const ProgressBarContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "$spacing-01",
+})
+
+const ProgressLabel = styled("p", {
+  fontFamily: "$default",
+  fontWeight: "$bold",
+  lineHeight: "$compact",
+  letterSpacing: "$tracking-tight",
+  color: "$mauveA12",
+  fontSize: "$lg",
+  p: "$spacing-01 0px",
+  width: "52px",
+});
+
+const ProgressBarOuter = styled("div", {
+  width: "164px",
+  borderRadius: "99px",
+  padding: "$spacing-02",
+  backgroundColor: "$mauveA10",
+  boxShadow: "$inset",
+})
+
+const IconLink = styled("a", {
+  borderRadius: "8px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "$spacing-03",
+  willChange: "transform",
+  transition:
+    "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
+  background: "transparent",
+
+  "&:hover": {
+    scale: 1.05,
+    transition:
+      "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
+    background: "linear-gradient(180deg, $violetA10, $crimsonA6)",
+    boxShadow: "$smooth",
+  },
+})
+
+const Icon = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  size: "$5",
+  color: "$violet3",
+
+  "@bp1": {
+    size: "$5",
+  }
 })
 
 const ReadingProgress = ({ targetRef }) => {
@@ -50,11 +112,32 @@ const ReadingProgress = ({ targetRef }) => {
 
   const RoundReadingProgress = Math.round(readingProgress);
 
+  const ProgessBarInner = styled("div", {
+    width: `${readingProgress}%`,
+    height: "16px",
+    background: "linear-gradient(90deg, rgba(142, 117, 255, 0.78204) 0%, rgba(254, 49, 134, 0.60515) 100%)",
+    borderRadius: "99px",
+  })
+
   return (
-    <ReadingProgressBar>
-      <div style={{ width: `${readingProgress}%`, height: "16px", background: "linear-gradient(90deg, rgba(142, 117, 255, 0.78204) 0%, rgba(254, 49, 134, 0.60515) 100%)", }} />
-      <p>{RoundReadingProgress}%</p>
-    </ReadingProgressBar>
+    <ReadingProgressContainer>
+      <ProgressBarContainer>
+        <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
+        <ProgressBarOuter>
+          <ProgessBarInner />
+        </ProgressBarOuter>
+      </ProgressBarContainer>
+      <Provider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <IconLink href="/">
+              <Icon><CloseLineIcon /></Icon>
+            </IconLink>
+          </TooltipTrigger>
+          <TooltipContent sideOffset={8}>Close Article</TooltipContent>
+        </Tooltip>
+      </Provider>
+    </ReadingProgressContainer>
   )
 }
 
