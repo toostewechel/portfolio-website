@@ -48,7 +48,7 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>Snapshots.</Title>
+        <Title>Snapshots /</Title>
       </Box>
       <Toolbar />
     </Container>

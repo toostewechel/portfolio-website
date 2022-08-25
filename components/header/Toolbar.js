@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/router";
 
 const ToolbarContainer = styled("div", {
-  display: "f",
+  display: "flex",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "8px",
