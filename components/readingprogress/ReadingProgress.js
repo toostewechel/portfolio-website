@@ -7,7 +7,7 @@ const ReadingProgressContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  borderRadius: "8px",
+  borderRadius: "99px",
   padding: "$spacing-03",
   gap: "$spacing-04",
   background: "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
@@ -40,12 +40,12 @@ const ProgressBarOuter = styled("div", {
   width: "164px",
   borderRadius: "99px",
   padding: "$spacing-02",
-  backgroundColor: "$mauveA10",
+  backgroundColor: "$violet5",
   boxShadow: "$inset",
 })
 
 const IconLink = styled("a", {
-  borderRadius: "8px",
+  borderRadius: "99px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

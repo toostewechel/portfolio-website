@@ -69,3 +69,13 @@ function ResponsiveImage(props) {
 }
 
 export const img = ResponsiveImage;
+
+function Wrapper(props) {
+  return (
+    <div>
+      {props.children}
+    </div>
+  );
+}
+
+export const wrapper = Wrapper;
