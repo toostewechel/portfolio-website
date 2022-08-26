@@ -38,6 +38,9 @@ const IconBox = styled("div", {
 });
 
 const Title = styled("p", {
+  display: "flex",
+  alignItems: "center",
+  gap: "$spacing-03",
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -49,19 +52,20 @@ const Title = styled("p", {
 
 const StyledSpan = styled("span", {
   fontFamily: "$header",
-  fontWeight: "$semi-bold",
+  fontWeight: "$extra-bold",
   lineHeight: "$compact",
-  letterSpacing: "$tracking-tight",
+  letterSpacing: "$tracking-normal",
   fontSize: "$lg",
   backgroundColor: "$crimsonA8",
   pr: "8px",
   pl: "8px",
-  pt: "5px",
+  pt: "6px",
   pb: "4px",
   borderRadius: "4px",
   color: "$crimson2",
   boxShadow: "$smooth",
-})
+  mt: "-8px",
+});
 
 
 function ContentHeader(props) {
