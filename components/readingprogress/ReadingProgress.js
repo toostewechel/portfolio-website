@@ -22,14 +22,18 @@ const ProgressBarContainer = styled("div", {
 })
 
 const ProgressLabel = styled("p", {
-  fontFamily: "$default",
-  fontWeight: "$bold",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  mt: "2px",
+  fontFamily: "$header",
+  fontWeight: "$extra-bold",
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   color: "$mauveA12",
   fontSize: "$lg",
   p: "$spacing-01 0px",
-  width: "52px",
+  width: "48px",
 });
 
 const ProgressBarOuter = styled("div", {
