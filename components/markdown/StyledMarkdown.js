@@ -5,12 +5,7 @@ import UnorderedList from "../typography/UnorderedList.js";
 import OrderedList from "../typography/OrderedList.js";
 import Link from "../typography/Link.js";
 import CodeInline from "../typography/CodeInline.js";
-
-const StyledPre = styled("pre", {
-  padding: "8px",
-  backgroundColor: "$mauve12",
-  color: "$crimsonA9",
-});
+import CodeBlock from "./CodeBlock.js";
 
 function Heading1(props) {
   return <Heading as="h1" title={props.children} level="1" />;
@@ -91,7 +86,7 @@ function MDXCodeInline(props) {
 export const code = MDXCodeInline;
 
 function MDXCodeBlock(props) {
-  return <StyledPre>{props.children}</StyledPre>;
+  return <CodeBlock code={props.children} language="Javascript" />;
 }
 
 export const pre = MDXCodeBlock;
