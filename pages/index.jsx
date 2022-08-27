@@ -92,7 +92,7 @@ function HomePage() {
           <SoftwareStackBlock />
         </Spacer>
         <Link href="/progress">
-          <a>Go to link</a>
+          <a>Go to link!!!</a>
         </Link>
       </PageLayout>
     </div>

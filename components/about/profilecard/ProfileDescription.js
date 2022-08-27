@@ -103,7 +103,7 @@ const StyledSpan = styled("span", {
   borderRadius: "4px",
   color: "$crimson2",
   boxShadow: "$smooth",
-})
+});
 
 function ProfileDescription(props) {
   const [open, setOpen] = React.useState(true);
@@ -139,8 +139,16 @@ function ProfileDescription(props) {
             </CollapsibleTrigger>
           </HeaderPanel>
           <CollapsibleContent>
-            <StyledParagraph>I design and build digital products, by <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured, creative and visual way. </StyledParagraph>
-            <StyledParagraph> I am <StyledSpan>passionate</StyledSpan> about building useful products that have a real impact.</StyledParagraph>
+            <StyledParagraph>
+              I design and build digital products, by{" "}
+              <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured,
+              creative and visual way.{" "}
+            </StyledParagraph>
+            <StyledParagraph>
+              {" "}
+              I am <StyledSpan>passionate</StyledSpan> about building useful
+              products that have a real impact.
+            </StyledParagraph>
           </CollapsibleContent>
         </Collapsible>
       ) : (
@@ -158,8 +166,16 @@ function ProfileDescription(props) {
             </VisuallyHidden>
           </HeaderPanel>
           <CollapsibleContent>
-            <StyledParagraph>I design and build digital products, by <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured, creative and visual way. </StyledParagraph>
-            <StyledParagraph> I am <StyledSpan>passionate</StyledSpan> about building useful products that have a real impact.</StyledParagraph>
+            <StyledParagraph>
+              I design and build digital products, by{" "}
+              <StyledSpan>un•tang•ling </StyledSpan>complexity in a structured,
+              creative and visual way.{" "}
+            </StyledParagraph>
+            <StyledParagraph>
+              {" "}
+              I am <StyledSpan>passionate</StyledSpan> about building useful
+              products that have a real impact.
+            </StyledParagraph>
           </CollapsibleContent>
         </Collapsible>
       )}

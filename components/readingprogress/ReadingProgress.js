@@ -1,25 +1,35 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
-import { Provider, Tooltip, TooltipContent, TooltipTrigger } from "../tooltip/Tooltip.js";
+import {
+  Provider,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "../tooltip/Tooltip.js";
 
 const ReadingProgressContainer = styled("div", {
-  display: "flex",
+  display: "none",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "99px",
   padding: "$spacing-03",
   gap: "$spacing-04",
-  background: "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
+  background:
+    "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
   boxShadow: "$toolbar",
-})
+
+  "@bp2": {
+    display: "flex",
+  },
+});
 
 const ProgressBarContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   gap: "$spacing-01",
-})
+});
 
 const ProgressLabel = styled("p", {
   display: "flex",
@@ -42,7 +52,7 @@ const ProgressBarOuter = styled("div", {
   padding: "$spacing-02",
   backgroundColor: "$violet5",
   boxShadow: "$inset",
-})
+});
 
 const IconLink = styled("a", {
   borderRadius: "99px",
@@ -62,7 +72,7 @@ const IconLink = styled("a", {
     background: "linear-gradient(180deg, $violetA10, $crimsonA6)",
     boxShadow: "$smooth",
   },
-})
+});
 
 const Icon = styled("div", {
   display: "flex",
@@ -73,8 +83,8 @@ const Icon = styled("div", {
 
   "@bp1": {
     size: "$5",
-  }
-})
+  },
+});
 
 const ReadingProgress = ({ targetRef }) => {
   //Hook for reading and setting reading progress
@@ -88,12 +98,17 @@ const ReadingProgress = ({ targetRef }) => {
 
     //Get the number of pixels the document is scrolled along the Y-axis and current height of the targetRef element
     const element = targetRef.current;
-    const totalHeight = element.clientHeight - element.offsetTop - (window.innerHeight);
+    const totalHeight =
+      element.clientHeight - element.offsetTop - window.innerHeight;
 
     //Support for different browsers
-    const windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const windowScrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
 
-    //Return value 0 if the user is at the top (0.0) of the document 
+    //Return value 0 if the user is at the top (0.0) of the document
     if (windowScrollTop === 0) {
       return setReadingProgress(0);
     }
@@ -119,9 +134,10 @@ const ReadingProgress = ({ targetRef }) => {
   const ProgessBarInner = styled("div", {
     width: `${readingProgress}%`,
     height: "16px",
-    background: "linear-gradient(90deg, rgba(142, 117, 255, 0.78204) 0%, rgba(254, 49, 134, 0.60515) 100%)",
+    background:
+      "linear-gradient(90deg, rgba(142, 117, 255, 0.78204) 0%, rgba(254, 49, 134, 0.60515) 100%)",
     borderRadius: "99px",
-  })
+  });
 
   return (
     <ReadingProgressContainer>
@@ -135,14 +151,16 @@ const ReadingProgress = ({ targetRef }) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <IconLink href="/">
-              <Icon><CloseLineIcon /></Icon>
+              <Icon>
+                <CloseLineIcon />
+              </Icon>
             </IconLink>
           </TooltipTrigger>
-          <TooltipContent sideOffset={8}>Close Article</TooltipContent>
+          <TooltipContent sideOffset={4}>Close Article</TooltipContent>
         </Tooltip>
       </Provider>
     </ReadingProgressContainer>
-  )
-}
+  );
+};
 
 export default ReadingProgress;

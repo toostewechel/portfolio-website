@@ -6,16 +6,16 @@ const ContentContainer = styled("div", {
   p: "$spacing-04",
   display: "flex",
   justifyContent: "center",
-  m: "0 auto",
-  maxWidth: "720px",
-})
+  m: "$spacing-10 auto",
+  maxWidth: "760px",
+});
 
 const ContentStyle = styled("div", {
   color: "$gray12",
   width: "100%",
-})
+});
 
-function ContentWrapper({Content}) {
+function ContentWrapper({ Content }) {
   return (
     <ContentContainer>
       <MDXProvider components={{ ...components }}>
@@ -24,7 +24,7 @@ function ContentWrapper({Content}) {
         </ContentStyle>
       </MDXProvider>
     </ContentContainer>
-  )
+  );
 }
 
 export default ContentWrapper;

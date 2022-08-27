@@ -5,13 +5,11 @@ const StyledSection = styled("section", {
 
   "@bp1": {
     height: "100vh",
-  }
-})
+  },
+});
 
-function Section({children, ...props}) {
-  return(
-    <StyledSection id={props.id}>{children}</StyledSection>
-  )
+function Section({ children, ...props }) {
+  return <StyledSection id={props.id}>{children}</StyledSection>;
 }
 
 export default Section;

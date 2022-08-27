@@ -8,6 +8,14 @@ const StyledHeading = styled("h1", {
   m: 0,
 
   variants: {
+    color: {
+      dark: {
+        color: "$mauve12",
+      },
+      light: {
+        color: "$mauve1",
+      },
+    },
     level: {
       1: {
         fontSize: "$5xl",
@@ -15,13 +23,15 @@ const StyledHeading = styled("h1", {
         letterSpacing: "$tracking-tighter",
         lineHeight: "$tight",
         mb: "$spacing-05",
+        pt: "$spacing-07",
       },
       2: {
         fontSize: "$4xl",
         fontWeight: "$extra-bold",
         letterSpacing: "$tracking-tighter",
         lineHeight: "$compact",
-        mb: "$spacing-04",
+        mb: "$spacing-05",
+        pt: "$spacing-06",
       },
       3: {
         fontSize: "$3xl",
@@ -44,7 +54,7 @@ const StyledHeading = styled("h1", {
 
 function Heading(props) {
   return (
-    <StyledHeading as={props.as} level={props.level}>
+    <StyledHeading as={props.as} level={props.level} color={props.color}>
       {props.title}
     </StyledHeading>
   );

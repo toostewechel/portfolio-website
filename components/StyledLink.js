@@ -18,13 +18,11 @@ const Panel = styled("div", {
   borderRadius: "4px",
   border: "1px solid transparent",
   willChange: "transform",
-  transition:
-    "all, 300ms ease-in",
+  transition: "all, 300ms ease-in",
 
   "&:hover": {
     transform: "translateY(-2px)",
-    transition:
-      "all, 300ms ease-out",
+    transition: "all, 300ms ease-out",
     backgroundColor: "$violet3",
     border: "1px solid $violet4",
     boxShadow: "$smooth",

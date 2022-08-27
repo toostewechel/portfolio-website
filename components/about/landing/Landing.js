@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 import ProfileCard from "../profilecard/ProfileCard.js";
 import Header from "../../header/Header.js";
-import Section from "../../layouts/blocks/Section.js"
+import Section from "../../layouts/blocks/Section.js";
 
 const Container = styled("div", {
   margin: 0,

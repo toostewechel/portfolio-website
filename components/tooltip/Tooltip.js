@@ -7,7 +7,7 @@ const slideUpAndFade = keyframes({
   "100%": { opacity: 1, transform: "translateY(0)" },
 });
 
-const slideRightAndFade = keyframes({ 
+const slideRightAndFade = keyframes({
   "0%": { opacity: 0, transform: "translateX(-2px)" },
   "100%": { opacity: 1, transform: "translateX(0)" },
 });
@@ -46,10 +46,14 @@ const Label = styled("p", {
   fontFamily: "$header",
   color: "$violet11",
   mt: "2px",
-})
+});
 
 const StyledArrow = styled(TooltipPrimitive.Arrow, {
   fill: "white",
+});
+
+const StyledTooltip = styled(TooltipPrimitive.Root, {
+  zIndex: "99",
 });
 
 function Content({ children, ...props }) {
@@ -65,6 +69,6 @@ function Content({ children, ...props }) {
 
 // Exports
 export const Provider = TooltipPrimitive.Provider;
-export const Tooltip = TooltipPrimitive.Root;
+export const Tooltip = StyledTooltip;
 export const TooltipTrigger = TooltipPrimitive.Trigger;
 export const TooltipContent = Content;

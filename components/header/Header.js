@@ -14,7 +14,7 @@ const Container = styled("div", {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
 });
 
 const Box = styled("div", {

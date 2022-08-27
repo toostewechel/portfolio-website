@@ -14,12 +14,13 @@ const ToolbarContainer = styled("div", {
   borderRadius: "8px",
   padding: "$spacing-03",
   gap: "$spacing-07",
-  background: "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
+  background:
+    "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
   boxShadow: "$toolbar",
 
   "@bp1": {
     display: "flex",
-  }
+  },
 });
 
 const IconButtonContainer = styled("div", {
@@ -43,7 +44,7 @@ const ShortcutContainer = styled("div", {
 
   "@bp3": {
     display: "flex",
-  }
+  },
 });
 
 const ShortcutLabel = styled("p", {
@@ -62,8 +63,8 @@ const Icon = styled("div", {
 
   "@bp1": {
     size: "$6",
-  }
-})
+  },
+});
 
 // Make command character useable in React
 let command = String.fromCodePoint(8984);
@@ -79,7 +80,10 @@ function ActiveLink({ children, href, label }) {
     willChange: "transform",
     transition:
       "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
-    background: router.asPath === href ? "linear-gradient(180deg, $violetA10, $crimsonA6)" : "transparent",
+    background:
+      router.asPath === href
+        ? "linear-gradient(180deg, $violetA10, $crimsonA6)"
+        : "transparent",
 
     "&:hover": {
       scale: 1.05,
@@ -112,25 +116,39 @@ function Toolbar(href) {
     <ToolbarContainer>
       <IconButtonContainer>
         <ActiveLink label="Home" href="#home">
-          <Icon><img src="/icons/home.svg" /></Icon>
+          <Icon>
+            <img src="/icons/home.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Core Values" href="#values">
-          <Icon><img src="/icons/values.svg" /></Icon>
+          <Icon>
+            <img src="/icons/values.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Case Studies" href="#">
-          <Icon><img src="/icons/case-studies.svg" /></Icon>
+          <Icon>
+            <img src="/icons/case-studies.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Experience" href="#professional-achievements">
-          <Icon><img src="/icons/experience.svg" /></Icon>
+          <Icon>
+            <img src="/icons/experience.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Writing" href="#">
-          <Icon><img src="/icons/writing.svg" /></Icon>
+          <Icon>
+            <img src="/icons/writing.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Software" href="#software-stack">
-          <Icon><img src="/icons/software.svg" /></Icon>
+          <Icon>
+            <img src="/icons/software.svg" />
+          </Icon>
         </ActiveLink>
         <ActiveLink label="Interests" href="">
-          <Icon><img src="/icons/interests.svg" /></Icon>
+          <Icon>
+            <img src="/icons/interests.svg" />
+          </Icon>
         </ActiveLink>
       </IconButtonContainer>
       <ShortcutContainer>

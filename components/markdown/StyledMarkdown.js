@@ -1,8 +1,16 @@
+import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
 import Paragraph from "../typography/Paragraph.js";
 import UnorderedList from "../typography/UnorderedList.js";
 import OrderedList from "../typography/OrderedList.js";
 import Link from "../typography/Link.js";
+import CodeInline from "../typography/CodeInline.js";
+
+const StyledPre = styled("pre", {
+  padding: "8px",
+  backgroundColor: "$mauve12",
+  color: "$crimsonA9",
+});
 
 function Heading1(props) {
   return <Heading as="h1" title={props.children} level="1" />;
@@ -71,11 +79,19 @@ function ResponsiveImage(props) {
 export const img = ResponsiveImage;
 
 function Wrapper(props) {
-  return (
-    <div>
-      {props.children}
-    </div>
-  );
+  return <div>{props.children}</div>;
 }
 
 export const wrapper = Wrapper;
+
+function MDXCodeInline(props) {
+  return <CodeInline code={props.children} />;
+}
+
+export const code = MDXCodeInline;
+
+function MDXCodeBlock(props) {
+  return <StyledPre>{props.children}</StyledPre>;
+}
+
+export const pre = MDXCodeBlock;

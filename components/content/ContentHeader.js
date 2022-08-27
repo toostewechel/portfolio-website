@@ -4,20 +4,21 @@ import React from "react";
 
 const Container = styled("div", {
   display: "flex",
-  flexDirection: "column-reverse",
-  justifyContent: "space-between",
-  padding: "24px",
+  flexDirection: "row",
+  justifyContent: "start",
+  padding: "$spacing-03",
   backgroundColor: "transparent",
   alignItems: "center",
   position: "sticky",
   top: 0,
-  backgroundColor: "#FFE0B4",
+  // backgroundColor: "#FFE0B4",
 
   "@bp1": {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+    padding: "$spacing-05",
+  },
 });
 
 const Box = styled("div", {
@@ -46,8 +47,12 @@ const Title = styled("p", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
-  fontSize: "$3xl",
+  fontSize: "$2xl",
   mt: "$spacing-02",
+
+  "@bp2": {
+    fontSize: "$3xl",
+  },
 });
 
 const StyledSpan = styled("span", {
@@ -67,15 +72,16 @@ const StyledSpan = styled("span", {
   mt: "-8px",
 });
 
-
 function ContentHeader(props) {
   return (
-      <Container>
-        <Box>
-          <Title>Snapshots / <StyledSpan> Blog </StyledSpan></Title>
-        </Box>
-        <ReadingProgress targetRef={props.targetRef} />
-      </Container>
+    <Container>
+      <Box>
+        <Title>
+          Snapshots / <StyledSpan> Blog </StyledSpan>
+        </Title>
+      </Box>
+      <ReadingProgress style={{ zIndex: "11" }} targetRef={props.targetRef} />
+    </Container>
   );
 }
 
