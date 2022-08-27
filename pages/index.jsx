@@ -6,6 +6,7 @@ import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Link from "next/link";
 import ScrollContainerX from "../components/about/scrollcontainer/ScrollContainerX";
 import Landing from "../components/about/landing/Landing.js";
+import CodeBlock from "../components/markdown/CodeBlock.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -62,6 +63,16 @@ const Spacer = styled("div", {
   pt: "$spacing-10",
   pb: "$spacing-10",
 });
+
+const JSCode = `const App = props => {
+  return (
+    <div>
+      <h1> Prism JS </h1>
+      <div>Awesome Syntax Highlighter</div>
+    </div>
+  );
+};
+`;
 
 function HomePage() {
   return (
