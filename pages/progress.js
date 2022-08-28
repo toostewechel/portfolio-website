@@ -12,7 +12,7 @@ function Progress() {
   return (
     <div ref={targetRef}>
       <ContentHeader targetRef={targetRef} />
-      <ContentLanding />
+      <ContentLanding english />
       <ContentWrapper Content={Chapter1} />
     </div>
   );

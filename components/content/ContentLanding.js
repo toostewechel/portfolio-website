@@ -2,6 +2,7 @@ import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
 import BookOpenLineIcon from "remixicon-react/BookOpenLineIcon";
 import CalendarLineIcon from "remixicon-react/CalendarLineIcon";
+import React, { useState } from 'react';
 
 const BackgroundImage = styled("div", {
   margin: 0,
@@ -100,6 +101,8 @@ const Label = styled("p", {
 });
 
 function ContentLanding(props) {
+  
+  
   return (
     <BackgroundImage>
       <ContainerOuter>
@@ -126,7 +129,8 @@ function ContentLanding(props) {
               </FlexWrapper>
               <FlexWrapper>
                 <DecorativeIcon>
-                  <img src="/icons/dutch-flag.svg" />
+                  {props.dutch && <img src="/icons/dutch-flag.svg" />}
+                  {props.english && <img src="/icons/british-flag.svg" />}
                 </DecorativeIcon>
                 <Label style={{ paddingLeft: "4px" }}>Dutch</Label>
               </FlexWrapper>

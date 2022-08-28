@@ -37,7 +37,7 @@ function Landing() {
         <MenuWrapper>
           <div></div>
           <div>
-            <ProfileCard />
+            <ProfileCard badge={true} />
           </div>
           <div></div>
         </MenuWrapper>

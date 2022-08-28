@@ -145,8 +145,6 @@ const Menu = styled("div", {
 });
 
 function ProfileCard(props) {
-  const badge = React.useState(true);
-
   return (
     <Container>
       <FlexContainer>
@@ -156,7 +154,7 @@ function ProfileCard(props) {
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>
-          {badge ? (
+          {props.badge ? (
             <StatusBadge>
               <Badge />
               <BadgeLabel>Open to work</BadgeLabel>
