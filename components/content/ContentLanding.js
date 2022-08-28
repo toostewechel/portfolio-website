@@ -43,7 +43,7 @@ const ContainerInner = styled("div", {
   "@bp2": {
     margin: "$spacing-05",
     padding: "$spacing-03",
-    borderRadius: "24px",
+    borderRadius: "16px",
     boxShadow: "$smooth",
     justifyContent: "center",
   },
