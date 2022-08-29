@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 
 const StyledSpacer = styled("div", {
-  p: "$spacing-12 $none",
+  p: "$spacing-07 $none",
 });
 
 function Spacer() {

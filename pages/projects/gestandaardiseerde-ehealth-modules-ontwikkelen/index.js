@@ -4,12 +4,14 @@ import ContentHeader from "../../../components/content/ContentHeader.js";
 import ContentLanding from "../../../components/content/ContentLanding.js";
 import ContentOpening from "../../../components/content/ContentOpening.js";
 import ContentBlock from "../../../components/content/ContentBlock.js";
-import ScrollContainerX from "../../../components/about/scrollcontainer/ScrollContainerX.js";
+import ScrollContainerX from "./components/ScrollContainerX.js";
+import Spacer from "../../../components/layouts/blocks/Spacer.js";
 
 import Inleiding from "./1-inleiding.mdx";
 import Probleem from "./2-probleem-definitie.mdx";
 import ProductVisie from "./3-product-visie.mdx";
 import Anatomie from "./4-anatomie-van-modules.mdx";
+import MentaalModel from "./5-mentaal-model.mdx";
 
 function Index() {
   const targetRef = createRef();
@@ -22,12 +24,19 @@ function Index() {
         duration="25 min"
         dutch
       />
+      <Spacer />
       <ContentBlock Content={Inleiding} />
       <ContentBlock Content={Probleem} />
       <ContentBlock Content={ProductVisie} />
+      <Spacer />
       <ContentOpening />
+      <Spacer />
       <ContentBlock Content={Anatomie} />
+      <Spacer />
       <ScrollContainerX />
+      <Spacer />
+      <ContentBlock Content={MentaalModel} />
+      
     </div>
   );
 }
