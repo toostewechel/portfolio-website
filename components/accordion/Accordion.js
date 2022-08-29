@@ -8,19 +8,17 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
 });
 
 const StyledItem = styled(AccordionPrimitive.Item, {
-  overflow: "hidden",
+  border: "1px solid transparent",
   borderBottom: "1px solid $gray6",
-  marginTop: 1,
-
+  backgroundColor: "$violet2",
   "&:focus-within": {
-    outlineColor: "$violet11",
+    border: "1px solid $violet11",
   },
 });
 
 const StyledHeader = styled(AccordionPrimitive.Header, {
   all: "unset",
   display: "flex",
-  borderBottom: "1px solid $gray6",
 });
 
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
@@ -49,7 +47,8 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
 const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: "hidden",
   color: "$gray-12",
-  backgroundColor: "$gray2",
+  backgroundColor: "white",
+  borderTop: "1px solid $gray6",
 });
 
 const StyledContentText = styled("div", {
@@ -96,7 +95,7 @@ export const AccordionTrigger = React.forwardRef(
           <DecorativeIcon>
             <img src={props.src} />
           </DecorativeIcon>
-          <div style={{ marginTop: "3px" }}>{children}</div>
+          <div style={{ marginTop: "3px" }}>{props.title}</div>
         </Box>
         <StyledChevron aria-hidden />
       </StyledTrigger>

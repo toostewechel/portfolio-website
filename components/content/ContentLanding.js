@@ -2,7 +2,7 @@ import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
 import BookOpenLineIcon from "remixicon-react/BookOpenLineIcon";
 import CalendarLineIcon from "remixicon-react/CalendarLineIcon";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const BackgroundImage = styled("div", {
   margin: 0,
@@ -77,7 +77,7 @@ const DecorativeIcon = styled("div", {
   color: "$gray7",
   width: "19px",
   height: "19px",
-  mr: "$spacing-02",
+  mr: "$spacing-03",
 
   "@bp1": {
     width: "19px",
@@ -101,38 +101,34 @@ const Label = styled("p", {
 });
 
 function ContentLanding(props) {
-  
-  
   return (
     <BackgroundImage>
       <ContainerOuter>
         <ContainerInner>
           <ContentContainer>
-            <Heading
-              as="h1"
-              level={3}
-              color="light"
-              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-            />
+            <Heading as="h1" level={3} color="light" title={props.title} />
             <FlexWrapper>
               <FlexWrapper>
                 <DecorativeIcon>
                   <CalendarLineIcon />
                 </DecorativeIcon>
-                <Label>22 jun 2022</Label>
+                <Label>{props.date}</Label>
               </FlexWrapper>
               <FlexWrapper>
                 <DecorativeIcon>
                   <BookOpenLineIcon />
                 </DecorativeIcon>
-                <Label>25 min</Label>
+                <Label>{props.duration}</Label>
               </FlexWrapper>
               <FlexWrapper>
                 <DecorativeIcon>
                   {props.dutch && <img src="/icons/dutch-flag.svg" />}
                   {props.english && <img src="/icons/british-flag.svg" />}
                 </DecorativeIcon>
-                <Label style={{ paddingLeft: "4px" }}>Dutch</Label>
+                <Label style={{ paddingLeft: "4px" }}>
+                  {props.dutch && `Dutch`}
+                  {props.english && `English`}
+                </Label>
               </FlexWrapper>
             </FlexWrapper>
           </ContentContainer>

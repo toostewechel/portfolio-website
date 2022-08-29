@@ -102,7 +102,7 @@ function HomePage() {
         <Spacer>
           <SoftwareStackBlock />
         </Spacer>
-        <Link href="/progress">
+        <Link href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
           <a>Go to link!!!</a>
         </Link>
       </PageLayout>

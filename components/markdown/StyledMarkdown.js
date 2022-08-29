@@ -38,7 +38,7 @@ function Heading5(props) {
 export const h5 = Heading5;
 
 function MDXParagraph(props) {
-  return <Paragraph description={props.children} />;
+  return <Paragraph>{props.children}</Paragraph>;
 }
 
 export const p = MDXParagraph;

@@ -9,11 +9,11 @@ const StyledPre = styled("pre", {
 
 const StyledCode = styled("code", {
   fontFamily: "$header",
-})
+});
 
 const CodeBlockContainer = styled("div", {
   mb: "$spacing-08",
-})
+});
 
 const CodeLanguage = styled("p", {
   color: "crimsonA6",
@@ -24,12 +24,12 @@ const CodeLanguage = styled("p", {
   borderRadius: "4px",
   background: "$crimsonA9",
   display: "flex",
-})
+});
 
 const FlexBox = styled("div", {
   display: "flex",
   justifyContent: "flex-end",
-})
+});
 
 export default function CodeBlock({ code, language }) {
   useEffect(() => {

@@ -23,7 +23,6 @@ const StyledHeading = styled("h1", {
         letterSpacing: "$tracking-tighter",
         lineHeight: "$tight",
         mb: "$spacing-05",
-        pt: "$spacing-07",
       },
       2: {
         fontSize: "$4xl",
@@ -31,7 +30,6 @@ const StyledHeading = styled("h1", {
         letterSpacing: "$tracking-tighter",
         lineHeight: "$compact",
         mb: "$spacing-05",
-        pt: "$spacing-06",
       },
       3: {
         fontSize: "$3xl",

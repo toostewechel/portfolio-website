@@ -72,7 +72,9 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>Snapshots / <StyledSpan> Home </StyledSpan> </Title>
+        <Title>
+          Snapshots / <StyledSpan> Home </StyledSpan>{" "}
+        </Title>
       </Box>
       <Toolbar />
     </Container>
