@@ -9,13 +9,25 @@ const StyledParagraph = styled("p", {
   color: "$gray12",
   mb: "$spacing-07",
 
+  variants: {
+    level: {
+      small: {
+        fontSize: "$lg",
+        lineHeight: "$base",
+        mb: "$none",
+      },
+    },
+  },
+
   "@bp2": {
     fontSize: "$xl",
   },
 });
 
 function Paragraph(props) {
-  return <StyledParagraph>{props.children}</StyledParagraph>;
+  return (
+    <StyledParagraph level={props.level}>{props.children}</StyledParagraph>
+  );
 }
 
 export default Paragraph;

@@ -1,0 +1,86 @@
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "../../../components/accordion/Accordion.js";
+import Paragraph from "../../../components/typography/Paragraph.js";
+
+## De systeem blauwdruk
+
+De systeem architectuur is een (visuele) beschrijving die inzicht geeft in hoe verschillende componenten van het systeem in elkaar passen en tot elkaar samenhangen. Op basis van onze ervaringen met het ontwikkelen van software in het zorglandschap en de (on)mogelijkheden van het huidige Jouw Omgeving platform hebben we de systeem architectuur gebaseerd op de volgende uitgangspunten:
+
+<Accordion
+  style={{ paddingBottom: "32px", paddingTop: "16px" }}
+  type="single"
+  defaultValue="item-1"
+  collapsible
+>
+  <AccordionItem value="item-1">
+    <AccordionTrigger
+      title="Modulariteit boven rigide structuur"
+      src="/icons/money.svg"
+    />
+    <AccordionContent>
+      <p>In het zorglandschap kan je niet ontkomen aan maatwerkoplossingen. Door
+        de sterk uiteenlopende context waarin e-health content 'geconsumeerd'
+        wordt, is er altijd een vorm van maatwerk nodig om goed aan te kunnen
+        sluiten op de wensen van auteurs en de kenmerken van specifieke
+        eindgebruikers. Doelgroep A heeft behoefte aan weinig tekst en veel
+        afbeeldingen, waar doelgroep B baat heeft bij veel uitleg in combinatie
+        met korte opdrachten. Het systeem moet daarom modulair opgezet worden,
+        zodat het verschillende scenario's kan ondersteunen en op maat inricht
+        kan worden.</p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger
+      title="Flexibiliteit in autorisaties"
+      src="/icons/hammer-line.svg"
+    />
+    <AccordionContent>
+      <p>Het Jouw Omgeving platform beschikt over een gelaagde rechten structuur die het mogelijk maakt om binnen één systeem integraal samen te werken. Transparantie voor de cliënt staat hierin centraal. De cliënt ziet in de eigen omgeving altijd alle informatie die op hem of haar betrekking heeft. Andere gebruikers kunnen gekoppeld worden aan deze cliënt met een van de andere autorisatieniveaus. Het niveau bepaalt wat deze gebruiker in mag zien en welke acties hij of zij mag uitvoeren in de omgeving van de cliënt. Het rechten systeem van Jouw Omgeving kent vier niveaus van autorisatie, waarbij een gebruiker met niveau 1 veel gegevens mag inzien en bewerken en een gebruiker met niveau 4 beperkte rechten heeft. Binnen de editor moet deze rechten structuur aan te roepen zijn, zodat e-health content gecreeërd kan worden waarin gebruikers alleen participeren op de onderwerpen die voor hen relevant zijn.</p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3">
+    <AccordionTrigger
+      title="Controle over zichtbaarheid pagina's"
+      src="/icons/smartphone.svg"
+    />
+    <AccordionContent>
+      <p>Inhoud moet flexibel aan- en uit te zetten zijn voor een gebruiker. Een behandelprotocol wordt vaak stapsgewijs ingevuld door cliënten. Een gebruiker met zorg regie moet de mogelijkheid hebben om inhoud op het juiste moment in het traject open- en/of dicht te kunnen zetten. Op deze manier ziet de cliënt alleen informatie en opdrachten die op dat moment in de behandeling relevant zijn en belast je de cliënt niet meer dan nodig.</p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-4">
+    <AccordionTrigger
+      title="Mogelijkheid tot varianten"
+      src="/icons/search-eye-line.svg"
+    />
+    <AccordionContent>
+    <p>In de praktijk worden er vaak verschillende versies van een programma aangeboden aan cliënten. Alhoewel de inhoud voor elke versie (bijna) hetzelfde is, ligt het accent, afhankelijk van de problematiek, vaak op specifieke onderdelen van het totale programma. Niet alle inhoud is daarom even relevant voor elke gebruiker. Door met varianten te werken, krijgt de gebruiker alleen informatie en inhoud te zien die specifiek op hem of haar is afgestemd. Een variant toont dus een subset van het totale programma aan de gebruiker. Door met varianten te werken kan je vanuit een single source of truth werken en voorkom je dat je alle modules los moet onderhouden. </p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-5">
+    <AccordionTrigger
+      title="Gebruik van (data) standaarden"
+      src="/icons/settings-line.svg"
+    />
+    <AccordionContent>
+      <p>Door gebruik te maken van (data) standaarden worden producten veerkrachtiger. Voor software betekent dit dat producten beter onderhoudbaar en eenvoudiger uit te breiden zijn, maar ook dat data makkelijker gestructureerd geëxporteerd kan worden voor onderzoeksdoeleinden. Dit resulteert in een meer toekomstbestendig product. </p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-6">
+    <AccordionTrigger
+      title="Integraties met Jouw Omgeving modules"
+      src="/icons/settings-line.svg"
+    />
+    <AccordionContent></AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-7">
+    <AccordionTrigger
+      title="Responsive en toegankelijk"
+      src="/icons/settings-line.svg"
+    />
+    <AccordionContent></AccordionContent>
+  </AccordionItem>
+</Accordion>

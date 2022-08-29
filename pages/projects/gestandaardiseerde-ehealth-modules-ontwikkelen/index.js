@@ -12,6 +12,7 @@ import Probleem from "./2-probleem-definitie.mdx";
 import ProductVisie from "./3-product-visie.mdx";
 import Anatomie from "./4-anatomie-van-modules.mdx";
 import MentaalModel from "./5-mentaal-model.mdx";
+import SysteemBlauwdruk from "./6-systeem-blauwdruk.mdx";
 
 function Index() {
   const targetRef = createRef();
@@ -36,7 +37,7 @@ function Index() {
       <ScrollContainerX />
       <Spacer />
       <ContentBlock Content={MentaalModel} />
-      
+      <ContentBlock Content={SysteemBlauwdruk} />
     </div>
   );
 }

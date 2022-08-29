@@ -12,7 +12,7 @@ const StyledItem = styled(AccordionPrimitive.Item, {
   borderBottom: "1px solid $gray6",
   backgroundColor: "$violet2",
   "&:focus-within": {
-    border: "1px solid $violet11",
+    // border: "1px solid $violet11",
   },
 });
 
@@ -37,10 +37,10 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
     backgroundColor: "white",
   },
   '&[data-state="open"]': {
-    backgroundColor: "$white",
+    backgroundColor: "$violet3",
   },
   "&:hover": {
-    backgroundColor: "$violet3",
+    backgroundColor: "$violet4",
   },
 });
 
@@ -52,9 +52,10 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 });
 
 const StyledContentText = styled("div", {
-  padding: "$spacing-05",
+  padding: "$spacing-06",
   fontSize: "$lg",
   fontFamily: "$default",
+  lineHeight: "$base",
   color: "$gray12",
 });
 

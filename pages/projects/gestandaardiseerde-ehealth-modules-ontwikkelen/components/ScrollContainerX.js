@@ -12,17 +12,11 @@ const ScrollContainer = styled("div", {
   flexWrap: "wrap",
   overflowX: "scroll",
   maxWidth: "1234px",
-  gap: "16px",
+  gap: "24px",
   p: "$none $spacing-02",
 
   "&::-webkit-scrollbar": {
     display: "none",
-  },
-
-  "@bp5": {
-    justifyContent: "center",
-    gap: "24px",
-    p: "$spacing-13 $spacing-04",
   },
 });
 
