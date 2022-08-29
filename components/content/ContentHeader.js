@@ -78,11 +78,11 @@ function ContentHeader(props) {
       <Box>
         <a href="/">
           <Title>
-            Snapshots / <StyledSpan> Blog </StyledSpan>
+            Snapshots / <StyledSpan> {props.pageType} </StyledSpan>
           </Title>
         </a>
       </Box>
-      <ReadingProgress style={{ zIndex: "11" }} targetRef={props.targetRef} />
+      <ReadingProgress targetRef={props.targetRef} />
     </Container>
   );
 }

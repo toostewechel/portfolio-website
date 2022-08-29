@@ -11,7 +11,7 @@ function Progress() {
   const targetRef = createRef();
   return (
     <div ref={targetRef}>
-      <ContentHeader targetRef={targetRef} />
+      <ContentHeader pageType="Blog" targetRef={targetRef} />
       <ContentLanding english />
       <ContentWrapper Content={Chapter1} />
     </div>
