@@ -63,7 +63,7 @@ export const {
       "4xl": "3.157rem",
       "3xl": "2.369rem",
       "2xl": "1.777rem",
-      xl: "1.33rem",
+      xl: "1.275rem",
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
@@ -82,7 +82,7 @@ export const {
     },
     lineHeights: {
       large: 1.65,
-      base: 1.5,
+      base: 1.6,
       compact: 1.25,
       tight: 1.1,
       none: 1,
