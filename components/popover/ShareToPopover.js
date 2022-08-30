@@ -1,0 +1,82 @@
+import { styled } from "../../stitches.config.js";
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from "./Popover.js"
+import ShareLineIcon from "remixicon-react/ShareLineIcon";
+import CloseLineIcon from "remixicon-react/CloseLineIcon";
+
+const IconButton = styled("button", {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "$violet11", 
+  size: "$7",
+  borderRadius: "4px",
+
+  '&:hover': { backgroundColor: "$violet3" },
+  '&:active': { backgroundColor: "$violet4" },
+  
+})
+
+const ShareLinkContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-03",
+  borderRadius: "4px",
+  p: "$spacing-03 $spacing-02",
+  '&:hover': { backgroundColor: "$violet3" },
+})
+
+const SocialIcon = styled("img", {
+  $size: "$5",
+})
+
+const Label = styled("p", {
+  fontSize: "$base",
+  fontWeight: "$semi-bold",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tight",
+  color: "$violet11",
+  mt: "$spacing-01",
+});
+
+const Title = styled("p", {
+  fontSize: "$lg",
+  fontWeight: "$semi-bold",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tight",
+  color: "$mauve12",
+  marginBottom: "$spacing-02",
+})
+
+function ShareToPopover(){
+  return(
+    <Popover>
+      <PopoverTrigger asChild>
+        <IconButton aria-label="Share to"><ShareLineIcon /></IconButton>
+      </PopoverTrigger>
+      <PopoverContent>
+        <Title>Share</Title>
+        <ShareLinkContainer>
+          <SocialIcon src="/logo/whatsapp-logo.svg" />
+          <Label>Whatsapp</Label>
+        </ShareLinkContainer>
+        <ShareLinkContainer>
+          <SocialIcon src="/logo/facebook-logo.svg" />
+          <Label>Facebook</Label>
+        </ShareLinkContainer>
+        <ShareLinkContainer>
+          <SocialIcon src="/logo/twitter-logo.svg" />
+          <Label>Twitter</Label>
+        </ShareLinkContainer>
+        <ShareLinkContainer>
+          <SocialIcon src="/logo/linked-in-logo.svg" />
+          <Label>LinkedIn</Label>
+        </ShareLinkContainer>
+        <PopoverClose aria-label="Close">
+          <CloseLineIcon />
+        </PopoverClose>
+      </PopoverContent>
+    </Popover>
+  )
+}
+
+export default ShareToPopover;

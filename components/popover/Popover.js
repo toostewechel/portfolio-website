@@ -27,6 +27,7 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   padding: "$spacing-04",
   width: "196px",
   backgroundColor: "white",
+  border: "1px solid $gray5",
   boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '400ms',
@@ -66,8 +67,8 @@ const StyledClose = styled(PopoverPrimitive.Close, {
   justifyContent: "center",
   color: "$violet11",
   position: "absolute",
-  top: 12,
-  right: 12,
+  top: 8,
+  right: 8,
 
   '&:hover': { backgroundColor: "$violet4" },
   '&:focus': { boxShadow: "0 0 0 2px $violet7" },

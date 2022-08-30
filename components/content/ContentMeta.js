@@ -1,5 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import Avatar from "../avatar/Avatar.js";
+import ShareToPopover from "../popover/ShareToPopover.js";
 
 const Container = styled("div", {
   display: "flex",
@@ -12,17 +13,11 @@ const Container = styled("div", {
   p: "$spacing-04 $none",
 })
 
-const PlaceholderButton = styled("div", {
-  size: "$5",
-  backgroundColor: "$violet3",
-  borderRadius: "4px",
-})
-
 function ContentMeta() {
   return(
     <Container>
       <Avatar src="/images/avatar-placeholder.png" name="Tom Oostewechel" description="Author" />
-      <PlaceholderButton />
+      <ShareToPopover />
     </Container>
   )
 }
