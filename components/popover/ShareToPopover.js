@@ -17,8 +17,9 @@ const IconButton = styled("button", {
 })
 
 const ShareLinkContainer = styled("a", {
-  display: "flex",
+  display: "flex",  
   flexDirection: "row",
+  alignItems: "center",
   gap: "$spacing-03",
   borderRadius: "4px",
   p: "$spacing-03 $spacing-02",
@@ -30,12 +31,10 @@ const SocialIcon = styled("img", {
 })
 
 const Label = styled("p", {
-  fontSize: "$base",
-  fontWeight: "$semi-bold",
-  fontFamily: "$header",
-  letterSpacing: "$tracking-tight",
-  color: "$violet11",
-  mt: "$spacing-01",
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  fontFamily: "$default",
+  color: "$mauve12",
 });
 
 const Title = styled("p", {
