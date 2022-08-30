@@ -8,11 +8,10 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
 });
 
 const StyledItem = styled(AccordionPrimitive.Item, {
-  border: "1px solid transparent",
   borderBottom: "1px solid $gray6",
   backgroundColor: "$violet2",
   "&:focus-within": {
-    // border: "1px solid $violet11",
+    backgroundColor: "$violet3",
   },
 });
 

@@ -28,7 +28,7 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   width: "196px",
   backgroundColor: "white",
   border: "1px solid $gray5",
-  boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
+  boxShadow: "$smooth",
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '400ms',
     animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -44,6 +44,8 @@ const StyledContent = styled(PopoverPrimitive.Content, {
 
 const StyledArrow = styled(PopoverPrimitive.Arrow, {
   fill: "white",
+  stroke: "$gray5",
+  strokeWidth: "1px",
 })
 
 function Content({ children, ...props }) {
