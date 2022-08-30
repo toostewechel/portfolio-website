@@ -2,6 +2,7 @@ import { styled } from "../../../stitches.config.js";
 import { createRef, useEffect, useState } from "react";
 import ContentHeader from "../../../components/content/ContentHeader.js";
 import ContentLanding from "../../../components/content/ContentLanding.js";
+import ContentMeta from "../../../components/content/ContentMeta.js";
 import ContentOpening from "../../../components/content/ContentOpening.js";
 import ContentBlock from "../../../components/content/ContentBlock.js";
 import ScrollContainerX from "./components/ScrollContainerX.js";
@@ -25,6 +26,8 @@ function Index() {
         duration="25 min"
         dutch
       />
+      <Spacer />
+      <ContentMeta />
       <Spacer />
       <ContentBlock Content={Inleiding} />
       <ContentBlock Content={Probleem} />

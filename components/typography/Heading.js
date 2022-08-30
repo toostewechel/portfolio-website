@@ -25,11 +25,15 @@ const StyledHeading = styled("h1", {
         mb: "$spacing-05",
       },
       2: {
-        fontSize: "$4xl",
+        fontSize: "$3xl",
         fontWeight: "$extra-bold",
         letterSpacing: "$tracking-tighter",
         lineHeight: "$compact",
         mb: "$spacing-05",
+
+        "@bp2": {
+          fontSize: "$4xl",
+        }
       },
       3: {
         fontSize: "$3xl",

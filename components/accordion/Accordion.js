@@ -52,7 +52,7 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 });
 
 const StyledContentText = styled("div", {
-  padding: "$spacing-06",
+  padding: "$spacing-06 $spacing-05",
   fontSize: "$lg",
   fontFamily: "$default",
   lineHeight: "$base",
