@@ -5,6 +5,7 @@ import {
   AccordionContent,
 } from "../../../components/accordion/Accordion.js";
 import ListItem from "./components/ListItem.js";
+import Spacer from "../../../components/layouts/blocks/Spacer.js";
 
 ## Probleem definitie
 
@@ -16,15 +17,12 @@ Ook na de oplevering vergt een module de nodige aandacht. Gedurende de product l
 
 Door middel van een uitgebreide analyse hebben we voor elke fase in de product levenscyclus van een zorginhoudelijke modules in kaart gebracht wat de pijnpunten zijn voor de betrokken stakeholders.
 
-<Accordion
-  style={{ paddingBottom: "32px" }}
-  type="single"
-  collapsible
->
+<Spacer level={2}>
+<Accordion type="single" collapsible style={{paddingBottom:"32px"}}>
   <AccordionItem value="item-1">
     <AccordionTrigger title="Verkopers" src="/icons/money.svg" />
     <AccordionContent>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <ListItem
           src="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/pijnpunt-budget.svg"
           title="Lagere budgetten"
@@ -41,7 +39,7 @@ Door middel van een uitgebreide analyse hebben we voor elke fase in de product l
   <AccordionItem value="item-2">
     <AccordionTrigger title="Bouwers" src="/icons/hammer-line.svg" />
     <AccordionContent>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <ListItem
           src="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/pijnpunt-maatwerk.svg"
           title="Maatwerk"
@@ -63,7 +61,7 @@ Door middel van een uitgebreide analyse hebben we voor elke fase in de product l
   <AccordionItem value="item-3">
     <AccordionTrigger title="Gebruikers" src="/icons/smartphone.svg" />
     <AccordionContent>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <ListItem
           src="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/pijnpunt-responsive.svg"
           title="Niet responsive"
@@ -80,7 +78,7 @@ Door middel van een uitgebreide analyse hebben we voor elke fase in de product l
   <AccordionItem value="item-4">
     <AccordionTrigger title="Onderhouders" src="/icons/settings-line.svg" />
     <AccordionContent>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <ListItem
           src="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/pijnpunt-omslachtig.svg"
           title="Omslachtig process"
@@ -97,7 +95,7 @@ Door middel van een uitgebreide analyse hebben we voor elke fase in de product l
   <AccordionItem value="item-5">
     <AccordionTrigger title="Onderzoekers" src="/icons/search-eye-line.svg" />
     <AccordionContent>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         <ListItem
           src="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/pijnpunt-data.svg"
           title="Ongestructureerde data"
@@ -112,3 +110,4 @@ Door middel van een uitgebreide analyse hebben we voor elke fase in de product l
     </AccordionContent>
   </AccordionItem>
 </Accordion>
+</Spacer>

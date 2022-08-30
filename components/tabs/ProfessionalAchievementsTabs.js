@@ -1,5 +1,24 @@
+import { styled } from "../../stitches.config.js";
 import ListItem from "../../components/ListItem.js";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
+import Card from "../../components/about/pageblocks/Card.js";
+
+const RowContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  flexWrap: "wrap",
+  width: "100%",
+
+  "@bp3" : {
+    flexDirection: "row",
+  }
+})
+
+const Column = styled("div", {
+  display: "flex",
+  flexBasis: "100%",
+  flex: 1,
+})
 
 function ProfessionalAchievementsTab() {
   return (
@@ -10,30 +29,22 @@ function ProfessionalAchievementsTab() {
         <TabsTrigger value="courses">Courses</TabsTrigger>
       </TabsList>
       <TabsContent value="experience">
-        <ListItem
-          src="/logo/jouw-omgeving-logo.png"
-          title="Jouw Omgeving B.V."
-          subtitle="Product Owner"
-          description="Responsible for product vision & strategy, prioritising the roadmap & sprint backlog and overseeing all the development stages from customer wish to production deployment."
-          duration="2020 - 2022"
-          location="Utrecht, Netherlands"
-        />
-        <ListItem
-          src="/logo/jouw-omgeving-logo.png"
-          title="Jouw Omgeving B.V."
-          subtitle="Product Designer - UI/UX"
-          description="Responsible for (re)designing platform features, writing user stories and the design of an accessible Design System for the Jouw Omgeving e-Health platform."
-          duration="2018 - 2020"
-          location="Utrecht, Netherlands"
-        />
-        <ListItem
-          src="/logo/jouw-omgeving-logo.png"
-          title="Jouw Omgeving B.V."
-          subtitle="Graduate Intern"
-          description="Developed and applied a conceptual framework to translate and embed a existing healthcare 'curriculum' into the Jouw Omgeving e-health application."
-          duration="2017 - 2018"
-          location="Utrecht, Netherlands"
-        />
+        <RowContainer>
+          <Column>
+            <Card />
+          </Column>
+          <Column>
+            <Card />
+          </Column>
+        </RowContainer>
+        <RowContainer>
+          <Column>
+            <Card />
+          </Column>
+          <Column>
+            
+          </Column>
+        </RowContainer>
       </TabsContent>
       <TabsContent value="education">
         <ListItem

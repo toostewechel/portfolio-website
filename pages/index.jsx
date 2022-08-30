@@ -1,12 +1,9 @@
 import { styled } from "../stitches.config.js";
-import SkillsetBlock from "../components/about/pageblocks/SkillsetBlock.js";
-import ProfessionalAchievementsBlock from "../components/about/pageblocks/ProfessionalAchievementsBlock.js";
-import SoftwareStackBlock from "../components/about/pageblocks/SoftwareStackBlock.js";
-import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
-import Link from "next/link";
-import ScrollContainerX from "../components/about/scrollcontainer/ScrollContainerX";
+import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
+import Banner from "../components/about/pageblocks/Banner.js";
+import Spacer from "../components/layouts/blocks/Spacer.js";
 import Landing from "../components/about/landing/Landing.js";
-import CodeBlock from "../components/markdown/CodeBlock.js";
+
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -59,53 +56,18 @@ const Flex = styled("div", {
   width: "100%",
 });
 
-const Spacer = styled("div", {
-  pt: "$spacing-10",
-  pb: "$spacing-10",
-});
-
-const JSCode = `const App = props => {
-  return (
-    <div>
-      <h1> Prism JS </h1>
-      <div>Awesome Syntax Highlighter</div>
-    </div>
-  );
-};
-`;
 
 function HomePage() {
   return (
     <div>
       <Landing />
+      <Spacer level={12} />
+      <Banner />
+      <Spacer level={7} />
       <PageLayout>
-        <Spacer></Spacer>
-        <div id="values">
-          <ContentBlock
-            heading="My core values"
-            description="These values guide me when making decisions, building relationships and solving problems."
-            alignment={{
-              "@initial": "left",
-              "@bp4": "center",
-            }}
-          ></ContentBlock>
-        </div>
+        <ProfessionalAchievementsTab />
       </PageLayout>
-      <ScrollContainerX />
-      <PageLayout>
-        <Spacer>
-          <SkillsetBlock />
-        </Spacer>
-        <Spacer>
-          <ProfessionalAchievementsBlock />
-        </Spacer>
-        <Spacer>
-          <SoftwareStackBlock />
-        </Spacer>
-        <Link href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
-          <a>Go to link!!!</a>
-        </Link>
-      </PageLayout>
+      <Spacer level={12} />
     </div>
   );
 }

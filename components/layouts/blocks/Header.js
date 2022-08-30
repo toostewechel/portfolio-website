@@ -1,5 +1,5 @@
-import { styled } from "../../stitches.config.js";
-import Toolbar from "./Toolbar.js";
+import { styled } from "../../../stitches.config.js";
+import Toolbar from "../../toolbar/Toolbar.js";
 import React, { useState } from "react";
 
 const Container = styled("div", {

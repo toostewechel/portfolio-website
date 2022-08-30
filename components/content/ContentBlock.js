@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config.js";
 import * as components from "../markdown/StyledMarkdown.js";
 
 const ContentContainer = styled("div", {
-  p: "$spacing-06 $spacing-03",
+  p: "$none $spacing-04",
   m: "0 auto",
   maxWidth: "760px",
 });

@@ -26,9 +26,9 @@ function Index() {
         duration="25 min"
         dutch
       />
-      <Spacer />
-      <ContentMeta />
-      <Spacer />
+      <Spacer level={9}>
+        <ContentMeta />
+      </Spacer>
       <ContentBlock Content={Inleiding} />
       <ContentBlock Content={Probleem} />
       <ContentBlock Content={ProductVisie} />

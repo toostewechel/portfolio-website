@@ -63,7 +63,7 @@ export const {
       "4xl": "3.157rem",
       "3xl": "2.369rem",
       "2xl": "1.777rem",
-      xl: "1.275rem",
+      xl: "1.25rem",
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
