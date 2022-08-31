@@ -3,6 +3,11 @@ import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievem
 import Banner from "../components/about/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import Landing from "../components/about/landing/Landing.js";
+import dynamic from "next/dynamic";
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false,
+});
 
 
 const Title = styled("h2", {
