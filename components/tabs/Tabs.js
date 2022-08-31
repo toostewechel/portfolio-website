@@ -18,7 +18,7 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontFamily: "default",
+  fontFamily: "$header",
   fontWeight: "$semi-bold",
   fontSize: "$base",
   padding: "$spacing-04",
@@ -30,7 +30,7 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   },
   "@bp1": {
     padding: "$spacing-05 $spacing-06",
-    fontSize: "$lg",
+    fontSize: "$xl",
   },
 });
 

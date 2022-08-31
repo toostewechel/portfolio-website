@@ -3,6 +3,18 @@ import ListItem from "../../components/ListItem.js";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
 import Card from "../../components/about/pageblocks/Card.js";
 
+const Title = styled("h3", {
+  fontSize: "$lg",
+  fontWeight: "$extra-bold",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tight",
+  color: "$mauve12",
+
+  "@bp1": {
+    fontSize: "$xl",
+  },
+});
+
 const RowContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
@@ -41,9 +53,7 @@ function ProfessionalAchievementsTab() {
           <Column>
             <Card />
           </Column>
-          <Column>
-            
-          </Column>
+          <Column></Column>
         </RowContainer>
       </TabsContent>
       <TabsContent value="education">
