@@ -42,7 +42,7 @@ const FooterContainer = styled("div", {
   borderBottomRightRadius: "4px",
   borderTop: "1px solid $gray5",
   backgroundColor: "$gray1",
-  p: "$spacing-02 $spacing-04",
+  p: "$spacing-04",
 })
 
 const Box = styled("div", {
@@ -141,53 +141,41 @@ const Label = styled("p", {
   },
 });
 
-const ExternalLink = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "$violet11",
-  borderRadius: "4px",
-  size: "$6",
-  p: "$spacing-02",
-
-  "&:hover": {
-    backgroundColor: "$violet4",
-  }
-})
-
 function Card(props) {
   return (
-    <Container>
-      <HeaderPanel>
-        <StyledImage src="/logo/university-twente-logo.png" />
-        <Box>
-          <Title>Master Industrial Design Engineering</Title>
-          <Subtitle>University of Twente</Subtitle>
-        </Box>
-      </HeaderPanel>
-      <ContentContainer>
-        <Description>Learned how to think outside the box, identify the real problems that needs solving and to effectively and efficiently establish the right development process together with relevant stakeholders.</Description>
-      </ContentContainer>
-      <FooterContainer>
-        <FlexWrapper>
+    <a href={props.href}>
+      <Container>
+        <HeaderPanel>
+          <StyledImage src="/logo/university-twente-logo.png" />
+          <Box>
+            <Title>{props.title}</Title>
+            <Subtitle>{props.subtitle}</Subtitle>
+          </Box>
+        </HeaderPanel>
+        <ContentContainer>
+          <Description>{props.description}</Description>
+        </ContentContainer>
+        <FooterContainer>
           <FlexWrapper>
-            <DecorativeIcon>
-              <TimeLineIcon />
-            </DecorativeIcon>
-            <Label>2015 - 2018</Label>
+            <FlexWrapper>
+              <DecorativeIcon>
+                <TimeLineIcon />
+              </DecorativeIcon>
+              <Label>{props.duration}</Label>
+            </FlexWrapper>
+            <FlexWrapper>
+              <DecorativeIcon>
+                <MapPin2LineIcon />
+              </DecorativeIcon>
+              <Label>{props.location}</Label>
+            </FlexWrapper>
           </FlexWrapper>
-          <FlexWrapper>
-            <DecorativeIcon>
-              <MapPin2LineIcon />
-            </DecorativeIcon>
-            <Label>Enschede, Netherlands</Label>
-          </FlexWrapper>
-        </FlexWrapper>
-        <ExternalLink>
-          <ExternalLinkLineIcon />
-        </ExternalLink>
-      </FooterContainer>
-    </Container>
+          <DecorativeIcon>
+            <ExternalLinkLineIcon />
+          </DecorativeIcon>
+        </FooterContainer>
+      </Container>
+    </a>
   )
 }
 
