@@ -68,6 +68,14 @@ const StyledSpan = styled("span", {
   mt: "-8px",
 });
 
+const ToolbarContainer = styled("div", {
+  display: "none",
+
+  "@bp3": {
+    display: "flex",
+  }
+})
+
 function Header() {
   return (
     <Container>
@@ -76,7 +84,9 @@ function Header() {
           Snapshots / <StyledSpan> Home </StyledSpan>{" "}
         </Title>
       </Box>
-      <Toolbar />
+      <ToolbarContainer>
+        <Toolbar />
+      </ToolbarContainer>
     </Container>
   );
 }

@@ -3,6 +3,7 @@ import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievem
 import Banner from "../components/about/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import Landing from "../components/about/landing/Landing.js";
+import Timeline from "../components/timeline/Timeline.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -46,12 +47,9 @@ function HomePage() {
       <Landing />
       <Spacer level={12} />
       <PageLayout>
-        <Paragraph>In the gist above we imported the Head component from “next/document”, as well as added links for our font files. The only thing you might need to change from the example above in your project is the link type, depending on the format of your font. In our case “font/ttf” will do the trick.</Paragraph>
+        <Timeline />
       </PageLayout>
       <Spacer level={12} />
-      <PageLayout>
-        <img src="/images/project-section-placeholder.png" />
-      </PageLayout>
       <Spacer level={12} />
       <Banner />
       <Spacer level={7} />
@@ -59,10 +57,9 @@ function HomePage() {
         <ProfessionalAchievementsTab />
       </PageLayout>
       <Spacer level={12} />
-      <PageLayout>
-        <img src="/images/writing-section-placeholder.png" />
-      </PageLayout>
-      <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">Go to link!!!</a>
+      <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
+        Go to link!!!
+      </a>
     </div>
   );
 }

@@ -82,7 +82,7 @@ function ProfessionalAchievementsTab() {
         </RowContainer>
       </TabsContent>
       <TabsContent value="education">
-         <RowContainer>
+        <RowContainer>
           <Column>
             <Card
               icon="/logo/university-twente-logo.png"
@@ -122,26 +122,26 @@ function ProfessionalAchievementsTab() {
         </RowContainer>
       </TabsContent>
       <TabsContent value="courses">
-         <RowContainer>
+        <RowContainer>
           <Column>
             <Card
               icon="/logo/udemy-logo.png"
               title="Git Complete"
-          subtitle="Mastering the Modern Workflow"
-          description="Learned to build web applications using modern skills, tools and all the best-practices that companies need in developers."
-          duration="16 hours"
-          location="Udemy - Online Learning"
+              subtitle="Mastering the Modern Workflow"
+              description="Learned to build web applications using modern skills, tools and all the best-practices that companies need in developers."
+              duration="16 hours"
+              location="Udemy - Online Learning"
               href="https://www.utwente.nl/en/education/master/programmes/industrial-design-engineering/masters-tracks/management-of-product-development/"
             />
           </Column>
           <Column>
             <Card
               icon="/logo/udemy-logo.png"
-             title="Javascript"
-          subtitle="Basics for beginners"
-          description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
-          duration="8 hours"
-          location="Udemy - Online Learning"
+              title="Javascript"
+              subtitle="Basics for beginners"
+              description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
+              duration="8 hours"
+              location="Udemy - Online Learning"
               href="https://www.utwente.nl/"
             />
           </Column>
@@ -150,22 +150,22 @@ function ProfessionalAchievementsTab() {
           <Column>
             <Card
               icon="/logo/udemy-logo.png"
-             title="React Front to Back"
-          subtitle="Master React Concepts"
-          description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
-          duration="12 hours"
-          location="Udemy - Online Learning"
+              title="React Front to Back"
+              subtitle="Master React Concepts"
+              description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
+              duration="12 hours"
+              location="Udemy - Online Learning"
               href="https://www.utwente.nl/en/education/bachelor/programmes/industrial-design-engineering/"
             />
           </Column>
           <Column>
-           <Card
+            <Card
               icon="/logo/udemy-logo.png"
-             title="Robust Scrum Product Owner"
-          subtitle="Level up your Product Owner skills"
-          description="Learned about the mindset, the characteristics and different responsibilities of being a Product Owner in a Scrum Team."
-          duration="3 hours"
-          location="Udemy - Online Learning"
+              title="Robust Scrum Product Owner"
+              subtitle="Level up your Product Owner skills"
+              description="Learned about the mindset, the characteristics and different responsibilities of being a Product Owner in a Scrum Team."
+              duration="3 hours"
+              location="Udemy - Online Learning"
               href="https://www.utwente.nl/en/education/bachelor/programmes/industrial-design-engineering/"
             />
           </Column>
