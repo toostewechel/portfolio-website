@@ -1,53 +1,50 @@
 import { styled } from "../../stitches.config.js";
 import React, { useRef, useEffect, useState } from "react";
+import CardHeader from "../card/CardHeader.js";
 
-const Container = styled("div", {
+const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
   margin: "0 auto",
   padding: "$spacing-05",
-  background: "$gray3",
 });
 
-const Cards = styled("ul", {
+const TimelineItems = styled("ul", {
   display: "flex",
   padding: "$0",
   listStyle: "none",
   overflowX: "scroll",
   scrollSnapType: "x",
   scrollBehavior: "smooth",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 });
 
-const CardContainer = styled("li", {
+const TimelineItem = styled("li", {
   display: "flex",
   flexDirection: "column",
   flex: "0 0 100%",
   height: "400px",
   borderRadius: "16px",
-
-  background: "$crimson5",
-  boxShadow: "$smooth",
   scrollSnapAlign: "start",
   mr: "$spacing-04",
-
+  
   "&:last-child": {
     mr: 0,
   },
-
-  "@bp1": {},
+  
   "@bp2": {
     flexBasis: "calc(50% - 6px)",
   },
-  "@bp3": {
-    flexBasis: "calc(calc(100% / 3) - 8px)",
-  },
   "@bp4": {
     flexBasis: "calc(calc(100% / 3) - 8px)",
-
   },
 });
 
 const Card = styled("div", {
-  padding: "$spacing-04",
+  padding: "12px",
+  borderRadius: "16px",
+  background: "$crimson3",
 })
 
 const ControlsContainer = styled("div", {
@@ -80,9 +77,7 @@ const Button = styled("button", {
 });
 
 function getCardWidth() {
-  return (
-    document.getElementById('card').clientWidth
-  )
+  return document.getElementById('timeline-item').clientWidth;
 }
 
 function Timeline(props) {
@@ -91,49 +86,52 @@ function Timeline(props) {
     ref.current.scrollLeft += scrollOffset;
   }
 
-  
-  
   return (
-    <Container>
-      <Cards ref={ref}>
-        <CardContainer>
-          <Card id="card">
+    <TimelineWrapper>
+      <TimelineItems ref={ref}>
+        <TimelineItem id="timeline-item">
+          <CardHeader color="crimson" hasYear={true} alignment="left" year="2022" />
+          <Card >
             I have empathy for those around me and respect their point of view. I
             have empathy for those around me and respect their point of view
           </Card>
-        </CardContainer>
-        <CardContainer>
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader color="plum" hasYear={true} alignment="right" year="2022" />
           <Card>
             I have empathy for those around me and respect their point of view. I
             have empathy for those around me and respect their point of view
           </Card>
-        </CardContainer>
-        <CardContainer>
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader color="blue" hasYear={true} alignment="left" year="2021" />
           <Card>
             I have empathy for those around me and respect their point of view. I
             have empathy for those around me and respect their point of view
           </Card>
-        </CardContainer>
-        <CardContainer>
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader color="blue" hasYear={false} alignment="left" />
           <Card>
             I have empathy for those around me and respect their point of view. I
             have empathy for those around me and respect their point of view
           </Card>
-        </CardContainer>
-        <CardContainer>
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader color="blue" hasYear={true} alignment="left" year="2021" />
           <Card>
             I have empathy for those around me and respect their point of view. I
             have empathy for those around me and respect their point of view
           </Card>
-        </CardContainer>
-      </Cards>
+        </TimelineItem>
+      </TimelineItems>
       <ControlsContainer>
         <Controls>
-          <Button onClick={() => scroll(-getCardWidth())}>Start</Button>
+          <Button onClick={() => scroll(-getCardWidth())}>Left</Button>
           <Button onClick={() => scroll(getCardWidth())}>Right</Button>
         </Controls>
       </ControlsContainer>
-    </Container>
+    </TimelineWrapper>
   );
 }
 
