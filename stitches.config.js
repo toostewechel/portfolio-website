@@ -33,7 +33,7 @@ export const {
       ...violetA,
       ...violetDarkA,
       ...green,
-      ...mauve, //headings
+      ...mauve,
       ...mauveDarkA,
       ...whiteA,
       ...blackA,
@@ -71,8 +71,7 @@ export const {
     },
     fonts: {
       header: "'Vollkorn', serif",
-      default: "'Open Sans', sans-serif",
-      body: "'Gotham', sans-serif",
+      default: "'Gotham', sans-serif",
       mono: "'IBM Plex Mono', monospace",
     },
     fontWeights: {
