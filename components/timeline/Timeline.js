@@ -1,6 +1,9 @@
 import { styled } from "../../stitches.config.js";
 import React, { useRef, useEffect, useState } from "react";
+import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
+import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
 import CardHeader from "../card/CardHeader.js";
+import TimelineCard from "../card/TimelineCard.js";
 
 const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
@@ -24,7 +27,7 @@ const TimelineItem = styled("li", {
   display: "flex",
   flexDirection: "column",
   flex: "0 0 100%",
-  height: "400px",
+  height: "auto",
   borderRadius: "16px",
   scrollSnapAlign: "start",
   mr: "$spacing-04",
@@ -37,7 +40,8 @@ const TimelineItem = styled("li", {
     flexBasis: "calc(50% - 6px)",
   },
   "@bp4": {
-    flexBasis: "calc(calc(100% / 3) - 8px)",
+    flexBasis: "calc(calc(100% / 3) - 16px)",
+    mr: "$spacing-06",
   },
 });
 
@@ -48,23 +52,30 @@ const Card = styled("div", {
 })
 
 const ControlsContainer = styled("div", {
-  background: "$gray3",
   display: "flex",
   flexDirection: "row",
-  justifyContent: "flex-end",
+  alignItems: "center",
   width: "100%",
 })
 
 const Controls = styled("div", {
-  background: "$crimson6",
   padding: "$spacing-04",
   display: "flex",
   flexDirection: "row",
 })
 
+const Line = styled("div", {
+  height: "1px",
+  background: "$gray6",
+  width: "100%",
+})
+
+
 const Button = styled("button", {
-  padding: "16px",
-  backgroundColor: "$violet3",
+  padding: "$spacing-04",
+  backgroundColor: "white",
+  border: "1px solid $gray6",
+  borderRadius: "8px",
   mr: "8px",
 
   "&:last-child": {
@@ -91,44 +102,30 @@ function Timeline(props) {
       <TimelineItems ref={ref}>
         <TimelineItem id="timeline-item">
           <CardHeader color="crimson" hasYear={true} alignment="left" year="2022" />
-          <Card >
-            I have empathy for those around me and respect their point of view. I
-            have empathy for those around me and respect their point of view
-          </Card>
+          <TimelineCard imgage="/images/placeholder-timeline-item.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="plum" hasYear={true} alignment="right" year="2022" />
-          <Card>
-            I have empathy for those around me and respect their point of view. I
-            have empathy for those around me and respect their point of view
-          </Card>
+          <TimelineCard imgage="/images/placeholder-timeline-item2.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="blue" hasYear={true} alignment="left" year="2021" />
-          <Card>
-            I have empathy for those around me and respect their point of view. I
-            have empathy for those around me and respect their point of view
-          </Card>
+           <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="blue" hasYear={false} alignment="left" />
-          <Card>
-            I have empathy for those around me and respect their point of view. I
-            have empathy for those around me and respect their point of view
-          </Card>
+           <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="blue" hasYear={true} alignment="left" year="2021" />
-          <Card>
-            I have empathy for those around me and respect their point of view. I
-            have empathy for those around me and respect their point of view
-          </Card>
+          <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
       </TimelineItems>
       <ControlsContainer>
+        <Line />
         <Controls>
-          <Button onClick={() => scroll(-getCardWidth())}>Left</Button>
-          <Button onClick={() => scroll(getCardWidth())}>Right</Button>
+          <Button onClick={() => scroll(-getCardWidth())}><ArrowLeftLineIcon /></Button>
+          <Button onClick={() => scroll(getCardWidth())}><ArrowRightLineIcon /></Button>
         </Controls>
       </ControlsContainer>
     </TimelineWrapper>

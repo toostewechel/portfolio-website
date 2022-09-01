@@ -93,8 +93,8 @@ export const {
       "tracking-tighter": "-0.05em",
       "tracking-tight": "-0.025em",
       "tracking-normal": "0em",
-      "tracking-wide": "0.025em",
-      "tracking-wider": "0.05em",
+      "tracking-wide": "0.0025em",
+      "tracking-wider": "0.005em",
     },
     sizes: {
       1: "2px",

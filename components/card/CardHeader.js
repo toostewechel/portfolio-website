@@ -28,7 +28,7 @@ const YearLabel = styled("p", {
 })
 
 const Line = styled("div", {
-  height: "2px",
+  height: "1px",
   background: "$gray6",
   width: "100%",
 })

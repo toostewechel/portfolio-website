@@ -4,6 +4,7 @@ import Banner from "../components/about/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import Landing from "../components/about/landing/Landing.js";
 import Timeline from "../components/timeline/Timeline.js";
+import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -47,6 +48,7 @@ function HomePage() {
       <Landing />
       <Spacer level={12} />
       <PageLayout>
+        <ContentBlock heading="Stories & Ideas" alignment="center" description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management. " />
         <Timeline />
       </PageLayout>
       <Spacer level={12} />
