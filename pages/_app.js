@@ -1,6 +1,10 @@
+// Import MDX provider and StyledMarkdown component
 import { MDXProvider } from "@mdx-js/react";
-import "../styles/styles.css";
 import * as components from "../components/markdown/StyledMarkdown.js";
+
+//Import global CSS styles
+import "../styles/global.css";
+import "../styles/fonts.css";
 
 function MyApp({ Component, pageProps }) {
   return (

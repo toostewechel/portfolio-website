@@ -72,6 +72,7 @@ export const {
     fonts: {
       header: "'Vollkorn', serif",
       default: "'Open Sans', sans-serif",
+      body: "'Gotham', sans-serif",
       mono: "'IBM Plex Mono', monospace",
     },
     fontWeights: {
