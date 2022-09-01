@@ -35,7 +35,7 @@ const StyledHeading = styled("h1", {
 
         "@bp2": {
           fontSize: "$4xl",
-        }
+        },
       },
       3: {
         fontSize: "$3xl",

@@ -5,23 +5,23 @@ const Container = styled("div", {
   flexDirection: "row",
   gap: "$spacing-04",
   alignItems: "center",
-})
+});
 
 const AvatarContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "100%",
-})
+});
 
 const StyledImage = styled("img", {
   size: "$8",
-})
+});
 
 const FlexWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
-})
+});
 
 const Title = styled("h3", {
   fontSize: "$lg",
@@ -46,17 +46,18 @@ const Description = styled("p", {
   },
 });
 
-
-function Avatar(props){
-  return(
+function Avatar(props) {
+  return (
     <Container>
-      <AvatarContainer><StyledImage src={props.src} /></AvatarContainer>
+      <AvatarContainer>
+        <StyledImage src={props.src} />
+      </AvatarContainer>
       <FlexWrapper>
         <Title>{props.name}</Title>
         <Description>{props.description}</Description>
       </FlexWrapper>
     </Container>
-  )
+  );
 }
 
 export default Avatar;

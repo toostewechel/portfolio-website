@@ -18,7 +18,7 @@ const Container = styled("div", {
     transition: "all, 300ms ease-out",
     boxShadow: "$smooth",
   },
-})
+});
 
 const HeaderPanel = styled("div", {
   display: "flex",
@@ -28,12 +28,12 @@ const HeaderPanel = styled("div", {
   "@bp4": {
     flexDirection: "row",
     alignItems: "center",
-  }
-})
+  },
+});
 
 const ContentContainer = styled("div", {
   p: "0 $spacing-05",
-})
+});
 
 const FooterContainer = styled("div", {
   display: "flex",
@@ -43,14 +43,14 @@ const FooterContainer = styled("div", {
   borderTop: "1px solid $gray5",
   backgroundColor: "$gray1",
   p: "$spacing-04",
-})
+});
 
 const Box = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alginItems: "center",
-})
+});
 
 const FlexWrapper = styled("div", {
   display: "flex",
@@ -143,10 +143,10 @@ const Label = styled("p", {
 
 function Card(props) {
   return (
-    <a href={props.href}>
+    <a href={props.href} target="_blank">
       <Container>
         <HeaderPanel>
-          <StyledImage src="/logo/university-twente-logo.png" />
+          <StyledImage src={props.icon} />
           <Box>
             <Title>{props.title}</Title>
             <Subtitle>{props.subtitle}</Subtitle>
@@ -176,7 +176,7 @@ function Card(props) {
         </FooterContainer>
       </Container>
     </a>
-  )
+  );
 }
 
 export default Card;

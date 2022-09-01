@@ -11,15 +11,19 @@ const Container = styled("div", {
   m: "0 auto",
   maxWidth: "760px",
   p: "$spacing-04 $none",
-})
+});
 
 function ContentMeta() {
-  return(
+  return (
     <Container>
-      <Avatar src="/images/avatar-placeholder.png" name="Tom Oostewechel" description="Author" />
+      <Avatar
+        src="/images/avatar-placeholder.png"
+        name="Tom Oostewechel"
+        description="Author"
+      />
       <ShareToPopover />
     </Container>
-  )
+  );
 }
 
 export default ContentMeta;

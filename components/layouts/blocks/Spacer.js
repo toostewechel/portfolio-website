@@ -3,8 +3,8 @@ import { styled } from "../../../stitches.config.js";
 const StyledSpacer = styled("div", {
   p: "$spacing-07 $none",
 
-  variants : {
-    level : {
+  variants: {
+    level: {
       1: {
         p: "$spacing-01 $none",
       },
@@ -41,9 +41,8 @@ const StyledSpacer = styled("div", {
       12: {
         p: "$spacing-12 $none",
       },
-      
-    }
-  }
+    },
+  },
 });
 
 function Spacer(props) {
