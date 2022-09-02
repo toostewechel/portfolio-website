@@ -73,8 +73,8 @@ const ToolbarContainer = styled("div", {
 
   "@bp3": {
     display: "flex",
-  }
-})
+  },
+});
 
 function Header() {
   return (

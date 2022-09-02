@@ -48,7 +48,11 @@ function HomePage() {
       <Landing />
       <Spacer level={12} />
       <PageLayout>
-        <ContentBlock heading="Stories & Ideas" alignment="center" description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management. " />
+        <ContentBlock
+          heading="Stories & Ideas"
+          alignment="center"
+          description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management. "
+        />
         <Timeline />
       </PageLayout>
       <Spacer level={12} />

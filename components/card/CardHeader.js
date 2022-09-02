@@ -16,28 +16,28 @@ const Container = styled("div", {
       },
       right: {
         flexDirection: "row-reverse",
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
 
 const YearLabel = styled("p", {
   fontFamily: "$default",
   fontWeight: "$semi-bold",
   color: "$mauve12",
-})
+});
 
 const Line = styled("div", {
   height: "1px",
   background: "$gray6",
   width: "100%",
-})
+});
 
 const PositionBox = styled("div", {
   display: "flex",
   justifyContent: "center",
   marginTop: "-44px",
-})
+});
 
 const Attachment = styled("div", {
   padding: "2px",
@@ -61,8 +61,8 @@ const Attachment = styled("div", {
         backgroundColor: "$crimson3",
       },
     },
-  }
-})
+  },
+});
 
 const ColorCircle = styled("div", {
   width: "12px",
@@ -81,14 +81,14 @@ const ColorCircle = styled("div", {
         background: "$crimson11",
       },
     },
-  }
-})
+  },
+});
 
 function CardHeader(props) {
   return (
     <>
       <Container alignment={props.alignment}>
-        {props.hasYear && (<YearLabel>{props.year}</YearLabel>)}
+        {props.hasYear && <YearLabel>{props.year}</YearLabel>}
         <Line />
       </Container>
       <PositionBox>
@@ -97,7 +97,7 @@ function CardHeader(props) {
         </Attachment>
       </PositionBox>
     </>
-  )
+  );
 }
 
 export default CardHeader;

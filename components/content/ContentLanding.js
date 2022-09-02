@@ -10,10 +10,9 @@ const BackgroundImage = styled("div", {
   height: "100vh",
 
   "@bp2": {
-    backgroundImage: "url(/images/wallpaper.png)",
+    backgroundImage: "url(/images/placeholder-blog.png)",
     opacity: 1,
-    backgroundSize: "contain",
-    backgroundPosition: "-132px center",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100vh",
     mt: "-88px",
