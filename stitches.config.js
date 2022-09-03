@@ -2,6 +2,7 @@ import {
   gray,
   blue,
   violet,
+  orange,
   violetA,
   plum,
   green,
@@ -31,6 +32,7 @@ export const {
       ...gray,
       ...blue,
       ...violet,
+      ...orange,
       ...violetA,
       ...green,
       ...mauve,
@@ -81,6 +83,7 @@ export const {
       "semi-bold": 600,
       bold: 700,
       "extra-bold": 800,
+      black: 900,
     },
     lineHeights: {
       large: 1.65,
