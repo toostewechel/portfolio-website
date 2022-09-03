@@ -20,7 +20,7 @@ const Container = styled("div", {
 
 const Heading = styled("h2", {
   fontSize: "$3xl",
-  fontWeight: "$extra-bold",
+  fontWeight: "$black",
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
@@ -43,7 +43,6 @@ const Description = styled("p", {
 
   "@bp1": {
     fontSize: "$xl",
-    lineHeight: "$large",
   },
 });
 

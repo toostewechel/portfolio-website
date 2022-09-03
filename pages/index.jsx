@@ -5,6 +5,7 @@ import Spacer from "../components/layouts/blocks/Spacer.js";
 import Timeline from "../components/timeline/Timeline.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
+import Landing from "../components/about/landing/Landing.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -46,6 +47,8 @@ function HomePage() {
   return (
     <div>
       <Header />
+      <Spacer level={12} />
+      <Landing />
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock

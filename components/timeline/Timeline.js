@@ -13,7 +13,7 @@ const TimelineWrapper = styled("div", {
 
 const TimelineItems = styled("ul", {
   display: "flex",
-  padding: "$0",
+  padding: "0",
   listStyle: "none",
   overflowX: "scroll",
   scrollSnapType: "x",
