@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config.js";
+import Tag from "../tag/Tag.js";
 
 const Container = styled("a", {
   borderRadius: "16px",
@@ -28,7 +29,7 @@ const Icon = styled("div", {
   justifyContent: "center",
   width: "38px",
   height: "38px",
-  backgroundColor: "$mauve12",
+  background: "rgba(2,0,16, 0.67)",
   position: "absolute",
   borderRadius: "100%",
   boxShadow: "$smooth",
@@ -51,7 +52,6 @@ const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
-  letterSpacing: "$tracking-tight",
   color: "$mauve2",
   textAlign: "center",
   display: "-webkit-box",
@@ -78,6 +78,20 @@ const CardDescription = styled("p", {
   "-webkit-box-orient": "vertical",
 });
 
+const MetaInformationContainer = styled("div", {
+  padding: "$spacing-02 $spacing-05 $spacing-05 $spacing-05",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center"
+})
+
+const MetaInformation = styled("p", {
+  fontFamily: "$default",
+  fontWeight: "$semi-bold",
+  letterSpacing: "$tracking-tight",
+  color: "$gray11",
+})
+
 function TimelineCard(props) {
   return (
     <Container href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web">
@@ -94,6 +108,10 @@ function TimelineCard(props) {
         have empathy for those around me and respect their point of view
       </CardDescription>
       </DescriptionContainer>
+      <MetaInformationContainer>
+      <MetaInformation>Article • 20 min read </MetaInformation>
+      <Tag color="blue" label="Tech" />
+      </MetaInformationContainer>
     </Container>
   );
 }
