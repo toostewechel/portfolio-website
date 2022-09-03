@@ -31,6 +31,7 @@ export const {
       ...gray,
       ...blue,
       ...violet,
+      ...violetA,
       ...green,
       ...mauve,
       ...mauveA,

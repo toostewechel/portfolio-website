@@ -25,7 +25,7 @@ const slideLeftAndFade = keyframes({
 const StyledContent = styled(PopoverPrimitive.Content, {
   borderRadius: "4px",
   padding: "$spacing-04",
-  width: "196px",
+  maxWidth: "320px",
   backgroundColor: "white",
   border: "1px solid $gray5",
   boxShadow: "$smooth",
@@ -72,7 +72,7 @@ const StyledClose = styled(PopoverPrimitive.Close, {
   top: 8,
   right: 8,
 
-  "&:hover": { backgroundColor: "$violet4" },
+  "&:hover": { backgroundColor: "$violetA7" },
   "&:focus": { boxShadow: "0 0 0 2px $violet7" },
 });
 

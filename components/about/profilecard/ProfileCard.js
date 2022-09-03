@@ -3,10 +3,9 @@ import { styled } from "../../../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
-import ProfileDescription from "./ProfileDescription.js";
+import AvatarStatusBadge from "../../avatar/AvatarStatusBadge.js";
 
 const Container = styled("div", {
-  p: "$spacing-05",
   display: "flex",
   flexDirection: "column",
   background: "linear-gradient(30deg, $violetA6, $crimsonA5)",
@@ -26,11 +25,11 @@ const Card = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   textAlign: "center",
-  p: "$spacing-05",
+  p: "$spacing-06",
   background:
     "linear-gradient(180deg, rgba(122, 89, 232, 0.75) 0%, #3913B8 100%)",
   borderRadius: "8px",
-  height: "400px",
+  height: "auto",
   width: "100%",
   boxShadow: "$smooth",
 });
@@ -52,17 +51,17 @@ const CardTitle = styled("h3", {
   color: "$whiteA12",
 
   "@bp1": {
-    fontSize: "$2xl",
+    fontSize: "$xl",
     mt: "$spacing-02",
   },
 });
 
 const CardDescription = styled("p", {
-  fontSize: "$base",
+  fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
   color: "$violet5",
-  mb: "24px",
+  mb: "$spacing-06",
 });
 
 const StatusBadge = styled("div", {
@@ -71,7 +70,7 @@ const StatusBadge = styled("div", {
   alignItems: "center",
   p: "$spacing-03",
   borderRadius: "4px",
-  backgroundColor: "$violetA4",
+  background: "$violetA8",
   border: "solid 1px $violetA7",
   mb: "$spacing-08",
 });
@@ -150,7 +149,7 @@ function ProfileCard(props) {
       <FlexContainer>
         <Card>
           <ImageContainer>
-            <img src="/images/card-placeholder.png" />
+            <AvatarStatusBadge size={9} src="/images/placeholder-avatar.png" />
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>
@@ -178,11 +177,6 @@ function ProfileCard(props) {
             </Link>
           </SocialIconBar>
         </Card>
-      </FlexContainer>
-      <FlexContainer>
-        <Menu>
-          <ProfileDescription />
-        </Menu>
       </FlexContainer>
     </Container>
   );
