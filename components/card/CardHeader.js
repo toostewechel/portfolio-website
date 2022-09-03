@@ -36,12 +36,11 @@ const Line = styled("div", {
 const PositionBox = styled("div", {
   display: "flex",
   justifyContent: "center",
-  marginTop: "-44px",
+  marginTop: "-29px",
 });
 
 const Attachment = styled("div", {
   padding: "2px",
-  width: "12px",
   height: "40px",
   backgroundColor: "$crimson5",
   display: "flex",
