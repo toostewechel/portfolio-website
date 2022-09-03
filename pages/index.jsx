@@ -2,9 +2,9 @@ import { styled } from "../stitches.config.js";
 import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
 import Banner from "../components/about/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
-import Landing from "../components/about/landing/Landing.js";
 import Timeline from "../components/timeline/Timeline.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
+import Header from "../components/layouts/blocks/Header.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -45,7 +45,7 @@ const PageLayout = styled("div", {
 function HomePage() {
   return (
     <div>
-      <Landing />
+      <Header />
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock

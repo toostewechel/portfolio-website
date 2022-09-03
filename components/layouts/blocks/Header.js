@@ -1,6 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 import Toolbar from "../../toolbar/Toolbar.js";
 import React, { useState } from "react";
+import Avatar from "../../avatar/Avatar.js";
 
 const Container = styled("div", {
   display: "flex",
@@ -80,13 +81,12 @@ function Header() {
   return (
     <Container>
       <Box>
-        <Title>
-          Snapshots / <StyledSpan> Home </StyledSpan>{" "}
-        </Title>
+        <img src="/logo/logo.png" />
       </Box>
       <ToolbarContainer>
         <Toolbar />
       </ToolbarContainer>
+      <Avatar />
     </Container>
   );
 }

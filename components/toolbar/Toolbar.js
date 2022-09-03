@@ -15,8 +15,8 @@ const ToolbarContainer = styled("div", {
   padding: "$spacing-03",
   gap: "$spacing-07",
   background:
-    "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
-  boxShadow: "$toolbar",
+    "linear-gradient(0deg, #32275F 0.34%, rgba(52, 41, 97, 0.85) 75.27%)",
+  boxShadow: "$smooth",
 
   "@bp1": {
     display: "flex",
@@ -49,12 +49,11 @@ const ShortcutContainer = styled("div", {
 
 const ShortcutLabel = styled("p", {
   fontFamily: "$default",
-  fontWeight: "$extra-bold",
+  fontWeight: "$semi-bold",
   lineHeight: "$compact",
-  letterSpacing: "$tracking-tight",
   color: "$mauveA12",
-  fontSize: "$xl",
-  p: "$spacing-01 0px",
+  fontSize: "$lg",
+  transform: "translateY(2px)",
 });
 
 const Icon = styled("div", {
@@ -62,7 +61,7 @@ const Icon = styled("div", {
   size: "$5",
 
   "@bp1": {
-    size: "$6",
+    size: "$5",
   },
 });
 

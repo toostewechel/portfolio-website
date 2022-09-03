@@ -15,7 +15,7 @@ const AvatarContainer = styled("div", {
 });
 
 const StyledImage = styled("img", {
-  size: "$8",
+  size: "$7",
 });
 
 const FlexWrapper = styled("div", {
