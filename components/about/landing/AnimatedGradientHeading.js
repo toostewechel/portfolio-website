@@ -70,16 +70,16 @@ function AnimatedGradientHeading() {
   return (
     <ProcessStepContainer>
       <ProcessStepTitleContainer>
-        <ProcessStepTitle>Plan</ProcessStepTitle>
-        <ProcessStepTitleOverlay gradient={1}>Plan</ProcessStepTitleOverlay>
+        <ProcessStepTitle>Plan.</ProcessStepTitle>
+        <ProcessStepTitleOverlay gradient={1}>Plan.</ProcessStepTitleOverlay>
       </ProcessStepTitleContainer>
       <ProcessStepTitleContainer>
-        <ProcessStepTitle>Design</ProcessStepTitle>
-        <ProcessStepTitleOverlay gradient={2}>Design</ProcessStepTitleOverlay>
+        <ProcessStepTitle>Design.</ProcessStepTitle>
+        <ProcessStepTitleOverlay gradient={2}>Design.</ProcessStepTitleOverlay>
       </ProcessStepTitleContainer>
       <ProcessStepTitleContainer>
-        <ProcessStepTitle>Develop</ProcessStepTitle>
-        <ProcessStepTitleOverlay gradient={3}>Develop</ProcessStepTitleOverlay>
+        <ProcessStepTitle>Develop.</ProcessStepTitle>
+        <ProcessStepTitleOverlay gradient={3}>Develop.</ProcessStepTitleOverlay>
       </ProcessStepTitleContainer>
     </ProcessStepContainer>
   );

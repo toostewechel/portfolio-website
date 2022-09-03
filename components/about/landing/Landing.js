@@ -10,10 +10,11 @@ const LandingWrapper = styled("div", {
 });
 
 const LandingItems = styled("div", {
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: 0,
+  padding: "0 $spacing-04",
   gap: "$spacing-08",
 
   "@bp2": {
@@ -73,16 +74,27 @@ const ContentContainer = styled("div", {
   maxWidth: "532px",
 });
 
+const BackgroundPattern = styled("div", {
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backgroundImage: "url(/patterns/circular-background-pattern.svg)",
+  backgroundRepeat: "repeat-x",
+  left: 0,
+  top: 96,
+})
+
 function Landing() {
   return (
     <Section id="#home">
       <LandingWrapper>
+        <BackgroundPattern />
         <LandingItems>
           <LandingItem>
             <ContentContainer>
               <AnimatedGradientHeading />
               <Description>
-                I design and build digital products by <em>un•tang•ling</em>{" "}
+                I create digital products by <em>un•tang•ling</em>{" "}
                 complexity in a structured, creative and visual way. I am
                 passionate about building valuable products that have a real
                 impact.
