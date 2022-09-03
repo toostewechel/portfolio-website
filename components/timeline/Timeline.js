@@ -64,6 +64,7 @@ const ControlsContainer = styled("div", {
 const Controls = styled("div", {
   display: "flex",
   flexDirection: "row",
+  flexShrink: 0,
 });
 
 const Line = styled("div", {
