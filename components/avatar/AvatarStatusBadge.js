@@ -15,15 +15,15 @@ const StyledAvatar = styled("img", {
 
   variants: {
     size: {
-      4: { size: "$4"},
-      5: { size: "$5"},
-      6: { size: "$6"},
-      7: {size: "$7"},
-      8: {size: "$8"},
-      9: {size: "$9"},
-      10: {size: "$10"},
-    }
-  }
+      4: { size: "$4" },
+      5: { size: "$5" },
+      6: { size: "$6" },
+      7: { size: "$7" },
+      8: { size: "$8" },
+      9: { size: "$9" },
+      10: { size: "$10" },
+    },
+  },
 });
 
 const StatusBadge = styled("div", {
@@ -43,18 +43,18 @@ const StatusBadge = styled("div", {
       },
       open: {
         background: "$green8",
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
 
-function AvatarStatusBadge(props){
-  return(
+function AvatarStatusBadge(props) {
+  return (
     <AvatarContainer>
       <StyledAvatar size={props.size} src={props.src} />
-      {props.statusBadge && (<StatusBadge status={props.status} />)}
+      {props.statusBadge && <StatusBadge status={props.status} />}
     </AvatarContainer>
-  )
+  );
 }
 
 export default AvatarStatusBadge;

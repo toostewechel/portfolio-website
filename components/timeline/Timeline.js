@@ -32,7 +32,6 @@ const TimelineItem = styled("li", {
   scrollSnapAlign: "start",
   mr: "$spacing-04",
   pb: "$spacing-05",
-  
 
   "&:last-child": {
     mr: 0,

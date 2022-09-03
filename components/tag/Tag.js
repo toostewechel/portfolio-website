@@ -24,20 +24,20 @@ const TagContainer = styled("div", {
       },
     },
   },
-})
+});
 
 const TagLabel = styled("p", {
   fontFamily: "$default",
   fontWeight: "$semi-bold",
   letterSpacing: "$tracking-tight",
-})
+});
 
-function Tag(props){
-  return(
+function Tag(props) {
+  return (
     <TagContainer color={props.color}>
       <TagLabel>{props.label}</TagLabel>
     </TagContainer>
-  )
+  );
 }
 
 export default Tag;

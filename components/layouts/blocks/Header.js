@@ -12,7 +12,7 @@ const HeaderContainer = styled("div", {
 
   "@bp1": {
     padding: "$spacing-05",
-  }
+  },
 });
 
 const Box = styled("div", {
@@ -21,16 +21,15 @@ const Box = styled("div", {
   justifyContent: "center",
   width: "196px",
 
-  "@bp1" : {
+  "@bp1": {
     width: "232px",
-  }
+  },
 });
 
 const StyledLogo = styled("img", {
   width: "100%",
   height: "auto",
-})
-
+});
 
 function Header() {
   return (

@@ -3,27 +3,26 @@ import { styled, keyframes } from "../../../stitches.config.js";
 const AnimatedGradientTitle1 = keyframes({
   "0%, 16.667%, 100%": { opacity: 1 },
   "33.333%, 83.333%": { opacity: 0 },
-})
+});
 
 const AnimatedGradientTitle2 = keyframes({
   "0%, 16.667%, 66.667%, 100%": { opacity: 0 },
   "33.333%, 50%": { opacity: 1 },
-})
+});
 
 const AnimatedGradientTitle3 = keyframes({
   "0%, 50%, 100%": { opacity: 0 },
   "66.667%, 83.333%": { opacity: 1 },
-})
+});
 
 const ProcessStepContainer = styled("div", {
   position: "relative",
   mb: "$spacing-06",
-  
-})
+});
 
 const ProcessStepTitleContainer = styled("div", {
   position: "relative",
-})
+});
 
 const ProcessStepTitle = styled("h1", {
   fontSize: "$5xl",
@@ -31,8 +30,7 @@ const ProcessStepTitle = styled("h1", {
   fontFamily: "$header",
   lineHeight: "$none",
   letterSpacing: "$tracking-tighter",
-})
-
+});
 
 const ProcessStepTitleOverlay = styled("div", {
   fontSize: "$5xl",
@@ -64,12 +62,12 @@ const ProcessStepTitleOverlay = styled("div", {
         backgroundImage: "linear-gradient(90deg, $orange10, $crimson10)",
         animation: `${AnimatedGradientTitle3} 6s infinite ease-in-out`,
       },
-    }
-  }
-})
+    },
+  },
+});
 
-function AnimatedGradientHeading(){
-  return(
+function AnimatedGradientHeading() {
+  return (
     <ProcessStepContainer>
       <ProcessStepTitleContainer>
         <ProcessStepTitle>Plan</ProcessStepTitle>
@@ -84,7 +82,7 @@ function AnimatedGradientHeading(){
         <ProcessStepTitleOverlay gradient={3}>Develop</ProcessStepTitleOverlay>
       </ProcessStepTitleContainer>
     </ProcessStepContainer>
-  )
+  );
 }
 
 export default AnimatedGradientHeading;

@@ -18,11 +18,11 @@ const LandingItems = styled("div", {
 
   "@bp2": {
     flexDirection: "row",
-  }
-})
+  },
+});
 
 const LandingItem = styled("div", {
-  display: "flex", 
+  display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
@@ -30,10 +30,10 @@ const LandingItem = styled("div", {
   height: "auto",
   mr: 0,
 
-  "@bp2" : {
-    flexBasis: "calc(50% - 16px)"
-  }
-})
+  "@bp2": {
+    flexBasis: "calc(50% - 16px)",
+  },
+});
 
 const Heading = styled("h1", {
   fontSize: "$3xl",
@@ -67,11 +67,11 @@ const Description = styled("p", {
 const StyledImage = styled("img", {
   width: "100%",
   height: "auto",
-})
+});
 
 const ContentContainer = styled("div", {
   maxWidth: "532px",
-})
+});
 
 function Landing() {
   return (
@@ -81,7 +81,12 @@ function Landing() {
           <LandingItem>
             <ContentContainer>
               <AnimatedGradientHeading />
-              <Description>I design and build digital products by <em>un•tang•ling</em> complexity in a structured, creative and visual way. I am passionate about building valuable products that have a real impact.</Description>
+              <Description>
+                I design and build digital products by <em>un•tang•ling</em>{" "}
+                complexity in a structured, creative and visual way. I am
+                passionate about building valuable products that have a real
+                impact.
+              </Description>
             </ContentContainer>
           </LandingItem>
           <LandingItem>

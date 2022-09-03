@@ -63,7 +63,7 @@ const CardTitle = styled("h3", {
 
 const DescriptionContainer = styled("div", {
   padding: "$spacing-05",
-})
+});
 
 const CardDescription = styled("p", {
   fontFamily: "$default",
@@ -82,15 +82,15 @@ const MetaInformationContainer = styled("div", {
   padding: "$spacing-02 $spacing-05 $spacing-05 $spacing-05",
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center"
-})
+  alignItems: "center",
+});
 
 const MetaInformation = styled("p", {
   fontFamily: "$default",
   fontWeight: "$semi-bold",
   letterSpacing: "$tracking-tight",
   color: "$gray11",
-})
+});
 
 function TimelineCard(props) {
   return (
@@ -103,14 +103,14 @@ function TimelineCard(props) {
         </CardTitle>
       </TitleContainer>
       <DescriptionContainer>
-      <CardDescription>
-        I have empathy for those around me and respect their point of view. I
-        have empathy for those around me and respect their point of view
-      </CardDescription>
+        <CardDescription>
+          I have empathy for those around me and respect their point of view. I
+          have empathy for those around me and respect their point of view
+        </CardDescription>
       </DescriptionContainer>
       <MetaInformationContainer>
-      <MetaInformation>Article • 20 min read </MetaInformation>
-      <Tag color="blue" label="Tech" />
+        <MetaInformation>Article • 20 min read </MetaInformation>
+        <Tag color="blue" label="Tech" />
       </MetaInformationContainer>
     </Container>
   );
