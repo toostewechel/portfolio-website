@@ -27,7 +27,7 @@ const Card = styled("div", {
   textAlign: "center",
   p: "$spacing-06",
   background:
-    "linear-gradient(180deg, rgba(122, 89, 232, 0.75) 0%, #3913B8 100%)",
+    "linear-gradient(0deg, #32275F 0.34%, rgba(52, 41, 97, 0.85) 75.27%)",
   borderRadius: "8px",
   height: "auto",
   width: "100%",
@@ -70,14 +70,14 @@ const StatusBadge = styled("div", {
   alignItems: "center",
   p: "$spacing-03",
   borderRadius: "4px",
-  background: "$violetA8",
+  background: "rgba(0, 0, 0, 0.2)",
   border: "solid 1px $violetA7",
   mb: "$spacing-08",
 });
 
 const Badge = styled("div", {
-  width: "13px",
-  height: "13px",
+  width: "12px",
+  height: "12px",
   borderRadius: "999px",
   backgroundColor: "$green8",
   border: "solid 2px $violet4",
@@ -85,9 +85,9 @@ const Badge = styled("div", {
 });
 
 const BadgeLabel = styled("p", {
-  fontSize: "$base",
+  fontSize: "$sm",
   fontWeight: "$semi-bold",
-  fontFamily: "$header",
+  fontFamily: "$default",
   color: "$violet3",
   mt: "$spacing-01",
   mr: "$spacing-02",

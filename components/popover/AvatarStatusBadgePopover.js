@@ -25,6 +25,16 @@ const StyledPopoverClose = {
   right: 16,
 }
 
+const StyledArrowDown = styled('div', {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "white",
+  "&:hover": { backgroundColor: "$violet3" },
+  padding: "4px",
+  borderRadius: "4px",
+})
+
 
 function AvatarStatusBadgePopover() {
   return (
@@ -32,7 +42,9 @@ function AvatarStatusBadgePopover() {
       <PopoverTrigger asChild>
         <IconButtonContainer aria-label="Menu">
           <AvatarStatusBadge size={7} status="open" src="/images/placeholder-avatar.png" statusBadge />
+          <StyledArrowDown>
           <ArrowDownSLineIcon />
+            </StyledArrowDown>
         </IconButtonContainer>
       </PopoverTrigger>
       <PopoverContent sideOffset={8}>
