@@ -1,11 +1,12 @@
 import { styled } from "../stitches.config.js";
 import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
-import Banner from "../components/about/pageblocks/Banner.js";
+import Banner from "../components/home/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import Timeline from "../components/timeline/Timeline.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
-import Landing from "../components/about/landing/Landing.js";
+import Landing from "../components/home/landing/Landing.js";
+import CoreValues from "../components/home/pageblocks/CoreValues.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -52,9 +53,18 @@ function HomePage() {
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock
+          heading="Core Values"
+          alignment="center"
+          description="These values guide me when making decisions, building relationships and solving problems."
+        />
+      </PageLayout>
+      <CoreValues />
+      <Spacer level={12} />
+      <PageLayout>
+        <ContentBlock
           heading="Stories & Ideas"
           alignment="center"
-          description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management. "
+          description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management."
         />
         <Timeline />
       </PageLayout>

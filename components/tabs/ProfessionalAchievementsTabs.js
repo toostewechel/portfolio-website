@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import ListItem from "../../components/ListItem.js";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
-import Card from "../../components/about/pageblocks/Card.js";
+import Card from "../../components/home/pageblocks/Card.js";
 
 const Title = styled("h3", {
   fontSize: "$lg",

@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config.js";
 
 const StyledSection = styled("section", {
-  height: "auto",
+  height: "100%",
 });
 
 function Section({ children, ...props }) {

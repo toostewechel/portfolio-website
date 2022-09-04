@@ -59,6 +59,7 @@ const Description = styled("p", {
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
+  mb: "$spacing-07",
 
   "@bp1": {
     fontSize: "$xl",
@@ -82,7 +83,17 @@ const BackgroundPattern = styled("div", {
   backgroundRepeat: "repeat-x",
   left: 0,
   top: 96,
-})
+});
+
+const Button = styled("button", {
+  padding: "$spacing-04 $spacing-05",
+  backgroundColor: "$violet11",
+  color: "$violet2",
+  fontFamily: "$default",
+  fontSize: "$lg",
+  fontWeight: "semi-bold",
+  borderRadius: "8px",
+});
 
 function Landing() {
   return (
@@ -94,11 +105,11 @@ function Landing() {
             <ContentContainer>
               <AnimatedGradientHeading />
               <Description>
-                I create digital products by <em>un•tang•ling</em>{" "}
-                complexity in a structured, creative and visual way. I am
-                passionate about building valuable products that have a real
-                impact.
+                I create digital products by <em>un•tang•ling</em> complexity in
+                a structured, creative and visual way. I am passionate about
+                building valuable products that have a real impact.
               </Description>
+              <Button>Design Vision</Button>
             </ContentContainer>
           </LandingItem>
           <LandingItem>

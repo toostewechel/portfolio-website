@@ -3,17 +3,17 @@ import React, { useRef, useEffect, useState } from "react";
 import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
 import CardHeader from "../card/CardHeader.js";
-import TimelineCard from "../card/TimelineCard.js";
+import BlogTimelineCard from "../card/BlogTimelineCard.js";
 
 const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
   margin: "0 auto",
-  padding: "$spacing-05",
+  padding: "$spacing-05 $none",
 });
 
 const TimelineItems = styled("ul", {
   display: "flex",
-  padding: "0",
+  padding: "$none",
   listStyle: "none",
   overflowX: "scroll",
   scrollSnapType: "x",
@@ -112,7 +112,7 @@ function Timeline(props) {
             alignment="left"
             year="2022"
           />
-          <TimelineCard imgage="/images/placeholder-timeline-item.png" />
+          <BlogTimelineCard imgage="/images/placeholder-timeline-item.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader
@@ -121,7 +121,7 @@ function Timeline(props) {
             alignment="right"
             year="2022"
           />
-          <TimelineCard imgage="/images/placeholder-timeline-item2.png" />
+          <BlogTimelineCard imgage="/images/placeholder-timeline-item2.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader
@@ -130,11 +130,11 @@ function Timeline(props) {
             alignment="left"
             year="2021"
           />
-          <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
+          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="blue" hasYear={false} alignment="left" />
-          <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
+          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader
@@ -143,7 +143,7 @@ function Timeline(props) {
             alignment="left"
             year="2021"
           />
-          <TimelineCard imgage="/images/placeholder-timeline-item3.png" />
+          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
         </TimelineItem>
       </TimelineItems>
       <ControlsContainer>

@@ -8,7 +8,7 @@ import {
 import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
-import ProfileCard from "../about/profilecard/ProfileCard.js";
+import ProfileCard from "../home/profilecard/ProfileCard.js";
 
 const IconButtonContainer = styled("button", {
   display: "flex",

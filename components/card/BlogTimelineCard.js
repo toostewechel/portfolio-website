@@ -92,7 +92,7 @@ const MetaInformation = styled("p", {
   color: "$gray11",
 });
 
-function TimelineCard(props) {
+function BlogTimelineCard(props) {
   return (
     <Container href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web">
       <Icon />
@@ -116,4 +116,4 @@ function TimelineCard(props) {
   );
 }
 
-export default TimelineCard;
+export default BlogTimelineCard;
