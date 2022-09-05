@@ -1,10 +1,7 @@
 import { styled } from "../../stitches.config.js";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
-import CardHeader from "../card/CardHeader.js";
-import BlogTimelineCard from "../card/BlogTimelineCard.js";
-import ProjectTimelineCard from "../card/ProjectTimelineCard.js";
 
 const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
@@ -24,7 +21,7 @@ const TimelineItems = styled("ul", {
   },
 });
 
-const TimelineItem = styled("li", {
+const StyledTimelineItem = styled("li", {
   display: "flex",
   flexDirection: "column",
   flex: "0 0 100%",
@@ -97,7 +94,9 @@ function getCardWidth() {
   return document.getElementById("timeline-item").clientWidth;
 }
 
-function Timeline(props) {
+
+export const TimelineItem = StyledTimelineItem;
+export const Timeline = ({children}) => {
   const ref = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
@@ -106,46 +105,7 @@ function Timeline(props) {
   return (
     <TimelineWrapper>
       <TimelineItems ref={ref}>
-        <TimelineItem id="timeline-item">
-          <CardHeader
-            color="crimson"
-            hasYear={true}
-            alignment="left"
-            year="2022"
-          />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader
-            color="plum"
-            hasYear={true}
-            alignment="right"
-            year="2022"
-          />
-          <BlogTimelineCard imgage="/images/placeholder-timeline-item2.png" />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader
-            color="blue"
-            hasYear={true}
-            alignment="left"
-            year="2021"
-          />
-          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader color="blue" hasYear={false} alignment="left" />
-          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader
-            color="blue"
-            hasYear={true}
-            alignment="left"
-            year="2021"
-          />
-          <BlogTimelineCard imgage="/images/placeholder-timeline-item3.png" />
-        </TimelineItem>
+        {children}
       </TimelineItems>
       <ControlsContainer>
         <Line />
@@ -161,5 +121,3 @@ function Timeline(props) {
     </TimelineWrapper>
   );
 }
-
-export default Timeline;
