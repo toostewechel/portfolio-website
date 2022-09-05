@@ -2,11 +2,14 @@ import { styled } from "../stitches.config.js";
 import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
 import Banner from "../components/home/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
-import Timeline from "../components/timeline/Timeline.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Landing from "../components/home/landing/Landing.js";
 import CoreValues from "../components/home/pageblocks/CoreValues.js";
+import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
+import CardHeader from "../components/card/CardHeader.js";
+import BlogTimelineCard from "../components/card/BlogTimelineCard.js";
+import ProjectTimelineCard from "../components/card/ProjectTimelineCard.js";
 
 const Title = styled("h2", {
   fontSize: "$3xl",
@@ -67,7 +70,48 @@ function HomePage() {
           alignment="left"
           description="A curated overview of my professional and personal work throughout the years as product designer"
         />
-        <Timeline />
+        <Timeline>
+          <TimelineItem id="timeline-item">
+            <CardHeader
+              color="crimson"
+              hasYear={true}
+              alignment="left"
+              year="2022"
+            />
+            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="plum"
+              hasYear={true}
+              alignment="right"
+              year="2022"
+            />
+             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2021"
+            />
+             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader color="blue" hasYear={false} alignment="left" />
+             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2021"
+            />
+           <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          </TimelineItem>
+        </Timeline>
       </PageLayout>
       <Spacer level={12} />
       <Spacer level={12} />
