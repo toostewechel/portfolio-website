@@ -24,11 +24,11 @@ const Heading = styled("h2", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
-  mb: "$spacing-03",
+  mb: "$spacing-02",
 
   "@bp1": {
     fontSize: "$4xl",
-    mb: "$spacing-03",
+    mb: "$spacing-02",
   },
 });
 

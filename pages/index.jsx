@@ -58,6 +58,7 @@ function HomePage() {
           description="These values guide me when making decisions, building relationships and solving problems."
         />
       </PageLayout>
+      <Spacer level={6} />
       <CoreValues />
       <Spacer level={12} />
       <PageLayout>

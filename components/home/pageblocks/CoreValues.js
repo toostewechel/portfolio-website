@@ -10,12 +10,30 @@ const Gradient = {
 }
 
 const CoreValuesWrapper = styled("div", {
-  maxWidth: "1234px",
+  position: "relative",
+  display: "flex",
+  justifyContent: "center",
+  maxWidth: "1600px",
   margin: "0 auto",
   padding: "$spacing-05 $none",
 });
 
+const CoreValuesBackground = styled("div", {
+  display: "flex",
+  position: "absolute",
+  background: "url(/patterns/core-values-background-pattern.svg)",
+  width: "1600px",
+  height: "164px",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  zIndex: -1,
+  borderRadius: "16px",
+  boxShadow: "$toolbar",
+  alignSelf: "center",
+})
+
 const CoreValueItems = styled("ul", {
+  maxWidth: "1234px",
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -48,6 +66,8 @@ const CoreValueCard = styled("div", {
   flexDirection: "column",
   height: "100%",
   padding: "$spacing-06",
+  backgroundColor: "white",
+  borderRadius: "16px",
 
   "&::before": {
     content: "",
@@ -101,7 +121,7 @@ const CoreValueCard = styled("div", {
 });
 
 const ValueTitle = styled("h3", {
-  fontSize: "$3xl",
+  fontSize: "$xl",
   fontWeight: "$black",
   fontFamily: "$header",
   lineHeight: "$none",
@@ -110,7 +130,7 @@ const ValueTitle = styled("h3", {
   mb: "$spacing-02",
 
   "@bp1": {
-    fontSize: "$2xl",
+    fontSize: "$xl",
     mb: "$spacing-03",
   },
 });
@@ -122,16 +142,16 @@ const ValueDescription = styled("p", {
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
-  maxWidth: "720px",
 
   "@bp1": {
-    fontSize: "$lg",
+    fontSize: "$base",
   },
 });
 
 function CoreValues() {
   return (
     <CoreValuesWrapper>
+      <CoreValuesBackground />
       <CoreValueItems>
         <CoreValueItem>
           <CoreValueCard borderColor="blue">
@@ -181,7 +201,6 @@ function CoreValues() {
             </ValueDescription>
           </CoreValueCard>
         </CoreValueItem>
-
       </CoreValueItems>
     </CoreValuesWrapper>
   );
