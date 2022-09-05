@@ -22,7 +22,7 @@ const CoreValuesBackground = styled("div", {
   display: "flex",
   position: "absolute",
   background: "url(/patterns/core-values-background-pattern.svg)",
-  width: "1600px",
+  maxWidth: "1600px",
   height: "164px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
