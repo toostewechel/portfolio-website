@@ -4,6 +4,7 @@ import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
 import CardHeader from "../card/CardHeader.js";
 import BlogTimelineCard from "../card/BlogTimelineCard.js";
+import ProjectTimelineCard from "../card/ProjectTimelineCard.js";
 
 const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
@@ -112,7 +113,7 @@ function Timeline(props) {
             alignment="left"
             year="2022"
           />
-          <BlogTimelineCard imgage="/images/placeholder-timeline-item.png" />
+          <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
         </TimelineItem>
         <TimelineItem>
           <CardHeader

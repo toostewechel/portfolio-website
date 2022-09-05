@@ -63,9 +63,9 @@ function HomePage() {
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock
-          heading="Stories & Ideas"
-          alignment="center"
-          description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management."
+          heading="Snapshots"
+          alignment="left"
+          description="A curated overview of my professional and personal work throughout the years as product designer"
         />
         <Timeline />
       </PageLayout>
