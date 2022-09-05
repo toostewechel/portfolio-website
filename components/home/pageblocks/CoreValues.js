@@ -19,10 +19,10 @@ const CoreValuesWrapper = styled("div", {
 });
 
 const CoreValuesBackground = styled("div", {
-  display: "flex",
+  display: "none",
   position: "absolute",
   background: "url(/patterns/core-values-background-pattern.svg)",
-  maxWidth: "1600px",
+  width: "100%",
   height: "164px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
@@ -30,6 +30,10 @@ const CoreValuesBackground = styled("div", {
   borderRadius: "16px",
   boxShadow: "$toolbar",
   alignSelf: "center",
+
+  "@bp3": {
+    display: "flex",
+  }
 })
 
 const CoreValueItems = styled("ul", {
