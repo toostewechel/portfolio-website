@@ -85,7 +85,7 @@ const IconButton = styled("button", {
 });
 
 function SkillsCore(props) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
@@ -103,10 +103,10 @@ function SkillsCore(props) {
       </HeaderPanel>
       <Skill backgroundColor="blue" label="Problem Solving" />
       <CollapsibleContent>
-        <Skill backgroundColor="blue" label="Design Discovery Process" />
         <Skill backgroundColor="blue" label="Analytical" />
-        <Skill backgroundColor="blue" label="Agile Development (scrum)" />
-        <Skill backgroundColor="blue" label="Software Delivery" />
+        <Skill backgroundColor="blue" label="Adaptability" />
+        <Skill backgroundColor="blue" label="Design & Discovery Process" />
+        <Skill backgroundColor="blue" label="Agile Software Development" />
       </CollapsibleContent>
     </Collapsible>
   );

@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 
 const Container = styled("div", {
-  m: "$none $spacing-03",
+  m: 0,
   display: "flex",
   width: "100%",
   height: "40px",
@@ -9,6 +9,10 @@ const Container = styled("div", {
   alignItems: "center",
   background: "white",
   gap: "12px",
+
+  "@bp2" : {
+    m: "$none $spacing-03",
+  },
 
   variants: {
     alignment: {

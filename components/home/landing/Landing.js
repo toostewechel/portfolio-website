@@ -7,6 +7,7 @@ import AnimatedGradientHeading from "./AnimatedGradientHeading.js";
 const LandingWrapper = styled("div", {
   maxWidth: "1234px",
   margin: "0 auto",
+  padding: "0 $spacing-03",
 });
 
 const LandingItems = styled("div", {
@@ -14,7 +15,7 @@ const LandingItems = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: "0 $spacing-04",
+  padding: "0",
   gap: "$spacing-08",
 
   "@bp2": {
@@ -24,7 +25,6 @@ const LandingItems = styled("div", {
 
 const LandingItem = styled("div", {
   display: "flex",
-  alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
   flex: "0 0 100%",

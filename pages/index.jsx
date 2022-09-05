@@ -6,6 +6,7 @@ import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Landing from "../components/home/landing/Landing.js";
 import CoreValues from "../components/home/pageblocks/CoreValues.js";
+import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
 import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
 import CardHeader from "../components/card/CardHeader.js";
 import BlogTimelineCard from "../components/card/BlogTimelineCard.js";
@@ -88,7 +89,7 @@ function HomePage() {
               alignment="right"
               year="2022"
             />
-             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+             <ProjectTimelineCard background="/images/placeholder-timeline-item2.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader
@@ -97,7 +98,7 @@ function HomePage() {
               alignment="left"
               year="2021"
             />
-             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+             <ProjectTimelineCard background="/images/placeholder-timeline-item3.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader color="blue" hasYear={false} alignment="left" />
@@ -115,11 +116,8 @@ function HomePage() {
         </Timeline>
       </PageLayout>
       <Spacer level={12} />
-      <Spacer level={12} />
-      <Banner />
-      <Spacer level={7} />
       <PageLayout>
-        <ProfessionalAchievementsTab />
+        <SkillsetBlock />
       </PageLayout>
       <Spacer level={12} />
       <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">

@@ -2,7 +2,7 @@ import { styled } from "../../stitches.config.js";
 import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 
 const Container = styled("a", {
-  m: "$none $spacing-03 $spacing-03 $spacing-03",
+  m: 0,
   borderRadius: "16px",
   position: "relative",
   border: "1px solid $gray6",
@@ -10,6 +10,10 @@ const Container = styled("a", {
   transition: "all, 300ms ease-in",
   height: "380px",
   width: "100%",
+
+  "@bp2": {
+     m: "$none $spacing-03 $spacing-03 $spacing-03",
+  },
 
   "&:hover": {
     transform: "translateY(-2px)",

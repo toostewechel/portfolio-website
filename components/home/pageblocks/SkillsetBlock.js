@@ -66,11 +66,10 @@ function SkillsetBlock() {
     <GridContainer id="skillset">
       <Content>
         <ContentBlock
-          heading="My Skillset"
+          heading="Skillset"
           description="Modern work demands knowledge transfer: the ability to learn and apply
           knowledge to complex problems, new situations and domains. That’s why
-          I focus on building knowledge that spans a significant number of areas
-          which enables me to be a better designer, colleague and teamplayer."
+          I focus on building knowledge that spans a wide number of areas."
         />
       </Content>
       <CoreSkillsContainer>
@@ -82,7 +81,7 @@ function SkillsetBlock() {
       <Image>
         <img
           style={{ maxWidth: "100%", height: "auto" }}
-          src="/images/skillset-web.png"
+          src="/images/skillset-placeholder.png"
         />
       </Image>
     </GridContainer>

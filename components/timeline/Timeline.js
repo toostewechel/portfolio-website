@@ -17,6 +17,7 @@ const TimelineItems = styled("ul", {
   overflowX: "scroll",
   scrollSnapType: "x",
   scrollBehavior: "smooth",
+  "-webkit-overflow-scrolling": "touch",
   "&::-webkit-scrollbar": {
     display: "none",
   },
