@@ -2,8 +2,8 @@ import { styled } from "../../stitches.config.js";
 import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 
 const Container = styled("a", {
+  m: "$none $spacing-03 $spacing-03 $spacing-03",
   borderRadius: "16px",
-  overflow: "hidden",
   position: "relative",
   border: "1px solid $gray6",
   willChange: "transform",
@@ -15,7 +15,7 @@ const Container = styled("a", {
     transform: "translateY(-2px)",
     transition: "all, 300ms ease-out",
     border: "1px solid $violet4",
-    boxShadow: "$smooth",
+    boxShadow: "$toolbar",
   },
 });
 

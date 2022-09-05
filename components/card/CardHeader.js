@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 
 const Container = styled("div", {
+  m: "$none $spacing-03",
   display: "flex",
   width: "100%",
   height: "40px",

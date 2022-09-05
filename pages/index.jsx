@@ -70,6 +70,7 @@ function HomePage() {
           alignment="left"
           description="A curated overview of my professional and personal work throughout the years as product designer"
         />
+        <Spacer level={6} />
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader

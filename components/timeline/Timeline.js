@@ -7,6 +7,7 @@ const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
   margin: "0 auto",
   padding: "$spacing-05 $none",
+  overflow: "visible",
 });
 
 const TimelineItems = styled("ul", {
@@ -29,17 +30,17 @@ const StyledTimelineItem = styled("li", {
   borderRadius: "16px",
   scrollSnapAlign: "start",
   mr: "$spacing-04",
-  pb: "$spacing-05",
+  pb: "$spacing-08",
 
   "&:last-child": {
     mr: 0,
   },
 
   "@bp2": {
-    flexBasis: "calc(50% - 6px)",
+    flexBasis: "calc(50% - 12px)",
   },
   "@bp4": {
-    flexBasis: "calc(calc(100% / 3) - 16px)",
+    flexBasis: "calc(calc(100% / 3) - 24px)",
     mr: "$spacing-06",
   },
 });
@@ -56,6 +57,7 @@ const ControlsContainer = styled("div", {
   alignItems: "center",
   width: "100%",
   gap: "$spacing-04",
+  background: "transparent",
 });
 
 const Controls = styled("div", {
