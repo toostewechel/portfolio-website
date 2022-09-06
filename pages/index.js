@@ -1,45 +1,13 @@
 import { styled } from "../stitches.config.js";
 import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
-import Banner from "../components/home/pageblocks/Banner.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Landing from "../components/home/landing/Landing.js";
 import CoreValues from "../components/home/pageblocks/CoreValues.js";
-import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
 import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
 import CardHeader from "../components/card/CardHeader.js";
-import BlogTimelineCard from "../components/card/BlogTimelineCard.js";
 import ProjectTimelineCard from "../components/card/ProjectTimelineCard.js";
-
-const Title = styled("h2", {
-  fontSize: "$3xl",
-  fontWeight: "$extra-bold",
-  fontFamily: "$header",
-  letterSpacing: "$tracking-tighter",
-  color: "$mauve12",
-  mb: "$spacing-03",
-
-  "@bp1": {
-    fontSize: "$4xl",
-    mb: "$spacing-02",
-  },
-});
-
-const Paragraph = styled("p", {
-  fontSize: "$base",
-  fontWeight: "$regular",
-  fontFamily: "$body",
-  lineHeight: "$base",
-  letterSpacing: "$tracking-normal",
-  color: "$gray12",
-  maxWidth: "640px",
-  mb: "$spacing-06",
-
-  "@bp1": {
-    fontSize: "$xl",
-  },
-});
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
@@ -48,7 +16,7 @@ const PageLayout = styled("div", {
   mr: "auto",
 });
 
-function HomePage() {
+function Index() {
   return (
     <div>
       <Header />
@@ -89,7 +57,7 @@ function HomePage() {
               alignment="right"
               year="2022"
             />
-             <ProjectTimelineCard background="/images/placeholder-timeline-item2.png" />
+            <ProjectTimelineCard background="/images/placeholder-timeline-item2.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader
@@ -98,11 +66,11 @@ function HomePage() {
               alignment="left"
               year="2021"
             />
-             <ProjectTimelineCard background="/images/placeholder-timeline-item3.png" />
+            <ProjectTimelineCard background="/images/placeholder-timeline-item3.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader color="blue" hasYear={false} alignment="left" />
-             <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader
@@ -111,15 +79,24 @@ function HomePage() {
               alignment="left"
               year="2021"
             />
-           <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
           </TimelineItem>
         </Timeline>
       </PageLayout>
       <Spacer level={12} />
       <PageLayout>
-        <SkillsetBlock />
+
       </PageLayout>
       <Spacer level={12} />
+      <PageLayout>
+        <ContentBlock
+          heading="Experience"
+          alignment="left"
+          description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
+        />
+        <Spacer level={6} />
+        <ProfessionalAchievementsTab />
+      </PageLayout>
       <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
         Go to link!!!
       </a>
@@ -127,4 +104,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Index;

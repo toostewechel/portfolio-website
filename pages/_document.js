@@ -54,7 +54,6 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-
         <meta charset="utf-8"></meta>
       </Head>
       <body>

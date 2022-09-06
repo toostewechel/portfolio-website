@@ -97,9 +97,8 @@ function getCardWidth() {
   return document.getElementById("timeline-item").clientWidth;
 }
 
-
 export const TimelineItem = StyledTimelineItem;
-export const Timeline = ({children}) => {
+export const Timeline = ({ children }) => {
   const ref = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
@@ -107,9 +106,7 @@ export const Timeline = ({children}) => {
 
   return (
     <TimelineWrapper>
-      <TimelineItems ref={ref}>
-        {children}
-      </TimelineItems>
+      <TimelineItems ref={ref}>{children}</TimelineItems>
       <ControlsContainer>
         <Line />
         <Controls>
@@ -123,4 +120,4 @@ export const Timeline = ({children}) => {
       </ControlsContainer>
     </TimelineWrapper>
   );
-}
+};

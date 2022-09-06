@@ -10,7 +10,7 @@ const Container = styled("div", {
   background: "white",
   gap: "12px",
 
-  "@bp2" : {
+  "@bp2": {
     m: "$none $spacing-03",
   },
 

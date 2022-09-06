@@ -41,6 +41,7 @@ const TitleContainer = styled("div", {
   borderRadius: "8px",
   background: "rgba(2,0,16, 0.67)",
   padding: "$spacing-05 $spacing-04",
+  letterSpacing: "$tracking-tight",
   boxShadow: "$smooth",
   position: "relative",
   mr: "$spacing-05",

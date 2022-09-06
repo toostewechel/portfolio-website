@@ -7,6 +7,7 @@ const TagContainer = styled("div", {
   backgroundColor: "$gray3",
   color: "$gray11",
   flexShrink: 0,
+  flexGrow: 0,
 
   variants: {
     color: {

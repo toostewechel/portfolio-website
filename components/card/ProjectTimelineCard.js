@@ -12,7 +12,7 @@ const Container = styled("a", {
   width: "100%",
 
   "@bp2": {
-     m: "$none $spacing-03 $spacing-03 $spacing-03",
+    m: "$none $spacing-03 $spacing-03 $spacing-03",
   },
 
   "&:hover": {
@@ -46,13 +46,14 @@ const TitleContainer = styled("div", {
   mr: "$spacing-05",
   ml: "$spacing-05",
   bottom: 16,
-  
 });
 
 const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
+  letterSpacing: "$tracking-tight",
+  fontSize: "$xl",
   color: "$mauve2",
   mb: "$spacing-02",
   display: "-webkit-box",
@@ -82,16 +83,24 @@ const MetaInformation = styled("p", {
 
 function ProjectTimelineCard(props) {
   return (
-    <Container style={{background: `url(${props.background})`, backgroundSize: "cover" }} href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web">
-      <Icon><IconSize>🇳🇱</IconSize></Icon>
+    <Container
+      style={{
+        background: `url(${props.background})`,
+        backgroundSize: "cover",
+      }}
+      href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
+    >
+      <Icon>
+        <IconSize>🇳🇱</IconSize>
+      </Icon>
       <TitleContainer>
         <CardTitle>
           The Rise of the Unstoppable, Decentralized and Semantic Web
         </CardTitle>
         <MetaInformationContainer>
-        <MetaInformation>Article • 20 min read </MetaInformation>
-        <ArrowRightLineIcon />
-      </MetaInformationContainer>
+          <MetaInformation>Article • 20 min read </MetaInformation>
+          <ArrowRightLineIcon />
+        </MetaInformationContainer>
       </TitleContainer>
     </Container>
   );

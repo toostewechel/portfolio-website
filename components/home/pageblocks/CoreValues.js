@@ -2,12 +2,16 @@ import { styled } from "../../../stitches.config.js";
 
 const Gradient = {
   blue: "linear-gradient(0deg, rgba(0, 145, 255, 0.85), rgba(225, 240, 255, 0.25)) border-box",
-  violet: "linear-gradient(0deg, rgba(189, 109, 255, 0.8), rgba(202, 138, 255, 0.25)) border-box",
-  crimson: "linear-gradient(0deg, rgba(224, 49, 119, 0.85), rgba(224, 49, 119, 0.15)) border-box",
+  violet:
+    "linear-gradient(0deg, rgba(189, 109, 255, 0.8), rgba(202, 138, 255, 0.25)) border-box",
+  crimson:
+    "linear-gradient(0deg, rgba(224, 49, 119, 0.85), rgba(224, 49, 119, 0.15)) border-box",
   teal: "linear-gradient(0deg, rgba(5, 162, 194, 0.85), rgba(5, 162, 194, 0.15)) border-box",
-  green: "linear-gradient(0deg, rgba(18, 165, 148, 0.85), rgba(18, 165, 148, 0.15)) border-box",
-  orange: "linear-gradient(0deg, rgba(236, 94, 65, 0.85), rgba(236, 94, 65, 0.15)) border-box",
-}
+  green:
+    "linear-gradient(0deg, rgba(18, 165, 148, 0.85), rgba(18, 165, 148, 0.15)) border-box",
+  orange:
+    "linear-gradient(0deg, rgba(236, 94, 65, 0.85), rgba(236, 94, 65, 0.15)) border-box",
+};
 
 const CoreValuesWrapper = styled("div", {
   position: "relative",
@@ -33,8 +37,8 @@ const CoreValuesBackground = styled("div", {
 
   "@bp3": {
     display: "flex",
-  }
-})
+  },
+});
 
 const CoreValueItems = styled("ul", {
   maxWidth: "1234px",
@@ -83,7 +87,8 @@ const CoreValueCard = styled("div", {
     borderRadius: "16px",
     border: "8px solid transparent",
     background: "linear-gradient(45deg, purple, orange) border-box",
-    "-webkit-mask": "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
+    "-webkit-mask":
+      "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
     "-webkit-mask-composite": "destination-out",
     maskComposite: "exclude",
   },
@@ -93,35 +98,35 @@ const CoreValueCard = styled("div", {
       blue: {
         "&::before": {
           background: `${Gradient.blue}`,
-        }
+        },
       },
       violet: {
         "&::before": {
           background: `${Gradient.violet}`,
-        }
+        },
       },
       crimson: {
         "&::before": {
           background: `${Gradient.crimson}`,
-        }
+        },
       },
       teal: {
         "&::before": {
           background: `${Gradient.teal}`,
-        }
+        },
       },
       green: {
         "&::before": {
           background: `${Gradient.green}`,
-        }
+        },
       },
       orange: {
         "&::before": {
           background: `${Gradient.orange}`,
-        }
+        },
       },
-    }
-  }
+    },
+  },
 });
 
 const ValueTitle = styled("h3", {
@@ -185,7 +190,8 @@ function CoreValues() {
           <CoreValueCard borderColor="teal">
             <ValueTitle>Pro-active</ValueTitle>
             <ValueDescription>
-              I don’t wait around but come up with new initiatives and innovative ideas
+              I don’t wait around but come up with new initiatives and
+              innovative ideas
             </ValueDescription>
           </CoreValueCard>
         </CoreValueItem>
@@ -193,7 +199,8 @@ function CoreValues() {
           <CoreValueCard borderColor="green">
             <ValueTitle>Think win-win</ValueTitle>
             <ValueDescription>
-              I always look for solutions that will benefit the majority involved
+              I always look for solutions that will benefit the majority
+              involved
             </ValueDescription>
           </CoreValueCard>
         </CoreValueItem>
