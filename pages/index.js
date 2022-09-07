@@ -84,9 +84,7 @@ function Index() {
         </Timeline>
       </PageLayout>
       <Spacer level={12} />
-      <PageLayout>
-
-      </PageLayout>
+      <PageLayout></PageLayout>
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock
@@ -98,7 +96,7 @@ function Index() {
         <ProfessionalAchievementsTab />
       </PageLayout>
       <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
-        Go to link!!!
+        Go to link!!!!
       </a>
     </div>
   );

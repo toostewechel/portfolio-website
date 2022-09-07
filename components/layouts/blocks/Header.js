@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config.js";
-import Toolbar from "../../toolbar/Toolbar.js";
 import React, { useState } from "react";
 import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
+import CommandMenu from "../../commandmenu/CommandMenu.js";
 
 const HeaderContainer = styled("div", {
   display: "flex",
