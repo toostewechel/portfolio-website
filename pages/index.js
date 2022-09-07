@@ -98,7 +98,7 @@ function Index() {
         <ProfessionalAchievementsTab />
       </PageLayout>
       <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
-        Go to link!!!
+        Go to link!!!!
       </a>
     </div>
   );
