@@ -190,8 +190,8 @@ function CredentialTimelineCard(props) {
             <Label>{props.location}</Label>
           </FlexWrapper>
         </FlexWrapper>
-        {props.hasLink &&
-          (<Provider>
+        {props.hasLink && (
+          <Provider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <StyledLink href={props.href}>
@@ -202,7 +202,8 @@ function CredentialTimelineCard(props) {
                 {props.tooltipLabel}
               </TooltipContent>
             </Tooltip>
-          </Provider>)}
+          </Provider>
+        )}
       </FooterContainer>
     </Container>
   );

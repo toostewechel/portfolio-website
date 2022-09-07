@@ -23,8 +23,9 @@ function Index() {
       <Spacer level={12} />
       <Landing />
       <Spacer level={12} />
-      <PageLayout>
+      <PageLayout id="core-values">
         <ContentBlock
+          id="core"
           heading="Core Values"
           alignment="center"
           description="These values guide me when making decisions, building relationships and solving problems."
