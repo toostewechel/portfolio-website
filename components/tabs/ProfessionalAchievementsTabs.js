@@ -5,7 +5,6 @@ import Card from "../../components/home/pageblocks/Card.js";
 import CardHeader from "../card/CardHeader.js";
 import CredentialTimelineCard from "../card/CredentialTimelineCard.js";
 
-
 const Title = styled("h3", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",

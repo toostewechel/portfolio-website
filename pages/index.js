@@ -23,7 +23,7 @@ function Index() {
       <Spacer level={12} />
       <Landing />
       <Spacer level={12} />
-      <PageLayout>
+      <PageLayout id="core-values">
         <ContentBlock
           heading="Core Values"
           alignment="center"
@@ -84,9 +84,7 @@ function Index() {
         </Timeline>
       </PageLayout>
       <Spacer level={12} />
-      <PageLayout>
-
-      </PageLayout>
+      <PageLayout></PageLayout>
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock
