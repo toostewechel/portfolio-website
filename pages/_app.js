@@ -23,17 +23,6 @@ import {
   TwitterIcon,
   LinkedinIcon,
 } from "../components/cmdk/Icons.js";
-import {
-  FileText,
-  Home,
-  Box,
-  User,
-  Tool,
-  AtSign,
-  Twitter,
-  GitHub,
-  Linkedin,
-} from "react-feather";
 
 function ScrollToView() {
   return document.getElementById("core").scrollIntoView();
@@ -50,7 +39,6 @@ function MyApp({ Component, pageProps }) {
       keywords: "back home",
       perform: () => router.push("/"),
       icon: <HomeIcon />,
-      section: "Home",
     },
     {
       id: "coreValues",
@@ -111,6 +99,36 @@ function MyApp({ Component, pageProps }) {
       perform: () => (window.location.pathname = "contact"),
       icon: <ToolsIcon />,
       section: "About me",
+    },
+    {
+      id: "twitter",
+      name: "Twitter",
+      subtitle: "View my Twitter profile",
+      shortcut: ["e"],
+      keywords: "tweet twitter social media",
+      perform: () => (window.location.pathname = "contact"),
+      icon: <TwitterIcon />,
+      section: "Socials",
+    },
+    {
+      id: "github",
+      name: "GitHub",
+      subtitle: "View my GitHub profile",
+      shortcut: ["w"],
+      keywords: "development github",
+      perform: () => (window.location.pathname = "contact"),
+      icon: <GithubIcon />,
+      section: "Socials",
+    },
+    {
+      id: "linkedin",
+      name: "LinkedIn",
+      subtitle: "View my LinkedIn profile",
+      shortcut: ["t"],
+      keywords: "linkedin profile",
+      perform: () => (window.location.pathname = "contact"),
+      icon: <LinkedinIcon />,
+      section: "Socials",
     },
   ];
 
