@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config.js";
+import { CommandIcon, EnterIcon } from "./Icons.js";
 import {
   KBarPortal,
   KBarPositioner,
@@ -19,6 +20,10 @@ const StyledKBarAnimator = styled(KBarAnimator, {
   boxShadow: "$smooth",
   background: "white",
   borderRadius: "8px",
+   "-webkit-overflow-scrolling": "touch",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 });
 
 const StyledKBarSearch = styled(KBarSearch, {
@@ -32,68 +37,120 @@ const StyledKBarSearch = styled(KBarSearch, {
   padding: "$spacing-04",
   borderTopLeftRadius: "8px",
   borderTopRightRadius: "8px",
+  background: "white",
 
   "&::placeholder": {
-    color: "$gray8",
-    fontWeight: "$medium ",
+    color: "$mauve8",
+    fontWeight: "$default",
   },
 });
 
 const StyledResultsContainer = styled("div", {
-  padding: "$spacing-04 $none",
+  padding: "$spacing-04",
   borderTop: "1px solid $gray6",
-  background: "$gray2",
+  background: "$white",
   borderBottomLeftRadius: "8px",
   borderBottomRightRadius: "8px",
 });
 
 const StyledSectionItem = styled("div", {
-  padding: "$spacing-04",
-  fontFamily: "$default",
-  fontWeight: "$medium",
-  fontSize: "$sm",
-})
+  pl: "$spacing-03",
+  pt: "$spacing-03",
+  pb: "$spacing-02",
+  fontFamily: "$header",
+  fontWeight: "$semi-bold",
+  letterSpacing: "$tracking-tight",
+  fontSize: "$base",
+  color: "$mauve9",
+});
 
 const StyledResultItem = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   gap: "8px",
-  padding: "$spacing-04",
-  borderLeft: "4px solid",
+  padding: "$spacing-03",
   fontFamily: "$default",
   fontSize: "$sm",
-})
+  borderRadius: "8px",
+});
 
 const LabelContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   gap: "8px",
-})
+});
 
 const ShortcutsContainer = styled("div", {
   display: "grid",
   gridAutoFlow: "column",
   gap: "4px",
-})
+});
 
 const StyledKbd = styled("kbd", {
-  padding: "4px 6px",
-  background: "rgba(0, 0, 0, 0.10)",
+  padding: "$spacing-02",
+  background: "rgba(0, 0, 0, 0.05)",
   borderRadius: "4px",
   fontSize: "$sm",
-  fontFamily: "$default",
-  background: "linear-gradient(0deg, #32275F 0.34%, rgba(52, 41, 97, 0.85) 75.27%)",
-  color: "$mauve2",
-})
+  fontFamily: "$mono",
+  color: "$mauve11",
+});
 
 const StyledIcon = styled("div", {
   color: "$gray11",
+});
+
+const StyledFooter = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "$spacing-03",
+  backgroundColor: "white",
+  borderTop: "1px solid $gray6",
+  width: "100%",
+  borderBottomLeftRadius: "8px",
+  borderBottomRightRadius: "8px",
+});
+
+const ItemName = styled("p", {
+  fontFamily: "$header",
+  fontSize: "$base",
+  fontWeight: "$extra-bold",
+  color: "$mauve12",
+  mb: "-4px",
+})
+
+const Subtitle = styled("p", {
+  fontFamily: "$default",
+  fontSize: "$xs",
+  color: "$mauve9",
+})
+
+const Label = styled("p", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$mauve9",
+})
+
+const FlexBox = styled("div", {
+  display: "flex",
+  alignItems: "center",
+
+  variants: {
+    direction: {
+      column: {
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "flex-start",
+      }
+    }
+  }
 })
 
 function RenderResults() {
   const { results } = useMatches();
-  
+
   return (
     <KBarResults
       items={results}
@@ -101,19 +158,25 @@ function RenderResults() {
         typeof item === "string" ? (
           <StyledSectionItem>{item}</StyledSectionItem>
         ) : (
-          <StyledResultItem style={{ background: active ? "rgba(0,0,0, 0.05)" : "transparent", borderLeft: active ? "4px solid #5746AF" : "4px solid transparent" }}>
+          <StyledResultItem
+            style={{
+              background: active ? "#EFEFFF" : "transparent",
+            }}
+          >
             <LabelContainer>
               <StyledIcon>{item.icon}</StyledIcon>
-              {item.name}
+              <FlexBox direction="column" >
+                <ItemName>{item.name}</ItemName>
+                <Subtitle>{item.subtitle}</Subtitle>
+              </FlexBox>
             </LabelContainer>
             {item.shortcut?.length ? (
               <ShortcutsContainer>
-                {item.shortcut.map((sc) =>
-                  <StyledKbd key={sc}>
-                    {sc}
-                  </StyledKbd>
-                )}
-              </ShortcutsContainer>) : null}
+                {item.shortcut.map((sc) => (
+                  <StyledKbd key={sc}>{sc}</StyledKbd>
+                ))}
+              </ShortcutsContainer>
+            ) : null}
           </StyledResultItem>
         )
       }
@@ -130,10 +193,17 @@ function KBarMenu() {
           <StyledResultsContainer>
             <RenderResults />
           </StyledResultsContainer>
+          <StyledFooter>
+            <CommandIcon />
+            <FlexBox>
+              <Label>Open Command</Label>
+              <EnterIcon />
+            </FlexBox>
+          </StyledFooter>
         </StyledKBarAnimator>
       </KBarPositioner>
     </KBarPortal>
-  )
+  );
 }
 
 export default KBarMenu;
