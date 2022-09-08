@@ -33,7 +33,7 @@ function Index() {
       <Spacer level={6} />
       <CoreValues />
       <Spacer level={12} />
-      <PageLayout>
+      <PageLayout id="projects">
         <ContentBlock
           heading="Snapshots"
           alignment="left"

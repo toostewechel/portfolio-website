@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
       subtitle: "View a snapshot of my projects",
       shortcut: ["p"],
       keywords: "projects",
-      perform: () => (window.location.pathname = "contact"),
+      perform: () => router.push("/#projects"),
       icon: <ProjectIcon />,
       section: "About me",
     },

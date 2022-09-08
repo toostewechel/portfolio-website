@@ -11,7 +11,7 @@ import {
 
 const StyledKBarPositioner = {
   zIndex: "50",
-  background: "rgba(0,0,0, 0.35)",
+  background: "rgba(0,0,0, 0.45)",
 };
 
 const StyledKBarAnimator = styled(KBarAnimator, {
