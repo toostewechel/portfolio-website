@@ -28,6 +28,37 @@ const Container = styled("a", {
     border: "1px solid $violet4",
     boxShadow: "$smooth",
   },
+
+  variants: {
+    gradient: {
+      dark: {
+        background:
+          "linear-gradient(341.37deg, #261D4E 13.67%, rgba(52, 41, 97, 0.85) 86.91%)",
+      },
+    },
+  },
+});
+
+const BackgroundPattern = styled("img", {
+  position: "absolute",
+  backgroundRepeat: "no-repeat",
+  width: "324px",
+  height: "324px",
+  opacity: 0.25,
+  variants: {
+    position: {
+      topRight: {
+        position: "absolute",
+        top: -162,
+        right: -162,
+      },
+      bottomRight: {
+        position: "absolute",
+        bottom: -162,
+        right: -162,
+      },
+    },
+  },
 });
 
 const CardHeaderContainer = styled("div", {
@@ -38,7 +69,7 @@ const CardHeaderContainer = styled("div", {
 });
 
 const Logo = styled("img", {
-  size: "$6",
+  size: "$7",
   borderRadius: "8px",
 
   "@bp2": {
@@ -56,7 +87,7 @@ const CardTitle = styled("h3", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
-  color: "$mauve12",
+  color: "$mauve1",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -67,7 +98,7 @@ const CardTitle = styled("h3", {
 const CardSubtitle = styled("p", {
   fontFamily: "$default",
   fontSize: "lg",
-  color: "$gray11",
+  color: "$mauve6",
 });
 
 const DescriptionContainer = styled("div", {
@@ -77,14 +108,18 @@ const DescriptionContainer = styled("div", {
 const CardDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontSize: "$base",
+  fontSize: "$sm",
   lineHeight: "$base",
-  color: "$gray12",
+  color: "$mauve1",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
   "-webkit-line-clamp": 6,
   "-webkit-box-orient": "vertical",
+
+  "@bp1": {
+    fontSize: "@base",
+  },
 });
 
 const FooterContainer = styled("div", {
@@ -111,7 +146,7 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "$gray10",
+  color: "$violet4",
   width: "16px",
   height: "16px",
   mr: "$spacing-01",
@@ -129,7 +164,7 @@ const Label = styled("p", {
   fontWeight: "$regular",
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
-  color: "$gray10",
+  color: "$violet4",
   mr: "$spacing-04",
 
   "@bp1": {
@@ -163,7 +198,11 @@ const StyledLink = styled("a", {
 
 function CredentialTimelineCard(props) {
   return (
-    <Container>
+    <Container gradient={props.gradient}>
+      <BackgroundPattern
+        src="/patterns/circular-background-pattern.svg"
+        position={props.position}
+      />
       <CardHeaderContainer>
         <Logo src={props.logo} />
         <Tag color={props.tagColor} label={props.tagLabel} />

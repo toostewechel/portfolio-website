@@ -20,7 +20,7 @@ const StyledKBarAnimator = styled(KBarAnimator, {
   boxShadow: "$smooth",
   background: "white",
   borderRadius: "8px",
-   "-webkit-overflow-scrolling": "touch",
+  "-webkit-overflow-scrolling": "touch",
   "&::-webkit-scrollbar": {
     display: "none",
   },
@@ -119,19 +119,19 @@ const ItemName = styled("p", {
   fontWeight: "$extra-bold",
   color: "$mauve12",
   mb: "-4px",
-})
+});
 
 const Subtitle = styled("p", {
   fontFamily: "$default",
   fontSize: "$xs",
   color: "$mauve9",
-})
+});
 
 const Label = styled("p", {
   fontFamily: "$default",
   fontSize: "$sm",
   color: "$mauve9",
-})
+});
 
 const FlexBox = styled("div", {
   display: "flex",
@@ -143,10 +143,10 @@ const FlexBox = styled("div", {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "flex-start",
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
 
 function RenderResults() {
   const { results } = useMatches();
@@ -165,7 +165,7 @@ function RenderResults() {
           >
             <LabelContainer>
               <StyledIcon>{item.icon}</StyledIcon>
-              <FlexBox direction="column" >
+              <FlexBox direction="column">
                 <ItemName>{item.name}</ItemName>
                 <Subtitle>{item.subtitle}</Subtitle>
               </FlexBox>

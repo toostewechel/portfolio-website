@@ -5,18 +5,6 @@ import Card from "../../components/home/pageblocks/Card.js";
 import CardHeader from "../card/CardHeader.js";
 import CredentialTimelineCard from "../card/CredentialTimelineCard.js";
 
-const Title = styled("h3", {
-  fontSize: "$lg",
-  fontWeight: "$extra-bold",
-  fontFamily: "$header",
-  letterSpacing: "$tracking-tight",
-  color: "$mauve12",
-
-  "@bp1": {
-    fontSize: "$xl",
-  },
-});
-
 const RowContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
@@ -53,6 +41,8 @@ function ProfessionalAchievementsTab() {
               year="2022"
             />
             <CredentialTimelineCard
+              gradient="dark"
+              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
               tagColor="plum"
               tagLabel="Full Time"
@@ -68,10 +58,12 @@ function ProfessionalAchievementsTab() {
             <CardHeader
               color="plum"
               hasYear={true}
-              alignment="right"
-              year="2018"
+              alignment="left"
+              year="2020"
             />
             <CredentialTimelineCard
+              gradient="dark"
+              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
               tagColor="plum"
               tagLabel="Full Time"
@@ -88,9 +80,11 @@ function ProfessionalAchievementsTab() {
               color="plum"
               hasYear={true}
               alignment="left"
-              year="2021"
+              year="2018"
             />
             <CredentialTimelineCard
+              gradient="dark"
+              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
               tagColor="plum"
               tagLabel="Intern"
@@ -105,8 +99,25 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader color="blue" hasYear={false} alignment="left" />
-            <CredentialTimelineCard background="/images/placeholder-timeline-item.png" />
+            <CardHeader
+              color="plum"
+              hasYear={true}
+              alignment="left"
+              year="2015"
+            />
+            <CredentialTimelineCard
+              gradient="dark"
+              position="topRight"
+              logo="/logo/jumbo-supermarkten-logo.png"
+              tagColor="plum"
+              tagLabel="Part-time"
+              title="Logistics"
+              subtitle="Jumbo Supermarkten"
+              description="Responsible for different logistic related activities in the distribution centre."
+              duration="2015 - 2009"
+              location="Raalte"
+              hasLink={false}
+            />
           </TimelineItem>
         </Timeline>
         <RowContainer>

@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config.js";
 const StyledImage = styled("img", {
   width: "38px",
   height: "38px",
-})
+});
 
 export const HomeIcon = () => {
   return <StyledImage src="/cmdk/home.svg" />;
@@ -41,4 +41,3 @@ export const CommandIcon = () => {
 export const EnterIcon = () => {
   return <StyledImage src="/cmdk/enter.svg" />;
 };
-
