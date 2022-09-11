@@ -1,13 +1,22 @@
+import dynamic from "next/dynamic";
 import { styled } from "../stitches.config.js";
-import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
+// import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
+import Footer from "../components/layouts/blocks/Footer.js";
 import Landing from "../components/home/landing/Landing.js";
 import CoreValues from "../components/home/pageblocks/CoreValues.js";
 import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
 import CardHeader from "../components/card/CardHeader.js";
 import ProjectTimelineCard from "../components/card/ProjectTimelineCard.js";
+import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
+import SoftwareStackBlock from "../components/home/pageblocks/SoftwareStackBlock.js";
+
+const ProfessionalAchievementsTab = dynamic(
+  () => import("../components/tabs/ProfessionalAchievementsTabs.js"),
+  { ssr: false }
+);
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
@@ -84,7 +93,9 @@ function Index() {
         </Timeline>
       </PageLayout>
       <Spacer level={12} />
-      <PageLayout></PageLayout>
+      <PageLayout>
+        <SkillsetBlock />
+      </PageLayout>
       <Spacer level={12} />
       <PageLayout>
         <ContentBlock
@@ -95,9 +106,12 @@ function Index() {
         <Spacer level={6} />
         <ProfessionalAchievementsTab />
       </PageLayout>
-      <a href="/projects/gestandaardiseerde-ehealth-modules-ontwikkelen/">
-        Go to link!!!!
-      </a>
+      <Spacer level={6} />
+      <SoftwareStackBlock />
+      <Spacer level={6} />
+      <PageLayout>
+        <Footer />
+      </PageLayout>
     </div>
   );
 }
