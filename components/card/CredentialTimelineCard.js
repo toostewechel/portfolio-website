@@ -127,6 +127,7 @@ const FooterContainer = styled("div", {
   justifyContent: "space-between",
   p: "$spacing-04 $none",
   marginTop: "auto",
+  alignItems: "end",
 });
 
 const Box = styled("div", {
