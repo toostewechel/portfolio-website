@@ -1,4 +1,7 @@
 import { styled } from "../../../stitches.config.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import Section from "../../layouts/blocks/Section.js";
+import Spacer from "../../layouts/blocks/Spacer.js";
 
 const Gradient = {
   blue: "linear-gradient(0deg, rgba(0, 145, 255, 0.85), rgba(225, 240, 255, 0.25)) border-box",
@@ -157,64 +160,73 @@ const ValueDescription = styled("p", {
   },
 });
 
-function CoreValues() {
+function CoreValuesBlock() {
   return (
-    <CoreValuesWrapper>
-      <CoreValuesBackground />
-      <CoreValueItems>
-        <CoreValueItem>
-          <CoreValueCard borderColor="blue">
-            <ValueTitle>Reliable</ValueTitle>
-            <ValueDescription>
-              If someone ask me to do something I intend to keep my word
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-        <CoreValueItem>
-          <CoreValueCard borderColor="violet">
-            <ValueTitle>Curious</ValueTitle>
-            <ValueDescription>
-              I have a desire to explore, investigate and learn new things
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-        <CoreValueItem>
-          <CoreValueCard borderColor="crimson">
-            <ValueTitle>Seek to understand</ValueTitle>
-            <ValueDescription>
-              I have empathy for those around me and respect their point of view
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-        <CoreValueItem>
-          <CoreValueCard borderColor="teal">
-            <ValueTitle>Pro-active</ValueTitle>
-            <ValueDescription>
-              I don’t wait around but come up with new initiatives and
-              innovative ideas
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-        <CoreValueItem>
-          <CoreValueCard borderColor="green">
-            <ValueTitle>Think win-win</ValueTitle>
-            <ValueDescription>
-              I always look for solutions that will benefit the majority
-              involved
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-        <CoreValueItem>
-          <CoreValueCard borderColor="orange">
-            <ValueTitle>Autonomous</ValueTitle>
-            <ValueDescription>
-              I intuitively prioritise work and hold myself accountable
-            </ValueDescription>
-          </CoreValueCard>
-        </CoreValueItem>
-      </CoreValueItems>
-    </CoreValuesWrapper>
+    <Section id="core-values">
+      <ContentBlock
+        heading="Core Values"
+        alignment="center"
+        description="These values guide me when making decisions, building relationships and solving problems."
+      />
+      <Spacer level={6} />
+      <CoreValuesWrapper>
+        <CoreValuesBackground />
+        <CoreValueItems>
+          <CoreValueItem>
+            <CoreValueCard borderColor="blue">
+              <ValueTitle>Reliable</ValueTitle>
+              <ValueDescription>
+                If someone ask me to do something I intend to keep my word
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard borderColor="violet">
+              <ValueTitle>Curious</ValueTitle>
+              <ValueDescription>
+                I have a desire to explore, investigate and learn new things
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard borderColor="crimson">
+              <ValueTitle>Seek to understand</ValueTitle>
+              <ValueDescription>
+                I have empathy for those around me and respect their point of
+                view
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard borderColor="teal">
+              <ValueTitle>Pro-active</ValueTitle>
+              <ValueDescription>
+                I don’t wait around but come up with new initiatives and
+                innovative ideas
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard borderColor="green">
+              <ValueTitle>Think win-win</ValueTitle>
+              <ValueDescription>
+                I always look for solutions that will benefit the majority
+                involved
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard borderColor="orange">
+              <ValueTitle>Autonomous</ValueTitle>
+              <ValueDescription>
+                I intuitively prioritise work and hold myself accountable
+              </ValueDescription>
+            </CoreValueCard>
+          </CoreValueItem>
+        </CoreValueItems>
+      </CoreValuesWrapper>
+    </Section>
   );
 }
 
-export default CoreValues;
+export default CoreValuesBlock;

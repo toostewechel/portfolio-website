@@ -21,15 +21,19 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   fontFamily: "$default",
   fontWeight: "$medium",
   fontSize: "$base",
-  padding: "$spacing-04",
+  padding: "$spacing-03 $spacing-02",
+  mr: "$spacing-05",
   color: "$gray11",
   "&:hover": { color: "$violet11" },
   '&[data-state="active"]': {
     color: "$violet11",
     boxShadow: "inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor",
   },
+  "&:last-child" : {
+    mr: 0,
+  },
   "@bp1": {
-    padding: "$spacing-05 $spacing-06",
+    padding: "$spacing-03 $spacing-02",
     fontSize: "$lg",
   },
 });

@@ -2,6 +2,7 @@ import { styled } from "../../../stitches.config.js";
 import SkillsCore from "../collapsible/SkillsCore.js";
 import SkillsLearning from "../collapsible/SkillsLearning.js";
 import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import Section from "../../layouts/blocks/Section.js";
 
 const Content = styled("div", {
   gridArea: "cnt",
@@ -63,28 +64,30 @@ const GridContainer = styled("div", {
 
 function SkillsetBlock() {
   return (
-    <GridContainer id="skillset">
-      <Content>
-        <ContentBlock
-          heading="Skillset"
-          description="Modern work demands knowledge transfer: the ability to learn and apply
+    <Section id="skillset">
+      <GridContainer>
+        <Content>
+          <ContentBlock
+            heading="Skillset"
+            description="Modern work demands knowledge transfer: the ability to learn and apply
           knowledge to complex problems, new situations and domains. That’s why
           I focus on building knowledge that spans a wide number of areas."
-        />
-      </Content>
-      <CoreSkillsContainer>
-        <SkillsCore />
-      </CoreSkillsContainer>
-      <LearningSkillsContainer>
-        <SkillsLearning />
-      </LearningSkillsContainer>
-      <Image>
-        <img
-          style={{ maxWidth: "100%", height: "auto" }}
-          src="/images/skillset-placeholder.png"
-        />
-      </Image>
-    </GridContainer>
+          />
+        </Content>
+        <CoreSkillsContainer>
+          <SkillsCore />
+        </CoreSkillsContainer>
+        <LearningSkillsContainer>
+          <SkillsLearning />
+        </LearningSkillsContainer>
+        <Image>
+          <img
+            style={{ maxWidth: "100%", height: "auto" }}
+            src="/images/skillset-placeholder.png"
+          />
+        </Image>
+      </GridContainer>
+    </Section>
   );
 }
 

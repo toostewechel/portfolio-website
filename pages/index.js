@@ -1,21 +1,16 @@
-import dynamic from "next/dynamic";
 import { styled } from "../stitches.config.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
 import Landing from "../components/home/landing/Landing.js";
-import CoreValues from "../components/home/pageblocks/CoreValues.js";
+import CoreValuesBlock from "../components/home/pageblocks/CoreValuesBlock.js";
 import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
 import CardHeader from "../components/card/CardHeader.js";
 import ProjectTimelineCard from "../components/card/ProjectTimelineCard.js";
 import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
+import ExperienceBlock from "../components/home/pageblocks/ExperienceBlock.js";
 import SoftwareStackBlock from "../components/home/pageblocks/SoftwareStackBlock.js";
-
-const ProfessionalAchievementsTab = dynamic(
-  () => import("../components/tabs/ProfessionalAchievementsTabs.js"),
-  { ssr: false }
-);
 
 const PageLayout = styled("div", {
   maxWidth: "1234px",
@@ -31,15 +26,7 @@ function Index() {
       <Spacer level={12} />
       <Landing />
       <Spacer level={12} />
-      <PageLayout id="core-values">
-        <ContentBlock
-          heading="Core Values"
-          alignment="center"
-          description="These values guide me when making decisions, building relationships and solving problems."
-        />
-      </PageLayout>
-      <Spacer level={6} />
-      <CoreValues />
+      <CoreValuesBlock />
       <Spacer level={12} />
       <PageLayout id="projects">
         <ContentBlock
@@ -97,18 +84,12 @@ function Index() {
       </PageLayout>
       <Spacer level={12} />
       <PageLayout>
-        <ContentBlock
-          heading="Experience"
-          alignment="left"
-          description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
-        />
-        <Spacer level={6} />
-        <ProfessionalAchievementsTab />
+        <ExperienceBlock />
       </PageLayout>
       <Spacer level={6} />
       <PageLayout>
-      <SoftwareStackBlock />
-        </PageLayout>
+        <SoftwareStackBlock />
+      </PageLayout>
       <Spacer level={6} />
       <PageLayout>
         <Footer />

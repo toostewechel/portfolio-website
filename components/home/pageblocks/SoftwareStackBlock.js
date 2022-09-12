@@ -1,24 +1,19 @@
 import { styled } from "../../../stitches.config.js";
 import ContentBlock from "../../layouts/blocks/ContentBlock.js";
 import SoftwareStackTabs from "../../tabs/SoftwareStackTabs.js";
-
-const Container = styled("div", {});
-
-const Content = styled("div", {
-  pb: "$spacing-07",
-});
+import Section from "../../layouts/blocks/Section.js";
+import Spacer from "../../layouts/blocks/Spacer.js";
 
 function SoftwareStackBlock() {
   return (
-    <Container id="software-stack">
-      <Content>
+    <Section id="software">
         <ContentBlock
-          heading="My Software Stack"
+          heading="Software"
           description="I mainly focus on (learning) industry leading tools and frameworks to streamline and optimize my design and development workflow."
         />
-      </Content>
+      <Spacer level={6} />
       <SoftwareStackTabs />
-    </Container>
+    </Section>
   );
 }
 
