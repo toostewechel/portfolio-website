@@ -29,7 +29,7 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
     color: "$violet11",
     boxShadow: "inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor",
   },
-  "&:last-child" : {
+  "&:last-child": {
     mr: 0,
   },
   "@bp1": {

@@ -95,9 +95,9 @@ const Button = styled("button", {
   borderRadius: "8px",
 });
 
-function Landing() {
+function LandingBlock() {
   return (
-    <Section id="#home">
+    <Section id="home">
       <LandingWrapper>
         <BackgroundPattern />
         <LandingItems>
@@ -121,4 +121,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default LandingBlock;

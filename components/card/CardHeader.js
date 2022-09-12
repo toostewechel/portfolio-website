@@ -7,7 +7,7 @@ const Container = styled("div", {
   height: "40px",
   p: "$spacing-05 0",
   alignItems: "center",
-  background: "white",
+  background: "transparent",
   gap: "12px",
 
   "@bp2": {

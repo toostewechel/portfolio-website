@@ -29,7 +29,7 @@ const TagContainer = styled("div", {
 
 const TagLabel = styled("p", {
   fontFamily: "$default",
-  fontWeight: "$semi-bold",
+  fontWeight: "$medium",
   letterSpacing: "$tracking-tight",
 });
 

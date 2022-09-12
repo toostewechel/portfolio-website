@@ -3,13 +3,12 @@ import Spacer from "../components/layouts/blocks/Spacer.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
-import Landing from "../components/home/landing/Landing.js";
+import LandingBlock from "../components/home/pageblocks/LandingBlock.js";
 import CoreValuesBlock from "../components/home/pageblocks/CoreValuesBlock.js";
-import { Timeline, TimelineItem } from "../components/timeline/Timeline.js";
-import CardHeader from "../components/card/CardHeader.js";
-import ProjectTimelineCard from "../components/card/ProjectTimelineCard.js";
+import ProjectsBlock from "../components/home/pageblocks/ProjectsBlock.js";
 import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
 import ExperienceBlock from "../components/home/pageblocks/ExperienceBlock.js";
+import BlogpostsBlock from "../components/home/pageblocks/BlogpostsBlock.js";
 import SoftwareStackBlock from "../components/home/pageblocks/SoftwareStackBlock.js";
 
 const PageLayout = styled("div", {
@@ -24,59 +23,12 @@ function Index() {
     <div>
       <Header />
       <Spacer level={12} />
-      <Landing />
+      <LandingBlock />
       <Spacer level={12} />
       <CoreValuesBlock />
       <Spacer level={12} />
-      <PageLayout id="projects">
-        <ContentBlock
-          heading="Snapshots"
-          alignment="left"
-          description="A curated overview of my professional and personal work throughout the years as product designer"
-        />
-        <Spacer level={6} />
-        <Timeline>
-          <TimelineItem id="timeline-item">
-            <CardHeader
-              color="crimson"
-              hasYear={true}
-              alignment="left"
-              year="2022"
-            />
-            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
-              color="plum"
-              hasYear={true}
-              alignment="right"
-              year="2022"
-            />
-            <ProjectTimelineCard background="/images/placeholder-timeline-item2.png" />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
-              color="blue"
-              hasYear={true}
-              alignment="left"
-              year="2021"
-            />
-            <ProjectTimelineCard background="/images/placeholder-timeline-item3.png" />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader color="blue" hasYear={false} alignment="left" />
-            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
-              color="blue"
-              hasYear={true}
-              alignment="left"
-              year="2021"
-            />
-            <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
-          </TimelineItem>
-        </Timeline>
+      <PageLayout>
+        <ProjectsBlock />
       </PageLayout>
       <Spacer level={12} />
       <PageLayout>
@@ -86,7 +38,12 @@ function Index() {
       <PageLayout>
         <ExperienceBlock />
       </PageLayout>
-      <Spacer level={6} />
+      <Spacer level={12} />
+      <Spacer level={12} />
+      <PageLayout>
+        <BlogpostsBlock />
+      </PageLayout>
+      <Spacer level={12} />
       <PageLayout>
         <SoftwareStackBlock />
       </PageLayout>

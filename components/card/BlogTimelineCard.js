@@ -8,6 +8,7 @@ const Container = styled("a", {
   border: "1px solid $gray6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
+  background: "white",
 
   "&:hover": {
     transform: "translateY(-2px)",
@@ -88,30 +89,26 @@ const MetaInformationContainer = styled("div", {
 
 const MetaInformation = styled("p", {
   fontFamily: "$default",
-  fontWeight: "$semi-bold",
+  fontWeight: "$medium",
   letterSpacing: "$tracking-tight",
+  fontSize: "$sm",
   color: "$gray11",
 });
 
 function BlogTimelineCard(props) {
   return (
-    <Container href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web">
+    <Container href={props.href}>
       <Icon />
-      <ResponsiveImage src={props.imgage} />
+      <ResponsiveImage src={props.image} />
       <TitleContainer>
-        <CardTitle>
-          The Rise of the Unstoppable, Decentralized and Semantic Web
-        </CardTitle>
+        <CardTitle>{props.title}</CardTitle>
       </TitleContainer>
       <DescriptionContainer>
-        <CardDescription>
-          I have empathy for those around me and respect their point of view. I
-          have empathy for those around me and respect their point of view
-        </CardDescription>
+        <CardDescription>{props.description}</CardDescription>
       </DescriptionContainer>
       <MetaInformationContainer>
-        <MetaInformation>Article • 20 min read </MetaInformation>
-        <Tag color="blue" label="Tech" />
+        <MetaInformation>{props.meta}</MetaInformation>
+        <Tag color={props.color} label={props.category} />
       </MetaInformationContainer>
     </Container>
   );
