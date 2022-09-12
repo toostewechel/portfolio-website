@@ -96,11 +96,10 @@ const DecorativeIcon = styled("div", {
   justifyContent: "center",
   padding: "$spacing-02",
   color: "$violet11",
-  size: "$4",
+  size: "$5",
 
   "@bp4": {
-    width: "24px",
-    height: "24px",
+    size: "$5",
   },
 });
 

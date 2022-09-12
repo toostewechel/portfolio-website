@@ -35,25 +35,25 @@ function SoftwareStackTabs() {
               href="https://www.replit.com/"
               src="/logo/replit-logo.png"
               title="Replit"
-              description="The collaborative browser based IDE"
+              description="Collaborative Browser Based IDE"
             />
             <StyledLink
               href="https://stitches.dev/"
               src="/logo/stitches-logo.png"
               title="Stitches"
-              description="CSS-in-JS library"
+              description="CSS-in-JS Library"
             />
             <StyledLink
               href="https://reactjs.org/"
               src="/logo/react-logo.png"
               title="React"
-              description="JavaScript library for building UI's"
+              description="JavaScript Library for Building UI's"
             />
             <StyledLink
               href="https://www.radix-ui.com/"
               src="/logo/radix-logo.png"
               title="Radix UI"
-              description="Unstyled component library for React"
+              description="Unstyled Component Library"
             />
           </Flex>
           <Flex>
@@ -61,13 +61,13 @@ function SoftwareStackTabs() {
               href="https://www.github.com"
               src="/logo/github-logo.png"
               title="GitHub"
-              description="The complete developer platform"
+              description="Complete Developer Platform"
             />
             <StyledLink
               href="https://hyper.is/"
               src="/logo/hyper-logo.png"
               title="Hyper"
-              description="Extensible command-line interface"
+              description="Extensible Command-line Interface"
             />
             <StyledLink
               href="https://nextjs.org/"
@@ -91,13 +91,13 @@ function SoftwareStackTabs() {
               href="https://www.figma.com/"
               src="/logo/figma-logo.png"
               title="Figma"
-              description="The collaborative interface design tool"
+              description="Collaborative Interface Design Tool"
             />
             <StyledLink
               href="https://www.adobe.com/products/illustrator.html"
               src="/logo/adobe-illustrator-logo.png"
               title="Adobe Illustrator"
-              description="Vector based graphical design tool"
+              description="Vector Based Graphical Design Tool"
             />
           </Flex>
           <Flex>
@@ -105,13 +105,13 @@ function SoftwareStackTabs() {
               href="https://www.adobe.com/products/photoshop.html"
               src="/logo/adobe-photoshop-logo.png"
               title="Adobe Photoshop"
-              description="Pixel based graphical design tool"
+              description="Pixel Based Graphical Design Tool"
             />
             <StyledLink
               href="https://spline.design/"
               src="/logo/spline3d-logo.png"
               title="Spline 3D"
-              description="Design tool for 3D web experiences"
+              description="3D Design Tool for the Web"
             />
           </Flex>
         </FlexContainer>
@@ -123,31 +123,31 @@ function SoftwareStackTabs() {
               href="https://linear.app/"
               src="/logo/linear-logo.png"
               title="Linear"
-              description="Issue tracking tool"
+              description="Issue Tracking Tool"
             />
             <StyledLink
               href="https://www.adobe.com/products/illustrator.html"
               src="/logo/iconjar-logo.png"
               title="IconJar"
-              description="Icon organizer for macOS"
+              description="Icon Organizer for MacOS"
             />
             <StyledLink
               href="https://www.notion.so/"
               src="/logo/notion-logo.png"
               title="Notion"
-              description="Workspace for notes, docs and tasks"
+              description="Workspace for Notes, Docs and Tasks"
             />
             <StyledLink
               href="https://codespace.app/"
               src="/logo/codespace-logo.png"
               title="Codespace"
-              description="Code snippets manager"
+              description="Code Snippets Manager"
             />
             <StyledLink
               href="https://roamresearch.com/"
               src="/logo/roam-research-logo.png"
               title="Roam Research"
-              description="Tool for networked thoughts"
+              description="Tool for Networked Thoughts"
             />
           </Flex>
           <Flex>
@@ -155,31 +155,31 @@ function SoftwareStackTabs() {
               href="https://1password.com/"
               src="/logo/1password-logo.png"
               title="1Password"
-              description="Password manager"
+              description="Password Manager"
             />
             <StyledLink
               href="https://wormhole.app/"
               src="/logo/wormhole-logo.png"
               title="Wormhole"
-              description="E2E encrypted file sharing"
+              description="E2E Encrypted File Sharing"
             />
             <StyledLink
               href="https://signal.org/"
               src="/logo/signal-logo.png"
               title="Signal"
-              description="E2E encrypted messaging"
+              description="E2E Encrypted Messaging"
             />
             <StyledLink
               href="https://skiff.com/"
               src="/logo/skiff-logo.png"
               title="Skiff"
-              description="E2E encrypted mail, pages and drive"
+              description="E2E Encrypted Mail, Pages and Drive"
             />
             <StyledLink
               href="https://raycast.com/"
               src="/logo/raycast-logo.png"
               title="Raycast"
-              description="Supercharge productivity"
+              description="Supercharge Productivity"
             />
           </Flex>
         </FlexContainer>

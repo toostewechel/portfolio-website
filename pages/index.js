@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import { styled } from "../stitches.config.js";
-// import ProfessionalAchievementsTab from "../components/tabs/ProfessionalAchievementsTabs.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
@@ -107,7 +106,9 @@ function Index() {
         <ProfessionalAchievementsTab />
       </PageLayout>
       <Spacer level={6} />
+      <PageLayout>
       <SoftwareStackBlock />
+        </PageLayout>
       <Spacer level={6} />
       <PageLayout>
         <Footer />
