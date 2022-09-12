@@ -38,12 +38,12 @@ const Panel = styled("div", {
 
 const FlexWrapper = styled("div", {
   display: "flex",
+  alignItems: "center",
 });
 
 const ImageContainer = styled("div", {
   display: "flex",
   size: "$7",
-  pr: "$spacing-03",
 
   "@bp4": {
     pr: "$spacing-05",

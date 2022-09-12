@@ -1,27 +1,7 @@
-import { styled } from "../../stitches.config.js";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
 import { Timeline, TimelineItem } from "../timeline/Timeline.js";
-import Card from "../../components/home/pageblocks/Card.js";
 import CardHeader from "../card/CardHeader.js";
 import CredentialTimelineCard from "../card/CredentialTimelineCard.js";
-
-const RowContainer = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  flexWrap: "wrap",
-  width: "100%",
-
-  "@bp3": {
-    flexDirection: "row",
-  },
-});
-
-const Column = styled("div", {
-  display: "flex",
-  flexBasis: "100%",
-  height: "100%",
-  flex: 1,
-});
 
 function ProfessionalAchievementsTab() {
   return (
@@ -110,7 +90,7 @@ function ProfessionalAchievementsTab() {
               position="topRight"
               logo="/logo/jumbo-supermarkten-logo.png"
               tagColor="plum"
-              tagLabel="Part-time"
+              tagLabel="Part Time"
               title="Logistics"
               subtitle="Jumbo Supermarkten"
               description="Responsible for different logistic related activities in the distribution centre."
@@ -196,6 +176,8 @@ function ProfessionalAchievementsTab() {
             <CardHeader
               color="plum"
               hasYear={false}
+              alignment="left"
+              year="2022"
             />
             <CredentialTimelineCard
               gradient="dark"
@@ -212,12 +194,7 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader
-              color="plum"
-              hasYear={true}
-              alignment="left"
-              year="2015"
-            />
+            <CardHeader color="plum" hasYear={false} />
             <CredentialTimelineCard
               gradient="dark"
               position="topRight"
@@ -233,12 +210,7 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader
-              color="plum"
-              hasYear={true}
-              alignment="right"
-              year="2011"
-            />
+            <CardHeader color="plum" hasYear={false} />
             <CredentialTimelineCard
               gradient="dark"
               position="topRight"
@@ -257,8 +229,8 @@ function ProfessionalAchievementsTab() {
             <CardHeader
               color="plum"
               hasYear={true}
-              alignment="right"
-              year="2011"
+              alignment="left"
+              year="2020"
             />
             <CredentialTimelineCard
               gradient="dark"

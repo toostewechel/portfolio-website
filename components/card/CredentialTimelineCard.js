@@ -20,7 +20,7 @@ const Container = styled("a", {
   border: "1px solid $gray6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
-  p: "$spacing-04",
+  p: "$spacing-05",
 
   "&:hover": {
     transform: "translateY(-2px)",
@@ -66,6 +66,7 @@ const CardHeaderContainer = styled("div", {
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
+  mb: "$spacing-07",
 });
 
 const Logo = styled("img", {
@@ -78,7 +79,7 @@ const Logo = styled("img", {
 });
 
 const TitleContainer = styled("div", {
-  padding: "$spacing-05 $none",
+  mb: "$spacing-05",
 });
 
 const CardTitle = styled("h3", {
