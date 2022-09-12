@@ -41,6 +41,17 @@ const FlexWrapper = styled("div", {
   alignItems: "center",
 });
 
+const Logo = styled("img", {
+  size: "$7",
+  borderRadius: "8px",
+  mr: "$spacing-03",
+
+  "@bp2": {
+    size: "$8",
+    mr: "$spacing-04",
+  },
+});
+
 const ImageContainer = styled("div", {
   display: "flex",
   size: "$7",
@@ -98,9 +109,7 @@ function StyledLink(props) {
     <Link href={props.href} target="_blank">
       <Panel>
         <FlexWrapper>
-          <ImageContainer>
-            <img src={props.src}></img>
-          </ImageContainer>
+          <Logo src={props.src} />
           <FlexContainer>
             <div>
               <Title>{props.title}</Title>
