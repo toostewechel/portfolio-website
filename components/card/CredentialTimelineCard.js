@@ -31,9 +31,13 @@ const Container = styled("a", {
 
   variants: {
     gradient: {
-      dark: {
-        background:
-          "linear-gradient(341.37deg, #261D4E 13.67%, rgba(52, 41, 97, 0.85) 86.91%)",
+      darkblue: {
+        backgroundImage: "url(/patterns/darkblue-noise-background.png)",
+        backgroundSize: "cover",
+      },
+      darkred: {
+        backgroundImage: "url(/patterns/darkred-noise-background.png)",
+        backgroundSize: "cover",
       },
     },
   },
@@ -44,7 +48,7 @@ const BackgroundPattern = styled("img", {
   backgroundRepeat: "no-repeat",
   width: "324px",
   height: "324px",
-  opacity: 0.25,
+  opacity: 0.4,
   variants: {
     position: {
       topRight: {

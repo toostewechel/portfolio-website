@@ -28,18 +28,30 @@ const StyledLogo = styled("img", {
 const SocialsContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-05",
+  gap: "$spacing-04",
 });
 
-const SocialIcon = styled("div", {
+const SocialButtonIcon = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: "$violet3",
-  width: "48px",
-  height: "48px",
+  padding: "$spacing-02",
   borderRadius: "100%",
   color: "$violet11",
+  willChange: "transform",
+  transition: "all, 300ms ease-in",
+
+  "&:hover": {
+    transform: "translateY(-2px)",
+    transition: "all, 300ms ease-out",
+    backgroundColor: "$violet3",
+    boxShadow: "$smooth",
+  },
+
+  "@bp2": {
+    padding: "$spacing-04",
+  },
 });
 
 function Footer() {
@@ -49,15 +61,15 @@ function Footer() {
         <StyledLogo src="/logo/logo.png" />
       </LogoContainer>
       <SocialsContainer>
-        <SocialIcon>
-          <GitHub />
-        </SocialIcon>
-        <SocialIcon>
-          <Twitter />
-        </SocialIcon>
-        <SocialIcon>
-          <Linkedin />
-        </SocialIcon>
+        <SocialButtonIcon>
+          <GitHub size={19} />
+        </SocialButtonIcon>
+        <SocialButtonIcon>
+          <Twitter size={19} />
+        </SocialButtonIcon>
+        <SocialButtonIcon>
+          <Linkedin size={19} />
+        </SocialButtonIcon>
       </SocialsContainer>
     </FooterContainer>
   );

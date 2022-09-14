@@ -15,16 +15,16 @@ function ProfessionalAchievementsTab() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="plum"
+              color="blue"
               hasYear={true}
               alignment="left"
               year="2022"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="plum"
+              tagColor="blue"
               tagLabel="Full Time"
               title="Product Owner"
               subtitle="Jouw Omgeving"
@@ -36,16 +36,16 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="plum"
+              color="blue"
               hasYear={true}
               alignment="left"
               year="2020"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="plum"
+              tagColor="blue"
               tagLabel="Full Time"
               title="Product Designer"
               subtitle="Jouw Omgeving"
@@ -57,16 +57,16 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="plum"
+              color="blue"
               hasYear={true}
               alignment="left"
               year="2018"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="plum"
+              tagColor="blue"
               tagLabel="Intern"
               title="Graduate Assignment"
               subtitle="Jouw Omgeving"
@@ -80,16 +80,16 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="plum"
+              color="blue"
               hasYear={true}
               alignment="left"
               year="2015"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/jumbo-supermarkten-logo.png"
-              tagColor="plum"
+              tagColor="blue"
               tagLabel="Part Time"
               title="Logistics"
               subtitle="Jumbo Supermarkten"
@@ -111,7 +111,7 @@ function ProfessionalAchievementsTab() {
               year="2018"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/university-twente-logo.png"
               tagColor="plum"
@@ -132,7 +132,7 @@ function ProfessionalAchievementsTab() {
               year="2015"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/university-twente-logo.png"
               tagColor="plum"
@@ -153,7 +153,7 @@ function ProfessionalAchievementsTab() {
               year="2011"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/university-twente-logo.png"
               tagColor="plum"

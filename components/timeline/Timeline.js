@@ -41,7 +41,7 @@ const StyledTimelineItem = styled("li", {
     flexBasis: "calc(50% - 12px)",
   },
   "@bp4": {
-    flexBasis: "calc(calc(100% / 3) - 24px)",
+    flexBasis: "calc(calc(100% / 3) - 20px)",
     mr: "$spacing-06",
   },
 });
