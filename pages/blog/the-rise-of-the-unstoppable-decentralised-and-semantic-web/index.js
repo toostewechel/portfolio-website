@@ -13,7 +13,7 @@ function Index() {
   const targetRef = createRef();
   return (
     <div ref={targetRef}>
-      <ContentHeader pageType="Case Study" targetRef={targetRef} />
+      <ContentHeader targetRef={targetRef} />
       <ContentLanding
         title="The Rise of the Unstoppable Decentralised and Semantic Web"
         date="22 jun 2022"

@@ -14,7 +14,7 @@ const HeaderContainer = styled("div", {
   },
 });
 
-const Box = styled("div", {
+const Box = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -33,7 +33,7 @@ const StyledLogo = styled("img", {
 function Header() {
   return (
     <HeaderContainer>
-      <Box>
+      <Box href="/">
         <StyledLogo src="/logo/logo.png" />
       </Box>
       <AvatarStatusBadgePopover />

@@ -15,7 +15,7 @@ const BackgroundImage = styled("div", {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100vh",
-    mt: "-88px",
+    mt: "-96px",
   },
 });
 
