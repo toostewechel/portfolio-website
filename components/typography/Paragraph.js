@@ -20,7 +20,7 @@ const StyledParagraph = styled("p", {
   },
 
   "@bp2": {
-    fontSize: "$xl",
+    fontSize: "$bodyLarge",
   },
 });
 

@@ -11,7 +11,7 @@ const StyledOrderedList = styled("ol", {
   paddingInlineStart: "$spacing-06",
 
   "@bp2": {
-    fontSize: "$xl",
+    fontSize: "$bodyLarge",
   },
 });
 

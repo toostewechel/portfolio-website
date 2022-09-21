@@ -5,7 +5,7 @@ import * as components from "../markdown/StyledMarkdown.js";
 const ContentContainer = styled("div", {
   p: "$none $spacing-04",
   m: "0 auto",
-  maxWidth: "768px",
+  maxWidth: "720px",
 });
 
 const ContentStyle = styled("div", {

@@ -72,6 +72,7 @@ export const {
       base: "1rem",
       sm: "0.95rem",
       xs: "0.80rem",
+      bodyLarge: "1.25rem",
     },
     fonts: {
       header: "'Vollkorn', serif",
@@ -88,7 +89,7 @@ export const {
     },
     lineHeights: {
       large: 1.65,
-      base: 1.6,
+      base: 1.55,
       compact: 1.25,
       tight: 1.1,
       none: 1,

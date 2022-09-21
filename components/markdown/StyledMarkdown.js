@@ -90,3 +90,26 @@ function MDXCodeBlock(props) {
 }
 
 export const pre = MDXCodeBlock;
+
+const StyledBlockquote = styled("blockquote", {
+  pl: "$spacing-06",
+  borderLeft: "solid 4px $violet11",
+
+  "& > p": {
+    fontFamily: "$default",
+    fontSize: "$2xl",
+    letterSpacing: "$tracking-tight",
+    fontStyle: "italic",
+    fontWeight: "$medium",
+  },
+})
+
+function Blockquote(props) {
+  return (
+    <StyledBlockquote>
+      {props.children}
+    </StyledBlockquote>
+  );
+}
+
+export const blockquote = Blockquote;

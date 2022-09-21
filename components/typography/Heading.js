@@ -19,7 +19,7 @@ const StyledHeading = styled("h1", {
     level: {
       1: {
         fontSize: "$5xl",
-        fontWeight: "$extra-bold",
+        fontWeight: "$black",
         letterSpacing: "$tracking-tighter",
         lineHeight: "$tight",
         pt: "$spacing-06",
@@ -27,14 +27,14 @@ const StyledHeading = styled("h1", {
       },
       2: {
         fontSize: "$3xl",
-        fontWeight: "$extra-bold",
+        fontWeight: "$black",
         letterSpacing: "$tracking-tighter",
-        lineHeight: "$compact",
+        lineHeight: "$tight",
         pt: "$spacing-06",
-        pb: "$spacing-04",
+        pb: "$spacing-05",
 
         "@bp2": {
-          fontSize: "$4xl",
+          fontSize: "$3xl",
         },
       },
       3: {
