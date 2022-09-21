@@ -22,7 +22,12 @@ function ProjectsBlock() {
             alignment="left"
             year="2022"
           />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          <ProjectTimelineCard
+            background="/images/placeholder-timeline-item.png"
+            dutch
+            title="Gestandaardiseerde e-health modules ontwikkelen"
+            meta="Case Study • 20 min"
+          />
         </TimelineItem>
         <TimelineItem>
           <CardHeader
@@ -31,7 +36,12 @@ function ProjectsBlock() {
             alignment="right"
             year="2022"
           />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item2.png" />
+          <ProjectTimelineCard
+            background="/images/placeholder-timeline-item2.png"
+            dutch
+            title="Gestandaardiseerde e-health modules ontwikkelen"
+            meta="Case Study • 20 min"
+          />
         </TimelineItem>
         <TimelineItem>
           <CardHeader
@@ -40,7 +50,12 @@ function ProjectsBlock() {
             alignment="left"
             year="2021"
           />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item3.png" />
+          <ProjectTimelineCard
+            background="/images/placeholder-timeline-item3.png"
+            dutch
+            title="Gestandaardiseerde e-health modules ontwikkelen"
+            meta="Case Study • 20 min"
+          />
         </TimelineItem>
         <TimelineItem>
           <CardHeader color="blue" hasYear={false} alignment="left" />
@@ -53,7 +68,12 @@ function ProjectsBlock() {
             alignment="left"
             year="2021"
           />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
+          <ProjectTimelineCard
+            background="/images/placeholder-timeline-item.png"
+            dutch
+            title="Gestandaardiseerde e-health modules ontwikkelen"
+            meta="Case Study • 20 min"
+          />
         </TimelineItem>
       </Timeline>
     </Section>

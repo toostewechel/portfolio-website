@@ -29,7 +29,6 @@ const Icon = styled("div", {
   justifyContent: "center",
   width: "38px",
   height: "38px",
-  background: "rgba(2,0,16, 0.67)",
   position: "absolute",
   borderRadius: "100%",
   boxShadow: "$smooth",
@@ -91,14 +90,15 @@ function ProjectTimelineCard(props) {
       href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
     >
       <Icon>
-        <IconSize>🇳🇱</IconSize>
+        <IconSize>
+          {props.dutch && <img src="/icons/dutch-flag.svg" />}
+          {props.english && <img src="/icons/british-flag.svg" />}
+        </IconSize>
       </Icon>
       <TitleContainer>
-        <CardTitle>
-          The Rise of the Unstoppable, Decentralized and Semantic Web
-        </CardTitle>
+        <CardTitle>{props.title}</CardTitle>
         <MetaInformationContainer>
-          <MetaInformation>Article • 20 min read </MetaInformation>
+          <MetaInformation>{props.meta}</MetaInformation>
           <ArrowRightLineIcon />
         </MetaInformationContainer>
       </TitleContainer>
