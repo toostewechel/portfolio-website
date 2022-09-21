@@ -180,7 +180,7 @@ function ProfessionalAchievementsTab() {
               year="2022"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/udemy-logo.png"
               tagColor="plum"
@@ -196,7 +196,7 @@ function ProfessionalAchievementsTab() {
           <TimelineItem>
             <CardHeader color="plum" hasYear={false} />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/udemy-logo.png"
               tagColor="plum"
@@ -212,7 +212,7 @@ function ProfessionalAchievementsTab() {
           <TimelineItem>
             <CardHeader color="plum" hasYear={false} />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/udemy-logo.png"
               tagColor="plum"
@@ -233,7 +233,7 @@ function ProfessionalAchievementsTab() {
               year="2020"
             />
             <CredentialTimelineCard
-              gradient="dark"
+              gradient="darkblue"
               position="topRight"
               logo="/logo/udemy-logo.png"
               tagColor="plum"
