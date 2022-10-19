@@ -9,7 +9,7 @@ const Container = styled("div", {
   alignItems: "center",
   m: "0 auto",
   maxWidth: "720px",
-  p: "$spacing-04 $none",
+  p: "$none $spacing-04",
 });
 
 function ContentMeta() {

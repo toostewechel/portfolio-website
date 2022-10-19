@@ -15,8 +15,8 @@ const TitleWrapper = styled("div", {
   gap: "$spacing-03",
   justifyContent: "center",
   textAlign: "center",
-  paddingTop: "$spacing-12",
-  paddingBottom: "$spacing-12",
+  paddingTop: "$spacing-13",
+  paddingBottom: "$spacing-13",
   maxWidth: "768px",
   m: "0 auto",
 })
@@ -47,7 +47,7 @@ const MetaInformation = styled("p", {
 
 const LandingImageContainer = styled("div", {
   maxWidth: "1234px",
-  pb: "$spacing-06",
+  pb: "$spacing-08",
 });
 
 const LandingImage = styled("img", {

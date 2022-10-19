@@ -15,8 +15,8 @@ const ReadingProgressContainer = styled("div", {
   borderRadius: "8px",
   padding: "$spacing-02",
   gap: "$spacing-03",
-  background:
-    "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
+  // background:
+  //   "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
 
   "@bp2": {
     display: "flex",
@@ -39,7 +39,7 @@ const ProgressLabel = styled("p", {
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
-  color: "$mauveA12",
+  color: "$violet11",
   fontSize: "$lg",
   p: "$spacing-01 0px",
   width: "48px",
@@ -70,6 +70,7 @@ const IconLink = styled("a", {
       "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
     background: "linear-gradient(180deg, $violetA10, $crimsonA6)",
     boxShadow: "$smooth",
+    color: "$violet3",
   },
 });
 
@@ -78,11 +79,15 @@ const Icon = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   size: "$5",
-  color: "$violet3",
+  color: "$violet11",
 
   "@bp1": {
     size: "$5",
   },
+
+  "&:hover": {
+    color: "$violet3",
+  }
 });
 
 const ReadingProgress = ({ targetRef }) => {
@@ -155,7 +160,7 @@ const ReadingProgress = ({ targetRef }) => {
               </Icon>
             </IconLink>
           </TooltipTrigger>
-          <TooltipContent sideOffset={4}>Close Article</TooltipContent>
+          <TooltipContent sideOffset={4}>Close</TooltipContent>
         </Tooltip>
       </Provider>
     </ReadingProgressContainer>

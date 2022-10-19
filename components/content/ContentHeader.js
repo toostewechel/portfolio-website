@@ -12,8 +12,9 @@ const HeaderContainer = styled("div", {
   top: 0,
   zIndex: 2,
 
-  "@bp1": {
+  "@bp5": {
     padding: "$spacing-05",
+    backgroundColor: "transparent",
   },
 });
 
