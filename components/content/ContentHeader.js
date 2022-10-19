@@ -7,7 +7,7 @@ const HeaderContainer = styled("div", {
   justifyContent: "space-between",
   alignItems: "center",
   padding: "$spacing-04",
-  backgroundColor: "transparent",
+  backgroundColor: "white",
   position: "sticky",
   top: 0,
   zIndex: 2,

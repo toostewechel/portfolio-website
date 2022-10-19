@@ -96,11 +96,15 @@ const StyledBlockquote = styled("blockquote", {
   borderLeft: "solid 4px $violet11",
 
   "& > p": {
-    fontFamily: "$default",
-    fontSize: "$2xl",
+    fontFamily: "$heading",
+    fontSize: "$xl",
     letterSpacing: "$tracking-tight",
     fontStyle: "italic",
     fontWeight: "$medium",
+
+    "@bp2" : {
+      fontSize: "$2xl",
+    }
   },
 })
 

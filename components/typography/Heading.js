@@ -18,7 +18,7 @@ const StyledHeading = styled("h1", {
     },
     level: {
       1: {
-        fontSize: "$5xl",
+        fontSize: "$4xl",
         fontWeight: "$black",
         letterSpacing: "$tracking-tighter",
         lineHeight: "$tight",

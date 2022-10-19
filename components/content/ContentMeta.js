@@ -7,9 +7,8 @@ const Container = styled("div", {
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  borderBottom: "1px solid $gray5",
   m: "0 auto",
-  maxWidth: "760px",
+  maxWidth: "720px",
   p: "$spacing-04 $none",
 });
 

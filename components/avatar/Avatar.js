@@ -27,11 +27,11 @@ const Title = styled("h3", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
-  letterSpacing: "$tracking-tight",
+  
   color: "$mauve12",
 
   "@bp4": {
-    fontSize: "$xl",
+    fontSize: "$lg",
   },
 });
 
@@ -42,7 +42,7 @@ const Description = styled("p", {
   color: "$gray11",
 
   "@bp4": {
-    fontSize: "$base",
+    fontSize: "$sm",
   },
 });
 
