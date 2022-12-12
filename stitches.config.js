@@ -1,6 +1,7 @@
 import {
   gray,
   blue,
+  yellow,
   violet,
   orange,
   violetA,
@@ -43,6 +44,7 @@ export const {
       ...crimson,
       ...crimsonA,
       ...plum,
+      ...yellow,
     },
     space: {
       none: "0px",
