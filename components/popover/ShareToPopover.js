@@ -8,13 +8,17 @@ import {
 import ShareLineIcon from "remixicon-react/ShareLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 
+const StyledPopoverContent = styled(PopoverContent, {
+  minWidth: "232px",
+})
+
 const IconButton = styled("button", {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
   color: "$violet11",
   size: "$7",
-  borderRadius: "4px",
+  borderRadius: "8px",
 
   "&:hover": { backgroundColor: "$violet3" },
   "&:active": { backgroundColor: "$violet4" },
@@ -65,7 +69,7 @@ function ShareToPopover() {
           <ShareLineIcon />
         </IconButton>
       </PopoverTrigger>
-      <PopoverContent>
+      <StyledPopoverContent>
         <Title>Share</Title>
         <ShareLinkContainer href={shareTo.whatsapp} target="_blank">
           <SocialIcon src="/logo/whatsapp-logo.svg" />
@@ -86,7 +90,7 @@ function ShareToPopover() {
         <PopoverClose aria-label="Close">
           <CloseLineIcon />
         </PopoverClose>
-      </PopoverContent>
+      </StyledPopoverContent>
     </Popover>
   );
 }

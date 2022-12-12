@@ -51,7 +51,7 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 });
 
 const StyledContentText = styled("div", {
-  padding: "$spacing-06 $spacing-05",
+  padding: "$spacing-06 $spacing-05 $none $spacing-05",
   fontSize: "$lg",
   fontFamily: "$default",
   lineHeight: "$base",
@@ -64,7 +64,7 @@ const StyledChevron = styled(ArrowRightSLineIcon, {
   "[data-state=open] &": { transform: "rotate(90deg)" },
 });
 
-const DecorativeIcon = styled("div", {
+const DecorativeIcon = styled("img", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -75,6 +75,8 @@ const DecorativeIcon = styled("div", {
 
   "@bp1": {
     pr: "$spacing-03",
+    width: "32px",
+    height: "32px",
   },
 });
 
@@ -92,9 +94,7 @@ export const AccordionTrigger = React.forwardRef(
     <StyledHeader>
       <StyledTrigger {...props} ref={forwardedRef}>
         <Box>
-          <DecorativeIcon>
-            <img src={props.src} />
-          </DecorativeIcon>
+          {props.icon ? <DecorativeIcon src={props.src} /> : null}
           <div style={{ marginTop: "3px" }}>{props.title}</div>
         </Box>
         <StyledChevron aria-hidden />
