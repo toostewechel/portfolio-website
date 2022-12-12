@@ -72,7 +72,7 @@ export const {
       base: "1rem",
       sm: "0.95rem",
       xs: "0.80rem",
-      bodyLarge: "1.25rem",
+      bodyLarge: "1.20rem",
     },
     fonts: {
       header: "'Vollkorn', serif",

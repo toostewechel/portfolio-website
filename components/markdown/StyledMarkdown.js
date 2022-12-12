@@ -91,16 +91,37 @@ function MDXCodeBlock(props) {
 
 export const pre = MDXCodeBlock;
 
+
 const StyledBlockquote = styled("blockquote", {
-  pl: "$spacing-06",
-  borderLeft: "solid 4px $violet11",
+  pl: "$spacing-04",
+  pt: "$spacing-08",
+  pb: "$spacing-06",
+
+  "&::before": {
+    content: "”",
+    position: "relative",
+    height: "0px",
+    lineHeight: "0px",
+    display: "inherit",
+    top: "96px",
+    left: "-32px",
+    zIndex: -1,
+    color: "$violet3",
+    fontFamily: "$header",
+    letterSpacing: "$tracking-tighter",
+    fontSize: "264px",
+
+    "@bp2": {
+      left: "-64px",
+    }
+  },
 
   "& > p": {
-    fontFamily: "$heading",
+    fontFamily: "$default",
     fontSize: "$xl",
-    letterSpacing: "$tracking-tight",
-    fontStyle: "italic",
     fontWeight: "$medium",
+    lineHeight: "$compact",
+    color: "$violet11",
 
     "@bp2" : {
       fontSize: "$2xl",
