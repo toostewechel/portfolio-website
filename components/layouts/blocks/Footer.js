@@ -42,7 +42,7 @@ const SocialButtonIcon = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  size: "$7",
+  size: "$6",
   p: "8px",
   backgroundColor: "$violet3",
   color: "$violet11",
@@ -60,6 +60,9 @@ const SocialButtonIcon = styled("a", {
   "&:active": {
     backgroundColor: "rgba(0, 0, 0, 0.2)",
   },
+  "@bp2": {
+    size: "$7",
+  }
 });
 
 const FooterMetaContainer = styled("div", {
