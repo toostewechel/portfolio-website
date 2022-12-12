@@ -47,10 +47,8 @@ function Index() {
       <PageLayout>
         <SoftwareStackBlock />
       </PageLayout>
-      <Spacer level={6} />
-      <PageLayout>
-        <Footer />
-      </PageLayout>
+      <Spacer level={12} />
+      <Footer />
     </div>
   );
 }

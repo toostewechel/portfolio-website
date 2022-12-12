@@ -1,8 +1,15 @@
 import { styled } from "../../../stitches.config.js";
 import { GitHub, Twitter, Linkedin } from "react-feather";
+import GithubFillIcon from "remixicon-react/GithubFillIcon";
+import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
+import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
+
+const Container = styled("div", {
+  padding: "$spacing-04",
+})
 
 const FooterContainer = styled("div", {
-  maxWidth: "1234px",
+  maxWidth: "100%",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -28,55 +35,100 @@ const StyledLogo = styled("img", {
 const SocialsContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-04",
+  gap: "$spacing-03",
 });
 
 const SocialButtonIcon = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  size: "$7",
+  p: "8px",
   backgroundColor: "$violet3",
-  padding: "$spacing-02",
-  borderRadius: "100%",
   color: "$violet11",
+  borderRadius: "999px",
   willChange: "transform",
-  transition: "all, 300ms ease-in",
+  transition: "transform 300ms ease-in, scale 300ms ease-in",
 
   "&:hover": {
+    scale: 1.02,
     transform: "translateY(-2px)",
-    transition: "all, 300ms ease-out",
-    backgroundColor: "$violet3",
-    boxShadow: "$smooth",
+    transition: "transform 300ms ease-out, scale 300ms ease-out",
+    backgroundColor: "$violet4",
+    color: "$violet12",
   },
-
-  "@bp2": {
-    padding: "$spacing-04",
+  "&:active": {
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
   },
 });
 
-const StyledImage = styled("img", {
-  width: "38px",
-  height: "38px",
-});
+const FooterMetaContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  mt: "$spacing-06",
+  pt: "$spacing-04",
+  borderTop: "solid 1px $gray6",
+  maxWidth: "100%",
+})
+
+const FlexBox = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-03",
+  alignItems: "center",
+})
+
+const Circle = styled("div", {
+  width: "16px",
+  height: "16px",
+  borderRadius: "100%",
+  backgroundColor: "$violet11",
+})
+
+const EmailAddress = styled("p", {
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  fontFamily: "$default",
+  color: "$gray11",
+})
+
+const Year = styled("p", {
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  fontFamily: "$default",
+  color: "$gray11",
+})
+
+const CurrentYear = new Date().getFullYear()
 
 function Footer() {
   return (
+    <Container>
     <FooterContainer>
       <LogoContainer>
         <StyledLogo src="/logo/logo.png" />
       </LogoContainer>
       <SocialsContainer>
-        <SocialButtonIcon href="">
-          <GitHub size={19} />
+        <SocialButtonIcon href="https://twitter.com/boonikad93">
+          <TwitterFillIcon />
         </SocialButtonIcon>
-        <SocialButtonIcon>
-          <Twitter size={19} />
+        <SocialButtonIcon href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/">
+          <LinkedinFillIcon />
         </SocialButtonIcon>
-        <SocialButtonIcon>
-          <Linkedin size={19} />
+        <SocialButtonIcon href="https://github.com/toostewechel">
+          <GithubFillIcon />
         </SocialButtonIcon>
       </SocialsContainer>
     </FooterContainer>
+    <FooterMetaContainer>
+      <FlexBox>
+        <Circle />
+      <EmailAddress>info@snapshotslab.nl</EmailAddress>
+        </FlexBox>
+      <Year>&copy; {CurrentYear}</Year>
+    </FooterMetaContainer>
+    </Container>
   );
 }
 
