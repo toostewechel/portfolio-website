@@ -22,12 +22,80 @@ const Flex = styled("div", {
 
 function SoftwareStackTabs() {
   return (
-    <Tabs defaultValue="development">
+    <Tabs defaultValue="workflow">
       <TabsList>
+        <TabsTrigger value="workflow">Workflow</TabsTrigger>
         <TabsTrigger value="development">Development</TabsTrigger>
         <TabsTrigger value="design">Design</TabsTrigger>
-        <TabsTrigger value="workflow">Workflow</TabsTrigger>
       </TabsList>
+       <TabsContent value="workflow">
+        <FlexContainer>
+          <Flex>
+            <StyledLink
+              href="https://linear.app/"
+              src="/logo/linear-logo.png"
+              title="Linear"
+              description="Issue Tracking Tool"
+            />
+            <StyledLink
+              href="https://geticonjar.com/"
+              src="/logo/iconjar-logo.png"
+              title="IconJar"
+              description="Icon Organizer for MacOS"
+            />
+            <StyledLink
+              href="https://www.notion.so/"
+              src="/logo/notion-logo.png"
+              title="Notion"
+              description="Workspace for Notes, Docs and Tasks"
+            />
+            <StyledLink
+              href="https://codespace.app/"
+              src="/logo/codespace-logo.png"
+              title="Codespace"
+              description="Code Snippets Manager"
+            />
+            <StyledLink
+              href="https://roamresearch.com/"
+              src="/logo/roam-research-logo.png"
+              title="Roam Research"
+              description="Tool for Networked Thoughts"
+            />
+          </Flex>
+          <Flex>
+            <StyledLink
+              href="https://1password.com/"
+              src="/logo/1password-logo.png"
+              title="1Password"
+              description="Password Manager"
+            />
+            <StyledLink
+              href="https://wormhole.app/"
+              src="/logo/wormhole-logo.png"
+              title="Wormhole"
+              description="E2E Encrypted File Sharing"
+            />
+            <StyledLink
+              href="https://signal.org/"
+              src="/logo/signal-logo.png"
+              title="Signal"
+              description="E2E Encrypted Messaging"
+            />
+            <StyledLink
+              href="https://skiff.com/"
+              src="/logo/skiff-logo.png"
+              title="Skiff"
+              description="E2E Encrypted Mail, Pages and Drive"
+            />
+            <StyledLink
+              href="https://raycast.com/"
+              src="/logo/raycast-logo.png"
+              title="Raycast"
+              description="Supercharge Productivity"
+            />
+          </Flex>
+        </FlexContainer>
+      </TabsContent>
       <TabsContent value="development">
         <FlexContainer>
           <Flex>
@@ -112,74 +180,6 @@ function SoftwareStackTabs() {
               src="/logo/spline3d-logo.png"
               title="Spline 3D"
               description="3D Design Tool for the Web"
-            />
-          </Flex>
-        </FlexContainer>
-      </TabsContent>
-      <TabsContent value="workflow">
-        <FlexContainer>
-          <Flex>
-            <StyledLink
-              href="https://linear.app/"
-              src="/logo/linear-logo.png"
-              title="Linear"
-              description="Issue Tracking Tool"
-            />
-            <StyledLink
-              href="https://www.adobe.com/products/illustrator.html"
-              src="/logo/iconjar-logo.png"
-              title="IconJar"
-              description="Icon Organizer for MacOS"
-            />
-            <StyledLink
-              href="https://www.notion.so/"
-              src="/logo/notion-logo.png"
-              title="Notion"
-              description="Workspace for Notes, Docs and Tasks"
-            />
-            <StyledLink
-              href="https://codespace.app/"
-              src="/logo/codespace-logo.png"
-              title="Codespace"
-              description="Code Snippets Manager"
-            />
-            <StyledLink
-              href="https://roamresearch.com/"
-              src="/logo/roam-research-logo.png"
-              title="Roam Research"
-              description="Tool for Networked Thoughts"
-            />
-          </Flex>
-          <Flex>
-            <StyledLink
-              href="https://1password.com/"
-              src="/logo/1password-logo.png"
-              title="1Password"
-              description="Password Manager"
-            />
-            <StyledLink
-              href="https://wormhole.app/"
-              src="/logo/wormhole-logo.png"
-              title="Wormhole"
-              description="E2E Encrypted File Sharing"
-            />
-            <StyledLink
-              href="https://signal.org/"
-              src="/logo/signal-logo.png"
-              title="Signal"
-              description="E2E Encrypted Messaging"
-            />
-            <StyledLink
-              href="https://skiff.com/"
-              src="/logo/skiff-logo.png"
-              title="Skiff"
-              description="E2E Encrypted Mail, Pages and Drive"
-            />
-            <StyledLink
-              href="https://raycast.com/"
-              src="/logo/raycast-logo.png"
-              title="Raycast"
-              description="Supercharge Productivity"
             />
           </Flex>
         </FlexContainer>
