@@ -83,7 +83,7 @@ function SkillsetBlock() {
         <Image>
           <img
             style={{ maxWidth: "100%", height: "auto" }}
-            src="/images/skillset-placeholder.png"
+            src="/images/skillset-web.png"
           />
         </Image>
       </GridContainer>
