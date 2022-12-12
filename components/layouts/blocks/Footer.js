@@ -54,6 +54,11 @@ const SocialButtonIcon = styled("a", {
   },
 });
 
+const StyledImage = styled("img", {
+  width: "38px",
+  height: "38px",
+});
+
 function Footer() {
   return (
     <FooterContainer>
@@ -61,7 +66,7 @@ function Footer() {
         <StyledLogo src="/logo/logo.png" />
       </LogoContainer>
       <SocialsContainer>
-        <SocialButtonIcon>
+        <SocialButtonIcon href="">
           <GitHub size={19} />
         </SocialButtonIcon>
         <SocialButtonIcon>

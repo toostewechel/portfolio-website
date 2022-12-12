@@ -9,7 +9,7 @@ const StyledLink = styled("a", {
   color: "$violet10",
 
   "@bp2": {
-    fontSize: "$xl",
+    fontSize: "$bodyLarge",
   },
   "&:hover": {
     color: "$violet11",

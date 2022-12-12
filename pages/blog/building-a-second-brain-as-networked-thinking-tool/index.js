@@ -11,7 +11,7 @@ function Index() {
   return (
     <div ref={targetRef}>
       <ContentHeader targetRef={targetRef} />
-      <ContentLanding title="The Rise of the Unstoppable Decentralised and Semantic Web" />
+      <ContentLanding title="Build a Second Brain for Getting Things Out of Your Head" />
       <Spacer level={8} />
       <ContentBlock Content={Content} />
     </div>

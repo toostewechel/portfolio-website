@@ -66,8 +66,9 @@ function BlogpostsBlock() {
               year="2022"
             />
             <BlogTimelineCard
+              href="/blog/building-a-second-brain-as-networked-thinking-tool"
               image="/images/placeholder-timeline-item.png"
-              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
+              title="Building a Second Brain as Networked Thinking Tool"
               description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
               meta="Article • 20 min read"
               color="blue"

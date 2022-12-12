@@ -40,14 +40,16 @@ const StyledHeading = styled("h1", {
       3: {
         fontSize: "$3xl",
         fontWeight: "$extra-bold",
-        letterSpacing: "$tracking-tight",
+        letterSpacing: "$tracking-tighter",
         pt: "$spacing-05",
         pb: "$spacing-03",
       },
       4: {
         fontSize: "$2xl",
-        fontWeight: "$semi-bold",
-        letterSpacing: "$tracking-tight",
+        fontWeight: "$extra-bold",
+        letterSpacing: "$tracking-tighter",
+        pt: "$spacing-04",
+        pb: "$spacing-02",
       },
       5: {
         fontSize: "$xl",
