@@ -85,7 +85,7 @@ const BackgroundPattern = styled("div", {
   top: 96,
 });
 
-const Button = styled("button", {
+const Button = styled("a", {
   padding: "$spacing-04 $spacing-05",
   backgroundColor: "$violet11",
   color: "$violet2",
@@ -109,7 +109,7 @@ function LandingBlock() {
                 a structured, creative and visual way. I am passionate about
                 building valuable products that have a real impact.
               </Description>
-              <Button>Design Vision</Button>
+              <Button href="#">My Design Vision</Button>
             </ContentContainer>
           </LandingItem>
           <LandingItem>
