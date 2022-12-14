@@ -3,19 +3,6 @@ import ContentBlock from "../../layouts/blocks/ContentBlock.js";
 import Section from "../../layouts/blocks/Section.js";
 import Spacer from "../../layouts/blocks/Spacer.js";
 
-const Gradient = {
-  blue: "linear-gradient(0deg, rgba(0, 145, 255, 0.85), rgba(225, 240, 255, 0.25)) border-box",
-  violet:
-    "linear-gradient(0deg, rgba(189, 109, 255, 0.8), rgba(202, 138, 255, 0.25)) border-box",
-  crimson:
-    "linear-gradient(0deg, rgba(224, 49, 119, 0.85), rgba(224, 49, 119, 0.15)) border-box",
-  teal: "linear-gradient(0deg, rgba(5, 162, 194, 0.85), rgba(5, 162, 194, 0.15)) border-box",
-  green:
-    "linear-gradient(0deg, rgba(18, 165, 148, 0.85), rgba(18, 165, 148, 0.15)) border-box",
-  orange:
-    "linear-gradient(0deg, rgba(236, 94, 65, 0.85), rgba(236, 94, 65, 0.15)) border-box",
-};
-
 const CoreValuesWrapper = styled("div", {
   position: "relative",
   display: "flex",
@@ -23,24 +10,6 @@ const CoreValuesWrapper = styled("div", {
   maxWidth: "1600px",
   margin: "0 auto",
   padding: "$spacing-05 $none",
-});
-
-const CoreValuesBackground = styled("div", {
-  display: "none",
-  position: "absolute",
-  background: "url(/patterns/core-values-background-pattern.svg)",
-  width: "100%",
-  height: "164px",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  zIndex: -1,
-  borderRadius: "16px",
-  boxShadow: "$toolbar",
-  alignSelf: "center",
-
-  "@bp3": {
-    display: "flex",
-  },
 });
 
 const CoreValueItems = styled("ul", {
@@ -71,66 +40,122 @@ const CoreValueItem = styled("li", {
   },
 });
 
+const StyledPattern = styled("div", {
+  position: "absolute",
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
+  height: "32px",
+  width: "30px",
+  top: 0,
+  left: 0,
+  zIndex: -1,
+
+  "@bp4": {
+    top: -14,
+  left: -16,
+    height: "52px",
+    width: "50px",
+  },
+
+  variants: {
+    color: {
+      plum: {
+        backgroundImage: "url(/patterns/plum.svg)",
+      },
+      blue: {
+        backgroundImage: "url(/patterns/blue.svg)",
+      },
+      crimson: {
+        backgroundImage: "url(/patterns/crimson.svg)",
+      },
+      violet: {
+        backgroundImage: "url(/patterns/violet.svg)",
+      },
+      teal: {
+        backgroundImage: "url(/patterns/teal.svg)",
+      },
+      cyan: {
+        backgroundImage: "url(/patterns/cyan.svg)",
+      },
+    }
+  }
+})
+
 const CoreValueCard = styled("div", {
   position: "relative",
   display: "flex",
   flexDirection: "column",
   height: "100%",
   padding: "$spacing-06",
-  backgroundColor: "white",
   borderRadius: "16px",
+});
 
-  "&::before": {
-    content: "",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    borderRadius: "16px",
-    border: "8px solid transparent",
-    background: "linear-gradient(45deg, purple, orange) border-box",
-    "-webkit-mask":
-      "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-    "-webkit-mask-composite": "destination-out",
-    maskComposite: "exclude",
-  },
+const LabelContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "$spacing-03",
+  pb: "$spacing-04", 
+})
+
+const LabelIcon = styled("div", {
+  width: "16px",
+  height: "16px",
+  borderRadius: "100%", 
 
   variants: {
-    borderColor: {
-      blue: {
-        "&::before": {
-          background: `${Gradient.blue}`,
-        },
+    color: {
+      plum: {
+        backgroundColor: "$plum11",
       },
-      violet: {
-        "&::before": {
-          background: `${Gradient.violet}`,
-        },
+      blue: {
+        backgroundColor: "$blue11",
       },
       crimson: {
-        "&::before": {
-          background: `${Gradient.crimson}`,
-        },
+        backgroundColor: "$crimson11",
+      },
+      violet: {
+        backgroundColor: "$violet11",
       },
       teal: {
-        "&::before": {
-          background: `${Gradient.teal}`,
-        },
+        backgroundColor: "$teal11",
       },
-      green: {
-        "&::before": {
-          background: `${Gradient.green}`,
-        },
+      cyan: {
+        backgroundColor: "$cyan11",
+      }
+    }
+  }
+})
+
+const Label = styled("p", {
+  display: "flex",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+
+  variants: {
+    color: {
+      plum: {
+        color: "$plum11",
       },
-      orange: {
-        "&::before": {
-          background: `${Gradient.orange}`,
-        },
+      blue: {
+        color: "$blue11",
       },
-    },
-  },
-});
+      crimson: {
+        color: "$crimson11",
+      },
+      violet: {
+        color: "$violet11",
+      },
+      teal: {
+        color: "$teal11",
+      },
+      cyan: {
+        color: "$cyan11",
+      }
+    }
+  }
+})
 
 const ValueTitle = styled("h3", {
   fontSize: "$xl",
@@ -142,10 +167,38 @@ const ValueTitle = styled("h3", {
   mb: "$spacing-02",
 
   "@bp1": {
-    fontSize: "$xl",
-    mb: "$spacing-03",
+    fontSize: "$3xl",
+    mb: "$spacing-04",
   },
 });
+
+const ValueDescriptionBox = styled("div", {
+  ml: "6px",
+
+  variants: {
+    color: {
+      plum: {
+        borderLeft: "3px solid $plum11",
+      },
+      blue: {
+        borderLeft: "3px solid $blue11",
+      },
+      crimson: {
+        borderLeft: "3px solid $crimson11",
+      },
+      violet: {
+        borderLeft: "3px solid $violet11",
+      },
+      teal: {
+        borderLeft: "3px solid $teal11",
+      },
+      cyan: {
+        borderLeft: "3px solid $cyan11",
+      }
+
+    }
+  }
+})
 
 const ValueDescription = styled("p", {
   fontSize: "$base",
@@ -154,6 +207,7 @@ const ValueDescription = styled("p", {
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
+  pl: "$spacing-04",
 
   "@bp1": {
     fontSize: "$base",
@@ -170,57 +224,95 @@ function CoreValuesBlock() {
       />
       <Spacer level={6} />
       <CoreValuesWrapper>
-        <CoreValuesBackground />
         <CoreValueItems>
           <CoreValueItem>
-            <CoreValueCard borderColor="blue">
+            <CoreValueCard>
+              <StyledPattern color="plum" />
+              <LabelContainer>
+                <LabelIcon color="plum" />
+                <Label color="plum">Actions and words align</Label>
+              </LabelContainer>
               <ValueTitle>Reliable</ValueTitle>
-              <ValueDescription>
-                If someone ask me to do something I intend to keep my word
-              </ValueDescription>
+                <ValueDescriptionBox color="plum">
+                    <ValueDescription>
+                      I move with intent, keep my word and follow through, even on the little things, so clients and team members can put their trust in me
+                    </ValueDescription>
+                </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
-            <CoreValueCard borderColor="violet">
-              <ValueTitle>Curious</ValueTitle>
-              <ValueDescription>
-                I have a desire to explore, investigate and learn new things
-              </ValueDescription>
-            </CoreValueCard>
-          </CoreValueItem>
-          <CoreValueItem>
-            <CoreValueCard borderColor="crimson">
-              <ValueTitle>Seek to understand</ValueTitle>
-              <ValueDescription>
-                I have empathy for those around me and respect their point of
-                view
-              </ValueDescription>
-            </CoreValueCard>
-          </CoreValueItem>
-          <CoreValueItem>
-            <CoreValueCard borderColor="teal">
+            <CoreValueCard>
+              <StyledPattern color="blue" />
+              <LabelContainer>
+                <LabelIcon color="blue"/>
+                <Label color="blue">Circle of influence</Label>
+              </LabelContainer>
               <ValueTitle>Pro-active</ValueTitle>
+              <ValueDescriptionBox color="blue">
               <ValueDescription>
-                I don’t wait around but come up with new initiatives and
-                innovative ideas
+                I take responsibility and focus my efforts on new initiatives, innovative ideas and complex problems inside my circle of influence
               </ValueDescription>
+                </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
-            <CoreValueCard borderColor="green">
-              <ValueTitle>Think win-win</ValueTitle>
+            <CoreValueCard>
+              <StyledPattern color="crimson" />
+              <LabelContainer>
+                <LabelIcon color="crimson" />
+                <Label color="crimson">Dive into the unknown</Label>
+              </LabelContainer>
+              <ValueTitle>Curious</ValueTitle>
+              <ValueDescriptionBox color="crimson">
               <ValueDescription>
-                I always look for solutions that will benefit the majority
-                involved
+                I have a deep desire to explore, investigate and learn new things to understand the people and world around me
               </ValueDescription>
+                </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
-            <CoreValueCard borderColor="orange">
+            <CoreValueCard>
+              <StyledPattern color="violet" />
+              <LabelContainer>
+                <LabelIcon color="violet" />
+                <Label color="violet">Seek to understand</Label>
+              </LabelContainer>
+              <ValueTitle>Empathy</ValueTitle>
+              <ValueDescriptionBox color="violet">
+              <ValueDescription>
+                I have empathy for those around me and always try to understand their needs and perspectives first and foremost
+              </ValueDescription>
+                </ValueDescriptionBox>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard>
+              <StyledPattern color="teal" />
+              <LabelContainer>
+                <LabelIcon color="teal" />
+                <Label color="teal">Grow the pie together</Label>
+              </LabelContainer>
+              <ValueTitle>Win-Win</ValueTitle>
+              <ValueDescriptionBox color="teal">
+              <ValueDescription>
+                I always try to look for solutions that benefit the majority involved in order to collaborate more effectively
+              </ValueDescription>
+              </ValueDescriptionBox>
+            </CoreValueCard>
+          </CoreValueItem>
+          <CoreValueItem>
+            <CoreValueCard>
+              <StyledPattern color="cyan" />
+              <LabelContainer>
+                <LabelIcon color="cyan" />
+                <Label color="cyan">Put first things first</Label>
+              </LabelContainer>
               <ValueTitle>Autonomous</ValueTitle>
+              <ValueDescriptionBox color="cyan">
               <ValueDescription>
-                I intuitively prioritise work and hold myself accountable
+                I try to live by being driven by principles I value most instead of by (hidden) agendas and forces surrounding me 
               </ValueDescription>
+                </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
         </CoreValueItems>
