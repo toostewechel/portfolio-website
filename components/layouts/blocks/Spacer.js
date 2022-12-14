@@ -41,6 +41,12 @@ const StyledSpacer = styled("div", {
       12: {
         p: "$spacing-12 $none",
       },
+      13: {
+        p: "$spacing-13 $none",
+      },
+      14: {
+        p: "$spacing-14 $none",
+      }
     },
   },
 });
