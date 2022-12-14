@@ -24,21 +24,21 @@ function Index() {
       <Header />
       <Spacer level={12} />
       <LandingBlock />
-      <Spacer level={12} />
+      <Spacer level={13} />
       <CoreValuesBlock />
-      <Spacer level={12} />
+      <Spacer level={13} />
       <PageLayout>
         <ProjectsBlock />
       </PageLayout>
-      <Spacer level={12} />
+      <Spacer level={13} />
       <PageLayout>
         <SkillsetBlock />
       </PageLayout>
-      <Spacer level={12} />
+      <Spacer level={13} />
       <PageLayout>
         <ExperienceBlock />
       </PageLayout>
-      <Spacer level={12} />
+      <Spacer level={13} />
       <Spacer level={12} />
       <PageLayout>
         <BlogpostsBlock />

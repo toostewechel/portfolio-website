@@ -9,7 +9,7 @@ const CoreValuesWrapper = styled("div", {
   justifyContent: "center",
   maxWidth: "1600px",
   margin: "0 auto",
-  padding: "$spacing-05 $none",
+  padding: "$spacing-05 $spacing-05",
 });
 
 const CoreValueItems = styled("ul", {
