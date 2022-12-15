@@ -40,7 +40,7 @@ const Icon = styled("div", {
 
 const TitleContainer = styled("div", {
   borderRadius: "8px",
-  background: "rgba(2,0,16, 0.67)",
+  background: "rgba(2,0,16, 0.75)",
   padding: "$spacing-05 $spacing-04",
   letterSpacing: "$tracking-tight",
   boxShadow: "$smooth",
@@ -76,7 +76,7 @@ const CardDescription = styled("p", {
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
-  "-webkit-line-clamp": 3,
+  "-webkit-line-clamp": 4,
   "-webkit-box-orient": "vertical",
 });
 
@@ -98,7 +98,7 @@ const MetaInformation = styled("p", {
 function BlogTimelineCard(props) {
   return (
     <Container href={props.href}>
-      <Icon />
+      
       <ResponsiveImage src={props.image} />
       <TitleContainer>
         <CardTitle>{props.title}</CardTitle>

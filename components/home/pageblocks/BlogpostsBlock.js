@@ -52,7 +52,7 @@ function BlogpostsBlock() {
               href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
               image="/images/placeholder-timeline-item.png"
               title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-              description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
+              description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms"
               meta="Article • 20 min read"
               color="blue"
               category="Tech"
@@ -83,17 +83,18 @@ function BlogpostsBlock() {
               year="2021"
             />
             <BlogTimelineCard
-              image="/images/placeholder-timeline-item.png"
-              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-              description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
-              meta="Article • 20 min read"
-              color="blue"
-              category="Tech"
+              href="/blog/design-for-healthcare"
+              image="/blog/design-for-healthcare/cover.png"
+              title="Design Accessibile Experiences in the Healthcare Sector"
+              description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker."
+              meta="Article • 15 min read"
+              color="crimson"
+              category="Design"
             />
           </TimelineItem>
           <TimelineItem>
             <CardHeader color="blue" hasYear={false} alignment="left" />
-            <BlogTimelineCard background="/images/placeholder-timeline-item.png" />
+            <BlogTimelineCard background="/blog/design-for-healthcare/cover.png" />
           </TimelineItem>
           <TimelineItem>
             <CardHeader
@@ -106,7 +107,7 @@ function BlogpostsBlock() {
               image="/images/placeholder-timeline-item.png"
               title="The Rise of the Unstoppable, Decentralized and Semantic Web"
               description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
-              meta="Article • 20 min read"
+              meta="Article • 25 min read"
               color="blue"
               category="Tech"
             />

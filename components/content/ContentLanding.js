@@ -61,12 +61,12 @@ function ContentLanding(props) {
     <ContentContainer>
       <TitleWrapper>
         <BackgroundPattern />
-        <Tag color="blue" label="Tech" />
+        <Tag color={props.color} label={props.label} />
         <Heading as="h1" level={1} color="dark" title={props.title} />
-        <MetaInformation>19 October 2022 • 20 min read</MetaInformation>
+        <MetaInformation>{props.meta}</MetaInformation>
       </TitleWrapper>
       <LandingImageContainer>
-        <LandingImage src="/images/placeholder-blog.jpg" />
+        <LandingImage src={props.src} />
       </LandingImageContainer>
       <ContentMeta />
     </ContentContainer>
