@@ -46,7 +46,7 @@ const StyledSpacer = styled("div", {
       },
       14: {
         p: "$spacing-14 $none",
-      }
+      },
     },
   },
 });

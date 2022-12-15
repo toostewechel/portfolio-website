@@ -1,17 +1,15 @@
 import React from "react";
-import { styled }  from "../../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
 import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
 
-const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
-  
-})
+const StyledCollapsible = styled(CollapsiblePrimitive.Root, {});
 
 const StyledCollapsibleContent = styled(CollapsiblePrimitive.Content, {
   display: "block",
   width: "100%",
-})
+});
 
 export const Collapsible = StyledCollapsible;
 export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
@@ -22,7 +20,7 @@ const TriggerLink = styled("span", {
   gap: "2px",
   alignItems: "center",
   padding: "$none",
-})
+});
 
 const Label = styled("p", {
   fontSize: "$lg",
@@ -32,8 +30,8 @@ const Label = styled("p", {
 
   "@bp2": {
     fontSize: "$bodyLarge",
-  }
-})
+  },
+});
 
 const IconButton = styled("button", {
   borderRadius: "4px",
@@ -65,19 +63,19 @@ function ReadMore(props) {
   const [open, setOpen] = React.useState(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
-        <TriggerLink>
-          <Label>Read more</Label>
-          <CollapsibleTrigger asChild>
+      <TriggerLink>
+        <Label>Read more</Label>
+        <CollapsibleTrigger asChild>
           <IconButton>
             {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
           </IconButton>
-            </CollapsibleTrigger>
-        </TriggerLink>
+        </CollapsibleTrigger>
+      </TriggerLink>
       <CollapsibleContent>
         <p>Text that is closed</p>
       </CollapsibleContent>
     </Collapsible>
-  )
+  );
 }
 
 export default ReadMore;

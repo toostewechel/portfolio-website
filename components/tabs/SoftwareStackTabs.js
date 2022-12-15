@@ -28,7 +28,7 @@ function SoftwareStackTabs() {
         <TabsTrigger value="development">Development</TabsTrigger>
         <TabsTrigger value="design">Design</TabsTrigger>
       </TabsList>
-       <TabsContent value="workflow">
+      <TabsContent value="workflow">
         <FlexContainer>
           <Flex>
             <StyledLink

@@ -126,7 +126,8 @@ function MyApp({ Component, pageProps }) {
       subtitle: "View my LinkedIn profile",
       shortcut: ["t"],
       keywords: "linkedin profile",
-      perform: () => router.push("https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"),
+      perform: () =>
+        router.push("https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"),
       icon: <LinkedinIcon />,
       section: "Socials",
     },

@@ -19,7 +19,7 @@ const TitleWrapper = styled("div", {
   paddingBottom: "$spacing-13",
   maxWidth: "768px",
   m: "0 auto",
-})
+});
 
 const BackgroundPattern = styled("div", {
   width: "100%",

@@ -40,7 +40,7 @@ function ContentHeader(props) {
       <Box href="/">
         <StyledLogo src="/logo/logo.png" />
       </Box>
-     <ReadingProgress targetRef={props.targetRef} />
+      <ReadingProgress targetRef={props.targetRef} />
     </HeaderContainer>
   );
 }

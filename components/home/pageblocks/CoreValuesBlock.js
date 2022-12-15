@@ -52,7 +52,7 @@ const StyledPattern = styled("div", {
 
   "@bp4": {
     top: -14,
-  left: -16,
+    left: -16,
     height: "52px",
     width: "50px",
   },
@@ -77,9 +77,9 @@ const StyledPattern = styled("div", {
       cyan: {
         backgroundImage: "url(/patterns/cyan.svg)",
       },
-    }
-  }
-})
+    },
+  },
+});
 
 const CoreValueCard = styled("div", {
   position: "relative",
@@ -95,13 +95,13 @@ const LabelContainer = styled("div", {
   flexDirection: "row",
   alignItems: "center",
   gap: "$spacing-03",
-  pb: "$spacing-04", 
-})
+  pb: "$spacing-04",
+});
 
 const LabelIcon = styled("div", {
   width: "16px",
   height: "16px",
-  borderRadius: "100%", 
+  borderRadius: "100%",
 
   variants: {
     color: {
@@ -122,10 +122,10 @@ const LabelIcon = styled("div", {
       },
       cyan: {
         backgroundColor: "$cyan11",
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
 
 const Label = styled("p", {
   display: "flex",
@@ -152,10 +152,10 @@ const Label = styled("p", {
       },
       cyan: {
         color: "$cyan11",
-      }
-    }
-  }
-})
+      },
+    },
+  },
+});
 
 const ValueTitle = styled("h3", {
   fontSize: "$xl",
@@ -194,11 +194,10 @@ const ValueDescriptionBox = styled("div", {
       },
       cyan: {
         borderLeft: "3px solid $cyan11",
-      }
-
-    }
-  }
-})
+      },
+    },
+  },
+});
 
 const ValueDescription = styled("p", {
   fontSize: "$base",
@@ -233,26 +232,30 @@ function CoreValuesBlock() {
                 <Label color="plum">Actions and words align</Label>
               </LabelContainer>
               <ValueTitle>Reliable</ValueTitle>
-                <ValueDescriptionBox color="plum">
-                    <ValueDescription>
-                      I move with intent, keep my word and follow through, even on the little things, so clients and team members can put their trust in me
-                    </ValueDescription>
-                </ValueDescriptionBox>
+              <ValueDescriptionBox color="plum">
+                <ValueDescription>
+                  I move with intent, keep my word and follow through, even on
+                  the little things, so clients and team members can put their
+                  trust in me
+                </ValueDescription>
+              </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
               <StyledPattern color="blue" />
               <LabelContainer>
-                <LabelIcon color="blue"/>
+                <LabelIcon color="blue" />
                 <Label color="blue">Circle of influence</Label>
               </LabelContainer>
               <ValueTitle>Pro-active</ValueTitle>
               <ValueDescriptionBox color="blue">
-              <ValueDescription>
-                I take responsibility and focus my efforts on new initiatives, innovative ideas and complex problems inside my circle of influence
-              </ValueDescription>
-                </ValueDescriptionBox>
+                <ValueDescription>
+                  I take responsibility and focus my efforts on new initiatives,
+                  innovative ideas and complex problems inside my circle of
+                  influence
+                </ValueDescription>
+              </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
@@ -264,10 +267,11 @@ function CoreValuesBlock() {
               </LabelContainer>
               <ValueTitle>Curious</ValueTitle>
               <ValueDescriptionBox color="crimson">
-              <ValueDescription>
-                I have a deep desire to explore, investigate and learn new things to understand the people and world around me
-              </ValueDescription>
-                </ValueDescriptionBox>
+                <ValueDescription>
+                  I have a deep desire to explore, investigate and learn new
+                  things to understand the people and world around me
+                </ValueDescription>
+              </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
@@ -279,10 +283,11 @@ function CoreValuesBlock() {
               </LabelContainer>
               <ValueTitle>Empathy</ValueTitle>
               <ValueDescriptionBox color="violet">
-              <ValueDescription>
-                I have empathy for those around me and always try to understand their needs and perspectives first and foremost
-              </ValueDescription>
-                </ValueDescriptionBox>
+                <ValueDescription>
+                  I have empathy for those around me and always try to
+                  understand their needs and perspectives first and foremost
+                </ValueDescription>
+              </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
           <CoreValueItem>
@@ -294,9 +299,10 @@ function CoreValuesBlock() {
               </LabelContainer>
               <ValueTitle>Win-Win</ValueTitle>
               <ValueDescriptionBox color="teal">
-              <ValueDescription>
-                I always try to look for solutions that benefit the majority involved in order to collaborate more effectively
-              </ValueDescription>
+                <ValueDescription>
+                  I always try to look for solutions that benefit the majority
+                  involved in order to collaborate more effectively
+                </ValueDescription>
               </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
@@ -309,10 +315,11 @@ function CoreValuesBlock() {
               </LabelContainer>
               <ValueTitle>Autonomous</ValueTitle>
               <ValueDescriptionBox color="cyan">
-              <ValueDescription>
-                I try to live by being driven by principles I value most instead of by (hidden) agendas and forces surrounding me 
-              </ValueDescription>
-                </ValueDescriptionBox>
+                <ValueDescription>
+                  I try to live by being driven by principles I value most
+                  instead of by (hidden) agendas and forces surrounding me
+                </ValueDescription>
+              </ValueDescriptionBox>
             </CoreValueCard>
           </CoreValueItem>
         </CoreValueItems>

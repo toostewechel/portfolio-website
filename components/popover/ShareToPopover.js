@@ -10,7 +10,7 @@ import CloseLineIcon from "remixicon-react/CloseLineIcon";
 
 const StyledPopoverContent = styled(PopoverContent, {
   minWidth: "232px",
-})
+});
 
 const IconButton = styled("button", {
   display: "inline-flex",

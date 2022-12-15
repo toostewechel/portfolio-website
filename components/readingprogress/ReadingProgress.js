@@ -87,7 +87,7 @@ const Icon = styled("div", {
 
   "&:hover": {
     color: "$violet3",
-  }
+  },
 });
 
 const ReadingProgress = ({ targetRef }) => {

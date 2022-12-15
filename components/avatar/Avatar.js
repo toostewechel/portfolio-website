@@ -27,7 +27,7 @@ const Title = styled("h3", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
-  
+
   color: "$mauve12",
 
   "@bp4": {

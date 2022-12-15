@@ -63,11 +63,17 @@ export const a = MDXLink;
 
 function ResponsiveImage(props) {
   return (
-    <img
-      alt={props.alt}
-      style={{ maxWidth: "100%", height: "auto" }}
-      {...props}
-    />
+    <div style={{ borderRadius: "16px", paddingBottom: "32px", paddingTop: "32px", }}>
+      <img
+        alt={props.alt}
+        style={{
+          maxWidth: "100%",
+          height: "auto",
+          
+        }}
+        {...props}
+      />
+    </div>
   );
 }
 
@@ -91,7 +97,6 @@ function MDXCodeBlock(props) {
 
 export const pre = MDXCodeBlock;
 
-
 const StyledBlockquote = styled("blockquote", {
   pl: "$spacing-04",
   pt: "$spacing-08",
@@ -113,7 +118,7 @@ const StyledBlockquote = styled("blockquote", {
 
     "@bp2": {
       left: "-64px",
-    }
+    },
   },
 
   "& > p": {
@@ -123,18 +128,14 @@ const StyledBlockquote = styled("blockquote", {
     lineHeight: "$compact",
     color: "$violet11",
 
-    "@bp2" : {
+    "@bp2": {
       fontSize: "$2xl",
-    }
+    },
   },
-})
+});
 
 function Blockquote(props) {
-  return (
-    <StyledBlockquote>
-      {props.children}
-    </StyledBlockquote>
-  );
+  return <StyledBlockquote>{props.children}</StyledBlockquote>;
 }
 
 export const blockquote = Blockquote;

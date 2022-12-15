@@ -13,7 +13,7 @@ const StyledLink = styled("a", {
   transition: "background-position 0.2s ease 0s",
   backgroundPosition: "0% 70%",
   backgroundSize: "100% 250%",
-  
+
   "@bp2": {
     fontSize: "$bodyLarge",
   },

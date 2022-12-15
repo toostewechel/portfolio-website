@@ -6,7 +6,7 @@ import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
 const Container = styled("div", {
   padding: "$spacing-04",
-})
+});
 
 const FooterContainer = styled("div", {
   maxWidth: "100%",
@@ -62,7 +62,7 @@ const SocialButtonIcon = styled("a", {
   },
   "@bp2": {
     size: "$7",
-  }
+  },
 });
 
 const FooterMetaContainer = styled("div", {
@@ -73,64 +73,64 @@ const FooterMetaContainer = styled("div", {
   pt: "$spacing-04",
   borderTop: "solid 1px $gray6",
   maxWidth: "100%",
-})
+});
 
 const FlexBox = styled("div", {
   display: "flex",
   flexDirection: "row",
   gap: "$spacing-03",
   alignItems: "center",
-})
+});
 
 const Circle = styled("div", {
   width: "16px",
   height: "16px",
   borderRadius: "100%",
   backgroundColor: "$violet11",
-})
+});
 
 const EmailAddress = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
   color: "$gray11",
-})
+});
 
 const Year = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
   color: "$gray11",
-})
+});
 
-const CurrentYear = new Date().getFullYear()
+const CurrentYear = new Date().getFullYear();
 
 function Footer() {
   return (
     <Container>
-    <FooterContainer>
-      <LogoContainer>
-        <StyledLogo src="/logo/logo.png" />
-      </LogoContainer>
-      <SocialsContainer>
-        <SocialButtonIcon href="https://twitter.com/boonikad93">
-          <TwitterFillIcon />
-        </SocialButtonIcon>
-        <SocialButtonIcon href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/">
-          <LinkedinFillIcon />
-        </SocialButtonIcon>
-        <SocialButtonIcon href="https://github.com/toostewechel">
-          <GithubFillIcon />
-        </SocialButtonIcon>
-      </SocialsContainer>
-    </FooterContainer>
-    <FooterMetaContainer>
-      <FlexBox>
-        <Circle />
-      <EmailAddress>info@snapshotslab.nl</EmailAddress>
+      <FooterContainer>
+        <LogoContainer>
+          <StyledLogo src="/logo/logo.png" />
+        </LogoContainer>
+        <SocialsContainer>
+          <SocialButtonIcon href="https://twitter.com/boonikad93">
+            <TwitterFillIcon />
+          </SocialButtonIcon>
+          <SocialButtonIcon href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/">
+            <LinkedinFillIcon />
+          </SocialButtonIcon>
+          <SocialButtonIcon href="https://github.com/toostewechel">
+            <GithubFillIcon />
+          </SocialButtonIcon>
+        </SocialsContainer>
+      </FooterContainer>
+      <FooterMetaContainer>
+        <FlexBox>
+          <Circle />
+          <EmailAddress>info@snapshotslab.nl</EmailAddress>
         </FlexBox>
-      <Year>&copy; {CurrentYear}</Year>
-    </FooterMetaContainer>
+        <Year>&copy; {CurrentYear}</Year>
+      </FooterMetaContainer>
     </Container>
   );
 }

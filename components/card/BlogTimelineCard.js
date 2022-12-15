@@ -98,7 +98,6 @@ const MetaInformation = styled("p", {
 function BlogTimelineCard(props) {
   return (
     <Container href={props.href}>
-      
       <ResponsiveImage src={props.image} />
       <TitleContainer>
         <CardTitle>{props.title}</CardTitle>
