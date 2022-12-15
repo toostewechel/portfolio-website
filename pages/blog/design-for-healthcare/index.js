@@ -24,9 +24,15 @@ function Index() {
       <Spacer level={9} />
       <ContentBlock Content={Chapter1} />
       <Spacer level={9} />
-      <ContentOpening />
+      <ContentOpening
+        backgroundImage="url(/blog/design-for-healthcare/chapter-2.png)"
+        title="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
+        description="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
+        label="Read Next Chapter"
+        id="#chapter2"
+      />
       <Spacer level={9} />
-      <ContentBlock Content={Chapter2} />
+      <ContentBlock id="chapter2" Content={Chapter2} />
       <Footer />
     </div>
   );

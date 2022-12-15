@@ -63,16 +63,17 @@ export const a = MDXLink;
 
 function ResponsiveImage(props) {
   return (
-    <div style={{ borderRadius: "16px", paddingBottom: "32px", paddingTop: "32px", }}>
-      <img
-        alt={props.alt}
-        style={{
-          maxWidth: "100%",
-          height: "auto",
-          
-        }}
-        {...props}
-      />
+    <div style={{ paddingBottom: "32px", paddingTop: "32px" }}>
+      <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+        <img
+          alt={props.alt}
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+          }}
+          {...props}
+        />
+      </div>
     </div>
   );
 }

@@ -13,7 +13,6 @@ const BackgroundImage = styled("div", {
   height: "100vh",
 
   "@bp2": {
-    backgroundImage: "url(/blog/design-for-healthcare/chapter-2.png)",
     backgroundSize: "65%",
     backgroundPositionX: "right",
     backgroundPositionY: "center",
@@ -63,7 +62,7 @@ const Description = styled("p", {
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
-  mb: "$spacing-07",
+  mb: "$spacing-08",
 
   "@bp1": {
     fontSize: "$xl",
@@ -81,35 +80,30 @@ const ContentContainer = styled("div", {
 
 const Button = styled("a", {
   padding: "$spacing-04 $spacing-05",
-  backgroundColor: "$violet11",
-  color: "$violet2",
+  backgroundColor: "$crimson10",
+  color: "$crimson1",
   fontFamily: "$default",
   fontSize: "$lg",
   fontWeight: "semi-bold",
   borderRadius: "8px",
+
+  "&:hover": {
+    color: "$crimson3",
+    backgroundColor: "$crimson11",
+  }
 });
 
 function ContentOpening(props) {
   return (
     <Background>
-      <BackgroundImage>
+      <BackgroundImage style={{ backgroundImage: props.backgroundImage }}>
         <LandingWrapper>
           <LandingItems>
             <LandingItem>
               <ContentContainer>
-                <Heading
-                  as="h2"
-                  level={2}
-                  color="dark"
-                  title="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
-                />
-                <Description>
-                  In de afgelopen jaren is in onze samenleving veel
-                  dienstverlening gedigitaliseerd. Maar zodra iets online staat,
-                  betekent dit niet gelijk dat het beter toegankelijk is of
-                  gemakkelijker in gebruik.
-                </Description>
-                <Button href="#">Lees deel 1</Button>
+                <Heading as="h2" level={2} color="dark" title={props.title} />
+                <Description>{props.description}</Description>
+                <Button href={props.id}>{props.label}</Button>
               </ContentContainer>
             </LandingItem>
           </LandingItems>

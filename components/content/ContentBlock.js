@@ -13,9 +13,9 @@ const ContentStyle = styled("div", {
   width: "100%",
 });
 
-function ContentBlock({ Content }) {
+function ContentBlock({ Content, id }) {
   return (
-    <ContentContainer>
+    <ContentContainer id={id}>
       <MDXProvider components={{ ...components }}>
         <ContentStyle>
           <Content />
