@@ -2,8 +2,8 @@ import { styled } from "../../stitches.config.js";
 
 const TagContainer = styled("div", {
   display: "inline-flex",
-  borderRadius: "8px",
-  padding: "$spacing-02 $spacing-05",
+  borderRadius: "6px",
+  padding: "$spacing-02 $spacing-04",
   backgroundColor: "$gray3",
   color: "$gray11",
   flexShrink: 0,
@@ -14,14 +14,17 @@ const TagContainer = styled("div", {
       blue: {
         color: "$blue11",
         backgroundColor: "$blue3",
+        border: "solid 1px $blue4",
       },
       plum: {
         color: "$plum11",
         backgroundColor: "$plum3",
+        border: "solid 1px $plum4",
       },
       crimson: {
         color: "$crimson11",
         backgroundColor: "$crimson3",
+        border: "solid 1px $crimson4",
       },
     },
   },
@@ -30,7 +33,9 @@ const TagContainer = styled("div", {
 const TagLabel = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
-  letterSpacing: "$tracking-tight",
+  fontSize: "$xs",
+  textTransform: "uppercase",
+  letterSpacing: "$tracking-wider",
 });
 
 function Tag(props) {

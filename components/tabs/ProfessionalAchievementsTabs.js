@@ -15,16 +15,14 @@ function ProfessionalAchievementsTab() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="blue"
+              color="plum"
               hasYear={true}
               alignment="left"
               year="2022"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="blue"
+              tagColor="plum"
               tagLabel="Full Time"
               title="Product Owner"
               subtitle="Jouw Omgeving"
@@ -36,16 +34,14 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="blue"
+              color="plum"
               hasYear={true}
               alignment="left"
               year="2020"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="blue"
+              tagColor="plum"
               tagLabel="Full Time"
               title="Product Designer"
               subtitle="Jouw Omgeving"
@@ -57,17 +53,15 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="blue"
+              color="plum"
               hasYear={true}
               alignment="left"
               year="2018"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/jouw-omgeving-logo.png"
-              tagColor="blue"
-              tagLabel="Intern"
+              tagColor="plum"
+              tagLabel="Full time"
               title="Graduate Assignment"
               subtitle="Jouw Omgeving"
               description="I developed and applied a conceptual framework to translate and embed an existing healthcare 'curriculum' into the Jouw Omgeving e-health application."
@@ -93,7 +87,7 @@ function ProfessionalAchievementsTab() {
               tagLabel="Part Time"
               title="Logistics"
               subtitle="Jumbo Supermarkten"
-              description="Responsible for different logistic related activities in the distribution centre."
+              description="Responsible for different logistic related activities in the distribution centre focused on maintaining, receiving, and delivering goods on time."
               duration="2015 - 2009"
               location="Raalte"
               hasLink={false}
@@ -105,23 +99,23 @@ function ProfessionalAchievementsTab() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="plum"
+              color="crimson"
               hasYear={true}
               alignment="left"
               year="2018"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/university-twente-logo.png"
-              tagColor="plum"
+              tagColor="crimson"
               tagLabel="Master"
               title="Master Track"
               subtitle="Management of Product Development"
-              description="Learned how to think outside the box, identify the real problem that needs solving and to effectively and efficiently establish the right development process together with relevant stakeholders."
+              description="Learned how to think outside the box, identify real problems that needs solving and to effectively and efficiently establish the right development process together with relevant stakeholders."
               duration="2018 - 2015"
               location="Enschede"
-              hasLink={false}
+              hasLink={true}
+              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
+              tooltipLabel="Download Thesis"
             />
           </TimelineItem>
           <TimelineItem>
@@ -132,13 +126,11 @@ function ProfessionalAchievementsTab() {
               year="2015"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/university-twente-logo.png"
               tagColor="plum"
               tagLabel="Minor"
-              title="Minor Medical & Sports Physiology"
-              subtitle="Biomedical Design"
+              title="Biomedical Design"
+              subtitle="Minor Medical & Sports Physiology"
               description="Learned the physical and psychological factors involved in sport and exercise participation: ranging from promoting an active healty lifestyle, to prevention and rehabilitation of injuries. "
               duration="2015"
               location="Enschede"
@@ -147,16 +139,14 @@ function ProfessionalAchievementsTab() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="plum"
+              color="crimson"
               hasYear={true}
               alignment="right"
               year="2011"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/university-twente-logo.png"
-              tagColor="plum"
+              tagColor="crimson"
               tagLabel="Bachelor"
               title="Bachelor Track"
               subtitle="Industrial Design Engineering"
@@ -164,7 +154,7 @@ function ProfessionalAchievementsTab() {
               duration="2015 - 2011"
               location="Enschede"
               hasLink={true}
-              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
+              href="/publications/Oostewechel_Tom_Bachelor_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -174,17 +164,15 @@ function ProfessionalAchievementsTab() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="plum"
+              color="blue"
               hasYear={false}
               alignment="left"
               year="2022"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/udemy-logo.png"
-              tagColor="plum"
-              tagLabel="Development"
+              tagColor="blue"
+              tagLabel="Tech"
               title="Git Complete"
               subtitle="Mastering the Modern Workflow"
               description="Learned to build web applications using modern skills, tools and all the best-practices that companies need in developers."
@@ -194,13 +182,11 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader color="plum" hasYear={false} />
+            <CardHeader color="blue" hasYear={false} />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/udemy-logo.png"
-              tagColor="plum"
-              tagLabel="Development"
+              tagColor="blue"
+              tagLabel="Tech"
               title="JavaScript"
               subtitle="Basics for Beginners"
               description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
@@ -210,13 +196,11 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader color="plum" hasYear={false} />
+            <CardHeader color="blue" hasYear={false} />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/udemy-logo.png"
-              tagColor="plum"
-              tagLabel="Development"
+              tagColor="blue"
+              tagLabel="Tech"
               title="React Front to Back"
               subtitle="Master the React Concepts"
               description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
@@ -233,11 +217,9 @@ function ProfessionalAchievementsTab() {
               year="2020"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/udemy-logo.png"
               tagColor="plum"
-              tagLabel="Agile Development"
+              tagLabel="Workflow"
               title="Robust Scrum Product Owner"
               subtitle="Learning the Product Owner skills"
               description="Learned about the mindset, characteristics and different responsibilities of being a Product Owner in a Scrum Development Team. "
