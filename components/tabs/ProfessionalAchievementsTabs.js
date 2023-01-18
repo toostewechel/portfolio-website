@@ -22,6 +22,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
+              href="https://www.jouwomgeving.nl/"
               tagColor="plum"
               tagLabel="Full Time"
               title="Product Owner"
@@ -41,6 +42,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
+              href="https://www.jouwomgeving.nl/"
               tagColor="plum"
               tagLabel="Full Time"
               title="Product Designer"
@@ -60,6 +62,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
+              href="https://www.jouwomgeving.nl/"
               tagColor="plum"
               tagLabel="Full time"
               title="Graduate Assignment"
@@ -80,9 +83,8 @@ function ProfessionalAchievementsTab() {
               year="2015"
             />
             <CredentialTimelineCard
-              gradient="darkblue"
-              position="topRight"
               logo="/logo/jumbo-supermarkten-logo.png"
+              href="https://www.jumbo.com/service/het-bedrijf-jumbo"
               tagColor="blue"
               tagLabel="Part Time"
               title="Logistics"
@@ -114,7 +116,7 @@ function ProfessionalAchievementsTab() {
               duration="2018 - 2015"
               location="Enschede"
               hasLink={true}
-              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
+              publication="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -146,6 +148,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
+              href="https://www.utwente.nl/onderwijs/bachelor/opleidingen/industrial-design-engineering/"
               tagColor="crimson"
               tagLabel="Bachelor"
               title="Bachelor Track"
@@ -154,7 +157,7 @@ function ProfessionalAchievementsTab() {
               duration="2015 - 2011"
               location="Enschede"
               hasLink={true}
-              href="/publications/Oostewechel_Tom_Bachelor_Report.pdf"
+              publication="/publications/Oostewechel_Tom_Bachelor_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -165,7 +168,7 @@ function ProfessionalAchievementsTab() {
           <TimelineItem id="timeline-item">
             <CardHeader
               color="blue"
-              hasYear={false}
+              hasYear={true}
               alignment="left"
               year="2022"
             />
@@ -182,15 +185,20 @@ function ProfessionalAchievementsTab() {
             />
           </TimelineItem>
           <TimelineItem>
-            <CardHeader color="blue" hasYear={false} />
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2021"
+            />
             <CredentialTimelineCard
               logo="/logo/udemy-logo.png"
               tagColor="blue"
               tagLabel="Tech"
-              title="JavaScript"
-              subtitle="Basics for Beginners"
-              description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
-              duration="8 hours"
+              title="React Front to Back"
+              subtitle="Master the React Concepts"
+              description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
+              duration="12 hours"
               location="Udemy Online"
               hasLink={false}
             />
@@ -201,10 +209,10 @@ function ProfessionalAchievementsTab() {
               logo="/logo/udemy-logo.png"
               tagColor="blue"
               tagLabel="Tech"
-              title="React Front to Back"
-              subtitle="Master the React Concepts"
-              description="Learned the basic programming concepts of the React Framework, while progressively building real world applications."
-              duration="12 hours"
+              title="JavaScript"
+              subtitle="Basics for Beginners"
+              description="Learned the basic syntax and programming concepts of JavaScript by completing 30 different exercises and challenges."
+              duration="8 hours"
               location="Udemy Online"
               hasLink={false}
             />

@@ -13,6 +13,7 @@ const Background = styled("div", {
 const BackgroundImage = styled("div", {
   margin: 0,
   height: "100vh",
+  backgroundSize: "0%",
 
   "@bp2": {
     backgroundSize: "65%",
@@ -20,10 +21,16 @@ const BackgroundImage = styled("div", {
     backgroundPositionY: "center",
     backgroundRepeat: "no-repeat",
   },
+  "@bp5": {
+    backgroundSize: "70%",
+    backgroundPositionX: "right",
+    backgroundPositionY: "center",
+    backgroundRepeat: "no-repeat",
+  },
 });
 
 const LandingWrapper = styled("div", {
-  maxWidth: "1234px",
+  maxWidth: "1440px",
   margin: "0 auto",
   padding: "0 $spacing-03",
   display: "flex",

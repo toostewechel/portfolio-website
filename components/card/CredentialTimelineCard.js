@@ -24,8 +24,9 @@ const Container = styled("a", {
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "all, 300ms ease-out",
-    border: "1px solid $violet4",
-    boxShadow: "$smooth",
+    border: "1px solid $gray4",
+    boxShadow: "$toolbar",
+    backgroundColor: "$violet1",
   },
 });
 
@@ -173,7 +174,7 @@ const StyledLink = styled("a", {
 
 function CredentialTimelineCard(props) {
   return (
-    <Container gradient={props.gradient}>
+    <Container gradient={props.gradient} href={props.href}>
       <CardHeaderContainer>
         <Logo src={props.logo} />
         <Tag color={props.tagColor} label={props.tagLabel} />
@@ -204,7 +205,7 @@ function CredentialTimelineCard(props) {
           <Provider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <StyledLink href={props.href}>
+                <StyledLink href={props.publication}>
                   <DownloadCloud2LineIcon />
                 </StyledLink>
               </TooltipTrigger>
