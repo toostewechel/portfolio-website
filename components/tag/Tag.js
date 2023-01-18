@@ -26,6 +26,16 @@ const TagContainer = styled("div", {
         backgroundColor: "$crimson3",
         border: "solid 1px $crimson4",
       },
+      gray: {
+        color: "$gray11",
+        backgroundColor: "$gray4",
+        border: "solid 1px $gray5",
+      },
+      violet: {
+        color: "$violet11",
+        backgroundColor: "$violet3",
+        border: "solid 1px $violet4",
+      },
     },
   },
 });
