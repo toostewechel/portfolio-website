@@ -1,11 +1,13 @@
 import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
+import Tag from "../tag/Tag.js";
 
 const Background = styled("div", {
   margin: 0,
   height: "100vh",
-  background:
-    "linear-gradient(29.21deg, #F76190 14.44%, rgba(247, 97, 144, 0.25) 118.03%)",
+  background: "$gray2",
+  borderTop: "4px solid $gray4",
+  borderBottom: "4px solid $gray4",
 });
 
 const BackgroundImage = styled("div", {
@@ -62,16 +64,11 @@ const Description = styled("p", {
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
-  mb: "$spacing-08",
+  mb: "$spacing-09",
 
   "@bp1": {
     fontSize: "$xl",
   },
-});
-
-const StyledImage = styled("img", {
-  width: "100%",
-  height: "auto",
 });
 
 const ContentContainer = styled("div", {
@@ -80,16 +77,16 @@ const ContentContainer = styled("div", {
 
 const Button = styled("a", {
   padding: "$spacing-04 $spacing-05",
-  backgroundColor: "$crimson10",
-  color: "$crimson1",
+  backgroundColor: "$violet10",
+  color: "$violet2",
   fontFamily: "$default",
   fontSize: "$lg",
   fontWeight: "semi-bold",
   borderRadius: "8px",
 
   "&:hover": {
-    color: "$crimson3",
-    backgroundColor: "$crimson11",
+    color: "$violet3",
+    backgroundColor: "$violet11",
   },
 });
 
@@ -101,6 +98,7 @@ function ContentOpening(props) {
           <LandingItems>
             <LandingItem>
               <ContentContainer>
+                <Tag color={props.tagColor} label={props.tagLabel} />
                 <Heading as="h2" level={2} color="dark" title={props.title} />
                 <Description>{props.description}</Description>
                 <Button href={props.id}>{props.label}</Button>
