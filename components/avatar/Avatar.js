@@ -25,10 +25,10 @@ const FlexWrapper = styled("div", {
 
 const Title = styled("h3", {
   fontSize: "$lg",
-  fontWeight: "$extra-bold",
+  fontWeight: "$semi-bold",
   fontFamily: "$header",
-
-  color: "$mauve12",
+  letterSpacing: "$tracking-tight",
+  color: "$gray12",
 
   "@bp4": {
     fontSize: "$lg",
@@ -39,7 +39,8 @@ const Description = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$gray11",
+  color: "$gray10",
+  letterSpacing: "$tracking-tight",
 
   "@bp4": {
     fontSize: "$sm",
