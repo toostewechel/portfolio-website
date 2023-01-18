@@ -11,7 +11,13 @@ function Index() {
   return (
     <div ref={targetRef}>
       <ContentHeader targetRef={targetRef} />
-      <ContentLanding title="Build a Second Brain for Getting Things Out of Your Head" />
+      <ContentLanding
+        color="crimson"
+        label="Design"
+        title="Build a Second Brain for Getting Things Out of Your Head"
+        src="/blog/design-for-healthcare/landing.png"
+        meta="20 December 2020 • 15 min read"
+      />
       <Spacer level={8} />
       <ContentBlock Content={Content} />
       <Spacer level={8} />

@@ -65,7 +65,7 @@ const CardTitle = styled("h3", {
 
   "@bp1": {
     fontSize: "$2xl",
-  }
+  },
 });
 
 const CardSubtitle = styled("p", {

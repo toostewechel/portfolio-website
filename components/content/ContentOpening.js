@@ -90,7 +90,7 @@ const Button = styled("a", {
   "&:hover": {
     color: "$crimson3",
     backgroundColor: "$crimson11",
-  }
+  },
 });
 
 function ContentOpening(props) {

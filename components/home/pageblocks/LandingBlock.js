@@ -1,6 +1,4 @@
 import { styled } from "../../../stitches.config.js";
-import ProfileCard from "../profilecard/ProfileCard.js";
-import Header from "../../layouts/blocks/Header.js";
 import Section from "../../layouts/blocks/Section.js";
 import AnimatedGradientHeading from "./AnimatedGradientHeading.js";
 
@@ -36,21 +34,6 @@ const LandingItem = styled("div", {
   },
 });
 
-const Heading = styled("h1", {
-  fontSize: "$3xl",
-  fontWeight: "$black",
-  fontFamily: "$header",
-  lineHeight: "$none",
-  letterSpacing: "$tracking-tighter",
-  color: "$mauve12",
-  mb: "$spacing-03",
-
-  "@bp1": {
-    fontSize: "$5xl",
-    mb: "$spacing-06",
-  },
-});
-
 const Description = styled("p", {
   fontSize: "$base",
   fontWeight: "$regular",
@@ -59,7 +42,7 @@ const Description = styled("p", {
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
-  mb: "$spacing-07",
+  mb: "$spacing-09",
 
   "@bp1": {
     fontSize: "$xl",
@@ -107,7 +90,8 @@ function LandingBlock() {
               <Description>
                 I create digital products by <em>un•tang•ling</em> complexity in
                 a structured, creative and visual way. I am passionate about
-                building valuable products that have a real impact.
+                building innovative and valuable products that have a real
+                impact.
               </Description>
               <Button href="#">My Design Vision</Button>
             </ContentContainer>
