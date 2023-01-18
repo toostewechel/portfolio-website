@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import ReadingProgress from "../readingprogress/ReadingProgress.js";
-import React, { useState } from "react";
+import React from "react";
+import ShareToPopover from "../popover/ShareToPopover.js";
 
 const HeaderContainer = styled("div", {
   display: "flex",
@@ -29,6 +30,12 @@ const Box = styled("a", {
   },
 });
 
+const FlexBox = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "2px",
+})
+
 const StyledLogo = styled("img", {
   width: "100%",
   height: "auto",
@@ -40,7 +47,10 @@ function ContentHeader(props) {
       <Box href="/">
         <StyledLogo src="/logo/logo.png" />
       </Box>
-      <ReadingProgress targetRef={props.targetRef} />
+      <FlexBox>
+        <ShareToPopover whatsapp={props.whatsapp} facebook={props.facebook} twitter={props.twitter} linkedin={props.linkedin} />
+        <ReadingProgress targetRef={props.targetRef} />
+      </FlexBox>
     </HeaderContainer>
   );
 }
