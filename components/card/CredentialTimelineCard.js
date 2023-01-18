@@ -11,9 +11,8 @@ import {
 } from "../tooltip/Tooltip.js";
 
 const Container = styled("a", {
-  borderRadius: "16px",
+  borderRadius: "12px",
   overflow: "hidden",
-  position: "relative",
   display: "flex",
   flexDirection: "column",
   height: "100%",
@@ -27,41 +26,6 @@ const Container = styled("a", {
     transition: "all, 300ms ease-out",
     border: "1px solid $violet4",
     boxShadow: "$smooth",
-  },
-
-  variants: {
-    gradient: {
-      darkblue: {
-        backgroundImage: "url(/patterns/darkblue-noise-background.png)",
-        backgroundSize: "cover",
-      },
-      darkred: {
-        backgroundImage: "url(/patterns/darkred-noise-background.png)",
-        backgroundSize: "cover",
-      },
-    },
-  },
-});
-
-const BackgroundPattern = styled("img", {
-  position: "absolute",
-  backgroundRepeat: "no-repeat",
-  width: "324px",
-  height: "324px",
-  opacity: 0.4,
-  variants: {
-    position: {
-      topRight: {
-        position: "absolute",
-        top: -162,
-        right: -162,
-      },
-      bottomRight: {
-        position: "absolute",
-        bottom: -162,
-        right: -162,
-      },
-    },
   },
 });
 
@@ -92,18 +56,23 @@ const CardTitle = styled("h3", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
-  color: "$mauve1",
+  color: "$gray12",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
   "-webkit-line-clamp": 1,
   "-webkit-box-orient": "vertical",
+
+  "@bp1": {
+    fontSize: "$2xl",
+  }
 });
 
 const CardSubtitle = styled("p", {
   fontFamily: "$default",
-  fontSize: "lg",
-  color: "$mauve6",
+  fontSize: "$sm",
+  color: "$gray10",
+  mt: "-2px",
 });
 
 const DescriptionContainer = styled("div", {
@@ -115,7 +84,7 @@ const CardDescription = styled("p", {
   fontWeight: "$regular",
   fontSize: "$sm",
   lineHeight: "$base",
-  color: "$mauve1",
+  color: "$gray12",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -152,7 +121,7 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "$violet4",
+  color: "$gray8",
   width: "16px",
   height: "16px",
   mr: "$spacing-01",
@@ -170,7 +139,7 @@ const Label = styled("p", {
   fontWeight: "$regular",
   fontFamily: "$default",
   letterSpacing: "$tracking-normal",
-  color: "$violet4",
+  color: "$gray9",
   mr: "$spacing-04",
 
   "@bp1": {
@@ -205,10 +174,6 @@ const StyledLink = styled("a", {
 function CredentialTimelineCard(props) {
   return (
     <Container gradient={props.gradient}>
-      <BackgroundPattern
-        src="/patterns/circular-background-pattern.svg"
-        position={props.position}
-      />
       <CardHeaderContainer>
         <Logo src={props.logo} />
         <Tag color={props.tagColor} label={props.tagLabel} />
