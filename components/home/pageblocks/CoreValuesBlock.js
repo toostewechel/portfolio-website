@@ -173,27 +173,41 @@ const ValueTitle = styled("h3", {
 });
 
 const ValueDescriptionBox = styled("div", {
-  ml: "6px",
+  ml: "4px",
+  p: "$spacing-04",
+  borderRadius: "8px",
 
   variants: {
     color: {
       plum: {
-        borderLeft: "3px solid $plum11",
+        borderLeft: "4px solid $plum11",
+        backgroundColor: "$plum2",
+        color: "$plum12",
       },
       blue: {
         borderLeft: "3px solid $blue11",
+        backgroundColor: "$blue2",
+        color: "$blue12",
       },
       crimson: {
         borderLeft: "3px solid $crimson11",
+        backgroundColor: "$crimson2",
+        color: "$crimson12",
       },
       violet: {
         borderLeft: "3px solid $violet11",
+        backgroundColor: "$violet2",
+        color: "$violet12",
       },
       teal: {
         borderLeft: "3px solid $teal11",
+        backgroundColor: "$teal2",
+        color: "$teal12",
       },
       cyan: {
         borderLeft: "3px solid $cyan11",
+        backgroundColor: "$cyan2",
+        color: "$cyan12",
       },
     },
   },
@@ -205,7 +219,7 @@ const ValueDescription = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$mauve12",
+  // color: "$mauve12",
   pl: "$spacing-04",
 
   "@bp1": {
@@ -301,7 +315,7 @@ function CoreValuesBlock() {
               <ValueDescriptionBox color="teal">
                 <ValueDescription>
                   I always try to look for solutions that benefit the majority
-                  involved in order to collaborate more effectively
+                  involved in order to collaborate more effectively with others
                 </ValueDescription>
               </ValueDescriptionBox>
             </CoreValueCard>
