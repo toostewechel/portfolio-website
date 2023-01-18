@@ -62,7 +62,17 @@ function MDXLink(props) {
 export const a = MDXLink;
 
 function ResponsiveImage(props) {
-  return <img alt={props.alt} {...props} />;
+  return (
+    <img
+      alt={props.alt}
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+        borderRadius: "8px",
+      }}
+      {...props}
+    />
+  );
 }
 
 export const img = ResponsiveImage;
