@@ -18,9 +18,19 @@ const IconButton = styled("button", {
   justifyContent: "center",
   color: "$violet11",
   size: "$7",
+  margin: "$spacing-02",
   borderRadius: "8px",
+  willChange: "transform",
+  transition:
+    "transform 300ms ease-in, background 300ms ease-in",
+  background: "transparent",
 
-  "&:hover": { backgroundColor: "$violet3" },
+  "&:hover": {
+    transition:
+      "transform 300ms ease-out, background 300ms ease-out",
+    background: "$violet3",
+  },
+
   "&:active": { backgroundColor: "$violet4" },
 });
 
@@ -31,7 +41,15 @@ const ShareLinkContainer = styled("a", {
   gap: "$spacing-03",
   borderRadius: "4px",
   p: "$spacing-03 $spacing-02",
-  "&:hover": { backgroundColor: "$violet3" },
+  transition:
+    "transform 300ms ease-in, background 300ms ease-in",
+  background: "transparent",
+
+  "&:hover": {
+    transition:
+      "transform 300ms ease-out, background 300ms ease-out",
+    background: "$violet3",
+  },
 });
 
 const SocialIcon = styled("img", {
@@ -54,14 +72,7 @@ const Title = styled("p", {
   marginBottom: "$spacing-02",
 });
 
-const shareTo = {
-  whatsapp: "https://www.whatsapp.com/",
-  facebook: "https://www.facebook.com/",
-  twitter: "https://www.twitter.com/",
-  linkedIn: "https://www.linkedin.com/",
-};
-
-function ShareToPopover() {
+function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -71,19 +82,19 @@ function ShareToPopover() {
       </PopoverTrigger>
       <StyledPopoverContent>
         <Title>Share</Title>
-        <ShareLinkContainer href={shareTo.whatsapp} target="_blank">
+        <ShareLinkContainer href={props.whatsapp} target="_blank">
           <SocialIcon src="/logo/whatsapp-logo.svg" />
           <Label>Whatsapp</Label>
         </ShareLinkContainer>
-        <ShareLinkContainer href={shareTo.facebook} target="_blank">
+        <ShareLinkContainer href={props.facebook} target="_blank">
           <SocialIcon src="/logo/facebook-logo.svg" />
           <Label>Facebook</Label>
         </ShareLinkContainer>
-        <ShareLinkContainer href={shareTo.twitter} target="_blank">
+        <ShareLinkContainer href={props.twitter} target="_blank">
           <SocialIcon src="/logo/twitter-logo.svg" />
           <Label>Twitter</Label>
         </ShareLinkContainer>
-        <ShareLinkContainer href={shareTo.linkedIn} target="_blank">
+        <ShareLinkContainer href={props.linkedin} target="_blank">
           <SocialIcon src="/logo/linked-in-logo.svg" />
           <Label>LinkedIn</Label>
         </ShareLinkContainer>

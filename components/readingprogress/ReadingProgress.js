@@ -9,25 +9,23 @@ import {
 } from "../tooltip/Tooltip.js";
 
 const ReadingProgressContainer = styled("div", {
-  display: "none",
+  display: "flex",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "8px",
   padding: "$spacing-02",
   gap: "$spacing-03",
-  // background:
-  //   "linear-gradient(0.41deg, #3F1ABC 0.36%, rgba(63, 26, 188, 0.65) 99.65%)",
-
-  "@bp2": {
-    display: "flex",
-  },
 });
 
 const ProgressBarContainer = styled("div", {
-  display: "flex",
+  display: "none",
   flexDirection: "row",
   alignItems: "center",
   gap: "$spacing-01",
+
+  "@bp2": {
+    display: "flex",
+  }
 });
 
 const ProgressLabel = styled("p", {
@@ -58,19 +56,17 @@ const IconLink = styled("a", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "$spacing-03",
+  padding: "$spacing-04",
   willChange: "transform",
   transition:
-    "transform 300ms ease-in, background 300ms ease-in, scale 300ms ease-in",
+    "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    scale: 1.05,
     transition:
-      "transform 300ms ease-out, background 300ms ease-out, scale 300ms ease-out",
-    background: "linear-gradient(180deg, $violetA10, $crimsonA6)",
-    boxShadow: "$smooth",
-    color: "$violet3",
+      "transform 300ms ease-out, background 300ms ease-out",
+    background: "$violet3",
+    color: "$violet11",
   },
 });
 
@@ -80,14 +76,6 @@ const Icon = styled("div", {
   justifyContent: "center",
   size: "$5",
   color: "$violet11",
-
-  "@bp1": {
-    size: "$5",
-  },
-
-  "&:hover": {
-    color: "$violet3",
-  },
 });
 
 const ReadingProgress = ({ targetRef }) => {
