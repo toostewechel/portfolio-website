@@ -6,6 +6,7 @@ const FlexContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   columnGap: "$spacing-05",
+  mt: "$spacing-04",
 
   "@bp3": {
     flexDirection: "row",
