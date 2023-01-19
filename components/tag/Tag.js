@@ -14,27 +14,27 @@ const TagContainer = styled("div", {
       blue: {
         color: "$blue11",
         backgroundColor: "$blue3",
-        border: "solid 1px $blue4",
+        border: "solid 2px $blue5",
       },
       plum: {
         color: "$plum11",
         backgroundColor: "$plum3",
-        border: "solid 1px $plum4",
+        border: "solid 2px $plum5",
       },
       crimson: {
         color: "$crimson11",
         backgroundColor: "$crimson3",
-        border: "solid 1px $crimson4",
+        border: "solid 2px $crimson5",
       },
       gray: {
         color: "$gray11",
         backgroundColor: "$gray4",
-        border: "solid 1px $gray5",
+        border: "solid 2px $gray5",
       },
       violet: {
         color: "$violet11",
         backgroundColor: "$violet3",
-        border: "solid 1px $violet4",
+        border: "solid 2px $violet5",
       },
     },
   },

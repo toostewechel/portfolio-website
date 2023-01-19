@@ -31,7 +31,8 @@ const Icon = styled("div", {
   height: "38px",
   position: "absolute",
   borderRadius: "100%",
-  boxShadow: "$smooth",
+  boxShadow: "$inset",
+  background: "rgba(0,0,0, 0.10)",
   top: 16,
   left: 16,
 });

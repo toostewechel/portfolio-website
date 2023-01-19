@@ -24,9 +24,9 @@ const Container = styled("a", {
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "all, 300ms ease-out",
-    border: "1px solid $gray4",
+    border: "1px solid $gray7",
     boxShadow: "$toolbar",
-    backgroundColor: "$violet1",
+    backgroundColor: "$gray1",
   },
 });
 
@@ -123,13 +123,13 @@ const DecorativeIcon = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   color: "$gray8",
-  width: "16px",
-  height: "16px",
+  width: "17px",
+  height: "17px",
   mr: "$spacing-01",
 
   "@bp1": {
-    width: "19px",
-    height: "19px",
+    width: "20px",
+    height: "20px",
     mr: "$spacing-02",
   },
 });
@@ -139,13 +139,15 @@ const Label = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
   fontFamily: "$default",
-  letterSpacing: "$tracking-normal",
+  letterSpacing: "$tracking-tight",
   color: "$gray9",
   mr: "$spacing-04",
+  mt: "1px",
 
   "@bp1": {
     fontSize: "$sm",
     mr: "$spacing-05",
+  
   },
 });
 

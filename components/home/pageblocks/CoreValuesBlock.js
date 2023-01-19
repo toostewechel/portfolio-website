@@ -181,32 +181,32 @@ const ValueDescriptionBox = styled("div", {
     color: {
       plum: {
         borderLeft: "4px solid $plum11",
-        backgroundColor: "$plum2",
+        // backgroundColor: "$plum2",
         color: "$plum12",
       },
       blue: {
         borderLeft: "3px solid $blue11",
-        backgroundColor: "$blue2",
+        // backgroundColor: "$blue2",
         color: "$blue12",
       },
       crimson: {
         borderLeft: "3px solid $crimson11",
-        backgroundColor: "$crimson2",
+        // backgroundColor: "$crimson2",
         color: "$crimson12",
       },
       violet: {
         borderLeft: "3px solid $violet11",
-        backgroundColor: "$violet2",
+        // backgroundColor: "$violet2",
         color: "$violet12",
       },
       teal: {
         borderLeft: "3px solid $teal11",
-        backgroundColor: "$teal2",
+        // backgroundColor: "$teal2",
         color: "$teal12",
       },
       cyan: {
         borderLeft: "3px solid $cyan11",
-        backgroundColor: "$cyan2",
+        // backgroundColor: "$cyan2",
         color: "$cyan12",
       },
     },
@@ -219,7 +219,7 @@ const ValueDescription = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  // color: "$mauve12",
+  color: "$mauve12",
   pl: "$spacing-04",
 
   "@bp1": {

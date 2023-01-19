@@ -30,12 +30,16 @@ const Icon = styled("div", {
   justifyContent: "center",
   width: "38px",
   height: "38px",
-  background: "rgba(2,0,16, 0.67)",
   position: "absolute",
   borderRadius: "100%",
-  boxShadow: "$smooth",
+  boxShadow: "$inset",
+  background: "rgba(0,0,0, 0.10)",
   top: 16,
   left: 16,
+});
+
+const IconSize = styled("p", {
+  fontSize: "$2xl",
 });
 
 const TitleContainer = styled("div", {
@@ -51,6 +55,7 @@ const TitleContainer = styled("div", {
 });
 
 const CardTitle = styled("h3", {
+  fontSize: "$xl",
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -98,6 +103,12 @@ const MetaInformation = styled("p", {
 function BlogTimelineCard(props) {
   return (
     <Container href={props.href}>
+       <Icon>
+        <IconSize>
+          {props.dutch && <img src="/icons/dutch-flag.svg" />}
+          {props.english && <img src="/icons/british-flag.svg" />}
+        </IconSize>
+      </Icon>
       <ResponsiveImage src={props.image} />
       <TitleContainer>
         <CardTitle>{props.title}</CardTitle>

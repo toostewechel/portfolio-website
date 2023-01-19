@@ -60,7 +60,7 @@ function Index() {
           label="Design"
           title="Design Accessible Experiences for the Healthcare Sector"
           src="/blog/design-for-healthcare/landing.png"
-          meta="20-12-2020 • 15 min read"
+          meta="20 December 2020"
         />
         <Spacer level={9} />
         <ContentBlock Content={Chapter1} />
