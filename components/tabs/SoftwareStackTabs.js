@@ -18,7 +18,7 @@ const Flex = styled("div", {
   flex: 1,
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-04",
+  gap: "$spacing-05",
 });
 
 function SoftwareStackTabs() {
