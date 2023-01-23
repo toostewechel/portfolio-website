@@ -1,6 +1,8 @@
 import { styled } from "../../../stitches.config.js";
 import React from "react";
 import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
+import CMDK from "../../cmdk/CMDK.tsx";
+import CommandDialog from "../../cmdk/CommandDialog.js";
 
 const HeaderContainer = styled("div", {
   display: "flex",
@@ -14,7 +16,7 @@ const HeaderContainer = styled("div", {
   },
 });
 
-const Box = styled("a", {
+const LogoBox = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -24,6 +26,12 @@ const Box = styled("a", {
     width: "232px",
   },
 });
+
+const Box = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "8px",
+})
 
 const StyledLogo = styled("img", {
   width: "100%",
@@ -81,16 +89,13 @@ let command = String.fromCodePoint(8984);
 function Header() {
   return (
     <HeaderContainer>
-      <Box href="/">
+      <LogoBox href="/">
         <StyledLogo src="/logo/logo.png" />
-      </Box>
-      <SearchBoxButton>
-        <SearchLabel>Search...</SearchLabel>
-        <ShortcutContainer>
-          <ShortcutLabel>{`${command}K`}</ShortcutLabel>
-        </ShortcutContainer>
-      </SearchBoxButton>
+      </LogoBox>
+      <Box>
+      <CommandDialog />
       <AvatarStatusBadgePopover />
+        </Box>
     </HeaderContainer>
   );
 }
