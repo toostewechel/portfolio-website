@@ -49,7 +49,9 @@ const StyledCommandGroup = styled(Command.Group, {
   userSelect: "none",
   fontSize: "$sm",
   fontFamily: "$header",
-  color: "$mauve11",
+  fontWeight: "$medium",
+  letterSpacing: "$tracking-tight",
+  color: "$gray10",
   padding: "0 8px",
   flexDirection: "column",
   alignItems: "start",
@@ -88,27 +90,31 @@ const StyledItem = styled(Command.Item, {
   },
   '&:active': {
     transitionProperty: "background",
-    background: "$gray3",
+    background: "$violet4",
   },
 })
 
 const StyledShortcutsContainer = styled("div", {
   display: "flex",
   marginLeft: "auto",
-  gap: "8px",
+  gap: "4px",
 })
 
 const StyledShortcut = styled("kdb", {
   fontFamily: "$default",
-  fontSize: "$sm",
+  fontSize: "$xs",
+  fontWeight: "$medium",
   textTransform: "uppercase",
   minWidth: "20px",
-  padding: "4px",
   height: "20px",
+  padding: "4px",
   borderRadius: "4px",
-  color: "$gray11",
-  background: "$gray3",
+  color: "$blue11",
+  background: "$blue3",
   display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "solid 2px $blue5",
   
 })
 
@@ -121,11 +127,9 @@ export const CommandItem = StyledItem;
 export default function CMDK() {
   const ref = React.useRef<HTMLDivElement | null>(null)
   const [inputValue, setInputValue] = React.useState('')
-
   const [pages, setPages] = React.useState<string[]>(['home'])
   const activePage = pages[pages.length - 1]
   const isHome = activePage === 'home'
-
   const [open, setOpen] = React.useState(false)
 
   // Toggle the menu when ⌘K is pressed
@@ -135,7 +139,6 @@ export default function CMDK() {
         setOpen((open) => !open)
       }
     }
-
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
   }, [])
@@ -211,39 +214,39 @@ function Home({ searchProjects, searchBlog }: { searchProjects: Function, search
   return (
     <>
       <CommandGroup heading="Projects">
-        <CommandItem
-          shortcut="S P"
+        <Item
+          shortcut="P"
           onSelect={() => {
             searchProjects()
           }}
         >
           <ProjectsIcon />
-          Search Projects...
-        </CommandItem>
+          Search Projects ...
+        </Item>
       </CommandGroup>
-      <CommandGroup heading="Blog">
+      <CommandGroup heading="Blog Posts">
         <Item 
-          shortcut="⇧ P"
+          shortcut="B"
           onSelect={() => {
             searchBlog()
           }}
         >
-          <TeamsIcon />
-          Search Blog Posts...
+          <BlogIcon />
+          Search Blog Posts ...
         </Item>
       </CommandGroup>
       <CommandGroup heading="Socials">
         <Item shortcut="⇧ D">
-          <DocsIcon />
-          Search Docs...
+          <TwitterIcon />
+          View Twitter Profile ...
         </Item>
         <Item>
-          <FeedbackIcon />
-          Send Feedback...
+          <GithubIcon />
+          View GitHub Profile ...
         </Item>
         <Item>
-          <ContactIcon />
-          Contact Support
+          <LinkedInIcon />
+          View LinkedIn Profile ...
         </Item>
       </CommandGroup>
     </>
@@ -266,12 +269,26 @@ function Projects() {
 function BlogPosts() {
   return (
     <>
-      <Item>Blog 1</Item>
-      <Item>Blog 2</Item>
-      <Item>Blog 3</Item>
-      <Item>Blog 4</Item>
-      <Item>Blog 5</Item>
-      <Item>Blog 6</Item>
+      <Item>
+        <BlogIcon />
+        Blog 1
+      </Item>
+      <Item>
+        <BlogIcon />
+        Blog 2
+      </Item>
+      <Item>
+        <BlogIcon />
+        Blog 3
+      </Item>
+      <Item>
+        <BlogIcon />
+        Blog 4
+      </Item>
+      <Item>
+        <BlogIcon />
+        Blog 5
+      </Item>
     </>
   )
 }
@@ -291,7 +308,7 @@ function Item({
       {shortcut && (
         <StyledShortcutsContainer cmdk-vercel-shortcuts="">
           {shortcut.split(' ').map((key) => {
-            return <kbd key={key}>{key}</kbd>
+            return <StyledShortcut key={key}>{key}</StyledShortcut>
           })}
         </StyledShortcutsContainer>
       )}
@@ -302,22 +319,7 @@ function Item({
 
 function ProjectsIcon() {
   return (
-    <svg
-      fill="none"
-      height="24"
-      shapeRendering="geometricPrecision"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M3 3h7v7H3z"></path>
-      <path d="M14 3h7v7h-7z"></path>
-      <path d="M14 14h7v7h-7z"></path>
-      <path d="M3 14h7v7H3z"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
   )
 }
 
@@ -340,24 +342,9 @@ function PlusIcon() {
   )
 }
 
-function TeamsIcon() {
+function BlogIcon() {
   return (
-    <svg
-      fill="none"
-      height="24"
-      shapeRendering="geometricPrecision"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
-      <path d="M16 3.13a4 4 0 010 7.75"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
   )
 }
 
@@ -379,61 +366,20 @@ function CopyIcon() {
   )
 }
 
-function DocsIcon() {
+function TwitterIcon() {
   return (
-    <svg
-      fill="none"
-      height="24"
-      shapeRendering="geometricPrecision"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
-      <path d="M14 2v6h6"></path>
-      <path d="M16 13H8"></path>
-      <path d="M16 17H8"></path>
-      <path d="M10 9H8"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
   )
 }
 
-function FeedbackIcon() {
+function GithubIcon() {
   return (
-    <svg
-      fill="none"
-      height="24"
-      shapeRendering="geometricPrecision"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
   )
 }
 
-function ContactIcon() {
+function LinkedInIcon() {
   return (
-    <svg
-      fill="none"
-      height="24"
-      shapeRendering="geometricPrecision"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
-      width="24"
-    >
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-      <path d="M22 6l-10 7L2 6"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
   )
 }
