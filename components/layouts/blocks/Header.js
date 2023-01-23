@@ -31,6 +31,7 @@ const Box = styled("div", {
   display: "flex",
   flexDirection: "row",
   gap: "8px",
+  alignItems: "center",
 })
 
 const StyledLogo = styled("img", {
@@ -93,9 +94,9 @@ function Header() {
         <StyledLogo src="/logo/logo.png" />
       </LogoBox>
       <Box>
-      <CommandDialog />
-      <AvatarStatusBadgePopover />
-        </Box>
+        <CommandDialog />
+        <AvatarStatusBadgePopover />
+      </Box>
     </HeaderContainer>
   );
 }

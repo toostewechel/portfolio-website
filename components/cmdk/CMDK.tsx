@@ -1,5 +1,122 @@
 import React from 'react'
+import { styled } from "../../stitches.config.js";
 import { Command } from 'cmdk'
+
+const StyledCommand = styled(Command, {
+  maxWidth: "640px",
+  width: "100%",
+  padding: "8px",
+  background: "white",
+  overflow: "hidden",
+  fontFamily: "$default",
+  transition: "transform 100ms ease",
+})
+
+const StyledCommandInput = styled(Command.Input, {
+  fontFamily: "$default",
+  fontSize: "$base",
+  fontWeigth: "$regular",
+  width: "100%",
+  border: "none",
+  outline: "none",
+  padding: "8px 8px 12px 8px",
+  borderBottom: "1px solid $gray6",
+  marginBottom: "16px",
+  borderRadius: 0,
+
+  "&::placeholder": {
+    color: "$gray9",
+  }
+})
+
+const StyledBadge = styled("div", {
+  display: "inline-flex",
+  alignItems: "center",
+  padding: "2px 8px",
+  fontSize: "$xs",
+  color: "$blue11",
+  backgroundColor: "$blue3",
+  border: "solid 2px $blue5",
+  borderRadius: "4px",
+  margin: "4px 0 4px 4px",
+  userSelect: "none",
+  textTransform: "uppercase",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+})
+
+const StyledCommandGroup = styled(Command.Group, {
+  userSelect: "none",
+  fontSize: "$sm",
+  fontFamily: "$header",
+  color: "$mauve11",
+  padding: "0 8px",
+  flexDirection: "column",
+  alignItems: "start",
+  marginBottom: "12px",
+  width: "100%",
+})
+
+const StyledItem = styled(Command.Item, {
+  contentVisibility: "auto",
+  cursor: "pointer",
+  borderRadius: "8px",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  fontWeight: "$regular",
+  letterSpacing: "$tracking-tight",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "8px",
+  padding: "12px 12px",
+  marginTop: "4px",
+  color: "$mauve11",
+  userSelect: "none",
+  willChange: "background, color",
+  transition: "all 150ms ease",
+  transitionProperty: "none",
+  width: "100%",
+
+  '&[aria-selected="true"]': {
+    background: "$gray2",
+    color: "$mauve12",
+  },
+  '&[aria-disabled="true"]': {
+    color: "$gray8",
+    cursor: "not-allowed",
+  },
+  '&:active': {
+    transitionProperty: "background",
+    background: "$gray3",
+  },
+})
+
+const StyledShortcutsContainer = styled("div", {
+  display: "flex",
+  marginLeft: "auto",
+  gap: "8px",
+})
+
+const StyledShortcut = styled("kdb", {
+  fontFamily: "$default",
+  fontSize: "$sm",
+  textTransform: "uppercase",
+  minWidth: "20px",
+  padding: "4px",
+  height: "20px",
+  borderRadius: "4px",
+  color: "$gray11",
+  background: "$gray3",
+  display: "inline-flex",
+  
+})
+
+// Exports
+export const CommandDialog = StyledCommand;
+export const CommandInput = StyledCommandInput;
+export const CommandGroup = StyledCommandGroup;
+export const CommandItem = StyledItem;
 
 export default function CMDK() {
   const ref = React.useRef<HTMLDivElement | null>(null)
@@ -45,31 +162,15 @@ export default function CMDK() {
     [inputValue.length, isHome, popPage],
   )
 
-  function bounce() {
-    if (ref.current) {
-      ref.current.style.transform = 'scale(0.96)'
-      setTimeout(() => {
-        if (ref.current) {
-          ref.current.style.transform = ''
-        }
-      }, 100)
-
-      setInputValue('')
-    }
-  }
-
   return (
     <div>
-      <Command
+      <CommandDialog
         className="vercel"
         open={open} 
         onOpenChange={setOpen} 
         label="Global Command Menu"
         ref={ref}
         onKeyDown={(e: React.KeyboardEvent) => {
-          if (e.key === 'Enter') {
-            bounce()
-          }
 
           if (isHome || inputValue.length) {
             return
@@ -78,40 +179,39 @@ export default function CMDK() {
           if (e.key === 'Backspace') {
             e.preventDefault()
             popPage()
-            bounce()
           }
         }}
       >
         <div>
           {pages.map((p) => (
-            <div key={p} cmdk-vercel-badge="">
+            <StyledBadge key={p} >
               {p}
-            </div>
+            </StyledBadge>
           ))}
         </div>
-        <Command.Input
-          className="vercel"
+        <CommandInput
           autoFocus
-          placeholder="What do you need?"
+          placeholder="What are you looking for?"
           onValueChange={(value) => {
             setInputValue(value)
           }}
         />
         <Command.List>
           <Command.Empty>No results found.</Command.Empty>
-          {activePage === 'home' && <Home searchProjects={() => setPages([...pages, 'projects'])} />}
+          {activePage === 'home' && <Home searchProjects={() => setPages([...pages, 'projects'])} searchBlog={() => setPages([...pages, 'blog'])} />}
           {activePage === 'projects' && <Projects />}
+          {activePage === 'blog' && <BlogPosts />}
         </Command.List>
-      </Command>
+      </CommandDialog>
     </div>
   )
 }
 
-function Home({ searchProjects }: { searchProjects: Function }) {
+function Home({ searchProjects, searchBlog }: { searchProjects: Function, searchBlog: Function }) {
   return (
     <>
-      <Command.Group heading="Projects">
-        <Item
+      <CommandGroup heading="Projects">
+        <CommandItem
           shortcut="S P"
           onSelect={() => {
             searchProjects()
@@ -119,23 +219,20 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         >
           <ProjectsIcon />
           Search Projects...
-        </Item>
-        <Item>
-          <PlusIcon />
-          Create New Project...
-        </Item>
-      </Command.Group>
-      <Command.Group heading="Teams">
-        <Item shortcut="⇧ P">
+        </CommandItem>
+      </CommandGroup>
+      <CommandGroup heading="Blog">
+        <Item 
+          shortcut="⇧ P"
+          onSelect={() => {
+            searchBlog()
+          }}
+        >
           <TeamsIcon />
-          Search Teams...
+          Search Blog Posts...
         </Item>
-        <Item>
-          <PlusIcon />
-          Create New Team...
-        </Item>
-      </Command.Group>
-      <Command.Group heading="Help">
+      </CommandGroup>
+      <CommandGroup heading="Socials">
         <Item shortcut="⇧ D">
           <DocsIcon />
           Search Docs...
@@ -148,7 +245,7 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           <ContactIcon />
           Contact Support
         </Item>
-      </Command.Group>
+      </CommandGroup>
     </>
   )
 }
@@ -166,6 +263,19 @@ function Projects() {
   )
 }
 
+function BlogPosts() {
+  return (
+    <>
+      <Item>Blog 1</Item>
+      <Item>Blog 2</Item>
+      <Item>Blog 3</Item>
+      <Item>Blog 4</Item>
+      <Item>Blog 5</Item>
+      <Item>Blog 6</Item>
+    </>
+  )
+}
+
 function Item({
   children,
   shortcut,
@@ -176,16 +286,16 @@ function Item({
   onSelect?: (value: string) => void
 }) {
   return (
-    <Command.Item onSelect={onSelect}>
+    <CommandItem onSelect={onSelect}>
       {children}
       {shortcut && (
-        <div cmdk-vercel-shortcuts="">
+        <StyledShortcutsContainer cmdk-vercel-shortcuts="">
           {shortcut.split(' ').map((key) => {
             return <kbd key={key}>{key}</kbd>
           })}
-        </div>
+        </StyledShortcutsContainer>
       )}
-    </Command.Item>
+    </CommandItem>
   )
 }
 

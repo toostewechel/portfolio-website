@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 //Import global CSS styles
 import "../styles/global.css";
 import "../styles/fonts.css";
-import "../styles/cmdk/vercel.scss";
+import "../styles/cmdk/vercel.css";
 import "../styles/cmdk/styles.css";
 
 //Global Command Menu

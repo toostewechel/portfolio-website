@@ -22,7 +22,7 @@ const StyledDialogOverlay = styled(DialogPrimitive.Overlay, {
   position: "fixed",
   inset: 0,
   "@media (prefers-reduced-motion: no-preference)": {
-    animationDuration: "150ms",
+    animationDuration: "400ms",
     animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
     willChange: "transform, opacity",
     '&[data-state="open"]': { animationName: fadeIn },
@@ -41,7 +41,6 @@ const StyledDialogContent = styled(DialogPrimitive.Content, {
   width: "90vw",
   maxWidth: "640px",
   maxHeight: "85vh",
-  padding: "12px",
 })
 
 const StyledDialogTitle = styled(DialogPrimitive.Title, {
@@ -60,28 +59,32 @@ const StyledDialogDescription = styled(DialogPrimitive.Description, {
 })
 
 const IconButton = styled("button", {
-  display: "inline-flex",
+  display: "flex",
+  flexDirection: "row",
+  gap: "8px",
   alignItems: "center",
   justifyContent: "center",
-  color: "$violet11",
-  size: "$7",
-  margin: "$spacing-02",
-  borderRadius: "8px",
+  color: "$mauve9",
+  padding: "$spacing-03 $spacing-04",
+  borderRadius: "6px",
   willChange: "transform",
   transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
     transition: "transform 300ms ease-out, background 300ms ease-out",
-    background: "$violet3",
+    backgroundColor: "$gray2",
   },
 
   "&:active": { backgroundColor: "$violet4" },
 });
 
-const Icon = styled("div", {
-  $size: "$7",
-});
+const ButtonLabel = styled("div", {
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  fontSize: "$sm",
+  color: "$mauve11",
+})
 
 // Exports
 export const Dialog = StyledDialog;
@@ -96,14 +99,17 @@ export const DialogClose = DialogPrimitive.Close;
 const CommandDialog = () => (
   <Dialog>
     <DialogTrigger asChild>
+      <div>
       <IconButton>
         <SearchLineIcon size={19} />
+        <ButtonLabel>Search</ButtonLabel>
       </IconButton>
+        </div>
     </DialogTrigger>
     <DialogPortal>
       <DialogOverlay/>
       <DialogContent>
-        <p>Render Command Menu</p>
+        <CMDK />
       </DialogContent>
     </DialogPortal>
   </Dialog>
