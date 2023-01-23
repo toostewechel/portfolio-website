@@ -25,7 +25,7 @@ const ProgressBarContainer = styled("div", {
 
   "@bp2": {
     display: "flex",
-  }
+  },
 });
 
 const ProgressLabel = styled("p", {
@@ -58,13 +58,11 @@ const IconLink = styled("a", {
   alignItems: "center",
   padding: "$spacing-04",
   willChange: "transform",
-  transition:
-    "transform 300ms ease-in, background 300ms ease-in",
+  transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition:
-      "transform 300ms ease-out, background 300ms ease-out",
+    transition: "transform 300ms ease-out, background 300ms ease-out",
     background: "$violet3",
     color: "$violet11",
   },

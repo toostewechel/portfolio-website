@@ -103,7 +103,7 @@ const MetaInformation = styled("p", {
 function BlogTimelineCard(props) {
   return (
     <Container href={props.href}>
-       <Icon>
+      <Icon>
         <IconSize>
           {props.dutch && <img src="/icons/dutch-flag.svg" />}
           {props.english && <img src="/icons/british-flag.svg" />}

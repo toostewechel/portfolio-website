@@ -14,7 +14,8 @@ import Footer from "../../../components/layouts/blocks/Footer.js";
 const shareTo = {
   whatsapp: "https://www.whatsapp.com/",
   facebook: "https://www.facebook.com/",
-  twitter: "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
+  twitter:
+    "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
   linkedIn: "https://www.linkedin.com/",
 };
 
@@ -54,7 +55,7 @@ function Index() {
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
       <div ref={targetRef}>
-        <ContentHeader targetRef={targetRef} twitter={shareTo.twitter}/>
+        <ContentHeader targetRef={targetRef} twitter={shareTo.twitter} />
         <ContentLanding
           color="crimson"
           label="Design"

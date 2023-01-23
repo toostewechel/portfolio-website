@@ -28,6 +28,7 @@ const StyledKBarAnimator = styled(KBarAnimator, {
 
 const StyledKBarSearch = styled(KBarSearch, {
   fontFamily: "$default",
+  letterSpacing: "$tracking-tight",
   fontSize: "$base",
   border: "none",
   width: "100%",

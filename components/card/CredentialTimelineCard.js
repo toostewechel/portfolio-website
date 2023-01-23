@@ -147,7 +147,6 @@ const Label = styled("p", {
   "@bp1": {
     fontSize: "$sm",
     mr: "$spacing-05",
-  
   },
 });
 

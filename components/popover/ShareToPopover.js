@@ -21,13 +21,11 @@ const IconButton = styled("button", {
   margin: "$spacing-02",
   borderRadius: "8px",
   willChange: "transform",
-  transition:
-    "transform 300ms ease-in, background 300ms ease-in",
+  transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition:
-      "transform 300ms ease-out, background 300ms ease-out",
+    transition: "transform 300ms ease-out, background 300ms ease-out",
     background: "$violet3",
   },
 
@@ -41,13 +39,11 @@ const ShareLinkContainer = styled("a", {
   gap: "$spacing-03",
   borderRadius: "4px",
   p: "$spacing-03 $spacing-02",
-  transition:
-    "transform 300ms ease-in, background 300ms ease-in",
+  transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition:
-      "transform 300ms ease-out, background 300ms ease-out",
+    transition: "transform 300ms ease-out, background 300ms ease-out",
     background: "$violet3",
   },
 });

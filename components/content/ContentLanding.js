@@ -56,7 +56,7 @@ const ShareBar = styled("div", {
   textAlign: "start",
   pt: "$spacing-06",
   pb: "$spacing-10",
-})
+});
 
 function ContentLanding(props) {
   return (
@@ -76,7 +76,6 @@ function ContentLanding(props) {
       <LandingImageContainer>
         <LandingImage src={props.src} />
       </LandingImageContainer>
-
     </ContentContainer>
   );
 }

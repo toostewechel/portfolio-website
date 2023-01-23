@@ -65,7 +65,7 @@ const BackgroundPattern = styled("div", {
   backgroundImage: "url(/patterns/circular-background-pattern.svg)",
   backgroundRepeat: "repeat-x",
   left: 0,
-  top: 96,
+  top: 124,
 });
 
 const Button = styled("a", {

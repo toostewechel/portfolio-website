@@ -22,7 +22,7 @@ function Index() {
   return (
     <div>
       <Header />
-      <Spacer level={12} />
+      <Spacer level={13} />
       <LandingBlock />
       <Spacer level={13} />
       <CoreValuesBlock />

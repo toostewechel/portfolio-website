@@ -34,7 +34,7 @@ const FlexBox = styled("div", {
   display: "flex",
   flexDirection: "row",
   gap: "2px",
-})
+});
 
 const StyledLogo = styled("img", {
   width: "100%",
@@ -48,7 +48,12 @@ function ContentHeader(props) {
         <StyledLogo src="/logo/logo.png" />
       </Box>
       <FlexBox>
-        <ShareToPopover whatsapp={props.whatsapp} facebook={props.facebook} twitter={props.twitter} linkedin={props.linkedin} />
+        <ShareToPopover
+          whatsapp={props.whatsapp}
+          facebook={props.facebook}
+          twitter={props.twitter}
+          linkedin={props.linkedin}
+        />
         <ReadingProgress targetRef={props.targetRef} />
       </FlexBox>
     </HeaderContainer>
