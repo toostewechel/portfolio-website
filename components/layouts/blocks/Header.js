@@ -23,14 +23,14 @@ const LogoBox = styled("a", {
   width: "196px",
 
   "@bp1": {
-    width: "232px",
+    width: "200px",
   },
 });
 
 const Box = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "8px",
+  gap: "4px",
   alignItems: "center",
 });
 

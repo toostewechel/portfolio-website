@@ -6,7 +6,8 @@ const AvatarContainer = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "100%",
-  background: "$violet5",
+  background: "$violet4",
+  border: "2px solid $violet5",
   padding: "$spacing-01",
 });
 
@@ -18,7 +19,7 @@ const StyledAvatar = styled("img", {
       4: { size: "$4" },
       5: { size: "$5" },
       6: { size: "$6" },
-      7: { size: "$7" },
+      7: { width: "40px", height: "40px", },
       8: { size: "$8" },
       9: { size: "$9" },
       10: { size: "$10" },

@@ -9,6 +9,7 @@ import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import ProfileCard from "../home/profilecard/ProfileCard.js";
+import { MoreHorizontal } from 'lucide-react';
 
 const IconButtonContainer = styled("button", {
   display: "flex",
@@ -16,7 +17,7 @@ const IconButtonContainer = styled("button", {
   gap: "$spacing-02",
   alignItems: "center",
   justifyContent: "center",
-  color: "$violet11",
+  color: "$mauve11",
 });
 
 const StyledPopoverClose = {
@@ -26,13 +27,21 @@ const StyledPopoverClose = {
 };
 
 const StyledArrowDown = styled("div", {
+  color: "$mauve11",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "white",
-  "&:hover": { backgroundColor: "$violet3" },
   padding: "4px",
   borderRadius: "4px",
+  willChange: "transform",
+  transition: "transform 300ms ease-in, background 300ms ease-in",
+  background: "transparent",
+
+  "&:hover": {
+    transition: "transform 300ms ease-out, background 300ms ease-out",
+    backgroundColor: "$gray2",
+  },
+  
 });
 
 function AvatarStatusBadgePopover() {
@@ -44,10 +53,9 @@ function AvatarStatusBadgePopover() {
             size={7}
             status="open"
             src="/images/placeholder-avatar.png"
-            statusBadge
           />
           <StyledArrowDown>
-            <ArrowDownSLineIcon />
+            <MoreHorizontal size={20} />
           </StyledArrowDown>
         </IconButtonContainer>
       </PopoverTrigger>

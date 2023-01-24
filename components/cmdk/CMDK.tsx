@@ -125,7 +125,7 @@ const StyledBadge = styled("div", {
   fontWeight: "$medium",
   fontFamily: "$default",
 
-  '&:nth-child(2)::before': {
+  "&:nth-child(2)::before": {
     display: "flex",
     alignItems: "center",
     content: ">",
@@ -134,7 +134,6 @@ const StyledBadge = styled("div", {
     fontFamily: "$default",
     fontWeight: "$bold",
     marginRight: "14px",
-
   },
 });
 
@@ -284,7 +283,7 @@ export default function CMDK() {
           <Box>
             <StyledShortcutLabel>Open Link</StyledShortcutLabel>
             <StyledShortcut>
-              <ReturnIcon/>
+              <ReturnIcon />
             </StyledShortcut>
           </Box>
           <Box>

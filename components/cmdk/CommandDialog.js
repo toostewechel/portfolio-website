@@ -82,10 +82,15 @@ const IconButton = styled("button", {
 });
 
 const ButtonLabel = styled("div", {
+  display: "none",
   fontFamily: "$default",
   fontWeight: "$medium",
   fontSize: "$sm",
   color: "$mauve11",
+
+  "@bp1": {
+    display: "flex",
+  }
 });
 
 // Exports
