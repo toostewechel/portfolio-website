@@ -10,6 +10,7 @@ const StyledCommand = styled(Command, {
   fontFamily: "$default",
   transition: "transform 100ms ease",
   padding: "12px",
+  borderRadius: "12px",
 });
 
 const StyledCommandInput = styled(Command.Input, {
@@ -24,7 +25,7 @@ const StyledCommandInput = styled(Command.Input, {
   padding: "12px",
   boxShadow: "$inset",
   marginBottom: "16px",
-  marginTop: "8px",
+  marginTop: "4px",
   borderRadius: "8px",
   backgroundColor: "$mauveA4",
   caretColor: "$mauveA11",
@@ -41,7 +42,7 @@ const StyledCommandGroup = styled(Command.Group, {
   fontFamily: "$header",
   fontWeight: "$bold",
   letterSpacing: "$tracking-regular",
-  color: "$mauveA10",
+  color: "$mauveA11",
   padding: "0 4px",
   flexDirection: "column",
   alignItems: "start",
@@ -106,20 +107,35 @@ const StyledCommandEmpty = styled(Command.Empty, {
   paddingBottom: "12px",
 });
 
+const StyledBadgeContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+});
+
 const StyledBadge = styled("div", {
   display: "inline-flex",
   alignItems: "center",
-  padding: "2px 8px",
-  fontSize: "$xs",
-  color: "$crimsonA11",
-  backgroundColor: "$crimsonA5",
-  border: "solid 2px $crimsonA7",
-  borderRadius: "4px",
+  padding: "4px",
+  fontSize: "$sm",
+  color: "$crimson10",
   marginRight: "6px",
   userSelect: "none",
-  textTransform: "uppercase",
+  textTransform: "capitalize",
   fontWeight: "$medium",
   fontFamily: "$default",
+
+  '&:nth-child(2)::before': {
+    display: "flex",
+    alignItems: "center",
+    content: ">",
+    color: "$mauveA9",
+    fontSize: "$sm",
+    fontFamily: "$default",
+    fontWeight: "$bold",
+    marginRight: "14px",
+
+  },
 });
 
 const StyledShortcutsContainer = styled("div", {
@@ -229,7 +245,6 @@ export default function CMDK() {
       <CommandDialog
         open={open}
         onOpenChange={setOpen}
-        label="Global Command Menu"
         ref={ref}
         onKeyDown={(e: React.KeyboardEvent) => {
           if (isHome || inputValue.length) {
@@ -242,11 +257,11 @@ export default function CMDK() {
           }
         }}
       >
-        <div>
+        <StyledBadgeContainer>
           {pages.map((p) => (
             <StyledBadge key={p}>{p}</StyledBadge>
           ))}
-        </div>
+        </StyledBadgeContainer>
         <CommandInput
           autoFocus
           placeholder="What are you looking for?"
