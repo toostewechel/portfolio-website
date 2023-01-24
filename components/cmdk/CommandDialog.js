@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { styled, keyframes } from "../../stitches.config.js";
-import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { Cross2Icon, MagnifyingGlassIcon } from '@radix-ui/react-icons';
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { Cross2Icon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import SearchLineIcon from "remixicon-react/SearchLineIcon";
 import CMDK from "./CMDK.tsx";
 
@@ -12,13 +12,13 @@ const fadeIn = keyframes({
 
 const fadeOut = keyframes({
   "0%": { opacity: 1 },
-  "100%": { opacity: 0 } ,
+  "100%": { opacity: 0 },
 });
 
 const StyledDialog = styled(DialogPrimitive.Root, {});
 
 const StyledDialogOverlay = styled(DialogPrimitive.Overlay, {
-  backgroundColor: "$blackA9",
+  backgroundColor: "$blackA11",
   position: "fixed",
   inset: 0,
   "@media (prefers-reduced-motion: no-preference)": {
@@ -28,12 +28,14 @@ const StyledDialogOverlay = styled(DialogPrimitive.Overlay, {
     '&[data-state="open"]': { animationName: fadeIn },
     '&[data-state="closed"]': { animationName: fadeOut },
   },
-})
+});
 
 const StyledDialogContent = styled(DialogPrimitive.Content, {
-  backgroundColor: "white",
-  borderRadius: "6px",
-  boxShadow: "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
+  backgroundColor: "transparent",
+  borderRadius: "8px",
+  margin: 0,
+  boxShadow:
+    "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
   position: "fixed",
   top: "50%",
   left: "50%",
@@ -41,7 +43,7 @@ const StyledDialogContent = styled(DialogPrimitive.Content, {
   width: "90vw",
   maxWidth: "640px",
   maxHeight: "85vh",
-})
+});
 
 const StyledDialogTitle = styled(DialogPrimitive.Title, {
   margin: 0,
@@ -49,14 +51,14 @@ const StyledDialogTitle = styled(DialogPrimitive.Title, {
   fontFamily: "$heading",
   fontSize: "$base",
   color: "$mauve12",
-})
+});
 
 const StyledDialogDescription = styled(DialogPrimitive.Description, {
   margin: "10px 0 20px",
   color: "$mauve11",
   fontFamily: "$default",
   lineHeight: "$base",
-})
+});
 
 const IconButton = styled("button", {
   display: "flex",
@@ -84,7 +86,7 @@ const ButtonLabel = styled("div", {
   fontWeight: "$medium",
   fontSize: "$sm",
   color: "$mauve11",
-})
+});
 
 // Exports
 export const Dialog = StyledDialog;
@@ -100,14 +102,14 @@ const CommandDialog = () => (
   <Dialog>
     <DialogTrigger asChild>
       <div>
-      <IconButton>
-        <SearchLineIcon size={19} />
-        <ButtonLabel>Search</ButtonLabel>
-      </IconButton>
-        </div>
+        <IconButton>
+          <SearchLineIcon size={19} />
+          <ButtonLabel>Search</ButtonLabel>
+        </IconButton>
+      </div>
     </DialogTrigger>
     <DialogPortal>
-      <DialogOverlay/>
+      <DialogOverlay />
       <DialogContent>
         <CMDK />
       </DialogContent>

@@ -53,9 +53,10 @@ function AvatarStatusBadgePopover() {
       </PopoverTrigger>
       <PopoverContent sideOffset={8}>
         <ProfileCard badge={true} />
-        <PopoverClose style={StyledPopoverClose} aria-label="Close">
-          
-        </PopoverClose>
+        <PopoverClose
+          style={StyledPopoverClose}
+          aria-label="Close"
+        ></PopoverClose>
       </PopoverContent>
     </Popover>
   );

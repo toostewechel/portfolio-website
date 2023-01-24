@@ -8,11 +8,11 @@ const HeaderContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-04",
+  padding: "$spacing-03",
   backgroundColor: "transparent",
 
   "@bp1": {
-    padding: "$spacing-05",
+    padding: "$spacing-04",
   },
 });
 
@@ -32,7 +32,7 @@ const Box = styled("div", {
   flexDirection: "row",
   gap: "8px",
   alignItems: "center",
-})
+});
 
 const StyledLogo = styled("img", {
   width: "100%",
@@ -85,7 +85,6 @@ const SearchLabel = styled("p", {
 
 // Make command character useable in React
 let command = String.fromCodePoint(8984);
-
 
 function Header() {
   return (

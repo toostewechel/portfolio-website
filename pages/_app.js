@@ -15,9 +15,9 @@ function ScrollToView() {
 
 function MyApp({ Component, pageProps }) {
   return (
-      <MDXProvider components={components}>
-        <Component {...pageProps} />
-      </MDXProvider>
+    <MDXProvider components={components}>
+      <Component {...pageProps} />
+    </MDXProvider>
   );
 }
 
