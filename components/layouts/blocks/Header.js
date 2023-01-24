@@ -1,20 +1,22 @@
 import { styled } from "../../../stitches.config.js";
 import React from "react";
 import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
+import CMDK from "../../cmdk/CMDK.tsx";
+import CommandDialog from "../../cmdk/CommandDialog.js";
 
 const HeaderContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-04",
+  padding: "$spacing-03",
   backgroundColor: "transparent",
 
   "@bp1": {
-    padding: "$spacing-05",
+    padding: "$spacing-04",
   },
 });
 
-const Box = styled("a", {
+const LogoBox = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -23,6 +25,13 @@ const Box = styled("a", {
   "@bp1": {
     width: "232px",
   },
+});
+
+const Box = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "8px",
+  alignItems: "center",
 });
 
 const StyledLogo = styled("img", {
@@ -77,20 +86,16 @@ const SearchLabel = styled("p", {
 // Make command character useable in React
 let command = String.fromCodePoint(8984);
 
-
 function Header() {
   return (
     <HeaderContainer>
-      <Box href="/">
+      <LogoBox href="/">
         <StyledLogo src="/logo/logo.png" />
+      </LogoBox>
+      <Box>
+        <CommandDialog />
+        <AvatarStatusBadgePopover />
       </Box>
-      <SearchBoxButton>
-        <SearchLabel>Search...</SearchLabel>
-        <ShortcutContainer>
-          <ShortcutLabel>{`${command}K`}</ShortcutLabel>
-        </ShortcutContainer>
-      </SearchBoxButton>
-      <AvatarStatusBadgePopover />
     </HeaderContainer>
   );
 }
