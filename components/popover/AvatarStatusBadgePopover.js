@@ -13,7 +13,7 @@ import ProfileCard from "../home/profilecard/ProfileCard.js";
 const IconButtonContainer = styled("button", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-02",
+  gap: "$spacing-03",
   alignItems: "center",
   justifyContent: "center",
   color: "$violet11",
@@ -53,10 +53,9 @@ function AvatarStatusBadgePopover() {
       </PopoverTrigger>
       <PopoverContent sideOffset={8}>
         <ProfileCard badge={true} />
-        <PopoverClose
-          style={StyledPopoverClose}
-          aria-label="Close"
-        ></PopoverClose>
+        <PopoverClose style={StyledPopoverClose} aria-label="Close">
+          <CloseLineIcon />
+        </PopoverClose>
       </PopoverContent>
     </Popover>
   );
