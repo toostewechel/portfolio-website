@@ -19,26 +19,27 @@ const IconButton = styled("button", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "8px",
+  borderRadius: "6px",
   color: "$mauve11",
   padding: "$spacing-04",
-  willChange: "transform",
-  transition: "all 300ms ease-in",
+  transition: "background 300ms ease-in",
   background: "transparent",
-  border: "2px dashed transparent",
+  border: "2px solid transparent",
   outline: 0,
 
   "&:hover": {
-    transition: "all 300ms ease-out",
+    transition: "background 300ms ease-out",
     backgroundColor: "$mauve2",
     color: "$mauve12",
   },
   "&:active": { 
     backgroundColor: "$mauve3", 
   },
-  "&:focus": {
-    backgroundColor: "$blue3", 
-    border: "2px dashed $blue11",
+   "&:focus": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
   },
 });
 
