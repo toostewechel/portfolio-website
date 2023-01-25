@@ -1,9 +1,7 @@
 import React from "react";
 import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import StackOverflowLineIcon from "remixicon-react/StackOverflowLineIcon";
-import ArrowDownLineIcon from "remixicon-react/ArrowDownLineIcon";
-import ArrowUpLineIcon from "remixicon-react/ArrowUpLineIcon";
+import { Hourglass, ArrowUp, ArrowDown } from "lucide-react";
 import Skill from "./Skill.js";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
@@ -32,8 +30,7 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  pr: "$spacing-02",
-  size: "$5",
+  p: "$spacing-02",
   color: "$violet11",
 
   "@bp1": {
@@ -51,6 +48,7 @@ const Title = styled("h3", {
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
+  mt: "$spacing-01",
 
   "@bp1": {
     fontSize: "$xl;",
@@ -90,13 +88,13 @@ function SkillsLearning(props) {
       <HeaderPanel>
         <Flex>
           <DecorativeIcon>
-            <StackOverflowLineIcon></StackOverflowLineIcon>
+            <Hourglass size={20}/>
           </DecorativeIcon>
           <Title>Learning</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <IconButton>
-            {open ? <ArrowUpLineIcon /> : <ArrowDownLineIcon />}
+            {open ? <ArrowUp /> : <ArrowDown />}
           </IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
