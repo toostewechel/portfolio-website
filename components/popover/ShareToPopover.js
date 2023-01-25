@@ -46,6 +46,8 @@ const ShareLinkContainer = styled("a", {
   transition: "all 150ms ease-in",
   background: "transparent",
   color: "$mauveA11",
+  outline: "none",
+  textDecoration: "none",
 
   "&:hover": {
     transition: "all 150ms ease-out",
@@ -57,6 +59,14 @@ const ShareLinkContainer = styled("a", {
   },
   "&:visited": { 
     color: "$mauveA12",
+  },
+  "&:focus": { 
+    color: "$mauveA12",
+    backgroundColor: "$mauveA7", 
+  },
+  '&[aria-selected="true"]': {
+    background: "$mauveA6",
+    color: "white",  
   },
 });
 
