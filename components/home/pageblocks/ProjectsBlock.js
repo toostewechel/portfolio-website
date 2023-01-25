@@ -24,7 +24,7 @@ function ProjectsBlock() {
           />
           <ProjectTimelineCard
             background="/images/placeholder-project-yellow.png"
-            dutch
+            english
             title="Design and Develop a Portfolio Site in Next.JS"
             meta="Case Study • 20 min"
           />

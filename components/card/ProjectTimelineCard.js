@@ -5,11 +5,12 @@ const Container = styled("a", {
   m: 0,
   borderRadius: "12px",
   position: "relative",
-  border: "1px solid $mauve6",
+  border: "2px solid $mauve6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
   height: "380px",
   width: "100%",
+  outline: 0,
 
   "@bp2": {
     m: "$none $spacing-03 $spacing-03 $spacing-03",
@@ -17,9 +18,19 @@ const Container = styled("a", {
 
   "&:hover": {
     transform: "translateY(-2px)",
-    transition: "all, 300ms ease-out",
-    border: "1px solid $mauve11",
+    transition: "border, 300ms ease-out",
+    border: "2px solid $mauve11",
     boxShadow: "$small",
+  },
+  "&:active": { 
+    transition: "border, 300ms ease-out", 
+    boxShadow: "$xs",
+  },
+   "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
   },
 });
 
