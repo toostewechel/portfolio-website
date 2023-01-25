@@ -16,7 +16,7 @@ const shareTo = {
   facebook: "https://www.facebook.com/",
   twitter:
     "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
-  linkedIn: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/",
 };
 
 function Index() {
@@ -55,7 +55,7 @@ function Index() {
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
       <div ref={targetRef}>
-        <ContentHeader targetRef={targetRef} twitter={shareTo.twitter} gradient="design" />
+        <ContentHeader targetRef={targetRef} whatsapp={shareTo.whatsapp} facebook={shareTo.facebook} twitter={shareTo.twitter} linkedin={shareTo.linkedin  } gradient="design" />
         <ContentLanding
           color="crimson"
           label="Design"

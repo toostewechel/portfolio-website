@@ -21,10 +21,6 @@ const LogoBox = styled("a", {
   alignItems: "center",
   justifyContent: "center",
   width: "196px",
-
-  "@bp1": {
-    width: "200px",
-  },
 });
 
 const Box = styled("div", {

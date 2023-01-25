@@ -24,16 +24,11 @@ const Box = styled("a", {
   alignItems: "center",
   justifyContent: "center",
   width: "196px",
-
-  "@bp1": {
-    width: "232px",
-  },
 });
 
-const FlexBox = styled("div", {
+const Controls = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "2px",
 });
 
 const StyledLogo = styled("img", {
@@ -47,7 +42,7 @@ function ContentHeader(props) {
       <Box href="/">
         <StyledLogo src="/logo/logo.png" />
       </Box>
-      <FlexBox>
+      <Controls>
         <ShareToPopover
           whatsapp={props.whatsapp}
           facebook={props.facebook}
@@ -55,7 +50,7 @@ function ContentHeader(props) {
           linkedin={props.linkedin}
         />
         <ReadingProgress targetRef={props.targetRef} gradient={props.gradient} />
-      </FlexBox>
+      </Controls>
     </HeaderContainer>
   );
 }
