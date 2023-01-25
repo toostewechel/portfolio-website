@@ -77,7 +77,7 @@ export const {
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
-      xs: "0.80rem",
+      xs: "0.85rem",
       bodyLarge: "1.20rem",
     },
     fonts: {
