@@ -86,7 +86,9 @@ function ProjectTimelineCard(props) {
     <Container
       style={{
         background: `url(${props.background})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
+        backgroundRepeat: "none",
+        backgroundPosition: "center",
       }}
       href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
     >
