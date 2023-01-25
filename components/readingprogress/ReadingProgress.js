@@ -15,7 +15,7 @@ const ReadingProgressContainer = styled("div", {
   alignItems: "center",
   borderRadius: "6px",
   padding: "$spacing-02",
-  gap: "$spacing-03",
+  gap: "$spacing-02",
 });
 
 const ProgressBarContainer = styled("div", {
@@ -56,23 +56,19 @@ const IconLink = styled("a", {
   borderRadius: "8px",
   display: "flex",
   justifyContent: "center",
+  color: "$mauve11",
   alignItems: "center",
   padding: "$spacing-03",
   willChange: "transform",
-  transition: "transform 300ms ease-in, background 300ms ease-in",
+  transition: "all 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition: "transform 300ms ease-out, background 300ms ease-out",
-    backgroundColor: "$gray2",
+    transition: "all 300ms ease-out",
+    backgroundColor: "$mauve2",
+    color: "$mauve12"
   },
-});
-
-const Icon = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "$mauve11",
+  "&:active": { backgroundColor: "$mauve3" },
 });
 
 const ReadingProgress = ({ targetRef, ...props }) => {
@@ -151,9 +147,7 @@ const ReadingProgress = ({ targetRef, ...props }) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <IconLink href="/">
-              <Icon>
                 <X size={20} />
-              </Icon>
             </IconLink>
           </TooltipTrigger>
           <TooltipContent sideOffset={4}>Close</TooltipContent>
