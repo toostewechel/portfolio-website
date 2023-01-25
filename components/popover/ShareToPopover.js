@@ -64,10 +64,6 @@ const ShareLinkContainer = styled("a", {
     color: "$mauveA12",
     backgroundColor: "$mauveA7", 
   },
-  '&[aria-selected="true"]': {
-    background: "$mauveA6",
-    color: "white",  
-  },
 });
 
 const Label = styled("p", {
