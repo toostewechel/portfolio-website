@@ -23,9 +23,9 @@ function ProjectsBlock() {
             year="2022"
           />
           <ProjectTimelineCard
-            background="/images/placeholder-timeline-item.png"
+            background="/images/placeholder-project-yellow.png"
             dutch
-            title="Gestandaardiseerde e-health modules ontwikkelen"
+            title="Design and Develop a Portfolio Site in Next.JS"
             meta="Case Study • 20 min"
           />
         </TimelineItem>
@@ -37,7 +37,21 @@ function ProjectsBlock() {
             year="2022"
           />
           <ProjectTimelineCard
-            background="/images/placeholder-timeline-item2.png"
+            background="/images/placeholder-project-blue.png"
+            dutch
+            title="De verborgen complexiteit achter noodtoegang"
+            meta="Case Study • 15 min"
+          />
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader
+            color="blue"
+            hasYear={true}
+            alignment="left"
+            year="2021"
+          />
+          <ProjectTimelineCard
+            background="/images/placeholder-project-green.png"
             dutch
             title="Gestandaardiseerde e-health modules ontwikkelen"
             meta="Case Study • 20 min"
@@ -51,25 +65,7 @@ function ProjectsBlock() {
             year="2021"
           />
           <ProjectTimelineCard
-            background="/images/placeholder-timeline-item3.png"
-            dutch
-            title="Gestandaardiseerde e-health modules ontwikkelen"
-            meta="Case Study • 20 min"
-          />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader color="blue" hasYear={false} alignment="left" />
-          <ProjectTimelineCard background="/images/placeholder-timeline-item.png" />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader
-            color="blue"
-            hasYear={true}
-            alignment="left"
-            year="2021"
-          />
-          <ProjectTimelineCard
-            background="/images/placeholder-timeline-item.png"
+            background="/images/placeholder-project-crimson.png"
             dutch
             title="Gestandaardiseerde e-health modules ontwikkelen"
             meta="Case Study • 20 min"

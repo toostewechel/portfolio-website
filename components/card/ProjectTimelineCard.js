@@ -3,9 +3,9 @@ import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 
 const Container = styled("a", {
   m: 0,
-  borderRadius: "16px",
+  borderRadius: "12px",
   position: "relative",
-  border: "1px solid $gray6",
+  border: "1px solid $mauve6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
   height: "380px",
@@ -18,8 +18,8 @@ const Container = styled("a", {
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "all, 300ms ease-out",
-    border: "1px solid $violet4",
-    boxShadow: "$toolbar",
+    border: "1px solid $mauve11",
+    boxShadow: "$small",
   },
 });
 
@@ -30,19 +30,23 @@ const Icon = styled("div", {
   width: "38px",
   height: "38px",
   position: "absolute",
-  borderRadius: "100%",
-  boxShadow: "$inset",
-  background: "rgba(0,0,0, 0.10)",
+  borderRadius: "6px",
+  boxShadow: "$small",
+  background: "$mauveA9",
   top: 16,
   left: 16,
 });
 
+const IconSize = styled("p", {
+  fontSize: "$2xl",
+});
+
 const TitleContainer = styled("div", {
   position: "absolute",
-  borderRadius: "8px",
-  background: "rgba(2,0,16, 0.67)",
+  borderRadius: "6px",
+  background: "rgba(2,0,16, 0.70)",
   padding: "$spacing-05 $spacing-04",
-  boxShadow: "$smooth",
+  boxShadow: "$xs",
   mr: "$spacing-05",
   ml: "$spacing-05",
   bottom: 16,
@@ -54,7 +58,7 @@ const CardTitle = styled("h3", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
-  color: "$mauve2",
+  color: "$mauve1",
   mb: "$spacing-02",
   display: "-webkit-box",
   textOverflow: "ellipsis",
@@ -63,22 +67,20 @@ const CardTitle = styled("h3", {
   "-webkit-box-orient": "vertical",
 });
 
-const IconSize = styled("p", {
-  fontSize: "$2xl",
-});
-
 const MetaInformationContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  color: "$mauve2",
+  color: "$mauveA11",
 });
 
 const MetaInformation = styled("p", {
   fontFamily: "$default",
-  fontWeight: "$regular",
+  fontWeight: "$medium",
+  fontSize: "$sm",
   letterSpacing: "$tracking-tight",
-  color: "$mauve3",
+  color: "$mauveA11",
+  
 });
 
 function ProjectTimelineCard(props) {
