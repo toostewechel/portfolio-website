@@ -5,31 +5,34 @@ import {
   PopoverContent,
   PopoverClose,
 } from "./Popover.js";
-import ShareLineIcon from "remixicon-react/ShareLineIcon";
-import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import { Share, X } from "lucide-react";
+import WhatsappLineIcon from 'remixicon-react/WhatsappLineIcon';
+import TwitterLineIcon from 'remixicon-react/TwitterLineIcon';
+import FacebookFillIcon from 'remixicon-react/FacebookFillIcon';
+import LinkedinFillIcon from 'remixicon-react/LinkedinFillIcon';
 
 const StyledPopoverContent = styled(PopoverContent, {
   minWidth: "232px",
 });
 
 const IconButton = styled("button", {
-  display: "inline-flex",
+  display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "$violet11",
-  size: "$7",
-  margin: "$spacing-02",
   borderRadius: "8px",
+  color: "$mauve11",
+  padding: "$spacing-04",
   willChange: "transform",
-  transition: "transform 300ms ease-in, background 300ms ease-in",
+  transition: "all 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition: "transform 300ms ease-out, background 300ms ease-out",
-    background: "$violet3",
+    transition: "all 300ms ease-out",
+    backgroundColor: "$mauve2",
+    color: "$mauve12",
   },
 
-  "&:active": { backgroundColor: "$violet4" },
+  "&:active": { backgroundColor: "$mauve3" },
 });
 
 const ShareLinkContainer = styled("a", {
@@ -39,32 +42,36 @@ const ShareLinkContainer = styled("a", {
   gap: "$spacing-03",
   borderRadius: "4px",
   p: "$spacing-03 $spacing-02",
-  transition: "transform 300ms ease-in, background 300ms ease-in",
+  willChange: "transform",
+  transition: "all 150ms ease-in",
   background: "transparent",
+  color: "$mauveA11",
 
   "&:hover": {
-    transition: "transform 300ms ease-out, background 300ms ease-out",
-    background: "$violet3",
+    transition: "all 150ms ease-out",
+    background: "$mauveA6",
+    color: "$mauveA12",
+  },
+  "&:active": { 
+    backgroundColor: "$mauveA7", 
+  },
+  "&:visited": { 
+    color: "$mauveA12",
   },
 });
 
-const SocialIcon = styled("img", {
-  $size: "$5",
-});
-
 const Label = styled("p", {
-  fontSize: "$sm",
-  fontWeight: "$regular",
+  fontSize: "$xs",
+  fontWeight: "$medium",
   fontFamily: "$default",
-  color: "$mauve12",
 });
 
 const Title = styled("p", {
-  fontSize: "$lg",
+  fontSize: "$base",
   fontWeight: "$semi-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
-  color: "$mauve12",
+  color: "$mauve1",
   marginBottom: "$spacing-02",
 });
 
@@ -73,29 +80,29 @@ function ShareToPopover(props) {
     <Popover>
       <PopoverTrigger asChild>
         <IconButton aria-label="Share to">
-          <ShareLineIcon />
+          <Share size={20} />
         </IconButton>
       </PopoverTrigger>
       <StyledPopoverContent>
         <Title>Share</Title>
         <ShareLinkContainer href={props.whatsapp} target="_blank">
-          <SocialIcon src="/logo/whatsapp-logo.svg" />
+          <WhatsappLineIcon size={20} />
           <Label>Whatsapp</Label>
         </ShareLinkContainer>
         <ShareLinkContainer href={props.facebook} target="_blank">
-          <SocialIcon src="/logo/facebook-logo.svg" />
+          <FacebookFillIcon size={20} />
           <Label>Facebook</Label>
         </ShareLinkContainer>
         <ShareLinkContainer href={props.twitter} target="_blank">
-          <SocialIcon src="/logo/twitter-logo.svg" />
+          <TwitterLineIcon size={20} />
           <Label>Twitter</Label>
         </ShareLinkContainer>
         <ShareLinkContainer href={props.linkedin} target="_blank">
-          <SocialIcon src="/logo/linked-in-logo.svg" />
+         <LinkedinFillIcon size={20} />
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
         <PopoverClose aria-label="Close">
-          <CloseLineIcon />
+          <X size={16} />
         </PopoverClose>
       </StyledPopoverContent>
     </Popover>
