@@ -25,14 +25,21 @@ const IconButton = styled("button", {
   willChange: "transform",
   transition: "all 300ms ease-in",
   background: "transparent",
+  border: "2px dashed transparent",
+  outline: 0,
 
   "&:hover": {
     transition: "all 300ms ease-out",
     backgroundColor: "$mauve2",
     color: "$mauve12",
   },
-
-  "&:active": { backgroundColor: "$mauve3" },
+  "&:active": { 
+    backgroundColor: "$mauve3", 
+  },
+  "&:focus": {
+    backgroundColor: "$blue3", 
+    border: "2px dashed $blue11",
+  },
 });
 
 const ShareLinkContainer = styled("a", {
@@ -61,6 +68,7 @@ const ShareLinkContainer = styled("a", {
     color: "$mauveA12",
   },
   "&:focus": { 
+    transition: "all 150ms ease-out",
     color: "$mauveA12",
     backgroundColor: "$mauveA7", 
   },
