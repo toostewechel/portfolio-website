@@ -55,7 +55,7 @@ function Index() {
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
       <div ref={targetRef}>
-        <ContentHeader targetRef={targetRef} twitter={shareTo.twitter} />
+        <ContentHeader targetRef={targetRef} twitter={shareTo.twitter} gradient="design" />
         <ContentLanding
           color="crimson"
           label="Design"

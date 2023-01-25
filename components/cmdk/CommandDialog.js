@@ -90,7 +90,7 @@ const ButtonLabel = styled("div", {
 
   "@bp1": {
     display: "flex",
-  }
+  },
 });
 
 // Exports

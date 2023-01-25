@@ -54,7 +54,7 @@ function ContentHeader(props) {
           twitter={props.twitter}
           linkedin={props.linkedin}
         />
-        <ReadingProgress targetRef={props.targetRef} />
+        <ReadingProgress targetRef={props.targetRef} gradient={props.gradient} />
       </FlexBox>
     </HeaderContainer>
   );

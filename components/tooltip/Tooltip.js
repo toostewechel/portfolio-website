@@ -24,12 +24,12 @@ const slideLeftAndFade = keyframes({
 
 const StyledContent = styled(TooltipPrimitive.Content, {
   borderRadius: "4px",
-  padding: "$spacing-03 $spacing-04",
-  backgroundColor: "white",
-  boxShadow: "$smooth",
+  padding: "$spacing-02 $spacing-03 ",
+  backgroundColor: "$mauve12",
+  boxShadow: "$xs",
   userSelect: "none",
   "@media (prefers-reduced-motion: no-preference)": {
-    animationDuration: "200ms",
+    animationDuration: "150ms",
     animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
     willChange: "transform, opacity",
     '&[data-state="delayed-open"]': {
@@ -41,15 +41,15 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   },
 });
 
-const Label = styled("p", {
-  fontSize: "$base",
-  fontFamily: "$header",
-  color: "$violet11",
-  mt: "2px",
+const TooltipLabel = styled("p", {
+  fontSize: "$xs",
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  color: "$mauveA12",
 });
 
 const StyledArrow = styled(TooltipPrimitive.Arrow, {
-  fill: "white",
+  fill: "$mauve12",
 });
 
 const StyledTooltip = styled(TooltipPrimitive.Root, {
@@ -60,7 +60,7 @@ function Content({ children, ...props }) {
   return (
     <TooltipPrimitive.Portal>
       <StyledContent {...props}>
-        <Label>{children}</Label>
+        <TooltipLabel>{children}</TooltipLabel>
         <StyledArrow />
       </StyledContent>
     </TooltipPrimitive.Portal>

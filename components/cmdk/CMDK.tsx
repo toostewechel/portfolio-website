@@ -35,7 +35,6 @@ const StyledCommandInput = styled(Command.Input, {
   },
 });
 
-
 const StyledCommandGroup = styled(Command.Group, {
   userSelect: "none",
   fontSize: "$sm",

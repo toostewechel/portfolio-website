@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import { X } from "lucide-react";
 import {
   Provider,
   Tooltip,
@@ -12,7 +13,7 @@ const ReadingProgressContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  borderRadius: "8px",
+  borderRadius: "6px",
   padding: "$spacing-02",
   gap: "$spacing-03",
 });
@@ -37,7 +38,7 @@ const ProgressLabel = styled("p", {
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
-  color: "$violet11",
+  color: "$mauve12",
   fontSize: "$lg",
   p: "$spacing-01 0px",
   width: "48px",
@@ -47,7 +48,7 @@ const ProgressBarOuter = styled("div", {
   width: "132px",
   borderRadius: "99px",
   padding: "$spacing-02",
-  backgroundColor: "$violet5",
+  backgroundColor: "$mauve3",
   boxShadow: "$inset",
 });
 
@@ -56,15 +57,14 @@ const IconLink = styled("a", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "$spacing-04",
+  padding: "$spacing-03",
   willChange: "transform",
   transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
     transition: "transform 300ms ease-out, background 300ms ease-out",
-    background: "$violet3",
-    color: "$violet11",
+    backgroundColor: "$gray2",
   },
 });
 
@@ -72,11 +72,10 @@ const Icon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  size: "$5",
-  color: "$violet11",
+  color: "$mauve11",
 });
 
-const ReadingProgress = ({ targetRef }) => {
+const ReadingProgress = ({ targetRef, ...props }) => {
   //Hook for reading and setting reading progress
   const [readingProgress, setReadingProgress] = React.useState(0);
 
@@ -124,9 +123,20 @@ const ReadingProgress = ({ targetRef }) => {
   const ProgessBarInner = styled("div", {
     width: `${readingProgress}%`,
     height: "16px",
-    background:
-      "linear-gradient(90deg, rgba(142, 117, 255, 0.78204) 0%, rgba(254, 49, 134, 0.60515) 100%)",
     borderRadius: "99px",
+    variants: {
+      gradient: {
+        tech: {
+          background: "linear-gradient(90deg, $blue9, $blue11)",
+        },
+        workflow: {
+          background: "linear-gradient(90deg, $plum9, $plum11)",
+        },
+        design: {
+          background: "linear-gradient(90deg, $crimson9, $crimson11)",
+        },
+      },
+    },
   });
 
   return (
@@ -134,7 +144,7 @@ const ReadingProgress = ({ targetRef }) => {
       <ProgressBarContainer>
         <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
         <ProgressBarOuter>
-          <ProgessBarInner />
+          <ProgessBarInner gradient={props.gradient} />
         </ProgressBarOuter>
       </ProgressBarContainer>
       <Provider>
@@ -142,7 +152,7 @@ const ReadingProgress = ({ targetRef }) => {
           <TooltipTrigger asChild>
             <IconLink href="/">
               <Icon>
-                <CloseLineIcon />
+                <X size={20} />
               </Icon>
             </IconLink>
           </TooltipTrigger>

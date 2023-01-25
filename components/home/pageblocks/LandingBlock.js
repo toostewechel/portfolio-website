@@ -90,7 +90,7 @@ const Button = styled("button", {
 
   "@bp1": {
     fontSize: "$lg",
-  }
+  },
 });
 
 function LandingBlock() {
