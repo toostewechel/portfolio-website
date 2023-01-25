@@ -11,6 +11,7 @@ import {
 
 const ReadingProgressContainer = styled("div", {
   display: "flex",
+  width: "100%",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "6px",
@@ -53,22 +54,32 @@ const ProgressBarOuter = styled("div", {
 });
 
 const IconLink = styled("a", {
-  borderRadius: "8px",
+  borderRadius: "6px",
   display: "flex",
   justifyContent: "center",
   color: "$mauve11",
   alignItems: "center",
-  padding: "$spacing-03",
-  willChange: "transform",
-  transition: "all 300ms ease-in",
+  padding: "$spacing-04",
   background: "transparent",
+  transition: "background 300ms ease-in",
+  border: "2px solid transparent",
+  outline: 0,
 
   "&:hover": {
-    transition: "all 300ms ease-out",
+    transition: "background 300ms ease-out",
     backgroundColor: "$mauve2",
-    color: "$mauve12"
+    border: "2px solid transparent",
+    color: "$mauve12",
   },
-  "&:active": { backgroundColor: "$mauve3" },
+  "&:active": { 
+    backgroundColor: "$mauve3" 
+  },
+  "&:focus": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
+  },
 });
 
 const ReadingProgress = ({ targetRef, ...props }) => {
@@ -146,9 +157,11 @@ const ReadingProgress = ({ targetRef, ...props }) => {
       <Provider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <IconLink href="/">
-                <X size={20} />
-            </IconLink>
+            <div style={{display: "flex", alignItems: "center"}}>
+              <IconLink href="/">
+                  <X size={20} />
+              </IconLink>
+            </div>
           </TooltipTrigger>
           <TooltipContent sideOffset={4}>Close</TooltipContent>
         </Tooltip>
