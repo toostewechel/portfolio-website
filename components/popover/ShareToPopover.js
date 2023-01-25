@@ -94,7 +94,7 @@ function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div>
+        <div style={{display: "flex", alignItems: "center"}}>
           <IconButton aria-label="Share to">
             <Share size={20} />
           </IconButton>
