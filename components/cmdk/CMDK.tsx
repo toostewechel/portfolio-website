@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const StyledCommand = styled(Command, {
   boxSizing: "border-box",
-  background: "$mauve12",
+  background: "$mauve1",
   overflow: "hidden",
   fontFamily: "$default",
   transition: "transform 100ms ease",
@@ -23,18 +23,18 @@ const StyledCommandInput = styled(Command.Input, {
   border: "none",
   outline: "none",
   padding: "12px",
-  boxShadow: "$inset",
   marginBottom: "16px",
   marginTop: "4px",
   borderRadius: "8px",
-  backgroundColor: "$mauveA4",
-  caretColor: "$mauveA11",
-  color: "$mauveA12",
+  backgroundColor: "$mauve3",
+  caretColor: "$mauve11",
+  color: "$mauve12",
 
   "&::placeholder": {
-    color: "$mauveA10",
+    color: "$mauve9",
   },
 });
+
 
 const StyledCommandGroup = styled(Command.Group, {
   userSelect: "none",
@@ -42,7 +42,7 @@ const StyledCommandGroup = styled(Command.Group, {
   fontFamily: "$header",
   fontWeight: "$bold",
   letterSpacing: "$tracking-regular",
-  color: "$mauveA11",
+  color: "$mauve11",
   padding: "0 4px",
   flexDirection: "column",
   alignItems: "start",
@@ -72,7 +72,7 @@ const StyledItem = styled(Command.Item, {
   gap: "8px",
   padding: "12px 12px",
   marginTop: "4px",
-  color: "$mauveA10",
+  color: "$mauve10",
   userSelect: "none",
   willChange: "background, color",
   transition: "all 150ms ease",
@@ -80,17 +80,17 @@ const StyledItem = styled(Command.Item, {
   width: "100%",
 
   '&[aria-selected="true"]': {
-    background: "$mauveA3",
-    color: "$mauveA12",
-    boxShadow: "$toolbar",
+    background: "$mauve3",
+    color: "$mauve12",
+    // boxShadow: "$toolbar",
   },
   '&[aria-disabled="true"]': {
-    color: "$mauveA9",
+    color: "$mauve9",
     cursor: "not-allowed",
   },
   "&:active": {
     transitionProperty: "background",
-    background: "$mauveA5",
+    background: "$mauve4",
   },
 });
 
@@ -98,7 +98,7 @@ const StyledCommandEmpty = styled(Command.Empty, {
   fontSize: "$base",
   fontWeight: "$regular",
   letterSpacing: "$tracking-wide",
-  color: "$mauveA10",
+  color: "$mauve10",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -129,7 +129,7 @@ const StyledBadge = styled("div", {
     display: "flex",
     alignItems: "center",
     content: ">",
-    color: "$mauveA9",
+    color: "$mauve9",
     fontSize: "$sm",
     fontFamily: "$default",
     fontWeight: "$bold",
@@ -152,12 +152,12 @@ const StyledShortcut = styled("kbd", {
   height: "24px",
   padding: "4px",
   borderRadius: "4px",
-  color: "$mauveA11",
-  background: "$mauveA2",
+  color: "$mauve11",
+  background: "$mauve2",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  border: "solid 2px $mauveA5",
+  border: "solid 2px $mauve5",
 });
 
 const StyledToolbar = styled("div", {
@@ -167,7 +167,7 @@ const StyledToolbar = styled("div", {
   justifyContent: "end",
   paddingTop: "8px",
   width: "100%",
-  borderTop: "1px solid $mauveA4",
+  borderTop: "1px solid $mauve4",
 });
 
 const StyledShortcutLabel = styled("kbd", {
@@ -175,7 +175,7 @@ const StyledShortcutLabel = styled("kbd", {
   fontSize: "$xs",
   fontWeight: "$regular",
   pr: "6px",
-  color: "$mauveA11",
+  color: "$mauve11",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",

@@ -3,7 +3,7 @@ import Section from "../../layouts/blocks/Section.js";
 import AnimatedGradientHeading from "./AnimatedGradientHeading.js";
 
 const LandingWrapper = styled("div", {
-  maxWidth: "1234px",
+  maxWidth: "1444px",
   margin: "0 auto",
   padding: "0 $spacing-03",
 });
@@ -60,12 +60,16 @@ const ContentContainer = styled("div", {
 
 const BackgroundPattern = styled("div", {
   // position: "absolute",
-  // width: "100%",
+  // width: "950px",
   // height: "100%",
-  // backgroundImage: "url(/patterns/circular-background-pattern.svg)",
-  // backgroundRepeat: "repeat-x",
-  // left: 0,
-  // top: 124,
+  // backgroundImage: "url(/images/landing-placeholder-2.png)",
+  // backgroundSize: "contain",
+  // backgroundRepeat: "no-repeat",
+  // backgroundPosition: "right",
+  // // backgroundImage: "url(/patterns/circular-background-pattern.svg)",
+  // // backgroundRepeat: "repeat-x",
+  // right: 0,
+  // top: 63,
 });
 
 const Button = styled("button", {
@@ -126,7 +130,7 @@ function LandingBlock() {
             </ContentContainer>
           </LandingItem>
           <LandingItem>
-            <StyledImage src="/images/landing-placeholder.png" />
+            <StyledImage src="/images/landing-placeholder-2.png" />
           </LandingItem>
         </LandingItems>
       </LandingWrapper>
