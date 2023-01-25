@@ -23,12 +23,12 @@ const slideLeftAndFade = keyframes({
 });
 
 const StyledContent = styled(PopoverPrimitive.Content, {
-  borderRadius: "4px",
+  backgroundColor: "$mauve12",
+  boxShadow: "$medium",
+  borderRadius: "6px",
   padding: "$spacing-04",
   maxWidth: "320px",
-  backgroundColor: "white",
-  border: "1px solid $gray5",
-  boxShadow: "$smooth",
+  boxShadow: "$medium",
   "@media (prefers-reduced-motion: no-preference)": {
     animationDuration: "400ms",
     animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
@@ -43,12 +43,12 @@ const StyledContent = styled(PopoverPrimitive.Content, {
 });
 
 const StyledArrow = styled(PopoverPrimitive.Arrow, {
-  fill: "white",
-  stroke: "$gray5",
+  fill: "$mauve12",
+  stroke: "$mauve12",
   strokeWidth: "1px",
 });
 
-function Content({ children, ...props }) {
+function StyledTooltip({ children, ...props }) {
   return (
     <PopoverPrimitive.Portal>
       <StyledContent {...props}>
@@ -67,16 +67,26 @@ const StyledClose = styled(PopoverPrimitive.Close, {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "$violet11",
+  color: "$mauve2",
   position: "absolute",
   top: 8,
   right: 8,
+  willChange: "transform",
+  transition: "all 150ms ease-in",
+  background: "transparent",
+  color: "$mauveA11",
 
-  "&:hover": { backgroundColor: "$violet4" },
-  "&:focus": { boxShadow: "0 0 0 2px $violet7" },
+  "&:hover": {
+    transition: "all 150ms ease-out",
+    background: "$mauveA6",
+    color: "$mauveA12",
+  },
+  "&:active": { 
+    backgroundColor: "$mauveA7", 
+  },
 });
 
 export const Popover = PopoverPrimitive.Root;
 export const PopoverTrigger = PopoverPrimitive.Trigger;
-export const PopoverContent = Content;
+export const PopoverContent = StyledTooltip;
 export const PopoverClose = StyledClose;
