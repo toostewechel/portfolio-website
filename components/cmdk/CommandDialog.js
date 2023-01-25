@@ -1,8 +1,7 @@
 import React from "react";
 import { styled, keyframes } from "../../stitches.config.js";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Cross2Icon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import SearchLineIcon from "remixicon-react/SearchLineIcon";
+import { Search } from "lucide-react";
 import CMDK from "./CMDK.tsx";
 
 const fadeIn = keyframes({
@@ -108,7 +107,7 @@ const CommandDialog = () => (
     <DialogTrigger asChild>
       <div>
         <IconButton>
-          <SearchLineIcon size={19} />
+          <Search size={20} />
           <ButtonLabel>Search</ButtonLabel>
         </IconButton>
       </div>
