@@ -13,6 +13,7 @@ import {
 
 const Container = styled("a", {
   m: 0,
+  position: "relative",
   borderRadius: "12px",
   overflow: "hidden",
   display: "flex",
@@ -45,6 +46,29 @@ const Container = styled("a", {
     color: "$mauve12",  
   },
 });
+
+const BackgroundPattern = styled("img", {
+  position: "absolute",
+  backgroundRepeat: "no-repeat",
+  width: "232px",
+  height: "232px",
+  opacity: 0.9,
+  zIndex: -1,
+  variants: {
+    position: {
+      topRight: {
+        position: "absolute",
+        top: -116,
+        right: -116,
+      },
+      bottomRight: {
+        position: "absolute",
+        bottom: -116,
+        right: -116,
+      },
+    }
+  }
+})
 
 const CardHeaderContainer = styled("div", {
   display: "flex",
@@ -193,6 +217,7 @@ const StyledLink = styled("a", {
 function CredentialTimelineCard(props) {
   return (
     <Container gradient={props.gradient} href={props.href}>
+      <BackgroundPattern src="/patterns/circular-background-pattern.svg" position="bottomRight" />
       <CardHeaderContainer>
         <Logo src={props.logo} />
         <Tag color={props.tagColor} label={props.tagLabel} />

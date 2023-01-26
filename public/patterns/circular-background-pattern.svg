@@ -1,10 +1,10 @@
-<svg width="804" height="804" viewBox="0 0 804 804" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="402" cy="402" r="132.5" stroke="#E2E2E2"/>
-<circle cx="402" cy="402" r="169.5" stroke="#E2E2E2"/>
-<circle cx="402" cy="402" r="205.5" stroke="#E8E8E8"/>
-<circle cx="402" cy="402" r="242.5" stroke="#E8E8E8"/>
-<circle cx="402" cy="402" r="283.5" stroke="#EDEDED"/>
-<circle cx="402" cy="402" r="326.5" stroke="#EDEDED"/>
-<circle cx="402" cy="402" r="366.5" stroke="#F3F3F3"/>
-<circle cx="402" cy="402" r="401.5" stroke="#F3F3F3"/>
+<svg width="232" height="232" viewBox="0 0 232 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="115.999" cy="116" r="37.8781" stroke="#E2E2E2"/>
+<circle cx="116.002" cy="116.001" r="48.5547" stroke="#E2E2E2"/>
+<circle cx="115.999" cy="116" r="58.9428" stroke="#E8E8E8"/>
+<circle cx="116" cy="116" r="69.6194" stroke="#E8E8E8"/>
+<circle cx="116.001" cy="116.001" r="81.4502" stroke="#EDEDED"/>
+<circle cx="116.001" cy="116" r="93.8582" stroke="#EDEDED"/>
+<circle cx="115.998" cy="115.999" r="105.4" stroke="#F3F3F3"/>
+<circle cx="116" cy="116" r="115.5" stroke="#F3F3F3"/>
 </svg>
