@@ -5,7 +5,7 @@ const AvatarContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "100%",
+  borderRadius: "8px",
   background: "$violet4",
   border: "2px solid $violet5",
   padding: "$spacing-01",
