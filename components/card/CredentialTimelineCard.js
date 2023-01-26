@@ -3,6 +3,7 @@ import Tag from "../tag/Tag.js";
 import TimeLineIcon from "remixicon-react/TimeLineIcon";
 import MapPin2LineIcon from "remixicon-react/MapPin2LineIcon";
 import DownloadCloud2LineIcon from "remixicon-react/DownloadCloud2LineIcon";
+import { MapPin, CalendarDays } from "lucide-react";
 import {
   Provider,
   Tooltip,
@@ -11,22 +12,37 @@ import {
 } from "../tooltip/Tooltip.js";
 
 const Container = styled("a", {
+  m: 0,
   borderRadius: "12px",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
   height: "100%",
-  border: "1px solid $gray6",
+  width: "100%",
+  border: "2px solid $mauve6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
   p: "$spacing-05",
 
+  "@bp2": {
+    m: "$none $spacing-03 $spacing-03 $spacing-03",
+  },
+
   "&:hover": {
     transform: "translateY(-2px)",
-    transition: "all, 300ms ease-out",
-    border: "1px solid $gray7",
-    boxShadow: "$toolbar",
-    backgroundColor: "$gray1",
+    transition: "border, 300ms ease-out",
+    border: "2px solid $mauve11",
+    boxShadow: "$small",
+  },
+  "&:active": { 
+    transition: "border, 300ms ease-out", 
+    boxShadow: "$xs",
+  },
+   "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
   },
 });
 
@@ -41,6 +57,7 @@ const CardHeaderContainer = styled("div", {
 const Logo = styled("img", {
   size: "$7",
   borderRadius: "8px",
+  boxShadow: "$xs",
 
   "@bp2": {
     size: "$8",
@@ -71,8 +88,9 @@ const CardTitle = styled("h3", {
 
 const CardSubtitle = styled("p", {
   fontFamily: "$default",
+  fontWeight: "$medium",
   fontSize: "$sm",
-  color: "$gray10",
+  color: "$mauve9",
   mt: "-2px",
 });
 
@@ -93,7 +111,7 @@ const CardDescription = styled("p", {
   "-webkit-box-orient": "vertical",
 
   "@bp1": {
-    fontSize: "@base",
+    fontSize: "$base",
   },
 });
 
@@ -122,7 +140,7 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "$gray8",
+  color: "$mauve8",
   width: "17px",
   height: "17px",
   mr: "$spacing-01",
@@ -137,16 +155,15 @@ const DecorativeIcon = styled("div", {
 const Label = styled("p", {
   alignSelf: "center",
   fontSize: "$xs",
-  fontWeight: "$regular",
   fontFamily: "$default",
+  fontWeight: "$medium",
   letterSpacing: "$tracking-tight",
-  color: "$gray9",
-  mr: "$spacing-04",
+  color: "$mauve9",
+  pr: "$spacing-04",
   mt: "1px",
 
   "@bp1": {
-    fontSize: "$sm",
-    mr: "$spacing-05",
+    pr: "$spacing-05",
   },
 });
 
@@ -191,13 +208,13 @@ function CredentialTimelineCard(props) {
         <FlexWrapper>
           <FlexWrapper>
             <DecorativeIcon>
-              <TimeLineIcon />
+              <CalendarDays />
             </DecorativeIcon>
             <Label>{props.duration}</Label>
           </FlexWrapper>
           <FlexWrapper>
             <DecorativeIcon>
-              <MapPin2LineIcon />
+              <MapPin />
             </DecorativeIcon>
             <Label>{props.location}</Label>
           </FlexWrapper>
