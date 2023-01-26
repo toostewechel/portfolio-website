@@ -19,7 +19,7 @@ const Container = styled("a", {
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "border, 300ms ease-out",
-    border: "2px solid $mauve11",
+    border: "2px solid $mauve8",
     boxShadow: "$small",
   },
   "&:active": { 
