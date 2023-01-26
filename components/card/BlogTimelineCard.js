@@ -2,26 +2,43 @@ import { styled } from "../../stitches.config.js";
 import Tag from "../tag/Tag.js";
 
 const Container = styled("a", {
-  borderRadius: "16px",
+  m: 0,
+  borderRadius: "12px",
   overflow: "hidden",
   position: "relative",
-  border: "1px solid $gray6",
+  border: "2px solid $mauve6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
   background: "white",
+  width: "100%",
+  height: "100%",
+  outline: 0,
 
+  "@bp2": {
+    m: "$none $spacing-02 $spacing-02 $spacing-02",
+  },
+  
   "&:hover": {
     transform: "translateY(-2px)",
-    transition: "all, 300ms ease-out",
-    border: "1px solid $violet4",
-    boxShadow: "$smooth",
+    transition: "border, 300ms ease-out",
+    border: "2px solid $mauve11",
+    boxShadow: "$small",
+  },
+  "&:active": { 
+    transition: "border, 300ms ease-out", 
+    boxShadow: "$xs",
+  },
+   "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
   },
 });
 
 const ResponsiveImage = styled("img", {
   maxWidth: "100%",
   height: "auto",
-  borderRadius: "8px",
 });
 
 const Icon = styled("div", {
@@ -31,35 +48,38 @@ const Icon = styled("div", {
   width: "38px",
   height: "38px",
   position: "absolute",
-  borderRadius: "100%",
-  boxShadow: "$inset",
-  background: "rgba(0,0,0, 0.10)",
+  borderRadius: "6px",
+  boxShadow: "$small",
+  background: "$mauveA9",
   top: 16,
   left: 16,
 });
 
-const IconSize = styled("p", {
-  fontSize: "$2xl",
+const IconSize = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  size: "$5",
 });
 
 const TitleContainer = styled("div", {
-  borderRadius: "8px",
-  background: "rgba(2,0,16, 0.75)",
+  borderRadius: "6px",
+  background: "rgba(2,0,16, 0.70)",
   padding: "$spacing-05 $spacing-04",
-  letterSpacing: "$tracking-tight",
-  boxShadow: "$smooth",
+  boxShadow: "$xs",
   position: "relative",
-  mr: "$spacing-05",
-  ml: "$spacing-05",
-  mt: "-44px",
+  mr: "$spacing-04",
+  ml: "$spacing-04",
+  mt: "-42px",
 });
 
 const CardTitle = styled("h3", {
-  fontSize: "$xl",
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
-  color: "$mauve2",
+  letterSpacing: "$tracking-tight",
+  fontSize: "$lg",
+  color: "$mauve1",
   textAlign: "center",
   display: "-webkit-box",
   textOverflow: "ellipsis",
@@ -77,7 +97,7 @@ const CardDescription = styled("p", {
   fontWeight: "$regular",
   fontSize: "$base",
   lineHeight: "$base",
-  color: "$gray12",
+  color: "$mauve11",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -105,8 +125,8 @@ function BlogTimelineCard(props) {
     <Container href={props.href}>
       <Icon>
         <IconSize>
-          {props.dutch && <img src="/icons/dutch-flag.svg" />}
-          {props.english && <img src="/icons/british-flag.svg" />}
+          {props.dutch && <img src="/icons/nl.svg" />}
+          {props.english && <img src="/icons/gb.svg" />}
         </IconSize>
       </Icon>
       <ResponsiveImage src={props.image} />

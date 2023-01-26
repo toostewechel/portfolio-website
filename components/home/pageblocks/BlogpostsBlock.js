@@ -56,6 +56,7 @@ function BlogpostsBlock() {
               meta="Article • 20 min read"
               color="blue"
               category="Tech"
+              english
             />
           </TimelineItem>
           <TimelineItem>
@@ -73,6 +74,7 @@ function BlogpostsBlock() {
               meta="Article • 20 min read"
               color="blue"
               category="Tech"
+              english
             />
           </TimelineItem>
           <TimelineItem>
@@ -90,6 +92,7 @@ function BlogpostsBlock() {
               meta="Article • 15 min read"
               color="crimson"
               category="Design"
+              dutch
             />
           </TimelineItem>
           <TimelineItem>
