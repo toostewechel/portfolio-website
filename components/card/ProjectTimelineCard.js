@@ -48,8 +48,10 @@ const Icon = styled("div", {
   left: 16,
 });
 
-const IconSize = styled("p", {
-  fontSize: "$2xl",
+const IconSize = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 });
 
 const TitleContainer = styled("div", {
@@ -107,8 +109,8 @@ function ProjectTimelineCard(props) {
     >
       <Icon>
         <IconSize>
-          {props.dutch && <img src="/icons/dutch-flag.svg" />}
-          {props.english && <img src="/icons/british-flag.svg" />}
+          {props.dutch && <img src="/icons/nl.svg" />}
+          {props.english && <img src="/icons/gb.svg" />}
         </IconSize>
       </Icon>
       <TitleContainer>
