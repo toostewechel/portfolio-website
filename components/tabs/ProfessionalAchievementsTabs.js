@@ -23,6 +23,7 @@ function ProfessionalAchievementsTab() {
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
               href="https://www.jouwomgeving.nl/"
+              accentColor="plum"
               tagColor="plum"
               tagLabel="Full Time"
               title="Product Owner"
@@ -43,6 +44,7 @@ function ProfessionalAchievementsTab() {
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
               href="https://www.jouwomgeving.nl/"
+              accentColor="plum"
               tagColor="plum"
               tagLabel="Full Time"
               title="Product Designer"
@@ -63,6 +65,7 @@ function ProfessionalAchievementsTab() {
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
               href="https://www.jouwomgeving.nl/"
+              accentColor="plum"
               tagColor="plum"
               tagLabel="Full time"
               title="Graduate Assignment"
@@ -85,6 +88,7 @@ function ProfessionalAchievementsTab() {
             <CredentialTimelineCard
               logo="/logo/jumbo-supermarkten-logo.png"
               href="https://www.jumbo.com/service/het-bedrijf-jumbo"
+              accentColor="blue"
               tagColor="blue"
               tagLabel="Part Time"
               title="Logistics"
@@ -108,6 +112,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
+              accentColor="crimson"
               tagColor="crimson"
               tagLabel="Master"
               title="Master Track"
@@ -129,6 +134,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
+              accentColor="plum"
               tagColor="plum"
               tagLabel="Minor"
               title="Biomedical Design"
@@ -149,6 +155,7 @@ function ProfessionalAchievementsTab() {
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
               href="https://www.utwente.nl/onderwijs/bachelor/opleidingen/industrial-design-engineering/"
+              accentColor="crimson"
               tagColor="crimson"
               tagLabel="Bachelor"
               title="Bachelor Track"
@@ -174,6 +181,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/udemy-logo.png"
+              accentColor="blue"
               tagColor="blue"
               tagLabel="Tech"
               title="Git Complete"
@@ -193,6 +201,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/udemy-logo.png"
+              accentColor="blue"
               tagColor="blue"
               tagLabel="Tech"
               title="React Front to Back"
@@ -207,6 +216,7 @@ function ProfessionalAchievementsTab() {
             <CardHeader color="blue" hasYear={false} />
             <CredentialTimelineCard
               logo="/logo/udemy-logo.png"
+              accentColor="blue"
               tagColor="blue"
               tagLabel="Tech"
               title="JavaScript"
@@ -226,6 +236,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/udemy-logo.png"
+              accentColor="plum"
               tagColor="plum"
               tagLabel="Workflow"
               title="Robust Scrum Product Owner"

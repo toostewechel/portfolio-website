@@ -1,9 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import Tag from "../tag/Tag.js";
 import TimeLineIcon from "remixicon-react/TimeLineIcon";
-import MapPin2LineIcon from "remixicon-react/MapPin2LineIcon";
-import DownloadCloud2LineIcon from "remixicon-react/DownloadCloud2LineIcon";
-import { MapPin, CalendarDays } from "lucide-react";
+import { MapPin, CalendarDays, Download } from "lucide-react";
 import {
   Provider,
   Tooltip,
@@ -68,6 +66,33 @@ const BackgroundPattern = styled("img", {
       },
     }
   }
+})
+
+const AccentHighlight = styled("div", {
+  position: "absolute",
+  width: "48px",
+  height: "14px",
+  borderRadius: "6px",
+  left: 16,
+  top: -7,
+
+  variants: {
+    color: {
+      blue: {
+        background: "$blue9",
+      },
+      plum: {
+        background: "$plum9",
+      },
+      crimson: {
+        background: "$crimson9",
+      },
+    },
+  },
+
+  "@bp2": {
+    width: "64px",
+  },
 })
 
 const CardHeaderContainer = styled("div", {
@@ -144,7 +169,7 @@ const FooterContainer = styled("div", {
   justifyContent: "space-between",
   p: "$spacing-04 $none",
   marginTop: "auto",
-  alignItems: "end",
+  alignItems: "baseline",
 });
 
 const Box = styled("div", {
@@ -200,7 +225,7 @@ const StyledLink = styled("a", {
   letterSpacing: "$tracking-normal",
   padding: "$spacing-03",
   borderRadius: "8px",
-  backgroundColor: "white",
+  backgroundColor: "transparent",
 
   "&:hover": {
     color: "$violet11",
@@ -214,10 +239,40 @@ const StyledLink = styled("a", {
   },
 });
 
+const IconLink = styled("a", {
+  borderRadius: "6px",
+  display: "flex",
+  justifyContent: "center",
+  color: "$mauve11",
+  alignItems: "center",
+  padding: "$spacing-03",
+  background: "transparent",
+  transition: "background 300ms ease-in",
+  border: "2px solid transparent",
+  outline: 0,
+
+  "&:hover": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauve2",
+    border: "2px solid transparent",
+    color: "$mauve12",
+  },
+  "&:active": { 
+    backgroundColor: "$mauve3" 
+  },
+  "&:focus": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauve2", 
+    border: "2px solid $blue11",
+    color: "$mauve12",  
+  },
+});
+
 function CredentialTimelineCard(props) {
   return (
     <Container gradient={props.gradient} href={props.href}>
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" position="bottomRight" />
+      <AccentHighlight color={props.accentColor} />
       <CardHeaderContainer>
         <Logo src={props.logo} />
         <Tag color={props.tagColor} label={props.tagLabel} />
@@ -248,9 +303,9 @@ function CredentialTimelineCard(props) {
           <Provider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <StyledLink href={props.publication}>
-                  <DownloadCloud2LineIcon />
-                </StyledLink>
+                <IconLink href={props.publication}>
+                  <Download />
+                </IconLink>
               </TooltipTrigger>
               <TooltipContent sideOffset={8}>
                 {props.tooltipLabel}
