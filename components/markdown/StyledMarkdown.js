@@ -90,7 +90,7 @@ function MDXCodeInline(props) {
 export const code = MDXCodeInline;
 
 function MDXCodeBlock(props) {
-  return <CodeBlock code={props.children} language="Javascript" />;
+  return <CodeBlock code={props.children} language="JavaScript" />;
 }
 
 export const pre = MDXCodeBlock;

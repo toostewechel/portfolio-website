@@ -52,6 +52,7 @@ const IconSize = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  size: "$5",
 });
 
 const TitleContainer = styled("div", {

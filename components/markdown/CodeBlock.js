@@ -38,10 +38,11 @@ export default function CodeBlock({ code, language }) {
   return (
     <CodeBlockContainer className="Code">
       <StyledPre>
-        <StyledCode className={`language-${language}`}>{code}</StyledCode>
         <FlexBox>
           <CodeLanguage>{language}</CodeLanguage>
         </FlexBox>
+        <StyledCode className={`language-${language}`}>{code}</StyledCode>
+        
       </StyledPre>
     </CodeBlockContainer>
   );
