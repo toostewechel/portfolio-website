@@ -1,15 +1,10 @@
-// Import MDX provider and StyledMarkdown component
+// Import MDXProvider & StyledMarkdown Component
 import { MDXProvider } from "@mdx-js/react";
 import * as components from "../components/markdown/StyledMarkdown.js";
-import React, { useEffect } from "react";
 
-//Import global CSS styles
+//Import Global CSS Styles
 import "../styles/global.css";
 import "../styles/fonts.css";
-
-function ScrollToView() {
-  return document.getElementById("core").scrollIntoView();
-}
 
 function MyApp({ Component, pageProps }) {
   return (
