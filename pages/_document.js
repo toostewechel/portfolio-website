@@ -5,12 +5,64 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Vollkorn:wght@600;800;900&display=swap"
-          rel="stylesheet"
-        />
-        <link
           rel="stylesheet"
           href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Vollkorn-SemiBold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+         <link
+          rel="preload"
+          href="/fonts/Vollkorn-SemiBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Vollkorn-Bold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+         <link
+          rel="preload"
+          href="/fonts/Vollkorn-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Vollkorn-ExtraBold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+         <link
+          rel="preload"
+          href="/fonts/Vollkorn-ExtraBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Vollkorn-Black.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+         <link
+          rel="preload"
+          href="/fonts/Vollkorn-Black.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
