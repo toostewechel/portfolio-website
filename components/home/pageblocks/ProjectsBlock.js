@@ -31,6 +31,20 @@ function ProjectsBlock() {
         </TimelineItem>
         <TimelineItem>
           <CardHeader
+            color="blue"
+            hasYear={true}
+            alignment="left"
+            year="2021"
+          />
+          <ProjectTimelineCard
+            background="/images/placeholder-project-green.png"
+            english
+            title="Building standardised eHealth modules for healthcare"
+            meta="Case Study • 20 min"
+          />
+        </TimelineItem>
+        <TimelineItem>
+          <CardHeader
             color="plum"
             hasYear={true}
             alignment="right"
@@ -41,20 +55,6 @@ function ProjectsBlock() {
             dutch
             title="De verborgen complexiteit achter noodtoegang"
             meta="Case Study • 15 min"
-          />
-        </TimelineItem>
-        <TimelineItem>
-          <CardHeader
-            color="blue"
-            hasYear={true}
-            alignment="left"
-            year="2021"
-          />
-          <ProjectTimelineCard
-            background="/images/placeholder-project-green.png"
-            dutch
-            title="Gestandaardiseerde e-health modules ontwikkelen"
-            meta="Case Study • 20 min"
           />
         </TimelineItem>
         <TimelineItem>
