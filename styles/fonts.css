@@ -1,21 +1,54 @@
+/* Vollkorn Font */
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-SemiBold.woff") format("woff"),
+    url("/fonts/Vollkorn-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-Bold.woff") format("woff"),
+    url("/fonts/Vollkorn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-ExtraBold.woff") format("woff"),
+    url("/fonts/Vollkorn-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-Black.woff") format("woff"),
+    url("/fonts/Vollkorn-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Gotham Font */
+
 @font-face {
   font-family: "Gotham";
   src: url("/fonts/gotham-book-webfont.woff") format("woff"),
-    url("/fonts/gotham-book-webfot.woff2") format("woff2");
+    url("/fonts/gotham-book-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
   src: url("/fonts/gotham-bookitalic-webfont.woff") format("woff"),
-    url("/fonts/gotham-bookitalic.woff2") format("woff2");
+    url("/fonts/gotham-bookitalic-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Gotham";
   src: url("/fonts/gotham-medium-webfont.woff") format("woff"),
-    url("/fonts/gotham-medium-webfot.woff2") format("woff2");
+    url("/fonts/gotham-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
