@@ -69,11 +69,11 @@ export const {
     },
     // Based on Major Third Type Scale, with 18px as base size
     fontSizes: {
-      "5xl": "4.209rem",
+      "5xl": "4.809rem",
       "4xl": "3.157rem",
       "3xl": "2.369rem",
-      "2xl": "1.777rem",
-      xl: "1.33rem",
+      "2xl": "1.977rem",
+      xl: "1.43rem",
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
