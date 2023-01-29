@@ -25,7 +25,7 @@ function Index() {
       <Spacer level={13} />
       <LandingBlock />
       <Spacer level={13} />
-      <CoreValuesBlock />
+        <CoreValuesBlock />
       <Spacer level={13} />
       <PageLayout>
         <ProjectsBlock />

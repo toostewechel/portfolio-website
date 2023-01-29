@@ -1,4 +1,5 @@
 import { styled } from "../../../stitches.config.js";
+import { ArrowRight } from "lucide-react";
 
 const Container = styled("div", {
   display: "flex",
@@ -7,8 +8,13 @@ const Container = styled("div", {
   variants: {
     alignment: {
       center: {
-        alignItems: "center",
-        textAlign: "center",
+        alignItems: "start",
+        textAlign: "left",
+
+        '@bp1': {
+          alignItems: "center",
+          textAlign: "center",
+        }
       },
       left: {
         alignItems: "start",
@@ -24,7 +30,7 @@ const Heading = styled("h2", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
-  mb: "$spacing-02",
+  mb: "0",
 
   "@bp1": {
     fontSize: "$4xl",
@@ -33,16 +39,45 @@ const Heading = styled("h2", {
 });
 
 const Description = styled("p", {
-  fontSize: "$base",
+  fontSize: "$lg",
   fontWeight: "$regular",
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
+  
 
   "@bp1": {
     fontSize: "$xl",
+  },
+});
+
+const Button = styled("button", {
+  display: "inline-flex",
+  alignItems: "center",
+  background: "white",
+  color: "$violet10",
+  padding: "$spacing-04 $spacing-05",
+  fontFamily: "$default",
+  fontSize: "$base",
+  fontWeight: "$medium",
+  borderRadius: "6px",
+  mt: "$spacing-06",
+
+
+  "&:hover": {
+    transition: "transform 300ms ease-out, background 300ms ease-out",
+    backgroundColor: "$gray2",
+    color: "$violet11",
+  },
+
+  "&:active": { 
+    backgroundColor: "$gray3" 
+  },
+
+  "@bp1": {
+    fontSize: "$lg",
   },
 });
 
@@ -51,6 +86,13 @@ function ContentBlock(props) {
     <Container alignment={props.alignment}>
       <Heading>{props.heading}</Heading>
       <Description>{props.description}</Description>
+      { props.hasButton ? (
+        <Button>  
+          {props.buttonLabel}
+          <span style={{ marginLeft: "8px" }}>
+            <ArrowRight size={24} />
+          </span>
+        </Button>) : null }
     </Container>
   );
 }

@@ -7,9 +7,8 @@ const CoreValuesWrapper = styled("div", {
   position: "relative",
   display: "flex",
   justifyContent: "center",
-  maxWidth: "1600px",
+  maxWidth: "1234px",
   margin: "0 auto",
-  padding: "$spacing-05 $spacing-05",
 });
 
 const CoreValueItems = styled("ul", {
@@ -20,7 +19,10 @@ const CoreValueItems = styled("ul", {
   flexWrap: "wrap",
   padding: "$none",
   listStyle: "none",
-  gap: "16px",
+
+  "@bp1": {
+    gap: "48px 24px",
+  }
 });
 
 const CoreValueItem = styled("li", {
@@ -28,7 +30,6 @@ const CoreValueItem = styled("li", {
   flexDirection: "column",
   flex: "0 0 100%",
   height: "auto",
-  borderRadius: "16px",
   mb: 0,
 
   "@bp2": {
@@ -40,53 +41,12 @@ const CoreValueItem = styled("li", {
   },
 });
 
-const StyledPattern = styled("div", {
-  position: "absolute",
-  backgroundSize: "contain",
-  backgroundRepeat: "no-repeat",
-  height: "32px",
-  width: "30px",
-  top: 0,
-  left: 0,
-  zIndex: -1,
-
-  "@bp4": {
-    top: -14,
-    left: -16,
-    height: "52px",
-    width: "50px",
-  },
-
-  variants: {
-    color: {
-      plum: {
-        backgroundImage: "url(/patterns/plum.svg)",
-      },
-      blue: {
-        backgroundImage: "url(/patterns/blue.svg)",
-      },
-      crimson: {
-        backgroundImage: "url(/patterns/crimson.svg)",
-      },
-      violet: {
-        backgroundImage: "url(/patterns/violet.svg)",
-      },
-      teal: {
-        backgroundImage: "url(/patterns/teal.svg)",
-      },
-      cyan: {
-        backgroundImage: "url(/patterns/cyan.svg)",
-      },
-    },
-  },
-});
-
 const CoreValueCard = styled("div", {
   position: "relative",
   display: "flex",
   flexDirection: "column",
   height: "100%",
-  padding: "$spacing-06",
+  padding: "$spacing-03",
   borderRadius: "16px",
 });
 
@@ -94,14 +54,14 @@ const LabelContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  gap: "$spacing-03",
-  pb: "$spacing-04",
+  gap: "$spacing-02",
+  pb: "$spacing-03",
 });
 
 const LabelIcon = styled("div", {
-  width: "16px",
-  height: "16px",
-  borderRadius: "100%",
+  width: "13px",
+  height: "13px",
+  borderRadius: "4px",
 
   variants: {
     color: {
@@ -129,7 +89,7 @@ const LabelIcon = styled("div", {
 
 const Label = styled("p", {
   display: "flex",
-  fontSize: "$sm",
+  fontSize: "$xs",
   fontWeight: "$medium",
   fontFamily: "$default",
 
@@ -166,55 +126,83 @@ const ValueTitle = styled("h3", {
   color: "$mauve12",
   mb: "$spacing-02",
 
-  "@bp1": {
+  "@bp3": {
+    fontSize: "$2xl",
+    mb: "$spacing-04",
+  },
+  "@bp4": {
     fontSize: "$3xl",
     mb: "$spacing-04",
   },
 });
 
 const ValueDescriptionBox = styled("div", {
-  ml: "4px",
-  p: "$spacing-04",
-  borderRadius: "8px",
+  ml: 0,
+  p: "$spacing-03",
+  borderRadius: 0,
 
   variants: {
     color: {
       plum: {
-        borderLeft: "4px solid $plum11",
-        // backgroundColor: "$plum2",
-        color: "$plum12",
+        borderLeft: 0,
+
+        '@bp1': {
+          borderLeft: "4px solid $plum11",
+          color: "$plum12",
+          borderRadius: "8px",
+        },
       },
       blue: {
-        borderLeft: "3px solid $blue11",
-        // backgroundColor: "$blue2",
-        color: "$blue12",
+        borderLeft: 0,
+
+         '@bp1': {
+            borderLeft: "4px solid $blue11",
+            color: "$blue12",
+            borderRadius: "8px",
+        },
       },
       crimson: {
-        borderLeft: "3px solid $crimson11",
-        // backgroundColor: "$crimson2",
-        color: "$crimson12",
+        borderLeft: 0,
+
+         '@bp1': {
+            borderLeft: "4px solid $crimson11",
+            color: "$crimson12",
+            borderRadius: "8px",
+        },
       },
       violet: {
-        borderLeft: "3px solid $violet11",
-        // backgroundColor: "$violet2",
-        color: "$violet12",
+        borderLeft: 0,
+
+         '@bp1': {
+            borderLeft: "4px solid $violet11",
+            color: "$violet12",
+            borderRadius: "8px",  
+        },
       },
       teal: {
-        borderLeft: "3px solid $teal11",
-        // backgroundColor: "$teal2",
-        color: "$teal12",
+        borderLeft: 0,
+
+         '@bp1': {
+            borderLeft: "4px solid $teal11",
+            color: "$teal12",
+            borderRadius: "8px",
+        },
       },
       cyan: {
-        borderLeft: "3px solid $cyan11",
-        // backgroundColor: "$cyan2",
-        color: "$cyan12",
+       borderLeft: 0,
+
+         '@bp1': {
+            borderLeft: "4px solid $cyan11",
+            color: "$cyan12",
+            borderRadius: "8px", 
+        },
       },
     },
   },
 });
 
 const ValueDescription = styled("p", {
-  fontSize: "$base",
+  fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
   lineHeight: "$base",
@@ -234,13 +222,14 @@ function CoreValuesBlock() {
         heading="Core Values"
         alignment="center"
         description="These values guide me when making decisions, building relationships and solving problems."
+        hasButton="true"
+        buttonLabel="My User Manual"
       />
       <Spacer level={6} />
       <CoreValuesWrapper>
         <CoreValueItems>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="plum" />
               <LabelContainer>
                 <LabelIcon color="plum" />
                 <Label color="plum">Actions and words align</Label>
@@ -257,7 +246,6 @@ function CoreValuesBlock() {
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="blue" />
               <LabelContainer>
                 <LabelIcon color="blue" />
                 <Label color="blue">Circle of influence</Label>
@@ -274,7 +262,6 @@ function CoreValuesBlock() {
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="crimson" />
               <LabelContainer>
                 <LabelIcon color="crimson" />
                 <Label color="crimson">Dive into the unknown</Label>
@@ -290,7 +277,6 @@ function CoreValuesBlock() {
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="violet" />
               <LabelContainer>
                 <LabelIcon color="violet" />
                 <Label color="violet">Seek to understand</Label>
@@ -306,7 +292,6 @@ function CoreValuesBlock() {
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="teal" />
               <LabelContainer>
                 <LabelIcon color="teal" />
                 <Label color="teal">Grow the pie together</Label>
@@ -322,7 +307,6 @@ function CoreValuesBlock() {
           </CoreValueItem>
           <CoreValueItem>
             <CoreValueCard>
-              <StyledPattern color="cyan" />
               <LabelContainer>
                 <LabelIcon color="cyan" />
                 <Label color="cyan">Put first things first</Label>
@@ -341,5 +325,6 @@ function CoreValuesBlock() {
     </Section>
   );
 }
+
 
 export default CoreValuesBlock;

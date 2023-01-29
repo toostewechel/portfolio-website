@@ -80,7 +80,7 @@ const IconButton = styled("button", {
   "&:active": { backgroundColor: "$violet4" },
 });
 
-const ButtonLabel = styled("div", {
+const ButtonLabel = styled("p", {
   display: "none",
   fontFamily: "$default",
   fontWeight: "$medium",
