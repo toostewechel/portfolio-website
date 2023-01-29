@@ -1,15 +1,24 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import { ArrowUp, ArrowDown } from "lucide-react";
+import { ChevronRight, ChevronDown } from "lucide-react";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
 	width: "100%",
 	padding: "$spacing-05",
 	borderBottom: "1px solid $gray6",
+	
+	'&[data-state="open"]': {
+			backgroundColor: "$gray2",
+		},
 
 	"@bp2": {
 		borderBottom: 0,
+		boxShadow: "none",
+
+		'&[data-state="open"]': {
+			backgroundColor: "transparent",
+		},
 	}
 })
 
@@ -19,13 +28,14 @@ export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
 export const CollapsibleContent = CollapsiblePrimitive.Content;
 
 export default function CoreValueCard({ children, ...props }) {
-	const [open, setOpen] = React.useState(true);
+	const [open, setOpen] = React.useState(props.state);
 
 	const HeaderPanel = styled('div', {
 		display: "flex",
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
+		
 	})
 
 	const TitleContainer = styled('div', {
@@ -108,7 +118,7 @@ export default function CoreValueCard({ children, ...props }) {
 		lineHeight: "$none",
 		letterSpacing: "$tracking-tighter",
 		color: "$mauve12",
-		mb: "$spacing-02",
+		mb: 0,
 
 		"@bp3": {
 			fontSize: "$2xl",
@@ -131,7 +141,7 @@ export default function CoreValueCard({ children, ...props }) {
 		color: "$violet11",
 		display: "flex",
 
-		'@bp1': {
+		'@bp2': {
 			display: "none",
 		},
 
@@ -153,14 +163,15 @@ export default function CoreValueCard({ children, ...props }) {
 	});
 
 	const ValueDescriptionBox = styled("div", {
-		ml: 0,
-		p: "$spacing-03",
+		ml: "5px",
+		p: "$spacing-02 $spacing-01",
 		borderRadius: 0,
+		mt: "8px",
 
 		variants: {
 			color: {
 				plum: {
-					borderLeft: 0,
+					borderLeft: "1px solid $plum11",
 
 					'@bp1': {
 						borderLeft: "4px solid $plum11",
@@ -169,7 +180,7 @@ export default function CoreValueCard({ children, ...props }) {
 					},
 				},
 				blue: {
-					borderLeft: 0,
+					borderLeft: "1px solid $blue11",
 
 					'@bp1': {
 						borderLeft: "4px solid $blue11",
@@ -178,7 +189,7 @@ export default function CoreValueCard({ children, ...props }) {
 					},
 				},
 				crimson: {
-					borderLeft: 0,
+					borderLeft: "1px solid $crimson11",
 
 					'@bp1': {
 						borderLeft: "4px solid $crimson11",
@@ -187,7 +198,7 @@ export default function CoreValueCard({ children, ...props }) {
 					},
 				},
 				violet: {
-					borderLeft: 0,
+					borderLeft: "1px solid $violet11",
 
 					'@bp1': {
 						borderLeft: "4px solid $violet11",
@@ -196,7 +207,7 @@ export default function CoreValueCard({ children, ...props }) {
 					},
 				},
 				teal: {
-					borderLeft: 0,
+					borderLeft: "1px solid $teal11",
 
 					'@bp1': {
 						borderLeft: "4px solid $teal11",
@@ -205,7 +216,7 @@ export default function CoreValueCard({ children, ...props }) {
 					},
 				},
 				cyan: {
-					borderLeft: 0,
+					borderLeft: "1px solid $cyan11",
 
 					'@bp1': {
 						borderLeft: "4px solid $cyan11",
@@ -226,32 +237,35 @@ export default function CoreValueCard({ children, ...props }) {
 		color: "$mauve12",
 		pl: "$spacing-04",
 
-		"@bp1": {
+		"@bp2": {
+			fontSize: "$sm",
+		},
+		"@bp3": {
 			fontSize: "$base",
 		},
 	});
 
 	return (
-			<Collapsible open={open} onOpenChange={setOpen}>
-				<HeaderPanel>
-					<TitleContainer>
-						<LabelContainer>
-							<LabelIcon color={props.color} />
-							<Label color={props.color}>{props.label}</Label>
-						</LabelContainer>
-						<ValueTitle>{props.title}</ValueTitle>
-					</TitleContainer>
-					<CollapsibleTrigger asChild>
-						<CollapsibleTriggerButton>
-							{open ? <ArrowUp /> : <ArrowDown />}
-						</CollapsibleTriggerButton>
-					</CollapsibleTrigger>
-				</HeaderPanel>
-				<CollapsibleContent>
-					<ValueDescriptionBox color={props.color}>
-						<ValueDescription>{children}</ValueDescription>
-					</ValueDescriptionBox>
-				</CollapsibleContent>
-			</Collapsible>
+		<Collapsible open={open} onOpenChange={setOpen}>
+			<HeaderPanel>
+				<TitleContainer>
+					<LabelContainer>
+						<LabelIcon color={props.color} />
+						<Label color={props.color}>{props.label}</Label>
+					</LabelContainer>
+					<ValueTitle>{props.title}</ValueTitle>
+				</TitleContainer>
+				<CollapsibleTrigger asChild>
+					<CollapsibleTriggerButton>
+						{open ? <ChevronDown /> : <ChevronRight />}
+					</CollapsibleTriggerButton>
+				</CollapsibleTrigger>
+			</HeaderPanel>
+			<CollapsibleContent>
+				<ValueDescriptionBox color={props.color}>
+					<ValueDescription>{children}</ValueDescription>
+				</ValueDescriptionBox>
+			</CollapsibleContent>
+		</Collapsible>
 	)
 }
