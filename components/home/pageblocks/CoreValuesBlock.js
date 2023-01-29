@@ -33,12 +33,24 @@ const CoreValueItem = styled("li", {
 	height: "auto",
 	mb: 0,
 
+	"&:first-child": {
+		borderTop: "1px solid $gray6",
+	},
+
 	"@bp2": {
 		flexBasis: "calc(50% - 12px)",
+
+		"&:first-child": {
+			borderTop: 0,
+		},
 	},
 
 	"@bp4": {
 		flexBasis: "calc(calc(100% / 3) - 16px)",
+		
+		"&:first-child": {
+			borderTop: 0,
+		},
 	},
 });
 
