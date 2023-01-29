@@ -7,10 +7,10 @@ const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
 	width: "100%",
 	padding: "$spacing-05",
 	borderBottom: "1px solid $gray6",
-	
+
 	'&[data-state="open"]': {
-			backgroundColor: "$gray2",
-		},
+		backgroundColor: "$gray2",
+	},
 
 	"@bp2": {
 		borderBottom: 0,
@@ -35,7 +35,7 @@ export default function CoreValueCard({ children, ...props }) {
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
-		
+
 	})
 
 	const TitleContainer = styled('div', {
@@ -247,20 +247,22 @@ export default function CoreValueCard({ children, ...props }) {
 
 	return (
 		<Collapsible open={open} onOpenChange={setOpen}>
-			<HeaderPanel>
-				<TitleContainer>
-					<LabelContainer>
-						<LabelIcon color={props.color} />
-						<Label color={props.color}>{props.label}</Label>
-					</LabelContainer>
-					<ValueTitle>{props.title}</ValueTitle>
-				</TitleContainer>
-				<CollapsibleTrigger asChild>
+			<CollapsibleTrigger asChild>
+				<HeaderPanel>
+					<TitleContainer>
+						<LabelContainer>
+							<LabelIcon color={props.color} />
+							<Label color={props.color}>{props.label}</Label>
+						</LabelContainer>
+						<ValueTitle>{props.title}</ValueTitle>
+					</TitleContainer>
+
 					<CollapsibleTriggerButton>
 						{open ? <ChevronDown /> : <ChevronRight />}
 					</CollapsibleTriggerButton>
-				</CollapsibleTrigger>
-			</HeaderPanel>
+
+				</HeaderPanel>
+			</CollapsibleTrigger>
 			<CollapsibleContent>
 				<ValueDescriptionBox color={props.color}>
 					<ValueDescription>{children}</ValueDescription>
