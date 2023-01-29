@@ -125,8 +125,8 @@ function BlogTimelineCard(props) {
     <Container href={props.href}>
       <Icon>
         <IconSize>
-          {props.dutch && <img src="/icons/nl.svg" />}
-          {props.english && <img src="/icons/gb.svg" />}
+          {props.dutch && <img style={{width: "24px", height: "24px"}} src="/icons/nl.svg" />}
+          {props.english && <img style={{width: "24px", height: "24px"}} src="/icons/gb.svg" />}
         </IconSize>
       </Icon>
       <ResponsiveImage src={props.image} />
