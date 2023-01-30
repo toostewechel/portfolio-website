@@ -81,8 +81,8 @@ const StyledClose = styled(PopoverPrimitive.Close, {
     background: "$mauveA6",
     color: "$mauveA12",
   },
-  "&:active": { 
-    backgroundColor: "$mauveA7", 
+  "&:active": {
+    backgroundColor: "$mauveA7",
   },
 });
 

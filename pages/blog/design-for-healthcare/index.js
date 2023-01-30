@@ -55,7 +55,14 @@ function Index() {
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
       <div ref={targetRef}>
-        <ContentHeader targetRef={targetRef} whatsapp={shareTo.whatsapp} facebook={shareTo.facebook} twitter={shareTo.twitter} linkedin={shareTo.linkedin  } gradient="design" />
+        <ContentHeader
+          targetRef={targetRef}
+          whatsapp={shareTo.whatsapp}
+          facebook={shareTo.facebook}
+          twitter={shareTo.twitter}
+          linkedin={shareTo.linkedin}
+          gradient="design"
+        />
         <ContentLanding
           color="crimson"
           label="Design"

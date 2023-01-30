@@ -71,14 +71,14 @@ const IconLink = styled("a", {
     border: "2px solid transparent",
     color: "$mauve12",
   },
-  "&:active": { 
-    backgroundColor: "$mauve3" 
+  "&:active": {
+    backgroundColor: "$mauve3",
   },
   "&:focus": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2", 
+    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
-    color: "$mauve12",  
+    color: "$mauve12",
   },
 });
 
@@ -157,9 +157,9 @@ const ReadingProgress = ({ targetRef, ...props }) => {
       <Provider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <div style={{display: "flex", alignItems: "center"}}>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <IconLink href="/">
-                  <X size={20} />
+                <X size={20} />
               </IconLink>
             </div>
           </TooltipTrigger>

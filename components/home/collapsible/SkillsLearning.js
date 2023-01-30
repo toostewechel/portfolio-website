@@ -88,14 +88,12 @@ function SkillsLearning(props) {
       <HeaderPanel>
         <Flex>
           <DecorativeIcon>
-            <Hourglass size={20}/>
+            <Hourglass size={20} />
           </DecorativeIcon>
           <Title>Learning</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>
-            {open ? <ArrowUp /> : <ArrowDown />}
-          </IconButton>
+          <IconButton>{open ? <ArrowUp /> : <ArrowDown />}</IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
       <Skill backgroundColor="violet" label="Front-End Web Development" />

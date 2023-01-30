@@ -42,7 +42,6 @@ export default function CodeBlock({ code, language }) {
           <CodeLanguage>{language}</CodeLanguage>
         </FlexBox>
         <StyledCode className={`language-${language}`}>{code}</StyledCode>
-        
       </StyledPre>
     </CodeBlockContainer>
   );

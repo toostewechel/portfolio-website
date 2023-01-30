@@ -49,7 +49,10 @@ function ContentHeader(props) {
           twitter={props.twitter}
           linkedin={props.linkedin}
         />
-        <ReadingProgress targetRef={props.targetRef} gradient={props.gradient} />
+        <ReadingProgress
+          targetRef={props.targetRef}
+          gradient={props.gradient}
+        />
       </Controls>
     </HeaderContainer>
   );

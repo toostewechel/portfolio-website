@@ -11,10 +11,10 @@ const Container = styled("div", {
         alignItems: "start",
         textAlign: "left",
 
-        '@bp1': {
+        "@bp1": {
           alignItems: "center",
           textAlign: "center",
-        }
+        },
       },
       left: {
         alignItems: "start",
@@ -46,7 +46,6 @@ const Description = styled("p", {
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
   maxWidth: "720px",
-  
 
   "@bp1": {
     fontSize: "$xl",
@@ -65,15 +64,14 @@ const Button = styled("button", {
   borderRadius: "6px",
   mt: "$spacing-06",
 
-
   "&:hover": {
     transition: "transform 300ms ease-out, background 300ms ease-out",
     backgroundColor: "$gray2",
     color: "$violet11",
   },
 
-  "&:active": { 
-    backgroundColor: "$gray3" 
+  "&:active": {
+    backgroundColor: "$gray3",
   },
 
   "@bp1": {
@@ -86,13 +84,14 @@ function ContentBlock(props) {
     <Container alignment={props.alignment}>
       <Heading>{props.heading}</Heading>
       <Description>{props.description}</Description>
-      { props.hasButton ? (
-        <Button>  
+      {props.hasButton ? (
+        <Button>
           {props.buttonLabel}
           <span style={{ marginLeft: "8px" }}>
             <ArrowRight size={24} />
           </span>
-        </Button>) : null }
+        </Button>
+      ) : null}
     </Container>
   );
 }

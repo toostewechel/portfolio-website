@@ -17,22 +17,22 @@ const Container = styled("a", {
   "@bp2": {
     m: "$none $spacing-02 $spacing-02 $spacing-02",
   },
-  
+
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "border, 300ms ease-out",
     border: "2px solid $mauve8",
     boxShadow: "$small",
   },
-  "&:active": { 
-    transition: "border, 300ms ease-out", 
+  "&:active": {
+    transition: "border, 300ms ease-out",
     boxShadow: "$xs",
   },
-   "&:focus": {
+  "&:focus": {
     transition: "background 150ms ease-out",
-    backgroundColor: "$mauve2", 
+    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
-    color: "$mauve12",  
+    color: "$mauve12",
   },
 });
 
@@ -125,8 +125,18 @@ function BlogTimelineCard(props) {
     <Container href={props.href}>
       <Icon>
         <IconSize>
-          {props.dutch && <img style={{width: "24px", height: "24px"}} src="/icons/nl.svg" />}
-          {props.english && <img style={{width: "24px", height: "24px"}} src="/icons/gb.svg" />}
+          {props.dutch && (
+            <img
+              style={{ width: "24px", height: "24px" }}
+              src="/icons/nl.svg"
+            />
+          )}
+          {props.english && (
+            <img
+              style={{ width: "24px", height: "24px" }}
+              src="/icons/gb.svg"
+            />
+          )}
         </IconSize>
       </Icon>
       <ResponsiveImage src={props.image} />

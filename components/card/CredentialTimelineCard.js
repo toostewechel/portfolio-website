@@ -33,15 +33,15 @@ const Container = styled("a", {
     border: "2px solid $mauve8",
     boxShadow: "$small",
   },
-  "&:active": { 
-    transition: "border, 300ms ease-out", 
+  "&:active": {
+    transition: "border, 300ms ease-out",
     boxShadow: "$xs",
   },
-   "&:focus": {
+  "&:focus": {
     transition: "background 150ms ease-out",
-    backgroundColor: "$mauve2", 
+    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
-    color: "$mauve12",  
+    color: "$mauve12",
   },
 });
 
@@ -64,9 +64,9 @@ const BackgroundPattern = styled("img", {
         bottom: -116,
         right: -116,
       },
-    }
-  }
-})
+    },
+  },
+});
 
 const AccentHighlight = styled("div", {
   position: "absolute",
@@ -93,7 +93,7 @@ const AccentHighlight = styled("div", {
   "@bp2": {
     width: "64px",
   },
-})
+});
 
 const CardHeaderContainer = styled("div", {
   display: "flex",
@@ -257,21 +257,24 @@ const IconLink = styled("a", {
     border: "2px solid transparent",
     color: "$mauve12",
   },
-  "&:active": { 
-    backgroundColor: "$mauve3" 
+  "&:active": {
+    backgroundColor: "$mauve3",
   },
   "&:focus": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2", 
+    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
-    color: "$mauve12",  
+    color: "$mauve12",
   },
 });
 
 function CredentialTimelineCard(props) {
   return (
     <Container gradient={props.gradient} href={props.href}>
-      <BackgroundPattern src="/patterns/circular-background-pattern.svg" position="bottomRight" />
+      <BackgroundPattern
+        src="/patterns/circular-background-pattern.svg"
+        position="bottomRight"
+      />
       <AccentHighlight color={props.accentColor} />
       <CardHeaderContainer>
         <Logo src={props.logo} />

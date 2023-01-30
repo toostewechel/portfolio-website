@@ -125,9 +125,12 @@ export const {
     shadows: {
       inset: "inset 1px 1px 4px rgba(0, 0, 0, 0.3)",
       xs: "0 1px 4px -1px  hsla(214, 45%, 20%, 0.52)",
-      small: "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)",
-      medium: "0 2px 6px -1px  hsla(214, 53%, 23%, 0.16), 0 8px 24px -4px  hsla(214, 47%, 21%, 0.38)",
-      large: "0 3px 18px -2px  hsla(214, 53%, 23%, 0.16), 0 12px 48px -6px  hsla(214, 47%, 21%, 0.38)",
+      small:
+        "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)",
+      medium:
+        "0 2px 6px -1px  hsla(214, 53%, 23%, 0.16), 0 8px 24px -4px  hsla(214, 47%, 21%, 0.38)",
+      large:
+        "0 3px 18px -2px  hsla(214, 53%, 23%, 0.16), 0 12px 48px -6px  hsla(214, 47%, 21%, 0.38)",
     },
     zIndices: {},
     transitions: {},

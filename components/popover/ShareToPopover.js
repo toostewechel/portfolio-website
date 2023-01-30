@@ -6,10 +6,10 @@ import {
   PopoverClose,
 } from "./Popover.js";
 import { Share, X } from "lucide-react";
-import WhatsappLineIcon from 'remixicon-react/WhatsappLineIcon';
-import TwitterLineIcon from 'remixicon-react/TwitterLineIcon';
-import FacebookFillIcon from 'remixicon-react/FacebookFillIcon';
-import LinkedinFillIcon from 'remixicon-react/LinkedinFillIcon';
+import WhatsappLineIcon from "remixicon-react/WhatsappLineIcon";
+import TwitterLineIcon from "remixicon-react/TwitterLineIcon";
+import FacebookFillIcon from "remixicon-react/FacebookFillIcon";
+import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 
 const StyledPopoverContent = styled(PopoverContent, {
   minWidth: "232px",
@@ -32,14 +32,14 @@ const IconButton = styled("button", {
     backgroundColor: "$mauve2",
     color: "$mauve12",
   },
-  "&:active": { 
-    backgroundColor: "$mauve3", 
+  "&:active": {
+    backgroundColor: "$mauve3",
   },
-   "&:focus": {
+  "&:focus": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2", 
+    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
-    color: "$mauve12",  
+    color: "$mauve12",
   },
 });
 
@@ -62,16 +62,16 @@ const ShareLinkContainer = styled("a", {
     background: "$mauveA6",
     color: "$mauveA12",
   },
-  "&:active": { 
-    backgroundColor: "$mauveA7", 
+  "&:active": {
+    backgroundColor: "$mauveA7",
   },
-  "&:visited": { 
+  "&:visited": {
     color: "$mauveA12",
   },
-  "&:focus": { 
+  "&:focus": {
     transition: "all 150ms ease-out",
     color: "$mauveA12",
-    backgroundColor: "$mauveA7", 
+    backgroundColor: "$mauveA7",
   },
 });
 
@@ -94,7 +94,7 @@ function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div style={{display: "flex", alignItems: "center"}}>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <IconButton aria-label="Share to">
             <Share size={20} />
           </IconButton>
@@ -115,7 +115,7 @@ function ShareToPopover(props) {
           <Label>Twitter</Label>
         </ShareLinkContainer>
         <ShareLinkContainer href={props.linkedin} target="_blank">
-         <LinkedinFillIcon size={20} />
+          <LinkedinFillIcon size={20} />
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
         <PopoverClose aria-label="Close">

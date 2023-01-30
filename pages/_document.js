@@ -15,7 +15,7 @@ export default function Document() {
           type="font/woff"
           crossOrigin="anonymous"
         />
-         <link
+        <link
           rel="preload"
           href="/fonts/Vollkorn-SemiBold.woff2"
           as="font"
@@ -29,7 +29,7 @@ export default function Document() {
           type="font/woff"
           crossOrigin="anonymous"
         />
-         <link
+        <link
           rel="preload"
           href="/fonts/Vollkorn-Bold.woff2"
           as="font"
@@ -43,7 +43,7 @@ export default function Document() {
           type="font/woff"
           crossOrigin="anonymous"
         />
-         <link
+        <link
           rel="preload"
           href="/fonts/Vollkorn-ExtraBold.woff2"
           as="font"
@@ -57,7 +57,7 @@ export default function Document() {
           type="font/woff"
           crossOrigin="anonymous"
         />
-         <link
+        <link
           rel="preload"
           href="/fonts/Vollkorn-Black.woff2"
           as="font"

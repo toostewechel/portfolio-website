@@ -93,9 +93,7 @@ function SkillsCore(props) {
           <Title>Core</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <IconButton>
-            {open ? <ArrowUp /> : <ArrowDown />}
-          </IconButton>
+          <IconButton>{open ? <ArrowUp /> : <ArrowDown />}</IconButton>
         </CollapsibleTrigger>
       </HeaderPanel>
       <Skill backgroundColor="blue" label="Problem Solving" />
