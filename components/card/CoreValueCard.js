@@ -1,31 +1,12 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import { ChevronRight, ChevronDown } from "lucide-react";
 
-const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
+const Container = styled("div", {
+	display: "flex",
+	flexDirection: "column",
 	width: "100%",
 	padding: "$spacing-05",
-	borderBottom: "1px solid $gray6",
-
-	'&[data-state="open"]': {
-		backgroundColor: "$gray2",
-	},
-
-	"@bp2": {
-		borderBottom: 0,
-		boxShadow: "none",
-
-		'&[data-state="open"]': {
-			backgroundColor: "transparent",
-		},
-	},
-});
-
-// Exports Collapsible Component
-export const Collapsible = StyledCollapsible;
-export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
-export const CollapsibleContent = CollapsiblePrimitive.Content;
+})
 
 const HeaderPanel = styled("div", {
 	display: "flex",
@@ -126,38 +107,6 @@ const ValueTitle = styled("h3", {
 	},
 });
 
-const CollapsibleTriggerButton = styled("button", {
-	borderRadius: "4px",
-	outlineOffset: "2px",
-	ml: "$spacing-03",
-	padding: "$spacing-02",
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
-	color: "$violet11",
-	display: "flex",
-
-	"@bp2": {
-		display: "none",
-	},
-
-	'&[data-state="closed"]': {
-		backgroundColor: "white",
-	},
-	'&[data-state="open"]': {
-		backgroundColor: "$violet3",
-	},
-	"&:hover": {
-		backgroundColor: "$violet4",
-	},
-	"&:active": {
-		backgroundColor: "$violet5",
-	},
-	"&:focus": {
-		outlineColor: "$violet11",
-	},
-});
-
 const ValueDescriptionBox = styled("div", {
 	ml: "5px",
 	p: "$spacing-02 $spacing-01",
@@ -242,29 +191,20 @@ const ValueDescription = styled("p", {
 });
 
 export default function CoreValueCard({ children, ...props }) {
-	const [open, setOpen] = React.useState(props.state);
-
 	return (
-		<Collapsible open={open} onOpenChange={setOpen}>
-			<CollapsibleTrigger asChild>
-				<HeaderPanel>
-					<TitleContainer>
-						<LabelContainer>
-							<LabelIcon color={props.color} />
-							<Label color={props.color}>{props.label}</Label>
-						</LabelContainer>
-						<ValueTitle>{props.title}</ValueTitle>
-					</TitleContainer>
-					<CollapsibleTriggerButton>
-						{open ? <ChevronDown /> : <ChevronRight />}
-					</CollapsibleTriggerButton>
-				</HeaderPanel>
-			</CollapsibleTrigger>
-			<CollapsibleContent>
-				<ValueDescriptionBox color={props.color}>
-					<ValueDescription>{children}</ValueDescription>
-				</ValueDescriptionBox>
-			</CollapsibleContent>
-		</Collapsible>
+		<Container>
+			<HeaderPanel>
+				<TitleContainer>
+					<LabelContainer>
+						<LabelIcon color={props.color} />
+						<Label color={props.color}>{props.label}</Label>
+					</LabelContainer>
+					<ValueTitle>{props.title}</ValueTitle>
+				</TitleContainer>
+			</HeaderPanel>
+			<ValueDescriptionBox color={props.color}>
+				<ValueDescription>{children}</ValueDescription>
+			</ValueDescriptionBox>
+		</Container>
 	);
 }
