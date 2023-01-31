@@ -1,7 +1,8 @@
 import { styled } from "../../stitches.config.js";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState, Children } from "react";
 import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
 import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
+import { useMediaQuery } from "react-responsive";
 
 const TimelineWrapper = styled("div", {
   maxWidth: "1234px",
@@ -46,12 +47,6 @@ const StyledTimelineItem = styled("li", {
   },
 });
 
-const Card = styled("div", {
-  padding: "12px",
-  borderRadius: "16px",
-  background: "$crimson3",
-});
-
 const ControlsContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
@@ -93,30 +88,43 @@ const Button = styled("button", {
   },
 });
 
+//Helper Function to get TimelineCard Width
 function getCardWidth() {
   return document.getElementById("timeline-item").clientWidth;
-}
+};
 
 export const TimelineItem = StyledTimelineItem;
 export const Timeline = ({ children }) => {
+	//Scroll Function
   const ref = useRef(null);
-  const scroll = (scrollOffset) => {
-    ref.current.scrollLeft += scrollOffset;
-  };
+  const scroll = (scrollOffset) => { ref.current.scrollLeft += scrollOffset; };
+
+	//On BP4 - BP3 => 3 Items in Viewport || On BP2, 2 Items in Viewport || On BP1, 1 Item in Viewport
+  const bp2 = useMediaQuery({ minWidth: 640 }) 
+  const bp4 = useMediaQuery({ minWidth: 1024 }); 
+
+	//Conditionally Render Controls based on Viewport and timelineCount
+	const [count, setCount] = useState(0);
+	const timelineCount = Children.count(children);
+	const showControls = bp4 ? count > 3 : bp2 ? count > 2 : count > 1;
+	
+  useEffect(() => {
+		setCount(timelineCount);
+  }, [setCount])
 
   return (
     <TimelineWrapper>
       <TimelineItems ref={ref}>{children}</TimelineItems>
       <ControlsContainer>
         <Line />
-        <Controls>
+        {showControls ? (<Controls>
           <Button onClick={() => scroll(-getCardWidth())}>
             <ArrowLeftLineIcon />
           </Button>
           <Button onClick={() => scroll(getCardWidth())}>
             <ArrowRightLineIcon />
           </Button>
-        </Controls>
+        </Controls>) : null}
       </ControlsContainer>
     </TimelineWrapper>
   );
