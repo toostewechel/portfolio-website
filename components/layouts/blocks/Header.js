@@ -20,7 +20,11 @@ const LogoBox = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "196px",
+	width: "164px",
+
+	"@bp1": {
+    width: "232px",
+  },
 });
 
 const Box = styled("div", {
@@ -86,7 +90,7 @@ function Header() {
   return (
     <HeaderContainer>
       <LogoBox href="/">
-        <StyledLogo src="/logo/logo.png" />
+        <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </LogoBox>
       <Box>
         <CommandDialog />

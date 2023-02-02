@@ -1,5 +1,4 @@
 import { styled } from "../../../stitches.config.js";
-import { GitHub, Twitter, Linkedin } from "react-feather";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
