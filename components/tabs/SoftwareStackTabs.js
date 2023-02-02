@@ -6,11 +6,12 @@ const FlexContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   columnGap: "$spacing-05",
-  mt: "$spacing-04",
+  mt: 0,
 
   "@bp3": {
     flexDirection: "row",
     rowGap: "$spacing-04",
+		mt: "$spacing-04",
   },
 });
 
@@ -18,7 +19,13 @@ const Flex = styled("div", {
   flex: 1,
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-05",
+  gap: "$spacing-02",
+	mb: "$spacing-02",
+
+	"@bp3": {
+		gap: "$spacing-05",
+		mb: 0,
+	}
 });
 
 function SoftwareStackTabs() {
@@ -48,7 +55,7 @@ function SoftwareStackTabs() {
               href="https://www.notion.so/"
               src="/logo/notion-logo.png"
               title="Notion"
-              description="Workspace for Notes, Docs and Tasks"
+              description="Workspace for Notes & Docs"
             />
             <StyledLink
               href="https://codespace.app/"
@@ -57,9 +64,9 @@ function SoftwareStackTabs() {
               description="Code Snippets Manager"
             />
             <StyledLink
-              href="https://roamresearch.com/"
-              src="/logo/roam-research-logo.png"
-              title="Roam Research"
+              href="https://capacities.io/"
+              src="/logo/capacities-logo.svg"
+              title="Capacities"
               description="Tool for Networked Thoughts"
             />
           </Flex>
@@ -86,13 +93,13 @@ function SoftwareStackTabs() {
               href="https://skiff.com/"
               src="/logo/skiff-logo.png"
               title="Skiff"
-              description="E2E Encrypted Mail, Pages and Drive"
+              description="E2E Encrypted Mail"
             />
             <StyledLink
               href="https://raycast.com/"
               src="/logo/raycast-logo.png"
               title="Raycast"
-              description="Supercharge Productivity"
+              description="Supercharge your Productivity"
             />
           </Flex>
         </FlexContainer>
