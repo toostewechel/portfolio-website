@@ -1,12 +1,33 @@
 import { styled } from "../stitches.config.js";
-
 import ExternalLinkLineIcon from "remixicon-react/ExternalLinkLineIcon";
+import { ExternalLink } from "lucide-react";
 
-const Link = styled("a", {
-  outlineOffset: "2px",
+const LinkContainer = styled("a", {
+	outline: 0,
+	willChange: "transform",
+  transition: "all, 300ms ease-in",
+	border: "1px solid transparent",
+	  borderRadius: "6px",
 
-  "&:focus": {
-    outlineColor: "$violet11",
+	"&:focus": {
+		transform: "translateY(-2px)",
+		transition: "transform 200ms ease-out, background 200ms ease-out",
+		backgroundColor: "$gray2",
+		border: "1px solid $gray6",
+		boxShadow: "$small",
+	},
+	"&:hover": {
+    transform: "translateY(-2px)",
+    transition: "transform 200ms ease-out, background 200ms ease-out",
+		backgroundColor: "$gray2",
+		border: "1px solid $gray6",
+    boxShadow: "$small",
+  },
+  "&:active": {
+    transform: "translateY(-1px)",
+    transition: "transform 200ms ease-out, background 200ms ease-out",	
+		backgroundColor: "$gray4",
+		boxShadow: "$xs",
   },
 });
 
@@ -15,22 +36,8 @@ const Panel = styled("div", {
   flexDirection: "row",
   justifyContent: "space-between",
   padding: "$spacing-03 $spacing-02",
-  borderRadius: "4px",
-  border: "1px solid transparent",
-  willChange: "transform",
-  transition: "all, 300ms ease-in",
 
-  "&:hover": {
-    transform: "translateY(-2px)",
-    transition: "all, 300ms ease-out",
-    backgroundColor: "$violet3",
-    border: "1px solid $violet4",
-    boxShadow: "$smooth",
-  },
-  "&:active": {
-    scale: 0.99,
-    backgroundColor: "$violet4",
-  },
+  
   "@bp1": {
     padding: "$spacing-03",
   },
@@ -42,23 +49,14 @@ const FlexWrapper = styled("div", {
 });
 
 const Logo = styled("img", {
-  size: "$7",
-  borderRadius: "8px",
-  mr: "$spacing-03",
+  width: "40px",
+	height: "40px",
+  borderRadius: "6px",
+  mr: "$spacing-04",
 
   "@bp2": {
     size: "$8",
     mr: "$spacing-04",
-  },
-});
-
-const ImageContainer = styled("div", {
-  display: "flex",
-  size: "$7",
-
-  "@bp4": {
-    pr: "$spacing-05",
-    size: "$8",
   },
 });
 
@@ -80,12 +78,15 @@ const Title = styled("h3", {
 });
 
 const Description = styled("p", {
-  fontSize: "$sm",
+  fontSize: "$xs",
   fontWeight: "$regular",
+	letterSpacing: "$tracking-tight",
   fontFamily: "$default",
-  color: "$gray11",
+  color: "$mauve10",
+	mt: "-2px",
 
-  "@bp4": {
+  "@bp3": {
+		mt: "0",
     fontSize: "$base",
   },
 });
@@ -94,18 +95,13 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  mr: "$spacing-02",
-  color: "$violet11",
-  size: "$5",
-
-  "@bp4": {
-    size: "$6",
-  },
+  mr: "$spacing-03",
+  color: "$mauve11",
 });
 
 function StyledLink(props) {
   return (
-    <Link href={props.href} target="_blank">
+    <LinkContainer href={props.href} target="_blank">
       <Panel>
         <FlexWrapper>
           <Logo src={props.src} />
@@ -118,11 +114,11 @@ function StyledLink(props) {
         </FlexWrapper>
         <FlexContainer>
           <DecorativeIcon>
-            <ExternalLinkLineIcon />
+            <ExternalLink size={20} />
           </DecorativeIcon>
         </FlexContainer>
       </Panel>
-    </Link>
+    </LinkContainer>
   );
 }
 
