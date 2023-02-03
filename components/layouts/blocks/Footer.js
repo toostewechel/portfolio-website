@@ -1,4 +1,5 @@
 import { styled } from "../../../stitches.config.js";
+import { HoverCardRoot, HoverCardTrigger, HoverCardPortal, HoverCardPanel } from "../../card/HoverCard.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
@@ -217,19 +218,55 @@ function Footer() {
 					</Box>
 					<Box>
 						<PoweredByContainer>
-							<Label>powered by</Label>
+							<Label>Powered By</Label>
 							<Line />
 						</PoweredByContainer>
 						<PoweredByLogoContainer>
-							<PoweredByBadge href="">
-								<img src="/badges/spline-logo-badge.png" alt="Spline 3D Logo" />
-							</PoweredByBadge>
-							<PoweredByBadge href="">
-								<img src="/badges/akash-logo-badge.png" alt="Akash Logo" />
-							</PoweredByBadge>
-							<PoweredByBadge href="">
-								<img src="/badges/replit-logo-badge.png" alt="Replit Logo" />
-							</PoweredByBadge>
+							<HoverCardRoot>
+								<HoverCardTrigger asChild>
+									<PoweredByBadge href="https://spline.design/" target="_blank">
+										<img src="/badges/spline-logo-badge.png" alt="Spline 3D Logo" />
+									</PoweredByBadge>
+								</HoverCardTrigger>
+								<HoverCardPanel 
+									logo="/logo/spline3d-logo.png"
+									title="Spline 3D"
+									socialHandle="@splinetool"
+									description="A friendly 3D multiplayer design tool that runs in the browser."
+									followingCount="4.018"
+									followersCount="53,2K"
+									/>
+							</HoverCardRoot>
+							<HoverCardRoot>
+								<HoverCardTrigger asChild>
+									<PoweredByBadge href="https://akash.network/" target="_blank">
+										<img src="/badges/akash-logo-badge.png" alt="Akash Logo" />
+									</PoweredByBadge>
+								</HoverCardTrigger>
+								<HoverCardPanel 
+									logo="/logo/akash-logo.png"
+									title="Akash Network"
+									socialHandle="@akashnet_"
+									description="A decentralised, open and peer-to-peer marketplace for cloud resources"
+									followingCount="319"
+									followersCount="85,8K"
+									/>
+							</HoverCardRoot>
+							<HoverCardRoot>
+								<HoverCardTrigger asChild>
+										<PoweredByBadge href="https://replit.com/" target="_blank">
+											<img src="/badges/replit-logo-badge.png" alt="Replit Logo" />
+										</PoweredByBadge>
+								</HoverCardTrigger>
+								<HoverCardPanel 
+									logo="/logo/replit-logo.png"
+									title="Replit"
+									socialHandle="@replit"
+									description="Build software collaboratively from anywhere in the world, on any device, without spending a second on setup."
+									followingCount="1.091"
+									followersCount="73,4K"
+									/>
+							</HoverCardRoot>
 						</PoweredByLogoContainer>
 					</Box>
 				</FooterHeaderContainer>
