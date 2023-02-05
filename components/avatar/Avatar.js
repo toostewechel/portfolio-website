@@ -17,7 +17,7 @@ const AvatarContainer = styled("div", {
 const StyledImage = styled("img", {
   size: "$7",
 
-	"@bp4": {
+  "@bp4": {
     size: "$8",
   },
 });
@@ -33,7 +33,7 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-	lineHeight: "$",
+  lineHeight: "$",
 
   "@bp4": {
     fontSize: "$xl",

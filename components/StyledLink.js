@@ -3,31 +3,31 @@ import ExternalLinkLineIcon from "remixicon-react/ExternalLinkLineIcon";
 import { ExternalLink } from "lucide-react";
 
 const LinkContainer = styled("a", {
-	outline: 0,
-	willChange: "transform",
+  outline: 0,
+  willChange: "transform",
   transition: "all, 300ms ease-in",
-	border: "1px solid transparent",
-	  borderRadius: "6px",
+  border: "1px solid transparent",
+  borderRadius: "6px",
 
-	"&:focus": {
-		transform: "translateY(-2px)",
-		transition: "transform 200ms ease-out, background 200ms ease-out",
-		backgroundColor: "$gray2",
-		border: "1px solid $gray6",
-		boxShadow: "$small",
-	},
-	"&:hover": {
+  "&:focus": {
     transform: "translateY(-2px)",
     transition: "transform 200ms ease-out, background 200ms ease-out",
-		backgroundColor: "$gray2",
-		border: "1px solid $gray6",
+    backgroundColor: "$gray2",
+    border: "1px solid $gray6",
+    boxShadow: "$small",
+  },
+  "&:hover": {
+    transform: "translateY(-2px)",
+    transition: "transform 200ms ease-out, background 200ms ease-out",
+    backgroundColor: "$gray2",
+    border: "1px solid $gray6",
     boxShadow: "$small",
   },
   "&:active": {
     transform: "translateY(-1px)",
-    transition: "transform 200ms ease-out, background 200ms ease-out",	
-		backgroundColor: "$gray4",
-		boxShadow: "$xs",
+    transition: "transform 200ms ease-out, background 200ms ease-out",
+    backgroundColor: "$gray4",
+    boxShadow: "$xs",
   },
 });
 
@@ -37,7 +37,6 @@ const Panel = styled("div", {
   justifyContent: "space-between",
   padding: "$spacing-03 $spacing-02",
 
-  
   "@bp1": {
     padding: "$spacing-03",
   },
@@ -50,7 +49,7 @@ const FlexWrapper = styled("div", {
 
 const Logo = styled("img", {
   width: "40px",
-	height: "40px",
+  height: "40px",
   borderRadius: "6px",
   mr: "$spacing-04",
 
@@ -80,13 +79,13 @@ const Title = styled("h3", {
 const Description = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
-	letterSpacing: "$tracking-tight",
+  letterSpacing: "$tracking-tight",
   fontFamily: "$default",
   color: "$mauve10",
-	mt: "-2px",
+  mt: "-2px",
 
   "@bp3": {
-		mt: "0",
+    mt: "0",
     fontSize: "$base",
   },
 });
