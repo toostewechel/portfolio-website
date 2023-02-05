@@ -33,7 +33,7 @@ const StyledHeading = styled("h1", {
         pt: "$spacing-06",
         pb: "$spacing-05",
 
-        "@bp2": {
+        "@bp4": {
           fontSize: "$4xl",
         },
       },
