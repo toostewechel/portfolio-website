@@ -47,7 +47,7 @@ const ProgressLabel = styled("p", {
 
 const ProgressBarOuter = styled("div", {
   width: "132px",
-  borderRadius: "99px",
+  borderRadius: "6px",
   padding: "$spacing-02",
   backgroundColor: "$mauve3",
   boxShadow: "$inset",
@@ -130,7 +130,7 @@ const ReadingProgress = ({ targetRef, ...props }) => {
   const ProgessBarInner = styled("div", {
     width: `${readingProgress}%`,
     height: "16px",
-    borderRadius: "99px",
+    borderRadius: "4px",
     variants: {
       gradient: {
         tech: {
