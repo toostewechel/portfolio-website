@@ -4,7 +4,6 @@ import Tag from "../tag/Tag.js";
 import {
   HoverCardRoot,
   HoverCardTrigger,
-  HoverCardPortal,
   HoverCardPanel,
 } from "../card/HoverCard.js";
 
@@ -14,7 +13,7 @@ const Wrapper = styled("div", {
   flexDirection: "column",
   width: "100%",
   backgroundColor: "white",
-  marginTop: "-88px",
+  marginTop: "-96px",
 
   "@bp4": {
     flexDirection: "row",
@@ -140,7 +139,7 @@ const PoweredByBadge = styled("a", {
 
 export default function Landing({ LandingContent, LandingImage, AccentColor }) {
   return (
-    <Wrapper>
+    <Wrapper id="landing">
       <CircularPatternDesktop />
       <LandingContentContainer>
         <CircularPatternTablet />

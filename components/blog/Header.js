@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import ShareToPopover from "../popover/ShareToPopover.js";
-import { ReadingProgress } from "../readingprogress/ReadingProgress.js";
+import { ReadingProgressBar } from "../readingprogress/ReadingProgress.js";
 import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
 import {
@@ -18,7 +18,7 @@ const Container = styled("header", {
 	padding: "$spacing-04",
 	position: "sticky",
 	top: 0,
-	zIndex: 99,
+	zIndex: 9999,
 
 	"@bp5": {
 		padding: "$spacing-05",
@@ -29,7 +29,6 @@ const ImageLink = styled("a", {
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	width: "196px",
 });
 
 const Controls = styled("div", {
@@ -38,8 +37,12 @@ const Controls = styled("div", {
 });
 
 const StyledLogo = styled("img", {
-	width: "100%",
-	height: "auto",
+  height: "auto",
+	width: "164px",
+
+  "@bp1": {
+    width: "232px",
+  },
 });
 
 const IconLink = styled("a", {
@@ -73,11 +76,11 @@ const IconLink = styled("a", {
 });
 
 export default function Header({ whatsapp, facebook, twitter, linkedin, targetRef, gradient }) {
-	const contentWidth = useMediaQuery({ minWidth: 1720 });
+	const contentWidth = useMediaQuery({ minWidth: 2200 });
 	return (
 		<Container style={{ backgroundColor: contentWidth ? "transparent" : "white", }}>
 			<ImageLink href="/">
-				<StyledLogo src="/logo/logo.png" />
+				<StyledLogo src="/logo/snapshots-labs-logo.png" />
 			</ImageLink>
 			<Controls>
 				<ShareToPopover
@@ -86,7 +89,7 @@ export default function Header({ whatsapp, facebook, twitter, linkedin, targetRe
 					twitter={twitter}
 					linkedin={linkedin}
 				/>
-				<ReadingProgress
+				<ReadingProgressBar
 					targetRef={targetRef}
 					gradient={gradient}
 				/>

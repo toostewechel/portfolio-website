@@ -44,7 +44,7 @@ const ProgressBarOuter = styled("div", {
   boxShadow: "$inset",
 });
 
-export const ReadingProgress = ({ targetRef, gradient }) => {
+export const ReadingProgressBar = ({ targetRef, gradient }) => {
   //Hook for reading and setting reading progress
   const [readingProgress, setReadingProgress] = React.useState(0);
 

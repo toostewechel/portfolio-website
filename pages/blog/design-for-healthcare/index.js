@@ -3,13 +3,13 @@ import { createRef } from "react";
 import Head from "next/head";
 
 import { BlogContentLayout, BlogMarkdownContent } from "../../../components/layouts/Layout.js";
-
+import Header from "../../../components/blog/Header.js";
 import Landing from "../../../components/blog/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
 
-import Header from "../../../components/blog/Header.js";
+
 import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
@@ -69,42 +69,43 @@ function Index() {
 				/>
 				<meta property="og:site_name" content="Snapshots Labs" />
 			</Head>
-			<Header
-				targetRef={targetRef}
-				whatsapp={shareTo.whatsapp}
-				facebook={shareTo.facebook}
-				twitter={shareTo.twitter}
-				linkedin={shareTo.linkedin}
-				gradient="design"
-			/>
-			<article ref={targetRef}>
-				<Landing
-					AccentColor="crimson"
-					LandingContent={
-						<LandingContent
-							AvatarImage="/avatar/avatar-tom-oostewechel.png"
-							AvatarLabel="Tom Oostewechel"
-							AvatarDescription="Author"
-							DatePosted="4 Feb, 2023"
-							HeadingTitle="Design Accessible Experiences for the Healthcare Sector"
-							Description="Easily convert paper healthcare protocols and methods, 			without technical knowledge, into tailor-made, user friendly online modules and launch in production within weeks instead of months."
-						/>
-					}
-					LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
-				/>
 
-				<BlogContentLayout>
-					<NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
-					<BlogMarkdownContent>
-						<div>SummaryBlock</div>
-						<MarkdownContentBlock Content={Chapter1} />
-					</BlogMarkdownContent>
-					<BlogMarkdownContent>
-						<div>SummaryBlock</div>
-						<MarkdownContentBlock Content={Chapter2} />
-					</BlogMarkdownContent>
-				</BlogContentLayout>
-			</article>
+			<div ref={targetRef}>
+				<Header
+					targetRef={targetRef}
+					whatsapp={shareTo.whatsapp}
+					facebook={shareTo.facebook}
+					twitter={shareTo.twitter}
+					linkedin={shareTo.linkedin}
+					gradient="design"
+				/>
+				<article>
+					<Landing
+						AccentColor="crimson"
+						LandingContent={
+							<LandingContent
+								AvatarImage="/avatar/avatar-tom-oostewechel.png"
+								AvatarLabel="Tom Oostewechel"
+								AvatarDescription="Author"
+								DatePosted="4 Feb, 2023"
+								HeadingTitle="Design Accessible Experiences for the Healthcare Sector"
+								Description="Easily convert paper healthcare protocols and methods, 			without technical knowledge, into tailor-made, user friendly online modules and launch in production within weeks instead of months."
+							/>
+						}
+						LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
+					/>
+
+					<BlogContentLayout>
+						<NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
+						<BlogMarkdownContent>
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter1} />
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter2} />
+						</BlogMarkdownContent>
+					</BlogContentLayout>
+				</article>
+			</div>
 		</>
 	);
 }

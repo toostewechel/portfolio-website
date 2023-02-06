@@ -1,21 +1,30 @@
 import { styled } from "../../stitches.config.js";
 import { Breadcrumbs, BreadcrumbItem } from "../breadcrumbs/Breadcrumbs.js";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useMediaQuery } from "react-responsive";
 
-const NavBarWrapper = styled('div', {
+const NavBarContainer = styled('div', {
 	width: "100%",
 	maxWidth: "1720px",
 	padding: "$spacing-04",
-	display: "flex",
+	display: "none",
 	justifyContent: "space-between",
 	position: "sticky",
-	top: 80,
 	backgroundColor: "$gray2",
-	zIndex: 999,
+	zIndex: 9999,
+	borderBottom: "1px solid $gray6",
+	borderTop: "1px solid $gray6",
+
+	"@bp3": {
+		display: "flex",
+		borderBottom: "1px solid $gray6",
+		borderTop: "1px solid $gray6",
+	},
 	
 	"@bp5": {
     padding: "$spacing-05",
-		top: 0,
+		borderBottom: "1px solid transparent",
+		borderTop: "1px solid transparent",
   },
 })
 
@@ -40,8 +49,9 @@ const Button = styled("a", {
 });
 
 export default function NavBar({ ActivePageTitle }) {
+	const contentWidth = useMediaQuery({ minWidth: 2200 });
 	return(
-		<NavBarWrapper>
+		<NavBarContainer style={{ top: contentWidth ? 0 : 88, }}>
 			<Breadcrumbs>
 				<BreadcrumbItem>{ActivePageTitle}</BreadcrumbItem>
 			</Breadcrumbs>
@@ -49,6 +59,6 @@ export default function NavBar({ ActivePageTitle }) {
 				<Button><ArrowLeft size={20}/></Button>
 				<Button><ArrowRight size={20}/></Button>
 			</Controls>
-		</NavBarWrapper>
+		</NavBarContainer>
 	)
 }
