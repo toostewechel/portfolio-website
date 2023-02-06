@@ -16,6 +16,10 @@ const AvatarContainer = styled("div", {
 
 const StyledImage = styled("img", {
   size: "$7",
+
+  "@bp4": {
+    size: "$8",
+  },
 });
 
 const FlexWrapper = styled("div", {
@@ -25,13 +29,14 @@ const FlexWrapper = styled("div", {
 
 const Title = styled("h3", {
   fontSize: "$lg",
-  fontWeight: "$semi-bold",
+  fontWeight: "$extra-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
-  color: "$gray12",
+  color: "$mauve12",
+  lineHeight: "$",
 
   "@bp4": {
-    fontSize: "$lg",
+    fontSize: "$xl",
   },
 });
 
@@ -39,7 +44,7 @@ const Description = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$gray10",
+  color: "$gray11",
   letterSpacing: "$tracking-tight",
 
   "@bp4": {

@@ -72,7 +72,7 @@ const BackgroundPattern = styled("div", {
   // top: 63,
 });
 
-const Button = styled("button", {
+const Button = styled("a", {
   display: "inline-flex",
   alignItems: "center",
   padding: "$spacing-04 $spacing-05",
@@ -108,7 +108,7 @@ function LandingBlock() {
                 building innovative and valuable products that have a real
                 impact.
               </Description>
-              <Button href="#">
+              <Button href="/blogpage">
                 My Design Vision
                 <span style={{ marginLeft: "8px" }}>
                   <svg

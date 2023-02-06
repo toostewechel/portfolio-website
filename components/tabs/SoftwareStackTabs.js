@@ -11,7 +11,7 @@ const FlexContainer = styled("div", {
   "@bp3": {
     flexDirection: "row",
     rowGap: "$spacing-04",
-		mt: "$spacing-04",
+    mt: "$spacing-04",
   },
 });
 
@@ -20,12 +20,12 @@ const Flex = styled("div", {
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-02",
-	mb: "$spacing-02",
+  mb: "$spacing-02",
 
-	"@bp3": {
-		gap: "$spacing-05",
-		mb: 0,
-	}
+  "@bp3": {
+    gap: "$spacing-05",
+    mb: 0,
+  },
 });
 
 function SoftwareStackTabs() {

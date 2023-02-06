@@ -20,9 +20,9 @@ const LogoBox = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-	width: "164px",
+  width: "164px",
 
-	"@bp1": {
+  "@bp1": {
     width: "232px",
   },
 });
