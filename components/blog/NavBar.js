@@ -1,13 +1,22 @@
 import { styled } from "../../stitches.config.js";
-import { Breadcrumbs, BreadcrumbItem, BreadcrumbItemLink } from "../breadcrumbs/Breadcrumbs.js";
+import { Breadcrumbs, BreadcrumbItem } from "../breadcrumbs/Breadcrumbs.js";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const NavBarWrapper = styled('div', {
-	padding: "$spacing-04",
+	width: "100%",
 	maxWidth: "1720px",
-	margin: "0 auto",
+	padding: "$spacing-04",
 	display: "flex",
 	justifyContent: "space-between",
+	position: "sticky",
+	top: 80,
+	backgroundColor: "$gray2",
+	zIndex: 999,
+	
+	"@bp5": {
+    padding: "$spacing-05",
+		top: 0,
+  },
 })
 
 const Controls = styled("div", {

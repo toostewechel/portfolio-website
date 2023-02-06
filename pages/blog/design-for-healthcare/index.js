@@ -2,13 +2,15 @@ import { styled } from "@stitches/react";
 import { createRef } from "react";
 import Head from "next/head";
 
+import { BlogContentLayout, BlogMarkdownContent } from "../../../components/layouts/Layout.js";
+
 import Landing from "../../../components/blog/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
 
 import ContentHeader from "../../../components/content/ContentHeader.js";
-import ContentBlock from "../../../components/content/ContentBlock.js";
+import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
@@ -67,7 +69,7 @@ function Index() {
         />
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
-      <div ref={targetRef} style={{backgroundColor: "#F8F8F8"}}>
+      <div ref={targetRef}>
         <ContentHeader
           targetRef={targetRef}
           whatsapp={shareTo.whatsapp}
@@ -90,10 +92,18 @@ function Index() {
         }
         LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
       />
-				<NavBar ActivePageTitle="Design for Healthcare" />
-				<ContentWrapper>
-       		 <ContentBlock Content={Chapter1} />
-				</ContentWrapper>
+				
+				<BlogContentLayout>
+						<NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
+						<BlogMarkdownContent>
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter1} />
+						</BlogMarkdownContent>
+					<BlogMarkdownContent>
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter2} />
+						</BlogMarkdownContent>
+				</BlogContentLayout>
       </div>
     </>
   );
