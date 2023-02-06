@@ -1,10 +1,13 @@
 import { styled } from "@stitches/react";
 import { createRef } from "react";
 import Head from "next/head";
+
+import Landing from "../../../components/blog/Landing.js";
+import LandingContent from "../../../components/blog/LandingContent.js";
+import LandingImage from "../../../components/blog/LandingImage.js";
+
 import ContentHeader from "../../../components/content/ContentHeader.js";
-import ContentLanding from "../../../components/content/ContentLanding.js";
 import ContentBlock from "../../../components/content/ContentBlock.js";
-import ContentOpening from "../../../components/content/ContentOpening.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
@@ -63,35 +66,27 @@ function Index() {
           linkedin={shareTo.linkedin}
           gradient="design"
         />
-        <ContentLanding
-          color="crimson"
-          label="Design"
-          title="Design Accessible Experiences for the Healthcare Sector"
-          src="/blog/design-for-healthcare/landing.png"
-          meta="20 December 2020"
-        />
+      	<Landing
+        AccentColor="crimson"
+        LandingContent={
+          <LandingContent
+            AvatarImage="/avatar/avatar-tom-oostewechel.png"
+            AvatarLabel="Tom Oostewechel"
+            AvatarDescription="Author"
+            DatePosted="4 Feb, 2023"
+            HeadingTitle="Design Accessible Experiences for the Healthcare Sector"
+            Description="Easily convert paper healthcare protocols and methods, 			without technical knowledge, into tailor-made, user friendly online modules and launch in production within weeks instead of months."
+          />
+        }
+        LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
+      />
+  
         <Spacer level={9} />
         <ContentBlock Content={Chapter1} />
         <Spacer level={9} />
-        <ContentOpening
-          backgroundImage="url(/blog/design-for-healthcare/chapter-2.png)"
-          tagColor="violet"
-          tagLabel="Chapter"
-          title="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
-          description="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
-          label="Read"
-          id="#chapter2"
-        />
-        <Spacer level={9} />
+
         <ContentBlock id="chapter2" Content={Chapter2} />
         <Spacer level={9} />
-        <ContentOpening
-          backgroundImage="url(/blog/design-for-healthcare/chapter-3.png)"
-          title="De meerwaarde van toegankelijkheid"
-          description="Het ontwikkelen van online diensten in de zorg brengt al genoeg uitdagingen met zich mee. Zouden we ons om nog een ‘extra’ ding druk moeten maken?"
-          label="Read Section"
-          id="#chapter3"
-        />
         <Spacer level={9} />
         <ContentBlock id="chapter3" Content={Chapter3} />
         <Footer />
