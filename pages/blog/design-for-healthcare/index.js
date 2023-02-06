@@ -2,12 +2,15 @@ import { styled } from "@stitches/react";
 import { createRef } from "react";
 import Head from "next/head";
 
+import { BlogContentLayout, BlogMarkdownContent } from "../../../components/layouts/Layout.js";
+
 import Landing from "../../../components/blog/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
+import NavBar from "../../../components/blog/NavBar.js";
 
 import ContentHeader from "../../../components/content/ContentHeader.js";
-import ContentBlock from "../../../components/content/ContentBlock.js";
+import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
@@ -21,6 +24,15 @@ const shareTo = {
     "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
   linkedin: "https://www.linkedin.com/",
 };
+
+const ContentWrapper = styled("div", {
+	display: 'flex',
+	backgroundColor: "white",
+	maxWidth: "1720px",
+	margin: "0 auto",
+	borderRadius: "16px",
+	border: "1px solid $gray6",
+});
 
 function Index() {
   const targetRef = createRef();
@@ -80,16 +92,18 @@ function Index() {
         }
         LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
       />
-  
-        <Spacer level={9} />
-        <ContentBlock Content={Chapter1} />
-        <Spacer level={9} />
-
-        <ContentBlock id="chapter2" Content={Chapter2} />
-        <Spacer level={9} />
-        <Spacer level={9} />
-        <ContentBlock id="chapter3" Content={Chapter3} />
-        <Footer />
+				
+				<BlogContentLayout>
+						<NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
+						<BlogMarkdownContent>
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter1} />
+						</BlogMarkdownContent>
+					<BlogMarkdownContent>
+							<div>SummaryBlock</div>
+							<MarkdownContentBlock Content={Chapter2} />
+						</BlogMarkdownContent>
+				</BlogContentLayout>
       </div>
     </>
   );
