@@ -5,6 +5,7 @@ import Head from "next/head";
 import Landing from "../../../components/blog/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
+import NavBar from "../../../components/blog/NavBar.js";
 
 import ContentHeader from "../../../components/content/ContentHeader.js";
 import ContentBlock from "../../../components/content/ContentBlock.js";
@@ -21,6 +22,15 @@ const shareTo = {
     "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
   linkedin: "https://www.linkedin.com/",
 };
+
+const ContentWrapper = styled("div", {
+	display: 'flex',
+	backgroundColor: "white",
+	maxWidth: "1720px",
+	margin: "0 auto",
+	borderRadius: "16px",
+	border: "1px solid $gray6",
+});
 
 function Index() {
   const targetRef = createRef();
@@ -57,7 +67,7 @@ function Index() {
         />
         <meta property="og:site_name" content="Snapshots Labs" />
       </Head>
-      <div ref={targetRef}>
+      <div ref={targetRef} style={{backgroundColor: "#F8F8F8"}}>
         <ContentHeader
           targetRef={targetRef}
           whatsapp={shareTo.whatsapp}
@@ -80,16 +90,10 @@ function Index() {
         }
         LandingImage={<LandingImage Image="/images/landing-image-blog.png" />}
       />
-  
-        <Spacer level={9} />
-        <ContentBlock Content={Chapter1} />
-        <Spacer level={9} />
-
-        <ContentBlock id="chapter2" Content={Chapter2} />
-        <Spacer level={9} />
-        <Spacer level={9} />
-        <ContentBlock id="chapter3" Content={Chapter3} />
-        <Footer />
+				<NavBar ActivePageTitle="Design for Healthcare" />
+				<ContentWrapper>
+       		 <ContentBlock Content={Chapter1} />
+				</ContentWrapper>
       </div>
     </>
   );
