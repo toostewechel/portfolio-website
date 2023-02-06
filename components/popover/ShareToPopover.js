@@ -94,11 +94,9 @@ function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <IconButton aria-label="Share to">
+          <IconButton aria-label="Share Options">
             <Share size={20} />
           </IconButton>
-        </div>
       </PopoverTrigger>
       <StyledPopoverContent>
         <Title>Share</Title>
@@ -119,7 +117,7 @@ function ShareToPopover(props) {
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
         <PopoverClose aria-label="Close">
-          <X size={16} />
+          <X size={17} />
         </PopoverClose>
       </StyledPopoverContent>
     </Popover>
