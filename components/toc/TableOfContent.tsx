@@ -1,129 +1,145 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading";
 
 const TableOfContentsContainer = styled("nav", {
-	display: "flex",
-	flexDirection: "column",
-	alignItems: "flex-end",
-	width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-end",
+  width: "100%",
 });
 
 const Content = styled("div", {
-	width: "280px",
-})
+  width: "280px",
+});
 
 const StyledList = styled("ul", {
-	listStyle: "none",
-	display: "flex",
-	flexDirection: "column",
-	paddingInlineStart: 0,
-	borderLeft: "1px solid $gray6",
-	mt: "$spacing-04",
-})
+  listStyle: "none",
+  display: "flex",
+  flexDirection: "column",
+  paddingInlineStart: 0,
+  borderLeft: "1px solid $gray6",
+  mt: "$spacing-04",
+});
 
 const StyledListItem = styled("li", {
-	fontSize: "$xs",
-	fontFamily: "$default",
-	fontWeight: "$medium",
-	color: "$gray10",
-	mb: 0,
-	padding: "$spacing-03 $spacing-04",
-	borderLeft: "1px solid gray6",
-})
+  fontSize: "$xs",
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  color: "$gray10",
+  mb: 0,
+  padding: "$spacing-03 $spacing-04",
+  borderLeft: "1px solid gray6",
+});
 
 interface Props {
-	chapter: string;
+  chapter: string;
 }
 
 interface Section {
-	topic: string;
-	boundingTop: number;
-	isActive: boolean;
+  topic: string;
+  boundingTop: number;
+  isActive: boolean;
 }
 
 const marginTop = 124;
 
 const TableOfContent: FC<Props> = ({ chapter }) => {
-	const [offsetY, setOffsetY] = useState(0);
-	const [sections, setSections] = useState<Section[]>([]);
+  const [offsetY, setOffsetY] = useState(0);
+  const [sections, setSections] = useState<Section[]>([]);
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-		setOffsetY(0);
-	}, [])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setOffsetY(0);
+  }, []);
 
-	useEffect(() => {
-		const els: HTMLElement[] = Array.from(
-			document.querySelectorAll(`section.section-heading-${chapter}`)
-		);
+  useEffect(() => {
+    const els: HTMLElement[] = Array.from(
+      document.querySelectorAll(`section.section-heading-${chapter}`)
+    );
 
-		const allSections = els.map((el: HTMLElement, index: number) => {
-			const { top: boundingTop } = el.getBoundingClientRect();
+    const allSections = els.map((el: HTMLElement, index: number) => {
+      const { top: boundingTop } = el.getBoundingClientRect();
 
-			return {
-				topic: el.getAttribute('id')!,
-				boundingTop,
-				isActive: index === 0
-			}
-		});
+      return {
+        topic: el.getAttribute("id")!,
+        boundingTop,
+        isActive: index === 0,
+      };
+    });
 
-		setSections(allSections)
-	}, []);
+    setSections(allSections);
+  }, []);
 
-	useEffect(() => {
-		if (sections.length <= 1) return;
+  useEffect(() => {
+    if (sections.length <= 1) return;
 
-		const onScroll = () => {
-			setOffsetY(window.pageYOffset)
-		}
-		window.addEventListener('scroll', onScroll)
+    const onScroll = () => {
+      setOffsetY(window.pageYOffset);
+    };
+    window.addEventListener("scroll", onScroll);
 
-		return () => window.removeEventListener('scroll', onScroll)
-	}, [sections]);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [sections]);
 
-	useEffect(() => {
-		if (sections.length === 0) return;
-		if (sections.length === 1) {
-			sections[0].isActive = true;
-			return
-		}
+  useEffect(() => {
+    if (sections.length === 0) return;
+    if (sections.length === 1) {
+      sections[0].isActive = true;
+      return;
+    }
 
-		sections.forEach((section: Section, index: number) => {
-			if (index === 0) {
-				section.isActive = sections[index + 1].boundingTop > offsetY + marginTop
-			} else {
-				if (sections[index + 1]) {
-					section.isActive = sections[index + 1].boundingTop > offsetY + marginTop
-						&& sections[index].boundingTop <= offsetY + marginTop
-				} else {
-					section.isActive = sections[index].boundingTop <= offsetY + marginTop
-				}
-			}
-		})
-	}, [sections, offsetY])
+    sections.forEach((section: Section, index: number) => {
+      if (index === 0) {
+        section.isActive =
+          sections[index + 1].boundingTop > offsetY + marginTop;
+      } else {
+        if (sections[index + 1]) {
+          section.isActive =
+            sections[index + 1].boundingTop > offsetY + marginTop &&
+            sections[index].boundingTop <= offsetY + marginTop;
+        } else {
+          section.isActive = sections[index].boundingTop <= offsetY + marginTop;
+        }
+      }
+    });
+  }, [sections, offsetY]);
 
-	return (
-		<TableOfContentsContainer>
-			<Content>
-				<Heading as="h4" level={5} title="In this Chapter" />
-				<StyledList>
-					{sections.map((section: Section, index: number) => {
-						return (
-							<StyledListItem key={index} style={{ borderLeft: section.isActive ? '4px solid #D31E66' : '4px solid transparent' }}>
-								<span onClick={() => {
-									window.scrollTo(0, section.boundingTop - marginTop);
-									setOffsetY(section.boundingTop - marginTop);
-								}} style={{ textDecoration: "none", color: section.isActive ? '#D31E66' : 'gray', cursor: "pointer" }}>
-									{section.topic}
-								</span>
-							</StyledListItem>
-						)
-					})}
-				</StyledList>
-			</Content>
-		</TableOfContentsContainer>
-	)
-}
+  return (
+    <TableOfContentsContainer>
+      <Content>
+        <Heading as="h4" level={5} title="Contents" />
+        <StyledList>
+          {sections.map((section: Section, index: number) => {
+            return (
+              <StyledListItem
+                key={index}
+                style={{
+                  borderLeft: section.isActive
+                    ? "4px solid #D31E66"
+                    : "4px solid transparent",
+                }}
+              >
+                <span
+                  onClick={() => {
+                    window.scrollTo(0, section.boundingTop - marginTop);
+                    setOffsetY(section.boundingTop - marginTop);
+                  }}
+                  style={{
+                    textDecoration: "none",
+                    color: section.isActive ? "#D31E66" : "gray",
+                    cursor: "pointer",
+                  }}
+                >
+                  {section.topic}
+                </span>
+              </StyledListItem>
+            );
+          })}
+        </StyledList>
+      </Content>
+    </TableOfContentsContainer>
+  );
+};
 
 export default TableOfContent;

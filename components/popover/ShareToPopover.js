@@ -94,9 +94,9 @@ function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-          <IconButton aria-label="Share Options">
-            <Share size={20} />
-          </IconButton>
+        <IconButton aria-label="Share Options">
+          <Share size={20} />
+        </IconButton>
       </PopoverTrigger>
       <StyledPopoverContent>
         <Title>Share</Title>
