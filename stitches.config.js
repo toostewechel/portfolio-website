@@ -145,6 +145,7 @@ export const {
     bp3: "(min-width: 768px)",
     bp4: "(min-width: 1024px)",
     bp5: "(min-width: 1440px)",
+		bp6: "(min-width: 2200px)",
   },
   utils: {
     m: (value) => ({

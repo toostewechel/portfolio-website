@@ -9,7 +9,6 @@ import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
 
-
 import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
@@ -99,7 +98,7 @@ function Index() {
 						<NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
 						<BlogMarkdownContent>
 							<div>SummaryBlock</div>
-							<MarkdownContentBlock Content={Chapter1} />
+							<MarkdownContentBlock chapter="1" Content={Chapter1} />
 							<div>SummaryBlock</div>
 							<MarkdownContentBlock Content={Chapter2} />
 						</BlogMarkdownContent>

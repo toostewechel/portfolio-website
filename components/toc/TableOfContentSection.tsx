@@ -10,7 +10,7 @@ interface Props {
 
 const TableOfContentSection: FC<Props> = ({ topic, children, chapter }) => {
 	return (
-		<section id={topic.toLowerCase()} className={`section-heading-${chapter}`}>
+		<section id={topic} className={`section-heading-${chapter}`}>
 			<Heading as="h2" title={topic} level="3" />
 			<div>{children}</div>
 		</section>

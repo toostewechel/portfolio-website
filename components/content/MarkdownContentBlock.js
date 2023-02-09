@@ -2,6 +2,8 @@ import { MDXProvider } from "@mdx-js/react";
 import { styled } from "../../stitches.config.js";
 import * as components from "../markdown/StyledMarkdown.js";
 
+import TableOfContent from "../toc/TableOfContent.tsx";
+
 const Container = styled("div", {
 	m: "0 auto",
 	maxWidth: "1234px",
@@ -18,9 +20,8 @@ const TableOfContentColumn = styled("div", {
 	width: "100%",
 	margin: "$spacing-04",
 	height: "420px",
-	backgroundColor: "$gray3",
 	position: "sticky",
-	top: "88px",
+	top: "196px",
 })
 
 const ContentStyle = styled("div", {
@@ -28,7 +29,7 @@ const ContentStyle = styled("div", {
 	width: "100%",
 });
 
-function MarkdownContentBlock({ Content, id }) {
+function MarkdownContentBlock({ Content, id, chapter }) {
 	return (
 		<Container id={id}>
 			<ContentColumn>
@@ -38,7 +39,9 @@ function MarkdownContentBlock({ Content, id }) {
 					</ContentStyle>
 				</MDXProvider>
 			</ContentColumn>
-			<TableOfContentColumn></TableOfContentColumn>
+			<TableOfContentColumn>
+				<TableOfContent chapter={chapter} />
+			</TableOfContentColumn>
 		</Container>
 	);
 }

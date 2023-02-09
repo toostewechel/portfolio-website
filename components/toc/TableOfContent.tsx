@@ -1,11 +1,36 @@
 import { FC, useState, useEffect } from 'react';
+import { styled } from "../../stitches.config.js";
+import Heading from "../typography/Heading";
 
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
+const TableOfContentsContainer = styled("nav", {
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "flex-end",
+	width: "100%",
+});
+
+const Content = styled("div", {
+	width: "280px",
+})
+
+const StyledList = styled("ul", {
+	listStyle: "none",
+	display: "flex",
+	flexDirection: "column",
+	paddingInlineStart: 0,
+	borderLeft: "1px solid $gray6",
+	mt: "$spacing-04",
+})
+
+const StyledListItem = styled("li", {
+	fontSize: "$xs",
+	fontFamily: "$default",
+	fontWeight: "$medium",
+	color: "$gray10",
+	mb: 0,
+	padding: "$spacing-03 $spacing-04",
+	borderLeft: "1px solid gray6",
+})
 
 interface Props {
 	chapter: string;
@@ -17,7 +42,7 @@ interface Section {
 	isActive: boolean;
 }
 
-const marginTop = 96;
+const marginTop = 124;
 
 const TableOfContent: FC<Props> = ({ chapter }) => {
 	const [offsetY, setOffsetY] = useState(0);
@@ -79,34 +104,25 @@ const TableOfContent: FC<Props> = ({ chapter }) => {
 	}, [sections, offsetY])
 
 	return (
-		<div style={{  }}>
-			<h3>In this chapter</h3>
-			<Timeline>
-				{sections.map((section: Section, index: number) => {
-					return (
-						<TimelineItem key={index}>
-							{index !== sections.length - 1 && (
-								<TimelineSeparator>
-									<TimelineDot color="secondary" variant={section.isActive ? 'filled' : 'outlined'} />
-									<TimelineConnector />
-								</TimelineSeparator>
-							)}
-							{index === sections.length - 1 && (
-									<TimelineDot color="secondary" variant={section.isActive ? 'filled' : 'outlined'} />
-							)}
-							<TimelineContent>
+		<TableOfContentsContainer>
+			<Content>
+				<Heading as="h4" level={5} title="In this Chapter" />
+				<StyledList>
+					{sections.map((section: Section, index: number) => {
+						return (
+							<StyledListItem key={index} style={{ borderLeft: section.isActive ? '4px solid #D31E66' : '4px solid transparent' }}>
 								<span onClick={() => {
 									window.scrollTo(0, section.boundingTop - marginTop);
 									setOffsetY(section.boundingTop - marginTop);
-								}} style= {{ textDecoration: "none", color: section.isActive ? 'red' : 'gray', cursor: "pointer"}}>
+								}} style={{ textDecoration: "none", color: section.isActive ? '#D31E66' : 'gray', cursor: "pointer" }}>
 									{section.topic}
 								</span>
-							</TimelineContent>
-						</TimelineItem>
-					)
-				})}
-			</Timeline>
-		</div>
+							</StyledListItem>
+						)
+					})}
+				</StyledList>
+			</Content>
+		</TableOfContentsContainer>
 	)
 }
 

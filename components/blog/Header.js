@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "../../stitches.config.js";
 import ShareToPopover from "../popover/ShareToPopover.js";
 import { ReadingProgressBar } from "../readingprogress/ReadingProgress.js";
-import { useMediaQuery } from "react-responsive";
+
 import { X } from "lucide-react";
 import {
 	Provider,
@@ -19,10 +19,14 @@ const Container = styled("header", {
 	position: "sticky",
 	top: 0,
 	zIndex: 9999,
+	backgroundColor: "white",
 
 	"@bp5": {
 		padding: "$spacing-05",
 	},
+	"@bp6": {
+		backgroundColor: "transparent",
+	}
 });
 
 const ImageLink = styled("a", {
@@ -76,9 +80,8 @@ const IconLink = styled("a", {
 });
 
 export default function Header({ whatsapp, facebook, twitter, linkedin, targetRef, gradient }) {
-	const contentWidth = useMediaQuery({ minWidth: 2200 });
 	return (
-		<Container style={{ backgroundColor: contentWidth ? "transparent" : "white", }}>
+		<Container>
 			<ImageLink href="/">
 				<StyledLogo src="/logo/snapshots-labs-logo.png" />
 			</ImageLink>
