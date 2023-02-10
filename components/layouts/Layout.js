@@ -23,6 +23,7 @@ export const BlogMarkdownContent = styled("section", {
   border: "1px solid $gray6",
 	pt: "$spacing-10",
 	pb: "$spacing-10",
+	zIndex: 0,
 });
 
 function Layout(props) {

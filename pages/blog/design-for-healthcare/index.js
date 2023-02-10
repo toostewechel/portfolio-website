@@ -14,7 +14,6 @@ import Chapter from "../../../components/blog/Chapter.js";
 import ChapterContent from "../../../components/blog/ChapterContent.js";
 import ChapterImage from "../../../components/blog/ChapterImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
-
 import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
@@ -91,8 +90,8 @@ function Index() {
                 AvatarImage="/avatar/avatar-tom-oostewechel.png"
                 AvatarLabel="Tom Oostewechel"
                 AvatarDescription="Author"
-                DatePosted="4 Feb, 2023"
-                HeadingTitle="Design Accessible Experiences for the Healthcare Sector"
+                DatePosted="4 Feb, 2022"
+                HeadingTitle="Design Accessible Experiences for the Industry"
                 Description="Easily convert paper healthcare protocols and methods, 			without technical knowledge, into tailor-made, user friendly online modules and launch in production within weeks instead of months."
               />
             }

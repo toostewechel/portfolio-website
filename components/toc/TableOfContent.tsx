@@ -47,7 +47,7 @@ const marginTop = 124;
 const TableOfContent: FC<Props> = ({ chapter }) => {
   const [offsetY, setOffsetY] = useState(0);
   const [sections, setSections] = useState<Section[]>([]);
-
+	
   useEffect(() => {
     window.scrollTo(0, 0);
     setOffsetY(0);
