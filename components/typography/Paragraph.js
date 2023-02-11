@@ -6,7 +6,7 @@ const StyledParagraph = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-regular",
-  color: "$mauve11",
+  color: "$mauve12",
   mb: "$spacing-07",
 
   variants: {

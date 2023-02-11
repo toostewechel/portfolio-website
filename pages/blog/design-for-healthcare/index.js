@@ -15,6 +15,7 @@ import ChapterContent from "../../../components/blog/ChapterContent.js";
 import ChapterImage from "../../../components/blog/ChapterImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
 import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
+import { KeyTakeawaysCollapsible, ListItem } from "../../../components/blog/KeyTakeawaysCollapsible.js";
 import Spacer from "../../../components/layouts/blocks/Spacer.js";
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
@@ -102,8 +103,14 @@ function Index() {
 
           <BlogContentLayout>
             <NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
+						
             <BlogMarkdownContent>
-              <div></div>
+              <KeyTakeawaysCollapsible>
+								<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
+																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
+																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
+																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
+							</KeyTakeawaysCollapsible>
               <MarkdownContentBlock chapter="1" Content={Chapter1} />
             </BlogMarkdownContent>
             <Chapter
@@ -111,14 +118,14 @@ function Index() {
                 <ChapterContent
                   ChapterTitle="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
                   ChapterDescription="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
-									href="#chapter2"
+									
                 />
               }
 							ChapterImage={
 								<ChapterImage Image="/images/blog-chapter-2.png" />
 							}
             />
-            <BlogMarkdownContent id="chapter2">
+            <BlogMarkdownContent>
               <div></div>
               <MarkdownContentBlock chapter="2" Content={Chapter2} />
             </BlogMarkdownContent>

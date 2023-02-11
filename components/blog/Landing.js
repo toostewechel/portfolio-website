@@ -11,9 +11,10 @@ const Wrapper = styled("div", {
   position: "relative",
   display: "flex",
   flexDirection: "column",
-  width: "100%",
   backgroundColor: "white",
   marginTop: "-96px",
+	margin: "0",
+	maxWidth: "100%",
 
   "@bp4": {
     flexDirection: "row",
