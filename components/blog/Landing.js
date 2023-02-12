@@ -13,7 +13,6 @@ const Wrapper = styled("div", {
   flexDirection: "column",
   backgroundColor: "white",
   marginTop: "-96px",
-	margin: "0",
 	maxWidth: "100%",
 
   "@bp4": {

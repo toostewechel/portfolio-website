@@ -1,6 +1,5 @@
 import { FC, useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
-import Heading from "../typography/Heading";
 
 const TableOfContentsContainer = styled("nav", {
   display: "flex",
@@ -30,6 +29,16 @@ const StyledListItem = styled("li", {
   mb: 0,
   padding: "$spacing-03 $spacing-04",
   borderLeft: "1px solid gray6",
+});
+
+const Heading = styled("h4", {
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  lineHeight: "$compact",
+	letterSpacing: "$tracking-tighter",
+	fontSize: "$sm",
+  color: "$mauve12",
+	textTransform: "uppercase",
 });
 
 interface Props {
@@ -108,7 +117,7 @@ const TableOfContent: FC<Props> = ({ chapter }) => {
   return (
     <TableOfContentsContainer>
       <Content>
-        <Heading as="h4" level={5} title="Contents" />
+        <Heading>In this chapter</Heading>
         <StyledList>
           {sections.map((section: Section, index: number) => {
             return (

@@ -8,7 +8,9 @@ const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
 	maxWidth: "1234px",
 	ml: "auto",
 	mr: "auto",
-	mb: "$spacing-10"
+	mb: "$spacing-10",
+	border: "1px solid $gray6",
+	borderRadius: "6px",
 })
 
 const HeaderPanel = styled("div", {
@@ -16,9 +18,6 @@ const HeaderPanel = styled("div", {
 	justifyContent: "space-between",
 	alignItems: "center",
 	padding: "$spacing-04",
-	borderRadius: "6px",
-	border: "1px solid $gray6",
-	backgroundColor: "$gray2",
 });
 
 const Title = styled("h3", {
@@ -44,7 +43,9 @@ const Button = styled("button", {
 const StyledCollapsibleContent = styled(CollapsiblePrimitive.Content, {
 	padding: "$spacing-08 $spacing-04",
 	backgroundColor: "$gray2",
-	border: "1px solid $gray6",
+	borderTop: "1px solid $gray6",
+	borderBottomRightRadius: "6px",
+	borderBottomLeftRadius: "6px",
 })
 
 const TakeawaysList = styled("ul", {
