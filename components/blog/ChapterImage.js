@@ -1,11 +1,14 @@
 import { styled } from "../../stitches.config.js";
+import Image from "next/image";
 
-const StyledImage = styled("img", {
-  width: "100%",
-  height: "auto",
-  zIndex: "4",
-});
-
-export default function LandingImage({ Image }) {
-  return <StyledImage src={Image} />;
+export default function ChapterImage({ src }) {
+  return (
+    <Image
+      src={src}
+      layout="responsive"
+      width={800}
+      height={800}
+      style={{ zIndex: "4" }}
+    />
+  );
 }

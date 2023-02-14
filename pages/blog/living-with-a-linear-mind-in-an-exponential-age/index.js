@@ -42,6 +42,7 @@ import ChapterImage from "../../../components/blog/ChapterImage.js";
 
 //Content
 import Chapter1 from "./01-chapter.mdx";
+import Chapter2 from "./02-chapter.mdx";
 
 //ShareToLinks Object
 const shareTo = {};
@@ -60,7 +61,7 @@ const PoweredByBadge = styled("a", {
   transition: "background 300ms ease-in",
   fontFamily: "$default",
   fontSize: "$xs",
-  width: "100%",
+  width: "280px",
 
   "&:hover": {
     transition: "background 300ms ease-out",
@@ -119,6 +120,22 @@ export default function BlogPostPage() {
           <BlogMarkdownContentLayout>
             <KeyTakeawaysCollapsible accentColor="teal"></KeyTakeawaysCollapsible>
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+                accentColor="teal"
+                chapterTitle="The Enemies and Limitations of Our Brain"
+                chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+            }
+          />
+          <BlogMarkdownContentLayout>
+            <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
           </BlogMarkdownContentLayout>
         </BlogContentLayout>
       </article>

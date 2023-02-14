@@ -6,7 +6,7 @@ const ChapterContentWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  maxWidth: "768px",
+  maxWidth: "720px",
   zIndex: "9",
   mb: "$spacing-12",
   mt: "$spacing-12",
@@ -42,23 +42,36 @@ const ChapterNumber = styled("p", {
   fontFamily: "$header",
   fontWeight: "$black",
   fontSize: "132px",
-  color: "$crimson6",
   letterSpacing: "$tracking-tighter",
   lineHeight: "$compact",
-  textShadow:
-    "2px 2px 2px rgba(255, 236, 255, 0.3), -2px -2px 3px rgba(198, 160, 177, 0.75)",
+
+  variants: {
+    color: {
+      crimson: {
+        textShadow:
+          "1px 1px 2px rgba(196, 255, 255, 0.3), -2px -2px 2px rgba(86, 126, 119, 0.5)",
+        color: "$crimson6",
+      },
+      teal: {
+        textShadow:
+          "1px 1px 2px rgba(196, 255, 255, 0.3), -2px -2px 2px rgba(86, 126, 119, 0.5)",
+        color: "$teal6",
+      },
+    },
+  },
 });
 
 export default function ChapterContent({
-  ChapterTitle,
-  ChapterDescription,
+  accentColor,
+  chapterTitle,
+  chapterDescription,
   href,
 }) {
   return (
     <ChapterContentWrapper>
-      <ChapterNumber>02</ChapterNumber>
-      <Heading as="h2" level={2} color="dark" title={ChapterTitle} />
-      <Paragraph>{ChapterDescription}</Paragraph>
+      <ChapterNumber color={accentColor}>02</ChapterNumber>
+      <Heading as="h2" level={2} color="dark" title={chapterTitle} />
+      <Paragraph>{chapterDescription}</Paragraph>
       <Button href={href}>Read</Button>
     </ChapterContentWrapper>
   );

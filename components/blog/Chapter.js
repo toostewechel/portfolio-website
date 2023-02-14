@@ -5,7 +5,6 @@ const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   maxWidth: "1900px",
-  background: "",
   boxShadow: "none",
   borderRadius: "12px",
   marginTop: "-16px",
@@ -13,10 +12,14 @@ const Wrapper = styled("div", {
   zIndex: "9",
 
   variants: {
-    accentColor: {
+    color: {
       crimson: {
         background: "linear-gradient(180.04deg, #F9E5F9 0.04%, #FCE5F0 99.96%)",
-        border: "1px solid $crimson6",
+        border: "2px solid $crimson6",
+      },
+      teal: {
+        background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
+        border: "2px solid $teal7",
       },
     },
   },
@@ -43,12 +46,12 @@ const ChapterImageContainer = styled("div", {
   width: "100%",
   alignItems: "center",
   justifyContent: "center",
-  padding: "$spacing-04",
+  padding: "$spacing-10",
 });
 
-export default function Chapter({ ChapterContent, ChapterImage }) {
+export default function Chapter({ ChapterContent, ChapterImage, accentColor }) {
   return (
-    <Wrapper accentColor="crimson">
+    <Wrapper color={accentColor}>
       <ChapterContentContainer>{ChapterContent}</ChapterContentContainer>
       <ChapterImageContainer>{ChapterImage}</ChapterImageContainer>
     </Wrapper>

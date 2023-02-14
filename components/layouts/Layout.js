@@ -24,6 +24,11 @@ export const BlogMarkdownContentLayout = styled("div", {
   pt: "$spacing-10",
   pb: "$spacing-10",
   zIndex: 0,
+
+  "@bp3": {
+    pt: "$spacing-13",
+    pb: "$spacing-13",
+  },
 });
 
 function Layout(props) {

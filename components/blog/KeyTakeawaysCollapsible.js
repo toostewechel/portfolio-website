@@ -9,7 +9,6 @@ const Container = styled("div", {
   maxWidth: "1234px",
   ml: "auto",
   mr: "auto",
-  mb: "$spacing-10",
   padding: "$spacing-04",
 });
 

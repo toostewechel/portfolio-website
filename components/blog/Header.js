@@ -91,7 +91,13 @@ export default function Header({
   progressBarGradient,
 }) {
   const [offsetY, setOffsetY] = useState(0);
+  const [landingHeight, setLandingHeight] = useState(0);
   const bp4 = useMediaQuery({ maxWidth: 1024 });
+  const bp5 = useMediaQuery({ minWidth: 1440 });
+
+  useEffect(() => {
+    setLandingHeight(document.getElementById("landing").clientHeight);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -113,6 +119,7 @@ export default function Header({
           offsetY > 0 && bp4
             ? "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)"
             : "none",
+        backgroundColor: offsetY > landingHeight && bp5 ? "#F8F8F8" : null,
       }}
     >
       <ImageLink href="/">

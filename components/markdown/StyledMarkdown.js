@@ -121,7 +121,7 @@ const StyledBlockquote = styled("blockquote", {
 
   "& > p": {
     fontFamily: "$header",
-    fontSize: "$lg",
+    fontSize: "$xl",
     fontWeight: "$bold",
     lineHeight: "$compact",
     letterSpacing: "$tracking-tighter",
