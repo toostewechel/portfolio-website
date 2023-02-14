@@ -6,10 +6,11 @@ const TableOfContentsContainer = styled("nav", {
   flexDirection: "column",
   alignItems: "flex-end",
   width: "100%",
+  marginTop: "24px",
 });
 
 const Content = styled("div", {
-  width: "280px",
+  width: "300px",
 });
 
 const StyledList = styled("ul", {
@@ -24,21 +25,39 @@ const StyledList = styled("ul", {
 const StyledListItem = styled("li", {
   fontSize: "$xs",
   fontFamily: "$default",
-  fontWeight: "$medium",
+  fontWeight: "$regular",
   color: "$gray10",
   mb: 0,
   padding: "$spacing-03 $spacing-04",
   borderLeft: "1px solid gray6",
 });
 
-const Heading = styled("h4", {
+const FlexContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "$spacing-02",
+  pb: "$spacing-02",
+});
+
+const SquareIcon = styled("div", {
+  width: "13px",
+  height: "13px",
+  borderRadius: "4px",
+  backgroundColor: "$mauve12",
+  ml: "-5px",
+  mr: "$spacing-02",
+});
+
+const Heading = styled("p", {
+  display: "flex",
   fontFamily: "$default",
   fontWeight: "$medium",
   lineHeight: "$compact",
-	letterSpacing: "$tracking-tighter",
-	fontSize: "$sm",
+  letterSpacing: "$tracking-wide",
+  fontSize: "$sm",
   color: "$mauve12",
-	textTransform: "uppercase",
+  textTransform: "uppercase",
 });
 
 interface Props {
@@ -56,7 +75,7 @@ const marginTop = 124;
 const TableOfContent: FC<Props> = ({ chapter }) => {
   const [offsetY, setOffsetY] = useState(0);
   const [sections, setSections] = useState<Section[]>([]);
-	
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setOffsetY(0);
@@ -117,7 +136,10 @@ const TableOfContent: FC<Props> = ({ chapter }) => {
   return (
     <TableOfContentsContainer>
       <Content>
-        <Heading>In this chapter</Heading>
+        <FlexContainer>
+          <SquareIcon />
+          <Heading>Content</Heading>
+        </FlexContainer>
         <StyledList>
           {sections.map((section: Section, index: number) => {
             return (
@@ -125,18 +147,18 @@ const TableOfContent: FC<Props> = ({ chapter }) => {
                 key={index}
                 style={{
                   borderLeft: section.isActive
-                    ? "4px solid #D31E66"
+                    ? "4px solid #1A1523"
                     : "4px solid transparent",
                 }}
               >
                 <span
                   onClick={() => {
-                    window.scrollTo(0, section.boundingTop - marginTop);
-                    setOffsetY(section.boundingTop - marginTop);
+                    window.scrollTo(0, section.boundingTop - (marginTop - 4));
+                    setOffsetY(section.boundingTop - (marginTop - 4));
                   }}
                   style={{
                     textDecoration: "none",
-                    color: section.isActive ? "#D31E66" : "gray",
+                    color: section.isActive ? "#1A1523" : "gray",
                     cursor: "pointer",
                   }}
                 >

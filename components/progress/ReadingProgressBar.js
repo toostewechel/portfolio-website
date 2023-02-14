@@ -104,6 +104,9 @@ export const ReadingProgressBar = ({ targetRef, gradient }) => {
         design: {
           background: "linear-gradient(90deg, $crimson9, $crimson11)",
         },
+        teal: {
+          background: "linear-gradient(90deg, $teal9, $teal11)",
+        },
       },
     },
   });

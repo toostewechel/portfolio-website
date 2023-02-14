@@ -15,15 +15,15 @@ export const BlogContentLayout = styled("div", {
   backgroundColor: "$gray2",
 });
 
-export const BlogMarkdownContent = styled("section", {
+export const BlogMarkdownContentLayout = styled("div", {
   backgroundColor: "white",
   maxWidth: "1720px",
   width: "100%",
   borderRadius: "16px",
   border: "1px solid $gray6",
-	pt: "$spacing-10",
-	pb: "$spacing-10",
-	zIndex: 0,
+  pt: "$spacing-10",
+  pb: "$spacing-10",
+  zIndex: 0,
 });
 
 function Layout(props) {

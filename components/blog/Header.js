@@ -1,7 +1,8 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import ShareToPopover from "../popover/ShareToPopover.js";
-import { ReadingProgressBar } from "../readingprogress/ReadingProgress.js";
+import { ReadingProgressBar } from "../progress/ReadingProgressBar.js";
+import { useMediaQuery } from "react-responsive";
 
 import { X } from "lucide-react";
 import {
@@ -22,10 +23,12 @@ const Container = styled("header", {
   backgroundColor: "white",
 
   "@bp5": {
+    boxShadow: "none",
     padding: "$spacing-05",
   },
   "@bp6": {
     backgroundColor: "transparent",
+    boxShadow: "none",
   },
 });
 
@@ -85,10 +88,33 @@ export default function Header({
   twitter,
   linkedin,
   targetRef,
-  gradient,
+  progressBarGradient,
 }) {
+  const [offsetY, setOffsetY] = useState(0);
+  const bp4 = useMediaQuery({ maxWidth: 1024 });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setOffsetY(0);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setOffsetY(window.pageYOffset);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <Container>
+    <Container
+      style={{
+        boxShadow:
+          offsetY > 0 && bp4
+            ? "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)"
+            : "none",
+      }}
+    >
       <ImageLink href="/">
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </ImageLink>
@@ -99,7 +125,10 @@ export default function Header({
           twitter={twitter}
           linkedin={linkedin}
         />
-        <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
+        <ReadingProgressBar
+          targetRef={targetRef}
+          gradient={progressBarGradient}
+        />
         <Provider>
           <Tooltip>
             <TooltipTrigger asChild>

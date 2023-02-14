@@ -109,7 +109,7 @@ const StyledBlockquote = styled("blockquote", {
     top: "96px",
     left: "-32px",
     zIndex: -1,
-    color: "$violet3",
+    color: "$gray3",
     fontFamily: "$header",
     letterSpacing: "$tracking-tighter",
     fontSize: "264px",
@@ -124,19 +124,20 @@ const StyledBlockquote = styled("blockquote", {
     fontSize: "$lg",
     fontWeight: "$bold",
     lineHeight: "$compact",
-		letterSpacing: "$tracking-tighter",
+    letterSpacing: "$tracking-tighter",
     color: "$mauve12",
+    maxWidth: "640px",
 
     "@bp2": {
       fontSize: "$2xl",
     },
   },
 
-	"& > cite": {
-			fontSize: "$lg",
-			fontFamily: "$default",
-			color: "$gray9",
-		}
+  "& > cite": {
+    fontSize: "$lg",
+    fontFamily: "$default",
+    color: "$gray9",
+  },
 });
 
 function Blockquote(props) {

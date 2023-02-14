@@ -1,11 +1,6 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import Tag from "../tag/Tag.js";
-import {
-  HoverCardRoot,
-  HoverCardTrigger,
-  HoverCardPanel,
-} from "../card/HoverCard.js";
 
 const Wrapper = styled("div", {
   position: "relative",
@@ -13,7 +8,7 @@ const Wrapper = styled("div", {
   flexDirection: "column",
   backgroundColor: "white",
   marginTop: "-96px",
-	maxWidth: "100%",
+  maxWidth: "100%",
 
   "@bp4": {
     flexDirection: "row",
@@ -22,7 +17,7 @@ const Wrapper = styled("div", {
   },
 });
 
-const LandingContentContainer = styled("div", {
+const LandingContentContainer = styled("header", {
   position: "relative",
   display: "flex",
   width: "100%",
@@ -45,8 +40,8 @@ const CircularPatternDesktop = styled("div", {
   top: 0,
   bottom: 0,
   margin: "auto",
-  width: "800px",
-  height: "800px",
+  width: "600px",
+  height: "600px",
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   zIndex: "3",
@@ -54,6 +49,22 @@ const CircularPatternDesktop = styled("div", {
 
   "@bp4": {
     display: "block",
+  },
+  "@bp5": {
+    width: "800px",
+    height: "800px",
+  },
+
+  variants: {
+    backgroundPatternColor: {
+      crimson: {
+        backgroundImage: "url(/patterns/circular-pattern-blog-landing.png)",
+      },
+      teal: {
+        backgroundImage:
+          "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
+      },
+    },
   },
 });
 
@@ -81,16 +92,30 @@ const CircularPatternTablet = styled("div", {
   "@bp4": {
     display: "none",
   },
+
+  variants: {
+    backgroundPatternColor: {
+      crimson: {
+        backgroundImage: "url(/patterns/circular-pattern-blog-landing.png)",
+      },
+      teal: {
+        backgroundImage:
+          "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
+      },
+    },
+  },
 });
 
 const ImageContainer = styled("div", {
   position: "relative",
   display: "flex",
   width: "100%",
-  heigth: "50%",
   alignItems: "center",
   justifyContent: "center",
-  padding: "$spacing-4",
+  pl: "0",
+  pr: "0",
+  pt: "$spacing-11",
+  pb: "$spacing-13",
 
   "@bp4": {
     padding: "$spacing-10",
@@ -98,10 +123,13 @@ const ImageContainer = styled("div", {
   },
 
   variants: {
-    color: {
+    backgroundGradient: {
       crimson: {
         background:
           "linear-gradient(166.69deg, rgba(249, 229, 249, 0.75) 3.84%, #FCE5F0 90.43%)",
+      },
+      teal: {
+        background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
       },
     },
   },
@@ -112,57 +140,28 @@ const MetaInformationContainer = styled("div", {
   position: "absolute",
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
+  justifyContent: "center",
   alignItems: "center",
   width: "100%",
   bottom: 0,
 });
 
-const PoweredByBadge = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "$mauve9",
-  transition: "background 300ms ease-in",
-  background: "transparent",
-  padding: "$spacing-03",
-  borderRadius: "6px",
-  border: "1px solid transparent",
-  transition: "background 300ms ease-in",
-
-  "&:hover": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$gray2",
-    border: "1px solid $gray6",
-  },
-});
-
-export default function Landing({ LandingContent, LandingImage, AccentColor }) {
+export default function Landing({
+  LandingContent,
+  LandingImage,
+  HoverCardContent,
+  accentColor,
+}) {
   return (
     <Wrapper id="landing">
-      <CircularPatternDesktop />
+      <CircularPatternDesktop backgroundPatternColor={accentColor} />
       <LandingContentContainer>
-        <CircularPatternTablet />
+        <CircularPatternTablet backgroundPatternColor={accentColor} />
         {LandingContent}
       </LandingContentContainer>
-      <ImageContainer color={AccentColor}>
+      <ImageContainer backgroundGradient={accentColor}>
         <MetaInformationContainer>
-          <Tag color={AccentColor} label="Design" />
-          <HoverCardRoot>
-            <HoverCardTrigger asChild>
-              <PoweredByBadge href="https://www.jeroenkrul.nl/" target="_blank">
-                <img src="/badges/jeroen-krul-badge.png" alt="Spline 3D Logo" />
-              </PoweredByBadge>
-            </HoverCardTrigger>
-            <HoverCardPanel
-              logo="/avatar/jeroen-krul.png"
-              title="Jeroen Krul"
-              socialHandle="@jeroenkrul"
-              description="Freelance illustrator die gebruik maakt van zowel analoge als digitale methoden."
-              followingCount="1,426"
-              followersCount="1,002"
-            />
-          </HoverCardRoot>
+          <div>{HoverCardContent}</div>
         </MetaInformationContainer>
         {LandingImage}
       </ImageContainer>

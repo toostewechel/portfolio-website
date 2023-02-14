@@ -22,11 +22,11 @@ const TableOfContentColumn = styled("div", {
   height: "420px",
   position: "sticky",
   top: "196px",
-	display: "none",
+  display: "none",
 
-	"@bp3": {
-		display: "flex",
-	}
+  "@bp3": {
+    display: "flex",
+  },
 });
 
 const ContentStyle = styled("div", {

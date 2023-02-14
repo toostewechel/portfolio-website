@@ -1,4 +1,3 @@
-import { styled } from "@stitches/react";
 import { createRef } from "react";
 import Head from "next/head";
 
@@ -15,8 +14,10 @@ import ChapterContent from "../../../components/blog/ChapterContent.js";
 import ChapterImage from "../../../components/blog/ChapterImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
 import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
-import { KeyTakeawaysCollapsible, ListItem } from "../../../components/blog/KeyTakeawaysCollapsible.js";
-import Spacer from "../../../components/layouts/blocks/Spacer.js";
+import {
+  KeyTakeawaysCollapsible,
+  ListItem,
+} from "../../../components/blog/KeyTakeawaysCollapsible.js";
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
 import Chapter3 from "./03-chapter.mdx";
@@ -29,15 +30,6 @@ const shareTo = {
     "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
   linkedin: "https://www.linkedin.com/",
 };
-
-const ContentWrapper = styled("div", {
-  display: "flex",
-  backgroundColor: "white",
-  maxWidth: "1720px",
-  margin: "0 auto",
-  borderRadius: "16px",
-  border: "1px solid $gray6",
-});
 
 function Index() {
   const targetRef = createRef();
@@ -103,14 +95,30 @@ function Index() {
 
           <BlogContentLayout>
             <NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
-						
+
             <BlogMarkdownContent>
               <KeyTakeawaysCollapsible>
-								<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
-																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
-																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
-																<ListItem>Easily convert paper healthcare protocols and methods, without technical knowledge, into tailor-made, user friendly online modules </ListItem>
-							</KeyTakeawaysCollapsible>
+                <ListItem>
+                  Easily convert paper healthcare protocols and methods, without
+                  technical knowledge, into tailor-made, user friendly online
+                  modules{" "}
+                </ListItem>
+                <ListItem>
+                  Easily convert paper healthcare protocols and methods, without
+                  technical knowledge, into tailor-made, user friendly online
+                  modules{" "}
+                </ListItem>
+                <ListItem>
+                  Easily convert paper healthcare protocols and methods, without
+                  technical knowledge, into tailor-made, user friendly online
+                  modules{" "}
+                </ListItem>
+                <ListItem>
+                  Easily convert paper healthcare protocols and methods, without
+                  technical knowledge, into tailor-made, user friendly online
+                  modules{" "}
+                </ListItem>
+              </KeyTakeawaysCollapsible>
               <MarkdownContentBlock chapter="1" Content={Chapter1} />
             </BlogMarkdownContent>
             <Chapter
@@ -118,12 +126,9 @@ function Index() {
                 <ChapterContent
                   ChapterTitle="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
                   ChapterDescription="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
-									
                 />
               }
-							ChapterImage={
-								<ChapterImage Image="/images/blog-chapter-2.png" />
-							}
+              ChapterImage={<ChapterImage Image="/images/blog-chapter-2.png" />}
             />
             <BlogMarkdownContent>
               <div></div>

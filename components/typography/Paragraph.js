@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 
 const StyledParagraph = styled("p", {
-  fontSize: "$lg",
+  fontSize: "$base",
   fontWeight: "$regular",
   fontFamily: "$default",
   lineHeight: "$base",
@@ -9,25 +9,16 @@ const StyledParagraph = styled("p", {
   color: "$mauve12",
   mb: "$spacing-07",
 
-  variants: {
-    level: {
-      small: {
-        fontSize: "$lg",
-        lineHeight: "$base",
-        mb: "$none",
-      },
-    },
-  },
-
   "@bp2": {
+    fontSize: "$lg",
+  },
+  "@bp3": {
     fontSize: "$bodyLarge",
   },
 });
 
 function Paragraph(props) {
-  return (
-    <StyledParagraph level={props.level}>{props.children}</StyledParagraph>
-  );
+  return <StyledParagraph>{props.children}</StyledParagraph>;
 }
 
 export default Paragraph;

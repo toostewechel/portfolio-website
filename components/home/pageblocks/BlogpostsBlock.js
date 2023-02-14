@@ -46,7 +46,7 @@ function BlogpostsBlock() {
               color="crimson"
               hasYear={true}
               alignment="left"
-              year="2022"
+              year="2023"
             />
             <BlogTimelineCard
               href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
@@ -64,16 +64,16 @@ function BlogpostsBlock() {
               color="plum"
               hasYear={true}
               alignment="right"
-              year="2022"
+              year="2023"
             />
             <BlogTimelineCard
-              href="/blog/building-a-second-brain-as-networked-thinking-tool"
-              image="/images/placeholder-timeline-item.png"
-              title="Building a Second Brain as Networked Thinking Tool"
-              description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
-              meta="Article • 20 min read"
-              color="blue"
-              category="Tech"
+              href="/blog/living-with-a-linear-mind-in-an-exponential-age"
+              image="/blog/living-with-a-linear-mind-in-an-exponential-age/cover.png"
+              title="Living With a Linear Mind in an Exponential Age"
+              description="How Personal Knowledge Management can help you thrive in an exponential age by efficiently turning your thoughts, ideas and discoveries into wisdom."
+              meta="4 feb 2023"
+              color="plum"
+              category="Workflow"
               english
             />
           </TimelineItem>

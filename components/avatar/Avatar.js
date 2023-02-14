@@ -33,7 +33,7 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-  lineHeight: "$",
+  lineHeight: "$compact",
 
   "@bp4": {
     fontSize: "$xl",
@@ -41,7 +41,7 @@ const Title = styled("h3", {
 });
 
 const Description = styled("p", {
-  fontSize: "$sm",
+  fontSize: "$xs",
   fontWeight: "$regular",
   fontFamily: "$default",
   color: "$gray11",

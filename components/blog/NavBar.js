@@ -22,12 +22,13 @@ const NavBarContainer = styled("div", {
   },
 
   "@bp5": {
-    padding: "$spacing-06 $spacing-04",
+    padding: "$spacing-02 $spacing-04",
     borderBottom: "1px solid transparent",
     borderTop: "1px solid transparent",
   },
   "@bp6": {
     top: 0,
+    padding: "$spacing-05 $spacing-04",
   },
 });
 
@@ -51,11 +52,11 @@ const Button = styled("a", {
   },
 });
 
-export default function NavBar({ ActivePageTitle }) {
+export default function NavBar({ activePageTitle }) {
   return (
     <NavBarContainer>
       <Breadcrumbs>
-        <BreadcrumbItem>{ActivePageTitle}</BreadcrumbItem>
+        <BreadcrumbItem>{activePageTitle}</BreadcrumbItem>
       </Breadcrumbs>
       <Controls>
         <Button>

@@ -13,7 +13,7 @@ const ChapterContentWrapper = styled("div", {
 
   "@bp4": {
     m: 0,
-		pr: "$spacing-04",
+    pr: "$spacing-04",
   },
 });
 
@@ -38,20 +38,25 @@ const Button = styled("a", {
   },
 });
 
-const ChapterNumber = styled('p', {
-	fontFamily: "$header",
-	fontWeight: "$black",
-	fontSize: "132px",
-	color: "$crimson6",
-	letterSpacing: "$tracking-tighter",
-	lineHeight: "$compact",
-	textShadow: "2px 2px 2px rgba(255, 236, 255, 0.3), -2px -2px 3px rgba(198, 160, 177, 0.75)",
-})
+const ChapterNumber = styled("p", {
+  fontFamily: "$header",
+  fontWeight: "$black",
+  fontSize: "132px",
+  color: "$crimson6",
+  letterSpacing: "$tracking-tighter",
+  lineHeight: "$compact",
+  textShadow:
+    "2px 2px 2px rgba(255, 236, 255, 0.3), -2px -2px 3px rgba(198, 160, 177, 0.75)",
+});
 
-export default function ChapterContent({ ChapterTitle, ChapterDescription, href }) {
+export default function ChapterContent({
+  ChapterTitle,
+  ChapterDescription,
+  href,
+}) {
   return (
     <ChapterContentWrapper>
-			<ChapterNumber>02</ChapterNumber>
+      <ChapterNumber>02</ChapterNumber>
       <Heading as="h2" level={2} color="dark" title={ChapterTitle} />
       <Paragraph>{ChapterDescription}</Paragraph>
       <Button href={href}>Read</Button>
