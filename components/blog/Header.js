@@ -18,9 +18,12 @@ const Container = styled("header", {
   alignItems: "center",
   padding: "$spacing-04",
   position: "sticky",
-  top: 0,
+  top: -1,
   zIndex: 9999,
   backgroundColor: "white",
+	borderBottomLeftRadius: "16px",
+	borderBottomRightRadius: "16px",
+	
 
   "@bp5": {
     boxShadow: "none",

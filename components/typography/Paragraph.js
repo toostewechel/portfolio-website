@@ -4,7 +4,7 @@ const StyledParagraph = styled("p", {
   fontSize: "$base",
   fontWeight: "$regular",
   fontFamily: "$default",
-  lineHeight: "$base",
+  lineHeight: "$large",
   letterSpacing: "$tracking-regular",
   color: "$mauve12",
   mb: "$spacing-07",

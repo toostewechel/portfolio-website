@@ -8,8 +8,6 @@ const ChapterContentWrapper = styled("div", {
   alignItems: "flex-start",
   maxWidth: "720px",
   zIndex: "9",
-  mb: "$spacing-12",
-  mt: "$spacing-12",
 
   "@bp4": {
     m: 0,
@@ -41,9 +39,11 @@ const Button = styled("a", {
 const ChapterNumber = styled("p", {
   fontFamily: "$header",
   fontWeight: "$black",
-  fontSize: "132px",
+  fontSize: "116px",
   letterSpacing: "$tracking-tighter",
-  lineHeight: "$compact",
+  lineHeight: 0,
+	mt: "$spacing-12",
+	mb: "$spacing-09",
 
   variants: {
     color: {
@@ -59,6 +59,10 @@ const ChapterNumber = styled("p", {
       },
     },
   },
+
+	"@bp4": {
+		fontSize: "132px",
+	},
 });
 
 export default function ChapterContent({

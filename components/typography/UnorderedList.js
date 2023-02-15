@@ -1,18 +1,18 @@
 import { styled } from "../../stitches.config.js";
 
 const StyledUnorderedList = styled("ul", {
-  fontSize: "$lg",
+  fontSize: "$base",
   fontWeight: "$regular",
   fontFamily: "$default",
-  lineHeight: "$base",
+  lineHeight: "$large",
   letterSpacing: "$tracking-normal",
   color: "$gray12",
   mb: "$spacing-07",
-  paddingInlineStart: "$spacing-07",
-  listStyle: "disc",
+  paddingInlineStart: "$spacing-06",
+	listStyle: "disc",
 
   "@bp2": {
-    fontSize: "$bodyLarge",
+    fontSize: "$lg",
   },
 });
 

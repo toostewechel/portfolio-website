@@ -5,12 +5,13 @@ const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   maxWidth: "1900px",
-  boxShadow: "none",
-  borderRadius: "12px",
+  boxShadow: "$xs",
+  borderRadius: "16px",
   marginTop: "-16px",
   marginBottom: "-16px",
   zIndex: "3",
-
+	border: 0,
+	
   variants: {
     color: {
       crimson: {
@@ -19,7 +20,7 @@ const Wrapper = styled("div", {
       },
       teal: {
         background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
-        border: "2px solid $teal7",
+        // border: "2px solid $teal7",
       },
     },
   },
@@ -29,6 +30,7 @@ const Wrapper = styled("div", {
     height: "1080px",
     width: "100%",
     boxShadow: "$medium",
+		borderRadius: "12px",
   },
 });
 
@@ -39,21 +41,50 @@ const ChapterContentContainer = styled("div", {
   padding: "$spacing-04",
   alignItems: "center",
   justifyContent: "center",
+
+	"@bp4": {
+    width: "50%",
+  },
 });
 
 const ChapterImageContainer = styled("div", {
+	position: "relative",
   display: "flex",
   width: "100%",
   alignItems: "center",
   justifyContent: "center",
-  padding: "$spacing-10",
+	pl: "0",
+  pr: "0",
+  pt: "$spacing-08",
+  pb: "$spacing-13",
+
+  "@bp4": {
+    padding: "$spacing-10",
+    width: "50%",
+  },
 });
 
-export default function Chapter({ ChapterContent, ChapterImage, accentColor }) {
+const MetaInformationContainer = styled("div", {
+  padding: "$spacing-04",
+  position: "absolute",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  bottom: 0,
+});
+
+export default function Chapter({ ChapterContent, ChapterImage, HoverCardContent, accentColor }) {
   return (
     <Wrapper color={accentColor}>
       <ChapterContentContainer>{ChapterContent}</ChapterContentContainer>
-      <ChapterImageContainer>{ChapterImage}</ChapterImageContainer>
+      <ChapterImageContainer>
+				<MetaInformationContainer>
+          <div>{HoverCardContent}</div>
+        </MetaInformationContainer>
+				{ChapterImage}
+			</ChapterImageContainer>
     </Wrapper>
   );
 }
