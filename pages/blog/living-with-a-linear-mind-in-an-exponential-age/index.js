@@ -43,6 +43,8 @@ import ChapterImage from "../../../components/blog/ChapterImage.js";
 //Content
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
+import Chapter3 from "./03-chapter.mdx";
+import Chapter4 from "./04-chapter.mdx";
 
 //ShareToLinks Object
 const shareTo = {};
@@ -81,6 +83,7 @@ export default function BlogPostPage() {
           accentColor="teal"
           LandingContent={
             <LandingContent
+              href="#blog-content"
               avatarImage="/avatar/avatar-tom-oostewechel.png"
               avatarLabel="Tom Oostewechel"
               avatarDescription="Author"
@@ -115,7 +118,7 @@ export default function BlogPostPage() {
             </HoverCardRoot>
           }
         />
-        <BlogContentLayout>
+        <BlogContentLayout id="blog-content">
           <NavBar activePageTitle="Living With a Linear Mind in an Exponential Age" />
           <BlogMarkdownContentLayout>
             <KeyTakeawaysCollapsible accentColor="teal"></KeyTakeawaysCollapsible>
@@ -123,10 +126,10 @@ export default function BlogPostPage() {
           </BlogMarkdownContentLayout>
           <Chapter
             accentColor="teal"
-	
             ChapterContent={
               <ChapterContent
-								chapterNumber="02"
+                href="#chapter-02"
+                chapterNumber="02"
                 accentColor="teal"
                 chapterTitle="The Enemies and Limitations of Our Brain"
                 chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
@@ -136,16 +139,17 @@ export default function BlogPostPage() {
               <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
             }
           />
-          <BlogMarkdownContentLayout>
+          <BlogMarkdownContentLayout id="chapter-02">
             <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
           </BlogMarkdownContentLayout>
-						<Chapter
+          <Chapter
             accentColor="teal"
             ChapterContent={
               <ChapterContent
-								chapterNumber="03"
+                href="#chapter-03"
+                chapterNumber="03"
                 accentColor="teal"
-                chapterTitle="Keep It Simple and Change Your Mindset"
+                chapterTitle="Change Your Mindset and Keep It Simple"
                 chapterDescription="Personal knowledge management is about personal growth and a shifting mindset. A good application requires habit change, deliberate practice, and perseverance. Good solutions are simple and provide structure, enabling trust and flow."
               />
             }
@@ -153,8 +157,28 @@ export default function BlogPostPage() {
               <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
             }
           />
+          <BlogMarkdownContentLayout id="chapter-03">
+            <MarkdownContentBlock chapter="chapter-03" Content={Chapter3} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-04"
+                chapterNumber="04"
+                accentColor="teal"
+                chapterTitle="Organise Knowledge by Balancing Structure and Flexibility"
+                chapterDescription="A critical trade-off we should make for the design of our system is the balance between structure and flexibility. Finding the right balance between the two is critical to designing a stable system that provides direction and adapts to changing circumstances and needs."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+            }
+          />
+          <BlogMarkdownContentLayout id="chapter-04">
+            <MarkdownContentBlock chapter="chapter-04" Content={Chapter4} />
+          </BlogMarkdownContentLayout>
         </BlogContentLayout>
-			
       </article>
     </div>
   );

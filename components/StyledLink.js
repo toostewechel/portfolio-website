@@ -19,7 +19,7 @@ const LinkContainer = styled("a", {
   "&:hover": {
     transform: "translateY(-2px)",
     transition: "transform 200ms ease-out, background 200ms ease-out",
-    backgroundColor: "$gray2",
+    backgroundColor: "$gray2 !important",
     border: "1px solid $gray6",
     boxShadow: "$small",
   },

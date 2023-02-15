@@ -63,7 +63,7 @@ const ChapterNumber = styled("p", {
 
 export default function ChapterContent({
   accentColor,
-	chapterNumber,
+  chapterNumber,
   chapterTitle,
   chapterDescription,
   href,

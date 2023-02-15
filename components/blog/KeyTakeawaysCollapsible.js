@@ -32,11 +32,10 @@ const Title = styled("h3", {
   fontWeight: "$extra-bold",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-
 });
 
 const Button = styled("button", {
-  borderRadius: "6px",
+  borderRadius: "4px",
   padding: "$spacing-02 $spacing-03",
   color: "$crimson1",
   fontFamily: "$default",

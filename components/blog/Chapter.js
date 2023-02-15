@@ -9,7 +9,7 @@ const Wrapper = styled("div", {
   borderRadius: "12px",
   marginTop: "-16px",
   marginBottom: "-16px",
-  zIndex: "9",
+  zIndex: "3",
 
   variants: {
     color: {

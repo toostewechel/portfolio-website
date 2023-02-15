@@ -19,7 +19,7 @@ const StyledImage = styled("img", {
 
   "@bp4": {
     width: "60px",
-		height: "60px"
+    height: "60px",
   },
 });
 

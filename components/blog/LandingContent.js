@@ -94,6 +94,7 @@ export default function LandingContent({
   blogTitle,
   blogDescription,
   datePosted,
+  href,
 }) {
   return (
     <ContentContainer>
@@ -111,7 +112,7 @@ export default function LandingContent({
       </FlexWrapper>
       <Heading as="h1" level={2} color="dark" title={blogTitle} />
       <Paragraph>{blogDescription}</Paragraph>
-      <Button>Start Reading</Button>
+      <Button href={href}>Start Reading</Button>
     </ContentContainer>
   );
 }
