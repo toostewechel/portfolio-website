@@ -18,7 +18,8 @@ const StyledImage = styled("img", {
   size: "$7",
 
   "@bp4": {
-    size: "$8",
+    width: "60px",
+		height: "60px"
   },
 });
 

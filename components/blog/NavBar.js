@@ -28,7 +28,7 @@ const NavBarContainer = styled("div", {
   },
   "@bp6": {
     top: 0,
-    padding: "$spacing-05 $spacing-04",
+    padding: "$spacing-06 $spacing-04",
   },
 });
 

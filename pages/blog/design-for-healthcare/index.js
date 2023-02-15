@@ -13,7 +13,7 @@ import Chapter from "../../../components/blog/Chapter.js";
 import ChapterContent from "../../../components/blog/ChapterContent.js";
 import ChapterImage from "../../../components/blog/ChapterImage.js";
 import NavBar from "../../../components/blog/NavBar.js";
-import MarkdownContentBlock from "../../../components/content/MarkdownContentBlock.js";
+import MarkdownContentBlock from "../../../components/blog/MarkdownContentBlock.js";
 import {
   KeyTakeawaysCollapsible,
   ListItem,

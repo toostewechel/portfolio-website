@@ -22,7 +22,7 @@ const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
 const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
+  alignItems: "baseline",
   padding: "$spacing-04",
 });
 
@@ -32,6 +32,7 @@ const Title = styled("h3", {
   fontWeight: "$extra-bold",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
+
 });
 
 const Button = styled("button", {

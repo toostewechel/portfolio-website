@@ -29,11 +29,11 @@ const IconButton = styled("button", {
 
   "&:hover": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
+    backgroundColor: "rgba(0,0,0, 0.05)",
     color: "$mauve12",
   },
   "&:active": {
-    backgroundColor: "$mauve3",
+    backgroundColor: "rgba(0,0,0, 0.1)",
   },
   "&:focus": {
     transition: "background 300ms ease-out",

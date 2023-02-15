@@ -63,13 +63,14 @@ const ChapterNumber = styled("p", {
 
 export default function ChapterContent({
   accentColor,
+	chapterNumber,
   chapterTitle,
   chapterDescription,
   href,
 }) {
   return (
     <ChapterContentWrapper>
-      <ChapterNumber color={accentColor}>02</ChapterNumber>
+      <ChapterNumber color={accentColor}>{chapterNumber}</ChapterNumber>
       <Heading as="h2" level={2} color="dark" title={chapterTitle} />
       <Paragraph>{chapterDescription}</Paragraph>
       <Button href={href}>Read</Button>

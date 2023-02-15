@@ -123,8 +123,10 @@ export default function BlogPostPage() {
           </BlogMarkdownContentLayout>
           <Chapter
             accentColor="teal"
+	
             ChapterContent={
               <ChapterContent
+								chapterNumber="02"
                 accentColor="teal"
                 chapterTitle="The Enemies and Limitations of Our Brain"
                 chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
@@ -137,7 +139,22 @@ export default function BlogPostPage() {
           <BlogMarkdownContentLayout>
             <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
           </BlogMarkdownContentLayout>
+						<Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+								chapterNumber="03"
+                accentColor="teal"
+                chapterTitle="Keep It Simple and Change Your Mindset"
+                chapterDescription="Personal knowledge management is about personal growth and a shifting mindset. A good application requires habit change, deliberate practice, and perseverance. Good solutions are simple and provide structure, enabling trust and flow."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+            }
+          />
         </BlogContentLayout>
+			
       </article>
     </div>
   );
