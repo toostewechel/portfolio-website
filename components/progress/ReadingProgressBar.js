@@ -1,21 +1,12 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import CloseLineIcon from "remixicon-react/CloseLineIcon";
-import { X } from "lucide-react";
-import {
-  Provider,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "../tooltip/Tooltip.js";
 
-const ReadingProgressContainer = styled("div", {
+const ReadingProgressBarContainer = styled("div", {
   display: "flex",
   width: "100%",
   flexDirection: "row",
   alignItems: "center",
   borderRadius: "6px",
-  padding: "$spacing-02",
   gap: "$spacing-02",
 });
 
@@ -53,36 +44,7 @@ const ProgressBarOuter = styled("div", {
   boxShadow: "$inset",
 });
 
-const IconLink = styled("a", {
-  borderRadius: "6px",
-  display: "flex",
-  justifyContent: "center",
-  color: "$mauve11",
-  alignItems: "center",
-  padding: "$spacing-04",
-  background: "transparent",
-  transition: "background 300ms ease-in",
-  border: "2px solid transparent",
-  outline: 0,
-
-  "&:hover": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
-    border: "2px solid transparent",
-    color: "$mauve12",
-  },
-  "&:active": {
-    backgroundColor: "$mauve3",
-  },
-  "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
-    border: "2px solid $blue11",
-    color: "$mauve12",
-  },
-});
-
-const ReadingProgress = ({ targetRef, ...props }) => {
+export const ReadingProgressBar = ({ targetRef, gradient }) => {
   //Hook for reading and setting reading progress
   const [readingProgress, setReadingProgress] = React.useState(0);
 
@@ -142,32 +104,21 @@ const ReadingProgress = ({ targetRef, ...props }) => {
         design: {
           background: "linear-gradient(90deg, $crimson9, $crimson11)",
         },
+        teal: {
+          background: "linear-gradient(90deg, $teal9, $teal11)",
+        },
       },
     },
   });
 
   return (
-    <ReadingProgressContainer>
+    <ReadingProgressBarContainer>
       <ProgressBarContainer>
         <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
         <ProgressBarOuter>
-          <ProgessBarInner gradient={props.gradient} />
+          <ProgessBarInner gradient={gradient} />
         </ProgressBarOuter>
       </ProgressBarContainer>
-      <Provider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <IconLink href="/">
-                <X size={20} />
-              </IconLink>
-            </div>
-          </TooltipTrigger>
-          <TooltipContent sideOffset={4}>Close</TooltipContent>
-        </Tooltip>
-      </Provider>
-    </ReadingProgressContainer>
+    </ReadingProgressBarContainer>
   );
 };
-
-export default ReadingProgress;

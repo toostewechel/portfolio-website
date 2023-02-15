@@ -1,13 +1,13 @@
 import { styled } from "../../stitches.config.js";
 
 const StyledLink = styled("a", {
-  fontSize: "$lg",
+  fontSize: "inherit",
   fontWeight: "$medium",
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$violet11",
-  backgroundImage: "linear-gradient(transparent 70%, $yellow5 0%)",
+  color: "$mavue12",
+  backgroundImage: "linear-gradient(transparent 70%, $gray4 0%)",
   backgroundRepeat: "no-repeat",
   textDecoration: "none",
   transition: "background-position 0.2s ease 0s",
@@ -15,17 +15,17 @@ const StyledLink = styled("a", {
   backgroundSize: "100% 250%",
 
   "@bp2": {
-    fontSize: "$bodyLarge",
+    fontSize: "inherit",
   },
   "&:hover": {
-    color: "$violet11",
+    color: "$mauve12",
     backgroundPosition: "0% 100%",
   },
   "&:active": {
-    color: "$violet11",
+    color: "$mauve12",
   },
   "&:visited": {
-    color: "$violet11",
+    color: "$mauve12",
   },
 });
 

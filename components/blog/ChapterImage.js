@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import Image from "next/image";
 
-export default function LandingImage({ src }) {
+export default function ChapterImage({ src }) {
   return (
     <Image
       src={src}

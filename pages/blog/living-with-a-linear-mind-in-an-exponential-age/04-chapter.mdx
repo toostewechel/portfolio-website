@@ -1,0 +1,75 @@
+import TableOfContentSection from "../../../components/toc/TableOfContentSection.tsx";
+
+<TableOfContentSection chapter="chapter-04" topic="Design Challenges have Trade-Offs">
+	
+### Design Challenges have Trade-Offs
+
+A critical trade-off we should make for the design of our system is the balance between structure and flexibility: without structure, we cannot differentiate, compare or experiment with ideas and without flexibility, we cannot adapt to unexpected changes or new information. Finding the right balance between the two is critical to designing a stable system that provides direction and adapts to changing circumstances and needs. Practically, we need to make choices at the strategic, application and object layer.
+
+</TableOfContentSection>
+
+<TableOfContentSection chapter="chapter-04" topic="Strategic: Top-Down vs Bottom-Up">
+	
+### Strategic: Top-Down vs Bottom-Up
+
+On a strategic level, there are two main approaches to organise and structure the information you collect: by a _top-down_ or _bottom-up_ approach. Today, most people still use a _top-down_ approach seperating what they have into smaller stacks, piles or folders with topics and sub-topics. Moreover, most popular note-taking apps impose this hierarchical and linear structure on users by mimicing the file tree of computers, where notes live inside folders and can be nested indefinitely. On the surface, this looks less complex but quickly increases as the number of notes grows and you constantly tax your mind with where you need to put things. If you sort by topic, you are faced with the dilemma of either adding more and more notes to one topic, which makes them increasingly hard to find or adding more and more topics and subtopics to it, which only shifts the problem to another level. The top-down approach reduces the likelihood of building and finding surprising and valuable connections, which means you must trade between usability and usefulness.
+
+In a bottom-up approach, we start with a simple and flat structure that allows complexity to build up where we want it: on the content level. The organisation of knowledge is fluid and dynamic, and no strict rules tell us exactly where each item should go. In this approach, we shift the question from: _"Under which topic do I store this?"_ to _"In which context will I want to stumble upon it again?_ You create clusters of knowledge by linking other related notes and assigning overarching tags. One of the significant advantages of this strategy is that your system becomes more and more valuable as it grows instead of getting messy and confusing.
+
+</TableOfContentSection>
+
+<TableOfContentSection chapter="chapter-04" topic="Application: Augment Your Brain">
+	
+### Application: Augment Your Brain
+
+On the application level, a thousand and one apps are available to choose from to improve productivity and help with remembering, connecting and creating. Depending on your preferred use case(s), most apps can serve (some) part of your workflow. Still, most are generally not well suited for more complex needs like discovering connections, generating insight or resurfacing ideas.
+
+Throughout history, many tools have improved our ability to think individually and in groups, from rudimental symbols, speech and clay tablets to the printing press and books. In the computer era, we now have universal thinking tools that augment and improve our human capacities. Generally, these tools support the visualisation of our cognitive process, the mental actions involved in learning, remembering and using knowledge. Unfortunately, most popular apps still use a hierarchical and linear approach, mimicking the way computers 'think'.
+
+> Ideally, we want to use tools that augment and mimic our cognitive processes as closely as possible.
+>
+> <cite>-- Ideal Scenario</cite>
+
+The human mind does not work that way, as most ideas cannot be locked into a single box. It operates by association. With one item in its grasp, it snaps instantly to the next, which the association of thoughts suggests. When you think about the Mona Lisa, you might remember from your history lessons it's a painting that you can find in the Louvre museum in Paris and that it is painted by the Italian artist Leonardo da Vinci. Essentially, the brain is one giant web of trails where information is fluid and interconnected. Ideally, we want to use tools that augment and mimic our cognitive processes as closely as possible.
+
+#### Libraries vs Forests
+
+Put simply, the database layer of an application is either comparable to a library or a forest. The traditional database is used in most apps and are very powerful for highly structured data, much like a libraries. You have a set of predefined classifications with labels on bookshelves. When a new book comes out, you must put it on the appropriate shelf and stick a barcode on its cover. In contrast, graph databases are more like forests. You keep a record of each new tree and use a map to reference the location of each tree. New trees can grow everywhere, so you can't put them on predefined shelves. Instead, you refer to them concerning other trees in the forest. _"A new elm is growing next to a big old chestnut and a small creek."_ You don't have to worry about where, how or what grows in a forest. There are no forms, and the structure is not predefined. You only have to keep a record of the correlation between elements.
+
+As you might have guessed, a graph database closely resembles how your brain works and is better suited for a complete PKM system. But why is this? Imagine an app with a predefined structure. You can have notes, agenda entries, to-do lists, etc. However, a note is not an agenda entry; an agenda entry is not a to-do list. You can attach a document to a note or an agenda entry, but a document is not a note or an agenda entry. You are in trouble if you want to do complex searches, such as _"Give me all documents linked to an agenda entry with client A"_. Searches for relationships are complicated, slow or even impossible.
+
+A graph database is free from all the constraints of the classic file tree. It is a flexible, reusable data layer that you can use to answer complex questions and provides its users with a more intuitive way of visualising and exploring the data. Graph databases inherently support the fluctuating nature of knowledge. Hence, we should choose an application utilising a knowledge graph database.
+
+</TableOfContentSection>
+
+<TableOfContentSection chapter="chapter-04" topic="Object: The Shipping Containers">
+	
+### Object: The Shipping Containers
+
+Not all knowledge is created the same, as our minds tend to differentiate things into _objects_ like books, questions, goals, people, meetings or notes. All these _objects_ have different purposes and properties. In a graph database, each object that is created represents a _node_. Each _node_ has a _type_ and _relationships_ with other nodes, ultimately building up interconnected knowledge clusters.
+
+Ideally, we always want to standardise how we capture these _objects_ because we can only improve when we standardise it. In a way, all the different objects are like the shipping containers of a PKM system. Everything that goes in it is standardised in the same format, and everything is, throughout the same overarching workflow, streamlined towards only one thing: insights that can be shared or used to generate new connections and ideas. Moreover, doing so reduces the cognitive load significantly as the predefined structure already tells you how your _object_ should look, and you know it gets organised like every other objects of the same _type_. By tagging or assigning keywords to objects - _like putting a label on your shipping container_ - you organically organise your knowledge according to your interests. It also improves the searchability, discoverability and retrievability of information.
+
+The amount and which objects, types and tags you need are always an output of your overarching workflow and intended use case(s). In other words, your intended purpose (_why_) influences your workflow (how), which in turn, inspires the objects, types and tags (_what_) you need to achieve the purpose.
+
+</TableOfContentSection>
+
+<TableOfContentSection chapter="chapter-04" topic="Distillation - The Principles in a Nutshell">
+	
+### Distillation - The Principles in a Nutshell
+
+As we have covered the need and purpose of personal knowledge management and elaborated on the key concepts and fundamental principles, we can derive a checklist and memory aid to support us in part two of this series.
+
+- To have a clear and focused mind, we need to externalise our thoughts out of our heads and into our external memory system.
+- Writing is, without question, the best facilitator for thinking, reading, learning, understanding and generating ideas we have. Write it down if you want to learn something in the long run.
+- At its core, PKM is about rethinking your relationship with information and cultivating self-awareness and self-knowledge.
+- Tools and techniques should be embedded into a standardised workflow to prevent falling back into old habits. A good workflow that works for you should provide structure and enables trust and a flow state. Always decide your preferred workflow before choosing the tools and techniques.
+- A PKM system can serve many different functions and capabilities, so you should always start with why you need or want to use it in the first place.
+- Your system can look chaotic to others, but it is right for you if it brings you value and delight.
+- Organise by balancing structure and flexibility: apply a bottom-up approach, augment your brain by choosing an application that uses a knowledge graph database and reduce cognitive load by standardising how and in which format you capture object types.
+- Organise your knowledge organically and according to your interests by tagging or assigning keywords to your objects.
+- Being organised is a habit - a repeated set of actions you take as you encounter, work with and put the information to use
+
+In part two of this series, I will apply these principles to determine my intended use cases and workflow and, finally, choose tools and techniques supporting my use cases. We are shifting our focus from why we need personal knowledge management towards how we can implement it into our daily lives.
+
+</TableOfContentSection>

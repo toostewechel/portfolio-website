@@ -56,9 +56,9 @@ const StyledHeading = styled("h1", {
         pb: "$spacing-02",
       },
       5: {
-        fontSize: "$xl",
-        fontWeight: "$semi-bold",
-        letterSpacing: "$tracking-normal",
+        fontSize: "$lg",
+        fontWeight: "$bold",
+        letterSpacing: "$tracking-tight",
       },
     },
   },

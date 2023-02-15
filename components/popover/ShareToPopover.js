@@ -29,11 +29,11 @@ const IconButton = styled("button", {
 
   "&:hover": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
+    backgroundColor: "rgba(0,0,0, 0.05)",
     color: "$mauve12",
   },
   "&:active": {
-    backgroundColor: "$mauve3",
+    backgroundColor: "rgba(0,0,0, 0.1)",
   },
   "&:focus": {
     transition: "background 300ms ease-out",
@@ -94,11 +94,9 @@ function ShareToPopover(props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <IconButton aria-label="Share to">
-            <Share size={20} />
-          </IconButton>
-        </div>
+        <IconButton aria-label="Share Options">
+          <Share size={20} />
+        </IconButton>
       </PopoverTrigger>
       <StyledPopoverContent>
         <Title>Share</Title>
@@ -119,7 +117,7 @@ function ShareToPopover(props) {
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
         <PopoverClose aria-label="Close">
-          <X size={16} />
+          <X size={17} />
         </PopoverClose>
       </StyledPopoverContent>
     </Popover>

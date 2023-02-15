@@ -23,12 +23,11 @@ const slideLeftAndFade = keyframes({
 });
 
 const StyledContent = styled(HoverCard.Content, {
-  width: "300px",
-  padding: "$spacing-05",
+  backgroundColor: "$mauve12",
   borderRadius: "6px",
-  backgroundColor: "white",
-  border: "1px solid gray6",
-  boxShadow: "$xs",
+  padding: "$spacing-05",
+  maxWidth: "320px",
+  boxShadow: "$medium",
   willChange: "transform, opacity",
   '&[data-state="delayed-open"]': {
     '&[data-side="top"]': { animationName: slideDownAndFade },
@@ -39,8 +38,8 @@ const StyledContent = styled(HoverCard.Content, {
 });
 
 const StyledHoverCardArrow = styled(HoverCard.Arrow, {
-  fill: "white",
-  stroke: "$gray6",
+  fill: "$mauve12",
+  stroke: "$mauve12",
   strokeWidth: "1px",
 });
 
@@ -68,7 +67,7 @@ const Title = styled("h3", {
   fontWeight: "$extra-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
-  color: "$mauve12",
+  color: "$mauve2",
   lineHeight: "$compact",
 
   "@bp4": {
@@ -79,7 +78,7 @@ const Title = styled("h3", {
 const Handle = styled("p", {
   fontFamily: "$default",
   fontSize: "$base",
-  color: "$mauve9",
+  color: "$mauve8",
   mt: "-2px",
 });
 
@@ -88,7 +87,7 @@ const Description = styled("p", {
   fontWeight: "$regular",
   letterSpacing: "$tracking-tight",
   fontFamily: "$default",
-  color: "$mauve11",
+  color: "$mauve8",
 
   "@bp3": {
     mt: "0",
@@ -119,7 +118,7 @@ const Number = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
   fontSize: "$sm",
-  color: "$mauve12",
+  color: "$mauve2",
 });
 
 const Label = styled("p", {

@@ -108,7 +108,7 @@ function LandingBlock() {
                 building innovative and valuable products that have a real
                 impact.
               </Description>
-              <Button href="/blogpage">
+              <Button href="/blog/article-toc">
                 My Design Vision
                 <span style={{ marginLeft: "8px" }}>
                   <svg

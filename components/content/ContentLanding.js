@@ -7,7 +7,7 @@ const ContentContainer = styled("div", {
   overflow: "visible",
   maxWidth: "1024px",
   m: "0 auto",
-}); 
+});
 
 const TitleWrapper = styled("div", {
   position: "relative",
