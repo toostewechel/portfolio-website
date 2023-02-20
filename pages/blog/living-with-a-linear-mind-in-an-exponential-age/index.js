@@ -4,11 +4,11 @@ import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
 
 //Blog Header & Footer
-import Header from "../../../components/blog/Header.js";
+import Header from "../../../components/blog/Header.js
 import Footer from "../../../components/layouts/blocks/Footer.js";
 
 //Blog Landing Components
-import Landing from "../../../components/blog/Landing.js";
+import Landing from "../../../components/layouts/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
 
