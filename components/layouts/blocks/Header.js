@@ -83,6 +83,39 @@ const SearchLabel = styled("p", {
   fontSize: "$xs",
 });
 
+const SiteMapContainer = styled("div", {
+  mt: "$spacing-04",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "start",
+  gap: "$spacing-03",
+
+  "@bp2": {
+    flexDirection: "row",
+    gap: "$spacing-04",
+    alignItems: "center",
+  },
+});
+
+const Link = styled("a", {
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  fontSize: "$sm",
+  color: "$mauve9",
+  p: "$spacing-01",
+});
+
+const Circle = styled("div", {
+  display: "none",
+
+  "@bp2": {
+    display: "flex",
+    size: "$3",
+    background: "$gray6",
+    borderRadius: "100%",
+  },
+});
+
 // Make command character useable in React
 let command = String.fromCodePoint(8984);
 
@@ -92,6 +125,13 @@ function Header() {
       <LogoBox href="/">
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </LogoBox>
+			<SiteMapContainer>
+              <Link href="/design-vision">Design Vision</Link>
+              <Circle />
+              <Link href="/personal-overview">READ.me</Link>
+              <Circle />
+              <Link href="/release-notes">Release Notes</Link>
+            </SiteMapContainer>
       <Box>
         <CommandDialog />
         <AvatarStatusBadgePopover />

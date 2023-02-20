@@ -176,7 +176,7 @@ export default function BlogPostPage() {
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-03.png" />
             }
           />
           <BlogMarkdownContentLayout id="chapter-03">
