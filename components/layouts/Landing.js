@@ -64,6 +64,10 @@ const CircularPatternDesktop = styled("div", {
         backgroundImage:
           "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
       },
+			bronze: {
+				backgroundImage:
+					"url(/patterns/circular-pattern-landing-bronze.png)",
+			},
     },
   },
 });
@@ -102,6 +106,10 @@ const CircularPatternTablet = styled("div", {
         backgroundImage:
           "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
       },
+			bronze: {
+				backgroundImage:
+					"url(/patterns/circular-pattern-landing-bronze.png)",
+			},
     },
   },
 });
@@ -131,6 +139,8 @@ const ImageContainer = styled("div", {
       teal: {
         background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
       },
+			bronze: { 
+				background: "linear-gradient(138.88deg, #F8F1EE 0.36%, #E5DFD0 93.42%)",
     },
   },
 });
