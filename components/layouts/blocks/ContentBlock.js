@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-	ml: "$spacing-03",
+  ml: "$spacing-03",
 
   variants: {
     alignment: {

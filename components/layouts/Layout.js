@@ -8,11 +8,11 @@ const ContentLayout = styled("div", {
 });
 
 export const PageLayout = styled("div", {
-	maxWidth: "1234px",
-	padding: "$spacing-04",
-	ml: "auto",
-	mr: "auto",
-})
+  maxWidth: "1234px",
+  padding: "$spacing-04",
+  ml: "auto",
+  mr: "auto",
+});
 
 export const BlogContentLayout = styled("div", {
   display: "flex",

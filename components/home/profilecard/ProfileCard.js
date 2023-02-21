@@ -10,13 +10,14 @@ const Container = styled("div", {
   flexDirection: "column",
   borderRadius: "4px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
-	background: "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
-	width: "100%",
+  background:
+    "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
+  width: "100%",
 
-	"@bp1": {
-		width: "auto",
-	},
-	
+  "@bp1": {
+    width: "auto",
+  },
+
   "@bp4": {
     flexDirection: "row",
   },
@@ -46,7 +47,7 @@ const CardTitle = styled("p", {
   fontSize: "$xl",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
-	lineHeight: "$none",
+  lineHeight: "$none",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
 
@@ -148,7 +149,10 @@ function ProfileCard(props) {
       <FlexContainer>
         <Card>
           <ImageContainer>
-            <AvatarStatusBadge size={10} src="/avatar/avatar-tom-oostewechel.png" />
+            <AvatarStatusBadge
+              size={10}
+              src="/avatar/avatar-tom-oostewechel.png"
+            />
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>

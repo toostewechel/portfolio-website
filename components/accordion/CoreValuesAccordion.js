@@ -8,15 +8,16 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
 });
 
 const StyledItem = styled(AccordionPrimitive.Item, {
-	backgroundColor: "white",
-	overflow: "hidden",
-	mb: "$spacing-03",
-	borderRadius: "6px",
-	boxShadow: "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
-	
-	"@bp1":{
-		mb: "$spacing-04",
-	}
+  backgroundColor: "white",
+  overflow: "hidden",
+  mb: "$spacing-03",
+  borderRadius: "6px",
+  boxShadow:
+    "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
+
+  "@bp1": {
+    mb: "$spacing-04",
+  },
 });
 
 const HeaderPanel = styled(AccordionPrimitive.Header, {
@@ -108,10 +109,10 @@ const ValueTitle = styled("h3", {
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
   mb: 0,
-	
-	"@bp1": {
-		fontSize: "$xl",
-	}
+
+  "@bp1": {
+    fontSize: "$xl",
+  },
 });
 
 const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
@@ -140,23 +141,20 @@ const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
 
 const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: "hidden",
-	padding: "$none $spacing-04 $spacing-05 $spacing-05",
-	backgroundColor: "$bronze1",
-	
+  padding: "$none $spacing-04 $spacing-05 $spacing-05",
+  backgroundColor: "$bronze1",
 });
 
 const StyledChevron = styled(ChevronRight, {
   color: "$mauve9",
   transition: "transform 200ms cubic-bezier(0.87, 0, 0.13, 1)",
-  "[data-state=open] &": { 
-		transform: "rotate(90deg)",
-		color: "$mauve12",
-	},
+  "[data-state=open] &": {
+    transform: "rotate(90deg)",
+    color: "$mauve12",
+  },
 });
 
-const ValueDescriptionBox = styled("div", {
-	
-});
+const ValueDescriptionBox = styled("div", {});
 
 const ValueDescription = styled("p", {
   fontSize: "$sm",
@@ -205,7 +203,9 @@ export default function CoreValuesAccordion() {
           title="Reliable"
         />
         <AccordionContent color="plum">
-          I always try to pull my weight, do my homework, keep my word and follow through, even on the little things, so clients and team members can trust me.
+          I always try to pull my weight, do my homework, keep my word and
+          follow through, even on the little things, so clients and team members
+          can trust me.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
@@ -215,7 +215,9 @@ export default function CoreValuesAccordion() {
           title="Pro-active"
         />
         <AccordionContent color="blue">
-          I take responsibility and focus my efforts on new initiatives, innovative ideas and complex problems inside my circle of influence; I don't focus on things I can't control.
+          I take responsibility and focus my efforts on new initiatives,
+          innovative ideas and complex problems inside my circle of influence; I
+          don't focus on things I can't control.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
@@ -225,7 +227,8 @@ export default function CoreValuesAccordion() {
           title="Curiosity"
         />
         <AccordionContent color="crimson">
-          I have a deep desire to read, explore, investigate, learn new things, and ask questions to understand the people and world around me better.
+          I have a deep desire to read, explore, investigate, learn new things,
+          and ask questions to understand the people and world around me better.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
@@ -235,7 +238,8 @@ export default function CoreValuesAccordion() {
           title="Empathetic"
         />
         <AccordionContent color="violet">
-          I have empathy for those around me and always try to actively listen and understand their needs and perspectives first and foremost
+          I have empathy for those around me and always try to actively listen
+          and understand their needs and perspectives first and foremost
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-5">
@@ -245,7 +249,9 @@ export default function CoreValuesAccordion() {
           title="Altruistic"
         />
         <AccordionContent color="teal">
-           I always try to look for solutions that benefit the majority involved and contribute to whatever needs to be done for the success of the whole and those around me.
+          I always try to look for solutions that benefit the majority involved
+          and contribute to whatever needs to be done for the success of the
+          whole and those around me.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-6">
@@ -255,7 +261,8 @@ export default function CoreValuesAccordion() {
           title="Principled"
         />
         <AccordionContent color="cyan">
-          I am self-motivated and try to live by being driven by the principles I value most instead of by (hidden) agendas and forces surrounding me.
+          I am self-motivated and try to live by being driven by the principles
+          I value most instead of by (hidden) agendas and forces surrounding me.
         </AccordionContent>
       </AccordionItem>
     </Accordion>

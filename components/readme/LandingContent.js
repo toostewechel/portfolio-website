@@ -11,15 +11,18 @@ const StyledHeading = styled("h1", {
   lineHeight: "$compact",
   color: "$mauve12",
   m: 0,
-	fontSize: "$3xl",
-	fontWeight: "$black",
-	letterSpacing: "$tracking-tighter",
-	lineHeight: "$tight",
-	mb: "$spacing-04",
+  fontSize: "$3xl",
+  fontWeight: "$black",
+  letterSpacing: "$tracking-tighter",
+  lineHeight: "$tight",
+  mb: "$spacing-04",
 
-	"@bp4": {
-		fontSize: "$5xl",
-	},
+  "@bp4": {
+    fontSize: "$4xl",
+  },
+  "@bp6": {
+    fontSize: "$5xl",
+  },
 });
 
 const ContentContainer = styled("div", {
@@ -33,7 +36,7 @@ const ContentContainer = styled("div", {
 
   "@bp4": {
     m: 0,
-		pr: "$spacing-05",
+    pr: "$spacing-05",
   },
 });
 
@@ -85,33 +88,33 @@ const Spacer = styled("div", {
 });
 
 const ProfileCardContainer = styled("div", {
-	display: "flex",
-	flexDirection: "row",
-	alignItems: "start",
-	mt: "$spacing-04",
-	mb: "$spacing-08",
-	padding: "$spacing-04",
-	background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
-	borderRadius: "6px",
-	boxShadow: "$small",
-	width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "start",
+  mt: "$spacing-04",
+  mb: "$spacing-08",
+  padding: "$spacing-04",
+  background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  borderRadius: "6px",
+  boxShadow: "$small",
+  width: "100%",
 
-	"@bp1": {
-		width: "auto",
-	}
-})
+  "@bp1": {
+    width: "auto",
+    flexDirection: "row",
+  },
+});
 
 const ProfileCardIndex = styled("div", {
-	display: "none",
-	flexDirection: "column",
-	padding: "$spacing-04",
-	gap: "$spacing-02",
+  display: "flex",
+  flexDirection: "column",
+  padding: "$spacing-04",
+  gap: "$spacing-02",
 
-	"@bp1": {
-		display: 'flex',
-	},
-
-})
+  "@bp1": {
+    display: "flex",
+  },
+});
 
 const IndexTitle = styled("p", {
   fontSize: "$lg",
@@ -123,25 +126,25 @@ const IndexTitle = styled("p", {
 
 export default function LandingContent({
   pageTitle,
-	pageDescription,
+  pageDescription,
   dateUpdated,
 }) {
   return (
     <ContentContainer>
       <StyledHeading>{pageTitle}</StyledHeading>
       <Paragraph>{pageDescription}</Paragraph>
-			<ProfileCardContainer>
-				<ProfileCard />
-				<ProfileCardIndex>
-					<IndexTitle>Index</IndexTitle>
-					<MenuItem label="Values & Strengths" />
-					<MenuItem label="Personality" />
-					<MenuItem label="Competencies" />
-					<MenuItem label="Collaboration" />
-					<MenuItem label="Communication" />
-				</ProfileCardIndex>
-			</ProfileCardContainer>
-			 <FlexWrapper>
+      <ProfileCardContainer>
+        <ProfileCard />
+        <ProfileCardIndex>
+          <IndexTitle>Index</IndexTitle>
+          <MenuItem label="Values & Strengths" />
+          <MenuItem label="Personality" />
+          <MenuItem label="Competencies" />
+          <MenuItem label="Collaboration" />
+          <MenuItem label="Communication" />
+        </ProfileCardIndex>
+      </ProfileCardContainer>
+      <FlexWrapper>
         <DecorativeIcon>
           <Calendar />
         </DecorativeIcon>

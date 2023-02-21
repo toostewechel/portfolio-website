@@ -10,8 +10,8 @@ const Wrapper = styled("div", {
   marginTop: "-16px",
   marginBottom: "-16px",
   zIndex: "3",
-	border: 0,
-	
+  border: 0,
+
   variants: {
     color: {
       crimson: {
@@ -30,7 +30,7 @@ const Wrapper = styled("div", {
     height: "1080px",
     width: "100%",
     boxShadow: "$medium",
-		borderRadius: "12px",
+    borderRadius: "12px",
   },
 });
 
@@ -42,18 +42,18 @@ const ChapterContentContainer = styled("div", {
   alignItems: "center",
   justifyContent: "center",
 
-	"@bp4": {
+  "@bp4": {
     width: "50%",
   },
 });
 
 const ChapterImageContainer = styled("div", {
-	position: "relative",
+  position: "relative",
   display: "flex",
   width: "100%",
   alignItems: "center",
   justifyContent: "center",
-	pl: "0",
+  pl: "0",
   pr: "0",
   pt: "$spacing-08",
   pb: "$spacing-13",
@@ -75,16 +75,21 @@ const MetaInformationContainer = styled("div", {
   bottom: 0,
 });
 
-export default function Chapter({ ChapterContent, ChapterImage, HoverCardContent, accentColor }) {
+export default function Chapter({
+  ChapterContent,
+  ChapterImage,
+  HoverCardContent,
+  accentColor,
+}) {
   return (
     <Wrapper color={accentColor}>
       <ChapterContentContainer>{ChapterContent}</ChapterContentContainer>
       <ChapterImageContainer>
-				<MetaInformationContainer>
+        <MetaInformationContainer>
           <div>{HoverCardContent}</div>
         </MetaInformationContainer>
-				{ChapterImage}
-			</ChapterImageContainer>
+        {ChapterImage}
+      </ChapterImageContainer>
     </Wrapper>
   );
 }

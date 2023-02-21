@@ -6,9 +6,10 @@ const Container = styled("div", {
   flexDirection: "column",
   width: "100%",
   padding: "$spacing-06",
-	borderRadius: "6px",
-	backgroundColor: "white",
-	boxShadow: "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
+  borderRadius: "6px",
+  backgroundColor: "white",
+  boxShadow:
+    "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
 });
 
 const LabelContainer = styled("div", {
@@ -117,15 +118,15 @@ const ValueDescription = styled("p", {
   },
 });
 
-export default function CoreValueCard({ children, ...props }) {
+export default function CoreValueCard({ children, color, label, title }) {
   return (
     <Container>
-			<LabelContainer>
-				<LabelIcon color={props.color} />
-				<Label color={props.color}>{props.label}</Label>
-			</LabelContainer>
-			<ValueTitle>{props.title}</ValueTitle>
-      <ValueDescriptionBox color={props.color}>
+      <LabelContainer>
+        <LabelIcon color={color} />
+        <Label color={color}>{label}</Label>
+      </LabelContainer>
+      <ValueTitle>{title}</ValueTitle>
+      <ValueDescriptionBox>
         <ValueDescription>{children}</ValueDescription>
       </ValueDescriptionBox>
     </Container>
