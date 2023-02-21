@@ -16,6 +16,7 @@ import {
   violetA,
   whiteA,
   yellow,
+	slate,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -49,6 +50,7 @@ export const {
       ...yellow,
       ...teal,
       ...cyan,
+			...slate,
     },
     space: {
       none: "0px",

@@ -8,11 +8,11 @@ import AvatarStatusBadge from "../../avatar/AvatarStatusBadge.js";
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-  background: "linear-gradient(30deg, $violetA6, $crimsonA5)",
-  borderRadius: "8px",
+  borderRadius: "4px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
+	background: "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
   maxWidth: "592px",
-  boxShadow: "$smooth",
+	height: "100%",
 
   "@bp4": {
     flexDirection: "row",
@@ -26,12 +26,8 @@ const Card = styled("div", {
   justifyContent: "center",
   textAlign: "center",
   p: "$spacing-06",
-  background:
-    "linear-gradient(0deg, #32275F 0.34%, rgba(52, 41, 97, 0.85) 75.27%)",
-  borderRadius: "8px",
   height: "auto",
   width: "100%",
-  boxShadow: "$smooth",
 });
 
 const FlexContainer = styled("div", {
@@ -48,7 +44,7 @@ const CardTitle = styled("h3", {
   fontWeight: "$extra-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
-  color: "$whiteA12",
+  color: "$mauve12",
 
   "@bp1": {
     fontSize: "$xl",
@@ -60,7 +56,7 @@ const CardDescription = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$violet5",
+  color: "$mauve12",
   mb: "$spacing-06",
 });
 
@@ -115,7 +111,7 @@ const Icon = styled("div", {
   justifyContent: "center",
   size: "$6",
   p: "8px",
-  backgroundColor: "rgba(0, 0, 0, 0.1)",
+  backgroundColor: "rgba(0, 0, 0, 0.25)",
   color: "$violet3",
   borderRadius: "999px",
   willChange: "transform",
@@ -149,7 +145,7 @@ function ProfileCard(props) {
       <FlexContainer>
         <Card>
           <ImageContainer>
-            <AvatarStatusBadge size={9} src="/images/placeholder-avatar.png" />
+            <AvatarStatusBadge size={10} src="/avatar/avatar-tom-oostewechel.png" />
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>
