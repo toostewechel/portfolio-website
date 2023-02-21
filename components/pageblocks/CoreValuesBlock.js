@@ -115,8 +115,8 @@ export default function CoreValuesBlock() {
   return (
     <Section id="core-values">
       <ContentBlock
-        heading="Values and Strengths"
-        alignment="left"
+				textAlignment="left"
+        title="Values and Strengths"
         description="The roots that make me who I am and guide me when making decisions, building relationships and solving problems."
       />
       <Spacer level={6} />

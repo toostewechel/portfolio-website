@@ -80,14 +80,14 @@ const Button = styled("button", {
   },
 });
 
-function ContentBlock(props) {
+function ContentBlock({ textAlignment, title, description, hasButton, buttonLabel }) {
   return (
-    <Container alignment={props.alignment}>
-      <Heading>{props.heading}</Heading>
-      <Description>{props.description}</Description>
-      {props.hasButton ? (
+    <Container textAlignment={textAlignment}>
+      <Heading>{title}</Heading>
+      <Description>{description}</Description>
+      { hasButton ? (
         <Button>
-          {props.buttonLabel}
+          {buttonLabel}
           <span style={{ marginLeft: "8px" }}>
             <ArrowRight size={24} />
           </span>
