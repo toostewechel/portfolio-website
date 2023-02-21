@@ -1,9 +1,9 @@
 import React from "react";
-import { styled } from "../../../stitches.config.js";
+import { styled } from "../../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
-import AvatarStatusBadge from "../../avatar/AvatarStatusBadge.js";
+import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 
 const Container = styled("div", {
   display: "flex",
