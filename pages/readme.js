@@ -1,8 +1,17 @@
 import { styled } from "../stitches.config.js";
+import { PageLayout } from "../components/layouts/Layout.js";
 import Landing from "../components/layouts/Landing.js";
 import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
 import Header from "../components/layouts/blocks/Header.js";
+import CoreValuesBlock from "../components/home/pageblocks/CoreValuesBlock.js";
+
+const ContentContainer = styled("div", {
+	padding: "$spacing-04",
+	backgroundColor: "$bronze2",
+	pt: "$spacing-14",
+	pb: "$spacing-14",
+})
 
 const ReadMe = () => {
 	return (
@@ -21,6 +30,11 @@ const ReadMe = () => {
 					<LandingImage src="/readme/cover.png" />
 				}
 			/>
+			<ContentContainer>
+				<PageLayout>
+					<CoreValuesBlock />
+				</PageLayout>
+			</ContentContainer>
 		</div>
 	);
 };

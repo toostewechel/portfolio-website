@@ -42,16 +42,16 @@ const ImageContainer = styled("div", {
   mb: "$spacing-05",
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("p", {
   fontSize: "$xl",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
+	lineHeight: "$none",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
 
   "@bp1": {
     fontSize: "$xl",
-    mt: "$spacing-02",
   },
 });
 
@@ -60,7 +60,7 @@ const CardDescription = styled("p", {
   fontWeight: "$regular",
   fontFamily: "$default",
   color: "$mauve12",
-  mb: "$spacing-06",
+  mb: "$spacing-08",
 });
 
 const StatusBadge = styled("div", {

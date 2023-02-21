@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
+	ml: "$spacing-03",
 
   variants: {
     alignment: {
@@ -48,7 +49,7 @@ const Description = styled("p", {
   maxWidth: "720px",
 
   "@bp1": {
-    fontSize: "$xl",
+    fontSize: "$bodyLarge",
   },
 });
 

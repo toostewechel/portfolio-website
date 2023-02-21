@@ -24,7 +24,7 @@ const CoreValueItems = styled("ul", {
   listStyle: "none",
 
   "@bp2": {
-    gap: "48px 24px",
+    gap: "16px",
   },
   "@bp3": {
     gap: "16px",
@@ -52,67 +52,61 @@ function CoreValuesCardLayout() {
       <CoreValueItem>
         <CoreValueCard
           color="plum"
-          label="Actions and words align"
+          label="Actions and Words Align"
           title="Reliable"
           state={true}
         >
-          I move with intent, keep my word and follow through, even on the
-          little things, so clients and team members can put their trust in me
+         I always try to pull my weight, do my 'homework', keep my word and follow through, even on the little things, so clients and team members can trust me.
         </CoreValueCard>
       </CoreValueItem>
       <CoreValueItem>
         <CoreValueCard
           color="blue"
-          label="Circle of influence"
+          label="Circle of Influence"
           title="Pro-active"
           state={true}
         >
-          I take responsibility and focus my efforts on new initiatives,
-          innovative ideas and complex problems inside my circle of influence
+          I take responsibility and focus my efforts on new initiatives, innovative ideas and complex problems inside my circle of influence; I don't focus on things I can't control.
         </CoreValueCard>
       </CoreValueItem>
       <CoreValueItem>
         <CoreValueCard
           color="crimson"
-          label="Dive into the unknown"
+          label="Dive Into the Unknown"
           title="Curious"
           state={true}
         >
-          I have a deep desire to explore, investigate and learn new things to
-          understand the people and world around me
+          I have a deep desire to read, explore, investigate, learn new things, and ask questions to understand the people and world around me better.
         </CoreValueCard>
       </CoreValueItem>
       <CoreValueItem>
         <CoreValueCard
           color="violet"
-          label="Seek to understand"
+          label="Seek to Understand"
           title="Empathetic"
           state={true}
         >
-          I have empathy for those around me and always try to understand their
-          needs and perspectives first and foremost
+          I have empathy for those around me and always try to actively listen and understand their needs and perspectives first and foremost.
         </CoreValueCard>
       </CoreValueItem>
       <CoreValueItem>
         <CoreValueCard
           color="teal"
-          label="Grow the pie together"
-          title="Win-Win"
+          label="A Rising Tide Lifts all Boats"
+          title="Altruistic"
           state={true}
         >
-          I always try to look for solutions that benefit the majority involved
-          in order to collaborate more effectively with others
+            I always try to look for solutions that benefit the majority involved and contribute to whatever needs to be done for the success of the whole.
         </CoreValueCard>
       </CoreValueItem>
       <CoreValueItem>
         <CoreValueCard
           color="cyan"
-          label="Put first things first"
-          title="Autonomous"
+          label="Put First Things First"
+          title="Principled"
           state={true}
         >
-          I try to live by being driven by principles I value most instead of by
-          (hidden) agendas and forces surrounding me
+         I am self-motivated and try to live by being driven by the principles I value most instead of by (hidden) agendas and forces surrounding me.
         </CoreValueCard>
       </CoreValueItem>
     </CoreValueItems>
@@ -124,10 +118,9 @@ function CoreValuesBlock() {
   return (
     <Section id="core-values">
       <ContentBlock
-        heading="Core Values"
-        alignment="center"
-        description="These values guide me when making decisions, building relationships and solving problems."
-        hasButton="true"
+        heading="Values and Strengths"
+        alignment="left"
+        description="The roots that make me who I am and guide me when making decisions, building relationships and solving problems."
         buttonLabel="My User Manual"
       />
       <Spacer level={6} />

@@ -17,6 +17,7 @@ import {
   whiteA,
   yellow,
 	slate,
+	bronze,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -51,6 +52,7 @@ export const {
       ...teal,
       ...cyan,
 			...slate,
+			...bronze,
     },
     space: {
       none: "0px",
@@ -71,7 +73,7 @@ export const {
     },
     // Based on Major Third Type Scale, with 18px as base size
     fontSizes: {
-      "5xl": "4.809rem",
+      "5xl": "4.009rem",
       "4xl": "3.157rem",
       "3xl": "2.369rem",
       "2xl": "1.977rem",
@@ -103,7 +105,7 @@ export const {
       none: 1,
     },
     letterSpacings: {
-      "tracking-tighter": "-0.05em",
+      "tracking-tighter": "-0.035em",
       "tracking-tight": "-0.025em",
       "tracking-normal": "0em",
       "tracking-wide": "0.0025em",

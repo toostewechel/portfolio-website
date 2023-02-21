@@ -7,7 +7,7 @@ const Wrapper = styled("div", {
 	display: "flex",
 	flexDirection: "column",
 	backgroundColor: "white",
-	marginTop: "-112px",
+	marginTop: "-100px",
 	maxWidth: "100%",
 
 	"@bp4": {
@@ -51,8 +51,8 @@ const CircularPatternDesktop = styled("div", {
 		height: "600px",
 	},
 	"@bp5": {
-		width: "700px",
-		height: "700px",
+		width: "650px",
+		height: "650px",
 	},
 	"@bp6": {
 		width: "800px",
@@ -130,7 +130,7 @@ const ImageContainer = styled("div", {
 	pb: "$spacing-13",
 
 	"@bp4": {
-		padding: "$spacing-10",
+		padding: "$spacing-11",
 		width: "50%",
 	},
 

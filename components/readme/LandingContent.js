@@ -5,6 +5,22 @@ import { Calendar } from "lucide-react";
 import ProfileCard from "../home/profilecard/ProfileCard.js";
 import MenuItem from "../home/profilecard/MenuItem.js";
 
+const StyledHeading = styled("h1", {
+  fontFamily: "$header",
+  fontWeight: "$extra-bold",
+  lineHeight: "$compact",
+  color: "$mauve12",
+  m: 0,
+	fontSize: "$3xl",
+	fontWeight: "$black",
+	letterSpacing: "$tracking-tighter",
+	lineHeight: "$tight",
+	mb: "$spacing-04",
+
+	"@bp4": {
+		fontSize: "$5xl",
+	},
+});
 
 const ContentContainer = styled("div", {
   display: "flex",
@@ -73,7 +89,7 @@ const ProfileCardContainer = styled("div", {
 	flexDirection: "row",
 	alignItems: "start",
 	mt: "$spacing-04",
-	mb: "$spacing-06",
+	mb: "$spacing-08",
 	padding: "$spacing-04",
 	background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
 	borderRadius: "6px",
@@ -112,7 +128,7 @@ export default function LandingContent({
 }) {
   return (
     <ContentContainer>
-      <Heading as="h1" level={2} color="dark" title={pageTitle} />
+      <StyledHeading>{pageTitle}</StyledHeading>
       <Paragraph>{pageDescription}</Paragraph>
 			<ProfileCardContainer>
 				<ProfileCard />
