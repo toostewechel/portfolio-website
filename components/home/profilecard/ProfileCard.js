@@ -11,9 +11,12 @@ const Container = styled("div", {
   borderRadius: "4px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
 	background: "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
-  maxWidth: "592px",
-	height: "100%",
+	width: "100%",
 
+	"@bp1": {
+		width: "auto",
+	},
+	
   "@bp4": {
     flexDirection: "row",
   },

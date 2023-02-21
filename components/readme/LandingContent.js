@@ -78,13 +78,23 @@ const ProfileCardContainer = styled("div", {
 	background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
 	borderRadius: "6px",
 	boxShadow: "$small",
+	width: "100%",
+
+	"@bp1": {
+		width: "auto",
+	}
 })
 
 const ProfileCardIndex = styled("div", {
-	display: "flex",
+	display: "none",
 	flexDirection: "column",
 	padding: "$spacing-04",
 	gap: "$spacing-02",
+
+	"@bp1": {
+		display: 'flex',
+	},
+
 })
 
 const IndexTitle = styled("p", {
