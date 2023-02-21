@@ -7,7 +7,6 @@ import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/home/pageblocks/CoreValuesBlock.js";
 
 const ContentContainer = styled("div", {
-	padding: "$spacing-04",
 	backgroundColor: "$bronze2",
 	pt: "$spacing-14",
 	pb: "$spacing-14",

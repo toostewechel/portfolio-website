@@ -98,9 +98,7 @@ const ValueTitle = styled("h3", {
 });
 
 const ValueDescriptionBox = styled("div", {
-  borderRadius: 0,
-  mt: "8px",
-  
+  mt: "$spacing-03",
 });
 
 const ValueDescription = styled("p", {

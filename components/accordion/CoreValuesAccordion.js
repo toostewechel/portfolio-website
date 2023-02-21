@@ -1,18 +1,22 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
+import { ChevronRight } from "lucide-react";
 
 const StyledAccordion = styled(AccordionPrimitive.Root, {
   width: "100%",
 });
 
 const StyledItem = styled(AccordionPrimitive.Item, {
-  borderBottom: "1px solid $gray6",
-  backgroundColor: "$violet2",
-  "&:focus-within": {
-    backgroundColor: "$violet3",
-  },
+	backgroundColor: "white",
+	overflow: "hidden",
+	mb: "$spacing-03",
+	borderRadius: "6px",
+	boxShadow: "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
+	
+	"@bp1":{
+		mb: "$spacing-04",
+	}
 });
 
 const HeaderPanel = styled(AccordionPrimitive.Header, {
@@ -33,14 +37,14 @@ const LabelContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  gap: "$spacing-02",
+  gap: "$spacing-03",
   pb: "$spacing-02",
 });
 
 const LabelIcon = styled("div", {
   width: "13px",
   height: "13px",
-  borderRadius: "4px",
+  borderRadius: "2px",
 
   variants: {
     color: {
@@ -97,13 +101,17 @@ const Label = styled("p", {
 });
 
 const ValueTitle = styled("h3", {
-  fontSize: "$xl",
-  fontWeight: "$black",
+  fontSize: "$lg",
+  fontWeight: "$extra-bold",
   fontFamily: "$header",
   lineHeight: "$none",
   letterSpacing: "$tracking-tighter",
   color: "$mauve12",
   mb: 0,
+	
+	"@bp1": {
+		fontSize: "$xl",
+	}
 });
 
 const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
@@ -118,7 +126,7 @@ const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
     backgroundColor: "white",
   },
   '&[data-state="open"]': {
-    backgroundColor: "$gray2",
+    backgroundColor: "white",
   },
 
   "&:active": {
@@ -126,49 +134,28 @@ const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
   },
   "&:focus": {
     transition: "background 150ms ease-out",
-    backgroundColor: "$gray2",
+    backgroundColor: "$white",
   },
 });
 
 const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: "hidden",
-  backgroundColor: "$gray2",
+	padding: "$none $spacing-04 $spacing-05 $spacing-05",
+	backgroundColor: "$bronze1",
+	
 });
 
-const StyledChevron = styled(ArrowRightSLineIcon, {
-  color: "$violet11",
-  transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-  "[data-state=open] &": { transform: "rotate(90deg)" },
+const StyledChevron = styled(ChevronRight, {
+  color: "$mauve9",
+  transition: "transform 200ms cubic-bezier(0.87, 0, 0.13, 1)",
+  "[data-state=open] &": { 
+		transform: "rotate(90deg)",
+		color: "$mauve12",
+	},
 });
 
 const ValueDescriptionBox = styled("div", {
-  pt: "$spacing-03",
-  pb: "$spacing-03",
-  marginLeft: "20px",
-  mb: "$spacing-05",
-
-  variants: {
-    color: {
-      plum: {
-        borderLeft: "2px solid $plum11",
-      },
-      blue: {
-        borderLeft: "2px solid $blue11",
-      },
-      crimson: {
-        borderLeft: "2px solid $crimson11",
-      },
-      violet: {
-        borderLeft: "2px solid $violet11",
-      },
-      teal: {
-        borderLeft: "2px solid $teal11",
-      },
-      cyan: {
-        borderLeft: "2px solid $cyan11",
-      },
-    },
-  },
+	
 });
 
 const ValueDescription = styled("p", {
@@ -178,8 +165,6 @@ const ValueDescription = styled("p", {
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$mauve12",
-  pl: "$spacing-04",
-  pr: "$spacing-04",
 });
 
 export const Accordion = StyledAccordion;
@@ -216,67 +201,61 @@ export default function CoreValuesAccordion() {
       <AccordionItem value="item-1">
         <AccordionTrigger
           color="plum"
-          label="Actions and words align"
+          label="Actions and Words Align"
           title="Reliable"
         />
         <AccordionContent color="plum">
-          I move with intent, keep my word and follow through, even on the
-          little things, so clients and team members can put their trust in me
+          I always try to pull my weight, do my homework, keep my word and follow through, even on the little things, so clients and team members can trust me.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger
           color="blue"
-          label="Circle of influence"
+          label="Circle of Influence"
           title="Pro-active"
         />
         <AccordionContent color="blue">
-          I take responsibility and focus my efforts on new initiatives,
-          innovative ideas and complex problems inside my circle of influence
+          I take responsibility and focus my efforts on new initiatives, innovative ideas and complex problems inside my circle of influence; I don't focus on things I can't control.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger
           color="crimson"
-          label="Dive into the unknown"
-          title="Curious"
+          label="Dive Into the Unknown"
+          title="Curiosity"
         />
         <AccordionContent color="crimson">
-          I have a deep desire to explore, investigate and learn new things to
-          understand the people and world around me
+          I have a deep desire to read, explore, investigate, learn new things, and ask questions to understand the people and world around me better.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
         <AccordionTrigger
           color="violet"
-          label="Seek to understand"
+          label="Seek to Understand"
           title="Empathetic"
         />
         <AccordionContent color="violet">
-          I have empathy for those around me and always try to understand their
-          needs and perspectives first and foremost
+          I have empathy for those around me and always try to actively listen and understand their needs and perspectives first and foremost
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-5">
         <AccordionTrigger
           color="teal"
-          label="Grow the pie together"
-          title="Win-Win"
+          label="A Rising Tide Lifts All Boats"
+          title="Altruistic"
         />
         <AccordionContent color="teal">
-          I always try to look for solutions that benefit the majority involved
-          in order to collaborate more effectively with others
+           I always try to look for solutions that benefit the majority involved and contribute to whatever needs to be done for the success of the whole and those around me.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-6">
         <AccordionTrigger
           color="cyan"
-          label="Put first things first"
-          title="Autonomous"
+          label="Put First Things First"
+          title="Principled"
         />
         <AccordionContent color="cyan">
-          I try to live by being driven by principles I value most instead of by
-          (hidden) agendas and forces surrounding me
+          I am self-motivated and try to live by being driven by the principles I value most instead of by (hidden) agendas and forces surrounding me.
         </AccordionContent>
       </AccordionItem>
     </Accordion>

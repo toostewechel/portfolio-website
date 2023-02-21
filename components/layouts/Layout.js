@@ -9,7 +9,7 @@ const ContentLayout = styled("div", {
 
 export const PageLayout = styled("div", {
 	maxWidth: "1234px",
-	padding: "$spacing-03",
+	padding: "$spacing-04",
 	ml: "auto",
 	mr: "auto",
 })
