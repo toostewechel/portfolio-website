@@ -80,12 +80,18 @@ const Button = styled("button", {
   },
 });
 
-function ContentBlock({ textAlignment, title, description, hasButton, buttonLabel }) {
+function ContentBlock({
+  textAlignment,
+  title,
+  description,
+  hasButton,
+  buttonLabel,
+}) {
   return (
     <Container textAlignment={textAlignment}>
       <Heading>{title}</Heading>
       <Description>{description}</Description>
-      { hasButton ? (
+      {hasButton ? (
         <Button>
           {buttonLabel}
           <span style={{ marginLeft: "8px" }}>

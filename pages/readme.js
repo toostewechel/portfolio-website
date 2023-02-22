@@ -3,6 +3,7 @@ import { PageLayout } from "../components/layouts/Layout.js";
 import Landing from "../components/layouts/Landing.js";
 import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
+import CharacterTrait from "../components/readme/CharacterTrait.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
@@ -17,7 +18,7 @@ const ReadMe = () => {
   return (
     <div>
       <Header />
-			
+
       <Landing
         accentColor="bronze"
         LandingContent={
@@ -31,7 +32,16 @@ const ReadMe = () => {
       />
       <ContentContainer>
         <PageLayout>
-					<ProgressBar gradient="blue" value={5} />
+          <ProgressBar gradient="blue" progressValue={50} />
+					<CharacterTrait 
+						labelLeft="What is Read.Me?"
+						labelRight="What is Read.Me?"
+						percentageLeft="50%"
+						percentageRight="50%"
+						charactertraitDescription="Read.Me is a free software project that is designed to help you learn more about the internet and how to use it. It is a free, open source, and open source software project. Read.Me"
+						progressValue={50}
+						gradient="teal"
+					/>
           <CoreValuesBlock />
         </PageLayout>
       </ContentContainer>

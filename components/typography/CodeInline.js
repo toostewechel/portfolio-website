@@ -14,7 +14,7 @@ const StyledCodeInline = styled("code", {
   },
 });
 
-function CodeInline({code}) {
+function CodeInline({ code }) {
   return <StyledCodeInline>{code}</StyledCodeInline>;
 }
 
