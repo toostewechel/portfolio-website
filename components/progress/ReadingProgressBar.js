@@ -95,7 +95,7 @@ export const ReadingProgressBar = ({ targetRef, gradient }) => {
       <ProgressBarContainer>
         <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
         <ProgressBarOuter>
-					<ProgressBar gradient={gradient} readingProgress={readingProgress} />
+					<ProgressBar gradient={gradient} value={readingProgress} />
         </ProgressBarOuter>
       </ProgressBarContainer>
     </ReadingProgressBarContainer>

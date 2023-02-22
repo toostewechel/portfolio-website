@@ -35,10 +35,10 @@ const StyledProgressIndicator = styled(Progress.Indicator, {
 	},
 })
 
-export default function ProgressBar ({ gradient, readingProgress }) {
+export default function ProgressBar ({ gradient, value }) {
 	return(
-		<StyledProgress value={readingProgress}>
-			<StyledProgressIndicator gradient={gradient} style={{ width: `${readingProgress}%`, }} />
+		<StyledProgress value={value}>
+			<StyledProgressIndicator gradient={gradient} style={{ width: `${value}%`, }} />
 		</StyledProgress>
 	)		
 }
