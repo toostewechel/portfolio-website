@@ -11,7 +11,7 @@ import { Database, BatteryCharging, Trees, Lightbulb, PersonStanding } from "luc
 
 export default function CharacterTraitsAccordion() {
 	return(
-		<Accordion type="single" collapsible >
+		<Accordion type="single" defaultValue="item-1" collapsible >
     <AccordionItem value="item-1">
       <AccordionTrigger hasIcon Icon={<Database />} title="Mind" src="/icons/money.svg" />
       <AccordionContent>
@@ -76,7 +76,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Turbulent"
 						percentageLeft="82%"
 						percentageRight="18%"
-						charactertraitDescription="You’re primarily Assertive. You’re likely self-assured, even-tempered, and resistant to stress, refusing to worry too much."
+						charactertraitDescription="You’re primarily Assertive. You’re likely self-assured, even-tempered, and resistant to stress, refusing to worry too much about things."
 						progressValue={57}
 						gradient="crimson"
 				/>

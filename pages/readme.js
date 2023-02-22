@@ -3,7 +3,7 @@ import { PageLayout } from "../components/layouts/Layout.js";
 import Landing from "../components/layouts/Landing.js";
 import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
-import CharacterTraitsAccordion from "../components/accordion/CharacterTraitsAccordion.js";
+import PersonalityCard from "../components/card/PersonalityCard.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
@@ -33,7 +33,7 @@ const ReadMe = () => {
         <PageLayout>
           	<CoreValuesBlock />
 					<div style={{marginTop: "96px"}}></div>
-					 <CharacterTraitsAccordion />
+					<PersonalityCard />
         </PageLayout>
       </ContentContainer>
     </div>

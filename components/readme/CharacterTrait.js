@@ -19,7 +19,7 @@ const LabelLeft = styled("p", {
   fontWeight: "$medium",
   fontSize: "$sm",
   lineHeight: "$none",
-  color: "mauve12",
+  color: "$mauve12",
 });
 
 const LabelRight = styled("p", {
@@ -27,7 +27,7 @@ const LabelRight = styled("p", {
   fontWeight: "$regular",
   fontSize: "$sm",
   lineHeight: "$none",
-  color: "mauve12",
+  color: "$mauve12",
 });
 
 const PercentageContainer = styled("div", {
@@ -43,7 +43,7 @@ const PercentageLeft = styled("p", {
   fontWeight: "$medium",
   fontSize: "$sm",
   lineHeight: "$none",
-  color: "mauve12",
+  color: "$mauve12",
 });
 
 const PercentageRight = styled("p", {
