@@ -5,17 +5,18 @@ import * as Progress from "@radix-ui/react-progress";
 const StyledProgress = styled(Progress.Root, {
   overflow: "hidden",
   background: "$mauve3",
-  borderRadius: "6px",
+  borderRadius: "9px",
   width: "100%",
-  height: "16px",
+  height: "18px",
   transform: "translateZ(0)",
+	padding: "$spacing-02",
 });
 
 const StyledProgressIndicator = styled(Progress.Indicator, {
   width: "100%",
   height: "100%",
   transition: "transform 660ms cubic-bezier(0.65, 0, 0.35, 1)",
-  borderRadius: "4px",
+  borderRadius: "6px",
 
   variants: {
     gradient: {
@@ -25,7 +26,7 @@ const StyledProgressIndicator = styled(Progress.Indicator, {
       plum: {
         background: "linear-gradient(90deg, $plum9, $plum11)",
       },
-      design: {
+      crimson: {
         background: "linear-gradient(90deg, $crimson9, $crimson11)",
       },
       teal: {

@@ -57,9 +57,13 @@ const PercentageRight = styled("p", {
 const CharacterTraitDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontSize: "$sm",
+  fontSize: "$xs",
   fontStyle: "italic",
   color: "mauve12",
+
+	"@bp1": {
+		fontSize: "$sm",
+	},
 });
 
 export default function CharacterTrait({
