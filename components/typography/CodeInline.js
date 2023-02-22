@@ -14,8 +14,8 @@ const StyledCodeInline = styled("code", {
   },
 });
 
-function CodeInline(props) {
-  return <StyledCodeInline>{props.code}</StyledCodeInline>;
+function CodeInline({code}) {
+  return <StyledCodeInline>{code}</StyledCodeInline>;
 }
 
 export default CodeInline;

@@ -108,7 +108,7 @@ const ProfileCardContainer = styled("div", {
 const ProfileCardIndex = styled("div", {
   display: "flex",
   flexDirection: "column",
-  padding: "$spacing-04",
+  padding: "$spacing-03 $none $spacing-03 $spacing-04",
   gap: "$spacing-02",
 
   "@bp1": {
