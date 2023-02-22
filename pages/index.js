@@ -4,7 +4,6 @@ import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
 import LandingBlock from "../components/home/pageblocks/LandingBlock.js";
-import CoreValuesBlock from "../components/home/pageblocks/CoreValuesBlock.js";
 import ProjectsBlock from "../components/home/pageblocks/ProjectsBlock.js";
 import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
 import ExperienceBlock from "../components/home/pageblocks/ExperienceBlock.js";
@@ -24,8 +23,6 @@ function Index() {
       <Header />
       <Spacer level={13} />
       <LandingBlock />
-      <Spacer level={13} />
-      <CoreValuesBlock />
       <Spacer level={13} />
       <PageLayout>
         <ProjectsBlock />

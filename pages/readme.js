@@ -5,6 +5,7 @@ import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
+import ProgressBar from "../components/progress/Progress.js";
 
 const ContentContainer = styled("div", {
   backgroundColor: "$bronze1",
@@ -16,6 +17,7 @@ const ReadMe = () => {
   return (
     <div>
       <Header />
+			
       <Landing
         accentColor="bronze"
         LandingContent={
@@ -29,6 +31,7 @@ const ReadMe = () => {
       />
       <ContentContainer>
         <PageLayout>
+					<ProgressBar gradient="blue" value={5} />
           <CoreValuesBlock />
         </PageLayout>
       </ContentContainer>
