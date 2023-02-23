@@ -6,6 +6,7 @@ import LandingContent from "../components/readme/LandingContent.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import PersonalityBlock from "../components/pageblocks/PersonalityBlock.js";
+import CompetenciesBlock from "../components/pageblocks/CompetenciesBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 
@@ -35,6 +36,8 @@ const ReadMe = () => {
           <CoreValuesBlock />
 					<Spacer level={13} />
 					<PersonalityBlock />
+					<Spacer level={13} />
+					<CompetenciesBlock />
         </PageLayout>
       </ContentContainer>
     </div>

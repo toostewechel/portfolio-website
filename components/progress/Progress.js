@@ -5,18 +5,18 @@ import * as Progress from "@radix-ui/react-progress";
 const StyledProgress = styled(Progress.Root, {
   overflow: "hidden",
   background: "$mauve3",
-  borderRadius: "9px",
+  borderRadius: "2px",
   width: "100%",
   height: "18px",
   transform: "translateZ(0)",
-	padding: "$spacing-02",
+	boxShadow: "1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(221, 217, 214, 0.5), inset -2px 2px 4px rgba(221, 217, 214, 0.2), inset 2px -2px 4px rgba(221, 217, 214, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(221, 217, 214, 0.9)"
 });
 
 const StyledProgressIndicator = styled(Progress.Indicator, {
   width: "100%",
   height: "100%",
   transition: "transform 660ms cubic-bezier(0.65, 0, 0.35, 1)",
-  borderRadius: "6px",
+  borderRadius: "2px",
 
   variants: {
     gradient: {
@@ -36,13 +36,33 @@ const StyledProgressIndicator = styled(Progress.Indicator, {
   },
 });
 
+const InnerContainer = styled("div", {
+	overflow: "hidden",
+	height: "18px",
+	width: "100%",
+	ml: "$spacing-02",
+	mr: "$spacing-02",
+	pt: "$spacing-02",
+	pb: "$spacing-02",
+	borderRadius: "6px",
+})
+
 export default function ProgressBar({ gradient, progressValue }) {
+	const [progress, setProgress] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setProgress(progressValue), 500);
+    return () => clearTimeout(timer);
+  }, []);
+	
   return (
     <StyledProgress value={progressValue}>
+			<InnerContainer>
       <StyledProgressIndicator
         gradient={gradient}
-        style={{ width: `${progressValue}%` }}
+        style={{ transform: `translateX(-${100 - progress}%)` }}
       />
+				</InnerContainer>
     </StyledProgress>
   );
 }
