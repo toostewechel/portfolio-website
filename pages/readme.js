@@ -3,10 +3,11 @@ import { PageLayout } from "../components/layouts/Layout.js";
 import Landing from "../components/layouts/Landing.js";
 import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
-import PersonalityCard from "../components/card/PersonalityCard.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
+import PersonalityBlock from "../components/pageblocks/PersonalityBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
+import Spacer from "../components/layouts/blocks/Spacer.js";
 
 const ContentContainer = styled("div", {
   backgroundColor: "$bronze1",
@@ -31,9 +32,9 @@ const ReadMe = () => {
       />
       <ContentContainer>
         <PageLayout>
-          	<CoreValuesBlock />
-					<div style={{marginTop: "96px"}}></div>
-					<PersonalityCard />
+          <CoreValuesBlock />
+					<Spacer level={13} />
+					<PersonalityBlock />
         </PageLayout>
       </ContentContainer>
     </div>

@@ -20,7 +20,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Extraverted"
 						percentageLeft="57%"
 						percentageRight="43%"
-						charactertraitDescription="You’re primarily Introverted. You likely prefer fewer, yet deep and meaningful, social interactions and feel drawn to calmer environments."
+						charactertraitDescription="Primarily Introverted: You prefer fewer, yet deep and meaningful, social interactions and feel drawn to calmer environments."
 						progressValue={57}
 						gradient="blue"
 				/>
@@ -34,7 +34,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Observant"
 						percentageLeft="66%"
 						percentageRight="34%"
-						charactertraitDescription="You’re primarily Intuitive. You’re likely very imaginative and open-minded, focusing on hidden meanings and distant possibilities."
+						charactertraitDescription="Primarily Intuitive: You’re likely very imaginative and open-minded, focusing on hidden meanings and distant possibilities."
 						progressValue={66}
 						gradient="blue"
 				/>
@@ -48,7 +48,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Thinking"
 						percentageLeft="60%"
 						percentageRight="40%"
-						charactertraitDescription="You’re primarily Feeling. You likely value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation."
+						charactertraitDescription="Primarily Feeling: You likely value emotional expression and sensitivity, prioritising empathy, social harmony, and cooperation."
 						progressValue={60}
 						gradient="teal"
 				/>
@@ -62,7 +62,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Prospecting"
 						percentageLeft="76%"
 						percentageRight="24%"
-						charactertraitDescription="You’re primarily Judging. You’re likely decisive, thorough, and highly organised. You value clarity and prefer planning to spontaneity."
+						charactertraitDescription="Primarily Judging: You’re likely decisive, thorough, and highly organised. You value clarity and prefer planning to spontaneity."
 						progressValue={57}
 						gradient="plum"
 				/>
@@ -76,7 +76,7 @@ export default function CharacterTraitsAccordion() {
 						labelRight="Turbulent"
 						percentageLeft="82%"
 						percentageRight="18%"
-						charactertraitDescription="You’re primarily Assertive. You’re likely self-assured, even-tempered, and resistant to stress, refusing to worry too much about things."
+						charactertraitDescription="Primarily Assertive: You’re likely self-assured, even-tempered, and resistant to stress, refusing to worry too much about things."
 						progressValue={57}
 						gradient="crimson"
 				/>

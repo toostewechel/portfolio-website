@@ -17,7 +17,7 @@ const Container = styled("div", {
   borderRadius: "4px",
   willChange: "transform",
   transition: "transform 150ms ease-in, background 150ms ease-in",
-  color: "$mauve9",
+  color: "$mauve8",
 
   "@bp1": {
     "&:hover": {

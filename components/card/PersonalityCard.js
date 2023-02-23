@@ -19,14 +19,14 @@ const CoverLayout = styled('div', {
 	width: "100%",
 
 	"@bp2": {
-		width: "50%",
+		width: "45%",
 	},
 })
 const ContentLayout = styled('div', {
 	width: "100%",
 
 	"@bp2": {
-		width: "50%",
+		width: "55%",
 	},
 })
 
@@ -37,12 +37,12 @@ const CoverCardContainer = styled('div', {
 	justifyContent: "center",
 	alignItems: "center",
 	textAlign: "center",
-	background: "linear-gradient(138.88deg, #F8F1EE 0.36%, #E5DFD0 93.42%)",
+	background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
 	borderRadius: "6px",
 	width: "100%",
 	height: "100%",
 	padding: "$spacing-10 $spacing-04",
-	boxShadow: "-3px 3px 6px rgba(203, 194, 184, 0.2), 3px -3px 6px rgba(203, 194, 184, 0.2), -3px -3px 6px rgba(255, 248, 234, 0.9), 3px 3px 8px rgba(203, 194, 184, 0.9), inset 1px 1px 2px rgba(255, 248, 234, 0.3), inset -1px -1px 2px rgba(203, 194, 184, 0.5)",
+	boxShadow: "$medium",
 })
 
 const ContentContainer = styled('div', {
@@ -73,25 +73,39 @@ const TitleContainer = styled('div', {
 const Label = styled('p', {
 	fontFamily: "$default",
   fontWeight: "$medium",
-  fontSize: "$sm",
+  fontSize: "$xs",
   lineHeight: "$none",
   color: "$bronze9",
+
+	variants: {
+		color: {
+			dark: {
+				color: "$bronze9",
+			},
+			light: {
+				color: "$bronze3",
+			}
+		}
+	}
 })
 
 const CardTitle = styled('p', {
 	fontFamily: "$header",
-	fontWeight: "$black",
-	letterSpacing: "$tracking-tighter",
+	fontWeight: "$extra-bold",
+	letterSpacing: "$tracking-tight",
+	lineHeight: "$none",
+	mt: "$spacing-03",
+	mb: "$spacing-04",
 	fontSize: "$4xl",
-	color: "$mauve12",
+	color: "$mauve1",
 })
 
 const ColoredLine = styled('div', {
 	display: "flex",
 	width: "132px",
-	height: "8px",
+	height: "6px",
 	borderRadius: "6px",
-	background: "$bronze8",
+	background: "$bronze7",
 })
 
 const ImageContainer = styled('div', {
@@ -106,10 +120,21 @@ const ImageContainer = styled('div', {
 
 const Title = styled('p', {
 	fontFamily: "$header",
-	fontWeight: "$black",
-	letterSpacing: "$tracking-tight",
+	fontWeight: "$extra-bold",
+	letterSpacing: "$tracking-tighter",
 	fontSize: "$xl",
 	color: "$mauve12",
+
+	variants: {
+		color: {
+			dark: {
+				color: "$mauve12",
+			},
+			light: {
+				color: "$mauve1",
+			}
+		}
+	}
 })
 
 const SummaryContainer = styled('div', {
@@ -122,7 +147,7 @@ const CardDescription = styled("p", {
 	fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$base",
-  color: "mauve12",
+  color: "$gray8",
 	maxWidth: "380px",
 })
 
@@ -130,20 +155,20 @@ const Paragraph = styled("p", {
 	fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$sm",
-  color: "mauve12",
+  color: "$mauve12",
 	maxWidth: "480px",
 })
 
 export const PersonalityCardCover = () => (
 	<CoverCardContainer>
 		<TitleContainer>
-			<Label>My Personality</Label>
+			<Label color="light">My Personality</Label>
 			<CardTitle>Advocate</CardTitle>
 			<ColoredLine />
 		</TitleContainer>
 		<ImageContainer />
 		<SummaryContainer>
-			<Title>Summary</Title>
+			<Title color="light">Summary</Title>
 			<CardDescription>Advocates are Introverted, Intuitive, Feeling, Judging and Assertive. They approach life with thoughtfulness and imagination, guided by their principled version of humanism.</CardDescription>
 		</SummaryContainer>
 	</CoverCardContainer>

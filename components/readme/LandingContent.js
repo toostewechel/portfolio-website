@@ -137,8 +137,8 @@ export default function LandingContent({
         <ProfileCard />
         <ProfileCardIndex>
           <IndexTitle>Index</IndexTitle>
-          <MenuItem label="Values & Strengths" />
-          <MenuItem label="Personality" />
+          <MenuItem label="Values & Strengths" href="#core-values" />
+          <MenuItem label="Personality" href="#personality" />
           <MenuItem label="Competencies" />
           <MenuItem label="Collaboration" />
           <MenuItem label="Communication" />
