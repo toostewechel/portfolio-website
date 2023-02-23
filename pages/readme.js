@@ -34,10 +34,10 @@ const ReadMe = () => {
       <ContentContainer>
         <PageLayout>
           <CoreValuesBlock />
-					<Spacer level={13} />
-					<PersonalityBlock />
-					<Spacer level={13} />
-					<CompetenciesBlock />
+          <Spacer level={13} />
+          <PersonalityBlock />
+          <Spacer level={13} />
+          <CompetenciesBlock />
         </PageLayout>
       </ContentContainer>
     </div>

@@ -61,9 +61,9 @@ const CharacterTraitDescription = styled("p", {
   fontStyle: "italic",
   color: "mauve12",
 
-	"@bp1": {
-		fontSize: "$sm",
-	},
+  "@bp1": {
+    fontSize: "$sm",
+  },
 });
 
 export default function CharacterTrait({
@@ -73,30 +73,22 @@ export default function CharacterTrait({
   percentageRight,
   charactertraitDescription,
   progressValue,
-	gradient,
+  gradient,
 }) {
   return (
-		<Container>
-			<LabelContainer>
-				<LabelLeft>
-					{labelLeft}
-				</LabelLeft>
-				<LabelRight>
-					{labelRight}
-				</LabelRight>
-			</LabelContainer>
-			<ProgressBar gradient={gradient} progressValue={progressValue} />
-			<PercentageContainer>
-				<PercentageLeft>
-					{percentageLeft}
-				</PercentageLeft>
-				<PercentageRight>
-					{percentageRight}
-				</PercentageRight>
-			</PercentageContainer>
-			<CharacterTraitDescription>
-				{charactertraitDescription}
-			</CharacterTraitDescription>
-		</Container>
-	)
+    <Container>
+      <LabelContainer>
+        <LabelLeft>{labelLeft}</LabelLeft>
+        <LabelRight>{labelRight}</LabelRight>
+      </LabelContainer>
+      <ProgressBar gradient={gradient} progressValue={progressValue} />
+      <PercentageContainer>
+        <PercentageLeft>{percentageLeft}</PercentageLeft>
+        <PercentageRight>{percentageRight}</PercentageRight>
+      </PercentageContainer>
+      <CharacterTraitDescription>
+        {charactertraitDescription}
+      </CharacterTraitDescription>
+    </Container>
+  );
 }
