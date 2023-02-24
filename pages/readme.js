@@ -6,9 +6,11 @@ import LandingContent from "../components/readme/LandingContent.js";
 import Header from "../components/layouts/blocks/Header.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import PersonalityBlock from "../components/pageblocks/PersonalityBlock.js";
+import CoreCompetenciesAccordion from "../components/accordion/CoreCompetenciesAccordion.js";
 import CompetenciesBlock from "../components/pageblocks/CompetenciesBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
+
 
 const ContentContainer = styled("div", {
   backgroundColor: "$bronze1",
@@ -38,6 +40,7 @@ const ReadMe = () => {
           <PersonalityBlock />
           <Spacer level={13} />
           <CompetenciesBlock />
+					<CoreCompetenciesAccordion />
         </PageLayout>
       </ContentContainer>
     </div>

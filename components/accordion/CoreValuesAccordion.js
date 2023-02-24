@@ -168,25 +168,26 @@ const ValueDescription = styled("p", {
 export const Accordion = StyledAccordion;
 export const AccordionItem = StyledItem;
 export const AccordionTrigger = React.forwardRef(
-  ({ children, ...props }, forwardedRef) => (
+  ({ children, label, title, color, ...props }, forwardedRef) => (
     <HeaderPanel>
       <StyledHeaderTrigger {...props} ref={forwardedRef}>
         <TitleContainer>
           <LabelContainer>
-            <LabelIcon color={props.color} />
-            <Label color={props.color}>{props.label}</Label>
+            <LabelIcon color={color} />
+            <Label color={color}>{label}</Label>
           </LabelContainer>
-          <ValueTitle>{props.title}</ValueTitle>
+          <ValueTitle>{title}</ValueTitle>
         </TitleContainer>
         <StyledChevron aria-hidden />
       </StyledHeaderTrigger>
     </HeaderPanel>
   )
 );
+
 export const AccordionContent = React.forwardRef(
-  ({ children, ...props }, forwardedRef) => (
+  ({ children, color }, forwardedRef) => (
     <StyledContent>
-      <ValueDescriptionBox color={props.color}>
+      <ValueDescriptionBox color={color}>
         <ValueDescription>{children}</ValueDescription>
       </ValueDescriptionBox>
     </StyledContent>

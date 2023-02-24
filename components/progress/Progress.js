@@ -2,6 +2,27 @@ import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as Progress from "@radix-ui/react-progress";
 
+const Container = styled("div", {
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+});
+
+const LabelContainer = styled("div", {
+  display: "flex",
+	width: "100%",
+  mt: "$spacing-02",
+});
+
+const HelpText = styled("p", {
+  fontFamily: "$default",
+  fontWeight: "$regular",
+	fontStyle: "italic",
+  fontSize: "$sm",
+  lineHeight: "$none",
+  color: "$mauve12",
+});
+
 const StyledProgress = styled(Progress.Root, {
   overflow: "hidden",
   background: "$mauve3",
@@ -48,7 +69,7 @@ const InnerContainer = styled("div", {
   borderRadius: "6px",
 });
 
-export default function ProgressBar({ gradient, progressValue }) {
+export default function ProgressBar({ gradient, progressValue, helpText }) {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -57,6 +78,7 @@ export default function ProgressBar({ gradient, progressValue }) {
   }, []);
 
   return (
+	<Container>
     <StyledProgress value={progressValue}>
       <InnerContainer>
         <StyledProgressIndicator
@@ -65,5 +87,9 @@ export default function ProgressBar({ gradient, progressValue }) {
         />
       </InnerContainer>
     </StyledProgress>
+		<LabelContainer>
+			<HelpText>{helpText}</HelpText>
+		</LabelContainer>
+	</Container>
   );
 }
