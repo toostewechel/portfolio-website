@@ -1,53 +1,112 @@
 import { styled } from "../stitches.config.js";
-import Spacer from "../components/layouts/blocks/Spacer.js";
-import ContentBlock from "../components/layouts/blocks/ContentBlock.js";
+import { PageLayout, GridWidgetsLayout } from '../components/layouts/Layout.js';
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
-import LandingBlock from "../components/home/pageblocks/LandingBlock.js";
-import ProjectsBlock from "../components/home/pageblocks/ProjectsBlock.js";
-import SkillsetBlock from "../components/home/pageblocks/SkillsetBlock.js";
-import ExperienceBlock from "../components/home/pageblocks/ExperienceBlock.js";
-import BlogpostsBlock from "../components/home/pageblocks/BlogpostsBlock.js";
-import SoftwareStackBlock from "../components/home/pageblocks/SoftwareStackBlock.js";
 
-const PageLayout = styled("div", {
-  maxWidth: "1234px",
-  padding: "8px",
-  ml: "auto",
-  mr: "auto",
-});
+const Wrapper =styled("div", {
+	backgroundColor: "$olive3",
+	backgroundImage: "url(/patterns/grid-lines.svg)",
+	backgroundPositionX: "center",
+})
 
-function Index() {
-  return (
-    <div>
-      <Header />
-      <Spacer level={13} />
-      <LandingBlock />
-      <Spacer level={13} />
-      <PageLayout>
-        <ProjectsBlock />
-      </PageLayout>
-      <Spacer level={13} />
-      <PageLayout>
-        <SkillsetBlock />
-      </PageLayout>
-      <Spacer level={13} />
-      <PageLayout>
-        <ExperienceBlock />
-      </PageLayout>
-      <Spacer level={13} />
-      <Spacer level={12} />
-      <PageLayout>
-        <BlogpostsBlock />
-      </PageLayout>
-      <Spacer level={12} />
-      <PageLayout>
-        <SoftwareStackBlock />
-      </PageLayout>
-      <Spacer level={12} />
-      <Footer />
-    </div>
-  );
+const ProfileWidget = styled("div", {
+	gridArea: "pf",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const CaseStudyWidget = styled("div", {
+	gridArea: "cs",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const BookMeetingWidget = styled("div", {
+	gridArea: "bm",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const CoreCompetenciesWidget = styled("div", {
+	gridArea: "cc",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const PersonalityWidget = styled("div", {
+	gridArea: "pers",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const BlogPostWidget = styled("div", {
+	gridArea: "bp",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const CollaborationWidget = styled("div", {
+	gridArea: "col",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+const ExperienceWidget = styled("div", {
+	gridArea: "exp",
+	display: "flex",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "$olive6",
+	boxShadow: "$small",
+	borderRadius: "16px",
+})
+
+
+export default function WidgetsGrid() {
+	return(
+		<Wrapper>
+		<Header></Header>
+		<PageLayout style={{ marginTop: '156px', display: "flex", justifyContent: "center", marginBottom: '232px' }}>
+			<GridWidgetsLayout>
+					<ProfileWidget />
+					<CaseStudyWidget />
+					<BookMeetingWidget />
+					<CoreCompetenciesWidget />
+					<PersonalityWidget />
+					<BlogPostWidget />
+					<CollaborationWidget />
+					<ExperienceWidget />
+			</GridWidgetsLayout>
+		</PageLayout>
+		<div><Footer /></div>
+	</Wrapper>
+	)
 }
-
-export default Index;

@@ -10,7 +10,7 @@ import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
 const Container = styled("footer", {
-  maxWidth: "1234px",
+  maxWidth: "1260px",
   margin: "0 auto",
 });
 
@@ -19,7 +19,7 @@ const FooterHeaderContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "start",
-  padding: "$spacing-04",
+
   gap: "$spacing-07",
 
   "@bp3": {
