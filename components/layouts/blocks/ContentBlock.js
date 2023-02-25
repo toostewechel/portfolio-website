@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
+  ml: "$spacing-03",
 
   variants: {
     alignment: {
@@ -48,7 +49,7 @@ const Description = styled("p", {
   maxWidth: "720px",
 
   "@bp1": {
-    fontSize: "$xl",
+    fontSize: "$bodyLarge",
   },
 });
 
@@ -79,14 +80,20 @@ const Button = styled("button", {
   },
 });
 
-function ContentBlock(props) {
+function ContentBlock({
+  textAlignment,
+  title,
+  description,
+  hasButton,
+  buttonLabel,
+}) {
   return (
-    <Container alignment={props.alignment}>
-      <Heading>{props.heading}</Heading>
-      <Description>{props.description}</Description>
-      {props.hasButton ? (
+    <Container textAlignment={textAlignment}>
+      <Heading>{title}</Heading>
+      <Description>{description}</Description>
+      {hasButton ? (
         <Button>
-          {props.buttonLabel}
+          {buttonLabel}
           <span style={{ marginLeft: "8px" }}>
             <ArrowRight size={24} />
           </span>

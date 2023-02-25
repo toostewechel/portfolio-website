@@ -9,7 +9,7 @@ const StyledUnorderedList = styled("ul", {
   color: "$gray12",
   mb: "$spacing-07",
   paddingInlineStart: "$spacing-06",
-	listStyle: "disc",
+  listStyle: "disc",
 
   "@bp2": {
     fontSize: "$lg",

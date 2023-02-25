@@ -137,7 +137,7 @@ export const KeyTakeawaysCollapsible = ({ accentColor, children }) => {
         <HeaderPanel>
           <Title>Key Takeaways</Title>
           <CollapsibleTrigger asChild>
-            <Button color={accentColor}>{open ? "Hide" : "Open"}</Button>
+            <Button color={accentColor}>{open ? "Hide" : "Show"}</Button>
           </CollapsibleTrigger>
         </HeaderPanel>
         <CollapsibleContent>

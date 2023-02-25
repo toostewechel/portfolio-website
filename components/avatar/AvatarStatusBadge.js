@@ -5,9 +5,8 @@ const AvatarContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "8px",
-  background: "$violet4",
-  border: "2px solid $violet5",
+  borderRadius: "100%",
+  border: "2px solid $transparent",
   padding: "$spacing-01",
 });
 

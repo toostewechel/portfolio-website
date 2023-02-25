@@ -10,25 +10,26 @@ const Link = styled("a", {
 
 const Container = styled("div", {
   display: "flex",
+  width: "100%",
   flexDirection: "row",
   alignItems: "center",
-  gap: "$spacing-03",
-  p: "$spacing-04",
+  padding: "$spacing-03 $spacing-04",
   borderRadius: "4px",
-  margin: "$spacing-02 $none",
   willChange: "transform",
-  transition: "all, 300ms ease-in",
+  transition: "transform 150ms ease-in, background 150ms ease-in",
+  color: "$mauve8",
 
   "@bp1": {
     "&:hover": {
-      scale: 1.02,
-      background: "rgba(255, 255, 255, 0.3)",
-      transition: "all, 200ms ease-out",
+      scale: 1.01,
+      color: "$mauve2",
+      background: "rgba(255, 255, 255, 0.1)",
+      transition: "transform 150ms ease-out, background 150ms ease-out",
       boxShadow: "$smooth",
     },
   },
   "&:active": {
-    backgroundColor: "$violet4",
+    background: "rgba(255, 255, 255, 0.15)",
     scale: 1,
   },
 });
@@ -39,21 +40,16 @@ const Icon = styled("div", {
 });
 
 const Label = styled("p", {
-  fontSize: "$lg",
-  fontWeight: "$semi-bold",
-  fontFamily: "$header",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
   letterSpacing: "$tracking-tight",
-  color: "$violet11",
-  mt: "$spacing-01",
 });
 
 function MenuItem(props) {
   return (
     <Link href={props.href}>
       <Container>
-        <Icon>
-          <img src={props.src} />
-        </Icon>
         <Label>{props.label}</Label>
       </Container>
     </Link>

@@ -1,5 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
+import ProgressBar from "./Progress.js";
 
 const ReadingProgressBarContainer = styled("div", {
   display: "flex",
@@ -89,34 +90,12 @@ export const ReadingProgressBar = ({ targetRef, gradient }) => {
 
   const RoundReadingProgress = Math.round(readingProgress);
 
-  const ProgessBarInner = styled("div", {
-    width: `${readingProgress}%`,
-    height: "16px",
-    borderRadius: "4px",
-    variants: {
-      gradient: {
-        tech: {
-          background: "linear-gradient(90deg, $blue9, $blue11)",
-        },
-        workflow: {
-          background: "linear-gradient(90deg, $plum9, $plum11)",
-        },
-        design: {
-          background: "linear-gradient(90deg, $crimson9, $crimson11)",
-        },
-        teal: {
-          background: "linear-gradient(90deg, $teal9, $teal11)",
-        },
-      },
-    },
-  });
-
   return (
     <ReadingProgressBarContainer>
       <ProgressBarContainer>
         <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
         <ProgressBarOuter>
-          <ProgessBarInner gradient={gradient} />
+          <ProgressBar gradient={gradient} value={readingProgress} />
         </ProgressBarOuter>
       </ProgressBarContainer>
     </ReadingProgressBarContainer>

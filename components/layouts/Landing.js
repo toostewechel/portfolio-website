@@ -7,7 +7,7 @@ const Wrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   backgroundColor: "white",
-  marginTop: "-96px",
+  marginTop: "-100px",
   maxWidth: "100%",
 
   "@bp4": {
@@ -40,8 +40,6 @@ const CircularPatternDesktop = styled("div", {
   top: 0,
   bottom: 0,
   margin: "auto",
-  width: "600px",
-  height: "600px",
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   zIndex: "3",
@@ -49,8 +47,14 @@ const CircularPatternDesktop = styled("div", {
 
   "@bp4": {
     display: "block",
+    width: "600px",
+    height: "600px",
   },
   "@bp5": {
+    width: "650px",
+    height: "650px",
+  },
+  "@bp6": {
     width: "800px",
     height: "800px",
   },
@@ -63,6 +67,9 @@ const CircularPatternDesktop = styled("div", {
       teal: {
         backgroundImage:
           "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
+      },
+      bronze: {
+        backgroundImage: "url(/patterns/circular-pattern-landing-bronze.png)",
       },
     },
   },
@@ -102,6 +109,9 @@ const CircularPatternTablet = styled("div", {
         backgroundImage:
           "url(/patterns/blog/circular-pattern-blog-landing-teal.png)",
       },
+      bronze: {
+        backgroundImage: "url(/patterns/circular-pattern-landing-bronze.png)",
+      },
     },
   },
 });
@@ -118,7 +128,7 @@ const ImageContainer = styled("div", {
   pb: "$spacing-13",
 
   "@bp4": {
-    padding: "$spacing-10",
+    padding: "$spacing-11",
     width: "50%",
   },
 
@@ -130,6 +140,9 @@ const ImageContainer = styled("div", {
       },
       teal: {
         background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
+      },
+      bronze: {
+        background: "linear-gradient(138.88deg, #F8F1EE 0.36%, #E5DFD0 93.42%)",
       },
     },
   },

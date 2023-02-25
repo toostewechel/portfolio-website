@@ -1,18 +1,22 @@
 import React from "react";
-import { styled } from "../../../stitches.config.js";
+import { styled } from "../../stitches.config.js";
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
-import AvatarStatusBadge from "../../avatar/AvatarStatusBadge.js";
+import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-  background: "linear-gradient(30deg, $violetA6, $crimsonA5)",
-  borderRadius: "8px",
+  borderRadius: "4px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
-  maxWidth: "592px",
-  boxShadow: "$smooth",
+  background:
+    "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
+  width: "100%",
+
+  "@bp1": {
+    width: "auto",
+  },
 
   "@bp4": {
     flexDirection: "row",
@@ -26,12 +30,8 @@ const Card = styled("div", {
   justifyContent: "center",
   textAlign: "center",
   p: "$spacing-06",
-  background:
-    "linear-gradient(0deg, #32275F 0.34%, rgba(52, 41, 97, 0.85) 75.27%)",
-  borderRadius: "8px",
   height: "auto",
   width: "100%",
-  boxShadow: "$smooth",
 });
 
 const FlexContainer = styled("div", {
@@ -43,16 +43,16 @@ const ImageContainer = styled("div", {
   mb: "$spacing-05",
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("p", {
   fontSize: "$xl",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
+  lineHeight: "$none",
   letterSpacing: "$tracking-tight",
-  color: "$whiteA12",
+  color: "$mauve12",
 
   "@bp1": {
     fontSize: "$xl",
-    mt: "$spacing-02",
   },
 });
 
@@ -60,8 +60,8 @@ const CardDescription = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$violet5",
-  mb: "$spacing-06",
+  color: "$mauve12",
+  mb: "$spacing-08",
 });
 
 const StatusBadge = styled("div", {
@@ -115,7 +115,7 @@ const Icon = styled("div", {
   justifyContent: "center",
   size: "$6",
   p: "8px",
-  backgroundColor: "rgba(0, 0, 0, 0.1)",
+  backgroundColor: "rgba(0, 0, 0, 0.25)",
   color: "$violet3",
   borderRadius: "999px",
   willChange: "transform",
@@ -149,7 +149,10 @@ function ProfileCard(props) {
       <FlexContainer>
         <Card>
           <ImageContainer>
-            <AvatarStatusBadge size={9} src="/images/placeholder-avatar.png" />
+            <AvatarStatusBadge
+              size={10}
+              src="/avatar/avatar-tom-oostewechel.png"
+            />
           </ImageContainer>
           <CardTitle>Tom Oostewechel</CardTitle>
           <CardDescription>Product Designer</CardDescription>

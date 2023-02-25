@@ -21,9 +21,8 @@ const Container = styled("header", {
   top: -1,
   zIndex: 9999,
   backgroundColor: "white",
-	borderBottomLeftRadius: "16px",
-	borderBottomRightRadius: "16px",
-	
+  borderBottomLeftRadius: "16px",
+  borderBottomRightRadius: "16px",
 
   "@bp5": {
     boxShadow: "none",

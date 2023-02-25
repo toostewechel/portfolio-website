@@ -1,7 +1,6 @@
 import { styled } from "../../../stitches.config.js";
 import React from "react";
 import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
-import CMDK from "../../cmdk/CMDK.tsx";
 import CommandDialog from "../../cmdk/CommandDialog.js";
 
 const HeaderContainer = styled("div", {
@@ -10,6 +9,8 @@ const HeaderContainer = styled("div", {
   alignItems: "center",
   padding: "$spacing-03",
   backgroundColor: "transparent",
+  zIndex: 9999,
+  position: "sticky",
 
   "@bp1": {
     padding: "$spacing-04",
@@ -125,13 +126,13 @@ function Header() {
       <LogoBox href="/">
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </LogoBox>
-			<SiteMapContainer>
-              <Link href="/design-vision">Design Vision</Link>
-              <Circle />
-              <Link href="/personal-overview">READ.me</Link>
-              <Circle />
-              <Link href="/release-notes">Release Notes</Link>
-            </SiteMapContainer>
+      <SiteMapContainer>
+        <Link href="/design-vision">Design Vision</Link>
+        <Circle />
+        <Link href="/readme">READ.me</Link>
+        <Circle />
+        <Link href="/release-notes">Release Notes</Link>
+      </SiteMapContainer>
       <Box>
         <CommandDialog />
         <AvatarStatusBadgePopover />

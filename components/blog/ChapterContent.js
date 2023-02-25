@@ -42,8 +42,8 @@ const ChapterNumber = styled("p", {
   fontSize: "116px",
   letterSpacing: "$tracking-tighter",
   lineHeight: 0,
-	mt: "$spacing-12",
-	mb: "$spacing-09",
+  mt: "$spacing-12",
+  mb: "$spacing-09",
 
   variants: {
     color: {
@@ -60,9 +60,9 @@ const ChapterNumber = styled("p", {
     },
   },
 
-	"@bp4": {
-		fontSize: "132px",
-	},
+  "@bp4": {
+    fontSize: "132px",
+  },
 });
 
 export default function ChapterContent({

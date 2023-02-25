@@ -8,7 +8,7 @@ import Header from "../../../components/blog/Header.js";
 import Footer from "../../../components/layouts/blocks/Footer.js";
 
 //Blog Landing Components
-import Landing from "../../../components/blog/Landing.js";
+import Landing from "../../../components/layouts/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
 
@@ -138,28 +138,28 @@ export default function BlogPostPage() {
             ChapterImage={
               <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
             }
-						HoverCardContent={
-            <HoverCardRoot>
-              <HoverCardTrigger asChild>
-                <PoweredByBadge href="https://midjourney.com" target="_blank">
-                  <p>Illustration by </p>
-                  <img
-                    style={{ height: "32px" }}
-                    src="/badges/midjourney-logo-badge.png"
-                    alt="Midjourney Logo"
-                  />
-                </PoweredByBadge>
-              </HoverCardTrigger>
-              <HoverCardPanel
-                logo="/avatar/midjourney.png"
-                title="Midjourney"
-                socialHandle="@midjourney"
-                description="New research lab. Exploring new mediums of thought. Expanding the imaginative powers of the human species."
-                followingCount="0"
-                followersCount="190,4K"
-              />
-            </HoverCardRoot>
-          }
+            HoverCardContent={
+              <HoverCardRoot>
+                <HoverCardTrigger asChild>
+                  <PoweredByBadge href="https://midjourney.com" target="_blank">
+                    <p>Illustration by </p>
+                    <img
+                      style={{ height: "32px" }}
+                      src="/badges/midjourney-logo-badge.png"
+                      alt="Midjourney Logo"
+                    />
+                  </PoweredByBadge>
+                </HoverCardTrigger>
+                <HoverCardPanel
+                  logo="/avatar/midjourney.png"
+                  title="Midjourney"
+                  socialHandle="@midjourney"
+                  description="New research lab. Exploring new mediums of thought. Expanding the imaginative powers of the human species."
+                  followingCount="0"
+                  followersCount="190,4K"
+                />
+              </HoverCardRoot>
+            }
           />
           <BlogMarkdownContentLayout id="chapter-02">
             <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
