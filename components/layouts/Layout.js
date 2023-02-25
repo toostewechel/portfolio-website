@@ -14,10 +14,10 @@ export const PageLayout = styled("div", {
   mr: "auto",
 });
 
-export const WidgetsGridLayout = styled("div", {
+export const GridWidgetsLayout = styled("div", {
 	display: "grid",
 	gridTemplateRows: "repeat(12, 290px)",
-	gridTemplateColumns: "repeat(1, 1fr)",
+	gridTemplateColumns: "repeat(1, 290px)",
 	gap: "32px",
 	gridTemplateAreas: `
 		"pf"
@@ -36,7 +36,7 @@ export const WidgetsGridLayout = styled("div", {
 	// >640px
 	"@bp2": {
 		gridTemplateRows: "repeat(5, 290px)",
-		gridTemplateColumns: "repeat(2, 1fr)",
+		gridTemplateColumns: "repeat(2, 290px)",
 		gridTemplateAreas: 
 	`
 		"pf pf"
@@ -45,12 +45,12 @@ export const WidgetsGridLayout = styled("div", {
 		"bm col"
 		"bm exp"
 		"bp bp"
- `
+ `,
 	},
 	// >768px
 	"@bp3": {
 		gridTemplateRows: "repeat(5, 290px)",
-		gridTemplateColumns: "repeat(2, 1fr)",
+		gridTemplateColumns: "repeat(2, 290px)",
 		gridTemplateAreas: 
 	`
 		"pf pf"
@@ -73,8 +73,7 @@ export const WidgetsGridLayout = styled("div", {
 		"bm bp bp"
  `
 	},
-
-	// >1440px
+	// >1280px
 	"@bp5": {
 		gridTemplateRows: "repeat(3, 290px)",
 		gridTemplateColumns: "repeat(4, 290px)",

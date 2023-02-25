@@ -150,8 +150,9 @@ export const {
     bp2: "(min-width: 640px)",
     bp3: "(min-width: 768px)",
     bp4: "(min-width: 1024px)",
-    bp5: "(min-width: 1440px)",
-    bp6: "(min-width: 2200px)",
+		bp5: "(min-width: 1280px)",
+    bp6: "(min-width: 1440px)",
+    bp7: "(min-width: 2200px)",
   },
   utils: {
     m: (value) => ({

@@ -1,12 +1,12 @@
 import { styled } from "../stitches.config.js";
-import { PageLayout, WidgetsGridLayout } from '../components/layouts/Layout.js';
+import { PageLayout, GridWidgetsLayout } from '../components/layouts/Layout.js';
 import Header from "../components/layouts/blocks/Header.js";
+import Footer from "../components/layouts/blocks/Footer.js";
 
 const Wrapper =styled("div", {
 	backgroundColor: "$olive3",
 	backgroundImage: "url(/patterns/grid-lines.svg)",
 	backgroundPositionX: "center",
-	height: "100%",
 })
 
 const ProfileWidget = styled("div", {
@@ -14,7 +14,7 @@ const ProfileWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$violet3",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -24,7 +24,7 @@ const CaseStudyWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$blue3",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -34,7 +34,7 @@ const BookMeetingWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$crimson3",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -44,7 +44,7 @@ const CoreCompetenciesWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$plum3",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -54,7 +54,7 @@ const PersonalityWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$mauve12",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -64,7 +64,7 @@ const BlogPostWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$gray3",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -74,7 +74,7 @@ const CollaborationWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$mauve12",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -84,7 +84,7 @@ const ExperienceWidget = styled("div", {
 	display: "flex",
 	width: "100%",
 	height: "100%",
-	backgroundColor: "$mauve12",
+	backgroundColor: "$olive6",
 	boxShadow: "$small",
 	borderRadius: "16px",
 })
@@ -94,8 +94,8 @@ export default function WidgetsGrid() {
 	return(
 		<Wrapper>
 		<Header></Header>
-		<PageLayout style={{ marginTop: '156px'}}>
-			<WidgetsGridLayout>
+		<PageLayout style={{ marginTop: '156px', display: "flex", justifyContent: "center", marginBottom: '156px' }}>
+			<GridWidgetsLayout>
 					<ProfileWidget />
 					<CaseStudyWidget />
 					<BookMeetingWidget />
@@ -104,8 +104,9 @@ export default function WidgetsGrid() {
 					<BlogPostWidget />
 					<CollaborationWidget />
 					<ExperienceWidget />
-			</WidgetsGridLayout>
+			</GridWidgetsLayout>
 		</PageLayout>
+		<div><Footer /></div>
 	</Wrapper>
 	)
 }
