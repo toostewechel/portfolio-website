@@ -8,11 +8,84 @@ const ContentLayout = styled("div", {
 });
 
 export const PageLayout = styled("div", {
-  maxWidth: "1234px",
-  padding: "$spacing-04",
+  maxWidth: "1272px",
+  padding: "$spacing-03",
   ml: "auto",
   mr: "auto",
 });
+
+export const WidgetsGridLayout = styled("div", {
+	display: "grid",
+	gridTemplateRows: "repeat(12, 290px)",
+	gridTemplateColumns: "repeat(1, 1fr)",
+	gap: "32px",
+	gridTemplateAreas: `
+		"pf"
+		"pf"
+		"pers"
+		"cs"
+		"cc" 
+		"cc"
+		"col"
+		"bm"
+		"bm" 
+		"exp"
+		"bp"
+		"bp"
+ `,
+	// >640px
+	"@bp2": {
+		gridTemplateRows: "repeat(5, 290px)",
+		gridTemplateColumns: "repeat(2, 1fr)",
+		gridTemplateAreas: 
+	`
+		"pf pf"
+		"cs pers"
+		"cc cc"
+		"bm col"
+		"bm exp"
+		"bp bp"
+ `
+	},
+	// >768px
+	"@bp3": {
+		gridTemplateRows: "repeat(5, 290px)",
+		gridTemplateColumns: "repeat(2, 1fr)",
+		gridTemplateAreas: 
+	`
+		"pf pf"
+		"cs pers"
+		"cc cc"
+		"bm col"
+		"bm exp"
+		"bp bp"
+ `
+	},
+	// >1024px
+	"@bp4": {
+		gridTemplateRows: "repeat(4, 290px)",
+		gridTemplateColumns: "repeat(3, 290px)",
+		gridTemplateAreas: 
+	`
+		"pf pf cs"
+		"pers cc cc"
+		"bm col exp"
+		"bm bp bp"
+ `
+	},
+
+	// >1440px
+	"@bp5": {
+		gridTemplateRows: "repeat(3, 290px)",
+		gridTemplateColumns: "repeat(4, 290px)",
+		gridTemplateAreas: 
+	`
+		"pf pf cs bm"
+		"pers cc cc bm"
+		"bp bp col exp"
+ `
+	},
+})
 
 export const BlogContentLayout = styled("div", {
   display: "flex",

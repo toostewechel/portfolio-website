@@ -18,6 +18,7 @@ import {
   yellow,
   slate,
   bronze,
+	olive,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -53,6 +54,7 @@ export const {
       ...cyan,
       ...slate,
       ...bronze,
+			...olive,
     },
     space: {
       none: "0px",
