@@ -18,7 +18,8 @@ import {
   yellow,
   slate,
   bronze,
-	olive,
+  olive,
+	red
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -54,7 +55,8 @@ export const {
       ...cyan,
       ...slate,
       ...bronze,
-			...olive,
+      ...olive,
+			...red,
     },
     space: {
       none: "0px",
@@ -150,7 +152,7 @@ export const {
     bp2: "(min-width: 640px)",
     bp3: "(min-width: 768px)",
     bp4: "(min-width: 1024px)",
-		bp5: "(min-width: 1280px)",
+    bp5: "(min-width: 1280px)",
     bp6: "(min-width: 1440px)",
     bp7: "(min-width: 2200px)",
   },

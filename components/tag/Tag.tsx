@@ -1,21 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import { styled } from "../../stitches.config.js";
 
 const TagContainer = styled("div", {
   display: "inline-flex",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "center",
-	gap: "$spacing-02",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "$spacing-03",
   borderRadius: "4px",
-  padding: "$spacing-02 $spacing-04",
+  padding: "$spacing-02 $spacing-03",
   backgroundColor: "$gray3",
   color: "$gray11",
   flexShrink: 0,
   flexGrow: 0,
 
   variants: {
-    accentColor: {
+    color: {
       blue: {
         color: "$blue11",
         backgroundColor: "$blue3",
@@ -41,6 +41,21 @@ const TagContainer = styled("div", {
         backgroundColor: "$violet3",
         border: "solid 2px $violet5",
       },
+      red: {
+        color: "$red11",
+        backgroundColor: "$red3",
+        border: "solid 2px $red5",
+      },
+			olive: {
+        color: "$olive11",
+        backgroundColor: "$olive3",
+        border: "solid 2px $olive5",
+      },
+			teal: {
+        color: "$teal11",
+        backgroundColor: "$teal3",
+        border: "solid 2px $teal5",
+      },		
     },
   },
 });
@@ -51,38 +66,42 @@ const TagLabel = styled("p", {
   fontSize: "$xs",
   letterSpacing: "$tracking-wide",
 
-	variants: {
-		fontStyle: {
-			uppercase: {
-				textTransform: "uppercase",
-			}
-		}
-	}
+  variants: {
+    fontStyle: {
+      uppercase: {
+        textTransform: "uppercase",
+      },
+    },
+  },
 });
 
 const IconContainer = styled("div", {
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: "center",
-	width: "15px",
-	height: "15px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "15px",
+  height: "15px",
 });
 
 interface TagProps {
-	accentColor: "blue" | "plum" | "crimson" | "gray" | "violet";
-	label: string;
-	fontStyle: undefined | "uppercase";
-	hasIcon: boolean;
-	Icon: any;
+  color: "blue" | "plum" | "crimson" | "gray" | "violet" | "red" | "olive" | "teal";
+  label: string;
+  fontStyle: undefined | "uppercase";
+  hasIcon: boolean;
+  Icon: any;
 }
 
-
-export const Tag = ({ accentColor, label, fontStyle, hasIcon, Icon  }: TagProps) => {
-	return (
-	  <TagContainer accentColor={accentColor}>
-			{hasIcon && <IconContainer>{Icon}</IconContainer>}
-			<TagLabel fontStyle={fontStyle}>{label}</TagLabel>
-	  </TagContainer>
-	);
-}
-
+export const Tag = ({
+  color,
+  label,
+  fontStyle,
+  hasIcon,
+  Icon,
+}: TagProps) => {
+  return (
+    <TagContainer color={color}>
+      {hasIcon && <IconContainer>{Icon}</IconContainer>}
+      <TagLabel fontStyle={fontStyle}>{label}</TagLabel>
+    </TagContainer>
+  );
+};

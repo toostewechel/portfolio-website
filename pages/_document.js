@@ -106,7 +106,7 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-				<link
+        <link
           rel="preload"
           href="/fonts/JetBrainsMono-Regular.woff"
           as="font"
@@ -120,7 +120,7 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-				<link
+        <link
           rel="preload"
           href="/fonts/JetBrainsMono-Medium.woff"
           as="font"
@@ -134,7 +134,7 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-				<link
+        <link
           rel="preload"
           href="/fonts/JetBrainsMono-SemiBold.woff"
           as="font"

@@ -11,7 +11,6 @@ import CompetenciesBlock from "../components/pageblocks/CompetenciesBlock.js";
 import ProgressBar from "../components/progress/Progress.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 
-
 const ContentContainer = styled("div", {
   backgroundColor: "$bronze1",
   pt: "$spacing-14",
@@ -40,7 +39,7 @@ const ReadMe = () => {
           <PersonalityBlock />
           <Spacer level={13} />
           <CompetenciesBlock />
-					<CoreCompetenciesAccordion />
+          <CoreCompetenciesAccordion />
         </PageLayout>
       </ContentContainer>
     </div>

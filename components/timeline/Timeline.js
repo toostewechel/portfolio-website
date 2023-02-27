@@ -121,10 +121,16 @@ export const Timeline = ({ children }) => {
         <Line />
         {showControls ? (
           <Controls>
-            <Button aria-label="Sroll Left" onClick={() => scroll(-getCardWidth())}>
+            <Button
+              aria-label="Sroll Left"
+              onClick={() => scroll(-getCardWidth())}
+            >
               <ArrowLeftLineIcon />
             </Button>
-            <Button aria-label="Sroll Right" onClick={() => scroll(getCardWidth())}>
+            <Button
+              aria-label="Sroll Right"
+              onClick={() => scroll(getCardWidth())}
+            >
               <ArrowRightLineIcon />
             </Button>
           </Controls>

@@ -4,7 +4,7 @@ const StyledBlockquote = styled("blockquote", {
   pl: "$spacing-04",
   pt: "$spacing-08",
   pb: "$spacing-08",
-	zIndex: "3",
+  zIndex: "3",
 
   "&::before": {
     content: "“",
@@ -33,7 +33,7 @@ const StyledBlockquote = styled("blockquote", {
     letterSpacing: "$tracking-tighter",
     color: "$mauve12",
     maxWidth: "640px",
-		zIndex: '3',
+    zIndex: "3",
 
     "@bp2": {
       fontSize: "$2xl",
@@ -47,11 +47,11 @@ const StyledBlockquote = styled("blockquote", {
   },
 });
 
-
 export default function QuoteBlock({ quote, cite }) {
-	return (
-		<StyledBlockquote>
-			<p>{quote}</p>
-			<cite>{cite}</cite>
-		</StyledBlockquote>	)
+  return (
+    <StyledBlockquote>
+      <p>{quote}</p>
+      <cite>{cite}</cite>
+    </StyledBlockquote>
+  );
 }

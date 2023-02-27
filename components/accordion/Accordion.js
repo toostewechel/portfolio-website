@@ -12,10 +12,10 @@ const StyledItem = styled(AccordionPrimitive.Item, {
   borderBottom: "1px solid $gray6",
   backgroundColor: "$violet2",
 
-	"&:last-child": {
-		borderBottom: "none",
-	},
-	
+  "&:last-child": {
+    borderBottom: "none",
+  },
+
   "&:focus-within": {
     backgroundColor: "$violet3",
   },

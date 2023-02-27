@@ -1,114 +1,131 @@
 import { styled } from "../stitches.config.js";
-import { PageLayout, GridWidgetsLayout } from '../components/layouts/Layout.js';
+import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
 import { Tag } from "../components/tag/Tag.tsx";
-import { CheckCircle2 } from "lucide-react";
+import { CircleDot } from "lucide-react";
 
 const Wrapper = styled("div", {
-	backgroundColor: "$olive3",
-	backgroundImage: "url(/patterns/grid-lines.svg)",
-	backgroundPositionX: "center",
-})
+  backgroundColor: "$olive3",
+  backgroundImage: "url(/patterns/grid-lines.svg)",
+  backgroundPositionX: "center",
+});
 
 const ProfileWidget = styled("div", {
-	gridArea: "pf",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "pf",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const CaseStudyWidget = styled("div", {
-	gridArea: "cs",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "cs",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const BookMeetingWidget = styled("div", {
-	gridArea: "bm",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "bm",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const CoreCompetenciesWidget = styled("div", {
-	gridArea: "cc",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "cc",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const PersonalityWidget = styled("div", {
-	gridArea: "pers",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "pers",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const BlogPostWidget = styled("div", {
-	gridArea: "bp",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "bp",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const CollaborationWidget = styled("div", {
-	gridArea: "col",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
+  gridArea: "col",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 const ExperienceWidget = styled("div", {
-	gridArea: "exp",
-	display: "flex",
-	width: "100%",
-	height: "100%",
-	backgroundColor: "$olive6",
-	boxShadow: "$small",
-	borderRadius: "16px",
-})
-
+  gridArea: "exp",
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "$olive6",
+  boxShadow: "$small",
+  borderRadius: "16px",
+});
 
 export default function WidgetsGrid() {
-	return (
-		<Wrapper>
-			<Header></Header>
-			<PageLayout style={{ marginTop: '156px', display: "flex", justifyContent: "center", marginBottom: '232px' }}>
-				<GridWidgetsLayout>
-					<ProfileWidget > <div><Tag hasIcon={true} Icon={<CheckCircle2 />} label="Today" fontStyle="uppercase" accentColor="crimson" /> </div></ProfileWidget>
-					<CaseStudyWidget />
-					<BookMeetingWidget />
-					<CoreCompetenciesWidget />
-					<PersonalityWidget />
-					<BlogPostWidget />
-					<CollaborationWidget />
-					<ExperienceWidget />
-				</GridWidgetsLayout>
-			</PageLayout>
-			<div><Footer /></div>
-		</Wrapper>
-	)
+  return (
+    <Wrapper>
+      <Header></Header>
+      <PageLayout
+        style={{
+          marginTop: "156px",
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "232px",
+        }}
+      >
+        <GridWidgetsLayout>
+          <ProfileWidget>
+            <div>
+              <Tag
+								hasIcon={true}
+								Icon={<CircleDot />}
+                label="Open to Work"
+                color="teal"
+              />
+            </div>
+          </ProfileWidget>
+          <CaseStudyWidget />
+          <BookMeetingWidget />
+          <CoreCompetenciesWidget />
+          <PersonalityWidget />
+          <BlogPostWidget />
+          <CollaborationWidget />
+          <ExperienceWidget />
+        </GridWidgetsLayout>
+      </PageLayout>
+      <div>
+        <Footer />
+      </div>
+    </Wrapper>
+  );
 }

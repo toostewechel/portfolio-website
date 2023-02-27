@@ -10,14 +10,14 @@ const Container = styled("div", {
 
 const LabelContainer = styled("div", {
   display: "flex",
-	width: "100%",
+  width: "100%",
   mt: "$spacing-02",
 });
 
 const HelpText = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-	fontStyle: "italic",
+  fontStyle: "italic",
   fontSize: "$sm",
   lineHeight: "$none",
   color: "$mauve12",
@@ -78,18 +78,18 @@ export default function ProgressBar({ gradient, progressValue, helpText }) {
   }, []);
 
   return (
-	<Container>
-    <StyledProgress value={progressValue}>
-      <InnerContainer>
-        <StyledProgressIndicator
-          gradient={gradient}
-          style={{ transform: `translateX(-${100 - progress}%)` }}
-        />
-      </InnerContainer>
-    </StyledProgress>
-		<LabelContainer>
-			<HelpText>{helpText}</HelpText>
-		</LabelContainer>
-	</Container>
+    <Container>
+      <StyledProgress value={progressValue}>
+        <InnerContainer>
+          <StyledProgressIndicator
+            gradient={gradient}
+            style={{ transform: `translateX(-${100 - progress}%)` }}
+          />
+        </InnerContainer>
+      </StyledProgress>
+      <LabelContainer>
+        <HelpText>{helpText}</HelpText>
+      </LabelContainer>
+    </Container>
   );
 }

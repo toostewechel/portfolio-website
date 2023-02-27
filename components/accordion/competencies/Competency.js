@@ -8,7 +8,7 @@ const Container = styled("div", {
 });
 
 const Label = styled("p", {
-	mb: "$spacing-02",
+  mb: "$spacing-02",
   fontFamily: "$default",
   fontWeight: "$medium",
   fontSize: "$sm",
@@ -19,11 +19,11 @@ const Label = styled("p", {
 const HelpText = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-	fontStyle: "italic",
+  fontStyle: "italic",
   fontSize: "$sm",
   lineHeight: "$none",
   color: "$mauve12",
-	mt: "$spacing-02",
+  mt: "$spacing-02",
   mb: "$spacing-04",
 });
 
@@ -50,9 +50,7 @@ export default function Competency({
       <Label>Level</Label>
       <ProgressBar gradient={gradient} progressValue={progressValue} />
       <HelpText>{helpText}</HelpText>
-      <CompetencyDescription>
-        {competencyDescription}
-      </CompetencyDescription>
+      <CompetencyDescription>{competencyDescription}</CompetencyDescription>
     </Container>
   );
 }

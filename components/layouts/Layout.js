@@ -15,11 +15,11 @@ export const PageLayout = styled("div", {
 });
 
 export const GridWidgetsLayout = styled("div", {
-	display: "grid",
-	gridTemplateRows: "repeat(12, 290px)",
-	gridTemplateColumns: "repeat(1, 290px)",
-	gap: "32px",
-	gridTemplateAreas: `
+  display: "grid",
+  gridTemplateRows: "repeat(12, 290px)",
+  gridTemplateColumns: "repeat(1, 290px)",
+  gap: "32px",
+  gridTemplateAreas: `
 		"pf"
 		"pf"
 		"pers"
@@ -33,12 +33,11 @@ export const GridWidgetsLayout = styled("div", {
 		"bp"
 		"bp"
  `,
-	// >640px
-	"@bp2": {
-		gridTemplateRows: "repeat(5, 290px)",
-		gridTemplateColumns: "repeat(2, 290px)",
-		gridTemplateAreas: 
-	`
+  // >640px
+  "@bp2": {
+    gridTemplateRows: "repeat(5, 290px)",
+    gridTemplateColumns: "repeat(2, 290px)",
+    gridTemplateAreas: `
 		"pf pf"
 		"cs pers"
 		"cc cc"
@@ -46,45 +45,42 @@ export const GridWidgetsLayout = styled("div", {
 		"bm exp"
 		"bp bp"
  `,
-	},
-	// >768px
-	"@bp3": {
-		gridTemplateRows: "repeat(5, 290px)",
-		gridTemplateColumns: "repeat(2, 290px)",
-		gridTemplateAreas: 
-	`
+  },
+  // >768px
+  "@bp3": {
+    gridTemplateRows: "repeat(5, 290px)",
+    gridTemplateColumns: "repeat(2, 290px)",
+    gridTemplateAreas: `
 		"pf pf"
 		"cs pers"
 		"cc cc"
 		"bm col"
 		"bm exp"
 		"bp bp"
- `
-	},
-	// >1024px
-	"@bp4": {
-		gridTemplateRows: "repeat(4, 290px)",
-		gridTemplateColumns: "repeat(3, 290px)",
-		gridTemplateAreas: 
-	`
+ `,
+  },
+  // >1024px
+  "@bp4": {
+    gridTemplateRows: "repeat(4, 290px)",
+    gridTemplateColumns: "repeat(3, 290px)",
+    gridTemplateAreas: `
 		"pf pf cs"
 		"pers cc cc"
 		"bm col exp"
 		"bm bp bp"
- `
-	},
-	// >1280px
-	"@bp5": {
-		gridTemplateRows: "repeat(3, 290px)",
-		gridTemplateColumns: "repeat(4, 290px)",
-		gridTemplateAreas: 
-	`
+ `,
+  },
+  // >1280px
+  "@bp5": {
+    gridTemplateRows: "repeat(3, 290px)",
+    gridTemplateColumns: "repeat(4, 290px)",
+    gridTemplateAreas: `
 		"pf pf cs bm"
 		"pers cc cc bm"
 		"bp bp col exp"
- `
-	},
-})
+ `,
+  },
+});
 
 export const BlogContentLayout = styled("div", {
   display: "flex",
