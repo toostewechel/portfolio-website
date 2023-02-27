@@ -106,6 +106,48 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+				<link
+          rel="preload"
+          href="/fonts/JetBrainsMono-Regular.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/JetBrainsMono-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+				<link
+          rel="preload"
+          href="/fonts/JetBrainsMono-Medium.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/JetBrainsMono-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+				<link
+          rel="preload"
+          href="/fonts/JetBrainsMono-SemiBold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/JetBrainsMono-SemiBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <meta charset="utf-8"></meta>
       </Head>
       <body>

@@ -2,8 +2,10 @@ import { styled } from "../stitches.config.js";
 import { PageLayout, GridWidgetsLayout } from '../components/layouts/Layout.js';
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
+import { Tag } from "../components/tag/Tag.tsx";
+import { CheckCircle2 } from "lucide-react";
 
-const Wrapper =styled("div", {
+const Wrapper = styled("div", {
 	backgroundColor: "$olive3",
 	backgroundImage: "url(/patterns/grid-lines.svg)",
 	backgroundPositionX: "center",
@@ -91,12 +93,12 @@ const ExperienceWidget = styled("div", {
 
 
 export default function WidgetsGrid() {
-	return(
+	return (
 		<Wrapper>
-		<Header></Header>
-		<PageLayout style={{ marginTop: '156px', display: "flex", justifyContent: "center", marginBottom: '232px' }}>
-			<GridWidgetsLayout>
-					<ProfileWidget />
+			<Header></Header>
+			<PageLayout style={{ marginTop: '156px', display: "flex", justifyContent: "center", marginBottom: '232px' }}>
+				<GridWidgetsLayout>
+					<ProfileWidget > <div><Tag hasIcon={true} Icon={<CheckCircle2 />} label="Today" fontStyle="uppercase" accentColor="crimson" /> </div></ProfileWidget>
 					<CaseStudyWidget />
 					<BookMeetingWidget />
 					<CoreCompetenciesWidget />
@@ -104,9 +106,9 @@ export default function WidgetsGrid() {
 					<BlogPostWidget />
 					<CollaborationWidget />
 					<ExperienceWidget />
-			</GridWidgetsLayout>
-		</PageLayout>
-		<div><Footer /></div>
-	</Wrapper>
+				</GridWidgetsLayout>
+			</PageLayout>
+			<div><Footer /></div>
+		</Wrapper>
 	)
 }

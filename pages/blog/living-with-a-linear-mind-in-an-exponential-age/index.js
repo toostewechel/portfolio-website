@@ -1,4 +1,4 @@
-//Defaults
+//Default Imports
 import { createRef } from "react";
 import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
@@ -19,7 +19,7 @@ import {
   HoverCardPanel,
 } from "../../../components/card/HoverCard.js";
 
-//Blog Content Layouts
+//Blog Content Layout
 import {
   BlogContentLayout,
   BlogMarkdownContentLayout,
@@ -60,7 +60,6 @@ const PoweredByBadge = styled("a", {
   padding: "$spacing-03",
   borderRadius: "6px",
   border: "1px solid transparent",
-  transition: "background 300ms ease-in",
   fontFamily: "$default",
   fontSize: "$xs",
   width: "280px",

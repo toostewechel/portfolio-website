@@ -1,8 +1,13 @@
+import React, { FC } from 'react';
 import { styled } from "../../stitches.config.js";
 
 const TagContainer = styled("div", {
   display: "inline-flex",
-  borderRadius: "6px",
+	flexDirection: "row",
+	alignItems: "center",
+	justifyContent: "center",
+	gap: "$spacing-02",
+  borderRadius: "4px",
   padding: "$spacing-02 $spacing-04",
   backgroundColor: "$gray3",
   color: "$gray11",
@@ -10,7 +15,7 @@ const TagContainer = styled("div", {
   flexGrow: 0,
 
   variants: {
-    color: {
+    accentColor: {
       blue: {
         color: "$blue11",
         backgroundColor: "$blue3",
@@ -41,19 +46,43 @@ const TagContainer = styled("div", {
 });
 
 const TagLabel = styled("p", {
-  fontFamily: "$default",
+  fontFamily: "$mono",
   fontWeight: "$medium",
   fontSize: "$xs",
-  textTransform: "uppercase",
-  letterSpacing: "$tracking-wider",
+  letterSpacing: "$tracking-wide",
+
+	variants: {
+		fontStyle: {
+			uppercase: {
+				textTransform: "uppercase",
+			}
+		}
+	}
 });
 
-function Tag(props) {
-  return (
-    <TagContainer color={props.color}>
-      <TagLabel>{props.label}</TagLabel>
-    </TagContainer>
-  );
+const IconContainer = styled("div", {
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: "center",
+	width: "15px",
+	height: "15px",
+});
+
+interface TagProps {
+	accentColor: "blue" | "plum" | "crimson" | "gray" | "violet";
+	label: string;
+	fontStyle: undefined | "uppercase";
+	hasIcon: boolean;
+	Icon: any;
 }
 
-export default Tag;
+
+export const Tag = ({ accentColor, label, fontStyle, hasIcon, Icon  }: TagProps) => {
+	return (
+	  <TagContainer accentColor={accentColor}>
+			{hasIcon && <IconContainer>{Icon}</IconContainer>}
+			<TagLabel fontStyle={fontStyle}>{label}</TagLabel>
+	  </TagContainer>
+	);
+}
+
