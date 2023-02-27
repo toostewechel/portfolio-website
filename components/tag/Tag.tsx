@@ -46,16 +46,16 @@ const TagContainer = styled("div", {
         backgroundColor: "$red3",
         border: "solid 2px $red5",
       },
-			olive: {
+      olive: {
         color: "$olive11",
         backgroundColor: "$olive3",
         border: "solid 2px $olive5",
       },
-			teal: {
+      teal: {
         color: "$teal11",
         backgroundColor: "$teal3",
         border: "solid 2px $teal5",
-      },		
+      },
     },
   },
 });
@@ -84,20 +84,22 @@ const IconContainer = styled("div", {
 });
 
 interface TagProps {
-  color: "blue" | "plum" | "crimson" | "gray" | "violet" | "red" | "olive" | "teal";
+  color:
+    | "blue"
+    | "plum"
+    | "crimson"
+    | "gray"
+    | "violet"
+    | "red"
+    | "olive"
+    | "teal";
   label: string;
   fontStyle: undefined | "uppercase";
   hasIcon: boolean;
   Icon: any;
 }
 
-export const Tag = ({
-  color,
-  label,
-  fontStyle,
-  hasIcon,
-  Icon,
-}: TagProps) => {
+export const Tag = ({ color, label, fontStyle, hasIcon, Icon }: TagProps) => {
   return (
     <TagContainer color={color}>
       {hasIcon && <IconContainer>{Icon}</IconContainer>}

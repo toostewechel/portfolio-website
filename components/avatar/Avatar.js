@@ -18,8 +18,8 @@ const StyledImage = styled("img", {
   size: "$7",
 
   "@bp4": {
-    width: "60px",
-    height: "60px",
+    width: "48px",
+    height: "48px",
   },
 });
 
@@ -34,10 +34,11 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
-  lineHeight: "$compact",
+  lineHeight: "$none",
+  mt: "$spacing-02",
 
   "@bp4": {
-    fontSize: "$xl",
+    fontSize: "$lg",
   },
 });
 

@@ -3,7 +3,8 @@ import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
 import Header from "../components/layouts/blocks/Header.js";
 import Footer from "../components/layouts/blocks/Footer.js";
 import { Tag } from "../components/tag/Tag.tsx";
-import { CircleDot } from "lucide-react";
+import { ChevronsRight } from "lucide-react";
+import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -11,24 +12,13 @@ const Wrapper = styled("div", {
   backgroundPositionX: "center",
 });
 
-const ProfileWidget = styled("div", {
-  gridArea: "pf",
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
-});
-
 const CaseStudyWidget = styled("div", {
   gridArea: "cs",
   display: "flex",
-  width: "100%",
-  height: "100%",
   backgroundColor: "$olive6",
   boxShadow: "$small",
   borderRadius: "16px",
+  aspectRatio: "1/1",
 });
 
 const BookMeetingWidget = styled("div", {
@@ -54,11 +44,10 @@ const CoreCompetenciesWidget = styled("div", {
 const PersonalityWidget = styled("div", {
   gridArea: "pers",
   display: "flex",
-  width: "100%",
-  height: "100%",
   backgroundColor: "$olive6",
   boxShadow: "$small",
   borderRadius: "16px",
+  aspectRatio: "1/1",
 });
 
 const BlogPostWidget = styled("div", {
@@ -97,23 +86,20 @@ export default function WidgetsGrid() {
       <Header></Header>
       <PageLayout
         style={{
-          marginTop: "156px",
+          marginTop: "152px",
           display: "flex",
           justifyContent: "center",
           marginBottom: "232px",
         }}
       >
         <GridWidgetsLayout>
-          <ProfileWidget>
-            <div>
-              <Tag
-								hasIcon={true}
-								Icon={<CircleDot />}
-                label="Open to Work"
-                color="teal"
-              />
-            </div>
-          </ProfileWidget>
+          <ProfileInformation
+            tagLabel="Open for Work"
+            tagColor="teal"
+            hasIcon={true}
+            Icon={<ChevronsRight />}
+            hasJob={false}
+          />
           <CaseStudyWidget />
           <BookMeetingWidget />
           <CoreCompetenciesWidget />

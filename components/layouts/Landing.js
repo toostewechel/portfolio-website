@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
-import Tag from "../tag/Tag.js";
+import Tag from "../tag/Tag";
 
 const Wrapper = styled("div", {
   position: "relative",

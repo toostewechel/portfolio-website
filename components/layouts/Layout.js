@@ -16,29 +16,27 @@ export const PageLayout = styled("div", {
 
 export const GridWidgetsLayout = styled("div", {
   display: "grid",
-  gridTemplateRows: "repeat(12, 290px)",
-  gridTemplateColumns: "repeat(1, 290px)",
-  gap: "32px",
+  gridTemplateRows: "repeat(8, auto)",
+  gridTemplateColumns: "repeat(1, 1fr)",
+  gap: "24px",
   gridTemplateAreas: `
-		"pf"
-		"pf"
+		"pfi"
 		"pers"
 		"cs"
-		"cc" 
 		"cc"
 		"col"
 		"bm"
-		"bm" 
 		"exp"
 		"bp"
-		"bp"
  `,
+
   // >640px
   "@bp2": {
+    gap: "32px",
     gridTemplateRows: "repeat(5, 290px)",
     gridTemplateColumns: "repeat(2, 290px)",
     gridTemplateAreas: `
-		"pf pf"
+		"pfi pfi"
 		"cs pers"
 		"cc cc"
 		"bm col"
@@ -51,7 +49,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateRows: "repeat(5, 290px)",
     gridTemplateColumns: "repeat(2, 290px)",
     gridTemplateAreas: `
-		"pf pf"
+		"pfi pfi"
 		"cs pers"
 		"cc cc"
 		"bm col"
@@ -64,7 +62,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateRows: "repeat(4, 290px)",
     gridTemplateColumns: "repeat(3, 290px)",
     gridTemplateAreas: `
-		"pf pf cs"
+		"pfi pfi cs"
 		"pers cc cc"
 		"bm col exp"
 		"bm bp bp"
@@ -75,7 +73,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateRows: "repeat(3, 290px)",
     gridTemplateColumns: "repeat(4, 290px)",
     gridTemplateAreas: `
-		"pf pf cs bm"
+		"pfi pfi cs bm"
 		"pers cc cc bm"
 		"bp bp col exp"
  `,
