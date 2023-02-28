@@ -5,20 +5,12 @@ import Footer from "../components/layouts/blocks/Footer.js";
 import { Tag } from "../components/tag/Tag.tsx";
 import { ChevronsRight } from "lucide-react";
 import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";
+import { Snapshot } from "../components/widgets/Snapshot.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines.svg)",
   backgroundPositionX: "center",
-});
-
-const CaseStudyWidget = styled("div", {
-  gridArea: "cs",
-  display: "flex",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
-  aspectRatio: "1/1",
 });
 
 const BookMeetingWidget = styled("div", {
@@ -100,7 +92,7 @@ export default function WidgetsGrid() {
             Icon={<ChevronsRight />}
             hasJob={false}
           />
-          <CaseStudyWidget />
+					<Snapshot type="Case Study" title="Build Standardised eHealth Modules for Healthcare" language="en" backgroundColor="blue" backgroundImage="/widgets/case-study-cover.png"/>
           <BookMeetingWidget />
           <CoreCompetenciesWidget />
           <PersonalityWidget />

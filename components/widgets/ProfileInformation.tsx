@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import React, { FC } from "react";
+import React from "react";
 import Image from "next/image";
 import { Tag } from "../tag/Tag";
 import Avatar from "../avatar/Avatar.js";
