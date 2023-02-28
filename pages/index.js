@@ -92,7 +92,13 @@ export default function WidgetsGrid() {
             Icon={<ChevronsRight />}
             hasJob={false}
           />
-					<Snapshot type="Case Study" title="Build Standardised eHealth Modules for Healthcare" language="en" backgroundColor="blue" backgroundImage="/widgets/case-study-cover.png"/>
+          <Snapshot
+            type="Case Study"
+            title="Build Standardised eHealth Modules for Healthcare"
+            language="en"
+            backgroundColor="blue"
+            backgroundImage="/widgets/case-study-cover.png"
+          />
           <BookMeetingWidget />
           <CoreCompetenciesWidget />
           <PersonalityWidget />
