@@ -86,6 +86,7 @@ export const {
       base: "1rem",
       sm: "0.95rem",
       xs: "0.85rem",
+      xxs: "0.75rem",
       bodyLarge: "1.20rem",
     },
     fonts: {

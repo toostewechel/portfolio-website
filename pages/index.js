@@ -6,21 +6,13 @@ import { Tag } from "../components/tag/Tag.tsx";
 import { ChevronsRight } from "lucide-react";
 import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";
 import { Snapshot } from "../components/widgets/Snapshot.tsx";
+import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
+import { Personality } from "../components/widgets/Personality.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines.svg)",
   backgroundPositionX: "center",
-});
-
-const BookMeetingWidget = styled("div", {
-  gridArea: "bm",
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
 });
 
 const CoreCompetenciesWidget = styled("div", {
@@ -99,9 +91,10 @@ export default function WidgetsGrid() {
             backgroundColor="blue"
             backgroundImage="/widgets/case-study-cover.png"
           />
-          <BookMeetingWidget />
+          <BookMeeting />
+					<Personality />
           <CoreCompetenciesWidget />
-          <PersonalityWidget />
+        
           <BlogPostWidget />
           <CollaborationWidget />
           <ExperienceWidget />

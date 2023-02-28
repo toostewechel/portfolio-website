@@ -24,9 +24,12 @@ const WidgetContainer = styled("div", {
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
+	willChange: "all",
+	transition: "transform 0.3s ease-in-out",
 
   "&:hover": {
     boxShadow: "$medium",
+		scale: "1.01"
   },
 
   "@bp2": {

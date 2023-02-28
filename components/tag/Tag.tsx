@@ -11,6 +11,7 @@ const TagContainer = styled("div", {
   padding: "$spacing-02 $spacing-03",
   backgroundColor: "$gray3",
   color: "$gray11",
+  fontSize: "$xs",
   flexShrink: 0,
   flexGrow: 0,
 
@@ -33,7 +34,7 @@ const TagContainer = styled("div", {
       },
       gray: {
         color: "$gray11",
-        backgroundColor: "$gray4",
+        backgroundColor: "$gray3",
         border: "solid 2px $gray5",
       },
       violet: {
@@ -42,9 +43,10 @@ const TagContainer = styled("div", {
         border: "solid 2px $violet5",
       },
       red: {
-        color: "$red11",
-        backgroundColor: "$red3",
-        border: "solid 2px $red5",
+        color: "$red3",
+        backgroundColor: "$red10",
+        border: "solid 2px $red10",
+        padding: "$spacing-01 $spacing-02",
       },
       olive: {
         color: "$olive11",
@@ -57,14 +59,21 @@ const TagContainer = styled("div", {
         border: "solid 2px $teal5",
       },
     },
+    size: {
+      sm: {
+        padding: "$spacing-01 $spacing-02",
+        gap: "$spacing-02",
+        fontSize: "$xxs",
+      },
+    },
   },
 });
 
 const TagLabel = styled("p", {
   fontFamily: "$mono",
   fontWeight: "$medium",
-  fontSize: "$xs",
   letterSpacing: "$tracking-wide",
+  lineHeight: "$none",
 
   variants: {
     fontStyle: {
@@ -79,8 +88,7 @@ const IconContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "15px",
-  height: "15px",
+  padding: "$spacing-01",
 });
 
 interface TagProps {
@@ -94,14 +102,22 @@ interface TagProps {
     | "olive"
     | "teal";
   label: string;
-  fontStyle: undefined | "uppercase";
-  hasIcon: boolean;
-  Icon: any;
+  size?: undefined | "sm";
+  fontStyle?: undefined | "uppercase";
+  hasIcon?: boolean;
+  Icon?: any;
 }
 
-export const Tag = ({ color, label, fontStyle, hasIcon, Icon }: TagProps) => {
+export const Tag = ({
+  size,
+  color,
+  label,
+  fontStyle,
+  hasIcon,
+  Icon,
+}: TagProps) => {
   return (
-    <TagContainer color={color}>
+    <TagContainer size={size} color={color}>
       {hasIcon && <IconContainer>{Icon}</IconContainer>}
       <TagLabel fontStyle={fontStyle}>{label}</TagLabel>
     </TagContainer>
