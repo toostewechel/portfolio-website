@@ -7,29 +7,29 @@ const WidgetContainer = styled("div", {
   gridArea: "pers",
   display: "flex",
   flexDirection: "column",
-	justifyContent: "space-between",
+  justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
-	padding: "$spacing-05",
+  padding: "$spacing-05",
   boxShadow: "$small",
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
   aspectRatio: "1/1",
-	background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
-	willChange: "all",
-	transition: "transform 0.3s ease-in-out",
+  background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  willChange: "all",
+  transition: "transform 0.3s ease-in-out",
 
   "&:hover": {
     boxShadow: "$medium",
-		scale: "1.02"
+    scale: "1.02",
   },
 });
 
 const LinkToButtonIcon = styled("a", {
   position: "absolute",
-	top: 16,
-	right: 16,
+  top: 16,
+  right: 16,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -44,16 +44,15 @@ const LinkToButtonIcon = styled("a", {
     "-1px 1px 2px rgba(210, 204, 196, 0.2), 1px -1px 2px rgba(210, 204, 196, 0.2), -1px -1px 2px rgba(255, 255, 250, 0.9), 1px 1px 3px rgba(210, 204, 196, 0.9), inset 1px 1px 2px rgba(255, 255, 250, 0.3), inset -1px -1px 2px rgba(210, 204, 196, 0.5)",
 });
 
-
-const ImageContainer = styled('div', {
-	display: "flex",
-	justifyContent: "center",
-	width: "100%",
-	height: "192px",
-})
+const ImageContainer = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  height: "192px",
+});
 
 const TitleContainer = styled("div", {
- textAlign: "center",
+  textAlign: "center",
 });
 
 const ProjectType = styled("h3", {
@@ -80,17 +79,22 @@ const MetaInformation = styled("p", {
 
 export const Personality = () => {
   return (
-    <WidgetContainer >
-				<LinkToButtonIcon>
-          <ArrowUpRight size={20} />
-        </LinkToButtonIcon>
-  			<ImageContainer>
-					<Image src="/widgets/advocate.png" height="192" width="192" alt="logo-advocate" />
-				</ImageContainer>
-        <TitleContainer>
-          <ProjectType>My Personality</ProjectType>
-          <MetaInformation>Assertive Advocate</MetaInformation>
-        </TitleContainer>
+    <WidgetContainer>
+      <LinkToButtonIcon>
+        <ArrowUpRight size={20} />
+      </LinkToButtonIcon>
+      <ImageContainer>
+        <Image
+          src="/widgets/advocate.png"
+          height="192"
+          width="192"
+          alt="logo-advocate"
+        />
+      </ImageContainer>
+      <TitleContainer>
+        <ProjectType>My Personality</ProjectType>
+        <MetaInformation>Assertive Advocate</MetaInformation>
+      </TitleContainer>
     </WidgetContainer>
   );
 };

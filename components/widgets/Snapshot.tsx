@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const WidgetContainer = styled("div", {
   gridArea: "cs",
@@ -146,15 +147,19 @@ export const Snapshot = ({
   title,
 }: Props) => {
   return (
-    <WidgetContainer backgroundColor={backgroundColor}>
-      <BackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }} />
-      <ContentContainer>
-        <LanguageIcon language={language} />
-        <TitleContainer>
-          <ProjectType>{type}</ProjectType>
-          <MetaInformation>{title}</MetaInformation>
-        </TitleContainer>
-      </ContentContainer>
-    </WidgetContainer>
+    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+      <WidgetContainer backgroundColor={backgroundColor}>
+        <BackgroundImage
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+        <ContentContainer>
+          <LanguageIcon language={language} />
+          <TitleContainer>
+            <ProjectType>{type}</ProjectType>
+            <MetaInformation>{title}</MetaInformation>
+          </TitleContainer>
+        </ContentContainer>
+      </WidgetContainer>
+    </motion.div>
   );
 };

@@ -6,9 +6,9 @@ const TagContainer = styled("div", {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  gap: "$spacing-03",
   borderRadius: "4px",
   padding: "$spacing-02 $spacing-03",
+  gap: "$spacing-03",
   backgroundColor: "$gray3",
   color: "$gray11",
   fontSize: "$xs",
@@ -73,7 +73,7 @@ const TagLabel = styled("p", {
   fontFamily: "$mono",
   fontWeight: "$medium",
   letterSpacing: "$tracking-wide",
-  lineHeight: "$none",
+  lineHeight: "$compact",
 
   variants: {
     fontStyle: {

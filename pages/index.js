@@ -80,8 +80,7 @@ export default function WidgetsGrid() {
           <ProfileInformation
             tagLabel="Open for Work"
             tagColor="teal"
-            hasIcon={true}
-            Icon={<ChevronsRight />}
+            hasIcon={false}
             hasJob={false}
           />
           <Snapshot
@@ -92,9 +91,9 @@ export default function WidgetsGrid() {
             backgroundImage="/widgets/case-study-cover.png"
           />
           <BookMeeting />
-					<Personality />
+          <Personality />
           <CoreCompetenciesWidget />
-        
+
           <BlogPostWidget />
           <CollaborationWidget />
           <ExperienceWidget />

@@ -11,8 +11,9 @@ import {
   Smartphone,
   Mail,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
-const WidgetContainer = styled("div", {
+const WidgetContainer = styled(motion.div, {
   gridArea: "pfi",
   display: "flex",
   flexDirection: "column",
@@ -24,12 +25,9 @@ const WidgetContainer = styled("div", {
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
-	willChange: "all",
-	transition: "transform 0.3s ease-in-out",
 
   "&:hover": {
     boxShadow: "$medium",
-		scale: "1.01"
   },
 
   "@bp2": {
@@ -187,10 +185,11 @@ export const ProfileInformation = ({
   tagLabel,
   tagColor,
   hasJob,
+  hasIcon,
   Icon,
 }: Props) => {
   return (
-    <WidgetContainer>
+    <WidgetContainer whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <ProfileDescriptionLayout>
         <LogoContainer>
@@ -207,7 +206,12 @@ export const ProfileInformation = ({
           projects!
         </Text>
         <TagContainer>
-          <Tag label={tagLabel} color={tagColor} hasIcon={true} Icon={Icon} />
+          <Tag
+            label={tagLabel}
+            color={tagColor}
+            hasIcon={hasIcon}
+            Icon={Icon}
+          />
           {hasJob ? null : <HireMeLink>Hire me!</HireMeLink>}
         </TagContainer>
       </ProfileDescriptionLayout>
