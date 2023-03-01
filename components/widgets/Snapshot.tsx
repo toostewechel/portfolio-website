@@ -147,7 +147,7 @@ export const Snapshot = ({
   title,
 }: Props) => {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }}>
+    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
       <WidgetContainer backgroundColor={backgroundColor}>
         <BackgroundImage
           style={{ backgroundImage: `url(${backgroundImage})` }}

@@ -2,8 +2,9 @@ import { styled } from "../../stitches.config.js";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-const WidgetContainer = styled("div", {
+const WidgetContainer = styled(motion.div, {
   gridArea: "pers",
   display: "flex",
   flexDirection: "column",
@@ -17,12 +18,9 @@ const WidgetContainer = styled("div", {
   overflow: "hidden",
   aspectRatio: "1/1",
   background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
-  willChange: "all",
-  transition: "transform 0.3s ease-in-out",
 
   "&:hover": {
     boxShadow: "$medium",
-    scale: "1.02",
   },
 });
 
@@ -79,7 +77,7 @@ const MetaInformation = styled("p", {
 
 export const Personality = () => {
   return (
-    <WidgetContainer>
+    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>

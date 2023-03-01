@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import Avatar from "../avatar/Avatar.js";
-import { ArrowRight, ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowDown, ArrowUpRight, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSkillsBar } from "./AnimatedSkillsBar.tsx";
 import { CarouselExample } from "../carousel/Carousel.tsx";
@@ -32,27 +32,31 @@ const WidgetContainer = styled(motion.div, {
 const SkillsLayout = styled("div", {
   display: "flex",
   flexDirection: "column",
+  justifyContent: "space-between",
   width: "100%",
   zIndex: "2",
+	height: "264px",
 
   "@bp2": {
     width: "50%",
     justifyContent: "space-between",
+		height: "100%",
   },
 });
 
 const ProductRolesLayout = styled("div", {
   display: "flex",
-  flexDirection: "column-reverse",
+  flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "start",
   width: "100%",
-  height: "100%",
+  height: "264px",
   zIndex: "2",
 
   "@bp2": {
     width: "50%",
     flexDirection: "column",
+		height: "100%",
   },
 });
 
@@ -119,7 +123,7 @@ const LinkToButtonIcon = styled("a", {
 
 export const CoreCompetencies = ({}) => {
   return (
-    <WidgetContainer whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
       <SkillsLayout>
 				<TitleContainer>
         <LabelContainer color="teal">
@@ -139,9 +143,9 @@ export const CoreCompetencies = ({}) => {
       </SkillsLayout>
       <ProductRolesLayout>
         <TitleContainer>
-        <LabelContainer>
+        <LabelContainer color="red">
 					<Label>Product Roles</Label>
-					<ArrowDown size={15} />
+					<ArrowDown size={17} />
 				</LabelContainer>
 					<CardTitle>Hats I Wear</CardTitle>
 				</TitleContainer>

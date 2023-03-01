@@ -189,7 +189,7 @@ export const ProfileInformation = ({
   Icon,
 }: Props) => {
   return (
-    <WidgetContainer whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <ProfileDescriptionLayout>
         <LogoContainer>
