@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import Tag from "../tag/Tag.js";
+import { Tag } from "../tag/Tag.tsx";
 import TimeLineIcon from "remixicon-react/TimeLineIcon";
 import { MapPin, CalendarDays, Download } from "lucide-react";
 import {

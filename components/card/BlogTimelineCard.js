@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import Tag from "../tag/Tag.js";
+import { Tag } from "../tag/Tag.tsx";
 
 const Container = styled("a", {
   m: 0,
