@@ -8,7 +8,7 @@ import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx
 import { Snapshot } from "../components/widgets/Snapshot.tsx";
 import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
 import { Personality } from "../components/widgets/Personality.tsx";
-import SoftwareCarousel from "../components/carousel/Carousel.js";
+import { CarouselExample } from "../components/carousel/Carousel.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -67,7 +67,7 @@ export default function WidgetsGrid() {
   return (
     <Wrapper>
       <Header></Header>
-			<SoftwareCarousel />
+			<CarouselExample />
       <PageLayout
         style={{
           marginTop: "152px",
