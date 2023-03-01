@@ -105,7 +105,9 @@ const Label = styled("p", {
 });
 
 const LinkToButtonIcon = styled("a", {
-  alignSelf: "flex-end",
+  position: "absolute",
+	top: 16,
+	right: 16,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -124,6 +126,9 @@ const LinkToButtonIcon = styled("a", {
 export const CoreCompetencies = ({}) => {
   return (
     <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+			<LinkToButtonIcon>
+        <ArrowUpRight size={20} />
+      </LinkToButtonIcon>
       <SkillsLayout>
 				<TitleContainer>
         <LabelContainer color="teal">

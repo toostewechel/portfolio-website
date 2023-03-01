@@ -45,8 +45,13 @@ const LinkToButtonIcon = styled("a", {
 const ImageContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
-  width: "100%",
-  height: "192px",
+  width: "264px",
+  height: "264px",
+
+	"@bp2": {
+		height: "192px",
+		width: "192px",
+	}
 });
 
 const TitleContainer = styled("div", {
@@ -84,8 +89,9 @@ export const Personality = () => {
       <ImageContainer>
         <Image
           src="/widgets/advocate.png"
-          height="192"
-          width="192"
+					layout="responsive"
+          height="296"
+          width="296"
           alt="logo-advocate"
         />
       </ImageContainer>
