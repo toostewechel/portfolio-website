@@ -8,6 +8,7 @@ import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx
 import { Snapshot } from "../components/widgets/Snapshot.tsx";
 import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
 import { Personality } from "../components/widgets/Personality.tsx";
+import SoftwareCarousel from "../components/carousel/Carousel.js";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -18,8 +19,6 @@ const Wrapper = styled("div", {
 const CoreCompetenciesWidget = styled("div", {
   gridArea: "cc",
   display: "flex",
-  width: "100%",
-  height: "100%",
   backgroundColor: "$olive6",
   boxShadow: "$small",
   borderRadius: "16px",
@@ -68,6 +67,7 @@ export default function WidgetsGrid() {
   return (
     <Wrapper>
       <Header></Header>
+			<SoftwareCarousel />
       <PageLayout
         style={{
           marginTop: "152px",
@@ -92,8 +92,9 @@ export default function WidgetsGrid() {
           />
           <BookMeeting />
           <Personality />
-          <CoreCompetenciesWidget />
-
+          <CoreCompetenciesWidget>
+						
+					</CoreCompetenciesWidget>
           <BlogPostWidget />
           <CollaborationWidget />
           <ExperienceWidget />
