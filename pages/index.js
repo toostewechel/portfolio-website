@@ -13,7 +13,7 @@ import { Blogpost } from "../components/widgets/Blogpost.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
-  backgroundImage: "url(/patterns/grid-lines.svg)",
+  backgroundImage: "url(/patterns/grid-lines-red.svg)",
   backgroundPositionX: "center",
 });
 
@@ -55,6 +55,7 @@ const ExperienceWidget = styled("div", {
   boxShadow: "$small",
   borderRadius: "16px",
 });
+
 const Heading = styled("h2", {
   fontSize: "$3xl",
   fontWeight: "$black",
@@ -73,7 +74,6 @@ export default function WidgetsGrid() {
   return (
     <Wrapper>
       <Header></Header>
-
       <PageLayout
         style={{
           marginTop: "70px",
