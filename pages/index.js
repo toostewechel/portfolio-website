@@ -10,6 +10,7 @@ import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
 import { Personality } from "../components/widgets/Personality.tsx";
 import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";
+import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -109,7 +110,7 @@ export default function WidgetsGrid() {
             description="Why Personal Knowledge Management can help you thrive in an exponential age"
             datePosted="24 February, 2023"
           />
-          <CollaborationWidget />
+          <OperatingPrinciples />
           <ExperienceWidget />
         </GridWidgetsLayout>
       </PageLayout>

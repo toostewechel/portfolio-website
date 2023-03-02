@@ -3,9 +3,10 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Tag } from "../tag/Tag";
 
 const WidgetContainer = styled(motion.div, {
-  gridArea: "pers",
+  gridArea: "col",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -24,9 +25,20 @@ const WidgetContainer = styled(motion.div, {
   },
 });
 
+const BackgroundPattern = styled("img", {
+  position: "absolute",
+  backgroundRepeat: "no-repeat",
+  width: "264px",
+  height: "264px",
+  opacity: 0.15,
+  zIndex: 1,
+  bottom: -96,
+  right: -96,
+});
+
 const LinkToButtonIcon = styled("a", {
   position: "absolute",
-  top: 16,
+  bottom: 16,
   right: 16,
   display: "flex",
   alignItems: "center",
@@ -42,23 +54,28 @@ const LinkToButtonIcon = styled("a", {
     "-1px 1px 2px rgba(210, 204, 196, 0.2), 1px -1px 2px rgba(210, 204, 196, 0.2), -1px -1px 2px rgba(255, 255, 250, 0.9), 1px 1px 3px rgba(210, 204, 196, 0.9), inset 1px 1px 2px rgba(255, 255, 250, 0.3), inset -1px -1px 2px rgba(210, 204, 196, 0.5)",
 });
 
-const ImageContainer = styled("div", {
+const ContentContainer = styled("div", {
   display: "flex",
-  justifyContent: "center",
-  width: "264px",
-  height: "264px",
-
-  "@bp2": {
-    height: "192px",
-    width: "192px",
-  },
+  flexDirection: "column",
+  gap: "$spacing-03",
+  width: "100%",
 });
 
-const TitleContainer = styled("div", {
-  textAlign: "center",
+const Label = styled("p", {
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  lineHeight: "$none",
+  fontSize: "$sm",
+  color: "$teal3",
 });
 
-const ProjectType = styled("h3", {
+const Text = styled("p", {
+  fontFamily: "$default",
+  color: "$mauve2",
+  fontSize: "$base",
+});
+
+const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -73,32 +90,34 @@ const ProjectType = styled("h3", {
   "-webkit-box-orient": "vertical",
 });
 
-const MetaInformation = styled("p", {
-  fontFamily: "$default",
-  fontWeight: "$regular",
-  fontSize: "$sm",
-  color: "$mauve7",
+const TagGroup = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-03",
+  alignItems: "center",
+  mt: "$spacing-05",
 });
 
-export const Personality = () => {
+export const OperatingPrinciples = () => {
   return (
     <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+      <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>
-      <ImageContainer>
-        <Image
-          src="/widgets/advocate.png"
-          layout="responsive"
-          height="296"
-          width="296"
-          alt="logo-advocate"
-        />
-      </ImageContainer>
-      <TitleContainer>
-        <ProjectType>My Personality</ProjectType>
-        <MetaInformation>Assertive Advocate</MetaInformation>
-      </TitleContainer>
+      <ContentContainer>
+        <Label>Collaboration</Label>
+        <CardTitle>Operating Principles</CardTitle>
+        <Text>
+          If we work together, there are a few ways you can utilise my strengths
+          and consider my preferences and peculiarities
+        </Text>
+        <TagGroup>
+          <Tag label="Tips" color="teal" hasIcon={false} size="sm" />
+          <Tag label="Preferences" color="violet" hasIcon={false} size="sm" />
+          <Tag label="Pitfalls" color="crimson" hasIcon={false} size="sm" />
+        </TagGroup>
+      </ContentContainer>
     </WidgetContainer>
   );
 };
