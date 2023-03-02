@@ -2,6 +2,7 @@ import { styled } from "../../stitches.config.js";
 import React from "react";
 import { Tag } from "../tag/Tag";
 import { ArrowUpRight, Clock3, Clock6, Clock9 } from "lucide-react";
+import { motion } from "framer-motion";
 import {
   HoverCardRoot,
   HoverCardTrigger,
@@ -82,6 +83,10 @@ const EventOptions = styled("div", {
   gap: "$spacing-03",
 });
 
+const EventOptionContainer = styled(motion.div, {
+  display: "flex",
+});
+
 const EventOption = styled("a", {
   display: "flex",
   flexDirection: "row",
@@ -92,7 +97,7 @@ const EventOption = styled("a", {
   border: "1px solid $olive6",
 
   "&:hover": {
-    backgroundColor: "$olive2",
+    backgroundColor: "$olive3",
     border: "1px solid $olive6",
   },
 });
@@ -174,57 +179,72 @@ export const BookMeeting = () => {
         </TagContainer>
         <CurrentDate>{formatCurrentDate()}</CurrentDate>
         <EventOptions>
-          <EventOption>
-            <ContentContainer>
-              <EventOptionTitle>Quick Chat Session</EventOptionTitle>
-              <div>
-                <Tag
-                  size="sm"
-                  hasIcon={true}
-                  Icon={<Clock3 size={13} />}
-                  color="gray"
-                  label="15 Min"
-                />
-              </div>
-            </ContentContainer>
-            <Icon>
-              <ArrowUpRight size={24} />
-            </Icon>
-          </EventOption>
-          <EventOption>
-            <ContentContainer>
-              <EventOptionTitle>Problem Solving Session</EventOptionTitle>
-              <div>
-                <Tag
-                  size="sm"
-                  hasIcon={true}
-                  Icon={<Clock6 size={13} />}
-                  color="gray"
-                  label="30 Min"
-                />
-              </div>
-            </ContentContainer>
-            <Icon>
-              <ArrowUpRight size={24} />
-            </Icon>
-          </EventOption>
-          <EventOption>
-            <ContentContainer>
-              <EventOptionTitle>Design Review</EventOptionTitle>
-              <div>
-                <Tag
-                  size="sm"
-                  hasIcon={true}
-                  Icon={<Clock9 size={13} />}
-                  color="gray"
-                  label="45 Min"
-                />
-              </div>
-            </ContentContainer>
-            <Icon>
-              <ArrowUpRight size={24} />
-            </Icon>
-          </EventOption>
+          <EventOptionContainer
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <EventOption>
+              <ContentContainer>
+                <EventOptionTitle>Quick Chat Session</EventOptionTitle>
+                <div>
+                  <Tag
+                    size="sm"
+                    hasIcon={true}
+                    Icon={<Clock3 size={13} />}
+                    color="gray"
+                    label="15 Min"
+                  />
+                </div>
+              </ContentContainer>
+              <Icon>
+                <ArrowUpRight size={24} />
+              </Icon>
+            </EventOption>
+          </EventOptionContainer>
+          <EventOptionContainer
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <EventOption>
+              <ContentContainer>
+                <EventOptionTitle>Problem Solving Session</EventOptionTitle>
+                <div>
+                  <Tag
+                    size="sm"
+                    hasIcon={true}
+                    Icon={<Clock6 size={13} />}
+                    color="gray"
+                    label="30 Min"
+                  />
+                </div>
+              </ContentContainer>
+              <Icon>
+                <ArrowUpRight size={24} />
+              </Icon>
+            </EventOption>
+          </EventOptionContainer>
+          <EventOptionContainer
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <EventOption>
+              <ContentContainer>
+                <EventOptionTitle>Design Review</EventOptionTitle>
+                <div>
+                  <Tag
+                    size="sm"
+                    hasIcon={true}
+                    Icon={<Clock9 size={13} />}
+                    color="gray"
+                    label="45 Min"
+                  />
+                </div>
+              </ContentContainer>
+              <Icon>
+                <ArrowUpRight size={24} />
+              </Icon>
+            </EventOption>
+          </EventOptionContainer>
         </EventOptions>
       </EventOptionsContainer>
       <HoverCardRoot>
