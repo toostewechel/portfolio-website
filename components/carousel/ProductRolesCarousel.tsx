@@ -84,7 +84,7 @@ const CarouselItem = styled("div", {
   },
 });
 
-export const CarouselExample = ({}) => {
+export const ProductRolesCarousel = ({}) => {
   return (
     <CarouselWrapper>
       <CarouselItem>

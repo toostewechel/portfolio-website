@@ -11,6 +11,7 @@ import { Personality } from "../components/widgets/Personality.tsx";
 import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";
 import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.tsx";
+import { Experience } from "../components/widgets/Experience.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -111,7 +112,7 @@ export default function WidgetsGrid() {
             datePosted="24 February, 2023"
           />
           <OperatingPrinciples />
-          <ExperienceWidget />
+          <Experience />
         </GridWidgetsLayout>
       </PageLayout>
       <div>

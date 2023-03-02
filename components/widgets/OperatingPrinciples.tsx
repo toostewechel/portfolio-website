@@ -44,14 +44,12 @@ const LinkToButtonIcon = styled("a", {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "100%",
-  color: "$bronze11",
+  color: "$olive11",
   padding: "$spacing-03",
   transition: "background 200ms ease-in",
-  background: "linear-gradient(135deg, #FBF4EA 0%, #E3DCD4 100%)",
-  border: "1px solid transparent",
-  outline: 0,
+  background: "linear-gradient(135deg, #F3F5F3 0%, #DBDDDB 100%)",
   boxShadow:
-    "-1px 1px 2px rgba(210, 204, 196, 0.2), 1px -1px 2px rgba(210, 204, 196, 0.2), -1px -1px 2px rgba(255, 255, 250, 0.9), 1px 1px 3px rgba(210, 204, 196, 0.9), inset 1px 1px 2px rgba(255, 255, 250, 0.3), inset -1px -1px 2px rgba(210, 204, 196, 0.5)",
+    "-1px 1px 2px rgba(173, 175, 173, 0.2), 1px -1px 2px rgba(173, 175, 173, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(173, 175, 173, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(173, 175, 173, 0.5)",
 });
 
 const ContentContainer = styled("div", {
