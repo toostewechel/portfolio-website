@@ -37,8 +37,8 @@ const CarouselAnimateVertical = keyframes({
 
 const CarouselWrapper = styled("div", {
   position: "relative",
-  
-	height: "100%",
+
+  height: "100%",
   maxWidth: "292px",
   display: "flex",
   justifyContent: "center",
@@ -67,7 +67,7 @@ const CarouselItem = styled("div", {
   "&:nth-child(4)": {
     animationDelay: "6s",
   },
-	"&:nth-child(5)": {
+  "&:nth-child(5)": {
     animationDelay: "9s",
   },
   "&:nth-child(6)": {
@@ -82,7 +82,6 @@ const CarouselItem = styled("div", {
   "&:last-child": {
     animationDelay: "-6s",
   },
-	
 });
 
 export const CarouselExample = ({}) => {
@@ -123,7 +122,7 @@ export const CarouselExample = ({}) => {
           description="Learning"
         />
       </CarouselItem>
-			<CarouselItem>
+      <CarouselItem>
         <Avatar
           src="/avatar/product-builder.png"
           name="Product Builder"

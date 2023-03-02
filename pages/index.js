@@ -9,6 +9,7 @@ import { Snapshot } from "../components/widgets/Snapshot.tsx";
 import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
 import { Personality } from "../components/widgets/Personality.tsx";
 import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
+import { Blogpost } from "../components/widgets/Blogpost.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -54,6 +55,19 @@ const ExperienceWidget = styled("div", {
   boxShadow: "$small",
   borderRadius: "16px",
 });
+const Heading = styled("h2", {
+  fontSize: "$3xl",
+  fontWeight: "$black",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tighter",
+  color: "$mauve12",
+  mb: "0",
+
+  "@bp1": {
+    fontSize: "$4xl",
+    mb: "$spacing-02",
+  },
+});
 
 export default function WidgetsGrid() {
   return (
@@ -62,12 +76,15 @@ export default function WidgetsGrid() {
 
       <PageLayout
         style={{
-          marginTop: "152px",
+          marginTop: "70px",
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
+          alignItems: "center",
           marginBottom: "232px",
         }}
       >
+        <Heading>Take a Peek</Heading>
         <GridWidgetsLayout>
           <ProfileInformation
             tagLabel="Open for Work"
@@ -84,8 +101,14 @@ export default function WidgetsGrid() {
           />
           <BookMeeting />
           <Personality />
-         	<CoreCompetencies />
-          <BlogPostWidget />
+          <CoreCompetencies />
+          <Blogpost
+            color="teal"
+            imageSrc="/widgets/blog-cover.png"
+            title="Living With a Linear Mind in an Exponential Age"
+            description="Why Personal Knowledge Management can help you thrive in an exponential age"
+            datePosted="24 February, 2023"
+          />
           <CollaborationWidget />
           <ExperienceWidget />
         </GridWidgetsLayout>

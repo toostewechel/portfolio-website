@@ -48,10 +48,10 @@ const ImageContainer = styled("div", {
   width: "264px",
   height: "264px",
 
-	"@bp2": {
-		height: "192px",
-		width: "192px",
-	}
+  "@bp2": {
+    height: "192px",
+    width: "192px",
+  },
 });
 
 const TitleContainer = styled("div", {
@@ -89,7 +89,7 @@ export const Personality = () => {
       <ImageContainer>
         <Image
           src="/widgets/advocate.png"
-					layout="responsive"
+          layout="responsive"
           height="296"
           width="296"
           alt="logo-advocate"
