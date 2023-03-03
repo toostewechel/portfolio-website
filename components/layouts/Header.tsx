@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
 import { IconButton } from "../button/IconButton.tsx";
 import AvatarStatusBadgePopover from "../popover/AvatarStatusBadgePopover.js";
+import { NavBar } from "./NavBar.tsx";
 
 const Container = styled("header", {
   display: "flex",
@@ -17,15 +18,14 @@ const Container = styled("header", {
   zIndex: 9999,
   borderBottomLeftRadius: "16px",
   borderBottomRightRadius: "16px",
-	backgroundColor: 'white',
+  backgroundColor: "white",
 
-	"@bp5": {
-		backgroundColor: "white",
-	},
-	"@bp6": {
-		backgroundColor: "transparent",
-	},
-
+  "@bp5": {
+    backgroundColor: "white",
+  },
+  "@bp6": {
+    backgroundColor: "transparent",
+  },
 });
 
 const LogoLink = styled("a", {
@@ -47,6 +47,13 @@ const StyledLogo = styled("img", {
   "@bp1": {
     width: "232px",
   },
+});
+
+const FlexBox = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "$spacing-02",
 });
 
 interface BlogHeaderProps {
@@ -115,15 +122,14 @@ export const BlogHeader = ({
         <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
         <IconButton href="/" ariaLabel="Close" tooltipLabel="Close">
           <X size={20} />
-        </IconButton>   
+        </IconButton>
       </Controls>
     </Container>
   );
 };
 
-
 export const Header = ({}) => {
-	// Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
+  // Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
   const [offsetY, setOffsetY] = useState(0);
   const [landingHeight, setLandingHeight] = useState(0);
   const bp4 = useMediaQuery({ maxWidth: 1440 });
@@ -142,9 +148,9 @@ export const Header = ({}) => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-	
-	return (
-		 <Container
+
+  return (
+    <Container
       style={{
         boxShadow:
           offsetY > 0 && bp4
@@ -155,7 +161,8 @@ export const Header = ({}) => {
       <LogoLink href="/">
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </LogoLink>
-			<AvatarStatusBadgePopover />
-     </Container>
+      <NavBar />
+      <AvatarStatusBadgePopover />
+    </Container>
   );
-}
+};

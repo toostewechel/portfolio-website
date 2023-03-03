@@ -38,7 +38,7 @@ const IconLink = styled("a", {
 interface Props {
   href: string;
   ariaLabel: string;
-	tooltipLabel: string;
+  tooltipLabel: string;
   children: any;
 }
 
@@ -47,9 +47,7 @@ export const IconButton = ({ href, ariaLabel, tooltipLabel, children }) => {
     <Provider>
       <Tooltip>
         <TooltipTrigger href={href}>
-          <IconLink aria-label={ariaLabel}>
-            {children}
-          </IconLink>
+          <IconLink aria-label={ariaLabel}>{children}</IconLink>
         </TooltipTrigger>
         <TooltipContent sideOffset={4}>{tooltipLabel}</TooltipContent>
       </Tooltip>

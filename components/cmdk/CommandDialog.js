@@ -108,7 +108,6 @@ const CommandDialog = () => (
       <div>
         <IconButton>
           <Search size={20} />
-          <ButtonLabel>Search</ButtonLabel>
         </IconButton>
       </div>
     </DialogTrigger>

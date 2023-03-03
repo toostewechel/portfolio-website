@@ -3,7 +3,7 @@ import { PageLayout } from "../components/layouts/Layout.js";
 import Landing from "../components/layouts/Landing.js";
 import LandingImage from "../components/blog/LandingImage.js";
 import LandingContent from "../components/readme/LandingContent.js";
-import Header from "../components/layouts/blocks/Header.js";
+import { Header } from "../components/layouts/Header.tsx";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import PersonalityBlock from "../components/pageblocks/PersonalityBlock.js";
 import CoreCompetenciesAccordion from "../components/accordion/CoreCompetenciesAccordion.js";
