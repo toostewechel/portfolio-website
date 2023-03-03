@@ -1,4 +1,5 @@
 import { styled } from "../../../stitches.config.js";
+import { PageLayout } from "../Layout.js";
 import {
   HoverCardRoot,
   HoverCardTrigger,
@@ -205,7 +206,8 @@ const Circle = styled("div", {
 
 function Footer() {
   return (
-    <>
+		<>
+    <PageLayout>
       <Container>
         <FooterHeaderContainer>
           <Box>
@@ -286,7 +288,9 @@ function Footer() {
           </Box>
         </FooterHeaderContainer>
       </Container>
-      <FooterMetaContainer>
+      
+  </PageLayout>
+		<FooterMetaContainer>
         <FlexBox>
           <Year>&copy; {CurrentYear} - Snapshots Labs</Year>
           <SocialButtonContainer>
@@ -311,7 +315,7 @@ function Footer() {
           </SocialButtonContainer>
         </FlexBox>
       </FooterMetaContainer>
-    </>
+			</>
   );
 }
 

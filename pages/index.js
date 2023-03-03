@@ -1,7 +1,6 @@
 import { styled } from "../stitches.config.js";
 import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
 import { Header } from "../components/layouts/Header.tsx";
-import Footer from "../components/layouts/blocks/Footer.js";
 import { Tag } from "../components/tag/Tag.tsx";
 import { ChevronsRight } from "lucide-react";
 import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";
@@ -12,6 +11,8 @@ import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";
 import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.tsx";
 import { Experience } from "../components/widgets/Experience.tsx";
+import Footer from "../components/layouts/blocks/Footer.js";
+import { ArrowUpRight } from "lucide-react";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -19,46 +20,24 @@ const Wrapper = styled("div", {
   backgroundPositionX: "center",
 });
 
-const PersonalityWidget = styled("div", {
-  gridArea: "pers",
+const ContentContainer = styled("div", {
   display: "flex",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
-  aspectRatio: "1/1",
+  flexDirection: "column",
+  marginBottom: "232px",
+  justifyContent: "center",
+  alignItems: "center",
+	marginTop: "72px",
 });
 
-const BlogPostWidget = styled("div", {
-  gridArea: "bp",
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
+const HeaderContainer = styled("div", {
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "space-between",
+	alignItems: "center",
+	width: "100%",
 });
 
-const CollaborationWidget = styled("div", {
-  gridArea: "col",
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
-});
-
-const ExperienceWidget = styled("div", {
-  gridArea: "exp",
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "$olive6",
-  boxShadow: "$small",
-  borderRadius: "16px",
-});
-
-const Heading = styled("h2", {
+const PageHeader = styled("h1", {
   fontSize: "$3xl",
   fontWeight: "$black",
   fontFamily: "$header",
@@ -72,48 +51,76 @@ const Heading = styled("h2", {
   },
 });
 
+const LabelContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: "$spacing-02",
+
+  variants: {
+    color: {
+      blue: {
+        color: "$blue10",
+      },
+      red: {
+        color: "$red10",
+      },
+      teal: {
+        color: "$teal10",
+      },
+    },
+  },
+});
+
+const Label = styled("a", {
+  fontFamily: "$mono",
+  fontWeight: "$medium",
+  lineHeight: "$none",
+  fontSize: "$base",
+	textDecoration: "underline",
+});
+
 export default function WidgetsGrid() {
   return (
     <Wrapper>
       <Header></Header>
-      <PageLayout
-        style={{
-          marginTop: "70px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          marginBottom: "232px",
-        }}
-      >
-        <Heading>Take a Peek</Heading>
-        <GridWidgetsLayout>
-          <ProfileInformation
-            tagLabel="Open for Work"
-            tagColor="teal"
-            hasIcon={false}
-            hasJob={false}
-          />
-          <Snapshot
-            type="Case Study"
-            title="Build Standardised eHealth Modules for Healthcare"
-            language="en"
-            backgroundColor="blue"
-            backgroundImage="/widgets/case-study-cover.png"
-          />
-          <BookMeeting />
-          <Personality />
-          <CoreCompetencies />
-          <Blogpost
-            color="teal"
-            imageSrc="/widgets/blog-cover.png"
-            title="Living With a Linear Mind in an Exponential Age"
-            description="Why Personal Knowledge Management can help you thrive in an exponential age"
-            datePosted="24 February, 2023"
-          />
-          <OperatingPrinciples />
-          <Experience />
-        </GridWidgetsLayout>
+      <PageLayout>
+        <ContentContainer>
+					<HeaderContainer>
+         		 <PageHeader>Take a Peek</PageHeader>
+						<LabelContainer>
+							<ArrowUpRight size={24} />
+							<Label>Version 1.0</Label>
+						</LabelContainer>
+					</HeaderContainer>
+          <GridWidgetsLayout>
+            <ProfileInformation
+              tagLabel="Open for Work"
+              tagColor="teal"
+              hasIcon={false}
+              hasJob={false}
+            />
+            <Snapshot
+              type="Case Study"
+              title="Build Standardised eHealth Modules for Healthcare"
+              language="en"
+              backgroundColor="blue"
+              backgroundImage="/widgets/case-study-cover.png"
+            />
+            <BookMeeting />
+            <Personality />
+            <CoreCompetencies />
+            <Blogpost
+              color="teal"
+              imageSrc="/widgets/blog-cover.png"
+              title="Living With a Linear Mind in an Exponential Age"
+              description="Why Personal Knowledge Management can help you thrive in an exponential age"
+              datePosted="24 February, 2023"
+            />
+            <OperatingPrinciples />
+            <Experience />
+          </GridWidgetsLayout>
+        </ContentContainer>
       </PageLayout>
       <div>
         <Footer />

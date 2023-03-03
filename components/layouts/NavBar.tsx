@@ -1,17 +1,23 @@
+import React, { useState, useEffect } from 'react';
 import { styled } from "../../stitches.config.js";
 import { IconButton } from "../button/IconButton.tsx";
 import { Home, Search } from "lucide-react";
 import { useRouter } from "next/router";
 import CommandDialog from "../cmdk/CommandDialog.js";
+import { motion } from "framer-motion";
 
 const Container = styled("nav", {
-  display: "flex",
+  display: "none",
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
   padding: "$spacing-03 $spacing-04",
   gap: "$spacing-03",
   borderRadius: "99px",
+
+  "@bp3": {
+    display: "flex",
+  },
 
   "@bp6": {
     background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
@@ -56,7 +62,38 @@ const MenuLabel = styled("p", {
 });
 
 export const NavBar = ({}) => {
+	const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+	const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // If scroll down hide the navbar
+        setShow(false); 
+      } else { // If scroll up show the navbar
+        setShow(true);  
+      }
+
+      // Remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+	useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // Cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+	
   return (
+		<motion.div
+			animate={{ scale: show ? "1" : "0" }}	
+			transition={{ type: "spring", stiffness: 100 }}
+		>
     <Container>
       <ActiveMenuItem href="/">
         <Home size={20} />
@@ -75,5 +112,6 @@ export const NavBar = ({}) => {
       </ActiveMenuItem>
       <CommandDialog />
     </Container>
+	</motion.div>
   );
 };
