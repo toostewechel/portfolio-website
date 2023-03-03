@@ -14,13 +14,14 @@ import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.t
 import { Experience } from "../components/widgets/Experience.tsx";
 import Footer from "../components/layouts/blocks/Footer.js";
 import { ArrowUpRight } from "lucide-react";
-
-
+import BlogpostsBlock from "../components/home/pageblocks/BlogpostsBlock.js";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines-red.svg)",
   backgroundPositionX: "center",
+	height: "100%",
+
 });
 
 const ContentContainer = styled("div", {
@@ -32,45 +33,14 @@ const ContentContainer = styled("div", {
 	marginTop: "72px",
 });
 
-export default function WidgetsGrid() {
+export default function BlogPost() {
   return (
     <Wrapper>
       <Header></Header>
-      <PageLayout>
-        <ContentContainer>
-          <GridWidgetsLayout>
-						<GridHeader />
-            <ProfileInformation
-              tagLabel="Open for Work"
-              tagColor="teal"
-              hasIcon={false}
-              hasJob={false}
-            />
-            <Snapshot
-              type="Case Study"
-              title="Build Standardised eHealth Modules for Healthcare"
-              language="en"
-              backgroundColor="blue"
-              backgroundImage="/widgets/case-study-cover.png"
-            />
-            <BookMeeting />
-            <Personality />
-            <CoreCompetencies />
-            <Blogpost
-              color="teal"
-              imageSrc="/widgets/blog-cover.png"
-              title="Living With a Linear Mind in an Exponential Age"
-              description="Why Personal Knowledge Management can help you thrive in an exponential age"
-              datePosted="24 February, 2023"
-            />
-            <OperatingPrinciples />
-            <Experience />
-          </GridWidgetsLayout>
-        </ContentContainer>
+      <PageLayout style={{marginTop: "70px"}}>
+       <BlogpostsBlock />
       </PageLayout>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </Wrapper>
   );
 }

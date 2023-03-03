@@ -1,5 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import { Tag } from "../tag/Tag.tsx";
+import { motion } from "framer-motion";
 
 const Container = styled("a", {
   m: 0,
@@ -9,10 +10,12 @@ const Container = styled("a", {
   border: "2px solid $mauve6",
   willChange: "transform",
   transition: "all, 300ms ease-in",
-  background: "white",
+  background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
   width: "100%",
   height: "100%",
   outline: 0,
+	boxShadow:
+    "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
 
   "@bp2": {
     m: "$none $spacing-02 $spacing-02 $spacing-02",

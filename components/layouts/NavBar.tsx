@@ -107,7 +107,7 @@ export const NavBar = ({}) => {
       <ActiveMenuItem href="">
         <MenuLabel>Projects</MenuLabel>
       </ActiveMenuItem>
-      <ActiveMenuItem href="">
+      <ActiveMenuItem href="/blog">
         <MenuLabel>Blog</MenuLabel>
       </ActiveMenuItem>
       <CommandDialog />
