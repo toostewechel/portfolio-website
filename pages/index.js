@@ -1,6 +1,6 @@
 import { styled } from "../stitches.config.js";
 import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
-import Header from "../components/layouts/blocks/Header.js";
+import { Header } from "../components/layouts/Header.tsx";
 import Footer from "../components/layouts/blocks/Footer.js";
 import { Tag } from "../components/tag/Tag.tsx";
 import { ChevronsRight } from "lucide-react";

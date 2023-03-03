@@ -5,6 +5,7 @@ import { ReadingProgressBar } from "../progress/ReadingProgressBar.js";
 import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
 import { IconButton } from "../button/IconButton.tsx";
+import AvatarStatusBadgePopover from "../popover/AvatarStatusBadgePopover.js";
 
 const Container = styled("header", {
   display: "flex",
@@ -14,21 +15,20 @@ const Container = styled("header", {
   position: "sticky",
   top: -1,
   zIndex: 9999,
-  backgroundColor: "white",
   borderBottomLeftRadius: "16px",
   borderBottomRightRadius: "16px",
+	backgroundColor: 'white',
 
-  "@bp5": {
-    boxShadow: "none",
-    padding: "$spacing-05",
-  },
-  "@bp6": {
-    backgroundColor: "transparent",
-    boxShadow: "none",
-  },
+	"@bp5": {
+		backgroundColor: "white",
+	},
+	"@bp6": {
+		backgroundColor: "transparent",
+	},
+
 });
 
-const ImageLink = styled("a", {
+const LogoLink = styled("a", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -69,7 +69,7 @@ export const BlogHeader = ({
   // Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
   const [offsetY, setOffsetY] = useState(0);
   const [landingHeight, setLandingHeight] = useState(0);
-  const bp4 = useMediaQuery({ maxWidth: 1024 });
+  const bp4 = useMediaQuery({ maxWidth: 1234 });
   const bp5 = useMediaQuery({ minWidth: 1440 });
 
   // Reset viewport height on page render
@@ -89,7 +89,7 @@ export const BlogHeader = ({
       setOffsetY(window.pageYOffset);
     };
     window.addEventListener("scroll", onScroll);
-    return () => window.removelEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -102,9 +102,9 @@ export const BlogHeader = ({
         backgroundColor: offsetY > landingHeight && bp5 ? "#F8F8F8" : null,
       }}
     >
-      <ImageLink href="/">
+      <LogoLink href="/">
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
-      </ImageLink>
+      </LogoLink>
       <Controls>
         <ShareToPopover
           whatsapp={whatsapp}
@@ -120,3 +120,42 @@ export const BlogHeader = ({
     </Container>
   );
 };
+
+
+export const Header = ({}) => {
+	// Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
+  const [offsetY, setOffsetY] = useState(0);
+  const [landingHeight, setLandingHeight] = useState(0);
+  const bp4 = useMediaQuery({ maxWidth: 1440 });
+
+  // Reset viewport height on page render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setOffsetY(0);
+  }, []);
+
+  // Create scroll function to update offsetY state on mouse scroll
+  useEffect(() => {
+    const onScroll = () => {
+      setOffsetY(window.pageYOffset);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+	
+	return (
+		 <Container
+      style={{
+        boxShadow:
+          offsetY > 0 && bp4
+            ? "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)"
+            : "none",
+      }}
+    >
+      <LogoLink href="/">
+        <StyledLogo src="/logo/snapshots-labs-logo.png" />
+      </LogoLink>
+			<AvatarStatusBadgePopover />
+     </Container>
+  );
+}
