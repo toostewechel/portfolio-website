@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import ProgressBar from "./Progress.js";
+import { ScrollYProgressBar } from "./ScrollYProgressBar.tsx";
 
 const ReadingProgressBarContainer = styled("div", {
   display: "flex",
@@ -95,7 +96,7 @@ export const ReadingProgressBar = ({ targetRef, gradient }) => {
       <ProgressBarContainer>
         <ProgressLabel>{RoundReadingProgress}%</ProgressLabel>
         <ProgressBarOuter>
-          <ProgressBar gradient={gradient} value={readingProgress} />
+          <ScrollYProgressBar gradient={gradient} />
         </ProgressBarOuter>
       </ProgressBarContainer>
     </ReadingProgressBarContainer>

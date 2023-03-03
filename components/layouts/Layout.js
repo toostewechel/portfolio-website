@@ -22,7 +22,7 @@ export const GridWidgetsLayout = styled("div", {
   gridTemplateAreas: `
 		"pfi"
 		"pers"
-		"cs"
+		"ss"
 		"cc"
 		"col"
 		"bm"
@@ -37,7 +37,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateColumns: "repeat(2, 290px)",
     gridTemplateAreas: `
 		"pfi pfi"
-		"cs pers"
+		"ss pers"
 		"cc cc"
 		"bm col"
 		"bm exp"
@@ -50,7 +50,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateColumns: "repeat(2, 290px)",
     gridTemplateAreas: `
 		"pfi pfi"
-		"cs pers"
+		"ss pers"
 		"cc cc"
 		"bm col"
 		"bm exp"
@@ -62,7 +62,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateRows: "repeat(4, 290px)",
     gridTemplateColumns: "repeat(3, 290px)",
     gridTemplateAreas: `
-		"pfi pfi cs"
+		"pfi pfi ss"
 		"pers cc cc"
 		"bm col exp"
 		"bm bp bp"
@@ -73,7 +73,7 @@ export const GridWidgetsLayout = styled("div", {
     gridTemplateRows: "repeat(3, 290px)",
     gridTemplateColumns: "repeat(4, 290px)",
     gridTemplateAreas: `
-		"pfi pfi cs bm"
+		"pfi pfi ss bm"
 		"pers cc cc bm"
 		"bp bp col exp"
  `,

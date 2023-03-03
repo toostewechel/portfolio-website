@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WidgetContainer = styled("div", {
-  gridArea: "cs",
+  gridArea: "ss",
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-09",

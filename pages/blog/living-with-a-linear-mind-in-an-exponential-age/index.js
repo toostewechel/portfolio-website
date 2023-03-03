@@ -4,6 +4,7 @@ import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
 
 //Blog Header & Footer
+import { BlogHeader } from "../../../components/layouts/Header.tsx";
 import Header from "../../../components/blog/Header.js";
 import Footer from "../../../components/layouts/blocks/Footer.js";
 
@@ -76,7 +77,7 @@ export default function BlogPostPage() {
   const targetRef = createRef();
   return (
     <div ref={targetRef}>
-      <Header targetRef={targetRef} progressBarGradient="teal" />
+      <BlogHeader targetRef={targetRef} gradient="teal" />
       <article>
         <Landing
           accentColor="teal"

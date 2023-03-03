@@ -83,7 +83,7 @@ export default function ProgressBar({ gradient, progressValue, helpText }) {
         <InnerContainer>
           <StyledProgressIndicator
             gradient={gradient}
-            style={{ transform: `translateX(-${100 - progress}%)` }}
+            style={{ transform: `translateX(-${100 - progressValue}%)` }}
           />
         </InnerContainer>
       </StyledProgress>
