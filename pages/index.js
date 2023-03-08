@@ -55,6 +55,7 @@ export default function WidgetsGrid() {
             <Personality />
             <CoreCompetencies />
             <Blogpost
+							href="/blog/design-for-accessibility/"
               color="crimson"
               imageSrc="/widgets/cover-image-design-for-healthcare.png"
               title="Design for Accessibility"

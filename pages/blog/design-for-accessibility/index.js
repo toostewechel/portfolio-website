@@ -1,144 +1,208 @@
+//Default Imports
 import { createRef } from "react";
 import Head from "next/head";
+import { styled } from "../../../stitches.config.js";
 
-import {
-  BlogContentLayout,
-  BlogMarkdownContent,
-} from "../../../components/layouts/Layout.js";
+//Blog Header & Footer
+import { BlogHeader } from "../../../components/layouts/Header.tsx";
 import Header from "../../../components/blog/Header.js";
-import Landing from "../../../components/blog/Landing.js";
+import Footer from "../../../components/layouts/blocks/Footer.js";
+
+//Blog Landing Components
+import Landing from "../../../components/layouts/Landing.js";
 import LandingContent from "../../../components/blog/LandingContent.js";
 import LandingImage from "../../../components/blog/LandingImage.js";
-import Chapter from "../../../components/blog/Chapter.js";
-import ChapterContent from "../../../components/blog/ChapterContent.js";
-import ChapterImage from "../../../components/blog/ChapterImage.js";
+
+//HoverCard Components
+import {
+  HoverCardRoot,
+  HoverCardTrigger,
+  HoverCardPanel,
+} from "../../../components/card/HoverCard.js";
+
+//Blog Content Layout
+import {
+  BlogContentLayout,
+  BlogMarkdownContentLayout,
+} from "../../../components/layouts/Layout.js";
+
+//Blog NavBar
 import NavBar from "../../../components/blog/NavBar.js";
-import MarkdownContentBlock from "../../../components/blog/MarkdownContentBlock.js";
+
+//Blog Content Components
 import {
   KeyTakeawaysCollapsible,
   ListItem,
 } from "../../../components/blog/KeyTakeawaysCollapsible.js";
+import MarkdownContentBlock from "../../../components/blog/MarkdownContentBlock.js";
+
+//Blog Chapter Components
+import Chapter from "../../../components/blog/Chapter.js";
+import ChapterContent from "../../../components/blog/ChapterContent.js";
+import ChapterImage from "../../../components/blog/ChapterImage.js";
+
+//Content
 import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
 import Chapter3 from "./03-chapter.mdx";
-import Footer from "../../../components/layouts/blocks/Footer.js";
+import Chapter4 from "./04-chapter.mdx";
 
-const shareTo = {
-  whatsapp: "https://www.whatsapp.com/",
-  facebook: "https://www.facebook.com/",
-  twitter:
-    "https://twitter.com/intent/tweet?text=Ontwerpen%20voor%20toegankelijkheid%20maakt%20de%20gebruikservaring%20beter%20voor%20iedereen%2C%20ongeacht%20beperking.&url=https%3A%2F%2Fpersonal-website.toostewechel.repl.co%2Fblog%2Fdesign-for-healthcare",
-  linkedin: "https://www.linkedin.com/",
-};
+//ShareToLinks Object
+const shareTo = {};
 
-function Index() {
+//Custom Component
+const PoweredByBadge = styled("a", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "$mauve12",
+  transition: "background 300ms ease-in",
+  background: "transparent",
+  padding: "$spacing-03",
+  borderRadius: "6px",
+  border: "1px solid transparent",
+  fontFamily: "$default",
+  fontSize: "$xs",
+  width: "280px",
+	gap: "$spacing-02",
+
+  "&:hover": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauveA9",
+    border: "1px solid $mauveA11",
+  },
+});
+
+export default function BlogPostPage() {
+  //Create Ref for ReadingProgressBar
   const targetRef = createRef();
   return (
-    <>
-      <Head>
-        <title>Snapshots Labs - Blog</title>
-        <meta
-          name="description"
-          content="Snapshots Labs is a portfolio site with a curated overview of my professional and personal work throughout the years as product designer."
+    <div ref={targetRef}>
+      <BlogHeader targetRef={targetRef} gradient="crimson" />
+      <article>
+        <Landing
+          accentColor="crimson"
+          LandingContent={
+            <LandingContent
+              href="#blog-content"
+              avatarImage="/avatar/avatar-tom-oostewechel.png"
+              avatarLabel="Tom Oostewechel"
+              avatarDescription="Author"
+              datePosted="11 Feb, 2020"
+              blogTitle="Design Accessible Experiences for the Healthcare Sector"
+              blogDescription="In deze blogpost lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
+            />
+          }
+          LandingImage={
+            <LandingImage src="/blog/design-for-accessibility/landing.png" />
+          }
+          HoverCardContent={
+            <HoverCardRoot>
+              <HoverCardTrigger asChild>
+                <PoweredByBadge href="https://www.jeroenkrul.nl/" target="_blank">
+                  <p>Illustration by </p>
+                  <img
+                    style={{ height: "24px" }}
+                    src="/badges/jeroen-krul-badge.png"
+                    alt="Jeroen Krul Logo"
+                  />
+                </PoweredByBadge>
+              </HoverCardTrigger>
+              <HoverCardPanel
+                logo="/avatar/jeroen-krul.png"
+                title="Jeroen Krul"
+                socialHandle="@jeroenkrul"
+                description="In mijn werk ben ik voortdurend op zoek naar de balans tussen illustratie en verhaal. Daarvoor gebruik ik zowel analoge als digitale methoden en vaak gecombineerd"
+                followingCount="993"
+                followersCount="1,42K"
+              />
+            </HoverCardRoot>
+          }
         />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@boonikad93" />
-        <meta name="twitter:title" content="Snapshots Labs" />
-        <meta
-          name="twitter:description"
-          content="Snapshots Labs is a portfolio site with a curated overview of my professional and personal work throughout the years as product designer."
-        />
-        <meta
-          name="twitter:image"
-          content="https://origintrail.club/socials/twitter/placeholder-twitter.jpg"
-        />
-        <meta name="twitter:image:alt" content="Origintrail Community Hub" />
-
-        <meta property="og:title" content="Origintrail Community Hub" />
-        <meta
-          property="og:description"
-          content="Snapshots Labs is a portfolio site with a curated overview of my professional and personal work throughout the years as product designer."
-        />
-        <meta
-          property="og:image"
-          content="https://origintrail.club/socials/open-graph/placeholder-og.jpg"
-        />
-        <meta property="og:site_name" content="Snapshots Labs" />
-      </Head>
-      <div ref={targetRef}>
-        <Header
-          targetRef={targetRef}
-          whatsapp={shareTo.whatsapp}
-          facebook={shareTo.facebook}
-          twitter={shareTo.twitter}
-          linkedin={shareTo.linkedin}
-          gradient="design"
-        />
-        <article>
-          <Landing
-            AccentColor="crimson"
-            LandingContent={
-              <LandingContent
-                AvatarImage="/avatar/avatar-tom-oostewechel.png"
-                AvatarLabel="Tom Oostewechel"
-                AvatarDescription="Author"
-                DatePosted="4 Feb, 2022"
-                HeadingTitle="Design Accessible Experiences for the Industry"
-                Description="Easily convert paper healthcare protocols and methods, 			without technical knowledge, into tailor-made, user friendly online modules and launch in production within weeks instead of months."
+        <BlogContentLayout id="blog-content">
+          <NavBar activePageTitle="Living With a Linear Mind in an Exponential Age" />
+          <BlogMarkdownContentLayout>
+            <KeyTakeawaysCollapsible accentColor="teal"></KeyTakeawaysCollapsible>
+            <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-02"
+                chapterNumber="02"
+                accentColor="teal"
+                chapterTitle="The Enemies and Limitations of Our Brain"
+                chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
               />
             }
-            LandingImage={
-              <LandingImage Image="/images/landing-image-blog.png" />
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+            }
+            HoverCardContent={
+              <HoverCardRoot>
+                <HoverCardTrigger asChild>
+                  <PoweredByBadge href="https://midjourney.com" target="_blank">
+                    <p>Illustration by </p>
+                    <img
+                      style={{ height: "32px" }}
+                      src="/badges/midjourney-logo-badge.png"
+                      alt="Midjourney Logo"
+                    />
+                  </PoweredByBadge>
+                </HoverCardTrigger>
+                <HoverCardPanel
+                  logo="/avatar/midjourney.png"
+                  title="Midjourney"
+                  socialHandle="@midjourney"
+                  description="New research lab. Exploring new mediums of thought. Expanding the imaginative powers of the human species."
+                  followingCount="0"
+                  followersCount="190,4K"
+                />
+              </HoverCardRoot>
             }
           />
-
-          <BlogContentLayout>
-            <NavBar ActivePageTitle="Design Accessible Experiences for the Healthcare Sector" />
-
-            <BlogMarkdownContent>
-              <KeyTakeawaysCollapsible>
-                <ListItem>
-                  Easily convert paper healthcare protocols and methods, without
-                  technical knowledge, into tailor-made, user friendly online
-                  modules{" "}
-                </ListItem>
-                <ListItem>
-                  Easily convert paper healthcare protocols and methods, without
-                  technical knowledge, into tailor-made, user friendly online
-                  modules{" "}
-                </ListItem>
-                <ListItem>
-                  Easily convert paper healthcare protocols and methods, without
-                  technical knowledge, into tailor-made, user friendly online
-                  modules{" "}
-                </ListItem>
-                <ListItem>
-                  Easily convert paper healthcare protocols and methods, without
-                  technical knowledge, into tailor-made, user friendly online
-                  modules{" "}
-                </ListItem>
-              </KeyTakeawaysCollapsible>
-              <MarkdownContentBlock chapter="1" Content={Chapter1} />
-            </BlogMarkdownContent>
-            <Chapter
-              ChapterContent={
-                <ChapterContent
-                  ChapterTitle="Toegankelijkheid is keuzevrijheid hebben, contextafhankelijk en inclusief"
-                  ChapterDescription="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
-                />
-              }
-              ChapterImage={<ChapterImage Image="/images/blog-chapter-2.png" />}
-            />
-            <BlogMarkdownContent>
-              <div></div>
-              <MarkdownContentBlock chapter="2" Content={Chapter2} />
-            </BlogMarkdownContent>
-          </BlogContentLayout>
-        </article>
-      </div>
-    </>
+          <BlogMarkdownContentLayout id="chapter-02">
+            <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-03"
+                chapterNumber="03"
+                accentColor="teal"
+                chapterTitle="Change Your Mindset and Keep It Simple"
+                chapterDescription="Personal knowledge management is about personal growth and a shifting mindset. A good application requires habit change, deliberate practice, and perseverance. Good solutions are simple and provide structure, enabling trust and flow."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-03.png" />
+            }
+          />
+          <BlogMarkdownContentLayout id="chapter-03">
+            <MarkdownContentBlock chapter="chapter-03" Content={Chapter3} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="teal"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-04"
+                chapterNumber="04"
+                accentColor="teal"
+                chapterTitle="Organise Knowledge by Balancing Structure and Flexibility"
+                chapterDescription="A critical trade-off we should make for the design of our system is the balance between structure and flexibility. Finding the right balance between the two is critical to designing a stable system that provides direction and adapts to changing circumstances and needs."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+            }
+          />
+          <BlogMarkdownContentLayout id="chapter-04">
+            <MarkdownContentBlock chapter="chapter-04" Content={Chapter4} />
+          </BlogMarkdownContentLayout>
+        </BlogContentLayout>
+      </article>
+    </div>
   );
 }
-
-export default Index;
