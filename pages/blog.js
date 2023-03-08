@@ -20,8 +20,7 @@ const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines-red.svg)",
   backgroundPositionX: "center",
-	height: "100%",
-
+  height: "100%",
 });
 
 const ContentContainer = styled("div", {
@@ -30,15 +29,15 @@ const ContentContainer = styled("div", {
   marginBottom: "232px",
   justifyContent: "center",
   alignItems: "center",
-	marginTop: "72px",
+  marginTop: "72px",
 });
 
 export default function BlogPost() {
   return (
     <Wrapper>
       <Header></Header>
-      <PageLayout style={{marginTop: "70px"}}>
-       <BlogpostsBlock />
+      <PageLayout style={{ marginTop: "70px" }}>
+        <BlogpostsBlock />
       </PageLayout>
       <Footer />
     </Wrapper>

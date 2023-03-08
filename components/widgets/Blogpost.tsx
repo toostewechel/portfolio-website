@@ -10,8 +10,11 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const WidgetContainer = styled(motion.div, {
+const Link = styled("a", {
   gridArea: "bp",
+});
+
+const WidgetContainer = styled(motion.div, {
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-07",
@@ -70,6 +73,11 @@ const ImageContainer = styled("div", {
       teal: {
         background: "linear-gradient(149.31deg, #EEFADC 0%, #C7EBE5 100%)",
         border: "1px solid $teal6",
+      },
+      crimson: {
+        background:
+          "linear-gradient(166.69deg, rgba(249, 229, 249, 0.75) 3.84%, #FCE5F0 90.43%)",
+        border: "1px solid $crimson6",
       },
     },
   },
@@ -161,6 +169,7 @@ interface Props {
   title: string;
   description: string;
   datePosted: string;
+  href: string;
 }
 
 export const Blogpost = ({
@@ -169,35 +178,38 @@ export const Blogpost = ({
   title,
   description,
   datePosted,
+  href,
 }: Props) => {
   return (
-    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-      <LinkToButtonIcon>
-        <ArrowUpRight size={20} />
-      </LinkToButtonIcon>
-      <ImageLayout>
-        <ImageContainer color={color}>
-          <Image
-            src={imageSrc}
-            layout="responsive"
-            height="296"
-            width="296"
-            alt="Blogpost Cover Image"
-          />
-        </ImageContainer>
-      </ImageLayout>
-      <BlogDetailsLayout>
-        <LabelContainer color={color}>
-          <Label>Latest Blog Post</Label>
-          <Inbox size={17} />
-        </LabelContainer>
-        <CardTitle>{title}</CardTitle>
-        <Text>{description}</Text>
-        <LabelContainer color="gray">
-          <Calendar size={17} />
-          <DateLabel>{datePosted}</DateLabel>
-        </LabelContainer>
-      </BlogDetailsLayout>
-    </WidgetContainer>
+    <Link href={href}>
+      <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+        <LinkToButtonIcon>
+          <ArrowUpRight size={20} />
+        </LinkToButtonIcon>
+        <ImageLayout>
+          <ImageContainer color={color}>
+            <Image
+              src={imageSrc}
+              layout="responsive"
+              height="296"
+              width="296"
+              alt="Blogpost Cover Image"
+            />
+          </ImageContainer>
+        </ImageLayout>
+        <BlogDetailsLayout>
+          <LabelContainer color={color}>
+            <Label>Latest Blog Post</Label>
+            <Inbox size={17} />
+          </LabelContainer>
+          <CardTitle>{title}</CardTitle>
+          <Text>{description}</Text>
+          <LabelContainer color="gray">
+            <Calendar size={17} />
+            <DateLabel>{datePosted}</DateLabel>
+          </LabelContainer>
+        </BlogDetailsLayout>
+      </WidgetContainer>
+    </Link>
   );
 };

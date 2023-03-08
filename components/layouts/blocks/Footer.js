@@ -206,91 +206,99 @@ const Circle = styled("div", {
 
 function Footer() {
   return (
-		<>
-    <PageLayout>
-      <Container>
-        <FooterHeaderContainer>
-          <Box>
-            <Logo
-              src="/logo/snapshots-labs-logo.png"
-              alt="Snapshots Labs Logo"
-            />
-            <Description>
-              Personal portfolio site of Tom Oostewechel with a curated overview
-              of my professional and personal work
-            </Description>
-            <SiteMapContainer>
-              <Link href="/design-vision">Design Vision</Link>
-              <Circle />
-              <Link href="/personal-overview">Personal Overview</Link>
-              <Circle />
-              <Link href="/release-notes">Release Notes</Link>
-            </SiteMapContainer>
-          </Box>
-          <Box>
-            <PoweredByContainer>
-              <Label>Powered By</Label>
-              <Line />
-            </PoweredByContainer>
-            <PoweredByLogoContainer>
-              <HoverCardRoot>
-                <HoverCardTrigger asChild>
-                  <PoweredByBadge href="https://spline.design/" target="_blank">
-                    <img
-                      src="/badges/spline-logo-badge.png"
-                      alt="Spline 3D Logo"
-                    />
-                  </PoweredByBadge>
-                </HoverCardTrigger>
-                <HoverCardPanel
-                  logo="/logo/spline3d-logo.png"
-                  title="Spline 3D"
-                  socialHandle="@splinetool"
-                  description="A friendly 3D multiplayer design tool that runs in the browser."
-                  followingCount="4.018"
-                  followersCount="53,2K"
-                />
-              </HoverCardRoot>
-              <HoverCardRoot>
-                <HoverCardTrigger asChild>
-                  <PoweredByBadge href="https://akash.network/" target="_blank">
-                    <img src="/badges/akash-logo-badge.png" alt="Akash Logo" />
-                  </PoweredByBadge>
-                </HoverCardTrigger>
-                <HoverCardPanel
-                  logo="/logo/akash-logo.png"
-                  title="Akash Network"
-                  socialHandle="@akashnet_"
-                  description="A decentralised, open and peer-to-peer marketplace for cloud resources"
-                  followingCount="319"
-                  followersCount="85,8K"
-                />
-              </HoverCardRoot>
-              <HoverCardRoot>
-                <HoverCardTrigger asChild>
-                  <PoweredByBadge href="https://replit.com/" target="_blank">
-                    <img
-                      src="/badges/replit-logo-badge.png"
-                      alt="Replit Logo"
-                    />
-                  </PoweredByBadge>
-                </HoverCardTrigger>
-                <HoverCardPanel
-                  logo="/logo/replit-logo.png"
-                  title="Replit"
-                  socialHandle="@replit"
-                  description="Build software collaboratively from anywhere in the world, on any device, without spending a second on setup."
-                  followingCount="1.091"
-                  followersCount="73,4K"
-                />
-              </HoverCardRoot>
-            </PoweredByLogoContainer>
-          </Box>
-        </FooterHeaderContainer>
-      </Container>
-      
-  </PageLayout>
-		<FooterMetaContainer>
+    <>
+      <PageLayout>
+        <Container>
+          <FooterHeaderContainer>
+            <Box>
+              <Logo
+                src="/logo/snapshots-labs-logo.png"
+                alt="Snapshots Labs Logo"
+              />
+              <Description>
+                Personal portfolio site of Tom Oostewechel with a curated
+                overview of my professional and personal work
+              </Description>
+              <SiteMapContainer>
+                <Link href="/design-vision">Design Vision</Link>
+                <Circle />
+                <Link href="/personal-overview">Personal Overview</Link>
+                <Circle />
+                <Link href="/release-notes">Release Notes</Link>
+              </SiteMapContainer>
+            </Box>
+            <Box>
+              <PoweredByContainer>
+                <Label>Powered By</Label>
+                <Line />
+              </PoweredByContainer>
+              <PoweredByLogoContainer>
+                <HoverCardRoot>
+                  <HoverCardTrigger asChild>
+                    <PoweredByBadge
+                      href="https://spline.design/"
+                      target="_blank"
+                    >
+                      <img
+                        src="/badges/spline-logo-badge.png"
+                        alt="Spline 3D Logo"
+                      />
+                    </PoweredByBadge>
+                  </HoverCardTrigger>
+                  <HoverCardPanel
+                    logo="/logo/spline3d-logo.png"
+                    title="Spline 3D"
+                    socialHandle="@splinetool"
+                    description="A friendly 3D multiplayer design tool that runs in the browser."
+                    followingCount="4.018"
+                    followersCount="53,2K"
+                  />
+                </HoverCardRoot>
+                <HoverCardRoot>
+                  <HoverCardTrigger asChild>
+                    <PoweredByBadge
+                      href="https://akash.network/"
+                      target="_blank"
+                    >
+                      <img
+                        src="/badges/akash-logo-badge.png"
+                        alt="Akash Logo"
+                      />
+                    </PoweredByBadge>
+                  </HoverCardTrigger>
+                  <HoverCardPanel
+                    logo="/logo/akash-logo.png"
+                    title="Akash Network"
+                    socialHandle="@akashnet_"
+                    description="A decentralised, open and peer-to-peer marketplace for cloud resources"
+                    followingCount="319"
+                    followersCount="85,8K"
+                  />
+                </HoverCardRoot>
+                <HoverCardRoot>
+                  <HoverCardTrigger asChild>
+                    <PoweredByBadge href="https://replit.com/" target="_blank">
+                      <img
+                        src="/badges/replit-logo-badge.png"
+                        alt="Replit Logo"
+                      />
+                    </PoweredByBadge>
+                  </HoverCardTrigger>
+                  <HoverCardPanel
+                    logo="/logo/replit-logo.png"
+                    title="Replit"
+                    socialHandle="@replit"
+                    description="Build software collaboratively from anywhere in the world, on any device, without spending a second on setup."
+                    followingCount="1.091"
+                    followersCount="73,4K"
+                  />
+                </HoverCardRoot>
+              </PoweredByLogoContainer>
+            </Box>
+          </FooterHeaderContainer>
+        </Container>
+      </PageLayout>
+      <FooterMetaContainer>
         <FlexBox>
           <Year>&copy; {CurrentYear} - Snapshots Labs</Year>
           <SocialButtonContainer>
@@ -315,7 +323,7 @@ function Footer() {
           </SocialButtonContainer>
         </FlexBox>
       </FooterMetaContainer>
-			</>
+    </>
   );
 }
 

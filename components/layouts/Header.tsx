@@ -53,9 +53,9 @@ const FlexBox = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-	justifyContent: "flex-end",
+  justifyContent: "flex-end",
   gap: "$spacing-02",
-	width: "232px",
+  width: "232px",
 });
 
 interface BlogHeaderProps {
@@ -164,9 +164,9 @@ export const Header = ({}) => {
         <StyledLogo src="/logo/snapshots-labs-logo.png" />
       </LogoLink>
       <NavBar />
-			<FlexBox >
-      	<AvatarStatusBadgePopover />
-			</FlexBox>
+      <FlexBox>
+        <AvatarStatusBadgePopover />
+      </FlexBox>
     </Container>
   );
 };

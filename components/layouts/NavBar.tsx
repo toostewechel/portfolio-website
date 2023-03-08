@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import { IconButton } from "../button/IconButton.tsx";
 import { Home, Search } from "lucide-react";
@@ -62,56 +62,58 @@ const MenuLabel = styled("p", {
 });
 
 export const NavBar = ({}) => {
-	const [show, setShow] = useState(true);
+  const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-	const controlNavbar = () => {
-    if (typeof window !== 'undefined') { 
-      if (window.scrollY > lastScrollY) { // If scroll down hide the navbar
-        setShow(false); 
-      } else { // If scroll up show the navbar
-        setShow(true);  
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // If scroll down hide the navbar
+        setShow(false);
+      } else {
+        // If scroll up show the navbar
+        setShow(true);
       }
 
       // Remember current page location to use in the next move
-      setLastScrollY(window.scrollY); 
+      setLastScrollY(window.scrollY);
     }
   };
 
-	useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
 
       // Cleanup function
       return () => {
-        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener("scroll", controlNavbar);
       };
     }
   }, [lastScrollY]);
-	
+
   return (
-		<motion.div
-			animate={{ scale: show ? "1" : "0" }}	
-			transition={{ type: "spring", stiffness: 100 }}
-		>
-    <Container>
-      <ActiveMenuItem href="/">
-        <Home size={20} />
-      </ActiveMenuItem>
-      <ActiveMenuItem href="/readme">
-        <MenuLabel>About</MenuLabel>
-      </ActiveMenuItem>
-      <ActiveMenuItem href="">
-        <MenuLabel>Experience</MenuLabel>
-      </ActiveMenuItem>
-      <ActiveMenuItem href="">
-        <MenuLabel>Projects</MenuLabel>
-      </ActiveMenuItem>
-      <ActiveMenuItem href="/blog">
-        <MenuLabel>Blog</MenuLabel>
-      </ActiveMenuItem>
-      <CommandDialog />
-    </Container>
-	</motion.div>
+    <motion.div
+      animate={{ scale: show ? "1" : "0" }}
+      transition={{ type: "spring", stiffness: 100 }}
+    >
+      <Container>
+        <ActiveMenuItem href="/">
+          <Home size={20} />
+        </ActiveMenuItem>
+        <ActiveMenuItem href="/readme">
+          <MenuLabel>About</MenuLabel>
+        </ActiveMenuItem>
+        <ActiveMenuItem href="">
+          <MenuLabel>Experience</MenuLabel>
+        </ActiveMenuItem>
+        <ActiveMenuItem href="">
+          <MenuLabel>Projects</MenuLabel>
+        </ActiveMenuItem>
+        <ActiveMenuItem href="/blog">
+          <MenuLabel>Blog</MenuLabel>
+        </ActiveMenuItem>
+        <CommandDialog />
+      </Container>
+    </motion.div>
   );
 };
