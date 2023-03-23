@@ -40,7 +40,7 @@ export default function WidgetsGrid() {
             <GridHeader />
             <ProfileInformation
               tagLabel="Employed"
-              tagColor="teal"
+              tagColor="orange"
               hasIcon={false}
               hasJob={true}
             />
@@ -55,12 +55,12 @@ export default function WidgetsGrid() {
             <Personality />
             <CoreCompetencies />
             <Blogpost
-              href="/blog/design-for-accessibility/"
-              color="crimson"
-              imageSrc="/widgets/cover-image-design-for-healthcare.png"
-              title="Design for Accessibility"
-              description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen, ongeacht beperking"
-              datePosted="24 February, 2020"
+              href="/blog/living-with-a-linear-mind-in-an-exponential-age/"
+              color="teal"
+              imageSrc="/widgets/cover-image-living-with-a-linear-mind-in-an-exponential-age.png"
+              title="Living With a Linear Mind in an Exponential Age"
+              description="How personal knowledge management can help you thrive in an exponential age."
+              datePosted="31 March, 2023"
             />
             <OperatingPrinciples />
             <Experience />

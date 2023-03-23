@@ -58,6 +58,11 @@ const TagContainer = styled("div", {
         backgroundColor: "$teal3",
         border: "solid 2px $teal5",
       },
+      orange: {
+        color: "$orange11",
+        backgroundColor: "$orange3",
+        border: "solid 2px $orange5",
+      },
     },
     size: {
       sm: {
@@ -100,7 +105,8 @@ interface TagProps {
     | "violet"
     | "red"
     | "olive"
-    | "teal";
+    | "teal"
+    | "orange";
   label: string;
   size?: undefined | "sm";
   fontStyle?: undefined | "uppercase";

@@ -177,6 +177,7 @@ interface Props {
     | "olive"
     | "teal";
   hasJob: boolean;
+  hasIcon: boolean;
   Icon: any;
 }
 
