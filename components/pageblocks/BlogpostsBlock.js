@@ -6,33 +6,14 @@ import { Timeline, TimelineItem } from "../timeline/Timeline.js";
 import CardHeader from "../card/CardHeader.js";
 import BlogTimelineCard from "../card/BlogTimelineCard.js";
 
-const BackgroundContainer = styled("div", {
-  position: "relative",
-  overflow: "visible",
-});
-
-const BackgroundPattern = styled("div", {
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  backgroundImage: "url(/patterns/writing-section-background.svg)",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "135% auto",
-  top: "-50%",
-  zIndex: -1,
-
-  "@bp2": {
-    backgroundSize: "75% auto",
-    top: -364,
-  },
+const ContentContainer = styled("div", {
+  marginBottom: "232px",
 });
 
 function BlogpostsBlock() {
   return (
-    <Section id="writing">
-      <BackgroundContainer>
-        <BackgroundPattern />
+    <Section>
+      <ContentContainer>
         <ContentBlock
           title="Stories & Ideas"
           alignment="center"
@@ -60,7 +41,7 @@ function BlogpostsBlock() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="crimson"
+              color="blue"
               hasYear={true}
               alignment="right"
               year="2023"
@@ -78,7 +59,7 @@ function BlogpostsBlock() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="blue"
+              color="crimson"
               hasYear={true}
               alignment="left"
               year="2021"
@@ -94,28 +75,8 @@ function BlogpostsBlock() {
               dutch
             />
           </TimelineItem>
-          <TimelineItem>
-            <CardHeader color="blue" hasYear={false} alignment="left" />
-            <BlogTimelineCard background="/blog/design-for-healthcare/cover.png" />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
-              color="blue"
-              hasYear={true}
-              alignment="left"
-              year="2021"
-            />
-            <BlogTimelineCard
-              image="/images/placeholder-timeline-item.png"
-              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-              description="I have empathy for those around me and respect their point of view. I have empathy for those around me and respect their point of view"
-              meta="Article • 25 min read"
-              color="blue"
-              category="Tech"
-            />
-          </TimelineItem>
         </Timeline>
-      </BackgroundContainer>
+      </ContentContainer>
     </Section>
   );
 }

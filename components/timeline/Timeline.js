@@ -62,7 +62,7 @@ const Controls = styled("div", {
   flexDirection: "row",
   alignItems: "center",
   flexShrink: 0,
-  backgroundColor: "white",
+  background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
   gap: "$spacing-02",
   boxShadow:
     "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
@@ -87,7 +87,6 @@ const Label = styled("p", {
 
 const Button = styled("button", {
   padding: "$spacing-04",
-  backgroundColor: "white",
   borderRadius: "8px",
   color: "$gray10",
 

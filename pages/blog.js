@@ -8,7 +8,6 @@ const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines-red.svg)",
   backgroundPositionX: "center",
-  height: "100%",
 });
 
 const ContentContainer = styled("div", {
@@ -27,7 +26,9 @@ export default function BlogPost() {
       <PageLayout style={{ marginTop: "70px" }}>
         <BlogpostsBlock />
       </PageLayout>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </Wrapper>
   );
 }

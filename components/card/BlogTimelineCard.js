@@ -1,16 +1,15 @@
 import { styled } from "../../stitches.config.js";
 import { Tag } from "../tag/Tag.tsx";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
-const Container = styled("a", {
+const Container = styled(motion.div, {
   m: 0,
   borderRadius: "12px",
   overflow: "hidden",
   position: "relative",
-  border: "2px solid $mauve6",
-  willChange: "transform",
-  transition: "all, 300ms ease-in",
   background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
+  willChange: "all",
   width: "100%",
   height: "100%",
   outline: 0,
@@ -21,21 +20,8 @@ const Container = styled("a", {
     m: "$none $spacing-02 $spacing-02 $spacing-02",
   },
 
-  "&:hover": {
-    transform: "translateY(-2px)",
-    transition: "border, 300ms ease-out",
-    border: "2px solid $mauve8",
-    boxShadow: "$small",
-  },
-  "&:active": {
-    transition: "border, 300ms ease-out",
-    boxShadow: "$xs",
-  },
   "&:focus": {
-    transition: "background 150ms ease-out",
-    backgroundColor: "$mauve2",
-    border: "2px solid $blue11",
-    color: "$mauve12",
+    border: "1px solid $blue11",
   },
 });
 
@@ -67,7 +53,7 @@ const IconSize = styled("div", {
 
 const TitleContainer = styled("div", {
   borderRadius: "6px",
-  background: "rgba(2,0,16, 0.70)",
+  background: "rgba(2,0,16, 0.75)",
   padding: "$spacing-05 $spacing-04",
   boxShadow: "$xs",
   position: "relative",
@@ -80,7 +66,7 @@ const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
-  letterSpacing: "$tracking-tight",
+  letterSpacing: "$tracking-normal",
   fontSize: "$lg",
   color: "$mauve1",
   textAlign: "center",
@@ -100,7 +86,7 @@ const CardDescription = styled("p", {
   fontWeight: "$regular",
   fontSize: "$base",
   lineHeight: "$base",
-  color: "$mauve11",
+  color: "$gray11",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -123,9 +109,26 @@ const MetaInformation = styled("p", {
   color: "$gray11",
 });
 
-function BlogTimelineCard(props) {
+const FlexBox = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+});
+
+function BlogTimelineCard({ href, ...props }) {
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <Container href={props.href}>
+    <Container
+      onClick={handleClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 1 }}
+    >
       <Icon>
         <IconSize>
           {props.dutch && (
@@ -146,13 +149,15 @@ function BlogTimelineCard(props) {
       <TitleContainer>
         <CardTitle>{props.title}</CardTitle>
       </TitleContainer>
-      <DescriptionContainer>
-        <CardDescription>{props.description}</CardDescription>
-      </DescriptionContainer>
-      <MetaInformationContainer>
-        <MetaInformation>{props.meta}</MetaInformation>
-        <Tag color={props.color} label={props.category} />
-      </MetaInformationContainer>
+      <FlexBox>
+        <DescriptionContainer>
+          <CardDescription>{props.description}</CardDescription>
+        </DescriptionContainer>
+        <MetaInformationContainer>
+          <MetaInformation>{props.meta}</MetaInformation>
+          <Tag color={props.color} label={props.category} />
+        </MetaInformationContainer>
+      </FlexBox>
     </Container>
   );
 }

@@ -87,12 +87,6 @@ const ImageContainer = styled("div", {
   },
 });
 
-const TitleContainer = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  gap: "$spacing-02",
-});
-
 const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
@@ -116,7 +110,7 @@ const LabelContainer = styled("div", {
   gap: "$spacing-02",
 
   variants: {
-    color: {
+    labelColor: {
       blue: {
         color: "$blue10",
       },
@@ -164,6 +158,7 @@ const DateLabel = styled("p", {
 });
 
 interface Props {
+  labelColor: "blue" | "red" | "teal" | "gray";
   color: string;
   imageSrc: string;
   title: string;
@@ -198,7 +193,7 @@ export const Blogpost = ({
           </ImageContainer>
         </ImageLayout>
         <BlogDetailsLayout>
-          <LabelContainer color={color}>
+          <LabelContainer labelColor={color}>
             <Label>Latest Blog Post</Label>
             <Inbox size={17} />
           </LabelContainer>
