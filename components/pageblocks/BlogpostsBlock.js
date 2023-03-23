@@ -1,10 +1,10 @@
-import { styled } from "../../../stitches.config.js";
-import ContentBlock from "../../layouts/blocks/ContentBlock.js";
-import Spacer from "../../layouts/blocks/Spacer.js";
-import Section from "../../layouts/blocks/Section.js";
-import { Timeline, TimelineItem } from "../../timeline/Timeline.js";
-import CardHeader from "../../card/CardHeader.js";
-import BlogTimelineCard from "../../card/BlogTimelineCard.js";
+import { styled } from "../../stitches.config.js";
+import ContentBlock from "../layouts/blocks/ContentBlock.js";
+import Spacer from "../layouts/blocks/Spacer.js";
+import Section from "../layouts/blocks/Section.js";
+import { Timeline, TimelineItem } from "../timeline/Timeline.js";
+import CardHeader from "../card/CardHeader.js";
+import BlogTimelineCard from "../card/BlogTimelineCard.js";
 
 const BackgroundContainer = styled("div", {
   position: "relative",
@@ -38,32 +38,13 @@ function BlogpostsBlock() {
           alignment="center"
           description="I write about various topics, but most of my stories are related to technological innovation, user interface and user experience design, and workflow management. "
         />
-
         <Spacer level={6} />
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="crimson"
-              hasYear={true}
-              alignment="left"
-              year="2023"
-            />
-            <BlogTimelineCard
-              href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
-              image="/images/placeholder-timeline-item.png"
-              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-              description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms"
-              meta="Article • 20 min read"
-              color="blue"
-              category="Tech"
-              english
-            />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
               color="plum"
               hasYear={true}
-              alignment="right"
+              alignment="left"
               year="2023"
             />
             <BlogTimelineCard
@@ -71,9 +52,27 @@ function BlogpostsBlock() {
               image="/blog/living-with-a-linear-mind-in-an-exponential-age/cover.png"
               title="Living With a Linear Mind in an Exponential Age"
               description="How Personal Knowledge Management can help you thrive in an exponential age by efficiently turning your thoughts, ideas and discoveries into wisdom."
-              meta="4 feb 2023"
+              meta="31 March 2023"
               color="plum"
               category="Workflow"
+              english
+            />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="crimson"
+              hasYear={true}
+              alignment="right"
+              year="2023"
+            />
+            <BlogTimelineCard
+              href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
+              image="blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/cover.png"
+              title="The Rise of the Unstoppable, Decentralized and Semantic Web"
+              description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms"
+              meta="21 January 2023"
+              color="blue"
+              category="Tech"
               english
             />
           </TimelineItem>
@@ -85,8 +84,8 @@ function BlogpostsBlock() {
               year="2021"
             />
             <BlogTimelineCard
-              href="/blog/design-for-healthcare"
-              image="/blog/design-for-healthcare/cover.png"
+              href="/blog/design-for-accessibility"
+              image="/blog/design-for-accessibility/cover.png"
               title="Design Accessibile Experiences in the Healthcare Sector"
               description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker."
               meta="Article • 15 min read"

@@ -27,7 +27,7 @@ const StyledProgressBar = styled(motion.div, {
 });
 
 interface Props {
-  gradient: string;
+  gradient: "blue" | "plum" | "crimson" | "teal";
 }
 
 export const ScrollYProgressBar = ({ gradient }: Props) => {

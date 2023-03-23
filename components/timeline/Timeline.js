@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React, { useRef, useEffect, useState, Children } from "react";
-import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
-import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
+import { motion, useScroll } from "framer-motion";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
 
 const TimelineWrapper = styled("div", {
@@ -32,7 +32,7 @@ const StyledTimelineItem = styled("li", {
   borderRadius: "16px",
   scrollSnapAlign: "start",
   mr: "$spacing-04",
-  pb: "$spacing-08",
+  pb: "$spacing-06",
 
   "&:last-child": {
     mr: 0,
@@ -50,6 +50,7 @@ const StyledTimelineItem = styled("li", {
 const ControlsContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
+  justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
   gap: "$spacing-04",
@@ -59,32 +60,76 @@ const ControlsContainer = styled("div", {
 const Controls = styled("div", {
   display: "flex",
   flexDirection: "row",
+  alignItems: "center",
+  flexShrink: 0,
+  backgroundColor: "white",
+  gap: "$spacing-02",
+  boxShadow:
+    "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
+  borderRadius: "8px",
+  padding: "$spacing-02",
+});
+
+const LabelContainer = styled("div", {
+  display: "flex",
+  justifyContent: "start",
+  alignItems: "center",
   flexShrink: 0,
 });
 
-const Line = styled("div", {
-  height: "1px",
-  background: "$gray6",
-  width: "100%",
+const Label = styled("p", {
+  fontFamily: "$mono",
+  fontWeight: "$medium",
+  lineHeight: "$none",
+  fontSize: "$base",
+  textDecoration: "underline",
 });
 
 const Button = styled("button", {
   padding: "$spacing-04",
   backgroundColor: "white",
-  border: "1px solid $gray6",
   borderRadius: "8px",
-  mr: "8px",
-  color: "$violet11",
-
-  "&:last-child": {
-    mr: 0,
-  },
+  color: "$gray10",
 
   "&:hover": {
-    backgroundColor: "$violet3",
+    color: "$gray12",
   },
-  "&:active": {
-    backgroundColor: "$violet4",
+});
+
+const ProgessBarContainer = styled("div", {
+  width: "96px",
+  backgroundColor: "$gray3",
+  borderRadius: "4px",
+  padding: "$spacing-01",
+  boxShadow:
+    "1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(221, 217, 214, 0.5), inset -2px 2px 4px rgba(221, 217, 214, 0.2), inset 2px -2px 4px rgba(221, 217, 214, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(221, 217, 214, 0.9)",
+});
+
+const StyledProgressBar = styled(motion.div, {
+  display: "flex",
+  height: "18px",
+  transformOrigin: "0%",
+  width: "100%",
+  borderRadius: "6px",
+
+  variants: {
+    gradient: {
+      blue: {
+        background: "linear-gradient(90deg, $blue9, $blue11)",
+      },
+      plum: {
+        background: "linear-gradient(90deg, $plum9, $plum11)",
+      },
+      crimson: {
+        background: "linear-gradient(90deg, $crimson9, $crimson11)",
+      },
+      teal: {
+        background: "linear-gradient(90deg, $teal9, $teal11)",
+      },
+      mauve: {
+        background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+      },
+    },
   },
 });
 
@@ -97,6 +142,7 @@ export const TimelineItem = StyledTimelineItem;
 export const Timeline = ({ children }) => {
   //Scroll Function
   const ref = useRef(null);
+  const { scrollXProgress } = useScroll({ container: ref });
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
@@ -118,20 +164,32 @@ export const Timeline = ({ children }) => {
     <TimelineWrapper>
       <TimelineItems ref={ref}>{children}</TimelineItems>
       <ControlsContainer>
-        <Line />
+        <LabelContainer>
+          <Label>
+            {timelineCount > 1
+              ? `${timelineCount} Items`
+              : `${timelineCount} Item`}
+          </Label>
+        </LabelContainer>
         {showControls ? (
           <Controls>
             <Button
               aria-label="Sroll Left"
               onClick={() => scroll(-getCardWidth())}
             >
-              <ArrowLeftLineIcon />
+              <ArrowLeft size={20} />
             </Button>
+            <ProgessBarContainer>
+              <StyledProgressBar
+                gradient="crimson"
+                style={{ scaleX: scrollXProgress }}
+              />
+            </ProgessBarContainer>
             <Button
               aria-label="Sroll Right"
               onClick={() => scroll(getCardWidth())}
             >
-              <ArrowRightLineIcon />
+              <ArrowRight size={20} />
             </Button>
           </Controls>
         ) : null}
