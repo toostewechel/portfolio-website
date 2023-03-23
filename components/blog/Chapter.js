@@ -59,7 +59,6 @@ const ChapterImageContainer = styled("div", {
   pb: "$spacing-13",
 
   "@bp4": {
-    padding: "$spacing-10",
     width: "50%",
   },
 });

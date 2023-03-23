@@ -100,8 +100,6 @@ const TakeawaysList = styled("ul", {
   color: "$gray12",
   paddingInlineStart: "$spacing-07",
   listStyle: "none",
-  marginLeft: "auto",
-  marginRight: "auto",
 });
 
 const StyledListItem = styled("li", {

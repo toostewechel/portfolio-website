@@ -49,7 +49,7 @@ const ChapterNumber = styled("p", {
     color: {
       crimson: {
         textShadow:
-          "1px 1px 2px rgba(196, 255, 255, 0.3), -2px -2px 2px rgba(86, 126, 119, 0.5)",
+          "1px 1px 2px rgba(255, 236, 255, 0.3), -1px -1px 2px rgba(198, 160, 177, 0.5)",
         color: "$crimson6",
       },
       teal: {

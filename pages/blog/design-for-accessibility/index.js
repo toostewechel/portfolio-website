@@ -46,6 +46,7 @@ import Chapter1 from "./01-chapter.mdx";
 import Chapter2 from "./02-chapter.mdx";
 import Chapter3 from "./03-chapter.mdx";
 import Chapter4 from "./04-chapter.mdx";
+import Chapter5 from "./05-chapter.mdx";
 
 //ShareToLinks Object
 const shareTo = {};
@@ -64,14 +65,39 @@ const PoweredByBadge = styled("a", {
   fontFamily: "$default",
   fontSize: "$xs",
   width: "280px",
-	gap: "$spacing-02",
+  gap: "$spacing-02",
 
   "&:hover": {
     transition: "background 300ms ease-out",
-    backgroundColor: "$mauveA9",
+    backgroundColor: "rgba(0,0,0, 0.05)",
     border: "1px solid $mauveA11",
   },
 });
+
+function HoverCard() {
+  return (
+    <HoverCardRoot>
+      <HoverCardTrigger asChild>
+        <PoweredByBadge href="https://www.jeroenkrul.nl/" target="_blank">
+          <p>Illustration by </p>
+          <img
+            style={{ height: "24px" }}
+            src="/badges/jeroen-krul-badge.png"
+            alt="Jeroen Krul Logo"
+          />
+        </PoweredByBadge>
+      </HoverCardTrigger>
+      <HoverCardPanel
+        logo="/avatar/jeroen-krul.png"
+        title="Jeroen Krul"
+        socialHandle="@jeroenkrul"
+        description="In mijn werk ben ik voortdurend op zoek naar de balans tussen illustratie en verhaal. Daarvoor gebruik ik zowel analoge als digitale methoden en vaak gecombineerd"
+        followingCount="993"
+        followersCount="1,42K"
+      />
+    </HoverCardRoot>
+  );
+}
 
 export default function BlogPostPage() {
   //Create Ref for ReadingProgressBar
@@ -96,110 +122,93 @@ export default function BlogPostPage() {
           LandingImage={
             <LandingImage src="/blog/design-for-accessibility/landing.png" />
           }
-          HoverCardContent={
-            <HoverCardRoot>
-              <HoverCardTrigger asChild>
-                <PoweredByBadge href="https://www.jeroenkrul.nl/" target="_blank">
-                  <p>Illustration by </p>
-                  <img
-                    style={{ height: "24px" }}
-                    src="/badges/jeroen-krul-badge.png"
-                    alt="Jeroen Krul Logo"
-                  />
-                </PoweredByBadge>
-              </HoverCardTrigger>
-              <HoverCardPanel
-                logo="/avatar/jeroen-krul.png"
-                title="Jeroen Krul"
-                socialHandle="@jeroenkrul"
-                description="In mijn werk ben ik voortdurend op zoek naar de balans tussen illustratie en verhaal. Daarvoor gebruik ik zowel analoge als digitale methoden en vaak gecombineerd"
-                followingCount="993"
-                followersCount="1,42K"
-              />
-            </HoverCardRoot>
-          }
+          HoverCardContent={<HoverCard />}
         />
         <BlogContentLayout id="blog-content">
-          <NavBar activePageTitle="Living With a Linear Mind in an Exponential Age" />
+          <NavBar activePageTitle="Design Accessible Experiences for the Healthcare Sector" />
           <BlogMarkdownContentLayout>
-            <KeyTakeawaysCollapsible accentColor="teal"></KeyTakeawaysCollapsible>
+            <KeyTakeawaysCollapsible accentColor="crimson">
+							<ListItem>Toegankelijkheid is een complex organisatorisch vraagstuk</ListItem>
+							<ListItem>Iets is pas toegankelijk wanneer mensen zelf een taak kunnen volbrengen in een vergelijkbare hoeveelheid tijd en moeite als iemand die geen beperking heeft</ListItem>
+							<ListItem>Iets is pas toegankelijk wanneer mensen zelf een taak kunnen volbrengen in een vergelijkbare hoeveelheid tijd en moeite als iemand die geen beperking heeft</ListItem>
+						</KeyTakeawaysCollapsible>
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
           <Chapter
-            accentColor="teal"
+            accentColor="crimson"
             ChapterContent={
               <ChapterContent
                 href="#chapter-02"
                 chapterNumber="02"
-                accentColor="teal"
-                chapterTitle="The Enemies and Limitations of Our Brain"
-                chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
+                accentColor="crimson"
+                chapterTitle="Toegankelijkheid is inclusief, contextafhankelijk en keuzevrijheid hebben"
+                chapterDescription="In de afgelopen jaren is in onze samenleving veel dienstverlening gedigitaliseerd. Maar zodra iets online staat, betekent dit niet gelijk dat het beter toegankelijk is of gemakkelijker in gebruik."
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+              <ChapterImage src="/blog/design-for-accessibility/chapter-02.png" />
             }
-            HoverCardContent={
-              <HoverCardRoot>
-                <HoverCardTrigger asChild>
-                  <PoweredByBadge href="https://midjourney.com" target="_blank">
-                    <p>Illustration by </p>
-                    <img
-                      style={{ height: "32px" }}
-                      src="/badges/midjourney-logo-badge.png"
-                      alt="Midjourney Logo"
-                    />
-                  </PoweredByBadge>
-                </HoverCardTrigger>
-                <HoverCardPanel
-                  logo="/avatar/midjourney.png"
-                  title="Midjourney"
-                  socialHandle="@midjourney"
-                  description="New research lab. Exploring new mediums of thought. Expanding the imaginative powers of the human species."
-                  followingCount="0"
-                  followersCount="190,4K"
-                />
-              </HoverCardRoot>
-            }
+            HoverCardContent={<HoverCard />}
           />
           <BlogMarkdownContentLayout id="chapter-02">
             <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
           </BlogMarkdownContentLayout>
           <Chapter
-            accentColor="teal"
+            accentColor="crimson"
             ChapterContent={
               <ChapterContent
                 href="#chapter-03"
                 chapterNumber="03"
-                accentColor="teal"
-                chapterTitle="Change Your Mindset and Keep It Simple"
-                chapterDescription="Personal knowledge management is about personal growth and a shifting mindset. A good application requires habit change, deliberate practice, and perseverance. Good solutions are simple and provide structure, enabling trust and flow."
+                accentColor="crimson"
+                chapterTitle="De meerwaarde van toegankelijkheid"
+                chapterDescription="Het ontwikkelen van online diensten in de zorg brengt al genoeg uitdagingen met zich mee. Zouden we ons om nog een ‘extra’ ding druk moeten maken?"
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-03.png" />
+              <ChapterImage src="/blog/design-for-accessibility/chapter-03.png" />
             }
+            HoverCardContent={<HoverCard />}
           />
           <BlogMarkdownContentLayout id="chapter-03">
             <MarkdownContentBlock chapter="chapter-03" Content={Chapter3} />
           </BlogMarkdownContentLayout>
           <Chapter
-            accentColor="teal"
+            accentColor="crimson"
             ChapterContent={
               <ChapterContent
                 href="#chapter-04"
                 chapterNumber="04"
-                accentColor="teal"
-                chapterTitle="Organise Knowledge by Balancing Structure and Flexibility"
-                chapterDescription="A critical trade-off we should make for the design of our system is the balance between structure and flexibility. Finding the right balance between the two is critical to designing a stable system that provides direction and adapts to changing circumstances and needs."
+                accentColor="crimson"
+                chapterTitle="Toegankelijkheid overstijgt disciplines en domeinen"
+                chapterDescription="De hoeveelheid informatie rondom de implementatie van toegankelijkheid is overweldigend. Dit maakt het een uitdaging om te bepalen wie waar verantwoordelijk voor is en om met toegankelijkheid te beginnen."
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+              <ChapterImage src="/blog/design-for-accessibility/chapter-04.png" />
             }
+            HoverCardContent={<HoverCard />}
           />
           <BlogMarkdownContentLayout id="chapter-04">
             <MarkdownContentBlock chapter="chapter-04" Content={Chapter4} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="crimson"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-05"
+                chapterNumber="05"
+                accentColor="crimson"
+                chapterTitle="Conclusie"
+                chapterDescription="Digitale toegankelijkheid is niet een vakje dat je zomaar aan kunt vinken. Het is een complex organisatorisch vraagstuk waarbij verschillende disciplines samen moeten werken om een toegankelijke ervaring te creëren voor gebruikers."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/design-for-accessibility/chapter-05.png" />
+            }
+            HoverCardContent={<HoverCard />}
+          />
+          <BlogMarkdownContentLayout id="chapter-05">
+            <MarkdownContentBlock chapter="chapter-05" Content={Chapter5} />
           </BlogMarkdownContentLayout>
         </BlogContentLayout>
       </article>

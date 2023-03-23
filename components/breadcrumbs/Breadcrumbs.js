@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import { Home } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
 
 const BreadcrumbsContainer = styled("nav", {
   display: "flex",
@@ -18,6 +18,7 @@ const StyledBreadcrumbItem = styled("li", {
   alignItems: "center",
   fontSize: "$sm",
   fontFamily: "$default",
+  lineHeight: "$none",
   fontWeight: "$medium",
   color: "$gray10",
   mb: 0,
@@ -64,12 +65,14 @@ export const Breadcrumbs = ({ children }) => {
           <BreadcrumbItemLink href="/">
             {" "}
             <Icon>
-              <Home size={20} />
+              <LayoutDashboard size={18} />
             </Icon>{" "}
             Home
           </BreadcrumbItemLink>
         </BreadcrumbItem>
-        <BreadcrumbItem>Blog Posts</BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbItemLink href="/blog">Blog</BreadcrumbItemLink>
+        </BreadcrumbItem>
         {children}
       </BreadcrumbsList>
     </BreadcrumbsContainer>
