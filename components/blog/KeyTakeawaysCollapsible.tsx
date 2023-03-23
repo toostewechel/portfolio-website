@@ -1,8 +1,6 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
 import { ArrowRight } from "lucide-react";
-import Heading from "../typography/Heading.js";
-
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 
 const Container = styled("div", {
@@ -92,6 +90,9 @@ const StyledCollapsibleContent = styled(CollapsiblePrimitive.Content, {
 });
 
 const TakeawaysList = styled("ul", {
+  display: "flex",
+  flexDirection: "column",
+  maxWidth: "768px",
   fontSize: "$base",
   fontWeight: "$regular",
   fontFamily: "$default",
@@ -113,6 +114,21 @@ const StyledListItem = styled("li", {
   },
 });
 
+const IconContainer = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "20px",
+  height: "20px",
+  marginRight: "8px",
+});
+
+const TakeawaysListContainer = styled("div", {
+  display: "flex",
+  width: "100%",
+  justifyContent: "center",
+});
+
 // Exports
 export const Collapsible = StyledCollapsible;
 export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
@@ -121,13 +137,20 @@ export const CollapsibleContent = StyledCollapsibleContent;
 export const ListItem = ({ children }) => {
   return (
     <StyledListItem>
-      <ArrowRight size={24} style={{ marginRight: "8px" }} />
+      <IconContainer>
+        <ArrowRight size={20} />
+      </IconContainer>
       {children}
     </StyledListItem>
   );
 };
 
-export const KeyTakeawaysCollapsible = ({ accentColor, children }) => {
+interface Props {
+  accentColor: "plum" | "blue" | "crimson" | "violet" | "teal" | "cyan";
+  children: React.ReactNode;
+}
+
+export const KeyTakeawaysCollapsible = ({ accentColor, children }: Props) => {
   const [open, setOpen] = React.useState(false);
   return (
     <Container>
@@ -139,7 +162,9 @@ export const KeyTakeawaysCollapsible = ({ accentColor, children }) => {
           </CollapsibleTrigger>
         </HeaderPanel>
         <CollapsibleContent>
-          <TakeawaysList>{children}</TakeawaysList>
+          <TakeawaysListContainer>
+            <TakeawaysList>{children}</TakeawaysList>
+          </TakeawaysListContainer>
         </CollapsibleContent>
       </Collapsible>
     </Container>
