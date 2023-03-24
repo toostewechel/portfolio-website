@@ -75,6 +75,24 @@ function BlogpostsBlock() {
               dutch
             />
           </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="crimson"
+              hasYear={true}
+              alignment="left"
+              year="2021"
+            />
+            <BlogTimelineCard
+              href="/blog/design-for-accessibility"
+              image="/blog/design-for-accessibility/cover.png"
+              title="Design Accessibile Experiences in the Healthcare Sector"
+              description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker."
+              meta="Article • 15 min read"
+              color="crimson"
+              category="Design"
+              dutch
+            />
+          </TimelineItem>
         </Timeline>
       </ContentContainer>
     </Section>

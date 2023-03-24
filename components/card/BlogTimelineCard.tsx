@@ -2,6 +2,7 @@ import { styled } from "../../stitches.config.js";
 import { Tag } from "../tag/Tag.tsx";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { FC } from "react";
 
 const Container = styled(motion.div, {
   m: 0,
@@ -115,10 +116,32 @@ const FlexBox = styled("div", {
   justifyContent: "space-between",
 });
 
-function BlogTimelineCard({ href, ...props }) {
+interface BlogTimelineCardProps {
+  href: string;
+  dutch?: boolean;
+  english?: boolean;
+  image: string;
+  title: string;
+  description: string;
+  meta: string;
+  color: string;
+  category: string;
+}
+
+const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
+  href,
+  dutch,
+  english,
+  image,
+  title,
+  description,
+  meta,
+  color,
+  category,
+}: BlogTimelineCardProps) => {
   const router = useRouter();
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     router.push(href);
   };
@@ -131,13 +154,13 @@ function BlogTimelineCard({ href, ...props }) {
     >
       <Icon>
         <IconSize>
-          {props.dutch && (
+          {dutch && (
             <img
               style={{ width: "24px", height: "24px" }}
               src="/icons/nl.svg"
             />
           )}
-          {props.english && (
+          {english && (
             <img
               style={{ width: "24px", height: "24px" }}
               src="/icons/gb.svg"
@@ -145,21 +168,21 @@ function BlogTimelineCard({ href, ...props }) {
           )}
         </IconSize>
       </Icon>
-      <ResponsiveImage src={props.image} />
+      <ResponsiveImage src={image} />
       <TitleContainer>
-        <CardTitle>{props.title}</CardTitle>
+        <CardTitle>{title}</CardTitle>
       </TitleContainer>
       <FlexBox>
         <DescriptionContainer>
-          <CardDescription>{props.description}</CardDescription>
+          <CardDescription>{description}</CardDescription>
         </DescriptionContainer>
         <MetaInformationContainer>
-          <MetaInformation>{props.meta}</MetaInformation>
-          <Tag color={props.color} label={props.category} />
+          <MetaInformation>{meta}</MetaInformation>
+          <Tag color={color} label={category} />
         </MetaInformationContainer>
       </FlexBox>
     </Container>
   );
-}
+};
 
 export default BlogTimelineCard;

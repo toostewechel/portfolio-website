@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
-import { IconButton } from "../button/IconButton.tsx";
-import { Home, Search } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
 import { useRouter } from "next/router";
 import CommandDialog from "../cmdk/CommandDialog.js";
 import { motion } from "framer-motion";
@@ -11,9 +10,9 @@ const Container = styled("nav", {
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  padding: "$spacing-03 $spacing-04",
+  padding: "$spacing-03",
   gap: "$spacing-03",
-  borderRadius: "99px",
+  borderRadius: "6px",
 
   "@bp3": {
     display: "flex",
@@ -21,7 +20,8 @@ const Container = styled("nav", {
 
   "@bp6": {
     background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
-    boxShadow: "$xs",
+    boxShadow:
+      "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
   },
 });
 
@@ -37,14 +37,11 @@ const ActiveMenuItem = ({ href, children }) => {
     display: "flex",
     width: "100%",
     padding: "$spacing-03",
-    borderRadius: "99px",
-    background:
-      router.asPath === href
-        ? "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)"
-        : "transparent",
+    borderRadius: "4px",
+    background: router.asPath === href ? "$gray4" : "transparent",
     boxShadow:
       router.asPath === href ? "0px 2px 2px rgba(0, 0, 0, 0.1)" : "$none",
-    color: router.asPath === href ? "$crimson2" : "$mauve11",
+    color: router.asPath === href ? "$mauve12" : "$mauve11",
   });
 
   return (
@@ -98,7 +95,7 @@ export const NavBar = ({}) => {
     >
       <Container>
         <ActiveMenuItem href="/">
-          <Home size={20} />
+          <LayoutDashboard size={24} />
         </ActiveMenuItem>
         <ActiveMenuItem href="/readme">
           <MenuLabel>About</MenuLabel>
