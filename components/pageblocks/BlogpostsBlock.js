@@ -4,7 +4,7 @@ import Spacer from "../layouts/blocks/Spacer.js";
 import Section from "../layouts/blocks/Section.js";
 import { Timeline, TimelineItem } from "../timeline/Timeline.js";
 import CardHeader from "../card/CardHeader.js";
-import BlogTimelineCard from "../card/BlogTimelineCard.js";
+import BlogTimelineCard from "../card/BlogTimelineCard";
 
 const ContentContainer = styled("div", {
   marginBottom: "232px",
@@ -36,7 +36,6 @@ function BlogpostsBlock() {
               meta="31 March 2023"
               color="plum"
               category="Workflow"
-              english
             />
           </TimelineItem>
           <TimelineItem>
@@ -54,7 +53,6 @@ function BlogpostsBlock() {
               meta="21 January 2023"
               color="blue"
               category="Tech"
-              english
             />
           </TimelineItem>
           <TimelineItem>
@@ -72,7 +70,6 @@ function BlogpostsBlock() {
               meta="Article • 15 min read"
               color="crimson"
               category="Design"
-              dutch
             />
           </TimelineItem>
           <TimelineItem>
@@ -90,7 +87,6 @@ function BlogpostsBlock() {
               meta="Article • 15 min read"
               color="crimson"
               category="Design"
-              dutch
             />
           </TimelineItem>
         </Timeline>

@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import { Tag } from "../tag/Tag.tsx";
+import { Tag } from "../tag/Tag";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { FC } from "react";
@@ -116,22 +116,22 @@ const FlexBox = styled("div", {
   justifyContent: "space-between",
 });
 
+type TagColors = "blue" | "plum" | "crimson";
+
 interface BlogTimelineCardProps {
   href: string;
-  dutch?: boolean;
-  english?: boolean;
+  language?: string[];
   image: string;
   title: string;
   description: string;
   meta: string;
-  color: string;
+  color: TagColors;
   category: string;
 }
 
 const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
   href,
-  dutch,
-  english,
+  language,
   image,
   title,
   description,
@@ -146,6 +146,11 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
     router.push(href);
   };
 
+  const languageIconSrc =
+    language && language[1] === "dutch" ? "/icons/gb.svg" : "/icons/nl.svg";
+
+  const languageIconAlt = language && language[0];
+
   return (
     <Container
       onClick={handleClick}
@@ -154,16 +159,11 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
     >
       <Icon>
         <IconSize>
-          {dutch && (
+          {language && (
             <img
               style={{ width: "24px", height: "24px" }}
-              src="/icons/nl.svg"
-            />
-          )}
-          {english && (
-            <img
-              style={{ width: "24px", height: "24px" }}
-              src="/icons/gb.svg"
+              src={languageIconSrc}
+              alt={languageIconAlt}
             />
           )}
         </IconSize>
@@ -183,6 +183,10 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
       </FlexBox>
     </Container>
   );
+};
+
+BlogTimelineCard.defaultProps = {
+  language: ["english", "dutch"],
 };
 
 export default BlogTimelineCard;
