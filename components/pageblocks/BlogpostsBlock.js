@@ -70,6 +70,7 @@ function BlogpostsBlock() {
               meta="Article • 15 min read"
               color="crimson"
               category="Design"
+              language="dutch"
             />
           </TimelineItem>
           <TimelineItem>

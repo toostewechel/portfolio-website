@@ -100,7 +100,7 @@ export const NavBar = ({}) => {
         <ActiveMenuItem href="/readme">
           <MenuLabel>About</MenuLabel>
         </ActiveMenuItem>
-        <ActiveMenuItem href="">
+        <ActiveMenuItem href="/experience">
           <MenuLabel>Experience</MenuLabel>
         </ActiveMenuItem>
         <ActiveMenuItem href="">

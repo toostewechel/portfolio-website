@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
-import { styled } from "../../../stitches.config.js";
-import ContentBlock from "../../layouts/blocks/ContentBlock.js";
-import Section from "../../layouts/blocks/Section.js";
+import { styled } from "../../stitches.config.js";
+import ContentBlock from "../layouts/blocks/ContentBlock.js";
+import Section from "../layouts/blocks/Section.js";
 
 const ProfessionalAchievementsTabs = dynamic(
-  () => import("../../tabs/ProfessionalAchievementsTabs.js"),
+  () => import("../tabs/ProfessionalAchievementsTabs.js"),
   { ssr: false }
 );
 

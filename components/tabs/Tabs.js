@@ -38,9 +38,7 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   },
 });
 
-const StyledContent = styled(TabsPrimitive.Content, {
-  backgroundColor: "white",
-});
+const StyledContent = styled(TabsPrimitive.Content, {});
 
 // Exports
 export const Tabs = StyledTabs;
