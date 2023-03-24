@@ -9,10 +9,7 @@ const ProfessionalAchievementsTabs = dynamic(
   () => import("../tabs/ProfessionalAchievementsTabs.js"),
   { ssr: false }
 );
-
-const Content = styled("div", {
-  pb: "$spacing-09",
-});
+0;
 
 const ContentContainer = styled("div", {
   marginBottom: "232px",
