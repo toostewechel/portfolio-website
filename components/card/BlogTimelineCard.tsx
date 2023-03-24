@@ -20,7 +20,6 @@ const Container = styled(motion.div, {
   "@bp2": {
     m: "$none $spacing-02 $spacing-02 $spacing-02",
   },
-
   "&:focus": {
     border: "1px solid $blue11",
   },

@@ -1,6 +1,8 @@
+import React from "react";
 import { styled } from "../../stitches.config.js";
-import { Tag } from "../tag/Tag.tsx";
-import TimeLineIcon from "remixicon-react/TimeLineIcon";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { Tag } from "../tag/Tag";
 import { MapPin, CalendarDays, Download } from "lucide-react";
 import {
   Provider,
@@ -9,8 +11,8 @@ import {
   TooltipTrigger,
 } from "../tooltip/Tooltip.js";
 
-const Container = styled("a", {
-  m: 0,
+const Container = styled(motion.div, {
+  margin: 0,
   position: "relative",
   borderRadius: "12px",
   overflow: "hidden",
@@ -18,51 +20,38 @@ const Container = styled("a", {
   flexDirection: "column",
   height: "100%",
   width: "100%",
-  border: "2px solid $mauve6",
-  willChange: "transform",
-  transition: "all, 300ms ease-in",
-  p: "$spacing-05",
+  willChange: "all",
+  padding: "$spacing-05",
+  background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
+  boxShadow:
+    "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
 
   "@bp2": {
     m: "$none $spacing-03 $spacing-03 $spacing-03",
   },
-
-  "&:hover": {
-    transform: "translateY(-2px)",
-    transition: "border, 300ms ease-out",
-    border: "2px solid $mauve8",
-    boxShadow: "$small",
-  },
-  "&:active": {
-    transition: "border, 300ms ease-out",
-    boxShadow: "$xs",
-  },
   "&:focus": {
-    transition: "background 150ms ease-out",
-    backgroundColor: "$mauve2",
-    border: "2px solid $blue11",
-    color: "$mauve12",
+    border: "1px solid $blue11",
   },
 });
 
 const BackgroundPattern = styled("img", {
   position: "absolute",
   backgroundRepeat: "no-repeat",
-  width: "232px",
-  height: "232px",
+  width: "264px",
+  height: "264px",
   opacity: 0.9,
   zIndex: -1,
   variants: {
     position: {
       topRight: {
         position: "absolute",
-        top: -116,
-        right: -116,
+        top: -132,
+        right: -132,
       },
       bottomRight: {
         position: "absolute",
-        bottom: -116,
-        right: -116,
+        bottom: -132,
+        right: -132,
       },
     },
   },
@@ -268,24 +257,68 @@ const IconLink = styled("a", {
   },
 });
 
-function CredentialTimelineCard(props) {
+type TagColors = "blue" | "plum" | "crimson";
+
+interface CredentialTimelineCardProps {
+  gradient: string;
+  href: string;
+  accentColor: "blue" | "plum" | "crimson";
+  logo: string;
+  tagColor: TagColors;
+  tagLabel: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  duration: string;
+  location: string;
+  hasLink: boolean;
+  publication: string;
+  tooltipLabel: string;
+}
+
+function CredentialTimelineCard({
+  href,
+  accentColor,
+  logo,
+  tagColor,
+  tagLabel,
+  title,
+  subtitle,
+  description,
+  duration,
+  location,
+  hasLink,
+  publication,
+  tooltipLabel,
+}: CredentialTimelineCardProps) {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <Container gradient={props.gradient} href={props.href}>
+    <Container
+      onClick={handleClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 1 }}
+    >
       <BackgroundPattern
         src="/patterns/circular-background-pattern.svg"
         position="bottomRight"
       />
-      <AccentHighlight color={props.accentColor} />
+      <AccentHighlight color={accentColor} />
       <CardHeaderContainer>
-        <Logo src={props.logo} />
-        <Tag color={props.tagColor} label={props.tagLabel} />
+        <Logo src={logo} />
+        <Tag color={tagColor} label={tagLabel} />
       </CardHeaderContainer>
       <TitleContainer>
-        <CardTitle>{props.title}</CardTitle>
-        <CardSubtitle>{props.subtitle}</CardSubtitle>
+        <CardTitle>{title}</CardTitle>
+        <CardSubtitle>{subtitle}</CardSubtitle>
       </TitleContainer>
       <DescriptionContainer>
-        <CardDescription>{props.description}</CardDescription>
+        <CardDescription>{description}</CardDescription>
       </DescriptionContainer>
       <FooterContainer>
         <FlexWrapper>
@@ -293,26 +326,24 @@ function CredentialTimelineCard(props) {
             <DecorativeIcon>
               <CalendarDays />
             </DecorativeIcon>
-            <Label>{props.duration}</Label>
+            <Label>{duration}</Label>
           </FlexWrapper>
           <FlexWrapper>
             <DecorativeIcon>
               <MapPin />
             </DecorativeIcon>
-            <Label>{props.location}</Label>
+            <Label>{location}</Label>
           </FlexWrapper>
         </FlexWrapper>
-        {props.hasLink && (
+        {hasLink && (
           <Provider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <IconLink href={props.publication}>
+                <IconLink href={publication}>
                   <Download />
                 </IconLink>
               </TooltipTrigger>
-              <TooltipContent sideOffset={8}>
-                {props.tooltipLabel}
-              </TooltipContent>
+              <TooltipContent sideOffset={8}>{tooltipLabel}</TooltipContent>
             </Tooltip>
           </Provider>
         )}

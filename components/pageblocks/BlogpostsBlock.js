@@ -3,7 +3,7 @@ import ContentBlock from "../layouts/blocks/ContentBlock.js";
 import Spacer from "../layouts/blocks/Spacer.js";
 import Section from "../layouts/blocks/Section.js";
 import { Timeline, TimelineItem } from "../timeline/Timeline.js";
-import CardHeader from "../card/CardHeader.js";
+import CardHeader from "../card/CardHeader";
 import BlogTimelineCard from "../card/BlogTimelineCard";
 
 const ContentContainer = styled("div", {

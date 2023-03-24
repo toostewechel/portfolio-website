@@ -1,7 +1,7 @@
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
 import { Timeline, TimelineItem } from "../timeline/Timeline.js";
 import CardHeader from "../card/CardHeader";
-import CredentialTimelineCard from "../card/CredentialTimelineCard.js";
+import CredentialTimelineCard from "../card/CredentialTimelineCard";
 
 function ProfessionalAchievementsTab() {
   return (

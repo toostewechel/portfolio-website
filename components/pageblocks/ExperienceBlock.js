@@ -14,10 +14,10 @@ const Content = styled("div", {
 
 function ExperienceBlock() {
   return (
-    <Section id="experience">
+    <Section>
       <Content>
         <ContentBlock
-          heading="Experience"
+          title="Experience"
           description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
         />
       </Content>
