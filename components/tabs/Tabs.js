@@ -4,13 +4,16 @@ import { styled } from "../../stitches.config.js";
 const StyledTabs = styled(TabsPrimitive.Root, {
   display: "flex",
   flexDirection: "column",
-  width: "100%",
 });
 
 const StyledList = styled(TabsPrimitive.List, {
-  display: "flex",
-  borderBottom: "1px solid $gray6",
+  display: "inline-flex",
+  width: "fit-content",
   mb: "$spacing-04",
+  padding: "$spacing-02",
+  gap: "$spacing-03",
+  backgroundColor: "$olive6",
+  borderRadius: "6px",
 });
 
 const StyledTrigger = styled(TabsPrimitive.Trigger, {
@@ -20,21 +23,19 @@ const StyledTrigger = styled(TabsPrimitive.Trigger, {
   justifyContent: "center",
   fontFamily: "$default",
   fontWeight: "$medium",
-  fontSize: "$base",
+  fontSize: "$sm",
   padding: "$spacing-03 $spacing-02",
-  mr: "$spacing-05",
   color: "$gray11",
-  "&:hover": { color: "$violet11" },
+  "&:hover": { color: "$mauve12" },
   '&[data-state="active"]': {
-    color: "$violet11",
-    boxShadow: "inset 0 -2px 0 0 currentColor, 0 2px 0 0 currentColor",
-  },
-  "&:last-child": {
-    mr: 0,
+    color: "$violet12",
+    background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
+    borderRadius: "4px",
+    boxShadow: "$xs",
   },
   "@bp1": {
-    padding: "$spacing-03 $spacing-02",
-    fontSize: "$lg",
+    padding: "$spacing-03 $spacing-03",
+    fontSize: "$base",
   },
 });
 

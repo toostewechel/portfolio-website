@@ -1,25 +1,14 @@
+import React from "react";
 import { styled } from "../stitches.config.js";
-import ExternalLinkLineIcon from "remixicon-react/ExternalLinkLineIcon";
 import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const LinkContainer = styled("a", {
   outline: 0,
-  willChange: "transform",
-  transition: "all, 300ms ease-in",
-  border: "1px solid transparent",
-  borderRadius: "6px",
 
   "&:focus": {
-    transform: "translateY(-2px)",
     transition: "transform 200ms ease-out, background 200ms ease-out",
     backgroundColor: "$gray2",
-    border: "1px solid $gray6",
-    boxShadow: "$small",
-  },
-  "&:hover": {
-    transform: "translateY(-2px)",
-    transition: "transform 200ms ease-out, background 200ms ease-out",
-    backgroundColor: "$gray2 !important",
     border: "1px solid $gray6",
     boxShadow: "$small",
   },
@@ -31,11 +20,15 @@ const LinkContainer = styled("a", {
   },
 });
 
-const Panel = styled("div", {
+const Panel = styled(motion.div, {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
   padding: "$spacing-03 $spacing-02",
+  borderRadius: "6px",
+  background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
+  boxShadow:
+    "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
 
   "@bp1": {
     padding: "$spacing-03",
@@ -98,16 +91,23 @@ const DecorativeIcon = styled("div", {
   color: "$mauve11",
 });
 
-function StyledLink(props) {
+interface StyledLinkProps {
+  href: string;
+  src: string;
+  title: string;
+  description: string;
+}
+
+function StyledLink({ href, src, title, description }: StyledLinkProps) {
   return (
-    <LinkContainer href={props.href} target="_blank">
-      <Panel>
+    <LinkContainer href={href} target="_blank">
+      <Panel whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
         <FlexWrapper>
-          <Logo src={props.src} />
+          <Logo src={src} />
           <FlexContainer>
             <div>
-              <Title>{props.title}</Title>
-              <Description>{props.description}</Description>
+              <Title>{title}</Title>
+              <Description>{description}</Description>
             </div>
           </FlexContainer>
         </FlexWrapper>

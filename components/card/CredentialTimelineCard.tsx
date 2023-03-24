@@ -76,6 +76,9 @@ const AccentHighlight = styled("div", {
       crimson: {
         background: "$crimson9",
       },
+      gray: {
+        background: "$gray9",
+      },
     },
   },
 
@@ -118,10 +121,6 @@ const CardTitle = styled("h3", {
   overflow: "hidden",
   "-webkit-line-clamp": 1,
   "-webkit-box-orient": "vertical",
-
-  "@bp1": {
-    fontSize: "$2xl",
-  },
 });
 
 const CardSubtitle = styled("p", {
@@ -257,7 +256,7 @@ const IconLink = styled("a", {
   },
 });
 
-type TagColors = "blue" | "plum" | "crimson";
+type TagColors = "blue" | "plum" | "crimson" | "gray";
 
 interface CredentialTimelineCardProps {
   gradient: string;

@@ -1,11 +1,11 @@
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
 import { styled } from "../../stitches.config.js";
-import StyledLink from "../../components/StyledLink.js";
+import StyledLink from "../../components/StyledLink";
 
 const FlexContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  columnGap: "$spacing-05",
+  columnGap: "$spacing-07",
   mt: 0,
 
   "@bp3": {
@@ -23,7 +23,7 @@ const Flex = styled("div", {
   mb: "$spacing-02",
 
   "@bp3": {
-    gap: "$spacing-05",
+    gap: "$spacing-06",
     mb: 0,
   },
 });

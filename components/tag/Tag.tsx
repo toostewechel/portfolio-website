@@ -77,8 +77,8 @@ const TagContainer = styled("div", {
 const TagLabel = styled("p", {
   fontFamily: "$mono",
   fontWeight: "$medium",
-  letterSpacing: "$tracking-wide",
-  lineHeight: "$compact",
+  letterSpacing: "$tracking-tight",
+  lineHeight: "$none",
 
   variants: {
     fontStyle: {

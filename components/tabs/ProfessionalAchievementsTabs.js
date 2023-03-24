@@ -74,7 +74,7 @@ function ProfessionalAchievementsTab() {
               duration="2018 - 2017"
               location="Utrecht"
               hasLink={true}
-              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
+              publication="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -103,6 +103,47 @@ function ProfessionalAchievementsTab() {
       </TabsContent>
       <TabsContent value="education">
         <Timeline>
+          <TimelineItem id="timeline-item">
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2019"
+            />
+            <CredentialTimelineCard
+              logo="/logo/front-end-development-logo.png"
+              accentColor="blue"
+              tagColor="blue"
+              tagLabel="Online"
+              title="Front-End Development"
+              subtitle="Autodidactic"
+              description="Further increase my understanding of developing web apps and the interplay between the design and technical side. I applied all learnings during the development of my personal portfolio site."
+              duration="2022 - 2023"
+              location="Utrecht"
+              hasLink={false}
+            />
+          </TimelineItem>
+          <TimelineItem id="timeline-item">
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2019"
+            />
+            <CredentialTimelineCard
+              logo="/logo/holacracy-logo.png"
+              accentColor="blue"
+              tagColor="blue"
+              tagLabel="Training"
+              title="Holacracy"
+              subtitle="In House Training by Synnervate"
+              description="Holacracy® is a management system that promotes self-organization, distributed decision-making, and clear role definitions. It aims to create a more adaptable, transparent, and collaborative workplace."
+              duration="2019"
+              location="Utrecht, Jouw Omgeving"
+              hasLink={false}
+              href="https://synnervate.nl/en/expertises-2/self-organization-holacracy/"
+            />
+          </TimelineItem>
           <TimelineItem id="timeline-item">
             <CardHeader
               color="crimson"
