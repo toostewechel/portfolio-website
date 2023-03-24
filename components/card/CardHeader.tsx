@@ -1,3 +1,4 @@
+import React from "react";
 import { styled } from "../../stitches.config.js";
 
 const Container = styled("div", {
@@ -88,20 +89,32 @@ const ColorCircle = styled("div", {
   },
 });
 
-function CardHeader(props) {
+interface CardHeaderProps {
+  alignment: "left" | "right";
+  hasYear: boolean;
+  year: number;
+  color: "blue" | "plum" | "crimson";
+}
+
+const CardHeader: React.FC<CardHeaderProps> = ({
+  alignment,
+  hasYear,
+  year,
+  color,
+}) => {
   return (
     <>
-      <Container alignment={props.alignment}>
-        {props.hasYear && <YearLabel>{props.year}</YearLabel>}
+      <Container alignment={alignment}>
+        {hasYear && <YearLabel>{year}</YearLabel>}
         <Line />
       </Container>
       <PositionBox>
-        <Attachment color={props.color}>
-          <ColorCircle color={props.color} />
+        <Attachment color={color}>
+          <ColorCircle color={color} />
         </Attachment>
       </PositionBox>
     </>
   );
-}
+};
 
 export default CardHeader;
