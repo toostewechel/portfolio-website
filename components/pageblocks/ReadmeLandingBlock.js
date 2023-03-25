@@ -81,10 +81,11 @@ export default function ReadmeLandingBlock() {
             <LandingContent
               pageTitle="Read Me"
               pageDescription="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
+              dateUpdated="25 March, 2023"
             />
           </LandingItem>
           <LandingItem>
-            <StyledImage src="/images/landing-placeholder-2.png" />
+            <StyledImage src="/readme/landing.png" />
           </LandingItem>
         </LandingItems>
       </LandingWrapper>

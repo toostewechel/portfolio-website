@@ -17,12 +17,12 @@ const Container = styled("div", {
   borderRadius: "4px",
   willChange: "transform",
   transition: "transform 150ms ease-in, background 150ms ease-in",
-  color: "$mauve8",
+  color: "$mauve11",
 
   "@bp1": {
     "&:hover": {
       scale: 1.01,
-      color: "$mauve2",
+      color: "$mauve12",
       background: "rgba(255, 255, 255, 0.1)",
       transition: "transform 150ms ease-out, background 150ms ease-out",
       boxShadow: "$smooth",
@@ -46,11 +46,16 @@ const Label = styled("p", {
   letterSpacing: "$tracking-tight",
 });
 
-function MenuItem(props) {
+interface MenuItemProps {
+  href: string;
+  label: string;
+}
+
+function MenuItem({ href, label }: MenuItemProps) {
   return (
-    <Link href={props.href}>
+    <Link href={href}>
       <Container>
-        <Label>{props.label}</Label>
+        <Label>{label}</Label>
       </Container>
     </Link>
   );

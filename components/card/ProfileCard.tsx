@@ -8,14 +8,14 @@ import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-  borderRadius: "4px",
+  borderRadius: "12px",
   border: "1px solid linear-gradient(30deg, $violetA9, $crimsonA2)",
-  background:
-    "linear-gradient(158.79deg, #F8F1EE 6.55%, #EADDD7 35.22%, #B8A383 91.45%)",
+  background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  boxShadow: " 0px 6px 6px rgba(0, 0, 0, 0.15)",
   width: "100%",
 
   "@bp1": {
-    width: "auto",
+    width: "264px",
   },
 
   "@bp4": {
@@ -48,8 +48,8 @@ const CardTitle = styled("p", {
   fontWeight: "$extra-bold",
   fontFamily: "$header",
   lineHeight: "$none",
-  letterSpacing: "$tracking-tight",
-  color: "$mauve12",
+  letterSpacing: "$tracking-default",
+  color: "$mauve1",
 
   "@bp1": {
     fontSize: "$xl",
@@ -60,7 +60,7 @@ const CardDescription = styled("p", {
   fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$mauve12",
+  color: "$mauve5",
   mb: "$spacing-08",
 });
 
@@ -129,17 +129,6 @@ const Icon = styled("div", {
   },
   "&:active": {
     backgroundColor: "rgba(0, 0, 0, 0.2)",
-  },
-});
-
-const Menu = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  pt: "$spacing-04",
-  width: "100%",
-
-  "@bp4": {
-    pl: "$spacing-05",
   },
 });
 
