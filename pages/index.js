@@ -14,7 +14,7 @@ import { Experience } from "../components/widgets/Experience.tsx";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
-  backgroundImage: "url(/patterns/grid-lines-red.svg)",
+  backgroundImage: "url(/patterns/grid-lines.svg)",
   backgroundPositionX: "center",
 });
 

@@ -7,15 +7,13 @@ import MenuItem from "../home/profilecard/MenuItem.js";
 
 const StyledHeading = styled("h1", {
   fontFamily: "$header",
-  fontWeight: "$extra-bold",
-  lineHeight: "$compact",
   color: "$mauve12",
-  m: 0,
+  margin: 0,
   fontSize: "$3xl",
   fontWeight: "$black",
   letterSpacing: "$tracking-tighter",
   lineHeight: "$tight",
-  mb: "$spacing-04",
+  marginBottom: "$spacing-04",
 
   "@bp4": {
     fontSize: "$4xl",
@@ -124,11 +122,17 @@ const IndexTitle = styled("p", {
   color: "$mauve6",
 });
 
+interface LandingContentProps {
+  pageTitle: string;
+  pageDescription: string;
+  dateUpdated: string;
+}
+
 export default function LandingContent({
   pageTitle,
   pageDescription,
   dateUpdated,
-}) {
+}: LandingContentProps) {
   return (
     <ContentContainer>
       <StyledHeading>{pageTitle}</StyledHeading>
