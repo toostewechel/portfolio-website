@@ -4,9 +4,9 @@ import ShareToPopover from "../popover/ShareToPopover.js";
 import { ReadingProgressBar } from "../progress/ReadingProgressBar.js";
 import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
-import { IconButton } from "../button/IconButton.tsx";
+import { IconButton } from "../button/IconButton";
 import AvatarStatusBadgePopover from "../popover/AvatarStatusBadgePopover.js";
-import { NavBar } from "./NavBar.tsx";
+import { NavBar } from "./NavBar";
 
 const Container = styled("header", {
   display: "flex",
@@ -65,6 +65,7 @@ interface BlogHeaderProps {
   twitter: string;
   progressBarGradient: string;
   targetRef: any;
+  gradient: string;
 }
 
 export const BlogHeader = ({

@@ -143,7 +143,11 @@ const Menu = styled("div", {
   },
 });
 
-function ProfileCard(props) {
+interface ProfileCardProps {
+  badge?: boolean;
+}
+
+function ProfileCard(props: ProfileCardProps) {
   return (
     <Container>
       <FlexContainer>

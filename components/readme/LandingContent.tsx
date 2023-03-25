@@ -1,8 +1,7 @@
 import { styled } from "../../stitches.config.js";
-import Heading from "../typography/Heading.js";
 import Paragraph from "../typography/Paragraph.js";
 import { Calendar } from "lucide-react";
-import ProfileCard from "../card/ProfileCard.js";
+import ProfileCard from "../card/ProfileCard";
 import MenuItem from "../home/profilecard/MenuItem.js";
 
 const StyledHeading = styled("h1", {
