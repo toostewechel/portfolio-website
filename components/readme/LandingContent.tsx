@@ -2,7 +2,7 @@ import { styled } from "../../stitches.config.js";
 import ProfileCard from "../card/ProfileCard";
 import MenuItem from "../home/profilecard/MenuItem";
 import { ArrowUpRight } from "lucide-react";
-import ContentBlock from "../layouts/blocks/ContentBlock.js";
+import ContentBlock from "../layouts/blocks/ContentBlock";
 
 const ContentContainer = styled("div", {
   display: "flex",

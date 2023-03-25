@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { styled } from "../../stitches.config.js";
-import ContentBlock from "../layouts/blocks/ContentBlock.js";
+import ContentBlock from "../layouts/blocks/ContentBlock";
 import Section from "../layouts/blocks/Section.js";
 import Spacer from "../layouts/blocks/Spacer.js";
 import SoftwareStackTabs from "../tabs/SoftwareStackTabs.js";
@@ -28,6 +28,7 @@ function ExperienceBlock() {
         <ProfessionalAchievementsTabs />
         <Spacer level={12} />
         <ContentBlock
+          as="h1"
           title="Software Stack"
           description="I mainly focus on (learning) industry leading tools and frameworks to streamline and optimize my design and development workflow."
         />

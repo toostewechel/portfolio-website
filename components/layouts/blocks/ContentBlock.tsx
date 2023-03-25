@@ -86,7 +86,7 @@ interface ContentBlockProps {
   description: string;
   hasButton?: boolean;
   buttonLabel?: string;
-  as?: keyof HTMLProps<HTMLElement>;
+  as?: "h1" | "h2" | "h3";
 }
 
 function ContentBlock({
@@ -95,7 +95,7 @@ function ContentBlock({
   description,
   hasButton,
   buttonLabel,
-  as,
+  as = "h1",
 }: ContentBlockProps) {
   return (
     <Container alignment={textAlignment}>

@@ -10,15 +10,6 @@ const Wrapper = styled("div", {
   backgroundPositionX: "center",
 });
 
-const ContentContainer = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  marginBottom: "232px",
-  justifyContent: "center",
-  alignItems: "center",
-  marginTop: "72px",
-});
-
 export default function BlogPost() {
   return (
     <Wrapper>

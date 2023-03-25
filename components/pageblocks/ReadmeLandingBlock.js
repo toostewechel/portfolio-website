@@ -1,15 +1,16 @@
 import { styled } from "../../stitches.config.js";
 import Section from "../layouts/blocks/Section.js";
 import LandingContent from "../readme/LandingContent";
-import ContentBlock from "../layouts/blocks/ContentBlock.js";
 
-const LandingWrapper = styled("div", {});
+const LandingWrapper = styled("div", {
+  m: 0,
+});
 
 const LandingItems = styled("div", {
   position: "relative",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
+  alignItems: "start",
   padding: "0",
   gap: "$spacing-08",
 
