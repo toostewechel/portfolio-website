@@ -19,17 +19,17 @@ const Wrapper = styled("div", {
 });
 
 const ContentContainer = styled("div", {
-  pt: "$spacing-14",
-  pb: "$spacing-14",
+  marginTop: "70px",
 });
 
 const ReadMe = () => {
   return (
     <Wrapper>
       <Header />
-      <ReadmeLandingBlock />
       <ContentContainer>
         <PageLayout>
+          <ReadmeLandingBlock />
+          <Spacer level={13} />
           <CoreValuesBlock />
           <Spacer level={13} />
           <PersonalityBlock />

@@ -1,6 +1,6 @@
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "./Tabs.js";
 import { styled } from "../../stitches.config.js";
-import StyledLink from "../../components/StyledLink.js";
+import StyledLink from "../../components/StyledLink";
 
 const FlexContainer = styled("div", {
   display: "flex",

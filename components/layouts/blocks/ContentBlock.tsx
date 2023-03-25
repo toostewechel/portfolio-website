@@ -1,5 +1,6 @@
 import { styled } from "../../../stitches.config.js";
 import { ArrowRight } from "lucide-react";
+import React, { HTMLProps } from "react";
 
 const Container = styled("div", {
   display: "flex",
@@ -24,7 +25,7 @@ const Container = styled("div", {
   },
 });
 
-const Heading = styled("h2", {
+const Heading = styled("h1", {
   fontSize: "$3xl",
   fontWeight: "$black",
   fontFamily: "$header",
@@ -79,16 +80,26 @@ const Button = styled("button", {
   },
 });
 
+interface ContentBlockProps {
+  textAlignment: "left" | "center";
+  title: string;
+  description: string;
+  hasButton?: boolean;
+  buttonLabel?: string;
+  as?: keyof HTMLProps<HTMLElement>;
+}
+
 function ContentBlock({
   textAlignment,
   title,
   description,
   hasButton,
   buttonLabel,
-}) {
+  as,
+}: ContentBlockProps) {
   return (
-    <Container textAlignment={textAlignment}>
-      <Heading>{title}</Heading>
+    <Container alignment={textAlignment}>
+      <Heading as={as}>{title}</Heading>
       <Description>{description}</Description>
       {hasButton ? (
         <Button>

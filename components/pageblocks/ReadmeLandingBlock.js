@@ -1,12 +1,9 @@
 import { styled } from "../../stitches.config.js";
 import Section from "../layouts/blocks/Section.js";
 import LandingContent from "../readme/LandingContent";
+import ContentBlock from "../layouts/blocks/ContentBlock.js";
 
-const LandingWrapper = styled("div", {
-  maxWidth: "1234px",
-  margin: "$spacing-14 auto",
-  padding: "0 $spacing-03",
-});
+const LandingWrapper = styled("div", {});
 
 const LandingItems = styled("div", {
   position: "relative",
@@ -48,28 +45,9 @@ const Heading = styled("h1", {
   },
 });
 
-const Description = styled("p", {
-  fontSize: "$base",
-  fontWeight: "$regular",
-  fontFamily: "$default",
-  lineHeight: "$base",
-  letterSpacing: "$tracking-normal",
-  color: "$mauve12",
-  maxWidth: "720px",
-  mb: "$spacing-09",
-
-  "@bp1": {
-    fontSize: "$lg",
-  },
-});
-
 const StyledImage = styled("img", {
   width: "100%",
   height: "auto",
-});
-
-const ContentContainer = styled("div", {
-  maxWidth: "532px",
 });
 
 export default function ReadmeLandingBlock() {

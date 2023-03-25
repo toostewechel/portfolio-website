@@ -20,6 +20,7 @@ function ExperienceBlock() {
     <Section>
       <ContentContainer>
         <ContentBlock
+          as="h1"
           title="Experience"
           description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
         />

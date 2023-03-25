@@ -2,58 +2,13 @@ import { styled } from "../../stitches.config.js";
 import ProfileCard from "../card/ProfileCard";
 import MenuItem from "../home/profilecard/MenuItem";
 import { ArrowUpRight } from "lucide-react";
-
-const StyledHeading = styled("h1", {
-  fontFamily: "$header",
-  color: "$mauve12",
-  margin: 0,
-  fontSize: "$3xl",
-  fontWeight: "$black",
-  letterSpacing: "$tracking-tighter",
-  lineHeight: "$none",
-
-  "@bp4": {
-    fontSize: "$4xl",
-  },
-  "@bp6": {
-    fontSize: "$5xl",
-  },
-});
-
-const Description = styled("p", {
-  fontSize: "$lg",
-  fontWeight: "$regular",
-  fontFamily: "$default",
-  lineHeight: "$base",
-  letterSpacing: "$tracking-normal",
-  color: "$mauve12",
-  maxWidth: "720px",
-
-  "@bp1": {
-    fontSize: "$bodyLarge",
-  },
-});
+import ContentBlock from "../layouts/blocks/ContentBlock.js";
 
 const ContentContainer = styled("div", {
   display: "flex",
   gap: "$spacing-09",
   flexDirection: "column",
   alignItems: "flex-start",
-  maxWidth: "640px",
-  zIndex: "9",
-  mb: "$spacing-12",
-  mt: "$spacing-13",
-
-  "@bp4": {
-    m: 0,
-    pr: "$spacing-05",
-  },
-});
-
-const ContentBlock = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  gap: "$spacing-03",
 });
 
 const LabelContainer = styled("div", {
@@ -122,10 +77,11 @@ export default function LandingContent({
 }: LandingContentProps) {
   return (
     <ContentContainer>
-      <ContentBlock>
-        <StyledHeading>{pageTitle}</StyledHeading>
-        <Description>{pageDescription}</Description>
-      </ContentBlock>
+      <ContentBlock
+        as="h1"
+        title="Read.Me"
+        description="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
+      />
       <ProfileCardContainer>
         <ProfileCard />
         <ProfileCardIndex>
