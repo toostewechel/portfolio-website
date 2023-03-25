@@ -65,19 +65,14 @@ const IndexTitle = styled("p", {
 });
 
 interface LandingContentProps {
-  pageTitle: string;
-  pageDescription: string;
   dateUpdated: string;
 }
 
-export default function LandingContent({
-  pageTitle,
-  pageDescription,
-  dateUpdated,
-}: LandingContentProps) {
+export default function LandingContent({ dateUpdated }: LandingContentProps) {
   return (
     <ContentContainer>
       <ContentBlock
+        textAlignment="left"
         as="h1"
         title="Read.Me"
         description="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"

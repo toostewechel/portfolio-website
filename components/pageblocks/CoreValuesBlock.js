@@ -9,7 +9,6 @@ import { useMediaQuery } from "react-responsive";
 const CoreValuesContainer = styled("div", {});
 
 const CoreValueItems = styled("ul", {
-  maxWidth: "1234px",
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
