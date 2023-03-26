@@ -118,7 +118,21 @@ const ValueDescription = styled("p", {
   },
 });
 
-export default function CoreValueCard({ children, color, label, title }) {
+type ColorVariants = "plum" | "blue" | "crimson" | "violet" | "teal" | "cyan";
+
+interface CoreValueCardProps {
+  children: React.ReactNode;
+  color: ColorVariants;
+  label: string;
+  title: string;
+}
+
+const CoreValueCard: React.FC<CoreValueCardProps> = ({
+  children,
+  color,
+  label,
+  title,
+}) => {
   return (
     <Container>
       <LabelContainer>
@@ -131,4 +145,6 @@ export default function CoreValueCard({ children, color, label, title }) {
       </ValueDescriptionBox>
     </Container>
   );
-}
+};
+
+export default CoreValueCard;

@@ -2,16 +2,18 @@ import { styled } from "../../stitches.config.js";
 import ContentBlock from "../layouts/blocks/ContentBlock";
 import Section from "../layouts/blocks/Section.js";
 import Spacer from "../layouts/blocks/Spacer.js";
-import CoreValueCard from "../card/CoreValueCard.js";
+import CoreValueCard from "../card/CoreValueCard";
 import CoreValuesAccordion from "../accordion/CoreValuesAccordion.js";
 import { useMediaQuery } from "react-responsive";
 
-const CoreValuesContainer = styled("div", {});
+const CoreValuesContainer = styled("div", {
+  display: "flex",
+  width: "100%",
+});
 
 const CoreValueItems = styled("ul", {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "center",
   flexWrap: "wrap",
   padding: "$none",
   listStyle: "none",
@@ -35,7 +37,7 @@ const CoreValueItem = styled("li", {
   },
 
   "@bp4": {
-    flexBasis: "calc(calc(100% / 3) - 16px)",
+    flexBasis: "calc(calc(100% / 3) - 12px)",
   },
 });
 
