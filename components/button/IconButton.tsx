@@ -42,12 +42,19 @@ interface Props {
   children: any;
 }
 
-export const IconButton = ({ href, ariaLabel, tooltipLabel, children }) => {
+export const IconButton = ({
+  href,
+  ariaLabel,
+  tooltipLabel,
+  children,
+}: Props) => {
   return (
     <Provider>
       <Tooltip>
-        <TooltipTrigger href={href}>
-          <IconLink aria-label={ariaLabel}>{children}</IconLink>
+        <TooltipTrigger>
+          <IconLink href={href} aria-label={ariaLabel}>
+            {children}
+          </IconLink>
         </TooltipTrigger>
         <TooltipContent sideOffset={4}>{tooltipLabel}</TooltipContent>
       </Tooltip>

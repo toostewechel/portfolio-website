@@ -3,9 +3,9 @@ import React from "react";
 import { Tag } from "../tag/Tag";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { SoftwareCarousel } from "../carousel/SoftwareCarousel.tsx";
+import { SoftwareCarousel } from "../carousel/SoftwareCarousel";
 
-const WidgetContainer = styled("div", {
+const WidgetContainer = styled(motion.div, {
   position: "relative",
   gridArea: "exp",
   display: "flex",

@@ -83,97 +83,81 @@ export const AnimatedSkillsBar = ({}) => {
       <Bars>
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-84, -74, -84] }}
         />
         <Bar
           color="green"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 3 }}
           animate={{ y: [-24, -14, -24] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 5 }}
           animate={{ y: [-84, -74, -84] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 6 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="green"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 3 }}
           animate={{ y: [-24, -14, -24] }}
         />
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-84, -74, -84] }}
         />
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 5 }}
           animate={{ y: [-84, -74, -84] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="green"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-34, -14, -34] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 6 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-84, -74, -84] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 3 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="green"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 3 }}
           animate={{ y: [-14, -4, -14] }}
         />
         <Bar
           color="crimson"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 5 }}
           animate={{ y: [-48, -38, -48] }}
         />
         <Bar
           color="blue"
-          initial={{ y: [-124] }}
           transition={{ repeat: Infinity, duration: 4 }}
           animate={{ y: [-84, -74, -84] }}
         />

@@ -162,6 +162,7 @@ interface Props {
 }
 
 export const Blogpost = ({
+  labelColor,
   color,
   imageSrc,
   title,
@@ -187,7 +188,7 @@ export const Blogpost = ({
           </ImageContainer>
         </ImageLayout>
         <BlogDetailsLayout>
-          <LabelContainer labelColor={color}>
+          <LabelContainer color={labelColor}>
             <Label>Latest Blog Post</Label>
             <Inbox size={17} />
           </LabelContainer>

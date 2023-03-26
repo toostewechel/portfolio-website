@@ -3,8 +3,8 @@ import React from "react";
 import Avatar from "../avatar/Avatar.js";
 import { ArrowRight, ArrowDown, ArrowUpRight, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
-import { AnimatedSkillsBar } from "./AnimatedSkillsBar.tsx";
-import { ProductRolesCarousel } from "../carousel/ProductRolesCarousel.tsx";
+import { AnimatedSkillsBar } from "./AnimatedSkillsBar";
+import { ProductRolesCarousel } from "../carousel/ProductRolesCarousel";
 
 const WidgetContainer = styled(motion.div, {
   gridArea: "cc",

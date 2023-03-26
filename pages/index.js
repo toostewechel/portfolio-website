@@ -5,7 +5,7 @@ import Footer from "../components/layouts/blocks/Footer.js";
 import { GridHeader } from "../components/widgets/GridHeader.tsx";
 import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";
 import { Snapshot } from "../components/widgets/Snapshot.tsx";
-import { BookMeeting } from "../components/widgets/BookMeeting.tsx";
+import { BookMeeting } from "../components/widgets/BookMeeting.js";
 import { Personality } from "../components/widgets/Personality.tsx";
 import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";

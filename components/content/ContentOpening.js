@@ -1,6 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
-import Tag from "../tag/Tag.js";
+import { Tag } from "../tag/Tag";
 
 const Background = styled("div", {
   margin: 0,

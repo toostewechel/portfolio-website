@@ -1,8 +1,8 @@
-import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock";
 import Spacer from "../../layouts/blocks/Spacer.js";
 import Section from "../../layouts/blocks/Section.js";
 import { Timeline, TimelineItem } from "../../timeline/Timeline.js";
-import CardHeader from "../../card/CardHeader.js";
+import CardHeader from "../../card/CardHeader";
 import ProjectTimelineCard from "../../card/ProjectTimelineCard.js";
 
 function ProjectsBlock() {

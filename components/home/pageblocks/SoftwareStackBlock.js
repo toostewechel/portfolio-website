@@ -1,5 +1,5 @@
 import { styled } from "../../../stitches.config.js";
-import ContentBlock from "../../layouts/blocks/ContentBlock.js";
+import ContentBlock from "../../layouts/blocks/ContentBlock";
 import SoftwareStackTabs from "../../tabs/SoftwareStackTabs.js";
 import Section from "../../layouts/blocks/Section.js";
 import Spacer from "../../layouts/blocks/Spacer.js";

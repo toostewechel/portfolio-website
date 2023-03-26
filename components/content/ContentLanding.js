@@ -1,6 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import Heading from "../typography/Heading.js";
-import Tag from "../tag/Tag.js";
+import { Tag } from "../tag/Tag";
 import Avatar from "../avatar/Avatar.js";
 
 const ContentContainer = styled("div", {

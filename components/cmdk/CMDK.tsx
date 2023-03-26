@@ -241,8 +241,6 @@ export default function CMDK() {
   return (
     <div>
       <CommandDialog
-        open={open}
-        onOpenChange={setOpen}
         ref={ref}
         onKeyDown={(e: React.KeyboardEvent) => {
           if (isHome || inputValue.length) {
