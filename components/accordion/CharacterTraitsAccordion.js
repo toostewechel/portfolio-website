@@ -1,12 +1,11 @@
 import React from "react";
-import { styled } from "../../stitches.config.js";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "./Accordion.js";
-import CharacterTrait from "../readme/CharacterTrait.js";
+import CharacterTrait from "../readme/CharacterTrait";
 import {
   Database,
   BatteryCharging,
@@ -52,7 +51,7 @@ export default function CharacterTraitsAccordion() {
             percentageRight="34%"
             charactertraitDescription="Primarily Intuitive: You’re likely very imaginative and open-minded, focusing on hidden meanings and distant possibilities."
             progressValue={66}
-            gradient="blue"
+            gradient="plum"
           />
         </AccordionContent>
       </AccordionItem>
@@ -90,7 +89,7 @@ export default function CharacterTraitsAccordion() {
             percentageRight="24%"
             charactertraitDescription="Primarily Judging: You’re likely decisive, thorough, and highly organised. You value clarity and prefer planning to spontaneity."
             progressValue={57}
-            gradient="plum"
+            gradient="red"
           />
         </AccordionContent>
       </AccordionItem>

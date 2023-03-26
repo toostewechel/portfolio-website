@@ -54,6 +54,18 @@ const StyledProgressIndicator = styled(Progress.Indicator, {
       teal: {
         background: "linear-gradient(90deg, $teal9, $teal11)",
       },
+      cyan: {
+        background: "linear-gradient(90deg, $cyan9, $cyan11)",
+      },
+      red: {
+        background: "linear-gradient(90deg, $red9, $red11)",
+      },
+      yellow: {
+        background: "linear-gradient(90deg, $yellow9, $yellow11)",
+      },
+      slate: {
+        background: "linear-gradient(90deg, $slate9, $slate11)",
+      },
     },
   },
 });
@@ -69,7 +81,17 @@ const InnerContainer = styled("div", {
   borderRadius: "6px",
 });
 
-export default function ProgressBar({ gradient, progressValue, helpText }) {
+interface ProgressBarProps {
+  gradient: "blue" | "plum" | "crimson" | "teal" | "cyan" | "red" | "yellow";
+  progressValue: number;
+  helpText?: string;
+}
+
+const ProgressBar: React.FC<ProgressBarProps> = ({
+  gradient,
+  progressValue,
+  helpText,
+}) => {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -92,4 +114,6 @@ export default function ProgressBar({ gradient, progressValue, helpText }) {
       </LabelContainer>
     </Container>
   );
-}
+};
+
+export default ProgressBar;

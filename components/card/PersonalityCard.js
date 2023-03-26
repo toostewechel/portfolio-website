@@ -40,7 +40,7 @@ const CoverCardContainer = styled("div", {
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
-  background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  background: "linear-gradient(149.31deg, #EEFADC 0%, #C7EBE5 100%)",
   borderRadius: "6px",
   width: "100%",
   height: "100%",
@@ -87,12 +87,12 @@ const Label = styled("p", {
   fontWeight: "$medium",
   fontSize: "$xs",
   lineHeight: "$none",
-  color: "$bronze9",
+  color: "$teal10",
 
   variants: {
     color: {
       dark: {
-        color: "$bronze9",
+        color: "$mauve12",
       },
       light: {
         color: "$bronze3",
@@ -109,7 +109,7 @@ const CardTitle = styled("p", {
   mt: "$spacing-03",
   mb: "$spacing-04",
   fontSize: "$3xl",
-  color: "$mauve1",
+  color: "$teal11",
 
   "@bp2": {
     fontSize: "$4xl",
@@ -121,7 +121,7 @@ const ColoredLine = styled("div", {
   width: "132px",
   height: "6px",
   borderRadius: "6px",
-  background: "$bronze7",
+  background: "$teal9",
 });
 
 const ImageContainer = styled("div", {
@@ -168,7 +168,7 @@ const CardDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$sm",
-  color: "$gray8",
+  color: "$teal12",
   maxWidth: "380px",
 
   "@bp2": {
@@ -191,13 +191,13 @@ const Paragraph = styled("p", {
 export const PersonalityCardCover = () => (
   <CoverCardContainer>
     <TitleContainer>
-      <Label color="light">My Personality</Label>
+      <Label color="dark">My Personality</Label>
       <CardTitle>Advocate</CardTitle>
       <ColoredLine />
     </TitleContainer>
     <ImageContainer />
     <SummaryContainer>
-      <Title color="light">Summary</Title>
+      <Title color="dark">Summary</Title>
       <CardDescription>
         Advocates are Introverted, Intuitive, Feeling, Judging and Assertive.
         They approach life with thoughtfulness and imagination, guided by their

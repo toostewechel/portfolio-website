@@ -1,5 +1,5 @@
 import { styled } from "../../../stitches.config.js";
-import ProgressBar from "../../progress/Progress.js";
+import ProgressBar from "../../progress/Progress";
 
 const Container = styled("div", {
   width: "100%",

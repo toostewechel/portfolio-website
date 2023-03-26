@@ -1,6 +1,5 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import ProgressBar from "./Progress.js";
 import { ScrollYProgressBar } from "./ScrollYProgressBar.tsx";
 
 const ReadingProgressBarContainer = styled("div", {

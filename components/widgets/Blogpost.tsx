@@ -1,12 +1,6 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import {
-  ArrowRight,
-  ArrowDown,
-  ArrowUpRight,
-  Inbox,
-  Calendar,
-} from "lucide-react";
+import { ArrowUpRight, Inbox, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -110,7 +104,7 @@ const LabelContainer = styled("div", {
   gap: "$spacing-02",
 
   variants: {
-    labelColor: {
+    color: {
       blue: {
         color: "$blue10",
       },
@@ -159,7 +153,7 @@ const DateLabel = styled("p", {
 
 interface Props {
   labelColor: "blue" | "red" | "teal" | "gray";
-  color: string;
+  color: "teal" | "crimson";
   imageSrc: string;
   title: string;
   description: string;

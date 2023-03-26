@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "../../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import { Layers, ArrowUp, ArrowDown } from "lucide-react";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
   width: "100%",
@@ -16,24 +15,12 @@ const HeaderPanel = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "$spacing-04 $spacing-03",
+  padding: "$spacing-04 $none $none $none",
 });
 
 const Flex = styled("div", {
   display: "flex",
   minWidth: "0",
-});
-
-const DecorativeIcon = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  p: "$spacing-02",
-  color: "$blue11",
-
-  "@bp1": {
-    pr: "$spacing-03",
-  },
 });
 
 const Title = styled("h3", {
@@ -109,34 +96,8 @@ const Button = styled("button", {
   },
 });
 
-const IconButton = styled("button", {
-  borderRadius: "4px",
-  outlineOffset: "2px",
-  ml: "$spacing-03",
-  padding: "$spacing-02",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "$violet11",
-  '&[data-state="closed"]': {
-    backgroundColor: "white",
-  },
-  '&[data-state="open"]': {
-    backgroundColor: "$violet3",
-  },
-  "&:hover": {
-    backgroundColor: "$violet4",
-  },
-  "&:active": {
-    backgroundColor: "$violet5",
-  },
-  "&:focus": {
-    outlineColor: "$violet11",
-  },
-});
-
 export default function CollapsibleContent({ children }) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
@@ -144,7 +105,7 @@ export default function CollapsibleContent({ children }) {
           <Title>Details</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <Button color="crimson">{open ? "Hide" : "Show"}</Button>
+          <Button color="teal">{open ? "Hide" : "Show"}</Button>
         </CollapsibleTrigger>
       </HeaderPanel>
       <CollapsiblePanel>{children}</CollapsiblePanel>

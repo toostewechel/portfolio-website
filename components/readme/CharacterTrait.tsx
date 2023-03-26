@@ -1,5 +1,6 @@
+import React from "react";
 import { styled } from "../../stitches.config.js";
-import ProgressBar from "../progress/Progress.js";
+import ProgressBar from "../progress/Progress";
 
 const Container = styled("div", {
   width: "100%",
@@ -66,7 +67,25 @@ const CharacterTraitDescription = styled("p", {
   },
 });
 
-export default function CharacterTrait({
+interface CharacterTraitProps {
+  labelLeft: string;
+  labelRight: string;
+  percentageLeft: string;
+  percentageRight: string;
+  charactertraitDescription: string;
+  progressValue: number;
+  gradient:
+    | "blue"
+    | "plum"
+    | "crimson"
+    | "teal"
+    | "cyan"
+    | "red"
+    | "yellow"
+    | "slate";
+}
+
+const CharacterTrait: React.FC<CharacterTraitProps> = ({
   labelLeft,
   labelRight,
   percentageLeft,
@@ -74,7 +93,7 @@ export default function CharacterTrait({
   charactertraitDescription,
   progressValue,
   gradient,
-}) {
+}) => {
   return (
     <Container>
       <LabelContainer>
@@ -91,4 +110,6 @@ export default function CharacterTrait({
       </CharacterTraitDescription>
     </Container>
   );
-}
+};
+
+export default CharacterTrait;

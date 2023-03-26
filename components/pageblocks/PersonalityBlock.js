@@ -1,4 +1,3 @@
-import { styled } from "../../stitches.config.js";
 import ContentBlock from "../layouts/blocks/ContentBlock";
 import Section from "../layouts/blocks/Section.js";
 import Spacer from "../layouts/blocks/Spacer.js";

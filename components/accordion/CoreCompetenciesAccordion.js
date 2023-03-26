@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "../../stitches.config.js";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronRight } from "lucide-react";
-import ProgressBar from "../progress/Progress.js";
+import ProgressBar from "../progress/Progress";
 import ProductExecutionAccordion from "./competencies/ProductExecutionAccordion.js";
 import QuoteBlock from "../typography/QuoteBlock.js";
 

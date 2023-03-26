@@ -6,15 +6,9 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../Accordion.js";
-import CharacterTrait from "../../readme/CharacterTrait.js";
+import CharacterTrait from "../../readme/CharacterTrait";
 import Competency from "./Competency.js";
-import {
-  Database,
-  BatteryCharging,
-  Trees,
-  Lightbulb,
-  PersonStanding,
-} from "lucide-react";
+import { Database, BatteryCharging, Trees } from "lucide-react";
 
 const AccordionWrapper = styled("div", {
   all: "unset",
