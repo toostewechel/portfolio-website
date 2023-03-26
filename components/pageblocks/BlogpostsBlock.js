@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import ContentBlock from "../layouts/blocks/ContentBlock.js";
+import ContentBlock from "../layouts/blocks/ContentBlock";
 import Spacer from "../layouts/blocks/Spacer.js";
 import Section from "../layouts/blocks/Section.js";
 import { Timeline, TimelineItem } from "../timeline/Timeline.js";

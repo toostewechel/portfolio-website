@@ -1,5 +1,10 @@
 import nextMDX from "@next/mdx";
 
+// next.config.js
+module.exports = {
+  output: "standalone",
+};
+
 const withMDX = nextMDX({
   // By default only the .mdx extension is supported.
   extension: /\.mdx?$/,

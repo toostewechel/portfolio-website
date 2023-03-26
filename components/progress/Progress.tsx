@@ -82,7 +82,15 @@ const InnerContainer = styled("div", {
 });
 
 interface ProgressBarProps {
-  gradient: "blue" | "plum" | "crimson" | "teal" | "cyan" | "red" | "yellow";
+  gradient:
+    | "blue"
+    | "plum"
+    | "crimson"
+    | "teal"
+    | "cyan"
+    | "red"
+    | "yellow"
+    | "slate";
   progressValue: number;
   helpText?: string;
 }
