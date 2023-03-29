@@ -40,6 +40,7 @@ export default function WidgetsGrid() {
               tagColor="orange"
               hasIcon={false}
               hasJob={true}
+              href="/readme"
             />
             <Snapshot
               type="Case Study"
