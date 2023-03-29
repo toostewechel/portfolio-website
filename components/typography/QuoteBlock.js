@@ -34,6 +34,7 @@ const StyledBlockquote = styled("blockquote", {
     color: "$mauve12",
     maxWidth: "640px",
     zIndex: "3",
+    marginBottom: "$spacing-04",
 
     "@bp2": {
       fontSize: "$2xl",

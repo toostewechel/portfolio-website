@@ -5,6 +5,7 @@ const Container = styled("div", {
   width: "100%",
   display: "flex",
   flexDirection: "column",
+  pb: "$spacing-04",
 });
 
 const Label = styled("p", {
@@ -23,7 +24,7 @@ const HelpText = styled("p", {
   fontSize: "$sm",
   lineHeight: "$none",
   color: "$mauve12",
-  mt: "$spacing-02",
+  mt: "$spacing-01",
   mb: "$spacing-04",
 });
 
