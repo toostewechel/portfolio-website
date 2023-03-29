@@ -41,6 +41,7 @@ const StyledItem = styled(AccordionPrimitive.Item, {
     type: {
       nested: {
         boxShadow: "none",
+        mb: "$none",
       },
     },
   },
@@ -144,18 +145,58 @@ const StyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
   },
 });
 
+const NestedStyledHeaderTrigger = styled(AccordionPrimitive.Trigger, {
+  position: "relative",
+  display: "flex",
+  flexDirection: "row",
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "$spacing-05",
+  padding: "$spacing-03 $spacing-04 ",
+
+  "@bp2": {
+    padding: "$spacing-04 $spacing-05 ",
+  },
+  "@bp3": {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  "&:hover": {
+    backgroundColor: "$gray2",
+  },
+  "&:active": {
+    transition: "border, 300ms ease-out",
+  },
+  "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$white",
+  },
+});
+
 const StyledChevron = styled(ChevronRight, {
+  position: "absolute",
   right: 16,
   top: 24,
   color: "$mauve9",
   transition: "transform 200ms cubic-bezier(0.87, 0, 0.13, 1)",
 
-  "@bp2": {
-    right: 24,
-    top: 40,
+  "@bp3": {
+    position: "unset",
   },
 
   [`${StyledHeaderTrigger}[data-state="open"] &`]: {
+    transform: "rotate(90deg)",
+    color: "$mauve12",
+  },
+});
+
+const NestedStyledChevron = styled(ChevronRight, {
+  color: "$mauve9",
+  transition: "transform 200ms cubic-bezier(0.87, 0, 0.13, 1)",
+
+  [`${NestedStyledHeaderTrigger}[data-state="open"] &`]: {
     transform: "rotate(90deg)",
     color: "$mauve12",
   },
@@ -185,28 +226,39 @@ const Content = styled(AccordionPrimitive.Content, {});
 
 const ContentLayout = styled("div", {
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   padding: "$spacing-03",
+
+  "@bp3": {
+    flexDirection: "row",
+  },
 });
 
 const NestedContentLayout = styled(AccordionPrimitive.Content, {
   display: "flex",
   flexDirection: "row",
-  paddingRight: "$spacing-05",
-  paddingLeft: "$spacing-05",
+  padding: "$spacing-03 $spacing-05",
 });
 
 const CompetenciesLayout = styled("div", {
   display: "flex",
-  width: "50%",
+  width: "100%",
+
+  "@bp3": {
+    width: "50%",
+  },
 });
 
 const QuoteLayout = styled("div", {
   display: "flex",
-  width: "50%",
+  width: "100%",
   justifyContent: "center",
   alignItems: "start",
   padding: "$spacing-03 $spacing-10",
+
+  "@bp3": {
+    width: "50%",
+  },
 });
 
 const DecorativeIcon = styled("div", {
@@ -268,13 +320,13 @@ export const AccordionTrigger = ({
 
 export const NestedAccordionTrigger = ({ hasIcon, Icon, title }) => (
   <HeaderPanel>
-    <StyledHeaderTrigger>
+    <NestedStyledHeaderTrigger>
       <FlexBox>
         {hasIcon ? <DecorativeIcon>{Icon}</DecorativeIcon> : null}
         <Title>{title}</Title>
       </FlexBox>
-      <StyledChevron aria-hidden />
-    </StyledHeaderTrigger>
+      <NestedStyledChevron aria-hidden />
+    </NestedStyledHeaderTrigger>
   </HeaderPanel>
 );
 
@@ -285,10 +337,12 @@ export const AccordionContent = ({ children }) => (
 );
 
 export const NestedAccordionContent = ({ children }) => (
-  <NestedContentLayout>{children}</NestedContentLayout>
+  <Content>
+    <NestedContentLayout>{children}</NestedContentLayout>
+  </Content>
 );
 
-export default function CoreCompetenciesAccordion(props) {
+export default function CoreCompetenciesAccordion() {
   const [value, setValue] = React.useState(["item-1"]);
   const [nestedValue, setNestedValue] = React.useState(["sub-item-1"]);
 
