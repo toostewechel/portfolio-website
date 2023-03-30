@@ -63,16 +63,16 @@ const ContentContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   flexDirection: "row",
-  gap: "$spacing-03",
+  gap: "$spacing-04",
 });
 
 const Avatar = styled("img", {
-  width: "64px",
-  height: "64px",
+  width: "60px",
+  height: "60px",
 
   "@bp2": {
-    width: "80px",
-    height: "80px",
+    width: "72px",
+    height: "72px",
   },
 });
 
@@ -254,10 +254,11 @@ const QuoteLayout = styled("div", {
   width: "100%",
   justifyContent: "center",
   alignItems: "start",
-  padding: "$spacing-03 $spacing-10",
+  padding: "$none $spacing-07 ",
 
   "@bp3": {
     width: "50%",
+    padding: "$none $spacing-10",
   },
 });
 
@@ -526,7 +527,7 @@ export default function CoreCompetenciesAccordion() {
                   <NestedAccordionTrigger
                     hasIcon
                     Icon={<Map />}
-                    title="Product Vision & Roadmapping"
+                    title="Product Vision & Roadmap"
                   />
                   <NestedAccordionContent>
                     <Competency

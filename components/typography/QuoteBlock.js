@@ -29,7 +29,7 @@ const StyledBlockquote = styled("blockquote", {
     fontFamily: "$header",
     fontSize: "$xl",
     fontWeight: "$bold",
-    lineHeight: "$compact",
+    lineHeight: "$tight",
     letterSpacing: "$tracking-tighter",
     color: "$mauve12",
     maxWidth: "640px",
