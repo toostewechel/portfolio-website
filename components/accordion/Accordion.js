@@ -3,6 +3,7 @@ import { styled } from "../../stitches.config.js";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
 import { ChevronRight } from "lucide-react";
+import { Tag } from "../tag/Tag";
 
 const StyledAccordion = styled(AccordionPrimitive.Root, {
   width: "100%",
@@ -10,7 +11,20 @@ const StyledAccordion = styled(AccordionPrimitive.Root, {
 
 const StyledItem = styled(AccordionPrimitive.Item, {
   borderBottom: "1px solid $gray6",
-  backgroundColor: "$violet2",
+  backgroundColor: "white",
+  overflow: "hidden",
+
+  variants: {
+    type: {
+      tile: {
+        mb: "$spacing-03",
+        boxShadow:
+          "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
+        borderRadius: "6px",
+        borderBottom: "none",
+      },
+    },
+  },
 
   "&:last-child": {
     borderBottom: "none",
@@ -76,7 +90,7 @@ const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  mr: "$spacing-03",
+
   width: "20px",
   height: "20px",
   color: "$mauve11",
@@ -95,20 +109,27 @@ const Box = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
+  gap: "$spacing-03",
 });
 
 //exports
 export const Accordion = StyledAccordion;
 export const AccordionItem = StyledItem;
 export const AccordionTrigger = React.forwardRef(
-  ({ children, hasIcon, Icon, title, ...props }, forwardedRef) => (
+  (
+    { children, hasIcon, Icon, hasTag, label, color, title, ...props },
+    forwardedRef
+  ) => (
     <StyledHeader>
       <StyledTrigger {...props} ref={forwardedRef}>
         <Box>
           {hasIcon ? <DecorativeIcon>{Icon}</DecorativeIcon> : null}
           <Title>{title}</Title>
         </Box>
-        <StyledChevron aria-hidden />
+        <Box>
+          {hasTag ? <Tag label={label} color={color} /> : null}
+          <StyledChevron aria-hidden />
+        </Box>
       </StyledTrigger>
     </StyledHeader>
   )

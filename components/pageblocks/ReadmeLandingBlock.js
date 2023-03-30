@@ -32,26 +32,12 @@ const LandingItem = styled("div", {
   },
 });
 
-const Heading = styled("h1", {
-  fontSize: "$3xl",
-  fontWeight: "$black",
-  fontFamily: "$header",
-  letterSpacing: "$tracking-tighter",
-  color: "$mauve12",
-  mb: "0",
-
-  "@bp1": {
-    fontSize: "$4xl",
-    mb: "$spacing-02",
-  },
-});
-
 const StyledImage = styled("img", {
   width: "100%",
   height: "auto",
 });
 
-export default function ReadmeLandingBlock() {
+export default function ReadMeLandingBlock() {
   return (
     <Section>
       <LandingWrapper>
