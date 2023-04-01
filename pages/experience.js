@@ -6,7 +6,7 @@ import ExperienceBlock from "../components/pageblocks/ExperienceBlock.js";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
-  backgroundImage: "url(/patterns/grid-lines-red.svg)",
+  backgroundImage: "url(/patterns/grid-lines.svg)",
   backgroundPositionX: "center",
 });
 

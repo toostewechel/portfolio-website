@@ -12,12 +12,10 @@ import {
   Mail,
 } from "lucide-react";
 import { motion } from "framer-motion";
-
-const Link = styled("a", {
-  gridArea: "pfi",
-});
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
+  gridArea: "pfi",
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-09",
@@ -29,6 +27,7 @@ const WidgetContainer = styled(motion.div, {
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -51,8 +50,8 @@ const BackgroundPattern = styled("img", {
   right: -96,
 
   "@bp2": {
-    top: -96,
-    right: -96,
+    top: -98,
+    right: -98,
   },
 });
 
@@ -80,6 +79,7 @@ const ProfileMetaDataLayout = styled("div", {
 
   "@bp2": {
     width: "50%",
+    height: "auto",
     justifyContent: "space-between",
     flexDirection: "column",
     alignItems: "end",
@@ -105,11 +105,16 @@ const Text = styled("p", {
   fontSize: "$base",
 });
 
-const HireMeLink = styled("a", {
+const Link = styled("a", {
   fontFamily: "$default",
-  fontWeight: "$medium",
-  color: "$red10",
+  fontWeight: "$regular",
+  color: "$mauve11",
   fontSize: "$sm",
+  lineHeight: "$none",
+
+  "&:hover": {
+    color: "$mauve12",
+  },
 });
 
 const TagContainer = styled("div", {
@@ -193,79 +198,88 @@ export const ProfileInformation = ({
   Icon,
   href,
 }: Props) => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <Link href={href}>
-      <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-        <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
-        <ProfileDescriptionLayout>
-          <LogoContainer>
-            <Image
-              src="/widgets/snapshot-logo.png"
-              alt="Snapshot Labs Logo"
-              width={214}
-              height={64}
-            />
-          </LogoContainer>
-          <Text>
-            This site is meant as a fun, personal showcase and provides peeks
-            into my life, my interests and some of my work, both professional
-            and side projects!
-          </Text>
-          <TagContainer>
-            <Tag
-              label={tagLabel}
-              color={tagColor}
-              hasIcon={hasIcon}
-              Icon={Icon}
-            />
-            {hasJob ? null : <HireMeLink>Hire me!</HireMeLink>}
-          </TagContainer>
-        </ProfileDescriptionLayout>
-        <ProfileMetaDataLayout>
-          <LinkToButtonIcon>
-            <ArrowUpRight size={20} />
-          </LinkToButtonIcon>
-          <AvatarSocialsLayout>
-            <Avatar
-              src="/avatar/avatar-tom-oostewechel.png"
-              name="Tom Oostewechel"
-              description="Product Engineer"
-            />
-            <SocialButtonContainer>
-              <SocialButtonIcon
-                href="https://twitter.com/boonikad93"
-                target="_blank"
-              >
-                <Twitter size={20} />
-              </SocialButtonIcon>
-              <SocialButtonIcon
-                href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
-                target="_blank"
-              >
-                <Linkedin size={20} />
-              </SocialButtonIcon>
-              <SocialButtonIcon
-                href="https://github.com/toostewechel"
-                target="_blank"
-              >
-                <Github size={20} />
-              </SocialButtonIcon>
-              <SocialButtonIcon
-                href="https://github.com/toostewechel"
-                target="_blank"
-              >
-                <Mail size={20} />
-              </SocialButtonIcon>
-              <SocialButtonIcon
-                href="https://github.com/toostewechel"
-                target="_blank"
-              >
-                <Smartphone size={20} />
-              </SocialButtonIcon>
-            </SocialButtonContainer>
-          </AvatarSocialsLayout>
-        </ProfileMetaDataLayout>
-      </WidgetContainer>
-    </Link>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+    >
+      <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
+      <ProfileDescriptionLayout>
+        <LogoContainer>
+          <Image
+            src="/widgets/snapshot-logo.png"
+            alt="Snapshot Labs Logo"
+            width={214}
+            height={64}
+          />
+        </LogoContainer>
+        <Text>
+          This site is meant as a fun, personal showcase and provides peeks into
+          my life, my interests and some of my work, both professional and side
+          projects!
+        </Text>
+        <TagContainer>
+          <Tag
+            label={tagLabel}
+            color={tagColor}
+            hasIcon={hasIcon}
+            Icon={Icon}
+          />
+          {hasJob ? null : <Link>Hire me!</Link>}
+        </TagContainer>
+      </ProfileDescriptionLayout>
+      <ProfileMetaDataLayout>
+        <LinkToButtonIcon>
+          <ArrowUpRight size={20} />
+        </LinkToButtonIcon>
+        <AvatarSocialsLayout>
+          <Avatar
+            src="/avatar/avatar-tom-oostewechel.png"
+            name="Tom Oostewechel"
+            description="Product Engineer"
+          />
+          <SocialButtonContainer>
+            <SocialButtonIcon
+              href="https://twitter.com/boonikad93"
+              target="_blank"
+            >
+              <Twitter size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
+              target="_blank"
+            >
+              <Linkedin size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Github size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Mail size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Smartphone size={20} />
+            </SocialButtonIcon>
+          </SocialButtonContainer>
+        </AvatarSocialsLayout>
+      </ProfileMetaDataLayout>
+    </WidgetContainer>
   );
 };

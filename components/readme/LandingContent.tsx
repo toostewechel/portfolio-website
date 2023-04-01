@@ -83,9 +83,8 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
           <IndexTitle>Index</IndexTitle>
           <MenuItem label="Values & Strengths" href="#core-values" />
           <MenuItem label="Personality" href="#personality" />
-          <MenuItem label="Competencies" href="" />
-          <MenuItem label="Collaboration" href="" />
-          <MenuItem label="Communication" href="" />
+          <MenuItem label="Competencies" href="#competencies" />
+          <MenuItem label="Collaboration" href="#collaboration" />
         </ProfileCardIndex>
       </ProfileCardContainer>
       <LabelContainer>

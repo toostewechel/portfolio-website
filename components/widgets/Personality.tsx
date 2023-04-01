@@ -86,7 +86,7 @@ export const Personality = () => {
       </LinkToButtonIcon>
       <ImageContainer>
         <Image
-          src="/widgets/advocate.png"
+          src="/widgets/advocate-tile.png"
           layout="responsive"
           height="296"
           width="296"

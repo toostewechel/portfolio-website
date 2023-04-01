@@ -25,7 +25,8 @@ const WidgetContainer = styled(motion.div, {
 const ContentContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  height: "100%",
+
+  height: "292px",
 });
 
 const CardTitle = styled("h3", {

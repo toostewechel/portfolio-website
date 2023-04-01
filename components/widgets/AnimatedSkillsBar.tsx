@@ -36,7 +36,6 @@ const Bars = styled("div", {
   width: "100%",
   gap: "$spacing-02",
   overflow: "hidden",
-  backgroundColor: "white",
 });
 
 const Bar = styled(motion.div, {

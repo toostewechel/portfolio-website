@@ -37,7 +37,7 @@ export default function WidgetsGrid() {
             <GridHeader />
             <ProfileInformation
               tagLabel="Employed"
-              tagColor="orange"
+              tagColor="teal"
               hasIcon={false}
               hasJob={true}
               href="/readme"
