@@ -35,11 +35,7 @@ cd project-folder
 3. Instal the dependencies with your package manager:
 
 ```bash
-npm install
-```
-
-```bash
-yarn install
+npm install or yarn install
 ```
 
 ### Running the Project
@@ -47,11 +43,7 @@ yarn install
 To start the development server, run the following command:
 
 ```bash
-npm dev
-```
-
-```bash
-yarn dev
+npm dev or yarn dev
 ```
 
 The site will be available at http://localhost:3000.
@@ -61,7 +53,7 @@ The site will be available at http://localhost:3000.
 To format all files inside the project, you can use the following script:
 
 ```bash
-yarn fm
+npm fm or yarn fm
 ```
 
 ### Building for Production
