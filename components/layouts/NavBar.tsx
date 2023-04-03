@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { styled } from "../../stitches.config.js";
 import { LayoutDashboard } from "lucide-react";
 import { useRouter } from "next/router";
 import CommandDialog from "../cmdk/CommandDialog.js";
-import { motion } from "framer-motion";
 
 const Container = styled("nav", {
   display: "none",
@@ -11,7 +10,7 @@ const Container = styled("nav", {
   justifyContent: "center",
   alignItems: "center",
   padding: "$spacing-03",
-  gap: "$spacing-03",
+  gap: "$spacing-02",
   borderRadius: "6px",
 
   "@bp3": {
@@ -23,12 +22,12 @@ const Container = styled("nav", {
     boxShadow: "$small",
     backdropFilter: "blur(4px)",
     webkitBackdropFilter: "blur(4px)",
-    borderRadius: "12px",
+    borderRadius: "6px",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
   },
 });
 
-const ActiveMenuItem = ({ href, children }) => {
+const MenuItem = ({ href, children }) => {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -41,10 +40,18 @@ const ActiveMenuItem = ({ href, children }) => {
     width: "100%",
     padding: "$spacing-03",
     borderRadius: "4px",
-    background: router.asPath === href ? "$gray4" : "transparent",
+    background: router.asPath === href ? "$crimson10" : "transparent",
     boxShadow:
       router.asPath === href ? "0px 2px 2px rgba(0, 0, 0, 0.1)" : "$none",
-    color: router.asPath === href ? "$mauve12" : "$mauve11",
+    color: router.asPath === href ? "$crimson3" : "$mauve11",
+
+    "&:hover": {
+      color: router.asPath === href ? "$crimson1" : "$mauve11",
+      background: router.asPath === href ? "$crimson10" : "rgba(0, 0, 0, 0.05)",
+    },
+    "&:focus": {
+      color: router.asPath === href ? "$crimson1" : "$mauve11",
+    },
   });
 
   return (
@@ -62,32 +69,24 @@ const MenuLabel = styled("p", {
 });
 
 export const NavBar = ({}) => {
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
   return (
-    <motion.div
-      animate={{ scale: show ? "1" : "0" }}
-      transition={{ type: "spring", stiffness: 100 }}
-    >
-      <Container>
-        <ActiveMenuItem href="/">
-          <LayoutDashboard size={24} />
-        </ActiveMenuItem>
-        <ActiveMenuItem href="/readme">
-          <MenuLabel>About</MenuLabel>
-        </ActiveMenuItem>
-        <ActiveMenuItem href="/experience">
-          <MenuLabel>Experience</MenuLabel>
-        </ActiveMenuItem>
-        <ActiveMenuItem href="">
-          <MenuLabel>Projects</MenuLabel>
-        </ActiveMenuItem>
-        <ActiveMenuItem href="/blog">
-          <MenuLabel>Blog</MenuLabel>
-        </ActiveMenuItem>
-        <CommandDialog />
-      </Container>
-    </motion.div>
+    <Container>
+      <MenuItem href="/">
+        <LayoutDashboard size={24} />
+      </MenuItem>
+      <MenuItem href="/readme">
+        <MenuLabel>About</MenuLabel>
+      </MenuItem>
+      <MenuItem href="/experience">
+        <MenuLabel>Experience</MenuLabel>
+      </MenuItem>
+      <MenuItem href="">
+        <MenuLabel>Projects</MenuLabel>
+      </MenuItem>
+      <MenuItem href="/blog">
+        <MenuLabel>Blog</MenuLabel>
+      </MenuItem>
+      <CommandDialog />
+    </Container>
   );
 };

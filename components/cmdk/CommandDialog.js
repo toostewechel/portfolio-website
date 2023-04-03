@@ -66,30 +66,16 @@ const IconButton = styled("button", {
   alignItems: "center",
   justifyContent: "center",
   color: "$mauve9",
-  padding: "$spacing-03 $spacing-04",
+  padding: "10px",
   borderRadius: "6px",
   willChange: "transform",
-  transition: "transform 300ms ease-in, background 300ms ease-in",
   background: "transparent",
 
   "&:hover": {
-    transition: "transform 300ms ease-out, background 300ms ease-out",
-    backgroundColor: "$gray2",
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
   },
 
-  "&:active": { backgroundColor: "$violet4" },
-});
-
-const ButtonLabel = styled("p", {
-  display: "none",
-  fontFamily: "$default",
-  fontWeight: "$medium",
-  fontSize: "$sm",
-  color: "$mauve11",
-
-  "@bp1": {
-    display: "flex",
-  },
+  "&:active": { backgroundColor: "rgba(0, 0, 0, 0.08)" },
 });
 
 // Exports
