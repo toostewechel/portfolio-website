@@ -3,12 +3,10 @@ import { PageLayout } from "../Layout.js";
 import {
   HoverCardRoot,
   HoverCardTrigger,
-  HoverCardPortal,
   HoverCardPanel,
 } from "../../card/HoverCard.js";
-import GithubFillIcon from "remixicon-react/GithubFillIcon";
-import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
-import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
+import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
+import SiteLogo from "../SiteLogo.js";
 
 const Container = styled("footer", {
   maxWidth: "1260px",
@@ -33,26 +31,27 @@ const FooterHeaderContainer = styled("div", {
 const Box = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-04",
+  gap: "$spacing-03",
   width: "100%",
+  alignItems: "start",
 
   "@bp3": {
     width: "auto",
+    gap: "$spacing-04",
   },
-});
-
-const Logo = styled("img", {
-  width: "232px",
-  height: "auto",
 });
 
 const Description = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   color: "$mauve10",
-  fontSize: "$base",
+  fontSize: "$sm",
   maxWidth: "380px",
   paddingLeft: "$spacing-01",
+
+  "@bp2": {
+    fontSize: "$base",
+  },
 });
 
 const PoweredByContainer = styled("div", {
@@ -62,7 +61,7 @@ const PoweredByContainer = styled("div", {
   p: "0",
   alignItems: "center",
   background: "transparent",
-  gap: "12px",
+  gap: "$spacing-02",
 });
 
 const Label = styled("p", {
@@ -74,16 +73,14 @@ const Label = styled("p", {
   textTransform: "uppercase",
 });
 
-const Line = styled("div", {
-  height: "1px",
-  background: "$gray6",
-  width: "100%",
-});
-
 const PoweredByLogoContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-02",
+  gap: "none",
+
+  "@bp2": {
+    gap: "$spacing-02",
+  },
 });
 
 const PoweredByBadge = styled("a", {
@@ -91,52 +88,17 @@ const PoweredByBadge = styled("a", {
   alignItems: "center",
   justifyContent: "center",
   color: "$mauve9",
-  transition: "background 300ms ease-in",
+  transition: "background 150ms ease-in",
   background: "transparent",
   padding: "$spacing-03",
   borderRadius: "6px",
   border: "1px solid transparent",
-  transition: "background 300ms ease-in",
+  transition: "background 150ms ease-in",
 
   "&:hover": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$gray2",
-    border: "1px solid $gray6",
-  },
-});
-
-const SocialButtonContainer = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  gap: "$spacing-02",
-});
-
-const SocialButtonIcon = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "6px",
-  color: "$mauve9",
-  padding: "$spacing-03",
-  transition: "background 300ms ease-in",
-  background: "transparent",
-  border: "1px solid transparent",
-  outline: 0,
-
-  "&:hover": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve4",
-    border: "1px solid $gray6",
-    color: "$mauve12",
-  },
-  "&:active": {
-    backgroundColor: "$mauve3",
-  },
-  "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve3",
-    border: "1px solid $blue11",
-    color: "$mauve12",
+    transition: "background 150ms ease-out",
+    backgroundColor: "$olive2",
+    border: "1px solid $olive6",
   },
 });
 
@@ -147,11 +109,10 @@ const FooterMetaContainer = styled("div", {
   mt: "$spacing-06",
   borderTop: "solid 1px $gray6",
   maxWidth: "100%",
-  backgroundColor: "$gray2",
 });
 
 const FlexBox = styled("div", {
-  maxWidth: "1234px",
+  maxWidth: "1272px",
   margin: "0 auto",
   display: "flex",
   flexDirection: "row",
@@ -171,36 +132,48 @@ const Year = styled("p", {
 
 const CurrentYear = new Date().getFullYear();
 
-const SiteMapContainer = styled("div", {
-  mt: "$spacing-04",
+const SocialButtonContainer = styled("div", {
   display: "flex",
-  flexDirection: "column",
-  alignItems: "start",
-  gap: "$spacing-03",
+  flexDirection: "row",
+  gap: "$spacing-02",
+});
 
-  "@bp2": {
-    flexDirection: "row",
-    gap: "$spacing-04",
-    alignItems: "center",
+const SocialButtonIcon = styled("a", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "6px",
+  color: "$olive9",
+  padding: "$spacing-03",
+  transition: "background 150ms ease-in",
+  background: "transparent",
+  border: "1px solid transparent",
+  outline: 0,
+
+  "&:hover": {
+    transition: "all 150ms ease-out",
+    backgroundColor: "$olive3",
+    border: "1px solid $olive6",
+    color: "$olive12",
+  },
+  "&:active": {
+    backgroundColor: "$mauve3",
+  },
+  "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$mauve3",
+    border: "1px solid $blue11",
+    color: "$mauve12",
   },
 });
 
-const Link = styled("a", {
-  fontFamily: "$default",
-  fontWeight: "$medium",
-  fontSize: "$sm",
-  color: "$mauve9",
-  p: "$spacing-01",
-});
-
-const Circle = styled("div", {
-  display: "none",
+const Image = styled("img", {
+  heigth: "24px",
+  width: "70px",
 
   "@bp2": {
-    display: "flex",
-    size: "$3",
-    background: "$gray6",
-    borderRadius: "100%",
+    height: "29px",
+    width: "auto",
   },
 });
 
@@ -211,47 +184,36 @@ function Footer() {
         <Container>
           <FooterHeaderContainer>
             <Box>
-              <Logo
-                src="/logo/snapshots-labs-logo.png"
-                alt="Snapshots Labs Logo"
-              />
+              <SiteLogo />
               <Description>
                 Personal portfolio site of Tom Oostewechel with a curated
                 overview of my professional and personal work
               </Description>
-              <SiteMapContainer>
-                <Link href="/design-vision">Design Vision</Link>
-                <Circle />
-                <Link href="/personal-overview">Personal Overview</Link>
-                <Circle />
-                <Link href="/release-notes">Release Notes</Link>
-              </SiteMapContainer>
             </Box>
             <Box>
               <PoweredByContainer>
                 <Label>Powered By</Label>
-                <Line />
               </PoweredByContainer>
               <PoweredByLogoContainer>
                 <HoverCardRoot>
                   <HoverCardTrigger asChild>
                     <PoweredByBadge
-                      href="https://spline.design/"
+                      href="https://www.radix-ui.com/"
                       target="_blank"
                     >
-                      <img
-                        src="/badges/spline-logo-badge.png"
-                        alt="Spline 3D Logo"
+                      <Image
+                        src="/badges/radix-badge.png"
+                        alt="Radix UI Logo"
                       />
                     </PoweredByBadge>
                   </HoverCardTrigger>
                   <HoverCardPanel
-                    logo="/logo/spline3d-logo.png"
-                    title="Spline 3D"
-                    socialHandle="@splinetool"
-                    description="A friendly 3D multiplayer design tool that runs in the browser."
-                    followingCount="4.018"
-                    followersCount="53,2K"
+                    logo="/logo/radix-logo.png"
+                    title="Radix UI"
+                    socialHandle="@radix_ui"
+                    description="React components, icons, and colors for building high-quality, accessible UI. Free and open-source."
+                    followingCount="0"
+                    followersCount="15,6K"
                   />
                 </HoverCardRoot>
                 <HoverCardRoot>
@@ -260,7 +222,7 @@ function Footer() {
                       href="https://akash.network/"
                       target="_blank"
                     >
-                      <img
+                      <Image
                         src="/badges/akash-logo-badge.png"
                         alt="Akash Logo"
                       />
@@ -278,7 +240,7 @@ function Footer() {
                 <HoverCardRoot>
                   <HoverCardTrigger asChild>
                     <PoweredByBadge href="https://replit.com/" target="_blank">
-                      <img
+                      <Image
                         src="/badges/replit-logo-badge.png"
                         alt="Replit Logo"
                       />
@@ -300,25 +262,31 @@ function Footer() {
       </PageLayout>
       <FooterMetaContainer>
         <FlexBox>
-          <Year>&copy; {CurrentYear} - Snapshots Labs</Year>
+          <Year>&copy; {CurrentYear}</Year>
           <SocialButtonContainer>
             <SocialButtonIcon
               href="https://twitter.com/boonikad93"
               target="_blank"
             >
-              <TwitterFillIcon size={24} />
+              <Twitter size={20} />
             </SocialButtonIcon>
             <SocialButtonIcon
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
             >
-              <LinkedinFillIcon size={24} />
+              <Linkedin size={20} />
             </SocialButtonIcon>
             <SocialButtonIcon
               href="https://github.com/toostewechel"
               target="_blank"
             >
-              <GithubFillIcon size={24} />
+              <Github size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon href="mailto:tomas93@skiff.com" target="_blank">
+              <Mail size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon href="tel:0612647976" target="_blank">
+              <Smartphone size={20} />
             </SocialButtonIcon>
           </SocialButtonContainer>
         </FlexBox>
