@@ -1,6 +1,6 @@
 # Snapshot Labs
 
-This is the source code for Snapshot Labs, a personal portfolio site built using Next.js.
+This is the source code for [Snapshot Labs](https://snapshotlabs.nl/), a personal portfolio site built using Next.js.
 
 ## Technologies Used
 
