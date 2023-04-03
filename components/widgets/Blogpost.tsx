@@ -3,12 +3,10 @@ import React from "react";
 import { ArrowUpRight, Inbox, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const Link = styled("a", {
-  gridArea: "bp",
-});
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
+  gridArea: "bp",
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-07",
@@ -20,6 +18,7 @@ const WidgetContainer = styled(motion.div, {
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -170,36 +169,45 @@ export const Blogpost = ({
   datePosted,
   href,
 }: Props) => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <Link href={href}>
-      <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-        <LinkToButtonIcon>
-          <ArrowUpRight size={20} />
-        </LinkToButtonIcon>
-        <ImageLayout>
-          <ImageContainer color={color}>
-            <Image
-              src={imageSrc}
-              layout="responsive"
-              height="296"
-              width="296"
-              alt="Blogpost Cover Image"
-            />
-          </ImageContainer>
-        </ImageLayout>
-        <BlogDetailsLayout>
-          <LabelContainer color={labelColor}>
-            <Label>Latest Blog Post</Label>
-            <Inbox size={17} />
-          </LabelContainer>
-          <CardTitle>{title}</CardTitle>
-          <Text>{description}</Text>
-          <LabelContainer color="gray">
-            <Calendar size={17} />
-            <DateLabel>{datePosted}</DateLabel>
-          </LabelContainer>
-        </BlogDetailsLayout>
-      </WidgetContainer>
-    </Link>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+    >
+      <LinkToButtonIcon>
+        <ArrowUpRight size={20} />
+      </LinkToButtonIcon>
+      <ImageLayout>
+        <ImageContainer color={color}>
+          <Image
+            src={imageSrc}
+            layout="responsive"
+            height="296"
+            width="296"
+            alt="Blogpost Cover Image"
+          />
+        </ImageContainer>
+      </ImageLayout>
+      <BlogDetailsLayout>
+        <LabelContainer color={labelColor}>
+          <Label>Latest Blog Post</Label>
+          <Inbox size={17} />
+        </LabelContainer>
+        <CardTitle>{title}</CardTitle>
+        <Text>{description}</Text>
+        <LabelContainer color="gray">
+          <Calendar size={17} />
+          <DateLabel>{datePosted}</DateLabel>
+        </LabelContainer>
+      </BlogDetailsLayout>
+    </WidgetContainer>
   );
 };
