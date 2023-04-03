@@ -1,10 +1,10 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import Avatar from "../avatar/Avatar.js";
 import { ArrowRight, ArrowDown, ArrowUpRight, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSkillsBar } from "./AnimatedSkillsBar";
 import { ProductRolesCarousel } from "../carousel/ProductRolesCarousel";
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
   gridArea: "cc",
@@ -19,6 +19,7 @@ const WidgetContainer = styled(motion.div, {
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -122,8 +123,26 @@ const LinkToButtonIcon = styled("a", {
 });
 
 export const CoreCompetencies = ({}) => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push("/readme/#competencies");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/readme/#competencies");
+    }
+  };
   return (
-    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>

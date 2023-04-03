@@ -3,6 +3,7 @@ import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
   gridArea: "pers",
@@ -18,6 +19,7 @@ const WidgetContainer = styled(motion.div, {
   overflow: "hidden",
   aspectRatio: "1/1",
   background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -79,8 +81,27 @@ const MetaInformation = styled("p", {
 });
 
 export const Personality = () => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push("/readme/#personality");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/readme/#personality");
+    }
+  };
+
   return (
-    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>

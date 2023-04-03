@@ -1,9 +1,9 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import { Tag } from "../tag/Tag";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { SoftwareCarousel } from "../carousel/SoftwareCarousel";
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
   position: "relative",
@@ -16,6 +16,7 @@ const WidgetContainer = styled(motion.div, {
   boxShadow:
     "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
   borderRadius: "16px",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -64,8 +65,27 @@ const LinkToButtonIcon = styled("a", {
 });
 
 export const Experience = () => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push("/experience/#softwarestack");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/experience/#softwarestack");
+    }
+  };
+
   return (
-    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>

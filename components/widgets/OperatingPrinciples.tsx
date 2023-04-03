@@ -1,9 +1,9 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Tag } from "../tag/Tag";
+import { useRouter } from "next/router";
 
 const WidgetContainer = styled(motion.div, {
   gridArea: "col",
@@ -19,6 +19,7 @@ const WidgetContainer = styled(motion.div, {
   overflow: "hidden",
   aspectRatio: "1/1",
   background: "linear-gradient(335.45deg, #1A1523 14.6%, #687076 101.4%)",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",
@@ -97,8 +98,26 @@ const TagGroup = styled("div", {
 });
 
 export const OperatingPrinciples = () => {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    router.push("/readme/#collaboration");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/readme/#collaboration");
+    }
+  };
   return (
-    <WidgetContainer whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <LinkToButtonIcon>
         <ArrowUpRight size={20} />
@@ -112,8 +131,8 @@ export const OperatingPrinciples = () => {
         </Text>
         <TagGroup>
           <Tag label="Tips" color="teal" hasIcon={false} size="sm" />
-          <Tag label="Preferences" color="violet" hasIcon={false} size="sm" />
           <Tag label="Pitfalls" color="crimson" hasIcon={false} size="sm" />
+          <Tag label="Preferences" color="violet" hasIcon={false} size="sm" />
         </TagGroup>
       </ContentContainer>
     </WidgetContainer>

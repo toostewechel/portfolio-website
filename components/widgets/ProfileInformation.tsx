@@ -177,7 +177,6 @@ export const ProfileInformation = ({
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
-      tabIndex={0}
     >
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <ProfileDescriptionLayout>

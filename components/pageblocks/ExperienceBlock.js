@@ -17,25 +17,29 @@ const ContentContainer = styled("div", {
 
 function ExperienceBlock() {
   return (
-    <Section>
+    <div>
       <ContentContainer>
-        <ContentBlock
-          as="h1"
-          title="Experience"
-          description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
-        />
-        <Spacer level={6} />
-        <ProfessionalAchievementsTabs />
+        <Section>
+          <ContentBlock
+            as="h1"
+            title="Experience"
+            description="I can be of value in the product creation process throughout all the different product development stages, from initial concept creation to product launch."
+          />
+          <Spacer level={6} />
+          <ProfessionalAchievementsTabs />
+        </Section>
         <Spacer level={12} />
-        <ContentBlock
-          as="h1"
-          title="Software Stack"
-          description="I mainly focus on (learning) industry leading tools and frameworks to streamline and optimize my design and development workflow."
-        />
-        <Spacer level={6} />
-        <SoftwareStackTabs />
+        <Section id="softwarestack">
+          <ContentBlock
+            as="h1"
+            title="Software Stack"
+            description="I mainly focus on (learning) industry leading tools and frameworks to streamline and optimize my design and development workflow."
+          />
+          <Spacer level={6} />
+          <SoftwareStackTabs />
+        </Section>
       </ContentContainer>
-    </Section>
+    </div>
   );
 }
 

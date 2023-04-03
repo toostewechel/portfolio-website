@@ -45,6 +45,7 @@ const BlogDetailsLayout = styled("div", {
   flexDirection: "column",
   alignItems: "start",
   width: "100%",
+  gap: "$spacing-04",
 
   "@bp2": {
     width: "60%",
@@ -129,8 +130,8 @@ const Label = styled("p", {
 
 const LinkToButtonIcon = styled("a", {
   position: "absolute",
-  top: 16,
-  right: 16,
+  top: 24,
+  right: 24,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -141,6 +142,11 @@ const LinkToButtonIcon = styled("a", {
   background: "linear-gradient(135deg, #F3F5F3 0%, #DBDDDB 100%)",
   boxShadow:
     "-1px 1px 2px rgba(173, 175, 173, 0.2), 1px -1px 2px rgba(173, 175, 173, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(173, 175, 173, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(173, 175, 173, 0.5)",
+
+  "@bp2": {
+    top: 16,
+    right: 16,
+  },
 });
 
 const DateLabel = styled("p", {
