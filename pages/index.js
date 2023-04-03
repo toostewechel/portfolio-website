@@ -38,8 +38,6 @@ export default function WidgetsGrid() {
             <ProfileInformation
               tagLabel="Employed"
               tagColor="teal"
-              hasIcon={false}
-              hasJob={true}
               href="/readme"
             />
             <Snapshot

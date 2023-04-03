@@ -4,6 +4,7 @@ import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
 import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
+import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 
 const Container = styled("div", {
   display: "flex",
@@ -132,6 +133,41 @@ const Icon = styled("div", {
   },
 });
 
+const SocialButtonContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-02",
+});
+
+const SocialButtonIcon = styled("a", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "6px",
+  color: "$olive9",
+  padding: "$spacing-03",
+  transition: "background 200ms ease-in",
+  background: "transparent",
+  border: "1px solid transparent",
+  outline: 0,
+
+  "&:hover": {
+    transition: "all 200ms ease-out",
+    backgroundColor: "$olive3",
+    border: "1px solid $olive6",
+    color: "$olive12",
+  },
+  "&:active": {
+    backgroundColor: "$mauve3",
+  },
+  "&:focus": {
+    transition: "background 300ms ease-out",
+    backgroundColor: "$mauve3",
+    border: "1px solid $blue11",
+    color: "$mauve12",
+  },
+});
+
 interface ProfileCardProps {
   badge?: boolean;
 }
@@ -155,23 +191,38 @@ function ProfileCard(props: ProfileCardProps) {
               <BadgeLabel>Open to work</BadgeLabel>
             </StatusBadge>
           ) : null}
-          <SocialIconBar>
-            <Link href="https://twitter.com/home">
-              <Icon>
-                <TwitterFillIcon />
-              </Icon>
-            </Link>
-            <Link href="https://twitter.com/home">
-              <Icon>
-                <LinkedinFillIcon />
-              </Icon>
-            </Link>
-            <Link href="https://twitter.com/home">
-              <Icon>
-                <GithubFillIcon />
-              </Icon>
-            </Link>
-          </SocialIconBar>
+          <SocialButtonContainer>
+            <SocialButtonIcon
+              href="https://twitter.com/boonikad93"
+              target="_blank"
+            >
+              <Twitter size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
+              target="_blank"
+            >
+              <Linkedin size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Github size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Mail size={20} />
+            </SocialButtonIcon>
+            <SocialButtonIcon
+              href="https://github.com/toostewechel"
+              target="_blank"
+            >
+              <Smartphone size={20} />
+            </SocialButtonIcon>
+          </SocialButtonContainer>
         </Card>
       </FlexContainer>
     </Container>

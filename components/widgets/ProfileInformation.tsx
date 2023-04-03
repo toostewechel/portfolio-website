@@ -1,16 +1,9 @@
-import { styled } from "../../stitches.config.js";
 import React from "react";
+import { styled } from "../../stitches.config.js";
 import Image from "next/image";
 import { Tag } from "../tag/Tag";
 import Avatar from "../avatar/Avatar.js";
-import {
-  ArrowUpRight,
-  Twitter,
-  Github,
-  Linkedin,
-  Smartphone,
-  Mail,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -105,7 +98,7 @@ const Text = styled("p", {
   fontSize: "$base",
 });
 
-const Link = styled("a", {
+const HireMeBadge = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   color: "$mauve11",
@@ -124,13 +117,7 @@ const TagContainer = styled("div", {
   gap: "$spacing-04",
 });
 
-const SocialButtonContainer = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  gap: "$spacing-02",
-});
-
-const LinkToButtonIcon = styled("a", {
+const LinkToButtonIcon = styled("div", {
   alignSelf: "flex-end",
   display: "flex",
   alignItems: "center",
@@ -144,36 +131,7 @@ const LinkToButtonIcon = styled("a", {
     "-1px 1px 2px rgba(173, 175, 173, 0.2), 1px -1px 2px rgba(173, 175, 173, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(173, 175, 173, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(173, 175, 173, 0.5)",
 });
 
-const SocialButtonIcon = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "6px",
-  color: "$olive9",
-  padding: "$spacing-03",
-  transition: "background 200ms ease-in",
-  background: "transparent",
-  border: "1px solid transparent",
-  outline: 0,
-
-  "&:hover": {
-    transition: "all 200ms ease-out",
-    backgroundColor: "$olive3",
-    border: "1px solid $olive6",
-    color: "$olive12",
-  },
-  "&:active": {
-    backgroundColor: "$mauve3",
-  },
-  "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve3",
-    border: "1px solid $blue11",
-    color: "$mauve12",
-  },
-});
-
-interface Props {
+type RequiredProps = {
   tagLabel: string;
   tagColor:
     | "blue"
@@ -184,20 +142,21 @@ interface Props {
     | "red"
     | "olive"
     | "teal";
+  href: string;
+} & Partial<{
   hasJob: boolean;
   hasIcon: boolean;
-  Icon: any;
-  href: string;
-}
+  Icon: React.ReactNode;
+}>;
 
 export const ProfileInformation = ({
   tagLabel,
   tagColor,
-  hasJob,
-  hasIcon,
+  hasJob = true,
+  hasIcon = false,
   Icon,
   href,
-}: Props) => {
+}: RequiredProps) => {
   const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -205,11 +164,20 @@ export const ProfileInformation = ({
     router.push(href);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push(href);
+    }
+  };
+
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
     >
       <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
       <ProfileDescriptionLayout>
@@ -222,9 +190,9 @@ export const ProfileInformation = ({
           />
         </LogoContainer>
         <Text>
-          This site is meant as a fun, personal showcase and provides peeks into
-          my life, my interests and some of my work, both professional and side
-          projects!
+          This site offers a fun and personal showcase. It gives a sneak peek
+          into my life, interests, and offers a curated selection of my
+          professional and side projects.
         </Text>
         <TagContainer>
           <Tag
@@ -233,7 +201,7 @@ export const ProfileInformation = ({
             hasIcon={hasIcon}
             Icon={Icon}
           />
-          {hasJob ? null : <Link>Hire me!</Link>}
+          {!hasJob && <HireMeBadge>Hire me!</HireMeBadge>}
         </TagContainer>
       </ProfileDescriptionLayout>
       <ProfileMetaDataLayout>
@@ -244,40 +212,8 @@ export const ProfileInformation = ({
           <Avatar
             src="/avatar/avatar-tom-oostewechel.png"
             name="Tom Oostewechel"
-            description="Product Engineer"
+            description="Product Designer"
           />
-          <SocialButtonContainer>
-            <SocialButtonIcon
-              href="https://twitter.com/boonikad93"
-              target="_blank"
-            >
-              <Twitter size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
-              target="_blank"
-            >
-              <Linkedin size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://github.com/toostewechel"
-              target="_blank"
-            >
-              <Github size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://github.com/toostewechel"
-              target="_blank"
-            >
-              <Mail size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://github.com/toostewechel"
-              target="_blank"
-            >
-              <Smartphone size={20} />
-            </SocialButtonIcon>
-          </SocialButtonContainer>
         </AvatarSocialsLayout>
       </ProfileMetaDataLayout>
     </WidgetContainer>
