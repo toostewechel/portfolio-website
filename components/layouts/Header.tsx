@@ -58,8 +58,6 @@ const FlexBox = styled("div", {
 });
 
 interface BlogHeaderProps {
-  whatsapp: string;
-  facebook: string;
   linkedin: string;
   twitter: string;
   progressBarGradient: string;
@@ -68,7 +66,6 @@ interface BlogHeaderProps {
 }
 
 export const BlogHeader: FC<BlogHeaderProps> = ({
-  facebook,
   linkedin,
   twitter,
   targetRef,
@@ -79,11 +76,7 @@ export const BlogHeader: FC<BlogHeaderProps> = ({
       <HeaderContent>
         <SiteLogo />
         <Controls>
-          <ShareToPopover
-            facebook={facebook}
-            twitter={twitter}
-            linkedin={linkedin}
-          />
+          <ShareToPopover twitter={twitter} linkedin={linkedin} />
           <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
           <IconButton href="/blog" ariaLabel="Close" tooltipLabel="Close Post">
             <X size={20} />

@@ -13,23 +13,23 @@ const IconLink = styled("a", {
   borderRadius: "6px",
   color: "$mauve11",
   padding: "$spacing-04",
-  transition: "background 300ms ease-in",
+  transition: "background 150ms ease-in",
   background: "transparent",
   border: "2px solid transparent",
   outline: 0,
 
   "&:hover": {
-    transition: "background 300ms ease-out",
+    transition: "background 150ms ease-out",
     border: "2px solid transparent",
-    backgroundColor: "$mauve2",
+    backgroundColor: "rgba(0,0,0, 0.1)",
     color: "$mauve12",
   },
   "&:active": {
     backgroundColor: "$mauve3",
   },
   "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
+    transition: "background 150ms ease-out",
+    backgroundColor: "rgba(0,0,0, 0.1)",
     border: "2px solid $blue11",
     color: "$mauve12",
   },
