@@ -11,6 +11,7 @@ import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";
 import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.tsx";
 import { Experience } from "../components/widgets/Experience.tsx";
+import { CheckSquare } from "lucide-react";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -39,6 +40,8 @@ export default function WidgetsGrid() {
               tagLabel="Employed"
               tagColor="teal"
               href="/readme"
+              hasIcon={true}
+              Icon={<CheckSquare size={15} />}
             />
             <Snapshot
               type="Case Study"

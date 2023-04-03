@@ -1,9 +1,8 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const WidgetContainer = styled("div", {
+const WidgetContainer = styled(motion.div, {
   gridArea: "ss",
   display: "flex",
   flexDirection: "column",
@@ -15,6 +14,7 @@ const WidgetContainer = styled("div", {
   position: "relative",
   overflow: "hidden",
   aspectRatio: "1/1",
+  cursor: "pointer",
 
   variants: {
     backgroundColor: {
@@ -103,42 +103,32 @@ const MetaInformation = styled("p", {
   color: "$mauve7",
 });
 
-function LanguageIcon({ language }) {
-  switch (language) {
-    case "nl":
-      return (
-        <Icon>
-          <IconSize>
-            <img
-              style={{ width: "24px", height: "24px" }}
-              src="/icons/nl.svg"
-            />
-          </IconSize>
-        </Icon>
-      );
-    case "en":
-      return (
-        <Icon>
-          <IconSize>
-            <img
-              style={{ width: "24px", height: "24px" }}
-              src="/icons/gb.svg"
-            />
-          </IconSize>
-        </Icon>
-      );
-    default:
-      return null;
-  }
-}
+const ComingSoonBadge = styled("div", {
+  position: "absolute",
+  fontFamily: "$default",
+  fontWeight: "$regular",
+  fontSize: "$xs",
+  color: "$crimson2",
+  backgroundColor: "$crimson10",
+  padding: "$spacing-02 $spacing-03",
+  borderRadius: "4px",
+  boxShadow: "$small",
+  top: 20,
+  right: 16,
+});
 
-interface Props {
-  type: string;
+interface SnapshotProps {
+  type: "Case Study" | "Project";
   title: string;
   backgroundImage: string;
   backgroundColor: "blue";
   language: "nl" | "en";
 }
+
+const languageIcons = {
+  nl: "/icons/nl.svg",
+  en: "/icons/gb.svg",
+};
 
 export const Snapshot = ({
   backgroundImage,
@@ -146,21 +136,28 @@ export const Snapshot = ({
   language,
   type,
   title,
-}: Props) => {
+}: SnapshotProps) => {
   return (
-    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-      <WidgetContainer backgroundColor={backgroundColor}>
-        <BackgroundImage
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        />
-        <ContentContainer>
-          <LanguageIcon language={language} />
-          <TitleContainer>
-            <ProjectType>{type}</ProjectType>
-            <MetaInformation>{title}</MetaInformation>
-          </TitleContainer>
-        </ContentContainer>
-      </WidgetContainer>
-    </motion.div>
+    <WidgetContainer
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      backgroundColor={backgroundColor}
+    >
+      <BackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }} />
+      <ContentContainer>
+        <ComingSoonBadge>Coming Soon!</ComingSoonBadge>
+        <Icon>
+          <img
+            style={{ width: "24px", height: "24px" }}
+            src={languageIcons[language]}
+            alt={language}
+          />
+        </Icon>
+        <TitleContainer>
+          <ProjectType>{type}</ProjectType>
+          <MetaInformation>{title}</MetaInformation>
+        </TitleContainer>
+      </ContentContainer>
+    </WidgetContainer>
   );
 };

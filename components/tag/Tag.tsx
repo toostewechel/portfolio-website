@@ -66,7 +66,7 @@ const TagContainer = styled("div", {
     },
     size: {
       sm: {
-        padding: "$spacing-01 $spacing-02",
+        padding: "$spacing-02 $spacing-02",
         gap: "$spacing-02",
         fontSize: "$xxs",
       },
@@ -93,7 +93,6 @@ const IconContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "$spacing-01",
 });
 
 interface TagProps {
