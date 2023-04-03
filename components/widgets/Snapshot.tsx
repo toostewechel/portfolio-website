@@ -63,13 +63,6 @@ const Icon = styled("div", {
   left: 16,
 });
 
-const IconSize = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  size: "$5",
-});
-
 const TitleContainer = styled("div", {
   position: "absolute",
   borderRadius: "12px",
