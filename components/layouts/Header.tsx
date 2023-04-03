@@ -11,7 +11,6 @@ import SiteLogo from "./SiteLogo.js";
 const Wrapper = styled("header", {
   padding: "$spacing-04",
   position: "sticky",
-  top: -1,
   zIndex: 9999,
   p: "$spacing-03",
 });

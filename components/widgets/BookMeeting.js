@@ -8,6 +8,8 @@ import {
   HoverCardTrigger,
   HoverCardPanel,
 } from "../card/HoverCard.js";
+`z`;
+import { useRouter } from "next/router.js";
 
 const WidgetContainer = styled("div", {
   gridArea: "bm",
@@ -38,6 +40,7 @@ const EventOptionsContainer = styled("div", {
   flexDirection: "column",
   gap: "$spacing-03",
   width: "100%",
+  cursor: "pointer",
 });
 
 const CardTitle = styled("h3", {
@@ -162,6 +165,7 @@ const PoweredByBadge = styled("a", {
 });
 
 export const BookMeeting = () => {
+  const router = useRouter();
   return (
     <WidgetContainer>
       <BookMeetingDescription>
@@ -182,6 +186,9 @@ export const BookMeeting = () => {
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() =>
+              router.push("https://cal.com/tomoostewechel/quick-chat-session")
+            }
           >
             <EventOption>
               <ContentContainer>
@@ -204,6 +211,11 @@ export const BookMeeting = () => {
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() =>
+              router.push(
+                "https://cal.com/tomoostewechel/problem-solving-session"
+              )
+            }
           >
             <EventOption>
               <ContentContainer>
@@ -226,6 +238,9 @@ export const BookMeeting = () => {
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() =>
+              router.push("https://cal.com/tomoostewechel/design-review")
+            }
           >
             <EventOption>
               <ContentContainer>
