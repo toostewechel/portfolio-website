@@ -19,9 +19,12 @@ const Container = styled("nav", {
   },
 
   "@bp6": {
-    background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
-    boxShadow:
-      "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
+    background: "rgba( 255, 255, 255, 0.65 )",
+    boxShadow: "$small",
+    backdropFilter: "blur(4px)",
+    webkitBackdropFilter: "blur(4px)",
+    borderRadius: "12px",
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
   },
 });
 
@@ -61,32 +64,6 @@ const MenuLabel = styled("p", {
 export const NavBar = ({}) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // If scroll down hide the navbar
-        setShow(false);
-      } else {
-        // If scroll up show the navbar
-        setShow(true);
-      }
-
-      // Remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-
-      // Cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
 
   return (
     <motion.div
