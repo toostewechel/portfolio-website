@@ -25,7 +25,7 @@ const ContentContainer = styled("div", {
   marginBottom: "232px",
   justifyContent: "center",
   alignItems: "center",
-  marginTop: "72px",
+  marginTop: "63px",
 });
 
 export default function WidgetsGrid() {

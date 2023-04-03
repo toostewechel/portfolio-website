@@ -46,7 +46,12 @@ import Chapter3 from "./03-chapter.mdx";
 import Chapter4 from "./04-chapter.mdx";
 
 //ShareToLinks Object
-const shareTo = {};
+const shareTo = {
+  twitter:
+    "https://twitter.com/intent/tweet?url=https://www.snapshotlabs.nl/blog/living-with-a-linear-mind-in-an-exponential-age&text=How%20personal%20knowledge%20management%20can%20help%20you%20thrive%20in%20an%20exponential%20age%20by%20efficiently%20turning%20your%20thoughts%2C%20ideas%20and%20discoveries%20into%20a%20interconnected%20knowledge%20base.",
+  linkedin:
+    "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsnapshotlabs.nl%2Fblog%2Fliving-with-a-linear-mind-in-an-exponential-age&title=Living%20with%20a%20Linear%20Mind%20in%20an%20Exponential%20Age&summary=How%20personal%20knowledge%20management%20can%20help%20you%20thrive%20in%20an%20exponential%20age%20by%20efficiently%20turning%20your%20thoughts%2C%20ideas%20and%20discoveries%20into%20a%20interconnected%20knowledge%20base.",
+};
 
 //Custom Component
 const PoweredByBadge = styled("a", {
@@ -100,7 +105,13 @@ export default function BlogPostPage() {
   const targetRef = createRef();
   return (
     <div ref={targetRef}>
-      <BlogHeader targetRef={targetRef} gradient="teal" />
+      <BlogHeader
+        targetRef={targetRef}
+        gradient="teal"
+        twitter={shareTo.twitter}
+        facebook={shareTo.facebook}
+        linkedin={shareTo.linkedin}
+      />
       <article>
         <Landing
           accentColor="teal"

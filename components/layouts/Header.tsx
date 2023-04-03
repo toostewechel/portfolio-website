@@ -1,51 +1,50 @@
-import { useState, useEffect } from "react";
+import { FC } from "react";
 import { styled } from "../../stitches.config.js";
-import ShareToPopover from "../popover/ShareToPopover.js";
+import ShareToPopover from "../popover/ShareToPopover";
 import { ReadingProgressBar } from "../progress/ReadingProgressBar.js";
-import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
 import { IconButton } from "../button/IconButton";
 import AvatarStatusBadgePopover from "../popover/AvatarStatusBadgePopover.js";
 import { NavBar } from "./NavBar";
+import SiteLogo from "./SiteLogo.js";
 
-const Container = styled("header", {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
+const Wrapper = styled("header", {
   padding: "$spacing-04",
   position: "sticky",
   top: -1,
   zIndex: 9999,
-  borderBottomLeftRadius: "16px",
-  borderBottomRightRadius: "16px",
-  backgroundColor: "white",
-
-  "@bp5": {
-    backgroundColor: "white",
-  },
-  "@bp6": {
-    backgroundColor: "transparent",
-  },
+  p: "$spacing-03",
 });
 
-const LogoLink = styled("a", {
+const HeaderContent = styled("div", {
   display: "flex",
+  justifyContent: "space-between",
   alignItems: "center",
-  justifyContent: "center",
+  p: "$spacing-03",
+  background: "rgba( 255, 255, 255, 0.65 )",
+  boxShadow: "$small",
+  backdropFilter: "blur(4px)",
+  webkitBackdropFilter: "blur(4px)",
+  borderRadius: "6px",
+  border: "1px solid rgba( 255, 255, 255, 0.18 )",
+
+  "@bp5": {},
+  "@bp6": {
+    background: "transparent",
+    boxShadow: "none",
+    backdropFilter: "none",
+    webkitBackdropFilter: "none",
+    border: "none",
+  },
 });
 
 const Controls = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-02",
-});
+  gap: "none",
 
-const StyledLogo = styled("img", {
-  height: "auto",
-  width: "164px",
-
-  "@bp1": {
-    width: "232px",
+  "@bp2": {
+    gap: "$spacing-02",
   },
 });
 
@@ -64,110 +63,47 @@ interface BlogHeaderProps {
   linkedin: string;
   twitter: string;
   progressBarGradient: string;
-  targetRef: any;
+  targetRef: React.RefObject<HTMLElement>;
   gradient: string;
 }
 
-export const BlogHeader = ({
-  whatsapp,
+export const BlogHeader: FC<BlogHeaderProps> = ({
   facebook,
   linkedin,
   twitter,
   targetRef,
   gradient,
-}: BlogHeaderProps) => {
-  // Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
-  const [offsetY, setOffsetY] = useState(0);
-  const [landingHeight, setLandingHeight] = useState(0);
-  const bp4 = useMediaQuery({ maxWidth: 1234 });
-  const bp5 = useMediaQuery({ minWidth: 1440 });
-
-  // Reset viewport height on page render
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setOffsetY(0);
-  }, []);
-
-  // Get height of Landing element
-  useEffect(() => {
-    setLandingHeight(document.getElementById("landing").clientHeight);
-  }, []);
-
-  // Create scroll function to update offsetY state on mouse scroll
-  useEffect(() => {
-    const onScroll = () => {
-      setOffsetY(window.pageYOffset);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
+}) => {
   return (
-    <Container
-      style={{
-        boxShadow:
-          offsetY > 0 && bp4
-            ? "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)"
-            : "none",
-        backgroundColor: offsetY > landingHeight && bp5 ? "#F8F8F8" : null,
-      }}
-    >
-      <LogoLink href="/">
-        <StyledLogo src="/logo/snapshots-labs-logo.png" />
-      </LogoLink>
-      <Controls>
-        <ShareToPopover
-          whatsapp={whatsapp}
-          facebook={facebook}
-          twitter={twitter}
-          linkedin={linkedin}
-        />
-        <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
-        <IconButton href="/" ariaLabel="Close" tooltipLabel="Close">
-          <X size={20} />
-        </IconButton>
-      </Controls>
-    </Container>
+    <Wrapper>
+      <HeaderContent>
+        <SiteLogo />
+        <Controls>
+          <ShareToPopover
+            facebook={facebook}
+            twitter={twitter}
+            linkedin={linkedin}
+          />
+          <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
+          <IconButton href="/blog" ariaLabel="Close" tooltipLabel="Close Post">
+            <X size={20} />
+          </IconButton>
+        </Controls>
+      </HeaderContent>
+    </Wrapper>
   );
 };
 
-export const Header = ({}) => {
-  // Make background white if viewport < 1024px and OffsetY > BlogLanding.clientHeight
-  const [offsetY, setOffsetY] = useState(0);
-  const [landingHeight, setLandingHeight] = useState(0);
-  const bp4 = useMediaQuery({ maxWidth: 1440 });
-
-  // Reset viewport height on page render
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setOffsetY(0);
-  }, []);
-
-  // Create scroll function to update offsetY state on mouse scroll
-  useEffect(() => {
-    const onScroll = () => {
-      setOffsetY(window.pageYOffset);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
+export const Header = () => {
   return (
-    <Container
-      style={{
-        boxShadow:
-          offsetY > 0 && bp4
-            ? "0 2px 4px -1px  hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px  hsla(214, 50%, 22%, 0.26)"
-            : "none",
-      }}
-    >
-      <LogoLink href="/">
-        <StyledLogo src="/logo/snapshots-labs-logo.png" />
-      </LogoLink>
-      <NavBar />
-      <FlexBox>
-        <AvatarStatusBadgePopover />
-      </FlexBox>
-    </Container>
+    <Wrapper>
+      <HeaderContent>
+        <SiteLogo />
+        <NavBar />
+        <FlexBox>
+          <AvatarStatusBadgePopover />
+        </FlexBox>
+      </HeaderContent>
+    </Wrapper>
   );
 };

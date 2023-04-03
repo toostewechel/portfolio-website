@@ -1,19 +1,19 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
-import Tag from "../tag/Tag";
 
 const Wrapper = styled("div", {
   position: "relative",
   display: "flex",
   flexDirection: "column",
   backgroundColor: "white",
-  marginTop: "-100px",
+  marginTop: "0px",
   maxWidth: "100%",
 
   "@bp4": {
     flexDirection: "row",
     height: "100vh",
     width: "100vw",
+    marginTop: "-116px",
   },
 });
 

@@ -7,9 +7,7 @@ const NavBarContainer = styled("div", {
   maxWidth: "1720px",
   display: "none",
   justifyContent: "space-between",
-  position: "sticky",
   backgroundColor: "$gray2",
-  zIndex: 9999,
   borderBottom: "1px solid $gray6",
   borderTop: "1px solid $gray6",
 

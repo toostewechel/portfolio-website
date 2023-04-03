@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { styled } from "../../stitches.config.js";
 import {
   Popover,
@@ -6,10 +7,10 @@ import {
   PopoverClose,
 } from "./Popover.js";
 import { Share, X } from "lucide-react";
-import WhatsappLineIcon from "remixicon-react/WhatsappLineIcon";
 import TwitterLineIcon from "remixicon-react/TwitterLineIcon";
-import FacebookFillIcon from "remixicon-react/FacebookFillIcon";
 import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
+import CopyToClipboard from "../button/CopyToClipboard";
+import { useRouter } from "next/router";
 
 const StyledPopoverContent = styled(PopoverContent, {
   minWidth: "232px",
@@ -22,7 +23,7 @@ const IconButton = styled("button", {
   borderRadius: "6px",
   color: "$mauve11",
   padding: "$spacing-04",
-  transition: "background 300ms ease-in",
+  transition: "background 150ms ease-in",
   background: "transparent",
   border: "2px solid transparent",
   outline: 0,
@@ -36,9 +37,8 @@ const IconButton = styled("button", {
     backgroundColor: "rgba(0,0,0, 0.1)",
   },
   "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve2",
     border: "2px solid $blue11",
+    backgroundColor: "rgba(0,0,0, 0.1)",
     color: "$mauve12",
   },
 });
@@ -83,14 +83,23 @@ const Label = styled("p", {
 
 const Title = styled("p", {
   fontSize: "$base",
-  fontWeight: "$semi-bold",
+  fontWeight: "$bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve1",
-  marginBottom: "$spacing-02",
+  lineHeight: "$none",
+  marginBottom: "$spacing-04",
+  marginTop: "$spacing-02",
 });
 
-function ShareToPopover(props) {
+interface ShareToPopoverProps {
+  twitter: string;
+  linkedin: string;
+}
+
+const ShareToPopover: FC<ShareToPopoverProps> = ({ twitter, linkedin }) => {
+  const router = useRouter();
+  const { pathname } = router;
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -98,30 +107,23 @@ function ShareToPopover(props) {
           <Share size={20} />
         </IconButton>
       </PopoverTrigger>
-      <StyledPopoverContent>
-        <Title>Share</Title>
-        <ShareLinkContainer href={props.whatsapp} target="_blank">
-          <WhatsappLineIcon size={20} />
-          <Label>Whatsapp</Label>
-        </ShareLinkContainer>
-        <ShareLinkContainer href={props.facebook} target="_blank">
-          <FacebookFillIcon size={20} />
-          <Label>Facebook</Label>
-        </ShareLinkContainer>
-        <ShareLinkContainer href={props.twitter} target="_blank">
+      <StyledPopoverContent onOpenAutoFocus={() => false}>
+        <Title>Share Post</Title>
+        <ShareLinkContainer href={twitter} target="_blank">
           <TwitterLineIcon size={20} />
           <Label>Twitter</Label>
         </ShareLinkContainer>
-        <ShareLinkContainer href={props.linkedin} target="_blank">
+        <ShareLinkContainer href={linkedin} target="_blank">
           <LinkedinFillIcon size={20} />
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
+        <CopyToClipboard text={`https://snapshotlabs.nl${pathname}`} />
         <PopoverClose aria-label="Close">
           <X size={17} />
         </PopoverClose>
       </StyledPopoverContent>
     </Popover>
   );
-}
+};
 
 export default ShareToPopover;
