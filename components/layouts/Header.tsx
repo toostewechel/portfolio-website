@@ -72,7 +72,7 @@ export const BlogHeader: FC<BlogHeaderProps> = ({
   gradient,
 }) => {
   return (
-    <Wrapper>
+    <Wrapper id="header">
       <HeaderContent>
         <SiteLogo />
         <Controls>
@@ -89,7 +89,7 @@ export const BlogHeader: FC<BlogHeaderProps> = ({
 
 export const Header = () => {
   return (
-    <Wrapper>
+    <Wrapper id="header">
       <HeaderContent>
         <SiteLogo />
         <NavBar />

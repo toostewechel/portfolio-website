@@ -85,13 +85,13 @@ export const Personality = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    router.push("/readme/#personality");
+    router.push("/readme?section=personality");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      router.push("/readme/#personality");
+      router.push("/readme?section=personality");
     }
   };
 

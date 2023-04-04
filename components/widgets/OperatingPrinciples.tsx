@@ -102,13 +102,13 @@ export const OperatingPrinciples = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    router.push("/readme/#collaboration");
+    router.push("/readme?section=collaboration");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      router.push("/readme/#collaboration");
+      router.push("/readme?section=collaboration");
     }
   };
   return (

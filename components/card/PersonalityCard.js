@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import CharacterTraitsAccordion from "../accordion/CharacterTraitsAccordion.js";
 import CollapsibleContent from "../home/collapsible/Collapsible.js";
@@ -236,7 +237,22 @@ export const PersonalityCardContent = () => (
 );
 
 export default function PersonalityCard() {
-  const bp2 = useMediaQuery({ minWidth: 640 });
+  const [bp2, setBp2] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    setBp2(mediaQuery.matches);
+
+    const listener = () => {
+      setBp2(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", listener);
+
+    return () => {
+      mediaQuery.removeEventListener("change", listener);
+    };
+  }, []);
 
   return (
     <CardLayout>
