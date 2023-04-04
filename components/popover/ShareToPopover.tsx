@@ -107,8 +107,9 @@ const ShareToPopover: FC<ShareToPopoverProps> = ({ twitter, linkedin }) => {
           <Share size={20} />
         </IconButton>
       </PopoverTrigger>
-      <StyledPopoverContent onOpenAutoFocus={() => false}>
+      <StyledPopoverContent>
         <Title>Share Post</Title>
+        <CopyToClipboard text={`https://snapshotlabs.nl${pathname}`} />
         <ShareLinkContainer href={twitter} target="_blank">
           <TwitterLineIcon size={20} />
           <Label>Twitter</Label>
@@ -117,7 +118,6 @@ const ShareToPopover: FC<ShareToPopoverProps> = ({ twitter, linkedin }) => {
           <LinkedinFillIcon size={20} />
           <Label>LinkedIn</Label>
         </ShareLinkContainer>
-        <CopyToClipboard text={`https://snapshotlabs.nl${pathname}`} />
         <PopoverClose aria-label="Close">
           <X size={17} />
         </PopoverClose>

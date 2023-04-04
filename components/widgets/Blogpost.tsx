@@ -117,6 +117,9 @@ const LabelContainer = styled("div", {
       gray: {
         color: "$gray9",
       },
+      crimson: {
+        color: "$crimson10",
+      },
     },
   },
 });
@@ -204,8 +207,8 @@ export const Blogpost = ({
       </ImageLayout>
       <BlogDetailsLayout>
         <LabelContainer color={labelColor}>
-          <Label>Latest Blog Post</Label>
           <Inbox size={17} />
+          <Label>Latest Blog Post</Label>
         </LabelContainer>
         <CardTitle>{title}</CardTitle>
         <Text>{description}</Text>

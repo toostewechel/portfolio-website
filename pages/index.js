@@ -60,6 +60,7 @@ export default function WidgetsGrid() {
               title="Living With a Linear Mind in an Exponential Age"
               description="How personal knowledge management can help you thrive in an exponential age."
               datePosted="31 March, 2023"
+              labelColor="teal"
             />
             <OperatingPrinciples />
             <Experience />

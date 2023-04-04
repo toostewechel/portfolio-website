@@ -51,7 +51,7 @@ export const IconButton = ({
   return (
     <Provider>
       <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger asChild>
           <IconLink href={href} aria-label={ariaLabel}>
             {children}
           </IconLink>
