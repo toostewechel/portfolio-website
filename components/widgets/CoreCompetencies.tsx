@@ -127,13 +127,13 @@ export const CoreCompetencies = ({}) => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    router.push("/readme/#competencies");
+    router.push("/readme#competencies");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      router.push("/readme/#competencies");
+      router.push("/readme#competencies");
     }
   };
   return (

@@ -67,7 +67,7 @@ export const ListItem = ({ children }) => {
 
 export default function CollaborationAccordion() {
   return (
-    <Accordion type="single" collapsible>
+    <Accordion type="single" defaultValue="item-1" collapsible>
       <AccordionItem value="item-1" type="tile">
         <AccordionTrigger
           hasTag
