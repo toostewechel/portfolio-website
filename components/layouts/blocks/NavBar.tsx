@@ -1,8 +1,8 @@
 import React from "react";
-import { styled } from "../../stitches.config.js";
+import { styled } from "../../../stitches.config.js";
 import { LayoutDashboard } from "lucide-react";
 import { useRouter } from "next/router";
-import CommandDialog from "../cmdk/CommandDialog.js";
+import CommandDialog from "../../cmdk/CommandDialog.js";
 
 const Container = styled("nav", {
   display: "none",

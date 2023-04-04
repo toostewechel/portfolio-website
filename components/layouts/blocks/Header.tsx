@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { styled } from "../../stitches.config.js";
-import ShareToPopover from "../popover/ShareToPopover";
-import { ReadingProgressBar } from "../progress/ReadingProgressBar.js";
+import { styled } from "../../../stitches.config.js";
+import ShareToPopover from "../../popover/ShareToPopover";
+import { ReadingProgressBar } from "../../progress/ReadingProgressBar.js";
 import { X } from "lucide-react";
-import { IconButton } from "../button/IconButton";
-import AvatarStatusBadgePopover from "../popover/AvatarStatusBadgePopover.js";
+import { IconButton } from "../../button/IconButton";
+import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
 import { NavBar } from "./NavBar";
-import SiteLogo from "./SiteLogo.js";
+import SiteLogo from "../SiteLogo.js";
 
 const Wrapper = styled("header", {
   padding: "$spacing-04",

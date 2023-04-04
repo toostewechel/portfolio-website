@@ -1,6 +1,6 @@
 import { styled } from "../stitches.config.js";
 import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
-import { Header } from "../components/layouts/Header.tsx";
+import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
 import { GridHeader } from "../components/widgets/GridHeader.tsx";
 import { ProfileInformation } from "../components/widgets/ProfileInformation.tsx";

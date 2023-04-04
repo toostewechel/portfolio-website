@@ -1,8 +1,7 @@
 import { styled } from "../stitches.config.js";
 import { PageLayout } from "../components/layouts/Layout.js";
-import { Header } from "../components/layouts/Header.tsx";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { Header } from "../components/layouts/blocks/Header.tsx";
+import Footer from "../components/layouts/blocks/Footer.js";
 import Spacer from "../components/layouts/blocks/Spacer.js";
 import ReadMeLandingBlock from "../components/pageblocks/ReadMeLandingBlock.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
@@ -17,27 +16,34 @@ const Wrapper = styled("div", {
 });
 
 const ContentContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "$spacing-11",
   marginTop: "70px",
+  marginBottom: "232px",
+
+  "@bp1": {
+    gap: "$spacing-13",
+  },
+  "@bp2": {
+    gap: "$spacing-14",
+  },
 });
 
 const ReadMe = () => {
   return (
     <Wrapper>
       <Header />
-      <ContentContainer>
-        <PageLayout>
+      <PageLayout>
+        <ContentContainer>
           <ReadMeLandingBlock />
-          <Spacer level={13} />
           <CoreValuesBlock />
-          <Spacer level={13} />
           <PersonalityBlock />
-          <Spacer level={13} />
           <CompetenciesBlock />
-          <Spacer level={13} />
           <CollaborationBlock />
-          <Spacer level={13} />
-        </PageLayout>
-      </ContentContainer>
+        </ContentContainer>
+      </PageLayout>
+      <Footer />
     </Wrapper>
   );
 };
