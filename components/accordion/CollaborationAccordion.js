@@ -71,88 +71,6 @@ export default function CollaborationAccordion() {
       <AccordionItem value="item-1" type="tile">
         <AccordionTrigger
           hasTag
-          label="Tips"
-          color="teal"
-          hasIcon
-          Icon={<Lightbulb />}
-          title="I can be helpful for"
-          src="/icons/money.svg"
-        />
-        <AccordionContent>
-          <TakeawaysListContainer>
-            <TakeawaysList>
-              <ListItem>
-                <Strong>When words don't work:</Strong> shaping abstract or
-                complex ideas into clear, simple narratives, often, supported by
-                visuals such as flowcharts and infographics
-              </ListItem>
-              <ListItem>
-                <Strong>As a spider in the web:</Strong> bridge different
-                viewpoints and balance perspectives. A broad knowledge of
-                different disciplines helps me build empathy and understanding
-                between product, engineering and business.
-              </ListItem>
-              <ListItem>
-                <Strong>As a sounding board:</Strong> If you are stuck or have
-                trouble generating ideas, I like to think along and ask many
-                questions that might provide a different or fresh perspective.
-              </ListItem>
-              <ListItem>
-                <Strong>When you feel you are too busy:</Strong> I invested much
-                time into productivity and personal knowledge management. You
-                can ask me for advice, tips, and tricks for implementing it into
-                your daily workflow.
-              </ListItem>
-              <ListItem>
-                <Strong>When you need a second pair of eyes:</Strong> I have an
-                excellent eye for detail and consistency and don't mind
-                double-checking things or providing feedback on important
-                documents, presentations or other artefacts.
-              </ListItem>
-            </TakeawaysList>
-          </TakeawaysListContainer>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2" type="tile">
-        <AccordionTrigger
-          hasTag
-          label="Pitfalls"
-          color="crimson"
-          hasIcon
-          Icon={<ShieldAlert />}
-          title="Good to know"
-          src="/icons/hammer-line.svg"
-        />
-        <AccordionContent>
-          <TakeawaysListContainer>
-            <TakeawaysList>
-              <ListItem>
-                <Strong>Sensitive to criticism:</Strong> as I always try to put
-                great effort into my work, I can become defensive when people
-                challenge my work, but only when they do it without sufficient
-                argumentation or based on assumptions. I prefer people to be
-                clear and explicit rather than passive and presumptuous!
-              </ListItem>
-              <ListItem>
-                <Strong>Reluctant to open up:</Strong> I'm private and don't
-                want to burden others with my personal struggles quickly.
-                Generally, I don't easily ask for help, but that doesn't always
-                mean I don't need it. So, if you see me struggling with
-                something, please don't hesitate to give me a nudge!
-              </ListItem>
-              <ListItem>
-                <Strong>Prone to taking on too much work:</Strong> Due to my
-                perfectionism, broad interests, and drive to help and support
-                others, I sometimes, especially in busy times, get overwhelmed
-                with work, taking on too much at the same time.
-              </ListItem>
-            </TakeawaysList>
-          </TakeawaysListContainer>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3" type="tile">
-        <AccordionTrigger
-          hasTag
           label="Preferences"
           color="plum"
           hasIcon
@@ -202,6 +120,88 @@ export default function CollaborationAccordion() {
                 distractions. When working in teams, we should respect each
                 other priorities and try to reduce shallow work and distractions
                 and optimise for deep, uninterrupted work.
+              </ListItem>
+            </TakeawaysList>
+          </TakeawaysListContainer>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2" type="tile">
+        <AccordionTrigger
+          hasTag
+          label="Tips"
+          color="teal"
+          hasIcon
+          Icon={<Lightbulb />}
+          title="I can be helpful for"
+          src="/icons/money.svg"
+        />
+        <AccordionContent>
+          <TakeawaysListContainer>
+            <TakeawaysList>
+              <ListItem>
+                <Strong>When words don't work:</Strong> shaping abstract or
+                complex ideas into clear, simple narratives, often, supported by
+                visuals such as flowcharts and infographics
+              </ListItem>
+              <ListItem>
+                <Strong>As a spider in the web:</Strong> bridge different
+                viewpoints and balance perspectives. A broad knowledge of
+                different disciplines helps me build empathy and understanding
+                between product, engineering and business.
+              </ListItem>
+              <ListItem>
+                <Strong>As a sounding board:</Strong> If you are stuck or have
+                trouble generating ideas, I like to think along and ask many
+                questions that might provide a different or fresh perspective.
+              </ListItem>
+              <ListItem>
+                <Strong>When you feel you are too busy:</Strong> I invested much
+                time into productivity and personal knowledge management. You
+                can ask me for advice, tips, and tricks for implementing it into
+                your daily workflow.
+              </ListItem>
+              <ListItem>
+                <Strong>When you need a second pair of eyes:</Strong> I have an
+                excellent eye for detail and consistency and don't mind
+                double-checking things or providing feedback on important
+                documents, presentations or other artefacts.
+              </ListItem>
+            </TakeawaysList>
+          </TakeawaysListContainer>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3" type="tile">
+        <AccordionTrigger
+          hasTag
+          label="Pitfalls"
+          color="crimson"
+          hasIcon
+          Icon={<ShieldAlert />}
+          title="Good to know"
+          src="/icons/hammer-line.svg"
+        />
+        <AccordionContent>
+          <TakeawaysListContainer>
+            <TakeawaysList>
+              <ListItem>
+                <Strong>Sensitive to criticism:</Strong> as I always try to put
+                great effort into my work, I can become defensive when people
+                challenge my work, but only when they do it without sufficient
+                argumentation or based on assumptions. I prefer people to be
+                clear and explicit rather than passive and presumptuous!
+              </ListItem>
+              <ListItem>
+                <Strong>Reluctant to open up:</Strong> I'm private and don't
+                want to burden others with my personal struggles quickly.
+                Generally, I don't easily ask for help, but that doesn't always
+                mean I don't need it. So, if you see me struggling with
+                something, please don't hesitate to give me a nudge!
+              </ListItem>
+              <ListItem>
+                <Strong>Prone to taking on too much work:</Strong> Due to my
+                perfectionism, broad interests, and drive to help and support
+                others, I sometimes, especially in busy times, get overwhelmed
+                with work, taking on too much at the same time.
               </ListItem>
             </TakeawaysList>
           </TakeawaysListContainer>

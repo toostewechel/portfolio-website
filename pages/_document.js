@@ -1,9 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { getCssText } from "../stitches.config.js";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charset="utf-8"></meta>
         <link
           rel="stylesheet"
           href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
@@ -148,7 +150,10 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <meta charset="utf-8"></meta>
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
       </Head>
       <body>
         <Main />

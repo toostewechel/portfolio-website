@@ -210,16 +210,10 @@ function ProfileCard(props: ProfileCardProps) {
             >
               <Github size={20} />
             </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://github.com/toostewechel"
-              target="_blank"
-            >
+            <SocialButtonIcon href="mailto:tomas93@skiff.com" target="_blank">
               <Mail size={20} />
             </SocialButtonIcon>
-            <SocialButtonIcon
-              href="https://github.com/toostewechel"
-              target="_blank"
-            >
+            <SocialButtonIcon href="tel:0612647976" target="_blank">
               <Smartphone size={20} />
             </SocialButtonIcon>
           </SocialButtonContainer>
