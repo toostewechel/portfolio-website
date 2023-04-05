@@ -148,6 +148,7 @@ export const CoreCompetencies = ({}) => {
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}

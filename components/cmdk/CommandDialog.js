@@ -92,7 +92,7 @@ const CommandDialog = () => (
   <Dialog>
     <DialogTrigger asChild>
       <div>
-        <IconButton>
+        <IconButton aria-label="Search Website" role="button">
           <Search size={20} />
         </IconButton>
       </div>

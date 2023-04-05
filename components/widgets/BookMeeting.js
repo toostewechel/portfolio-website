@@ -52,7 +52,7 @@ const CardTitle = styled("h2", {
   color: "$mauve12",
 });
 
-const CurrentDate = styled("h4", {
+const CurrentDate = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",

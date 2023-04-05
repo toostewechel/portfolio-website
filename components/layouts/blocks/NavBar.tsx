@@ -27,7 +27,7 @@ const Container = styled("nav", {
   },
 });
 
-const MenuItem = ({ href, children }) => {
+const MenuItem = ({ href, children, ariaLabel }) => {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -55,7 +55,7 @@ const MenuItem = ({ href, children }) => {
   });
 
   return (
-    <ActiveLink href={href} onClick={handleClick}>
+    <ActiveLink aria-label={ariaLabel} href={href} onClick={handleClick}>
       {children}
     </ActiveLink>
   );
@@ -71,19 +71,19 @@ const MenuLabel = styled("p", {
 export const NavBar = ({}) => {
   return (
     <Container>
-      <MenuItem href="/">
+      <MenuItem ariaLabel="Dashboard Page" href="/">
         <LayoutDashboard size={24} />
       </MenuItem>
-      <MenuItem href="/readme">
+      <MenuItem ariaLabel="About Me Page" href="/readme">
         <MenuLabel>About</MenuLabel>
       </MenuItem>
-      <MenuItem href="/experience">
+      <MenuItem ariaLabel="My Experience Page" href="/experience">
         <MenuLabel>Experience</MenuLabel>
       </MenuItem>
-      <MenuItem href="">
+      <MenuItem ariaLabel="Project Page" href="">
         <MenuLabel>Projects</MenuLabel>
       </MenuItem>
-      <MenuItem href="/blog">
+      <MenuItem ariaLabel="Blogpost Page" href="/blog">
         <MenuLabel>Blog</MenuLabel>
       </MenuItem>
       <CommandDialog />
