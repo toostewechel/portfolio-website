@@ -20,8 +20,8 @@ export default function SiteLogo() {
   return (
     <Link href="/" aria-label="Navigate Back to Dashboard">
       <StyledLogo
-        width={232}
-        height={64}
+        width={492}
+        height={168}
         src="/logo/snapshots-labs-logo.png"
         alt="Snapshot Labs Logo"
       />
