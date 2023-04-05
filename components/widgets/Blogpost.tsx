@@ -46,6 +46,13 @@ const WidgetContainer = styled(motion.div, {
       color: "$crimson11",
     },
   },
+  "&:focus": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson11",
+    },
+  },
 
   "@bp2": {
     flexDirection: "row",
@@ -129,7 +136,7 @@ const CoverImage = styled(Image, {
   },
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$none",
@@ -218,11 +225,20 @@ export const Blogpost = ({
     router.push(href);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/experience/#softwarestack");
+    }
+  };
+
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
     >
       <LinkToButtonIcon role="presentation">
         <ArrowUpRight size={22} />

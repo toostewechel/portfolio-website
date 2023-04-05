@@ -42,6 +42,13 @@ const WidgetContainer = styled(motion.div, {
       color: "$crimson11",
     },
   },
+  "&:focus": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson11",
+    },
+  },
 
   "@bp2": {
     flexDirection: "row",
@@ -86,7 +93,7 @@ const TitleContainer = styled("div", {
   gap: "$spacing-02",
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$none",

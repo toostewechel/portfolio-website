@@ -5,6 +5,7 @@ import {
   HoverCardTrigger,
   HoverCardPanel,
 } from "../../card/HoverCard.js";
+import { IconButton } from "../../button/IconButton";
 import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 import SiteLogo from "../SiteLogo.js";
 import Image from "next/image";
@@ -136,36 +137,7 @@ const CurrentYear = new Date().getFullYear();
 const SocialButtonContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
-  gap: "$spacing-02",
-});
-
-const SocialButtonIcon = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "6px",
-  color: "$olive9",
-  padding: "$spacing-03",
-  transition: "background 150ms ease-in",
-  background: "transparent",
-  border: "1px solid transparent",
-  outline: 0,
-
-  "&:hover": {
-    transition: "all 150ms ease-out",
-    backgroundColor: "$olive3",
-    border: "1px solid $olive6",
-    color: "$olive12",
-  },
-  "&:active": {
-    backgroundColor: "$mauve3",
-  },
-  "&:focus": {
-    transition: "background 150ms ease-out",
-    backgroundColor: "$mauve3",
-    border: "1px solid $blue11",
-    color: "$mauve12",
-  },
+  gap: "$spacing-01",
 });
 
 const BadgeImage = styled(Image, {
@@ -201,6 +173,7 @@ function Footer() {
                     <PoweredByBadge
                       href="https://www.radix-ui.com/"
                       target="_blank"
+                      alt="Open Radix UI webpage in new tab"
                     >
                       <BadgeImage
                         width={97}
@@ -224,6 +197,7 @@ function Footer() {
                     <PoweredByBadge
                       href="https://akash.network/"
                       target="_blank"
+                      alt="Open Akash Network webpage in new tab"
                     >
                       <BadgeImage
                         width={97}
@@ -244,7 +218,11 @@ function Footer() {
                 </HoverCardRoot>
                 <HoverCardRoot>
                   <HoverCardTrigger asChild>
-                    <PoweredByBadge href="https://replit.com/" target="_blank">
+                    <PoweredByBadge
+                      href="https://replit.com/"
+                      target="_blank"
+                      alt="Open Replit webpage in new tab"
+                    >
                       <BadgeImage
                         width={97}
                         height={29}
@@ -271,30 +249,51 @@ function Footer() {
         <FlexBox>
           <Year>&copy; {CurrentYear}</Year>
           <SocialButtonContainer>
-            <SocialButtonIcon
+            <IconButton
               href="https://twitter.com/boonikad93"
               target="_blank"
+              alt="Open Twitter profile in new tab"
+              ariaLabel="Twitter Profile"
+              tooltipLabel="Twitter"
             >
               <Twitter size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
+            </IconButton>
+            <IconButton
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
+              alt="Open LinkedIn profile in new tab"
+              ariaLabel="LinkedIn Profile"
+              tooltipLabel="Linked In"
             >
               <Linkedin size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
+            </IconButton>
+            <IconButton
               href="https://github.com/toostewechel"
               target="_blank"
+              alt="Open Github profile in new tab"
+              ariaLabel="GitHub Profile"
+              tooltipLabel="GitHub"
             >
               <Github size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon href="mailto:tomas93@skiff.com" target="_blank">
+            </IconButton>
+            <IconButton
+              href="mailto:tomas93@skiff.com"
+              target="_blank"
+              alt="Open email client"
+              ariaLabel="Email Client"
+              tooltipLabel="Email"
+            >
               <Mail size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon href="tel:0612647976" target="_blank">
+            </IconButton>
+            <IconButton
+              href="tel:0612647976"
+              target="_blank"
+              alt="Open phone app"
+              ariaLabel="Pop up phone app"
+              tooltipLabel="Phone Number"
+            >
               <Smartphone size={20} />
-            </SocialButtonIcon>
+            </IconButton>
           </SocialButtonContainer>
         </FlexBox>
       </FooterMetaContainer>

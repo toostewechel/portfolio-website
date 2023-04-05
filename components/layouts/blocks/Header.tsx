@@ -4,9 +4,9 @@ import ShareToPopover from "../../popover/ShareToPopover";
 import { ReadingProgressBar } from "../../progress/ReadingProgressBar.js";
 import { X } from "lucide-react";
 import { IconButton } from "../../button/IconButton";
-import AvatarStatusBadgePopover from "../../popover/AvatarStatusBadgePopover.js";
 import { NavBar } from "./NavBar";
 import SiteLogo from "../SiteLogo.js";
+import { Menu } from "lucide-react";
 
 const Wrapper = styled("header", {
   padding: "$spacing-04",
@@ -94,7 +94,7 @@ export const Header = () => {
         <SiteLogo />
         <NavBar />
         <FlexBox>
-          <AvatarStatusBadgePopover />
+          <Menu size={24} />
         </FlexBox>
       </HeaderContent>
     </Wrapper>

@@ -41,6 +41,13 @@ const WidgetContainer = styled(motion.div, {
       color: "$crimson11",
     },
   },
+  "&:focus": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson11",
+    },
+  },
 
   "@bp2": {
     flexDirection: "row",
@@ -176,6 +183,7 @@ export const ProfileInformation = ({
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}

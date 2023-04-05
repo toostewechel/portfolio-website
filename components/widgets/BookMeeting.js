@@ -43,7 +43,7 @@ const EventOptionsContainer = styled("div", {
   cursor: "pointer",
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -102,9 +102,15 @@ const EventOptionContainer = styled(motion.div, {
       color: "$crimson11",
     },
   },
+  "&:focus": {
+    [`${Icon}`]: {
+      transform: "translateX(-10px) rotate(45deg)",
+      color: "$crimson11",
+    },
+  },
 });
 
-const EventOption = styled("a", {
+const EventOption = styled("div", {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -175,6 +181,20 @@ const PoweredByBadge = styled("a", {
 
 export const BookMeeting = () => {
   const router = useRouter();
+
+  const eventType = {
+    chat: "https://cal.com/tomoostewechel/quick-chat-session",
+    problem: "https://cal.com/tomoostewechel/problem-solving-session",
+    review: "https://cal.com/tomoostewechel/design-review",
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push("/experience/#softwarestack");
+    }
+  };
+
   return (
     <WidgetContainer>
       <BookMeetingDescription>
@@ -194,10 +214,14 @@ export const BookMeeting = () => {
         <EventOptions>
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
+            whileFocus={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() =>
-              router.push("https://cal.com/tomoostewechel/quick-chat-session")
-            }
+            onClick={() => router.push(eventType.chat)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                router.push(eventType.chat);
+              }
+            }}
           >
             <EventOption>
               <ContentContainer>
@@ -219,12 +243,14 @@ export const BookMeeting = () => {
           </EventOptionContainer>
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
+            whileFocus={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() =>
-              router.push(
-                "https://cal.com/tomoostewechel/problem-solving-session"
-              )
-            }
+            onClick={() => router.push(eventType.problem)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                router.push(eventType.problem);
+              }
+            }}
           >
             <EventOption>
               <ContentContainer>
@@ -246,10 +272,14 @@ export const BookMeeting = () => {
           </EventOptionContainer>
           <EventOptionContainer
             whileHover={{ scale: 1.02 }}
+            whileFocus={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() =>
-              router.push("https://cal.com/tomoostewechel/design-review")
-            }
+            onClick={() => router.push(eventType.review)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                router.push(eventType.review);
+              }
+            }}
           >
             <EventOption>
               <ContentContainer>

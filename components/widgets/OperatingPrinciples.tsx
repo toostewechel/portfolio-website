@@ -42,6 +42,13 @@ const WidgetContainer = styled(motion.div, {
       color: "$crimson10",
     },
   },
+  "&:focus": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson10",
+    },
+  },
 });
 
 const BackgroundPattern = styled("img", {
@@ -76,7 +83,7 @@ const Text = styled("p", {
   fontSize: "$base",
 });
 
-const CardTitle = styled("h3", {
+const CardTitle = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -116,6 +123,7 @@ export const OperatingPrinciples = () => {
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}

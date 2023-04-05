@@ -42,6 +42,13 @@ const WidgetContainer = styled(motion.div, {
       color: "$crimson10",
     },
   },
+  "&:focus": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson10",
+    },
+  },
 });
 
 const WidgetImage = styled(Image, {
@@ -67,7 +74,7 @@ const TitleContainer = styled("div", {
   textAlign: "center",
 });
 
-const ProjectType = styled("h3", {
+const ProjectType = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -107,6 +114,7 @@ export const Personality = () => {
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}

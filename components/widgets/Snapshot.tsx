@@ -65,7 +65,7 @@ const TitleContainer = styled("div", {
   left: 16,
 });
 
-const ProjectType = styled("h3", {
+const ProjectType = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
@@ -124,6 +124,7 @@ export const Snapshot = ({
   return (
     <WidgetContainer
       whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       backgroundColor={backgroundColor}
     >
