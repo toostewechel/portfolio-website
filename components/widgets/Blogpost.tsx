@@ -5,11 +5,30 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+const LinkToButtonIcon = styled("div", {
+  position: "absolute",
+  top: 24,
+  right: 24,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "100%",
+  color: "$olive9",
+  padding: "$spacing-03",
+  transition:
+    "transform 100ms ease-in, color 100ms ease-in, scale 100ms ease-in",
+
+  "@bp2": {
+    top: 16,
+    right: 16,
+  },
+});
+
 const WidgetContainer = styled(motion.div, {
   gridArea: "bp",
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-07",
+  gap: "$spacing-06",
   width: "100%",
   padding: "$spacing-05",
   background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
@@ -22,6 +41,10 @@ const WidgetContainer = styled(motion.div, {
 
   "&:hover": {
     boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson11",
+    },
   },
 
   "@bp2": {
@@ -47,15 +70,25 @@ const BlogDetailsLayout = styled("div", {
   width: "100%",
   gap: "$spacing-04",
 
+  "&:last-child": {
+    marginBottom: "$spacing-05",
+  },
+
   "@bp2": {
     width: "60%",
     flexDirection: "column",
     justifyContent: "center",
     gap: "$spacing-04",
+
+    "&:last-child": {
+      marginBottom: "$none",
+    },
   },
 });
 
 const ImageContainer = styled("div", {
+  display: "flex",
+  justifyContent: "center",
   width: "100%",
   height: "100%",
   borderRadius: "12px",
@@ -81,6 +114,21 @@ const ImageContainer = styled("div", {
   },
 });
 
+const CoverImage = styled(Image, {
+  width: "264px",
+  height: "100%",
+
+  "@bp1": {
+    width: "440px",
+    height: "516px",
+  },
+
+  "@bp2": {
+    width: "220px",
+    height: "258px",
+  },
+});
+
 const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
@@ -88,13 +136,18 @@ const CardTitle = styled("h3", {
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
   color: "$mauve12",
-  mt: "$spacing-01",
 });
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve12",
-  fontSize: "$base",
+  color: "$mauve11",
+  fontSize: "$sm",
+  lineHeight: "$default",
+  marginBottom: "$spacing-03",
+
+  "@bp1": {
+    fontSize: "$base",
+  },
 });
 
 const LabelContainer = styled("div", {
@@ -131,32 +184,12 @@ const Label = styled("p", {
   fontSize: "$sm",
 });
 
-const LinkToButtonIcon = styled("a", {
-  position: "absolute",
-  top: 24,
-  right: 24,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "100%",
-  color: "$olive11",
-  padding: "$spacing-03",
-  transition: "background 200ms ease-in",
-  background: "linear-gradient(135deg, #F3F5F3 0%, #DBDDDB 100%)",
-  boxShadow:
-    "-1px 1px 2px rgba(173, 175, 173, 0.2), 1px -1px 2px rgba(173, 175, 173, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(173, 175, 173, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(173, 175, 173, 0.5)",
-
-  "@bp2": {
-    top: 16,
-    right: 16,
-  },
-});
-
 const DateLabel = styled("p", {
   alignSelf: "center",
   fontSize: "$xs",
   fontFamily: "$mono",
   fontWeight: "$medium",
+  lineHeight: "$none",
 });
 
 interface Props {
@@ -191,16 +224,15 @@ export const Blogpost = ({
       whileTap={{ scale: 0.97 }}
       onClick={handleClick}
     >
-      <LinkToButtonIcon>
-        <ArrowUpRight size={20} />
+      <LinkToButtonIcon role="presentation">
+        <ArrowUpRight size={22} />
       </LinkToButtonIcon>
       <ImageLayout>
         <ImageContainer color={color}>
-          <Image
+          <CoverImage
             src={imageSrc}
-            layout="responsive"
-            height="296"
-            width="296"
+            height="440"
+            width="516"
             alt="Blogpost Cover Image"
           />
         </ImageContainer>

@@ -7,6 +7,18 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
+const LinkToButtonIcon = styled("div", {
+  alignSelf: "flex-end",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "100%",
+  color: "$olive9",
+  padding: "$spacing-03",
+  transition:
+    "transform 100ms ease-in, color 100ms ease-in, scale 100ms ease-in",
+});
+
 const WidgetContainer = styled(motion.div, {
   gridArea: "pfi",
   display: "flex",
@@ -24,6 +36,10 @@ const WidgetContainer = styled(motion.div, {
 
   "&:hover": {
     boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$crimson11",
+    },
   },
 
   "@bp2": {
@@ -117,20 +133,6 @@ const TagContainer = styled("div", {
   gap: "$spacing-04",
 });
 
-const LinkToButtonIcon = styled("div", {
-  alignSelf: "flex-end",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "100%",
-  color: "$olive11",
-  padding: "$spacing-03",
-  transition: "background 200ms ease-in",
-  background: "linear-gradient(135deg, #F3F5F3 0%, #DBDDDB 100%)",
-  boxShadow:
-    "-1px 1px 2px rgba(173, 175, 173, 0.2), 1px -1px 2px rgba(173, 175, 173, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(173, 175, 173, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(173, 175, 173, 0.5)",
-});
-
 type RequiredProps = {
   tagLabel: string;
   tagColor:
@@ -178,7 +180,10 @@ export const ProfileInformation = ({
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
-      <BackgroundPattern src="/patterns/circular-background-pattern.svg" />
+      <BackgroundPattern
+        src="/patterns/circular-background-pattern.svg"
+        alt="Decorative Background Pattern"
+      />
       <ProfileDescriptionLayout>
         <LogoContainer>
           <Image
@@ -204,7 +209,7 @@ export const ProfileInformation = ({
         </TagContainer>
       </ProfileDescriptionLayout>
       <ProfileMetaDataLayout>
-        <LinkToButtonIcon>
+        <LinkToButtonIcon role="presentation">
           <ArrowUpRight size={20} />
         </LinkToButtonIcon>
         <AvatarSocialsLayout>

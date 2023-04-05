@@ -29,7 +29,7 @@ const FlexWrapper = styled("div", {
   flexDirection: "column",
 });
 
-const Title = styled("h3", {
+const Title = styled("p", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",
   fontFamily: "$header",

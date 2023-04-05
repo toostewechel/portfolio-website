@@ -93,7 +93,7 @@ const ComingSoonBadge = styled("div", {
   fontWeight: "$regular",
   fontSize: "$xs",
   color: "$crimson2",
-  backgroundColor: "$crimson10",
+  backgroundColor: "$crimson11",
   padding: "$spacing-02 $spacing-03",
   borderRadius: "4px",
   boxShadow: "$small",
@@ -140,7 +140,7 @@ export const Snapshot = ({
             width={24}
             height={24}
             src={languageIcons[language]}
-            alt={language}
+            alt={`language: ${language}`}
           />
         </Icon>
         <TitleContainer>
