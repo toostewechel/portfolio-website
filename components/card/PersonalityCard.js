@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import CharacterTraitsAccordion from "../accordion/CharacterTraitsAccordion.js";
 import CollapsibleContent from "../home/collapsible/Collapsible.js";
-import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 // Layouts Component
 const CardLayout = styled("div", {
@@ -125,17 +125,13 @@ const ColoredLine = styled("div", {
   background: "$teal9",
 });
 
-const ImageContainer = styled("div", {
-  width: "320px",
+const ImageContainer = styled(Image, {
+  width: "240px",
   height: "240px",
-  backgroundImage: "url(/readme/advocate.png)",
-  backgroundSize: "contain",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
   zIndex: "3",
 
   "@bp2": {
-    width: "500px",
+    width: "400px",
     height: "400px",
   },
 });
@@ -196,7 +192,7 @@ export const PersonalityCardCover = () => (
       <CardTitle>Advocate</CardTitle>
       <ColoredLine />
     </TitleContainer>
-    <ImageContainer />
+    <ImageContainer width={400} height={400} src="/readme/advocate.png" />
     <SummaryContainer>
       <Title color="dark">Summary</Title>
       <CardDescription>
