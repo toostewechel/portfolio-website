@@ -1,4 +1,5 @@
 import { styled } from "../stitches.config.js";
+import Head from "next/head";
 import { PageLayout } from "../components/layouts/Layout.js";
 import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
@@ -32,6 +33,13 @@ const ContentContainer = styled("div", {
 const ReadMe = () => {
   return (
     <Wrapper>
+      <Head>
+        <meta
+          name="description"
+          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
+        />
+        <title>Snapshot Labs | Read Me</title>
+      </Head>
       <Header />
       <PageLayout>
         <ContentContainer>
