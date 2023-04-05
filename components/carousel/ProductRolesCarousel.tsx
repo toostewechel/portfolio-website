@@ -1,6 +1,6 @@
 import { styled, keyframes } from "../../stitches.config.js";
 import React from "react";
-import Avatar from "../avatar/Avatar.js";
+import Avatar from "../avatar/Avatar";
 
 const CarouselAnimateVertical = keyframes({
   "0%": {

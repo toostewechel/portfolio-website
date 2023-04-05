@@ -1,4 +1,5 @@
 import { styled } from "../stitches.config.js";
+import Head from "next/head";
 import { PageLayout } from "../components/layouts/Layout.js";
 import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
@@ -22,7 +23,14 @@ const ContentContainer = styled("div", {
 export default function BlogPost() {
   return (
     <Wrapper>
-      <Header></Header>
+      <Head>
+        <meta
+          name="description"
+          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
+        />
+        <title>Snapshot Labs | Blogposts</title>
+      </Head>
+      <Header />
       <PageLayout style={{ marginTop: "70px" }}>
         <BlogpostsBlock />
       </PageLayout>

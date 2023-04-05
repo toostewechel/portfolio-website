@@ -1,5 +1,5 @@
 import { styled } from "../../stitches.config.js";
-import Avatar from "../avatar/Avatar.js";
+import Avatar from "../avatar/Avatar";
 import Heading from "../typography/Heading.js";
 import Paragraph from "../typography/Paragraph.js";
 import { Calendar } from "lucide-react";

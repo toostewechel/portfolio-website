@@ -7,6 +7,7 @@ import {
 } from "../../card/HoverCard.js";
 import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 import SiteLogo from "../SiteLogo.js";
+import Image from "next/image";
 
 const Container = styled("footer", {
   maxWidth: "1260px",
@@ -167,7 +168,7 @@ const SocialButtonIcon = styled("a", {
   },
 });
 
-const Image = styled("img", {
+const BadgeImage = styled(Image, {
   heigth: "24px",
   width: "70px",
 
@@ -201,7 +202,9 @@ function Footer() {
                       href="https://www.radix-ui.com/"
                       target="_blank"
                     >
-                      <Image
+                      <BadgeImage
+                        width={97}
+                        height={29}
                         src="/badges/radix-badge.png"
                         alt="Radix UI Logo"
                       />
@@ -222,7 +225,9 @@ function Footer() {
                       href="https://akash.network/"
                       target="_blank"
                     >
-                      <Image
+                      <BadgeImage
+                        width={97}
+                        height={29}
                         src="/badges/akash-logo-badge.png"
                         alt="Akash Logo"
                       />
@@ -240,7 +245,9 @@ function Footer() {
                 <HoverCardRoot>
                   <HoverCardTrigger asChild>
                     <PoweredByBadge href="https://replit.com/" target="_blank">
-                      <Image
+                      <BadgeImage
+                        width={97}
+                        height={29}
                         src="/badges/replit-logo-badge.png"
                         alt="Replit Logo"
                       />

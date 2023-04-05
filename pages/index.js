@@ -1,4 +1,5 @@
 import { styled } from "../stitches.config.js";
+import Head from "next/head";
 import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
 import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
@@ -31,6 +32,13 @@ const ContentContainer = styled("div", {
 export default function WidgetsGrid() {
   return (
     <Wrapper>
+      <Head>
+        <meta
+          name="description"
+          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
+        />
+        <title>Snapshot Labs | Dashboard</title>
+      </Head>
       <Header></Header>
       <PageLayout>
         <ContentContainer>
@@ -59,7 +67,7 @@ export default function WidgetsGrid() {
               imageSrc="/widgets/cover-image-living-with-a-linear-mind-in-an-exponential-age.png"
               title="Living With a Linear Mind in an Exponential Age"
               description="How personal knowledge management can help you thrive in an exponential age."
-              datePosted="31 March, 2023"
+              datePosted="31 March 2023"
               labelColor="teal"
             />
             <OperatingPrinciples />

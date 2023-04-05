@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config.js";
+import Image from "next/image";
 
 const Container = styled("div", {
   display: "flex",
@@ -14,7 +15,7 @@ const AvatarContainer = styled("div", {
   borderRadius: "100%",
 });
 
-const StyledImage = styled("img", {
+const StyledImage = styled(Image, {
   size: "$7",
 
   "@bp4": {
@@ -28,7 +29,7 @@ const FlexWrapper = styled("div", {
   flexDirection: "column",
 });
 
-const Title = styled("h3", {
+const Title = styled("p", {
   fontSize: "$lg",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
@@ -54,18 +55,22 @@ const Description = styled("p", {
   },
 });
 
-function Avatar(props) {
-  return (
-    <Container>
-      <AvatarContainer>
-        <StyledImage src={props.src} />
-      </AvatarContainer>
-      <FlexWrapper>
-        <Title>{props.name}</Title>
-        <Description>{props.description}</Description>
-      </FlexWrapper>
-    </Container>
-  );
+interface AvatarProps {
+  src: string;
+  name: string;
+  description: string;
 }
+
+const Avatar = ({ src, name, description }: AvatarProps) => (
+  <Container>
+    <AvatarContainer>
+      <StyledImage width={64} height={64} src={src} alt={name} />
+    </AvatarContainer>
+    <FlexWrapper>
+      <Title>{name}</Title>
+      <Description>{description}</Description>
+    </FlexWrapper>
+  </Container>
+);
 
 export default Avatar;

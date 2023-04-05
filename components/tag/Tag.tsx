@@ -43,8 +43,8 @@ const TagContainer = styled("div", {
         border: "solid 2px $violet5",
       },
       red: {
-        color: "$red3",
-        backgroundColor: "$red10",
+        color: "$red1",
+        backgroundColor: "$red11",
         border: "solid 2px $red10",
         padding: "$spacing-01 $spacing-02",
       },
@@ -84,6 +84,8 @@ const TagLabel = styled("p", {
     fontStyle: {
       uppercase: {
         textTransform: "uppercase",
+        lineHeight: "$none",
+        mt: "$spacing-01",
       },
     },
   },

@@ -105,6 +105,16 @@ export default function BlogPostPage() {
   const targetRef = createRef();
   return (
     <div ref={targetRef}>
+      <Head>
+        <meta
+          name="description"
+          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
+        />
+        <title>
+          Snapshot Labs | Blogpost | Living With A Linear Mind in an Exponential
+          Age
+        </title>
+      </Head>
       <BlogHeader
         targetRef={targetRef}
         gradient="teal"

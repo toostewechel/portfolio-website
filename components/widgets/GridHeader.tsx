@@ -62,7 +62,13 @@ export const GridHeader = () => {
       <PageHeader>Take a Peek</PageHeader>
       <LabelContainer>
         <ArrowUpRight size={24} />
-        <Label>Version 1.0</Label>
+        <Label
+          href="https://hub.docker.com/repository/docker/boonikad93/portfolio-website/general"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Version 1.0
+        </Label>
       </LabelContainer>
     </HeaderContainer>
   );

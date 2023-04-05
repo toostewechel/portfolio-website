@@ -70,7 +70,7 @@ const TagContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  gap: "$spacing-04",
+  gap: "$spacing-03",
 });
 
 const Label = styled("p", {
@@ -78,6 +78,7 @@ const Label = styled("p", {
   fontWeight: "$medium",
   color: "$red10",
   fontSize: "$sm",
+  lineHeight: "$none",
 });
 
 const EventOptions = styled("div", {
@@ -86,8 +87,21 @@ const EventOptions = styled("div", {
   gap: "$spacing-03",
 });
 
+const Icon = styled("div", {
+  display: "flex",
+  color: "$olive9",
+  transition: "transform 100ms ease-in, color 100ms ease-in",
+});
+
 const EventOptionContainer = styled(motion.div, {
   display: "flex",
+
+  "&:hover": {
+    [`${Icon}`]: {
+      transform: "translateX(-10px) rotate(45deg)",
+      color: "$crimson11",
+    },
+  },
 });
 
 const EventOption = styled("a", {
@@ -116,11 +130,6 @@ const EventOptionTitle = styled("p", {
   fontWeight: "$medium",
   color: "$mauve12",
   fontSize: "$sm",
-});
-
-const Icon = styled("div", {
-  display: "flex",
-  color: "$mauve11",
 });
 
 function formatCurrentDate() {
@@ -203,8 +212,8 @@ export const BookMeeting = () => {
                   />
                 </div>
               </ContentContainer>
-              <Icon>
-                <ArrowUpRight size={24} />
+              <Icon role="presentation">
+                <ArrowUpRight size={20} />
               </Icon>
             </EventOption>
           </EventOptionContainer>
@@ -230,8 +239,8 @@ export const BookMeeting = () => {
                   />
                 </div>
               </ContentContainer>
-              <Icon>
-                <ArrowUpRight size={24} />
+              <Icon role="presentation">
+                <ArrowUpRight size={20} />
               </Icon>
             </EventOption>
           </EventOptionContainer>
@@ -255,8 +264,8 @@ export const BookMeeting = () => {
                   />
                 </div>
               </ContentContainer>
-              <Icon>
-                <ArrowUpRight size={24} />
+              <Icon role="presentation">
+                <ArrowUpRight size={20} />
               </Icon>
             </EventOption>
           </EventOptionContainer>
