@@ -75,7 +75,7 @@ export default function CollaborationAccordion() {
           color="plum"
           hasIcon
           Icon={<Hand />}
-          title="Collaboration preferences"
+          title="Collaboration"
           src="/icons/smartphone.svg"
         />
         <AccordionContent>

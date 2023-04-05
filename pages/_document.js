@@ -7,10 +7,6 @@ export default function Document() {
       <Head>
         <meta charset="utf-8"></meta>
         <link
-          rel="stylesheet"
-          href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
-        />
-        <link
           rel="preload"
           href="/fonts/Vollkorn-SemiBold.woff"
           as="font"

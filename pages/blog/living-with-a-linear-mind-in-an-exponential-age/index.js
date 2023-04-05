@@ -4,7 +4,7 @@ import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
 
 //Blog Header & Footer
-import { BlogHeader } from "../../../components/layouts/Header.tsx";
+import { BlogHeader } from "../../../components/layouts/blocks/Header";
 
 //Blog Landing Components
 import Landing from "../../../components/layouts/Landing.js";

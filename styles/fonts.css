@@ -5,6 +5,7 @@
     url("/fonts/Vollkorn-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Vollkorn";
@@ -12,6 +13,7 @@
     url("/fonts/Vollkorn-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Vollkorn";
@@ -19,6 +21,7 @@
     url("/fonts/Vollkorn-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,6 +30,7 @@
     url("/fonts/Vollkorn-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Gotham Font */
@@ -37,6 +41,7 @@
     url("/fonts/gotham-book-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
@@ -44,6 +49,7 @@
     url("/fonts/gotham-bookitalic-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
@@ -51,6 +57,7 @@
     url("/fonts/gotham-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 /* JetBrains Mono */
@@ -60,6 +67,7 @@
     url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -68,6 +76,7 @@
     url("/fonts/JetBrainsMono-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -76,4 +85,5 @@
     url("/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }

@@ -1,8 +1,7 @@
 import { styled } from "../stitches.config.js";
 import { PageLayout } from "../components/layouts/Layout.js";
-import { Header } from "../components/layouts/blocks/Header.tsx";
+import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
-import Spacer from "../components/layouts/blocks/Spacer.js";
 import ReadMeLandingBlock from "../components/pageblocks/ReadMeLandingBlock.js";
 import CoreValuesBlock from "../components/pageblocks/CoreValuesBlock.js";
 import PersonalityBlock from "../components/pageblocks/PersonalityBlock.js";
