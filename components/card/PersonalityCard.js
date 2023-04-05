@@ -3,6 +3,35 @@ import { styled } from "../../stitches.config.js";
 import CharacterTraitsAccordion from "../accordion/CharacterTraitsAccordion.js";
 import CollapsibleContent from "../home/collapsible/Collapsible.js";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { ArrowUpRight } from "lucide-react";
+
+const LinkToButtonIcon = styled("div", {
+  position: "absolute",
+  top: 12,
+  right: 12,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "100%",
+  color: "$olive9",
+  padding: "$spacing-03",
+  transition:
+    "transform 100ms ease-in, color 100ms ease-in, scale 100ms ease-in",
+});
+
+const LinkLabel = styled("p", {
+  position: "absolute",
+  top: 14,
+  right: 40,
+  opacity: 0,
+  fontSize: "$xs",
+  fontFamily: "$default",
+  fontWeight: "$medium",
+  color: "$olive9",
+  transition: "opacity 100ms ease-in, color 100ms ease-in",
+});
 
 // Layouts Component
 const CardLayout = styled("div", {
@@ -34,7 +63,8 @@ const ContentLayout = styled("div", {
   },
 });
 
-const CoverCardContainer = styled("div", {
+const CoverCardContainer = styled(motion.div, {
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-06",
@@ -47,6 +77,18 @@ const CoverCardContainer = styled("div", {
   height: "100%",
   padding: "$spacing-08 $spacing-04",
   boxShadow: "$medium",
+
+  "&:hover": {
+    boxShadow: "$medium",
+    [`${LinkToButtonIcon}`]: {
+      transform: "translateX(6px) translateY(-6px) scale(1.15)",
+      color: "$teal10",
+    },
+    [`${LinkLabel}`]: {
+      opacity: 1,
+      color: "$teal10",
+    },
+  },
 
   "@bp2": {
     padding: "$spacing-10 $spacing-04",
@@ -102,7 +144,7 @@ const Label = styled("p", {
   },
 });
 
-const CardTitle = styled("p", {
+const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   letterSpacing: "$tracking-tight",
@@ -130,13 +172,17 @@ const ImageContainer = styled(Image, {
   height: "240px",
   zIndex: "3",
 
-  "@bp2": {
+  "@bp3": {
+    width: "300px",
+    height: "300px",
+  },
+  "@bp4": {
     width: "400px",
     height: "400px",
   },
 });
 
-const Title = styled("p", {
+const Title = styled("h4", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   letterSpacing: "$tracking-tighter",
@@ -165,7 +211,7 @@ const CardDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$sm",
-  color: "$teal12",
+  color: "$mauve11",
   maxWidth: "380px",
 
   "@bp2": {
@@ -185,25 +231,45 @@ const Paragraph = styled("p", {
   },
 });
 
-export const PersonalityCardCover = () => (
-  <CoverCardContainer>
-    <TitleContainer>
-      <Label color="dark">My Personality</Label>
-      <CardTitle>Advocate</CardTitle>
-      <ColoredLine />
-    </TitleContainer>
-    <ImageContainer width={400} height={400} src="/readme/advocate.png" />
-    <SummaryContainer>
-      <Title color="dark">Summary</Title>
-      <CardDescription>
-        Advocates are Introverted, Intuitive, Feeling, Judging and Assertive.
-        They approach life with thoughtfulness and imagination, guided by their
-        principled version of humanism.
-      </CardDescription>
-    </SummaryContainer>
-  </CoverCardContainer>
-);
+export const PersonalityCardCover = () => {
+  const router = useRouter();
+  const personalityTest =
+    "https://www.16personalities.com/free-personality-test";
 
+  return (
+    <CoverCardContainer
+      role="link"
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={() => router.push(personalityTest)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          router.push(personalityTest);
+        }
+      }}
+    >
+      <LinkLabel>Personality Test</LinkLabel>
+      <LinkToButtonIcon role="presentation">
+        <ArrowUpRight size={20} />
+      </LinkToButtonIcon>
+      <TitleContainer>
+        <Label color="dark">My Personality</Label>
+        <CardTitle>Advocate</CardTitle>
+        <ColoredLine />
+      </TitleContainer>
+      <ImageContainer width={400} height={400} src="/readme/advocate.png" />
+      <SummaryContainer>
+        <Title color="dark">Summary</Title>
+        <CardDescription>
+          Advocates are Introverted, Intuitive, Feeling, Judging and Assertive.
+          They approach life with thoughtfulness and imagination, guided by
+          their principled version of humanism.
+        </CardDescription>
+      </SummaryContainer>
+    </CoverCardContainer>
+  );
+};
 export const PersonalityCardContent = () => (
   <ContentContainer>
     <DescriptionBox>
