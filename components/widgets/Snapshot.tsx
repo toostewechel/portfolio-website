@@ -1,6 +1,7 @@
 import { styled } from "../../stitches.config.js";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const WidgetContainer = styled(motion.div, {
   gridArea: "ss",
@@ -29,19 +30,9 @@ const WidgetContainer = styled(motion.div, {
   },
 });
 
-const BackgroundImage = styled("div", {
-  position: "absolute",
-  backgroundPosition: "top",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "contain",
-  height: "592px",
-  width: "592px",
-  zIndex: "0",
-
-  "@bp2": {
-    height: "292px",
-    width: "292px",
-  },
+const BackgroundImage = styled(Image, {
+  height: "100%",
+  width: "100%",
 });
 
 const ContentContainer = styled("div", {
@@ -136,12 +127,18 @@ export const Snapshot = ({
       whileTap={{ scale: 0.97 }}
       backgroundColor={backgroundColor}
     >
-      <BackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }} />
+      <BackgroundImage
+        width={592}
+        height={592}
+        src={backgroundImage}
+        alt={title}
+      />
       <ContentContainer>
         <ComingSoonBadge>Coming Soon!</ComingSoonBadge>
         <Icon>
-          <img
-            style={{ width: "24px", height: "24px" }}
+          <Image
+            width={24}
+            height={24}
             src={languageIcons[language]}
             alt={language}
           />

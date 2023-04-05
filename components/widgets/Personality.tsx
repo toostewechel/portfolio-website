@@ -26,6 +26,20 @@ const WidgetContainer = styled(motion.div, {
   },
 });
 
+const WidgetImage = styled(Image, {
+  height: "200px",
+  width: "200px",
+
+  "@bp1": {
+    height: "396px",
+    width: "396px",
+  },
+  "@bp2": {
+    height: "200px",
+    width: "200px",
+  },
+});
+
 const LinkToButtonIcon = styled("a", {
   position: "absolute",
   top: 16,
@@ -45,13 +59,6 @@ const LinkToButtonIcon = styled("a", {
 const ImageContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
-  width: "264px",
-  height: "264px",
-
-  "@bp2": {
-    height: "192px",
-    width: "192px",
-  },
 });
 
 const TitleContainer = styled("div", {
@@ -106,11 +113,10 @@ export const Personality = () => {
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>
       <ImageContainer>
-        <Image
+        <WidgetImage
           src="/widgets/advocate-tile.png"
-          layout="responsive"
-          height="296"
-          width="296"
+          height="264"
+          width="264"
           alt="logo-advocate"
         />
       </ImageContainer>

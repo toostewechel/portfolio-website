@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "../../stitches.config.js";
 import Image from "next/image";
 import { Tag } from "../tag/Tag";
-import Avatar from "../avatar/Avatar.js";
+import Avatar from "../avatar/Avatar";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";

@@ -1,4 +1,5 @@
 import { styled } from "../../stitches.config.js";
+import Image from "next/image";
 
 const Link = styled("a", {
   display: "flex",
@@ -6,9 +7,9 @@ const Link = styled("a", {
   justifyContent: "center",
 });
 
-const StyledLogo = styled("img", {
+const StyledLogo = styled(Image, {
   height: "auto",
-  width: "180px",
+  width: "100%",
 
   "@bp1": {
     width: "232px",
@@ -17,8 +18,10 @@ const StyledLogo = styled("img", {
 
 export default function SiteLogo() {
   return (
-    <Link href="/">
+    <Link href="/" aria-label="Navigate Back to Dashboard">
       <StyledLogo
+        width={232}
+        height={64}
         src="/logo/snapshots-labs-logo.png"
         alt="Snapshot Labs Logo"
       />
