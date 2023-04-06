@@ -1,9 +1,7 @@
 import React from "react";
 import { styled } from "../../stitches.config.js";
-import GithubFillIcon from "remixicon-react/GithubFillIcon";
-import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
-import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
+import { IconButton } from "../button/IconButton";
 import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 
 const Container = styled("div", {
@@ -94,78 +92,10 @@ const BadgeLabel = styled("p", {
   mr: "$spacing-02",
 });
 
-const Link = styled("a", {
-  outlineOffset: "2px",
-
-  "&:focus": {
-    outlineColor: "$violet11",
-  },
-});
-
-const SocialIconBar = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  gap: "12px",
-  width: "100%",
-});
-
-const Icon = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  size: "$6",
-  p: "8px",
-  backgroundColor: "rgba(0, 0, 0, 0.25)",
-  color: "$violet3",
-  borderRadius: "999px",
-  willChange: "transform",
-  transition: "transform 300ms ease-in, scale 300ms ease-in",
-
-  "&:hover": {
-    scale: 1.03,
-    transform: "translateY(-4px)",
-    transition: "transform 300ms ease-out, scale 300ms ease-out",
-    backgroundColor: "rgba(0, 0, 0, 0.15)",
-  },
-  "&:active": {
-    backgroundColor: "rgba(0, 0, 0, 0.2)",
-  },
-});
-
 const SocialButtonContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   gap: "$spacing-02",
-});
-
-const SocialButtonIcon = styled("a", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "6px",
-  color: "$olive9",
-  padding: "$spacing-03",
-  transition: "background 200ms ease-in",
-  background: "transparent",
-  border: "1px solid transparent",
-  outline: 0,
-
-  "&:hover": {
-    transition: "all 200ms ease-out",
-    backgroundColor: "$olive3",
-    border: "1px solid $olive6",
-    color: "$olive12",
-  },
-  "&:active": {
-    backgroundColor: "$mauve3",
-  },
-  "&:focus": {
-    transition: "background 300ms ease-out",
-    backgroundColor: "$mauve3",
-    border: "1px solid $blue11",
-    color: "$mauve12",
-  },
 });
 
 interface ProfileCardProps {
@@ -192,30 +122,56 @@ function ProfileCard(props: ProfileCardProps) {
             </StatusBadge>
           ) : null}
           <SocialButtonContainer>
-            <SocialButtonIcon
+            <IconButton
+              mode="light"
               href="https://twitter.com/boonikad93"
               target="_blank"
+              title="Open Twitter Profile"
+              ariaLabel="Open Twitter Profile"
+              tooltipLabel="Twitter"
             >
               <Twitter size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
+            </IconButton>
+            <IconButton
+              mode="light"
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
+              title="Open LinkedIn Profile"
+              ariaLabel="Open LinkedIn Profile"
+              tooltipLabel="Linked In"
             >
               <Linkedin size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon
+            </IconButton>
+            <IconButton
+              mode="light"
               href="https://github.com/toostewechel"
               target="_blank"
+              title="Open GitHub Profile"
+              ariaLabel="GitHub Profile"
+              tooltipLabel="GitHub"
             >
               <Github size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon href="mailto:tomas93@skiff.com" target="_blank">
+            </IconButton>
+            <IconButton
+              mode="light"
+              href="mailto:tomas93@skiff.com"
+              target="_blank"
+              title="Open Email Client"
+              ariaLabel="Open Email Client"
+              tooltipLabel="Email"
+            >
               <Mail size={20} />
-            </SocialButtonIcon>
-            <SocialButtonIcon href="tel:0612647976" target="_blank">
+            </IconButton>
+            <IconButton
+              mode="light"
+              href="tel:0612647976"
+              target="_blank"
+              title="Open Phone App"
+              ariaLabel="Open Phone App"
+              tooltipLabel="Phone Number"
+            >
               <Smartphone size={20} />
-            </SocialButtonIcon>
+            </IconButton>
           </SocialButtonContainer>
         </Card>
       </FlexContainer>

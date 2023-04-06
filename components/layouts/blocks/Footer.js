@@ -252,7 +252,7 @@ function Footer() {
             <IconButton
               href="https://twitter.com/boonikad93"
               target="_blank"
-              alt="Open Twitter profile in new tab"
+              title="Open Twitter profile in new tab"
               ariaLabel="Twitter Profile"
               tooltipLabel="Twitter"
             >
@@ -261,7 +261,7 @@ function Footer() {
             <IconButton
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
-              alt="Open LinkedIn profile in new tab"
+              title="Open LinkedIn profile in new tab"
               ariaLabel="LinkedIn Profile"
               tooltipLabel="Linked In"
             >
@@ -270,7 +270,7 @@ function Footer() {
             <IconButton
               href="https://github.com/toostewechel"
               target="_blank"
-              alt="Open Github profile in new tab"
+              title="Open Github profile in new tab"
               ariaLabel="GitHub Profile"
               tooltipLabel="GitHub"
             >
@@ -279,7 +279,7 @@ function Footer() {
             <IconButton
               href="mailto:tomas93@skiff.com"
               target="_blank"
-              alt="Open email client"
+              title="Open email client"
               ariaLabel="Email Client"
               tooltipLabel="Email"
             >
@@ -288,7 +288,7 @@ function Footer() {
             <IconButton
               href="tel:0612647976"
               target="_blank"
-              alt="Open phone app"
+              title="Open phone app"
               ariaLabel="Pop up phone app"
               tooltipLabel="Phone Number"
             >

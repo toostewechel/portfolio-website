@@ -1,3 +1,5 @@
+import { Title } from "@radix-ui/react-dialog";
+import { Target } from "lucide-react";
 import { styled } from "../../stitches.config.js";
 import {
   Provider,
@@ -12,11 +14,25 @@ const IconLink = styled("a", {
   justifyContent: "center",
   borderRadius: "6px",
   color: "$mauve11",
-  padding: "$spacing-04",
+  padding: "$spacing-03",
   transition: "background 150ms ease-in",
   background: "transparent",
   border: "2px solid transparent",
   outline: 0,
+
+  variants: {
+    mode: {
+      light: {
+        color: "$mauve9",
+        "&:hover": {
+          transition: "background 150ms ease-out",
+          border: "2px solid transparent",
+          backgroundColor: "rgba(255,255,255, 0.05)",
+          color: "$mauve6",
+        },
+      },
+    },
+  },
 
   "&:hover": {
     transition: "background 150ms ease-out",
@@ -39,7 +55,10 @@ interface Props {
   href: string;
   ariaLabel: string;
   tooltipLabel: string;
-  children: any;
+  children: React.ReactNode;
+  target: string;
+  title: string;
+  mode?: "light";
 }
 
 export const IconButton = ({
@@ -47,12 +66,21 @@ export const IconButton = ({
   ariaLabel,
   tooltipLabel,
   children,
+  target,
+  title,
+  mode,
 }: Props) => {
   return (
     <Provider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <IconLink href={href} aria-label={ariaLabel}>
+          <IconLink
+            mode={mode}
+            title={title}
+            target={target}
+            href={href}
+            aria-label={ariaLabel}
+          >
             {children}
           </IconLink>
         </TooltipTrigger>

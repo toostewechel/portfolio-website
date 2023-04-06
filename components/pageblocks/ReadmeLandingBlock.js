@@ -14,7 +14,7 @@ const LandingItems = styled("div", {
   padding: "0",
   gap: "$spacing-08",
 
-  "@bp2": {
+  "@bp4": {
     flexDirection: "row",
   },
 });
@@ -26,6 +26,7 @@ const LandingItem = styled("div", {
   flex: "0 0 100%",
   height: "auto",
   mr: 0,
+  width: "100%",
 
   "@bp2": {
     flexBasis: "calc(50% - 16px)",
