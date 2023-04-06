@@ -66,29 +66,23 @@ function StyledSplineScene({ width, height }) {
 
 export default function ReadMeLandingBlock() {
   return (
-    <>
-      <script
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
-      ></script>
-      <Section>
-        <LandingWrapper>
-          <LandingItems>
-            <LandingItem>
-              <LandingContent
-                pageTitle="Read Me"
-                pageDescription="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
-                dateUpdated="25 March, 2023"
-              />
-            </LandingItem>
-            <LandingItem>
-              <DesktopContainer>
-                <StyledSplineScene width="800" height="800" />
-              </DesktopContainer>
-            </LandingItem>
-          </LandingItems>
-        </LandingWrapper>
-      </Section>
-    </>
+    <Section>
+      <LandingWrapper>
+        <LandingItems>
+          <LandingItem>
+            <LandingContent
+              pageTitle="Read Me"
+              pageDescription="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
+              dateUpdated="25 March, 2023"
+            />
+          </LandingItem>
+          <LandingItem>
+            <DesktopContainer>
+              <StyledSplineScene width="800" height="800" />
+            </DesktopContainer>
+          </LandingItem>
+        </LandingItems>
+      </LandingWrapper>
+    </Section>
   );
 }
