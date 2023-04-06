@@ -103,7 +103,7 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
   const [bp1, setBp1] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    const mediaQuery = window.matchMedia("(min-width: 480px)");
     setBp1(mediaQuery.matches);
 
     const listener = () => {
