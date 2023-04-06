@@ -137,10 +137,6 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
           )}
         </ContentLayout>
       </ProfileCardContainer>
-      <LabelContainer>
-        <ArrowUpRight size={24} />
-        <Label>Last updated {dateUpdated}</Label>
-      </LabelContainer>
     </ContentContainer>
   );
 }

@@ -26,6 +26,7 @@ const LandingItems = styled("div", {
 
   "@bp4": {
     flexDirection: "row",
+    gap: "$spacing-07",
   },
 });
 
@@ -49,18 +50,33 @@ const DesktopContainer = styled("div", {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  height: "650px",
+  height: "550px",
+
+  "@bp3": {
+    height: "650px",
+  },
+
+  "@bp4": {
+    height: "700px",
+  },
 });
 
 const TabletContainer = styled("div", {});
 
 function StyledSplineScene({ width, height }) {
   return (
-    <spline-viewer
-      width={width}
-      height={height}
-      url="https://prod.spline.design/AaRRyVI2zmxoTZpj/scene.splinecode"
-    ></spline-viewer>
+    <DesktopContainer>
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@0.9.284/build/spline-viewer.js"
+      ></script>
+      <spline-viewer
+        width={width}
+        height={height}
+        loading-anim
+        url="https://prod.spline.design/lBh7JgJl-PnrVASr/scene.splinecode"
+      ></spline-viewer>
+    </DesktopContainer>
   );
 }
 
@@ -77,9 +93,7 @@ export default function ReadMeLandingBlock() {
             />
           </LandingItem>
           <LandingItem>
-            <DesktopContainer>
-              <StyledSplineScene width="800" height="800" />
-            </DesktopContainer>
+            <StyledSplineScene />
           </LandingItem>
         </LandingItems>
       </LandingWrapper>
