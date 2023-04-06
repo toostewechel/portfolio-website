@@ -1,10 +1,28 @@
 import { styled } from "../../../stitches.config.js";
 
 const Link = styled("a", {
-  outlineOffset: "2px",
+  width: "100%",
+  padding: "$spacing-04 $spacing-03",
+  borderRadius: "4px",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  letterSpacing: "$tracking-tight",
+  lineHeight: "$none",
+  color: "$mauve11",
 
+  "&:hover": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "rgba(0,0,0, 0.05)",
+    color: "$mauve12",
+  },
+  "&:active": {
+    backgroundColor: "$mauve3",
+  },
   "&:focus": {
-    outlineColor: "$violet11",
+    transition: "background 150ms ease-out",
+    backgroundColor: "rgba(0,0,0, 0.1)",
+    color: "$mauve12",
   },
 });
 
@@ -13,38 +31,9 @@ const Container = styled("div", {
   width: "100%",
   flexDirection: "row",
   alignItems: "center",
-  padding: "$spacing-03 $spacing-04",
-  borderRadius: "4px",
-  willChange: "transform",
-  transition: "transform 150ms ease-in, background 150ms ease-in",
-  color: "$mauve11",
-
-  "@bp1": {
-    "&:hover": {
-      scale: 1.01,
-      color: "$mauve12",
-      background: "rgba(255, 255, 255, 0.1)",
-      transition: "transform 150ms ease-out, background 150ms ease-out",
-      boxShadow: "$smooth",
-    },
-  },
-  "&:active": {
-    background: "rgba(255, 255, 255, 0.15)",
-    scale: 1,
-  },
 });
 
-const Icon = styled("div", {
-  size: "$5",
-  color: "white",
-});
-
-const Label = styled("p", {
-  fontSize: "$sm",
-  fontWeight: "$medium",
-  fontFamily: "$default",
-  letterSpacing: "$tracking-tight",
-});
+const Label = styled("p", {});
 
 interface MenuItemProps {
   href: string;
@@ -52,13 +41,7 @@ interface MenuItemProps {
 }
 
 function MenuItem({ href, label }: MenuItemProps) {
-  return (
-    <Link href={href}>
-      <Container>
-        <Label>{label}</Label>
-      </Container>
-    </Link>
-  );
+  return <Link href={href}>{label}</Link>;
 }
 
 export default MenuItem;

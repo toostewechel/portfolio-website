@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import CharacterTraitsAccordion from "../accordion/CharacterTraitsAccordion.js";
-import CollapsibleContent from "../home/collapsible/Collapsible.js";
+import CollapsibleContent from "../collapsible/Collapsible";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -325,7 +325,7 @@ export default function PersonalityCard() {
         {bp2 ? (
           <PersonalityCardContent />
         ) : (
-          <CollapsibleContent>
+          <CollapsibleContent title="Menu" color="teal">
             <PersonalityCardContent />
           </CollapsibleContent>
         )}

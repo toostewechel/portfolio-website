@@ -1,4 +1,3 @@
-import React from "react";
 import { styled } from "../../stitches.config.js";
 import AvatarStatusBadge from "../avatar/AvatarStatusBadge.js";
 import { IconButton } from "../button/IconButton";
