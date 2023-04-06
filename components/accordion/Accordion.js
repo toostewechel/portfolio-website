@@ -80,7 +80,7 @@ const StyledContentText = styled("div", {
 const StyledChevron = styled(ChevronRight, {
   color: "$mauve11",
   transition: "transform 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-  "[data-state=open] &": {
+  [`${StyledTrigger}[data-state="open"] &`]: {
     transform: "rotate(90deg)",
     color: "$mauve12",
   },

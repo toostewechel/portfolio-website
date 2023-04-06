@@ -37,28 +37,31 @@ const LinkLabel = styled("p", {
 const CardLayout = styled("div", {
   display: "flex",
   flexDirection: "column",
-  padding: "$spacing-04",
+  padding: "$spacing-05",
   width: "100%",
   backgroundColor: "white",
-  borderRadius: "12px",
+  borderRadius: "16px",
   boxShadow: "$medium",
 
-  "@bp2": {
+  "@bp3": {
+    padding: "$spacing-05",
     flexDirection: "row",
+  },
+  "@bp4": {
     padding: "$spacing-06",
   },
 });
 const CoverLayout = styled("div", {
   width: "100%",
 
-  "@bp2": {
+  "@bp3": {
     width: "45%",
   },
 });
 const ContentLayout = styled("div", {
   width: "100%",
 
-  "@bp2": {
+  "@bp3": {
     width: "55%",
   },
 });
@@ -72,7 +75,7 @@ const CoverCardContainer = styled(motion.div, {
   alignItems: "center",
   textAlign: "center",
   background: "linear-gradient(149.31deg, #EEFADC 0%, #C7EBE5 100%)",
-  borderRadius: "6px",
+  borderRadius: "12px",
   width: "100%",
   height: "100%",
   padding: "$spacing-08 $spacing-04",
@@ -98,12 +101,20 @@ const CoverCardContainer = styled(motion.div, {
 const ContentContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-07",
+  gap: "$spacing-06",
   justifyContent: "center",
   alignItems: "start",
-  padding: "$spacing-06 $spacing-03",
+  padding: "$spacing-06 $none",
 
   "@bp2": {
+    padding: "$spacing-08",
+    gap: "$spacing-08",
+  },
+  "@bp3": {
+    padding: "$spacing-04 $spacing-06",
+    gap: "$spacing-06",
+  },
+  "@bp4": {
     padding: "$spacing-08",
     gap: "$spacing-08",
   },
@@ -161,10 +172,10 @@ const CardTitle = styled("h3", {
 
 const ColoredLine = styled("div", {
   display: "flex",
-  width: "132px",
-  height: "6px",
-  borderRadius: "6px",
-  background: "$teal9",
+  width: "96px",
+  height: "4px",
+  borderRadius: "4px",
+  background: "$teal10",
 });
 
 const ImageContainer = styled(Image, {
@@ -186,18 +197,22 @@ const Title = styled("h4", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   letterSpacing: "$tracking-tighter",
-  fontSize: "$xl",
+  fontSize: "$lg",
   color: "$mauve12",
 
   variants: {
     color: {
-      dark: {
-        color: "$mauve12",
+      teal: {
+        color: "$teal11",
       },
       light: {
         color: "$mauve1",
       },
     },
+  },
+
+  "@bp1": {
+    fontSize: "$xl",
   },
 });
 
@@ -210,12 +225,12 @@ const SummaryContainer = styled("div", {
 const CardDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontSize: "$sm",
-  color: "$mauve11",
+  fontSize: "$xs",
+  color: "$teal12",
   maxWidth: "380px",
 
-  "@bp2": {
-    fontSize: "$base",
+  "@bp1": {
+    fontSize: "$sm",
   },
 });
 
@@ -226,7 +241,7 @@ const Paragraph = styled("p", {
   color: "$mauve12",
   maxWidth: "480px",
 
-  "@bp2": {
+  "@bp1": {
     fontSize: "$sm",
   },
 });
@@ -260,7 +275,7 @@ export const PersonalityCardCover = () => {
       </TitleContainer>
       <ImageContainer width={400} height={400} src="/readme/advocate.png" />
       <SummaryContainer>
-        <Title color="dark">Summary</Title>
+        <Title color="teal">Summary</Title>
         <CardDescription>
           Advocates are Introverted, Intuitive, Feeling, Judging and Assertive.
           They approach life with thoughtfulness and imagination, guided by
@@ -302,7 +317,7 @@ export default function PersonalityCard() {
   const [bp2, setBp2] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
     setBp2(mediaQuery.matches);
 
     const listener = () => {

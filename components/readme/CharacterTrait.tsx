@@ -61,10 +61,6 @@ const CharacterTraitDescription = styled("p", {
   fontSize: "$xs",
   fontStyle: "italic",
   color: "mauve12",
-
-  "@bp1": {
-    fontSize: "$sm",
-  },
 });
 
 interface CharacterTraitProps {
