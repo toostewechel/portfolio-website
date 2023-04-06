@@ -4,6 +4,16 @@ import LandingContent from "../readme/LandingContent";
 
 const LandingWrapper = styled("div", {
   m: 0,
+
+  "@bp4": {
+    overflow: "hidden",
+  },
+  "@bp5": {
+    overflow: "hidden",
+  },
+  "@bp6": {
+    overflow: "visible",
+  },
 });
 
 const LandingItems = styled("div", {
@@ -12,7 +22,7 @@ const LandingItems = styled("div", {
   flexDirection: "column",
   alignItems: "start",
   padding: "0",
-  gap: "$spacing-08",
+  gap: "$none",
 
   "@bp4": {
     flexDirection: "row",
@@ -33,28 +43,52 @@ const LandingItem = styled("div", {
   },
 });
 
-const StyledImage = styled("img", {
+const DesktopContainer = styled("div", {
+  overflow: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   width: "100%",
-  height: "auto",
+  height: "650px",
 });
+
+const TabletContainer = styled("div", {});
+
+function StyledSplineScene({ width, height }) {
+  return (
+    <spline-viewer
+      width={width}
+      height={height}
+      url="https://prod.spline.design/AaRRyVI2zmxoTZpj/scene.splinecode"
+    ></spline-viewer>
+  );
+}
 
 export default function ReadMeLandingBlock() {
   return (
-    <Section>
-      <LandingWrapper>
-        <LandingItems>
-          <LandingItem>
-            <LandingContent
-              pageTitle="Read Me"
-              pageDescription="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
-              dateUpdated="25 March, 2023"
-            />
-          </LandingItem>
-          <LandingItem>
-            <StyledImage src="/readme/landing.png" />
-          </LandingItem>
-        </LandingItems>
-      </LandingWrapper>
-    </Section>
+    <>
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+      ></script>
+      <Section>
+        <LandingWrapper>
+          <LandingItems>
+            <LandingItem>
+              <LandingContent
+                pageTitle="Read Me"
+                pageDescription="An alternative way for you (current teammate, future friend, internet stranger) to understand me better. This page is a constant work in progress!"
+                dateUpdated="25 March, 2023"
+              />
+            </LandingItem>
+            <LandingItem>
+              <DesktopContainer>
+                <StyledSplineScene width="800" height="800" />
+              </DesktopContainer>
+            </LandingItem>
+          </LandingItems>
+        </LandingWrapper>
+      </Section>
+    </>
   );
 }

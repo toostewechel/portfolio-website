@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "../../../stitches.config.js";
+import { styled } from "../../stitches.config.js";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {
@@ -96,13 +96,21 @@ const Button = styled("button", {
   },
 });
 
-export default function CollapsibleContent({ children }) {
-  const [open, setOpen] = React.useState(false);
+interface CollapsibleContentProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+export default function CollapsibleContent({
+  title,
+  children,
+}: CollapsibleContentProps) {
+  const [open, setOpen] = React.useState<boolean>(false);
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
       <HeaderPanel>
         <Flex>
-          <Title>Details</Title>
+          <Title>{title}</Title>
         </Flex>
         <CollapsibleTrigger asChild>
           <Button color="teal">{open ? "Hide" : "Show"}</Button>

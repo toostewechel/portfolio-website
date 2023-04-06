@@ -1,8 +1,10 @@
+import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import ProfileCard from "../card/ProfileCard";
 import MenuItem from "../home/profilecard/MenuItem";
 import { ArrowUpRight } from "lucide-react";
 import ContentBlock from "../layouts/blocks/ContentBlock";
+import CollapsibleContent from "../collapsible/Collapsible";
 
 const ContentContainer = styled("div", {
   display: "flex",
@@ -47,28 +49,73 @@ const ProfileCardContainer = styled("div", {
 const ProfileCardIndex = styled("div", {
   display: "flex",
   flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "flex-end",
   padding: "$spacing-03 $none $spacing-03 $spacing-04",
-  gap: "$spacing-02",
+  gap: "$spacing-03",
 
   "@bp1": {
     display: "flex",
   },
 });
 
-const IndexTitle = styled("p", {
+const Menu = styled("p", {
   fontSize: "$xl",
   fontWeight: "$extra-bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   lineHeight: "$compact",
   color: "$mauve12",
+  display: "none",
+
+  "@bp1": {
+    display: "flex",
+  },
 });
+
+const ContentLayout = styled("div", {
+  width: "100%",
+
+  "@bp2": {
+    width: "55%",
+  },
+});
+
+function ProfileCardMenu() {
+  return (
+    <ProfileCardIndex>
+      <Menu>Menu</Menu>
+      <MenuItem label="Values & Strengths" href="#core-values" />
+      <MenuItem label="Personality" href="#personality" />
+      <MenuItem label="Competencies" href="#competencies" />
+      <MenuItem label="Collaboration" href="#collaboration" />
+      <MenuItem label="Interest & Hobbies" href="#interest" />
+    </ProfileCardIndex>
+  );
+}
 
 interface LandingContentProps {
   dateUpdated: string;
 }
 
 export default function LandingContent({ dateUpdated }: LandingContentProps) {
+  const [bp1, setBp1] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    setBp1(mediaQuery.matches);
+
+    const listener = () => {
+      setBp1(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", listener);
+
+    return () => {
+      mediaQuery.removeEventListener("change", listener);
+    };
+  }, []);
+
   return (
     <ContentContainer>
       <ContentBlock
@@ -79,14 +126,15 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
       />
       <ProfileCardContainer>
         <ProfileCard />
-        <ProfileCardIndex>
-          <IndexTitle>Index</IndexTitle>
-          <MenuItem label="Values & Strengths" href="#core-values" />
-          <MenuItem label="Personality" href="#personality" />
-          <MenuItem label="Competencies" href="#competencies" />
-          <MenuItem label="Collaboration" href="#collaboration" />
-          <MenuItem label="Interest & Hobbies" href="#interest" />
-        </ProfileCardIndex>
+        <ContentLayout>
+          {bp1 ? (
+            <ProfileCardMenu />
+          ) : (
+            <CollapsibleContent title="Menu">
+              <ProfileCardMenu />
+            </CollapsibleContent>
+          )}
+        </ContentLayout>
       </ProfileCardContainer>
       <LabelContainer>
         <ArrowUpRight size={24} />

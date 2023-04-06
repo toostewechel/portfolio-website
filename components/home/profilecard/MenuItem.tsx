@@ -13,7 +13,7 @@ const Container = styled("div", {
   width: "100%",
   flexDirection: "row",
   alignItems: "center",
-  padding: "$spacing-03 $spacing-04",
+  padding: "$spacing-03 $spacing-02",
   borderRadius: "4px",
   willChange: "transform",
   transition: "transform 150ms ease-in, background 150ms ease-in",
@@ -32,11 +32,6 @@ const Container = styled("div", {
     background: "rgba(255, 255, 255, 0.15)",
     scale: 1,
   },
-});
-
-const Icon = styled("div", {
-  size: "$5",
-  color: "white",
 });
 
 const Label = styled("p", {
