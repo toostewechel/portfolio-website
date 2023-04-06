@@ -78,7 +78,13 @@ export const BlogHeader: FC<BlogHeaderProps> = ({
         <Controls>
           <ShareToPopover twitter={twitter} linkedin={linkedin} />
           <ReadingProgressBar targetRef={targetRef} gradient={gradient} />
-          <IconButton href="/blog" ariaLabel="Close" tooltipLabel="Close Post">
+          <IconButton
+            target=""
+            title="Go back to blog posts"
+            href="/blog"
+            ariaLabel="Close"
+            tooltipLabel="Close Post"
+          >
             <X size={20} />
           </IconButton>
         </Controls>
