@@ -45,7 +45,7 @@ const Button = styled("button", {
   padding: "$spacing-02 $spacing-03",
   fontFamily: "$default",
   fontWeight: "$medium",
-  fontSize: "$sm",
+  fontSize: "$xs",
   color: "$mauve2",
 
   variants: {
@@ -98,11 +98,13 @@ const Button = styled("button", {
 
 interface CollapsibleContentProps {
   title: string;
+  color: "bronze" | "plum" | "blue" | "crimson" | "violet" | "teal" | "cyan";
   children: React.ReactNode;
 }
 
 export default function CollapsibleContent({
   title,
+  color,
   children,
 }: CollapsibleContentProps) {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -113,7 +115,7 @@ export default function CollapsibleContent({
           <Title>{title}</Title>
         </Flex>
         <CollapsibleTrigger asChild>
-          <Button color="teal">{open ? "Hide" : "Show"}</Button>
+          <Button color={color}>{open ? "Hide" : "Show"}</Button>
         </CollapsibleTrigger>
       </HeaderPanel>
       <CollapsiblePanel>{children}</CollapsiblePanel>

@@ -51,11 +51,12 @@ const ProfileCardIndex = styled("div", {
   flexDirection: "column",
   alignItems: "flex-start",
   justifyContent: "flex-end",
-  padding: "$spacing-03 $none $spacing-03 $spacing-04",
+  padding: "$spacing-03 $none",
   gap: "$spacing-03",
 
   "@bp1": {
     display: "flex",
+    padding: "$spacing-05",
   },
 });
 
@@ -130,7 +131,7 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
           {bp1 ? (
             <ProfileCardMenu />
           ) : (
-            <CollapsibleContent title="Menu">
+            <CollapsibleContent title="Menu" color="teal">
               <ProfileCardMenu />
             </CollapsibleContent>
           )}

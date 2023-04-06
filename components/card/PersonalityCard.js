@@ -325,7 +325,7 @@ export default function PersonalityCard() {
         {bp2 ? (
           <PersonalityCardContent />
         ) : (
-          <CollapsibleContent title="Menu">
+          <CollapsibleContent title="Menu" color="teal">
             <PersonalityCardContent />
           </CollapsibleContent>
         )}
