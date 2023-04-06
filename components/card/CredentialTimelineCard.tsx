@@ -160,13 +160,6 @@ const FooterContainer = styled("div", {
   alignItems: "baseline",
 });
 
-const Box = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alginItems: "center",
-});
-
 const FlexWrapper = styled("div", {
   display: "flex",
   flexDirection: "row",
@@ -201,29 +194,6 @@ const Label = styled("p", {
 
   "@bp1": {
     pr: "$spacing-05",
-  },
-});
-
-const StyledLink = styled("a", {
-  display: "inline-flex",
-  color: "$violet10",
-  fontWeight: "$semi-bold",
-  fontFamily: "$default",
-  lineHeight: "$base",
-  letterSpacing: "$tracking-normal",
-  padding: "$spacing-03",
-  borderRadius: "8px",
-  backgroundColor: "transparent",
-
-  "&:hover": {
-    color: "$violet11",
-    backgroundColor: "$violet3",
-  },
-  "&:active": {
-    color: "$violet11",
-  },
-  "&:visited": {
-    color: "$violet11",
   },
 });
 
@@ -310,7 +280,7 @@ function CredentialTimelineCard({
       <AccentHighlight color={accentColor} />
       <CardHeaderContainer>
         <Logo src={logo} />
-        <Tag color={tagColor} label={tagLabel} />
+        <Tag size="sm" color={tagColor} label={tagLabel} />
       </CardHeaderContainer>
       <TitleContainer>
         <CardTitle>{title}</CardTitle>

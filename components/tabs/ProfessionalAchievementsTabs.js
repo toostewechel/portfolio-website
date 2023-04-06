@@ -15,6 +15,27 @@ function ProfessionalAchievementsTab() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
+              color="gray"
+              hasYear={true}
+              alignment="left"
+              year="2023"
+            />
+            <CredentialTimelineCard
+              logo="/logo/move-agency-logo.png"
+              href="https://www.moveagency.com/en/"
+              accentColor="gray"
+              tagColor="gray"
+              tagLabel="Full Time"
+              title="UX Designer"
+              subtitle="Jouw Omgeving"
+              description="Responsible for translating (mobile) concepts into appealing designs with great interaction. In the lead from start to finish for the design of varying client projects for interactions, user flows and visual design."
+              duration="2023 - Now"
+              location="Zwolle"
+              hasLink={false}
+            />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
               color="plum"
               hasYear={true}
               alignment="left"
@@ -108,7 +129,7 @@ function ProfessionalAchievementsTab() {
               color="blue"
               hasYear={true}
               alignment="left"
-              year="2019"
+              year="2022"
             />
             <CredentialTimelineCard
               logo="/logo/front-end-development-logo.png"
