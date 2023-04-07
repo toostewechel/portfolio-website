@@ -3,6 +3,7 @@ import { Tag } from "../tag/Tag";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { FC } from "react";
+import Image from "next/image";
 
 const Container = styled(motion.div, {
   m: 0,
@@ -25,7 +26,7 @@ const Container = styled(motion.div, {
   },
 });
 
-const ResponsiveImage = styled("img", {
+const ResponsiveImage = styled(Image, {
   maxWidth: "100%",
   height: "auto",
 });
@@ -167,7 +168,7 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
           )}
         </IconSize>
       </Icon>
-      <ResponsiveImage src={image} />
+      <ResponsiveImage width={760} height={600} alt={title} src={image} />
       <TitleContainer>
         <CardTitle>{title}</CardTitle>
       </TitleContainer>

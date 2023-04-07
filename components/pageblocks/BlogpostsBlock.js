@@ -47,7 +47,7 @@ function BlogpostsBlock() {
             />
             <BlogTimelineCard
               href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
-              image="blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/cover.png"
+              image="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/cover.png"
               title="The Rise of the Unstoppable, Decentralized and Semantic Web"
               description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms"
               meta="21 January 2023"

@@ -70,11 +70,15 @@ const StyledContent = styled(AccordionPrimitive.Content, {
 });
 
 const StyledContentText = styled("div", {
-  padding: "$spacing-05",
+  padding: "$spacing-04",
   fontSize: "$lg",
   fontFamily: "$default",
   lineHeight: "$base",
   color: "$gray12",
+
+  "@bp3": {
+    padding: "$spacing-05",
+  },
 });
 
 const StyledChevron = styled(ChevronRight, {
@@ -100,9 +104,9 @@ const Title = styled("p", {
   fontFamily: "$header",
   fontWeight: "$bold",
   fontSize: "$lg",
-  lineHeight: "$none",
+  lineHeight: "$compact",
   color: "$mauve12",
-  mt: "1px",
+  mt: "4px",
 });
 
 const Box = styled("div", {

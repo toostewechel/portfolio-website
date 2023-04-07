@@ -18,19 +18,29 @@ const TakeawaysList = styled("ul", {
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
   color: "$gray12",
-  paddingInlineStart: "$spacing-04",
+  paddingInlineStart: "$none",
   listStyle: "none",
   marginBottom: "$spacing-05",
+
+  "@bp3": {
+    paddingInlineStart: "$spacing-06",
+  },
 });
 
 const StyledListItem = styled("li", {
   display: "flex",
-  marginLeft: "8px",
   marginBottom: "8px",
   alignItems: "flex-start",
+  fontFamily: "$default",
+  lineHeight: "1.5",
+  fontSize: "$sm",
 
   "&:last-child": {
     marginBottom: "0px",
+  },
+
+  "@bp3": {
+    fontSize: "$base",
   },
 });
 

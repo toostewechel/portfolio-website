@@ -19,7 +19,7 @@ const ContentContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   gap: "$spacing-11",
-  marginTop: "70px",
+  marginTop: "59px",
   marginBottom: "232px",
 
   "@bp1": {
