@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "../stitches.config.js";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const LinkContainer = styled("a", {
   outline: 0,
@@ -40,7 +41,7 @@ const FlexWrapper = styled("div", {
   alignItems: "center",
 });
 
-const Logo = styled("img", {
+const Logo = styled(Image, {
   width: "40px",
   height: "40px",
   borderRadius: "6px",
@@ -103,7 +104,7 @@ function StyledLink({ href, src, title, description }: StyledLinkProps) {
     <LinkContainer href={href} target="_blank">
       <Panel whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
         <FlexWrapper>
-          <Logo src={src} />
+          <Logo width={64} height={64} alt={title} src={src} />
           <FlexContainer>
             <div>
               <Title>{title}</Title>

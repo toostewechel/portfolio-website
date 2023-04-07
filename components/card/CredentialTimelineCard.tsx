@@ -10,6 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "../tooltip/Tooltip.js";
+import Image from "next/image";
 
 const Container = styled(motion.div, {
   margin: 0,
@@ -95,7 +96,7 @@ const CardHeaderContainer = styled("div", {
   mb: "$spacing-07",
 });
 
-const Logo = styled("img", {
+const Logo = styled(Image, {
   size: "$7",
   borderRadius: "8px",
   boxShadow: "$xs",
@@ -279,7 +280,7 @@ function CredentialTimelineCard({
       />
       <AccentHighlight color={accentColor} />
       <CardHeaderContainer>
-        <Logo src={logo} />
+        <Logo width={128} height={128} alt={title} src={logo} />
         <Tag size="sm" color={tagColor} label={tagLabel} />
       </CardHeaderContainer>
       <TitleContainer>
