@@ -61,6 +61,35 @@ const MenuItem = ({ href, children, ariaLabel }) => {
   );
 };
 
+const MenuItemReload = ({ href, children, ariaLabel }) => {
+  const router = useRouter();
+
+  const ActiveLink = styled("a", {
+    display: "flex",
+    width: "100%",
+    padding: "$spacing-03",
+    borderRadius: "4px",
+    background: router.asPath === href ? "$crimson10" : "transparent",
+    boxShadow:
+      router.asPath === href ? "0px 2px 2px rgba(0, 0, 0, 0.1)" : "$none",
+    color: router.asPath === href ? "$crimson3" : "$mauve11",
+
+    "&:hover": {
+      color: router.asPath === href ? "$crimson1" : "$mauve11",
+      background: router.asPath === href ? "$crimson10" : "rgba(0, 0, 0, 0.05)",
+    },
+    "&:focus": {
+      color: router.asPath === href ? "$crimson1" : "$mauve11",
+    },
+  });
+
+  return (
+    <ActiveLink aria-label={ariaLabel} href={href}>
+      {children}
+    </ActiveLink>
+  );
+};
+
 const MenuLabel = styled("p", {
   display: "flex",
   fontFamily: "$default",
@@ -74,9 +103,9 @@ export const NavBar = ({}) => {
       <MenuItem ariaLabel="Dashboard Page" href="/">
         <LayoutDashboard size={24} />
       </MenuItem>
-      <MenuItem ariaLabel="About Me Page" href="/readme">
+      <MenuItemReload ariaLabel="About Me Page" href="/readme">
         <MenuLabel>About</MenuLabel>
-      </MenuItem>
+      </MenuItemReload>
       <MenuItem ariaLabel="My Experience Page" href="/experience">
         <MenuLabel>Experience</MenuLabel>
       </MenuItem>
