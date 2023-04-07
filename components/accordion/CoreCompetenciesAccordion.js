@@ -33,10 +33,6 @@ const StyledItem = styled(AccordionPrimitive.Item, {
     "-5px 5px 10px rgba(221, 221, 221, 0.2), 5px -5px 10px rgba(221, 221, 221, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(221, 221, 221, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(221, 221, 221, 0.5)",
   borderBottom: "1px solid $gray6",
 
-  "&:last-child": {
-    borderBottom: "none",
-  },
-
   variants: {
     type: {
       nested: {
@@ -48,6 +44,11 @@ const StyledItem = styled(AccordionPrimitive.Item, {
 
   "@bp1": {
     mb: "$spacing-04",
+  },
+  "@bp3": {
+    "&:last-child": {
+      borderBottom: "none",
+    },
   },
 });
 
@@ -254,7 +255,7 @@ const QuoteLayout = styled("div", {
   width: "100%",
   justifyContent: "center",
   alignItems: "start",
-  padding: "$none $spacing-07 ",
+  padding: "$spacing-06 $spacing-06 $none $spacing-06",
 
   "@bp3": {
     width: "50%",

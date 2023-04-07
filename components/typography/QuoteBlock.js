@@ -12,16 +12,22 @@ const StyledBlockquote = styled("blockquote", {
     height: "0px",
     lineHeight: "0px",
     display: "inherit",
-    top: "96px",
-    left: "-32px",
+    top: "80px",
+    left: "-42px",
     zIndex: -1,
     color: "$gray3",
     fontFamily: "$header",
     letterSpacing: "$tracking-tighter",
-    fontSize: "264px",
+    fontSize: "232px",
 
-    "@bp2": {
+    "@bp3": {
+      left: "-42px",
+      fontSize: "232px",
+    },
+    "@bp4": {
+      top: "96px",
       left: "-64px",
+      fontSize: "264px",
     },
   },
 
@@ -36,15 +42,19 @@ const StyledBlockquote = styled("blockquote", {
     zIndex: "3",
     marginBottom: "$spacing-04",
 
-    "@bp2": {
+    "@bp4": {
       fontSize: "$2xl",
     },
   },
 
   "& > cite": {
-    fontSize: "$lg",
+    fontSize: "$base",
     fontFamily: "$default",
     color: "$gray9",
+
+    "@bp4": {
+      fontSize: "$lg",
+    },
   },
 });
 
