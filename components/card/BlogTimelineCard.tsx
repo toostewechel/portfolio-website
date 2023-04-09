@@ -15,6 +15,7 @@ const Container = styled(motion.div, {
   width: "100%",
   height: "100%",
   outline: 0,
+  cursor: "pointer",
   boxShadow:
     "-6px 6px 12px rgba(207, 207, 207, 0.2), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
 
@@ -146,6 +147,13 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
     router.push(href);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push(href);
+    }
+  };
+
   const languageIconSrc =
     language && language[1] === "dutch" ? "/icons/gb.svg" : "/icons/nl.svg";
 
@@ -153,6 +161,7 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
 
   return (
     <Container
+      onKeyDown={handleKeyDown}
       onClick={handleClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 1 }}
