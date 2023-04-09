@@ -6,11 +6,13 @@ const Wrapper = styled("div", {
   flexDirection: "column",
   maxWidth: "1900px",
   boxShadow: "$xs",
-  borderRadius: "16px",
+  borderRadius: "0",
   marginTop: "-16px",
   marginBottom: "-16px",
   zIndex: "3",
   border: 0,
+  padding: "$spacing-04",
+  width: "100%",
 
   variants: {
     color: {
@@ -31,6 +33,8 @@ const Wrapper = styled("div", {
     width: "100%",
     boxShadow: "$medium",
     borderRadius: "12px",
+    padding: "$spacing-06",
+    borderRadius: "24px",
   },
 });
 

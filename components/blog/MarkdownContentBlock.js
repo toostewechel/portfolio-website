@@ -9,8 +9,12 @@ const Container = styled("div", {
   maxWidth: "1234px",
   display: "flex",
   flexDirection: "row",
-  pt: "$spacing-10",
-  pb: "$spacing-08",
+  justifyContent: "center",
+
+  "@bp4": {
+    pt: "$spacing-10",
+    pb: "$spacing-08",
+  },
 });
 
 const ContentColumn = styled("div", {

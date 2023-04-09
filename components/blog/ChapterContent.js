@@ -8,6 +8,12 @@ const ChapterContentWrapper = styled("div", {
   alignItems: "flex-start",
   maxWidth: "720px",
   zIndex: "9",
+  pt: "$spacing-10",
+  pr: "$none",
+
+  "@bp2": {
+    pt: "$spacing-13",
+  },
 
   "@bp4": {
     m: 0,
@@ -42,8 +48,7 @@ const ChapterNumber = styled("p", {
   fontSize: "116px",
   letterSpacing: "$tracking-tighter",
   lineHeight: 0,
-  mt: "$spacing-12",
-  mb: "$spacing-09",
+  mb: "$spacing-10",
 
   variants: {
     color: {
@@ -66,7 +71,7 @@ const ChapterNumber = styled("p", {
 });
 
 const ChapterTitle = styled("h2", {
-  fontSize: "$3xl",
+  fontSize: "$2xl",
   fontWeight: "$black",
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
@@ -74,15 +79,14 @@ const ChapterTitle = styled("h2", {
   color: "$mauve12",
   pt: "$spacing-06",
   pb: "$spacing-04",
-  
+
   "@bp4": {
     fontSize: "$3xl",
   },
-  "@bp6": { 
-    fontSize: "$5xl",
+  "@bp6": {
+    fontSize: "$4xl",
   },
 });
-
 
 export default function ChapterContent({
   accentColor,

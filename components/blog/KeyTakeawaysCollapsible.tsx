@@ -88,7 +88,7 @@ const Button = styled("button", {
 
 const StyledCollapsibleContent = styled(CollapsiblePrimitive.Content, {
   padding: "$spacing-08 $spacing-04",
-  backgroundColor: "$gray2",
+  backgroundColor: "white",
   borderTop: "1px solid $gray6",
   borderBottomRightRadius: "6px",
   borderBottomLeftRadius: "6px",
@@ -98,14 +98,22 @@ const TakeawaysList = styled("ul", {
   display: "flex",
   flexDirection: "column",
   maxWidth: "768px",
-  fontSize: "$base",
+  fontSize: "$sm",
   fontWeight: "$regular",
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$gray12",
-  paddingInlineStart: "$spacing-07",
+  color: "$mauve12",
+  paddingInlineStart: "$none",
   listStyle: "none",
+
+  "@bp1": {
+    paddingInlineStart: "$spacing-03",
+    fontSize: "$base",
+  },
+  "@bp4": {
+    paddingInlineStart: "$spacing-07",
+  },
 });
 
 const StyledListItem = styled("li", {
@@ -131,7 +139,19 @@ const IconContainer = styled("div", {
 const TakeawaysListContainer = styled("div", {
   display: "flex",
   width: "100%",
-  justifyContent: "center",
+  justifyContent: "flex-start",
+
+  "@bp5": {
+    justifyContent: "center",
+  },
+});
+
+const Summary = styled("p", {
+  fontSize: "$lg",
+  fontFamily: "$header",
+  fontWeight: "$extra-bold",
+  letterSpacing: "$tracking-tight",
+  color: "$mauve12",
 });
 
 // Exports
