@@ -6,6 +6,7 @@ import OrderedList from "../typography/OrderedList.js";
 import Link from "../typography/Link.js";
 import CodeInline from "../typography/CodeInline.js";
 import CodeBlock from "./CodeBlock.js";
+import Strong from "../typography/Strong.js";
 
 function Heading1(props) {
   return <Heading as="h1" title={props.children} level="1" />;
@@ -42,6 +43,12 @@ function MDXParagraph(props) {
 }
 
 export const p = MDXParagraph;
+
+function StrongText(props) {
+  return <Strong>{props.children}</Strong>;
+}
+
+export const strong = StrongText;
 
 function MDXul(props) {
   return <UnorderedList>{props.children}</UnorderedList>;
