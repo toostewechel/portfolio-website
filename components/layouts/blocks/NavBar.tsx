@@ -110,7 +110,7 @@ export const NavBar = ({}) => {
         <MenuLabel>Experience</MenuLabel>
       </MenuItem>
       <MenuItem ariaLabel="Project Page" href="">
-        <MenuLabel>Projects</MenuLabel>
+        <MenuLabel style={{ opacity: "0.5" }}>Projects</MenuLabel>
       </MenuItem>
       <MenuItem ariaLabel="Blogpost Page" href="/blog">
         <MenuLabel>Blog</MenuLabel>

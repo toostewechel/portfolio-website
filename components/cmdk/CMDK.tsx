@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const StyledCommand = styled(Command, {
   boxSizing: "border-box",
-  background: "$mauve1",
+  background: "$mauve12",
   overflow: "hidden",
   fontFamily: "$default",
   transition: "transform 100ms ease",
@@ -16,7 +16,8 @@ const StyledCommand = styled(Command, {
 const StyledCommandInput = styled(Command.Input, {
   boxSizing: "border-box",
   fontFamily: "$default",
-  fontSize: "$base",
+  fontSize: "$sm",
+  lineHeight: "$none",
   fontWeigth: "$regular",
   letterSpacing: "$tracking-wide",
   width: "100%",
@@ -26,22 +27,22 @@ const StyledCommandInput = styled(Command.Input, {
   marginBottom: "16px",
   marginTop: "4px",
   borderRadius: "8px",
-  backgroundColor: "$mauve3",
-  caretColor: "$mauve11",
-  color: "$mauve12",
+  backgroundColor: "$mauveA3",
+  caretColor: "$mauveA10",
+  color: "$mauveA12",
 
   "&::placeholder": {
-    color: "$mauve9",
+    color: "$mauveA8",
   },
 });
 
 const StyledCommandGroup = styled(Command.Group, {
   userSelect: "none",
-  fontSize: "$sm",
-  fontFamily: "$header",
-  fontWeight: "$bold",
-  letterSpacing: "$tracking-regular",
-  color: "$mauve11",
+  fontSize: "$xs",
+  fontFamily: "$default",
+  fontWeight: "$extra-bold",
+  letterSpacing: "$tracking-default",
+  color: "$mauveA11",
   padding: "0 4px",
   flexDirection: "column",
   alignItems: "start",
@@ -79,17 +80,17 @@ const StyledItem = styled(Command.Item, {
   width: "100%",
 
   '&[aria-selected="true"]': {
-    background: "$mauve3",
-    color: "$mauve12",
+    background: "$mauveA3",
+    color: "$mauveA12",
     // boxShadow: "$toolbar",
   },
   '&[aria-disabled="true"]': {
-    color: "$mauve9",
+    color: "$mauveA9",
     cursor: "not-allowed",
   },
   "&:active": {
     transitionProperty: "background",
-    background: "$mauve4",
+    background: "$mauveA4",
   },
 });
 
@@ -97,7 +98,7 @@ const StyledCommandEmpty = styled(Command.Empty, {
   fontSize: "$base",
   fontWeight: "$regular",
   letterSpacing: "$tracking-wide",
-  color: "$mauve10",
+  color: "$mauveA11",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -117,7 +118,7 @@ const StyledBadge = styled("div", {
   alignItems: "center",
   padding: "4px",
   fontSize: "$sm",
-  color: "$crimson10",
+  color: "$crimson9",
   marginRight: "6px",
   userSelect: "none",
   textTransform: "capitalize",
@@ -151,12 +152,12 @@ const StyledShortcut = styled("kbd", {
   height: "24px",
   padding: "4px",
   borderRadius: "4px",
-  color: "$mauve11",
-  background: "$mauve2",
+  color: "$crimson11",
+  background: "$mauveA5",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  border: "solid 2px $mauve5",
+  border: "solid 2px $mauveA1",
 });
 
 const StyledToolbar = styled("div", {
@@ -166,7 +167,7 @@ const StyledToolbar = styled("div", {
   justifyContent: "end",
   paddingTop: "8px",
   width: "100%",
-  borderTop: "1px solid $mauve4",
+  borderTop: "1px solid $mauveA4",
 });
 
 const StyledShortcutLabel = styled("kbd", {
@@ -200,9 +201,9 @@ let backspace = String.fromCodePoint(0x21b5);
 export default function CMDK() {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const [inputValue, setInputValue] = React.useState("");
-  const [pages, setPages] = React.useState<string[]>(["home"]);
+  const [pages, setPages] = React.useState<string[]>(["dashboard"]);
   const activePage = pages[pages.length - 1];
-  const isHome = activePage === "home";
+  const isHome = activePage === "dashboard";
   const [open, setOpen] = React.useState(false);
 
   // Toggle the menu when ⌘K is pressed
@@ -267,8 +268,8 @@ export default function CMDK() {
         />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          {activePage === "home" && (
-            <Home
+          {activePage === "dashboard" && (
+            <Dashboard
               searchProjects={() => setPages([...pages, "projects"])}
               searchBlog={() => setPages([...pages, "blog"])}
             />
@@ -295,7 +296,7 @@ export default function CMDK() {
   );
 }
 
-function Home({
+function Dashboard({
   searchProjects,
   searchBlog,
 }: {
@@ -307,7 +308,6 @@ function Home({
     <>
       <CommandGroup heading="Projects">
         <Item
-          shortcut="P"
           onSelect={() => {
             searchProjects();
           }}
@@ -318,7 +318,6 @@ function Home({
       </CommandGroup>
       <CommandGroup heading="Blog Posts">
         <Item
-          shortcut="B"
           onSelect={() => {
             searchBlog();
           }}
@@ -353,16 +352,7 @@ function Home({
 
 function Projects() {
   const router = useRouter();
-  return (
-    <>
-      <Item>Project 1</Item>
-      <Item>Project 2</Item>
-      <Item>Project 3</Item>
-      <Item>Project 4</Item>
-      <Item>Project 5</Item>
-      <Item>Project 6</Item>
-    </>
-  );
+  return <></>;
 }
 
 function BlogPosts() {
@@ -372,35 +362,12 @@ function BlogPosts() {
       <CommandGroup heading="2023">
         <Item
           onSelect={() =>
-            router.push(
-              "/blog/building-a-second-brain-as-networked-thinking-tool"
-            )
+            router.push("/blog/living-with-a-linear-mind-in-an-exponential-age")
           }
         >
           <BlogIcon />
-          Deploy your Site on the Decentralised Cloud
+          Living With a Linear Mind in an Exponential Age
         </Item>
-        <Item
-          onSelect={() =>
-            router.push(
-              "/blog/building-a-second-brain-as-networked-thinking-tool"
-            )
-          }
-        >
-          <BlogIcon />A Hitchhikers Guide to Protecting your Privacy Online
-        </Item>
-        <Item
-          onSelect={() =>
-            router.push(
-              "/blog/building-a-second-brain-as-networked-thinking-tool"
-            )
-          }
-        >
-          <BlogIcon />
-          Building a Second Brain as a Networked Thinking Tool
-        </Item>
-      </CommandGroup>
-      <CommandGroup heading="2022">
         <Item
           onSelect={() =>
             router.push(
@@ -411,13 +378,9 @@ function BlogPosts() {
           <BlogIcon />
           The Rise of the Unstoppable Decentralised and Semantic Web
         </Item>
-        <Item
-          onSelect={() =>
-            router.push(
-              "/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
-            )
-          }
-        >
+      </CommandGroup>
+      <CommandGroup heading="2020">
+        <Item onSelect={() => router.push("/blog/design-for-accessibility")}>
           <BlogIcon />
           Design Accessible Experiences for the Healthcare Sector
         </Item>
