@@ -30,12 +30,12 @@ const Button = styled("a", {
   borderRadius: "6px",
 
   "&:hover": {
-    background: "linear-gradient(90deg, $violet11, $blue11)",
+    background: "linear-gradient(0deg, $mauve12, $mauve11)",
     color: "$mauveA12",
   },
 
   "@bp1": {
-    fontSize: "$lg",
+    fontSize: "$base",
     padding: "$spacing-04 $spacing-05",
   },
 });
@@ -96,14 +96,13 @@ const BlogTitle = styled("h1", {
   color: "$mauve12",
   pt: "$spacing-06",
   pb: "$spacing-04",
-  
+
   "@bp4": {
     fontSize: "$3xl",
   },
   "@bp5": {
     fontSize: "$4xl",
   },
- 
 });
 
 export default function LandingContent({

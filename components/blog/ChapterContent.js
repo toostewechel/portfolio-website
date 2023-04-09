@@ -28,17 +28,18 @@ const Button = styled("a", {
   background: "$mauve12",
   color: "$mauveA12",
   fontFamily: "$default",
-  fontSize: "$base",
+  fontSize: "$sm",
   fontWeight: "$medium",
   borderRadius: "6px",
 
   "&:hover": {
-    background: "linear-gradient(90deg, $violet11, $blue11)",
+    background: "linear-gradient(0deg, $mauve12, $mauve11)",
     color: "$mauveA12",
   },
 
   "@bp1": {
-    fontSize: "$lg",
+    fontSize: "$base",
+    padding: "$spacing-04 $spacing-05",
   },
 });
 
