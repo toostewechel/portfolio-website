@@ -41,6 +41,8 @@ import ChapterImage from "../../../components/blog/ChapterImage.js";
 
 //Content
 import Chapter1 from "./01-chapter.mdx";
+import Chapter2 from "./02-chapter.mdx";
+import Chapter3 from "./03-chapter.mdx";
 
 //ShareToLinks Object
 const shareTo = {
@@ -114,14 +116,14 @@ export default function BlogPostPage() {
       </Head>
       <BlogHeader
         targetRef={targetRef}
-        gradient="teal"
+        gradient="gray"
         twitter={shareTo.twitter}
         facebook={shareTo.facebook}
         linkedin={shareTo.linkedin}
       />
       <article>
         <Landing
-          accentColor="bronze"
+          accentColor="gray"
           LandingContent={
             <LandingContent
               href="#blog-content"
@@ -131,7 +133,7 @@ export default function BlogPostPage() {
               datePosted="31 March, 2023"
               blogTitle="The Rise of The Unstoppable, Decentralised,
               and Semantic Web"
-              blogDescription="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised"
+              blogDescription="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms."
             />
           }
           LandingImage={
@@ -140,7 +142,7 @@ export default function BlogPostPage() {
           HoverCardContent={<HoverCard />}
         />
         <BlogContentLayout id="blog-content">
-          <KeyTakeawaysCollapsible accentColor="teal">
+          <KeyTakeawaysCollapsible accentColor="gray">
             <ListItem>
               There is an ever-growing gap between the increased pace of change
               and our society’s ability to keep up
@@ -203,25 +205,47 @@ export default function BlogPostPage() {
               you encounter, work with and put the information to use
             </ListItem>
           </KeyTakeawaysCollapsible>
-          <BlogMarkdownContentLayout>
+          <BlogMarkdownContentLayout id="chapter-01">
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
           <Chapter
-            accentColor="teal"
+            accentColor="gray"
             ChapterContent={
               <ChapterContent
                 href="#chapter-02"
                 chapterNumber="02"
-                accentColor="teal"
-                chapterTitle="The Enemies and Limitations of Our Brain"
-                chapterDescription="How often have you tried to remember something important after a busy day and felt it slip through your mental grasp? Our brains have limited capabilities, and information overload heavily taxes our mental resources."
+                accentColor="gray"
+                chapterTitle="The Value of Decentralisation"
+                chapterDescription="Decentralisation focuses on structural interventions that might realign power relationships between institutions and their end users. Properly designed decentralised systems strive to avoid any chokepoint where a single actor can constrain the use of the system. "
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/living-with-a-linear-mind-in-an-exponential-age/chapter-02.png" />
+              <ChapterImage src="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/chapter-02.png" />
             }
             HoverCardContent={<HoverCard />}
           />
+          <BlogMarkdownContentLayout id="chapter-02">
+            <MarkdownContentBlock chapter="chapter-02" Content={Chapter2} />
+          </BlogMarkdownContentLayout>
+          <Chapter
+            accentColor="gray"
+            ChapterContent={
+              <ChapterContent
+                href="#chapter-03"
+                chapterNumber="03"
+                accentColor="gray"
+                chapterTitle="Standing at Crossroads"
+                chapterDescription="As we slowly move into the third era of the internet, most of the core services you use and love today will likely be almost entirely rearchitected in the coming decades."
+              />
+            }
+            ChapterImage={
+              <ChapterImage src="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/chapter-03.png" />
+            }
+            HoverCardContent={<HoverCard />}
+          />
+          <BlogMarkdownContentLayout id="chapter-03">
+            <MarkdownContentBlock chapter="chapter-03" Content={Chapter3} />
+          </BlogMarkdownContentLayout>
         </BlogContentLayout>
       </article>
     </div>

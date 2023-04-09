@@ -18,6 +18,7 @@ const ChapterContentWrapper = styled("div", {
   "@bp4": {
     m: 0,
     pr: "$spacing-04",
+    pt: "$none",
   },
 });
 
@@ -49,7 +50,7 @@ const ChapterNumber = styled("p", {
   fontSize: "116px",
   letterSpacing: "$tracking-tighter",
   lineHeight: 0,
-  mb: "$spacing-10",
+  mb: "$spacing-09",
 
   variants: {
     color: {
@@ -63,11 +64,16 @@ const ChapterNumber = styled("p", {
           "1px 1px 2px rgba(196, 255, 255, 0.3), -2px -2px 2px rgba(86, 126, 119, 0.5)",
         color: "$teal6",
       },
+      gray: {
+        textShadow: "1px 1px 2px $slat12, -2px -2px 2px rgba(86, 126, 119, 1)",
+        color: "$slate8",
+      },
     },
   },
 
   "@bp4": {
     fontSize: "132px",
+    mb: "$spacing-10",
   },
 });
 

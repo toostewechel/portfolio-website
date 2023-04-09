@@ -22,6 +22,9 @@ const StyledProgressBar = styled(motion.div, {
       teal: {
         background: "linear-gradient(90deg, $teal9, $teal11)",
       },
+      gray: {
+        background: "linear-gradient(90deg, $gray9, $gray11)",
+      },
     },
   },
 });

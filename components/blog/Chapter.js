@@ -22,7 +22,11 @@ const Wrapper = styled("div", {
       },
       teal: {
         background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
-        // border: "2px solid $teal7",
+        border: "2px solid $teal7",
+      },
+      gray: {
+        background: "linear-gradient(164.85deg, $bronze3, $slate7)",
+        border: "2px solid $slate8",
       },
     },
   },

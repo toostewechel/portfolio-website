@@ -131,23 +131,22 @@ export default function BlogPostPage() {
           HoverCardContent={<HoverCard />}
         />
         <BlogContentLayout id="blog-content">
-          <NavBar activePageTitle="Design Accessible Experiences for the Healthcare Sector" />
+          <KeyTakeawaysCollapsible accentColor="crimson">
+            <ListItem>
+              Toegankelijkheid is een complex organisatorisch vraagstuk
+            </ListItem>
+            <ListItem>
+              Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
+              volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
+              iemand die geen beperking heeft
+            </ListItem>
+            <ListItem>
+              Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
+              volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
+              iemand die geen beperking heeft
+            </ListItem>
+          </KeyTakeawaysCollapsible>
           <BlogMarkdownContentLayout>
-            <KeyTakeawaysCollapsible accentColor="crimson">
-              <ListItem>
-                Toegankelijkheid is een complex organisatorisch vraagstuk
-              </ListItem>
-              <ListItem>
-                Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
-                volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
-                iemand die geen beperking heeft
-              </ListItem>
-              <ListItem>
-                Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
-                volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
-                iemand die geen beperking heeft
-              </ListItem>
-            </KeyTakeawaysCollapsible>
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
           <Chapter

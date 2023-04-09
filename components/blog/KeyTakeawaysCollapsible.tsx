@@ -82,6 +82,12 @@ const Button = styled("button", {
           backgroundColor: "$teal11",
         },
       },
+      gray: {
+        backgroundColor: "$gray11",
+        "&:hover": {
+          backgroundColor: "$gray12",
+        },
+      },
     },
   },
 });
@@ -171,7 +177,14 @@ export const ListItem = ({ children }) => {
 };
 
 interface Props {
-  accentColor: "plum" | "blue" | "crimson" | "violet" | "teal" | "cyan";
+  accentColor:
+    | "plum"
+    | "blue"
+    | "crimson"
+    | "violet"
+    | "teal"
+    | "cyan"
+    | "gray";
   children: React.ReactNode;
 }
 

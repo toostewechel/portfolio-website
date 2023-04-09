@@ -49,7 +49,7 @@ function BlogpostsBlock() {
               href="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web"
               image="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/cover.png"
               title="The Rise of the Unstoppable, Decentralized and Semantic Web"
-              description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms"
+              description="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms."
               meta="21 January 2023"
               color="blue"
               category="Tech"
@@ -71,23 +71,6 @@ function BlogpostsBlock() {
               color="crimson"
               category="Design"
               language="dutch"
-            />
-          </TimelineItem>
-          <TimelineItem>
-            <CardHeader
-              color="crimson"
-              hasYear={true}
-              alignment="left"
-              year="2021"
-            />
-            <BlogTimelineCard
-              href="/blog/design-for-accessibility"
-              image="/blog/design-for-accessibility/cover.png"
-              title="Design Accessibile Experiences in the Healthcare Sector"
-              description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker."
-              meta="Article • 15 min read"
-              color="crimson"
-              category="Design"
             />
           </TimelineItem>
         </Timeline>
