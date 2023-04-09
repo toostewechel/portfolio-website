@@ -122,6 +122,7 @@ function ProfileCard(props: ProfileCardProps) {
           ) : null}
           <SocialButtonContainer>
             <IconButton
+              size="small"
               mode="light"
               href="https://twitter.com/boonikad93"
               target="_blank"
@@ -132,6 +133,7 @@ function ProfileCard(props: ProfileCardProps) {
               <Twitter size={20} />
             </IconButton>
             <IconButton
+              size="small"
               mode="light"
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
@@ -142,6 +144,7 @@ function ProfileCard(props: ProfileCardProps) {
               <Linkedin size={20} />
             </IconButton>
             <IconButton
+              size="small"
               mode="light"
               href="https://github.com/toostewechel"
               target="_blank"
@@ -152,6 +155,7 @@ function ProfileCard(props: ProfileCardProps) {
               <Github size={20} />
             </IconButton>
             <IconButton
+              size="small"
               mode="light"
               href="mailto:tomas93@skiff.com"
               target="_blank"
@@ -162,6 +166,7 @@ function ProfileCard(props: ProfileCardProps) {
               <Mail size={20} />
             </IconButton>
             <IconButton
+              size="small"
               mode="light"
               href="tel:0612647976"
               target="_blank"

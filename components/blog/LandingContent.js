@@ -1,6 +1,5 @@
 import { styled } from "../../stitches.config.js";
 import Avatar from "../avatar/Avatar";
-import Heading from "../typography/Heading.js";
 import Paragraph from "../typography/Paragraph.js";
 import { Calendar } from "lucide-react";
 
@@ -11,10 +10,11 @@ const ContentContainer = styled("div", {
   maxWidth: "768px",
   zIndex: "9",
   mb: "$spacing-12",
-  mt: "$spacing-13",
+  mt: "$spacing-10",
 
   "@bp4": {
     m: 0,
+    pr: "$spacing-04",
   },
 });
 
@@ -80,11 +80,30 @@ const DateLabel = styled("p", {
 });
 
 const Spacer = styled("div", {
-  p: "$spacing-06 $none",
+  p: "$spacing-05 $none",
 
   "@bp2": {
     p: "$spacing-08 $none",
   },
+});
+
+const BlogTitle = styled("h1", {
+  fontSize: "$2xl",
+  fontWeight: "$black",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tighter",
+  lineHeight: "$tight",
+  color: "$mauve12",
+  pt: "$spacing-06",
+  pb: "$spacing-04",
+  
+  "@bp4": {
+    fontSize: "$3xl",
+  },
+  "@bp5": {
+    fontSize: "$4xl",
+  },
+ 
 });
 
 export default function LandingContent({
@@ -110,7 +129,7 @@ export default function LandingContent({
         </DecorativeIcon>
         <DateLabel>Posted at {datePosted}</DateLabel>
       </FlexWrapper>
-      <Heading as="h1" level={2} color="dark" title={blogTitle} />
+      <BlogTitle>{blogTitle}</BlogTitle>
       <Paragraph>{blogDescription}</Paragraph>
       <Button href={href}>Start Reading</Button>
     </ContentContainer>

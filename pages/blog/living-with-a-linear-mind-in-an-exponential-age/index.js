@@ -142,9 +142,7 @@ export default function BlogPostPage() {
           HoverCardContent={<HoverCard />}
         />
         <BlogContentLayout id="blog-content">
-          <NavBar activePageTitle="Living With a Linear Mind in an Exponential Age" />
-          <BlogMarkdownContentLayout>
-            <KeyTakeawaysCollapsible accentColor="teal">
+        <KeyTakeawaysCollapsible accentColor="teal">
               <ListItem>
                 There is an ever-growing gap between the increased pace of
                 change and our society’s ability to keep up
@@ -208,6 +206,7 @@ export default function BlogPostPage() {
                 as you encounter, work with and put the information to use
               </ListItem>
             </KeyTakeawaysCollapsible>
+          <BlogMarkdownContentLayout>
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
           <Chapter

@@ -250,6 +250,7 @@ function Footer() {
           <Year>&copy; {CurrentYear}</Year>
           <SocialButtonContainer>
             <IconButton
+              size="small"
               href="https://twitter.com/boonikad93"
               target="_blank"
               title="Open Twitter profile in new tab"
@@ -259,6 +260,7 @@ function Footer() {
               <Twitter size={20} />
             </IconButton>
             <IconButton
+              size="small"
               href="https://www.linkedin.com/in/tom-oostewechel-5392aa13b/"
               target="_blank"
               title="Open LinkedIn profile in new tab"
@@ -268,6 +270,7 @@ function Footer() {
               <Linkedin size={20} />
             </IconButton>
             <IconButton
+              size="small"
               href="https://github.com/toostewechel"
               target="_blank"
               title="Open Github profile in new tab"
@@ -277,6 +280,7 @@ function Footer() {
               <Github size={20} />
             </IconButton>
             <IconButton
+              size="small"
               href="mailto:tomas93@skiff.com"
               target="_blank"
               title="Open email client"
@@ -286,6 +290,7 @@ function Footer() {
               <Mail size={20} />
             </IconButton>
             <IconButton
+              size="small"
               href="tel:0612647976"
               target="_blank"
               title="Open phone app"

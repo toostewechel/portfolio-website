@@ -9,7 +9,7 @@ const Link = styled("a", {
 
 const StyledLogo = styled(Image, {
   height: "auto",
-  width: "100%",
+  width: "196px",
 
   "@bp1": {
     width: "232px",

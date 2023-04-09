@@ -65,6 +65,25 @@ const ChapterNumber = styled("p", {
   },
 });
 
+const ChapterTitle = styled("h2", {
+  fontSize: "$3xl",
+  fontWeight: "$black",
+  fontFamily: "$header",
+  letterSpacing: "$tracking-tighter",
+  lineHeight: "$tight",
+  color: "$mauve12",
+  pt: "$spacing-06",
+  pb: "$spacing-04",
+  
+  "@bp4": {
+    fontSize: "$3xl",
+  },
+  "@bp6": { 
+    fontSize: "$5xl",
+  },
+});
+
+
 export default function ChapterContent({
   accentColor,
   chapterNumber,
@@ -75,7 +94,7 @@ export default function ChapterContent({
   return (
     <ChapterContentWrapper>
       <ChapterNumber color={accentColor}>{chapterNumber}</ChapterNumber>
-      <Heading as="h2" level={2} color="dark" title={chapterTitle} />
+      <ChapterTitle>{chapterTitle}</ChapterTitle>
       <Paragraph>{chapterDescription}</Paragraph>
       <Button href={href}>Read</Button>
     </ChapterContentWrapper>

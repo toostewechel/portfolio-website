@@ -7,22 +7,16 @@ const NavBarContainer = styled("div", {
   maxWidth: "1720px",
   display: "none",
   justifyContent: "space-between",
-  backgroundColor: "$gray2",
-  borderBottom: "1px solid $gray6",
-  borderTop: "1px solid $gray6",
 
   "@bp3": {
     display: "flex",
     padding: "$spacing-02 $spacing-04",
-    borderBottom: "1px solid $gray6",
-    borderTop: "1px solid $gray6",
-    top: 88,
+
   },
 
   "@bp5": {
     padding: "$spacing-02 $spacing-04",
-    borderBottom: "1px solid transparent",
-    borderTop: "1px solid transparent",
+
   },
   "@bp6": {
     top: 0,

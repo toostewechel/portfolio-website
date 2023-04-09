@@ -4,10 +4,15 @@ import { ArrowRight } from "lucide-react";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 
 const Container = styled("div", {
-  maxWidth: "1234px",
+  maxWidth: "1720px",
   ml: "auto",
   mr: "auto",
   padding: "$spacing-04",
+  width: "100%",
+
+  "@bp3": {
+    padding: "$spacing-04 $none",
+  },
 });
 
 const StyledCollapsible = styled(CollapsiblePrimitive.Root, {

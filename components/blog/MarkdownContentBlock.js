@@ -26,7 +26,7 @@ const TableOfContentColumn = styled("div", {
   top: "196px",
   display: "none",
 
-  "@bp3": {
+  "@bp4": {
     display: "flex",
   },
 });
