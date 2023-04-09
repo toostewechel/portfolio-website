@@ -85,7 +85,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/jouw-omgeving-logo.png"
-              href="https://www.jouwomgeving.nl/"
+              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               accentColor="plum"
               tagColor="plum"
               tagLabel="Full time"
@@ -95,7 +95,6 @@ function ProfessionalAchievementsTab() {
               duration="2018 - 2017"
               location="Utrecht"
               hasLink={true}
-              publication="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -174,6 +173,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
+              href="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               accentColor="crimson"
               tagColor="crimson"
               tagLabel="Master"
@@ -183,7 +183,6 @@ function ProfessionalAchievementsTab() {
               duration="2018 - 2015"
               location="Enschede"
               hasLink={true}
-              publication="/publications/Oostewechel_Tom_DPM1499_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>
@@ -216,7 +215,7 @@ function ProfessionalAchievementsTab() {
             />
             <CredentialTimelineCard
               logo="/logo/university-twente-logo.png"
-              href="https://www.utwente.nl/onderwijs/bachelor/opleidingen/industrial-design-engineering/"
+              href="/publications/Oostewechel_Tom_Bachelor_Report.pdf"
               accentColor="crimson"
               tagColor="crimson"
               tagLabel="Bachelor"
@@ -226,7 +225,6 @@ function ProfessionalAchievementsTab() {
               duration="2015 - 2011"
               location="Enschede"
               hasLink={true}
-              publication="/publications/Oostewechel_Tom_Bachelor_Report.pdf"
               tooltipLabel="Download Thesis"
             />
           </TimelineItem>

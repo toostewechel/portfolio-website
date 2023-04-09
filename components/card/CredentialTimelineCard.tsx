@@ -31,9 +31,7 @@ const Container = styled(motion.div, {
   "@bp2": {
     m: "$none $spacing-03 $spacing-03 $spacing-03",
   },
-  "&:focus": {
-    border: "1px solid $blue11",
-  },
+  "&:focus": {},
 });
 
 const BackgroundPattern = styled("img", {
@@ -318,7 +316,7 @@ function CredentialTimelineCard({
           <Provider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <IconLink href={publication}>
+                <IconLink href={publication} target="_blank">
                   <Download />
                 </IconLink>
               </TooltipTrigger>
