@@ -4,13 +4,10 @@ import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const LinkContainer = styled("a", {
+const LinkContainer = styled(motion.a, {
   outline: 0,
 
   "&:focus": {
-    transition: "transform 200ms ease-out, background 200ms ease-out",
-    backgroundColor: "$gray2",
-    border: "1px solid $gray6",
     boxShadow: "$small",
   },
   "&:active": {
@@ -21,7 +18,7 @@ const LinkContainer = styled("a", {
   },
 });
 
-const Panel = styled(motion.div, {
+const Panel = styled("div", {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -101,8 +98,14 @@ interface StyledLinkProps {
 
 function StyledLink({ href, src, title, description }: StyledLinkProps) {
   return (
-    <LinkContainer href={href} target="_blank">
-      <Panel whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <LinkContainer
+      whileHover={{ scale: 1.03 }}
+      whileFocus={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      href={href}
+      target="_blank"
+    >
+      <Panel>
         <FlexWrapper>
           <Logo width={64} height={64} alt={title} src={src} />
           <FlexContainer>

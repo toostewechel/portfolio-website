@@ -102,6 +102,11 @@ const PoweredByBadge = styled("a", {
     backgroundColor: "$olive2",
     border: "1px solid $olive6",
   },
+  "&:focus": {
+    transition: "background 150ms ease-out",
+    backgroundColor: "$olive2",
+    border: "1px solid $olive6",
+  },
 });
 
 const FooterMetaContainer = styled("div", {

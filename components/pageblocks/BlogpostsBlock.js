@@ -67,7 +67,7 @@ function BlogpostsBlock() {
               image="/blog/design-for-accessibility/cover.png"
               title="Design Accessibile Experiences in the Healthcare Sector"
               description="Ontwerpen voor toegankelijkheid maakt de gebruikservaring beter voor iedereen. In dit artikel lees je wat digitale toegankelijkheid betekent voor een gebruiker."
-              meta="Article • 15 min read"
+              meta="11 February 2020"
               color="crimson"
               category="Design"
               language="dutch"
