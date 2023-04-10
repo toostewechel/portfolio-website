@@ -237,6 +237,26 @@ function ProfessionalAchievementsTab() {
               color="blue"
               hasYear={true}
               alignment="left"
+              year="2023"
+            />
+            <CredentialTimelineCard
+              logo="/logo/joy-of-react-logo.png"
+              accentColor="blue"
+              tagColor="blue"
+              tagLabel="Tech"
+              title="The Joy of React"
+              subtitle="Interactive Learning Course"
+              description="The all-new interactive learning experience that teaches you how to build rich, dynamic web apps with React."
+              duration="16 hours"
+              location="Josh W. Comeau Online"
+              hasLink={false}
+            />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
               year="2022"
             />
             <CredentialTimelineCard
