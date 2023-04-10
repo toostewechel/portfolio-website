@@ -80,6 +80,7 @@ const CoverCardContainer = styled(motion.div, {
   height: "100%",
   padding: "$spacing-08 $spacing-04",
   boxShadow: "$small",
+  cursor: "pointer",
 
   "&:hover": {
     boxShadow: "$medium",

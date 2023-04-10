@@ -67,7 +67,7 @@ export const GridHeader = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Version 0.1.1
+          Version 0.1.2
         </Label>
       </LabelContainer>
     </HeaderContainer>
