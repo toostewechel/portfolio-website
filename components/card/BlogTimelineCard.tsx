@@ -11,7 +11,6 @@ const Container = styled(motion.div, {
   overflow: "hidden",
   position: "relative",
   background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
-  willChange: "all",
   width: "100%",
   height: "100%",
   outline: 0,

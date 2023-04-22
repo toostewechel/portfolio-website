@@ -23,7 +23,7 @@ function BlogpostsBlock() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
-              color="plum"
+              color="teal"
               hasYear={true}
               alignment="left"
               year="2023"
@@ -40,7 +40,7 @@ function BlogpostsBlock() {
           </TimelineItem>
           <TimelineItem>
             <CardHeader
-              color="blue"
+              color="bronze"
               hasYear={true}
               alignment="right"
               year="2023"

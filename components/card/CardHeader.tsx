@@ -57,16 +57,22 @@ const Attachment = styled("div", {
   variants: {
     color: {
       blue: {
-        backgroundColor: "$blue3",
+        backgroundColor: "$blue5",
       },
       plum: {
-        backgroundColor: "$plum3",
+        backgroundColor: "$plum5",
       },
       crimson: {
-        backgroundColor: "$crimson3",
+        backgroundColor: "$crimson5",
       },
       gray: {
-        backgroundColor: "$gray3",
+        backgroundColor: "$gray5",
+      },
+      bronze: {
+        backgroundColor: "$bronze5",
+      },
+      teal: {
+        backgroundColor: "$teal5",
       },
     },
   },
@@ -91,6 +97,12 @@ const ColorCircle = styled("div", {
       gray: {
         background: "$gray11",
       },
+      bronze: {
+        background: "$bronze11",
+      },
+      teal: {
+        background: "$teal11",
+      },
     },
   },
 });
@@ -99,7 +111,7 @@ interface CardHeaderProps {
   alignment: "left" | "right";
   hasYear: boolean;
   year: number;
-  color: "blue" | "plum" | "crimson" | "gray";
+  color: "blue" | "plum" | "crimson" | "gray" | "bronze" | "teal";
 }
 
 const CardHeader: React.FC<CardHeaderProps> = ({
