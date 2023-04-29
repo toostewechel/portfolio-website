@@ -52,8 +52,8 @@ const WidgetContainer = styled(motion.div, {
 });
 
 const WidgetImage = styled(Image, {
-  height: "200px",
-  width: "200px",
+  height: "264px",
+  width: "264px",
 
   "@bp1": {
     height: "396px",

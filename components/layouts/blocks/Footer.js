@@ -147,7 +147,7 @@ const SocialButtonContainer = styled("div", {
 
 const BadgeImage = styled(Image, {
   heigth: "24px",
-  width: "70px",
+  width: "auto",
 
   "@bp2": {
     height: "29px",
