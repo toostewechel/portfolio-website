@@ -23,7 +23,7 @@ const WidgetContainer = styled(motion.div, {
   gridArea: "pfi",
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-09",
+  gap: "$spacing-08",
   width: "100%",
   padding: "$spacing-05",
   background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
@@ -111,13 +111,24 @@ const AvatarSocialsLayout = styled("div", {
 
 const LogoContainer = styled("div", {
   display: "flex",
-  width: "100%",
-  height: "64px",
+  flexDirection: "row",
+  gap: "$spacing-04",
+  alignItems: "center",
+});
+
+const CardTitle = styled("h2", {
+  fontFamily: "$header",
+  fontWeight: "$extra-bold",
+  lineHeight: "$compact",
+  letterSpacing: "$tracking-tight",
+  fontSize: "$xl",
+  color: "$mauve12",
 });
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve12",
+  fontWeight: "$regular",
+  color: "$mauve11",
   fontSize: "$base",
 });
 
@@ -195,11 +206,12 @@ export const ProfileInformation = ({
       <ProfileDescriptionLayout>
         <LogoContainer>
           <Image
-            src="/widgets/snapshot-logo.png"
+            src="/logo/snapshots-logo-square.png"
             alt="Snapshot Labs Logo"
-            width={214}
+            width={64}
             height={64}
           />
+          <CardTitle>Read.Me</CardTitle>
         </LogoContainer>
         <Text>
           This site offers a fun and personal showcase. It gives a sneak peek

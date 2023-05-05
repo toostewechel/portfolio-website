@@ -62,7 +62,7 @@ const CurrentDate = styled("h3", {
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve12",
+  color: "$mauve11",
   fontSize: "$base",
 });
 
@@ -186,13 +186,6 @@ export const BookMeeting = () => {
     chat: "https://cal.com/tomoostewechel/quick-chat-session",
     problem: "https://cal.com/tomoostewechel/problem-solving-session",
     review: "https://cal.com/tomoostewechel/design-review",
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      router.push("/experience/#softwarestack");
-    }
   };
 
   return (
