@@ -7,24 +7,34 @@ const Link = styled("a", {
   justifyContent: "center",
 });
 
-const StyledLogo = styled(Image, {
-  height: "auto",
-  width: "196px",
+const LogoContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-04",
+  alignItems: "center",
+});
 
-  "@bp1": {
-    width: "232px",
-  },
+const SiteTitle = styled("h2", {
+  fontFamily: "$header",
+  fontWeight: "$black",
+  lineHeight: "$compact",
+  letterSpacing: "$tracking-tighter",
+  fontSize: "$xl",
+  color: "$mauve12",
 });
 
 export default function SiteLogo() {
   return (
     <Link href="/" aria-label="Navigate Back to Dashboard">
-      <StyledLogo
-        width={492}
-        height={168}
-        src="/logo/snapshots-labs-logo.png"
-        alt="Snapshot Labs Logo"
-      />
+      <LogoContainer>
+        <Image
+          src="/logo/snapshots-logo-square.png"
+          alt="Snapshot Labs Logo"
+          width={64}
+          height={64}
+        />
+        <SiteTitle>Snapshot Labs</SiteTitle>
+      </LogoContainer>
     </Link>
   );
 }
