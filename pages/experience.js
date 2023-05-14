@@ -22,7 +22,7 @@ export default function BlogPost() {
         <title>Snapshot Labs | Experience</title>
       </Head>
       <Header />
-      <PageLayout style={{ marginTop: "70px" }}>
+      <PageLayout style={{ marginTop: "80px" }}>
         <ExperienceBlock />
       </PageLayout>
       <div>

@@ -19,7 +19,7 @@ export default function Projects() {
           name="description"
           content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
         />
-        <title>Snapshot Labs | Blogposts</title>
+        <title>Snapshot Labs | Projects</title>
       </Head>
       <Header />
       <PageLayout style={{ marginTop: "60px" }}>
