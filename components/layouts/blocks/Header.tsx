@@ -54,7 +54,10 @@ const FlexBox = styled("div", {
   alignItems: "center",
   justifyContent: "flex-end",
   gap: "$spacing-02",
-  width: "232px",
+
+  "@bp4": {
+    display: "none",
+  },
 });
 
 interface BlogHeaderProps {

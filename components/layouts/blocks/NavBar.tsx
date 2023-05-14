@@ -13,7 +13,7 @@ const Container = styled("nav", {
   gap: "$spacing-02",
   borderRadius: "6px",
 
-  "@bp3": {
+  "@bp4": {
     display: "flex",
   },
 

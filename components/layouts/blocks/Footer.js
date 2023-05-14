@@ -145,15 +145,7 @@ const SocialButtonContainer = styled("div", {
   gap: "$spacing-01",
 });
 
-const BadgeImage = styled(Image, {
-  heigth: "24px",
-  width: "auto",
-
-  "@bp2": {
-    height: "29px",
-    width: "auto",
-  },
-});
+const BadgeImage = styled(Image, {});
 
 function Footer() {
   return (
@@ -181,7 +173,7 @@ function Footer() {
                       alt="Open Radix UI webpage in new tab"
                     >
                       <BadgeImage
-                        width={97}
+                        width={94}
                         height={29}
                         src="/badges/radix-badge.png"
                         alt="Radix UI Logo"
