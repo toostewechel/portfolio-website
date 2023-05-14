@@ -7,6 +7,7 @@ import { IconButton } from "../../button/IconButton";
 import { NavBar } from "./NavBar";
 import SiteLogo from "../SiteLogo.js";
 import { Menu } from "lucide-react";
+import NavigationMenuMobile from "./NavigationMenu";
 
 const Wrapper = styled("header", {
   padding: "$spacing-04",
@@ -103,7 +104,7 @@ export const Header = () => {
         <SiteLogo />
         <NavBar />
         <FlexBox>
-          <Menu size={24} />
+          <NavigationMenuMobile />
         </FlexBox>
       </HeaderContent>
     </Wrapper>

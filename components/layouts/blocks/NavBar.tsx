@@ -40,17 +40,17 @@ const MenuItem = ({ href, children, ariaLabel }) => {
     width: "100%",
     padding: "$spacing-03",
     borderRadius: "4px",
-    background: router.asPath === href ? "$crimson10" : "transparent",
+    background: router.asPath === href ? "$mauve12" : "transparent",
     boxShadow:
       router.asPath === href ? "0px 2px 2px rgba(0, 0, 0, 0.1)" : "$none",
-    color: router.asPath === href ? "$crimson3" : "$mauve11",
+    color: router.asPath === href ? "$mauve3" : "$mauve11",
 
     "&:hover": {
-      color: router.asPath === href ? "$crimson1" : "$mauve11",
-      background: router.asPath === href ? "$crimson10" : "rgba(0, 0, 0, 0.05)",
+      color: router.asPath === href ? "$mauve1" : "$mauve12",
+      background: router.asPath === href ? "$mauve12" : "rgba(0, 0, 0, 0.05)",
     },
     "&:focus": {
-      color: router.asPath === href ? "$crimson1" : "$mauve11",
+      color: router.asPath === href ? "$mauve1" : "$mauve11",
     },
   });
 
@@ -69,17 +69,17 @@ const MenuItemReload = ({ href, children, ariaLabel }) => {
     width: "100%",
     padding: "$spacing-03",
     borderRadius: "4px",
-    background: router.asPath === href ? "$crimson10" : "transparent",
+    background: router.asPath === href ? "$mauve12" : "transparent",
     boxShadow:
       router.asPath === href ? "0px 2px 2px rgba(0, 0, 0, 0.1)" : "$none",
-    color: router.asPath === href ? "$crimson3" : "$mauve11",
+    color: router.asPath === href ? "$mauve3" : "$mauve11",
 
     "&:hover": {
-      color: router.asPath === href ? "$crimson1" : "$mauve11",
-      background: router.asPath === href ? "$crimson10" : "rgba(0, 0, 0, 0.05)",
+      color: router.asPath === href ? "$mauve1" : "$mauve12",
+      background: router.asPath === href ? "$mauve12" : "rgba(0, 0, 0, 0.05)",
     },
     "&:focus": {
-      color: router.asPath === href ? "$crimson1" : "$mauve11",
+      color: router.asPath === href ? "$mauve1" : "$mauve11",
     },
   });
 

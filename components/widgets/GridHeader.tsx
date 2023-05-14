@@ -12,7 +12,7 @@ const HeaderContainer = styled("div", {
 });
 
 const PageHeader = styled("h1", {
-  fontSize: "$3xl",
+  fontSize: "$2xl",
   fontWeight: "$black",
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
@@ -20,7 +20,11 @@ const PageHeader = styled("h1", {
   color: "$mauve12",
   mb: "0",
 
-  "@bp1": {
+  "@bp3": {
+    fontSize: "$3xl",
+    lineHeight: "$none",
+  },
+  "@bp4": {
     fontSize: "$4xl",
     lineHeight: "$none",
   },
@@ -59,7 +63,7 @@ const Label = styled("a", {
 export const GridHeader = () => {
   return (
     <HeaderContainer>
-      <PageHeader>Take a Peek</PageHeader>
+      <PageHeader>Widgets</PageHeader>
       <LabelContainer>
         <ArrowUpRight size={24} />
         <Label
