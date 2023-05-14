@@ -6,7 +6,6 @@ import { X } from "lucide-react";
 import { IconButton } from "../../button/IconButton";
 import { NavBar } from "./NavBar";
 import SiteLogo from "../SiteLogo.js";
-import { Menu } from "lucide-react";
 import NavigationMenuMobile from "./NavigationMenu";
 
 const Wrapper = styled("header", {
@@ -14,7 +13,7 @@ const Wrapper = styled("header", {
   position: "sticky",
   top: 0,
   zIndex: 9999,
-  p: "$spacing-03",
+  p: "$spacing-02",
 });
 
 const HeaderContent = styled("div", {
@@ -49,7 +48,7 @@ const Controls = styled("div", {
   },
 });
 
-const FlexBox = styled("div", {
+const MobileMenuContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -103,9 +102,9 @@ export const Header = () => {
       <HeaderContent>
         <SiteLogo />
         <NavBar />
-        <FlexBox>
+        <MobileMenuContainer>
           <NavigationMenuMobile />
-        </FlexBox>
+        </MobileMenuContainer>
       </HeaderContent>
     </Wrapper>
   );

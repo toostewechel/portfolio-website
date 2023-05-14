@@ -7,14 +7,14 @@ const ContentContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  maxWidth: "768px",
+  maxWidth: "680px",
   zIndex: "9",
   mb: "$spacing-12",
   mt: "$spacing-10",
 
   "@bp4": {
     m: 0,
-    pr: "$spacing-04",
+    pr: "$spacing-10",
   },
 });
 
@@ -97,11 +97,8 @@ const BlogTitle = styled("h1", {
   pt: "$spacing-06",
   pb: "$spacing-04",
 
-  "@bp4": {
-    fontSize: "$3xl",
-  },
   "@bp5": {
-    fontSize: "$4xl",
+    fontSize: "$3xl",
   },
 });
 

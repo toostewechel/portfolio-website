@@ -13,7 +13,7 @@ const Wrapper = styled("div", {
     flexDirection: "row",
     height: "100vh",
     width: "100vw",
-    marginTop: "-112px",
+    marginTop: "-88px",
   },
 });
 

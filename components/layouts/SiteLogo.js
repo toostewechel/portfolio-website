@@ -19,8 +19,12 @@ const SiteTitle = styled("h2", {
   fontWeight: "$black",
   lineHeight: "$compact",
   letterSpacing: "$tracking-tighter",
-  fontSize: "$xl",
+  fontSize: "$lg",
   color: "$mauve12",
+
+  "@bp3": {
+    fontSize: "$xl",
+  },
 });
 
 export default function SiteLogo() {
