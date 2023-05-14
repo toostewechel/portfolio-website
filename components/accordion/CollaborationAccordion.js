@@ -201,13 +201,6 @@ export default function CollaborationAccordion() {
                 clear and explicit rather than passive and presumptuous!
               </ListItem>
               <ListItem>
-                <Strong>Reluctant to open up:</Strong> I'm private and don't
-                want to burden others with my personal struggles quickly.
-                Generally, I don't easily ask for help, but that doesn't always
-                mean I don't need it. So, if you see me struggling with
-                something, please don't hesitate to give me a nudge!
-              </ListItem>
-              <ListItem>
                 <Strong>Prone to taking on too much work:</Strong> Due to my
                 perfectionism, broad interests, and drive to help and support
                 others, I sometimes, especially in busy times, get overwhelmed

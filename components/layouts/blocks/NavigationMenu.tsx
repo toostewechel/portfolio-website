@@ -47,6 +47,10 @@ const NavigationMenuList = styled(NavigationMenu.List, {
   paddingInlineStart: 0,
   boxShadow: "0 2px 10px $blackA7",
   margin: 0,
+
+  "& > li": {
+    marginBottom: 0,
+  },
 });
 
 const itemStyles = {
@@ -78,7 +82,8 @@ const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
 });
 
 const NavigationMenuContent = styled(NavigationMenu.Content, {
-  "@media only screen and (min-width: 600px)": { width: "240px" },
+  width: "164px",
+  "@media only screen and (min-width: 600px)": { width: "232px" },
   animationDuration: "250ms",
   animationTimingFunction: "ease",
   '&[data-motion="from-start"]': { animationName: enterFromLeft },

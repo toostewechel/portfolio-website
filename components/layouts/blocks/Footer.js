@@ -77,11 +77,13 @@ const Label = styled("p", {
 
 const PoweredByLogoContainer = styled("div", {
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   gap: "none",
 
   "@bp2": {
     gap: "$spacing-02",
+    display: "flex",
+    flexDirection: "row",
   },
 });
 

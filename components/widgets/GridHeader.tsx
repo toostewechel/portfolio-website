@@ -56,8 +56,12 @@ const Label = styled("a", {
   fontFamily: "$mono",
   fontWeight: "$medium",
   lineHeight: "$none",
-  fontSize: "$base",
+  fontSize: "$xs",
   textDecoration: "underline",
+
+  "@bp3": {
+    fontSize: "$base",
+  },
 });
 
 export const GridHeader = () => {

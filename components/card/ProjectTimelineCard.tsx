@@ -36,8 +36,8 @@ const WidgetContainer = styled(motion.div, {
 });
 
 const BackgroundImage = styled(Image, {
-  height: "100%",
   width: "100%",
+  height: "100%",
 });
 
 const ContentContainer = styled("div", {
@@ -126,18 +126,22 @@ export const ProjectTimelineCard = ({
   type,
   title,
 }: ProjectTimelineCard) => {
+  const BackgroundImageContainer = styled("div", {
+    position: "absolute",
+    backgroundImage: `url("${backgroundImage}")`,
+    width: "100%",
+    height: "100%",
+    backgroundSize: "cover",
+  });
+
   return (
     <WidgetContainer
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 1 }}
       backgroundColor={backgroundColor}
     >
-      <BackgroundImage
-        width={592}
-        height={592}
-        src={backgroundImage}
-        alt={title}
-      />
+      <BackgroundImageContainer />
+      <BackgroundImage width={592} height={592} src="" alt={title} />
       <ContentContainer>
         <ComingSoonBadge>Coming Soon!</ComingSoonBadge>
         <Icon>
