@@ -111,9 +111,9 @@ export const {
     },
     letterSpacings: {
       "tracking-tighter": "-0.035em",
-      "tracking-tight": "-0.025em",
+      "tracking-tight": "-0.020em",
       "tracking-normal": "0em",
-      "tracking-wide": "0.0025em",
+      "tracking-wide": "0.0020em",
       "tracking-wider": "0.005em",
     },
     sizes: {

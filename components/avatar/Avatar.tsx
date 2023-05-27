@@ -27,11 +27,12 @@ const StyledImage = styled(Image, {
 const FlexWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
+  gap: "$spacing-01",
 });
 
 const Title = styled("p", {
   fontSize: "$lg",
-  fontWeight: "$extra-bold",
+  fontWeight: "$bold",
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
@@ -47,11 +48,11 @@ const Description = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$gray11",
-  letterSpacing: "$tracking-tight",
+  color: "$mauve11",
+  lineHeight: "$none",
 
   "@bp4": {
-    fontSize: "$sm",
+    fontSize: "$xs",
   },
 });
 

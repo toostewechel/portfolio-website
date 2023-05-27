@@ -26,7 +26,7 @@ const ContentContainer = styled("div", {
   marginBottom: "232px",
   justifyContent: "center",
   alignItems: "center",
-  marginTop: "80px",
+  marginTop: "87px",
 });
 
 export default function WidgetsGrid() {
@@ -46,10 +46,8 @@ export default function WidgetsGrid() {
             <GridHeader />
             <ProfileInformation
               tagLabel="Employed"
-              tagColor="teal"
+              tagColor="olive"
               href="/readme"
-              hasIcon={true}
-              Icon={<CheckSquare size={15} />}
             />
             <Snapshot
               type="Case Study"

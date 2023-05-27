@@ -118,7 +118,7 @@ const LogoContainer = styled("div", {
 
 const CardTitle = styled("h2", {
   fontFamily: "$header",
-  fontWeight: "$extra-bold",
+  fontWeight: "$black",
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
@@ -130,6 +130,7 @@ const Text = styled("p", {
   fontWeight: "$regular",
   color: "$mauve11",
   fontSize: "$base",
+  lineHeight: "$default",
 });
 
 const HireMeBadge = styled("p", {
@@ -148,6 +149,12 @@ const TagContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
+  gap: "$spacing-04",
+});
+
+const Box = styled("div", {
+  display: "flex",
+  flexDirection: "column",
   gap: "$spacing-04",
 });
 
@@ -193,9 +200,9 @@ export const ProfileInformation = ({
 
   return (
     <WidgetContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
@@ -204,20 +211,22 @@ export const ProfileInformation = ({
         alt="Decorative Background Pattern"
       />
       <ProfileDescriptionLayout>
-        <LogoContainer>
-          <Image
-            src="/logo/snapshots-logo-square.png"
-            alt="Snapshot Labs Logo"
-            width={64}
-            height={64}
-          />
-          <CardTitle>Read.Me</CardTitle>
-        </LogoContainer>
-        <Text>
-          This site offers a fun and personal showcase. It gives a sneak peek
-          into my life, interests, and offers a curated selection of my
-          professional and side projects.
-        </Text>
+        <Box>
+          <LogoContainer>
+            <Image
+              src="/logo/snapshots-logo-square.png"
+              alt="Snapshot Labs Logo"
+              width={64}
+              height={64}
+            />
+            <CardTitle>Read.Me</CardTitle>
+          </LogoContainer>
+          <Text>
+            This site offers a fun and personal showcase. Take a sneak peek into
+            my world, featuring a carefully curated selection of my creative and
+            professional achievements.
+          </Text>
+        </Box>
         <TagContainer>
           <Tag
             label={tagLabel}
