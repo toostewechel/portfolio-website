@@ -31,7 +31,6 @@ const CompetencyDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$xs",
-
   color: "$mauve11",
 
   "@bp1": {

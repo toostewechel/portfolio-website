@@ -69,8 +69,8 @@ const PoweredByContainer = styled("div", {
 const Label = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
-  fontSize: "$xs",
-  color: "$mauve9",
+  fontSize: "$xxs",
+  color: "$mauve11",
   width: "148px",
   textTransform: "uppercase",
 });
@@ -81,7 +81,7 @@ const PoweredByLogoContainer = styled("div", {
   gap: "none",
 
   "@bp2": {
-    gap: "$spacing-02",
+    gap: "$spacing-01",
     display: "flex",
     flexDirection: "row",
   },
@@ -115,8 +115,7 @@ const FooterMetaContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
-  mt: "$spacing-06",
-  borderTop: "solid 1px $gray6",
+  mt: "$spacing-04",
   maxWidth: "100%",
 });
 
@@ -134,9 +133,9 @@ const FlexBox = styled("div", {
 
 const Year = styled("p", {
   fontSize: "$sm",
-  fontWeight: "$regular",
+  fontWeight: "$medium",
   fontFamily: "$default",
-  color: "$mauve10",
+  color: "$mauve11",
 });
 
 const CurrentYear = new Date().getFullYear();
