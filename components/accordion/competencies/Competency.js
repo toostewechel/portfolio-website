@@ -9,7 +9,7 @@ const Container = styled("div", {
 });
 
 const Label = styled("p", {
-  mb: "$spacing-02",
+  mb: "$spacing-03",
   fontFamily: "$default",
   fontWeight: "$medium",
   fontSize: "$sm",
@@ -20,8 +20,7 @@ const Label = styled("p", {
 const HelpText = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontStyle: "italic",
-  fontSize: "$sm",
+  fontSize: "$xs",
   lineHeight: "$none",
   color: "$mauve12",
   mt: "$spacing-01",
@@ -32,8 +31,8 @@ const CompetencyDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$xs",
-  fontStyle: "italic",
-  color: "mauve12",
+
+  color: "$mauve11",
 
   "@bp1": {
     fontSize: "$sm",
