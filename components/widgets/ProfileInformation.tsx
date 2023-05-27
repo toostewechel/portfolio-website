@@ -128,7 +128,7 @@ const CardTitle = styled("h2", {
 const Text = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  color: "$mauve11",
+  color: "$mauve10",
   fontSize: "$base",
   lineHeight: "$default",
 });

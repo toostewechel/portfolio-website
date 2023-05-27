@@ -98,7 +98,7 @@ const ImageContainer = styled("div", {
   justifyContent: "center",
   width: "100%",
   height: "100%",
-  borderRadius: "12px",
+  borderRadius: "8px",
   boxShadow: "$xs",
   overflow: "hidden",
 
@@ -147,7 +147,7 @@ const CardTitle = styled("h2", {
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve11",
+  color: "$mauve10",
   fontSize: "$sm",
   lineHeight: "$default",
   marginBottom: "$spacing-03",
@@ -161,7 +161,7 @@ const LabelContainer = styled("div", {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  gap: "$spacing-02",
+  gap: "$spacing-03",
 
   variants: {
     color: {
@@ -188,13 +188,13 @@ const Label = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
   lineHeight: "$none",
-  fontSize: "$sm",
+  fontSize: "$xs",
 });
 
 const DateLabel = styled("p", {
-  alignSelf: "center",
+  alignSelf: "baseline",
   fontSize: "$xs",
-  fontFamily: "$mono",
+  fontFamily: "$default",
   fontWeight: "$medium",
   lineHeight: "$none",
 });
@@ -234,9 +234,9 @@ export const Blogpost = ({
 
   return (
     <WidgetContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
@@ -255,13 +255,13 @@ export const Blogpost = ({
       </ImageLayout>
       <BlogDetailsLayout>
         <LabelContainer color={labelColor}>
-          <Inbox size={17} />
+          <Inbox size={15} />
           <Label>Latest Blog Post</Label>
         </LabelContainer>
         <CardTitle>{title}</CardTitle>
         <Text>{description}</Text>
         <LabelContainer color="gray">
-          <Calendar size={17} />
+          <Calendar size={15} />
           <DateLabel>{datePosted}</DateLabel>
         </LabelContainer>
       </BlogDetailsLayout>

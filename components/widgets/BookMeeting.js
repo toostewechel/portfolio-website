@@ -63,7 +63,7 @@ const CurrentDate = styled("h3", {
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve11",
+  color: "$mauve10",
   fontSize: "$base",
 });
 
@@ -206,7 +206,7 @@ export const BookMeeting = () => {
       </BookMeetingDescription>
       <EventOptionsContainer>
         <TagContainer>
-          <Tag label="Today" fontStyle="uppercase" color="red" />
+          <Tag label="Today" color="red" />
           <Label>Event Options</Label>
         </TagContainer>
         <CurrentDate>{formatCurrentDate()}</CurrentDate>

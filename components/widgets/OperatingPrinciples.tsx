@@ -73,14 +73,16 @@ const Label = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
   lineHeight: "$none",
-  fontSize: "$sm",
-  color: "$teal3",
+  fontSize: "$xs",
+  color: "$mauve5",
 });
 
 const Text = styled("p", {
   fontFamily: "$default",
-  color: "$mauve2",
+  fontWeight: "$regular",
+  color: "$mauve7",
   fontSize: "$base",
+  lineHeight: "$default",
 });
 
 const CardTitle = styled("h2", {
@@ -106,6 +108,12 @@ const TagGroup = styled("div", {
   mt: "$spacing-05",
 });
 
+const Box = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "$spacing-02",
+});
+
 export const OperatingPrinciples = () => {
   const router = useRouter();
 
@@ -122,9 +130,9 @@ export const OperatingPrinciples = () => {
   };
   return (
     <WidgetContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
@@ -136,8 +144,10 @@ export const OperatingPrinciples = () => {
         <ArrowUpRight size={20} />
       </LinkToButtonIcon>
       <ContentContainer>
-        <Label>Collaboration</Label>
-        <CardTitle>Operating Principles</CardTitle>
+        <Box>
+          <Label>Collaboration</Label>
+          <CardTitle>Operating Principles</CardTitle>
+        </Box>
         <Text>
           If we work together, there are a few ways you can utilise my strengths
           and consider my preferences and peculiarities

@@ -48,7 +48,7 @@ const Description = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
   fontFamily: "$default",
-  color: "$mauve11",
+  color: "$mauve10",
   lineHeight: "$none",
 
   "@bp4": {
