@@ -52,15 +52,14 @@ const PercentageRight = styled("p", {
   fontWeight: "$regular",
   fontSize: "$sm",
   lineHeight: "$none",
-  color: "mauve12",
+  color: "$mauve12",
 });
 
 const CharacterTraitDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$xs",
-  fontStyle: "italic",
-  color: "mauve12",
+  color: "$mauve11",
 });
 
 interface CharacterTraitProps {

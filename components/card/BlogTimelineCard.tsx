@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Container = styled(motion.div, {
   m: 0,
-  borderRadius: "12px",
+  borderRadius: "16px",
   overflow: "hidden",
   position: "relative",
   background: "linear-gradient(104.04deg, #FCFDFC 0%, #F8FAF8 100%)",
@@ -53,23 +53,26 @@ const IconSize = styled("div", {
 });
 
 const TitleContainer = styled("div", {
-  borderRadius: "6px",
-  background: "rgba(2,0,16, 0.75)",
+  borderRadius: "8px",
+  background: "rgba(2,0,16, 0.70)",
   padding: "$spacing-05 $spacing-04",
-  boxShadow: "$xs",
+  boxShadow: "$small",
   position: "relative",
   mr: "$spacing-04",
   ml: "$spacing-04",
   mt: "-42px",
+  backdropFilter: "blur(4px)",
+  webkitBackdropFilter: "blur(4px)",
 });
 
 const CardTitle = styled("h3", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
   lineHeight: "$compact",
-  letterSpacing: "$tracking-normal",
+  letterSpacing: "$tracking-tight",
   fontSize: "$lg",
-  color: "$mauve1",
+  mt: "$spacing-02",
+  color: "$mauve2",
   textAlign: "center",
   display: "-webkit-box",
   textOverflow: "ellipsis",
@@ -85,9 +88,8 @@ const DescriptionContainer = styled("div", {
 const CardDescription = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontSize: "$base",
-  lineHeight: "$base",
-  color: "$gray11",
+  fontSize: "$sm",
+  color: "$mauve11",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -106,8 +108,8 @@ const MetaInformation = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
   letterSpacing: "$tracking-tight",
-  fontSize: "$sm",
-  color: "$gray11",
+  fontSize: "$xs",
+  color: "$mauve10",
 });
 
 const FlexBox = styled("div", {

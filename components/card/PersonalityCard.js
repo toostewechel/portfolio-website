@@ -239,7 +239,7 @@ const Paragraph = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$xs",
-  color: "$mauve12",
+  color: "$mauve11",
   maxWidth: "480px",
 
   "@bp1": {

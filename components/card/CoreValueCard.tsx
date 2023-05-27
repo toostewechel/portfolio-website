@@ -108,7 +108,7 @@ const ValueDescription = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$mauve12",
+  color: "$mauve11",
 
   "@bp2": {
     fontSize: "$sm",
