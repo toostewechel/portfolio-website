@@ -9,8 +9,7 @@ const WidgetContainer = styled(motion.div, {
   flexDirection: "column",
   gap: "$spacing-09",
   width: "100%",
-  boxShadow:
-    "-6px 6px 12px rgba(207, 207, 207, 0.3), 6px -6px 12px rgba(207, 207, 207, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9), 6px 6px 15px rgba(207, 207, 207, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(207, 207, 207, 0.5)",
+  boxShadow: "$medium",
   borderRadius: "16px",
   position: "relative",
   overflow: "hidden",
@@ -56,13 +55,15 @@ const Icon = styled("div", {
 
 const TitleContainer = styled("div", {
   position: "absolute",
-  borderRadius: "12px",
+  borderRadius: "8px",
   background: "rgba(2,0,16, 0.70)",
   padding: "$spacing-04",
   boxShadow: "$small",
   bottom: 16,
   right: 16,
   left: 16,
+  backdropFilter: "blur(3px)",
+  webkitBackdropFilter: "blur(3px)",
 });
 
 const ProjectType = styled("h2", {
@@ -71,7 +72,7 @@ const ProjectType = styled("h2", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
-  color: "$mauve2",
+  color: "$mauve3",
   mb: "$spacing-02",
   display: "-webkit-box",
   textOverflow: "ellipsis",
@@ -84,20 +85,20 @@ const MetaInformation = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$sm",
-  color: "$mauve7",
+  color: "$mauve5",
 });
 
 const ComingSoonBadge = styled("div", {
   position: "absolute",
   fontFamily: "$default",
-  fontWeight: "$regular",
+  fontWeight: "$medium",
   fontSize: "$xs",
   color: "$crimson2",
-  backgroundColor: "$crimson11",
+  backgroundColor: "$red11",
   padding: "$spacing-02 $spacing-03",
   borderRadius: "4px",
   boxShadow: "$small",
-  top: 20,
+  top: 22,
   right: 16,
 });
 
@@ -123,9 +124,9 @@ export const Snapshot = ({
 }: SnapshotProps) => {
   return (
     <WidgetContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       backgroundColor={backgroundColor}
     >
       <BackgroundImage
@@ -135,7 +136,7 @@ export const Snapshot = ({
         alt={title}
       />
       <ContentContainer>
-        <ComingSoonBadge>Coming Soon!</ComingSoonBadge>
+        <ComingSoonBadge>Coming Soon</ComingSoonBadge>
         <Icon>
           <Image
             width={24}
