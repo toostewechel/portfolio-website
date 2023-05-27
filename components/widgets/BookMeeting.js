@@ -15,6 +15,7 @@ const WidgetContainer = styled("div", {
   gridArea: "bm",
   display: "flex",
   flexDirection: "column",
+  justifyContent: "space-between",
   gap: "$spacing-07",
   width: "100%",
   padding: "$spacing-05",
@@ -31,7 +32,7 @@ const WidgetContainer = styled("div", {
 const BookMeetingDescription = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "$spacing-04",
+  gap: "$spacing-03",
   width: "100%",
 });
 
@@ -40,13 +41,12 @@ const EventOptionsContainer = styled("div", {
   flexDirection: "column",
   gap: "$spacing-03",
   width: "100%",
-  cursor: "pointer",
 });
 
 const CardTitle = styled("h2", {
   fontFamily: "$header",
   fontWeight: "$extra-bold",
-  lineHeight: "$compact",
+  lineHeight: "$tight",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
   color: "$mauve12",
@@ -95,6 +95,7 @@ const Icon = styled("div", {
 
 const EventOptionContainer = styled(motion.div, {
   display: "flex",
+  cursor: "pointer",
 
   "&:hover": {
     [`${Icon}`]: {
@@ -224,7 +225,7 @@ export const BookMeeting = () => {
                     size="sm"
                     hasIcon={true}
                     Icon={<Clock3 size={13} />}
-                    color="gray"
+                    color="olive"
                     label="15 Min"
                   />
                 </div>
@@ -253,7 +254,7 @@ export const BookMeeting = () => {
                     size="sm"
                     hasIcon={true}
                     Icon={<Clock6 size={13} />}
-                    color="gray"
+                    color="olive"
                     label="30 Min"
                   />
                 </div>
@@ -282,7 +283,7 @@ export const BookMeeting = () => {
                     size="sm"
                     hasIcon={true}
                     Icon={<Clock9 size={13} />}
-                    color="gray"
+                    color="olive"
                     label="45 Min"
                   />
                 </div>

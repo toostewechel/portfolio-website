@@ -85,6 +85,7 @@ const TagLabel = styled("p", {
       uppercase: {
         textTransform: "uppercase",
         lineHeight: "$none",
+        fontSize: "$xs",
         mt: "$spacing-01",
       },
     },
