@@ -22,7 +22,7 @@ const IconLink = styled("a", {
     size: {
       small: {
         padding: "$spacing-03",
-      }
+      },
     },
     mode: {
       light: {
@@ -50,7 +50,7 @@ const IconLink = styled("a", {
     transition: "background 150ms ease-out",
     backgroundColor: "rgba(0,0,0, 0.1)",
     border: "2px solid $blue11",
-    color: "$mauve12",
+    color: "$mauve5",
   },
 });
 
@@ -80,16 +80,16 @@ export const IconButton = ({
       <Tooltip>
         <TooltipTrigger asChild>
           <div>
-          <IconLink
-            size={size}
-            mode={mode}
-            title={title}
-            target={target}
-            href={href}
-            aria-label={ariaLabel}
-          >
-            {children}
-          </IconLink>
+            <IconLink
+              size={size}
+              mode={mode}
+              title={title}
+              target={target}
+              href={href}
+              aria-label={ariaLabel}
+            >
+              {children}
+            </IconLink>
           </div>
         </TooltipTrigger>
         <TooltipContent sideOffset={4}>{tooltipLabel}</TooltipContent>
