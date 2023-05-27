@@ -24,13 +24,13 @@ const Circle = styled("div", {
   width: "10px",
   height: "10px",
   borderRadius: "5px",
-  backgroundColor: "white",
-  border: "1px solid #000",
+  backgroundColor: "$olive3",
+  border: "2px solid $mauve9",
   zIndex: 99,
 });
 
 const Bars = styled("div", {
-  borderTop: "1px solid $olive6",
+  borderTop: "2px solid $olive6",
   display: "flex",
   justifyContent: "center",
   width: "100%",

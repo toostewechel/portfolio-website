@@ -85,8 +85,8 @@ export const {
       lg: "1.125rem",
       base: "1rem",
       sm: "0.95rem",
-      xs: "0.85rem",
-      xxs: "0.75rem",
+      xs: "0.9rem",
+      xxs: "0.80rem",
       bodyLarge: "1.20rem",
     },
     fonts: {

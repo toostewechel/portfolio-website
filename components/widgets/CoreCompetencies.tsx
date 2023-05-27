@@ -127,8 +127,9 @@ const LabelContainer = styled("div", {
 const Label = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
+  letterSpacing: "$tracking-tight",
   lineHeight: "$none",
-  fontSize: "$sm",
+  fontSize: "$xs",
 });
 
 export const CoreCompetencies = ({}) => {
@@ -160,7 +161,7 @@ export const CoreCompetencies = ({}) => {
         <TitleContainer>
           <LabelContainer color="teal">
             <Label>Specialist</Label>
-            <ArrowDown size={17} />
+            <ArrowDown size={15} />
           </LabelContainer>
           <CardTitle>Deep Skills</CardTitle>
         </TitleContainer>
@@ -169,7 +170,7 @@ export const CoreCompetencies = ({}) => {
           <CardTitle>Broad Knowledge</CardTitle>
           <LabelContainer color="blue">
             <Label>Generalist</Label>
-            <ArrowRight size={17} />
+            <ArrowRight size={15} />
           </LabelContainer>
         </TitleContainer>
       </SkillsLayout>
@@ -177,7 +178,7 @@ export const CoreCompetencies = ({}) => {
         <TitleContainer>
           <LabelContainer color="red">
             <Label>Product Roles</Label>
-            <ArrowDown size={17} />
+            <ArrowDown size={15} />
           </LabelContainer>
           <CardTitle>Hats I Can Wear</CardTitle>
         </TitleContainer>
