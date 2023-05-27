@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { styled } from "../../stitches.config.js";
 import ProfileCard from "../card/ProfileCard";
 import MenuItem from "../home/profilecard/MenuItem";
-import { ArrowUpRight } from "lucide-react";
 import ContentBlock from "../layouts/blocks/ContentBlock";
 import CollapsibleContent from "../collapsible/Collapsible";
 
@@ -11,22 +10,6 @@ const ContentContainer = styled("div", {
   gap: "$spacing-09",
   flexDirection: "column",
   alignItems: "flex-start",
-});
-
-const LabelContainer = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: "$spacing-02",
-  pb: "$spacing-03",
-});
-
-const Label = styled("a", {
-  fontFamily: "$mono",
-  fontWeight: "$medium",
-  lineHeight: "$none",
-  fontSize: "$base",
-  textDecoration: "underline",
 });
 
 const ProfileCardContainer = styled("div", {
@@ -94,11 +77,7 @@ function ProfileCardMenu() {
   );
 }
 
-interface LandingContentProps {
-  dateUpdated: string;
-}
-
-export default function LandingContent({ dateUpdated }: LandingContentProps) {
+export default function LandingContent() {
   const [bp1, setBp1] = useState(false);
 
   useEffect(() => {
@@ -130,7 +109,7 @@ export default function LandingContent({ dateUpdated }: LandingContentProps) {
           {bp1 ? (
             <ProfileCardMenu />
           ) : (
-            <CollapsibleContent title="Menu" color="teal">
+            <CollapsibleContent title="Menu" color="gray">
               <ProfileCardMenu />
             </CollapsibleContent>
           )}

@@ -21,8 +21,8 @@ const LabelContainer = styled("div", {
 });
 
 const LabelIcon = styled("div", {
-  width: "13px",
-  height: "13px",
+  width: "12px",
+  height: "12px",
   borderRadius: "2px",
 
   variants: {

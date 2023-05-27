@@ -81,16 +81,15 @@ const TitleContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "start",
-  gap: "$none",
+  gap: "$spacing-01",
   width: "200px",
 });
 
 const Subtitle = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
-  fontStyle: "italic",
   fontFamily: "$default",
-  color: "$mauve12",
+  color: "$mauve10",
 
   "@bp2": {
     fontSize: "$sm",

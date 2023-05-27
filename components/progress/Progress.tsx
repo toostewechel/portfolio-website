@@ -17,10 +17,9 @@ const LabelContainer = styled("div", {
 const HelpText = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
-  fontStyle: "italic",
-  fontSize: "$sm",
+  fontSize: "$xs",
   lineHeight: "$none",
-  color: "$mauve12",
+  color: "$mauve10",
 });
 
 const StyledProgress = styled(Progress.Root, {

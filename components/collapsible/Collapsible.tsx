@@ -50,6 +50,12 @@ const Button = styled("button", {
 
   variants: {
     color: {
+      gray: {
+        backgroundColor: "$gray11",
+        "&:hover": {
+          backgroundColor: "$gray12",
+        },
+      },
       bronze: {
         backgroundColor: "$bronze9",
         "&:hover": {
@@ -98,7 +104,15 @@ const Button = styled("button", {
 
 interface CollapsibleContentProps {
   title: string;
-  color: "bronze" | "plum" | "blue" | "crimson" | "violet" | "teal" | "cyan";
+  color:
+    | "bronze"
+    | "plum"
+    | "blue"
+    | "crimson"
+    | "violet"
+    | "teal"
+    | "cyan"
+    | "gray";
   children: React.ReactNode;
 }
 

@@ -9,31 +9,22 @@ const Link = styled("a", {
   fontFamily: "$default",
   letterSpacing: "$tracking-tight",
   lineHeight: "$none",
-  color: "$mauve11",
+  color: "$mauve10",
 
   "&:hover": {
     transition: "background 150ms ease-out",
-    backgroundColor: "rgba(0,0,0, 0.05)",
+    backgroundColor: "$olive3",
     color: "$mauve12",
   },
   "&:active": {
-    backgroundColor: "$mauve3",
+    backgroundColor: "$olive3",
   },
   "&:focus": {
     transition: "background 150ms ease-out",
-    backgroundColor: "rgba(0,0,0, 0.1)",
+    backgroundColor: "$olive3",
     color: "$mauve12",
   },
 });
-
-const Container = styled("div", {
-  display: "flex",
-  width: "100%",
-  flexDirection: "row",
-  alignItems: "center",
-});
-
-const Label = styled("p", {});
 
 interface MenuItemProps {
   href: string;
