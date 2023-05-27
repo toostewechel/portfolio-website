@@ -54,10 +54,11 @@ const CardTitle = styled("h2", {
 
 const CurrentDate = styled("h3", {
   fontFamily: "$header",
-  fontWeight: "$extra-bold",
+  fontWeight: "$bold",
   lineHeight: "$compact",
   fontSize: "$lg",
   color: "$mauve12",
+  marginBottom: "$spacing-02",
 });
 
 const Text = styled("p", {
@@ -180,6 +181,10 @@ const PoweredByBadge = styled("a", {
   },
 });
 
+const Box = styled("div", {
+  display: "flex",
+});
+
 export const BookMeeting = () => {
   const router = useRouter();
 
@@ -220,15 +225,9 @@ export const BookMeeting = () => {
             <EventOption>
               <ContentContainer>
                 <EventOptionTitle>Quick Chat Session</EventOptionTitle>
-                <div>
-                  <Tag
-                    size="sm"
-                    hasIcon={true}
-                    Icon={<Clock3 size={13} />}
-                    color="olive"
-                    label="15 Min"
-                  />
-                </div>
+                <Box>
+                  <Tag size="sm" hasIcon={true} color="olive" label="15 Min" />
+                </Box>
               </ContentContainer>
               <Icon role="presentation">
                 <ArrowUpRight size={20} />
@@ -249,15 +248,9 @@ export const BookMeeting = () => {
             <EventOption>
               <ContentContainer>
                 <EventOptionTitle>Problem Solving Session</EventOptionTitle>
-                <div>
-                  <Tag
-                    size="sm"
-                    hasIcon={true}
-                    Icon={<Clock6 size={13} />}
-                    color="olive"
-                    label="30 Min"
-                  />
-                </div>
+                <Box>
+                  <Tag size="sm" hasIcon={true} color="olive" label="30 Min" />
+                </Box>
               </ContentContainer>
               <Icon role="presentation">
                 <ArrowUpRight size={20} />
@@ -278,15 +271,9 @@ export const BookMeeting = () => {
             <EventOption>
               <ContentContainer>
                 <EventOptionTitle>Design Review</EventOptionTitle>
-                <div>
-                  <Tag
-                    size="sm"
-                    hasIcon={true}
-                    Icon={<Clock9 size={13} />}
-                    color="olive"
-                    label="45 Min"
-                  />
-                </div>
+                <Box>
+                  <Tag size="sm" hasIcon={true} color="olive" label="45 Min" />
+                </Box>
               </ContentContainer>
               <Icon role="presentation">
                 <ArrowUpRight size={20} />
