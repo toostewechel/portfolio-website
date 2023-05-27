@@ -126,9 +126,9 @@ const CardTitle = styled("h3", {
 const CardSubtitle = styled("p", {
   fontFamily: "$default",
   fontWeight: "$medium",
-  fontSize: "$sm",
+  fontSize: "$xs",
   color: "$mauve9",
-  mt: "-2px",
+  lineHeight: "$none",
 });
 
 const DescriptionContainer = styled("div", {
@@ -140,7 +140,7 @@ const CardDescription = styled("p", {
   fontWeight: "$regular",
   fontSize: "$sm",
   lineHeight: "$base",
-  color: "$gray12",
+  color: "$mauve11",
   display: "-webkit-box",
   textOverflow: "ellipsis",
   overflow: "hidden",
@@ -155,6 +155,7 @@ const CardDescription = styled("p", {
 const FooterContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
+  gap: "$spacing-04",
   p: "$spacing-04 $none",
   marginTop: "auto",
   alignItems: "baseline",
@@ -166,6 +167,13 @@ const FlexWrapper = styled("div", {
   alignItems: "center",
 });
 
+const LabelContainer = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  gap: "$spacing-06",
+  alignItems: "center",
+});
+
 const DecorativeIcon = styled("div", {
   display: "flex",
   alignItems: "center",
@@ -173,7 +181,7 @@ const DecorativeIcon = styled("div", {
   color: "$mauve8",
   width: "17px",
   height: "17px",
-  mr: "$spacing-01",
+  mr: "$spacing-02",
 
   "@bp1": {
     width: "20px",
@@ -189,12 +197,7 @@ const Label = styled("p", {
   fontWeight: "$medium",
   letterSpacing: "$tracking-tight",
   color: "$mauve9",
-  pr: "$spacing-04",
   mt: "1px",
-
-  "@bp1": {
-    pr: "$spacing-05",
-  },
 });
 
 const IconLink = styled("a", {
@@ -279,7 +282,8 @@ function CredentialTimelineCard({
       onKeyDown={handleKeyDown}
       onClick={handleClick}
       whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 1 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       <BackgroundPattern
         src="/patterns/circular-background-pattern.svg"
@@ -298,7 +302,7 @@ function CredentialTimelineCard({
         <CardDescription>{description}</CardDescription>
       </DescriptionContainer>
       <FooterContainer>
-        <FlexWrapper>
+        <LabelContainer>
           <FlexWrapper>
             <DecorativeIcon>
               <CalendarDays />
@@ -311,7 +315,7 @@ function CredentialTimelineCard({
             </DecorativeIcon>
             <Label>{location}</Label>
           </FlexWrapper>
-        </FlexWrapper>
+        </LabelContainer>
         {hasLink && (
           <Provider>
             <Tooltip>

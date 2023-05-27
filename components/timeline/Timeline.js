@@ -88,10 +88,15 @@ const Label = styled("p", {
 const Button = styled("button", {
   padding: "$spacing-04",
   borderRadius: "8px",
-  color: "$gray10",
+  color: "$mauve10",
 
   "&:hover": {
-    color: "$gray12",
+    color: "$mauve12",
+    backgroundColor: "$olive3",
+  },
+  "&:focus": {
+    color: "$mauve12",
+    backgroundColor: "$olive3",
   },
 });
 

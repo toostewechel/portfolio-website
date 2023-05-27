@@ -28,7 +28,7 @@ function ProfessionalAchievementsTab() {
               tagLabel="Full Time"
               title="UX Designer"
               subtitle="Move Agency"
-              description="Responsible for translating (mobile) concepts into appealing designs with great interaction. In the lead from start to finish for the design of varying client projects for interactions, user flows and product design."
+              description="Responsible for transforming ideas into visually appealing designs with excellent user interaction. In the lead from inception to completion for the design of a range of client projects both mobile and web applications."
               duration="2023 - Now"
               location="Zwolle"
               hasLink={false}
@@ -221,7 +221,7 @@ function ProfessionalAchievementsTab() {
               tagLabel="Bachelor"
               title="Bachelor Track"
               subtitle="Industrial Design Engineering"
-              description="Learned to combine technology and creativity to design and improve products through building a solid foundation in a variety of subjects, from mathematics to graphic design and from ergonomics to marketing."
+              description="Learned to combine technology and creativity to design products through building a solid foundation in a variety of subjects, from mathematics to graphic design and from ergonomics to marketing."
               duration="2015 - 2011"
               location="Enschede"
               hasLink={true}
