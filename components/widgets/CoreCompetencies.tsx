@@ -148,9 +148,9 @@ export const CoreCompetencies = ({}) => {
   };
   return (
     <WidgetContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
