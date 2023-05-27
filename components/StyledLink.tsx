@@ -61,6 +61,7 @@ const Title = styled("h3", {
   fontFamily: "$header",
   letterSpacing: "$tracking-tight",
   color: "$mauve12",
+  lineHeight: "$none",
 
   "@bp4": {
     fontSize: "$xl",
@@ -70,14 +71,12 @@ const Title = styled("h3", {
 const Description = styled("p", {
   fontSize: "$xs",
   fontWeight: "$regular",
-  letterSpacing: "$tracking-tight",
   fontFamily: "$default",
-  color: "$mauve10",
-  mt: "-2px",
+  color: "$mauve9",
+  lineHeight: "$none",
 
   "@bp3": {
-    mt: "0",
-    fontSize: "$base",
+    fontSize: "$sm",
   },
 });
 
@@ -87,6 +86,12 @@ const DecorativeIcon = styled("div", {
   justifyContent: "center",
   mr: "$spacing-03",
   color: "$mauve11",
+});
+
+const Box = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "$spacing-02",
 });
 
 interface StyledLinkProps {
@@ -99,9 +104,9 @@ interface StyledLinkProps {
 function StyledLink({ href, src, title, description }: StyledLinkProps) {
   return (
     <LinkContainer
-      whileHover={{ scale: 1.03 }}
-      whileFocus={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       href={href}
       target="_blank"
     >
@@ -109,10 +114,10 @@ function StyledLink({ href, src, title, description }: StyledLinkProps) {
         <FlexWrapper>
           <Logo width={64} height={64} alt={title} src={src} />
           <FlexContainer>
-            <div>
+            <Box>
               <Title>{title}</Title>
               <Description>{description}</Description>
-            </div>
+            </Box>
           </FlexContainer>
         </FlexWrapper>
         <FlexContainer>

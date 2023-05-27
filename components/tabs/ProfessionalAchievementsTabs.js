@@ -29,7 +29,7 @@ function ProfessionalAchievementsTab() {
               title="UX Designer"
               subtitle="Move Agency"
               description="Responsible for transforming ideas into visually appealing designs with excellent user interaction. In the lead from inception to completion for the design of a range of client projects both mobile and web applications."
-              duration="2023 - Now"
+              duration="Now - 2023"
               location="Zwolle"
               hasLink={false}
             />
