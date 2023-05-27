@@ -36,7 +36,7 @@ const WidgetContainer = styled(motion.div, {
   cursor: "pointer",
 
   "&:hover": {
-    boxShadow: "$medium",
+    boxShadow: "$large",
     [`${LinkToButtonIcon}`]: {
       transform: "translateX(6px) translateY(-6px) scale(1.15)",
       color: "$crimson10",
