@@ -90,7 +90,6 @@ function ProfileCardMenu() {
       <MenuItem label="Personality" href="#personality" />
       <MenuItem label="Competencies" href="#competencies" />
       <MenuItem label="Collaboration" href="#collaboration" />
-      <MenuItem label="Interest & Hobbies" href="#interest" />
     </ProfileCardIndex>
   );
 }

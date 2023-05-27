@@ -28,7 +28,7 @@ function ProfessionalAchievementsTab() {
               tagLabel="Full Time"
               title="UX Designer"
               subtitle="Move Agency"
-              description="Responsible for translating (mobile) concepts into appealing designs with great interaction. In the lead from start to finish for the design of varying client projects for interactions, user flows and visual design."
+              description="Responsible for translating (mobile) concepts into appealing designs with great interaction. In the lead from start to finish for the design of varying client projects for interactions, user flows and product design."
               duration="2023 - Now"
               location="Zwolle"
               hasLink={false}

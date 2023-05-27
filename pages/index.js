@@ -56,7 +56,7 @@ export default function WidgetsGrid() {
               title="Build Standardised eHealth Modules for Healthcare"
               language="en"
               backgroundColor="blue"
-              backgroundImage="/widgets/case-study-cover.png"
+              backgroundImage="/widgets/cover-build-standardised-ehealth.png"
             />
             <BookMeeting />
             <Personality />
