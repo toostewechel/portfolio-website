@@ -88,7 +88,7 @@ export default function CharacterTraitsAccordion() {
             percentageLeft="76%"
             percentageRight="24%"
             charactertraitDescription="Primarily Judging: You’re likely decisive, thorough, and highly organised. You value clarity and prefer planning to spontaneity."
-            progressValue={57}
+            progressValue={76}
             gradient="red"
           />
         </AccordionContent>
@@ -107,7 +107,7 @@ export default function CharacterTraitsAccordion() {
             percentageLeft="82%"
             percentageRight="18%"
             charactertraitDescription="Primarily Assertive: You’re likely self-assured, even-tempered, and resistant to stress, refusing to worry too much about things."
-            progressValue={57}
+            progressValue={82}
             gradient="crimson"
           />
         </AccordionContent>
