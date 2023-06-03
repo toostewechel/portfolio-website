@@ -61,13 +61,15 @@ const Icon = styled("div", {
 
 const TitleContainer = styled("div", {
   position: "absolute",
-  borderRadius: "12px",
+  borderRadius: "8px",
   background: "rgba(2,0,16, 0.70)",
   padding: "$spacing-04",
   boxShadow: "$small",
   bottom: 16,
   right: 16,
   left: 16,
+  backdropFilter: "blur(3px)",
+  webkitBackdropFilter: "blur(3px)",
 });
 
 const ProjectType = styled("h2", {
@@ -76,7 +78,7 @@ const ProjectType = styled("h2", {
   lineHeight: "$compact",
   letterSpacing: "$tracking-tight",
   fontSize: "$xl",
-  color: "$mauve2",
+  color: "$mauve3",
   mb: "$spacing-02",
   display: "-webkit-box",
   textOverflow: "ellipsis",
@@ -89,20 +91,20 @@ const MetaInformation = styled("p", {
   fontFamily: "$default",
   fontWeight: "$regular",
   fontSize: "$sm",
-  color: "$mauve7",
+  color: "$mauve5",
 });
 
 const ComingSoonBadge = styled("div", {
   position: "absolute",
   fontFamily: "$default",
-  fontWeight: "$regular",
+  fontWeight: "$medium",
   fontSize: "$xs",
   color: "$crimson2",
-  backgroundColor: "$crimson11",
+  backgroundColor: "$red11",
   padding: "$spacing-02 $spacing-03",
   borderRadius: "4px",
   boxShadow: "$small",
-  top: 20,
+  top: 22,
   right: 16,
 });
 
@@ -137,13 +139,14 @@ export const ProjectTimelineCard = ({
   return (
     <WidgetContainer
       whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 1 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       backgroundColor={backgroundColor}
     >
       <BackgroundImageContainer />
       <BackgroundImage width={592} height={592} src="" alt={title} />
       <ContentContainer>
-        <ComingSoonBadge>Coming Soon!</ComingSoonBadge>
+        <ComingSoonBadge>Coming Soon</ComingSoonBadge>
         <Icon>
           <Image
             width={24}

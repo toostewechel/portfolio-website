@@ -50,7 +50,7 @@ const StyledBlockquote = styled("blockquote", {
   "& > cite": {
     fontSize: "$base",
     fontFamily: "$default",
-    color: "$gray9",
+    color: "$mauve10",
 
     "@bp4": {
       fontSize: "$lg",

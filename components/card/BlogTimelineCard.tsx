@@ -165,7 +165,8 @@ const BlogTimelineCard: FC<BlogTimelineCardProps> = ({
       onKeyDown={handleKeyDown}
       onClick={handleClick}
       whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 1 }}
+      whileFocus={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       <Icon>
         <IconSize>

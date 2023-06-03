@@ -9,6 +9,7 @@ const Wrapper = styled("div", {
   backgroundColor: "$olive3",
   backgroundImage: "url(/patterns/grid-lines.svg)",
   backgroundPositionX: "center",
+  height: "100%",
 });
 
 export default function Projects() {
@@ -22,7 +23,7 @@ export default function Projects() {
         <title>Snapshot Labs | Projects</title>
       </Head>
       <Header />
-      <PageLayout style={{ marginTop: "60px" }}>
+      <PageLayout style={{ marginTop: "84px" }}>
         <ProjectsBlock />
       </PageLayout>
       <div>

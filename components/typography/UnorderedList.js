@@ -6,7 +6,7 @@ const StyledUnorderedList = styled("ul", {
   fontFamily: "$default",
   lineHeight: "$large",
   letterSpacing: "$tracking-normal",
-  color: "$gray12",
+  color: "$mauve11",
   mb: "$spacing-07",
   paddingInlineStart: "$spacing-06",
   listStyle: "disc",

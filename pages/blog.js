@@ -17,7 +17,7 @@ const ContentContainer = styled("div", {
   marginBottom: "232px",
   justifyContent: "center",
   alignItems: "center",
-  marginTop: "72px",
+  marginTop: "80px",
 });
 
 export default function BlogPost() {
@@ -31,7 +31,7 @@ export default function BlogPost() {
         <title>Snapshot Labs | Blog</title>
       </Head>
       <Header />
-      <PageLayout style={{ marginTop: "70px" }}>
+      <PageLayout style={{ marginTop: "84px" }}>
         <BlogpostsBlock />
       </PageLayout>
       <div>

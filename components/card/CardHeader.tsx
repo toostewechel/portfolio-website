@@ -34,8 +34,8 @@ const YearLabel = styled("p", {
 });
 
 const Line = styled("div", {
-  height: "2px",
-  background: "$olive6",
+  height: "4px",
+  background: "$olive5",
   width: "100%",
 });
 

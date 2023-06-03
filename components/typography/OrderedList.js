@@ -6,7 +6,7 @@ const StyledOrderedList = styled("ol", {
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$gray12",
+  color: "$mauve11",
   mb: "$spacing-07",
   paddingInlineStart: "$spacing-06",
 
