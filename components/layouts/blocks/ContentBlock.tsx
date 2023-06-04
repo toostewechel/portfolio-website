@@ -30,25 +30,29 @@ const Heading = styled("h1", {
   fontWeight: "$black",
   fontFamily: "$header",
   letterSpacing: "$tracking-tighter",
+  lineHeight: "$tight",
   color: "$mauve12",
-  mb: "0",
+  mb: "$spacing-03",
 
   "@bp1": {
     fontSize: "$4xl",
-    mb: "$spacing-02",
+    mb: "$spacing-03",
   },
 });
 
 const Description = styled("p", {
-  fontSize: "$lg",
+  fontSize: "$base",
   fontWeight: "$regular",
   fontFamily: "$default",
   lineHeight: "$base",
   letterSpacing: "$tracking-normal",
-  color: "$mauve12",
+  color: "$olive12",
   maxWidth: "720px",
 
   "@bp1": {
+    fontSize: "$lg",
+  },
+  "@bp2": {
     fontSize: "$bodyLarge",
   },
 });
