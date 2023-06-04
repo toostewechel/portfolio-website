@@ -6,6 +6,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charset="utf-8"></meta>
+        <meta
+          name="description"
+          content="Snapshot Labs | Portfolio Website"
+        ></meta>
         <link
           rel="preload"
           href="/fonts/Vollkorn-SemiBold.woff"

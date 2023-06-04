@@ -2,10 +2,10 @@
 import { createRef } from "react";
 import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
+import { useRouter } from "next/router";
 
 //Blog Header & Footer
 import { BlogHeader } from "../../../components/layouts/blocks/Header";
-import Footer from "../../../components/layouts/blocks/Footer.js";
 
 //Blog Landing Components
 import Landing from "../../../components/layouts/Landing.js";
@@ -24,9 +24,6 @@ import {
   BlogContentLayout,
   BlogMarkdownContentLayout,
 } from "../../../components/layouts/Layout.js";
-
-//Blog NavBar
-import NavBar from "../../../components/blog/NavBar.js";
 
 //Blog Content Components
 import {
@@ -106,6 +103,9 @@ function HoverCard() {
 export default function BlogPostPage() {
   //Create Ref for ReadingProgressBar
   const targetRef = createRef();
+  const router = useRouter();
+  const currentUrl = `https://www.snapshotlabs.nl${router.asPath}`;
+
   return (
     <div ref={targetRef}>
       <Head>
