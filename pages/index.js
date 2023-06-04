@@ -1,5 +1,6 @@
 import { styled } from "../stitches.config.js";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { PageLayout, GridWidgetsLayout } from "../components/layouts/Layout.js";
 import { Header } from "../components/layouts/blocks/Header";
 import Footer from "../components/layouts/blocks/Footer.js";
@@ -12,7 +13,6 @@ import { CoreCompetencies } from "../components/widgets/CoreCompetencies.tsx";
 import { Blogpost } from "../components/widgets/Blogpost.tsx";
 import { OperatingPrinciples } from "../components/widgets/OperatingPrinciples.tsx";
 import { Experience } from "../components/widgets/Experience.tsx";
-import { CheckSquare } from "lucide-react";
 
 const Wrapper = styled("div", {
   backgroundColor: "$olive3",
@@ -30,14 +30,22 @@ const ContentContainer = styled("div", {
 });
 
 export default function WidgetsGrid() {
+  const router = useRouter();
+  const currentUrl = `https://www.snapshotlabs.nl${router.asPath}`;
+
   return (
     <Wrapper>
       <Head>
+        <title>Snapshot Labs | Widgets</title>
+        <meta property="og:title" content="Snapshot Labs | Widgets" />
         <meta
-          name="description"
-          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
+          property="og:description"
+          content="This site offers a fun and personal showcase. Take a sneak peek into my world, featuring a carefully curated selection of my creative and professional achievements."
         />
-        <title>Snapshot Labs | Dashboard</title>
+        <meta property="og:image" content="/widgets/cover-home.png" />
+        <meta property="og:image:width" content="760" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:url" content={currentUrl} />
       </Head>
       <Header></Header>
       <PageLayout>
