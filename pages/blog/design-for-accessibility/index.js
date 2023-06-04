@@ -48,7 +48,12 @@ import Chapter4 from "./04-chapter.mdx";
 import Chapter5 from "./05-chapter.mdx";
 
 //ShareToLinks Object
-const shareTo = {};
+const shareTo = {
+  twitter:
+    "https://twitter.com/intent/tweet?url=https://snapshotlabs.nl/blog/design-for-accessibility&text=In%20deze%20blogpost%20lees%20je%20wat%20digitale%20toegankelijkheid%20betekent%20voor%20een%20gebruiker%2C%20waarom%20het%20verstandig%20is%20om%20hier%20gericht%20voor%20te%20ontwerpen%20en%20waar%20je%20kunt%20beginnen%20met%20de%20implementatie.",
+  linkedin:
+    "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsnapshotlabs.nl%2Fblog%2Fdesign-for-accessibility&title=Design%20for%20Accessibility&summary=In%20deze%20blogpost%20lees%20je%20wat%20digitale%20toegankelijkheid%20betekent%20voor%20een%20gebruiker%2C%20waarom%20het%20verstandig%20is%20om%20hier%20gericht%20voor%20te%20ontwerpen%20en%20waar%20je%20kunt%20beginnen%20met%20de%20implementatie.",
+};
 
 //Custom Component
 const PoweredByBadge = styled("a", {
@@ -104,13 +109,30 @@ export default function BlogPostPage() {
   return (
     <div ref={targetRef}>
       <Head>
-        <meta
-          name="description"
-          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
-        />
         <title>Snapshot Labs | Blogpost | Design for Accessibility</title>
+        <meta
+          property="og:title"
+          content="Snapshot Labs | Blogpost | Design for Accessibility"
+        />
+        <meta
+          property="og:description"
+          content="In deze blogpost lees je wat digitale toegankelijkheid betekent voor een gebruiker, waarom het verstandig is om hier gericht voor te ontwerpen en waar je kunt beginnen met de implementatie."
+        />
+        <meta
+          property="og:image"
+          content="/blog/design-for-accessibility/cover.png"
+        />
+        <meta property="og:image:width" content="760" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:url" content={currentUrl} />
       </Head>
-      <BlogHeader targetRef={targetRef} gradient="crimson" />
+
+      <BlogHeader
+        targetRef={targetRef}
+        gradient="crimson"
+        twitter={shareTo.twitter}
+        linkedin={shareTo.linkedin}
+      />
       <article>
         <Landing
           accentColor="crimson"

@@ -2,6 +2,7 @@
 import { createRef } from "react";
 import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
+import { useRouter } from "next/router";
 
 //Blog Header & Footer
 import { BlogHeader } from "../../../components/layouts/blocks/Header";
@@ -47,9 +48,9 @@ import Chapter3 from "./03-chapter.mdx";
 //ShareToLinks Object
 const shareTo = {
   twitter:
-    "https://twitter.com/intent/tweet?url=https://www.snapshotlabs.nl/blog/living-with-a-linear-mind-in-an-exponential-age&text=How%20personal%20knowledge%20management%20can%20help%20you%20thrive%20in%20an%20exponential%20age%20by%20efficiently%20turning%20your%20thoughts%2C%20ideas%20and%20discoveries%20into%20a%20interconnected%20knowledge%20base.",
+    "https://twitter.com/intent/tweet?url=https://snapshotlabs.nl/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web&text=Since%20the%20web%20came%20into%20existence%20in%201989%2C%20it%20has%20steadily%20evolved%20into%20an%20ecosystem%20of%20large%2C%20corporate-controlled%2C%20centralised%20mega-platforms.",
   linkedin:
-    "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsnapshotlabs.nl%2Fblog%2Fliving-with-a-linear-mind-in-an-exponential-age&title=Living%20with%20a%20Linear%20Mind%20in%20an%20Exponential%20Age&summary=How%20personal%20knowledge%20management%20can%20help%20you%20thrive%20in%20an%20exponential%20age%20by%20efficiently%20turning%20your%20thoughts%2C%20ideas%20and%20discoveries%20into%20a%20interconnected%20knowledge%20base.",
+    "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsnapshotlabs.nl%2Fblog%2Fthe-rise-of-the-unstoppable-decentralised-and-semantic-web&title=The%20Rise%20of%20the%20Unstoppable%20Decentralised%20and%20Semantic%20Web&summary=Since%20the%20web%20came%20into%20existence%20in%201989%2C%20it%20has%20steadily%20evolved%20into%20an%20ecosystem%20of%20large%2C%20corporate-controlled%2C%20centralised%20mega-platforms.",
 };
 
 //Custom Component
@@ -102,23 +103,35 @@ function HoverCard() {
 export default function BlogPostPage() {
   //Create Ref for ReadingProgressBar
   const targetRef = createRef();
+  const router = useRouter();
+  const currentUrl = `https://www.snapshotlabs.nl${router.asPath}`;
   return (
     <div ref={targetRef}>
       <Head>
-        <meta
-          name="description"
-          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
-        />
         <title>
           Snapshot Labs | Blogpost | The Rise of The Unstoppable, Decentralised,
           and Semantic Web
         </title>
+        <meta
+          property="og:title"
+          content="Snapshot Labs | Blogpost | The Rise of The Unstoppable, Decentralised, and Semantic Web"
+        />
+        <meta
+          property="og:description"
+          content="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms."
+        />
+        <meta
+          property="og:image"
+          content="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/cover.png"
+        />
+        <meta property="og:image:width" content="760" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:url" content={currentUrl} />
       </Head>
       <BlogHeader
         targetRef={targetRef}
         gradient="gray"
         twitter={shareTo.twitter}
-        facebook={shareTo.facebook}
         linkedin={shareTo.linkedin}
       />
       <article>

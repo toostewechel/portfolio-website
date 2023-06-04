@@ -2,6 +2,7 @@
 import { createRef } from "react";
 import Head from "next/head";
 import { styled } from "../../../stitches.config.js";
+import { useRouter } from "next/router";
 
 //Blog Header & Footer
 import { BlogHeader } from "../../../components/layouts/blocks/Header";
@@ -23,9 +24,6 @@ import {
   BlogContentLayout,
   BlogMarkdownContentLayout,
 } from "../../../components/layouts/Layout.js";
-
-//Blog NavBar
-import NavBar from "../../../components/blog/NavBar.js";
 
 //Blog Content Components
 import {
@@ -104,23 +102,36 @@ function HoverCard() {
 export default function BlogPostPage() {
   //Create Ref for ReadingProgressBar
   const targetRef = createRef();
+  const router = useRouter();
+  const currentUrl = `https://www.snapshotlabs.nl${router.asPath}`;
+
   return (
     <div ref={targetRef}>
       <Head>
-        <meta
-          name="description"
-          content="Author: Tom Oostewechel, Category: Personal Portfolio Site"
-        />
         <title>
           Snapshot Labs | Blogpost | Living With A Linear Mind in an Exponential
           Age
         </title>
+        <meta
+          property="og:title"
+          content="Snapshot Labs | Blogpost | Living With A Linear Mind in an Exponential Age"
+        />
+        <meta
+          property="og:description"
+          content="How personal knowledge management can help you thrive in an exponential age by efficiently turning your thoughts, ideas and discoveries into a interconnected knowledge base."
+        />
+        <meta
+          property="og:image"
+          content="/blog/living-with-a-linear-mind-in-an-exponential-age/cover.png"
+        />
+        <meta property="og:image:width" content="760" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:url" content={currentUrl} />
       </Head>
       <BlogHeader
         targetRef={targetRef}
         gradient="teal"
         twitter={shareTo.twitter}
-        facebook={shareTo.facebook}
         linkedin={shareTo.linkedin}
       />
       <article>

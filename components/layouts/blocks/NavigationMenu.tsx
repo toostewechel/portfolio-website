@@ -172,7 +172,7 @@ const NavigationMenuMobile = () => {
     <NavigationMenuRoot>
       <NavigationMenuList>
         <NavigationMenu.Item>
-          <NavigationMenuTrigger>
+          <NavigationMenuTrigger aria-label="Open Menu">
             <Menu size={24} />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
