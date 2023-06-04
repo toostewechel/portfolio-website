@@ -6,7 +6,7 @@ const withMdx = nextMdx({
   options: { providerImportSource: "@mdx-js/react" /* otherOptions… */ },
 });
 
-module.exports = withMdx({
+export default withMdx({
   // Support MDX files as pages:
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
   output: "standalone",
