@@ -25,9 +25,6 @@ import {
   BlogMarkdownContentLayout,
 } from "../../../components/layouts/Layout.js";
 
-//Blog NavBar
-import NavBar from "../../../components/blog/NavBar.js";
-
 //Blog Content Components
 import {
   KeyTakeawaysCollapsible,
@@ -157,65 +154,75 @@ export default function BlogPostPage() {
         <BlogContentLayout id="blog-content">
           <KeyTakeawaysCollapsible accentColor="gray">
             <ListItem>
-              There is an ever-growing gap between the increased pace of change
-              and our society’s ability to keep up
+              A few big players control the majority of society's assets and
+              extract the most value.
             </ListItem>
             <ListItem>
-              I believe every person needs some sort of personal knowledge
-              capture system that can adapt to our changing needs
+              Mega-platforms have improved usability and enabled billions to
+              create and publish content at near zero cost.{" "}
             </ListItem>
             <ListItem>
-              Knowledge workers spend an average of 40% looking for information
-              and discretionary activities that offer little personal
-              satisfaction
+              The web is increasingly becoming a battleground for protecting
+              freedom of speech and expression.
             </ListItem>
             <ListItem>
-              To have a clear and focused mind, we need to externalise our
-              thoughts out of our heads and into our external memory system
+              Mega-platforms with outsized control over content can be a target
+              for censorship and create filter bubbles.
             </ListItem>
             <ListItem>
-              Writing is, without question, the best facilitator for thinking,
-              reading, learning, understanding and generating ideas we have.
-              Write it down if you want to learn something in the long run.
+              Privacy is fundamental to an open society and requires anonymous
+              transaction systems and strong cryptography. Privacy is a
+              universal human right and a social value.
             </ListItem>
             <ListItem>
-              At its core, PKM is about rethinking your relationship with
-              information and cultivating self-awareness and self-knowledge.
+              Proponents of the decentralized web want a new web that is open,
+              private, secure, reliable, and free from censorship.
             </ListItem>
             <ListItem>
-              Tools and techniques should be embedded into a standardised
-              workflow to prevent falling back into old habits.
+              Centralisation can have benefits, but it comes at a cost of
+              control and freedom.
             </ListItem>
             <ListItem>
-              A good workflow that works for you should provide structure and
-              enables trust and a flow state.
+              Decentralisation aims to realign power relationships between
+              institutions and end-users.
             </ListItem>
             <ListItem>
-              Always decide your preferred workflow before choosing the tools
-              and techniques.
+              Decentralised systems strive to avoid chokepoints where a single
+              actor can constrain the use of the system.
             </ListItem>
             <ListItem>
-              A PKM system can serve many different functions and capabilities,
-              so you should always start with why you need or want to use it in
-              the first place.
+              Properties of decentralised systems include censorship resistance,
+              data portability and interoperability, peer-to-peer networks,
+              trust-less transparency networks, ownership of data, and
+              self-sovereign identity
             </ListItem>
             <ListItem>
-              Your system can look chaotic to others, but it is right for you if
-              it brings you value and delight.
+              Decentralised systems can enhance the everyday experience of the
+              web and create new digital economies.
             </ListItem>
             <ListItem>
-              Organise by balancing structure and flexibility: apply a bottom-up
-              approach, augment your brain by choosing an application that uses
-              a knowledge graph database and reduce cognitive load by
-              standardising how and in which format you capture object types.
+              Challenges to decentralisation include technical complexity,
+              security, monetisation and incentives, and governance and
+              regulatory issues.
             </ListItem>
             <ListItem>
-              Organise your knowledge organically and according to your
-              interests by tagging or assigning keywords to your objects.
+              The Semantic Web aims to create well-defined, interoperable, and
+              machine-readable data.
             </ListItem>
             <ListItem>
-              Being organised is a habit - a repeated set of actions you take as
-              you encounter, work with and put the information to use
+              Applications can use semantic data for search and discovery,
+              automation tasks, aggregation, and data exchange between
+              applications.
+            </ListItem>
+            <ListItem>
+              Agents can represent individuals, organizations, or objects and
+              act independently to generate economic value for their owner.
+            </ListItem>
+            <ListItem>
+              Decentralized and centralized systems will compete in the third
+              era of the internet, depending on factors such as usability,
+              performance, compliance, and attracting developers and
+              entrepreneurs.
             </ListItem>
           </KeyTakeawaysCollapsible>
           <BlogMarkdownContentLayout id="chapter-01">

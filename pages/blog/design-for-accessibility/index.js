@@ -158,14 +158,28 @@ export default function BlogPostPage() {
               Toegankelijkheid is een complex organisatorisch vraagstuk
             </ListItem>
             <ListItem>
-              Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
-              volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
-              iemand die geen beperking heeft
+              Succesvolle implementatie vraagt om bewustwording, betrokkenheid
+              en kennisontwikkeling binnen alle lagen van een organisatie.
             </ListItem>
             <ListItem>
               Iets is pas toegankelijk wanneer mensen zelf een taak kunnen
               volbrengen in een vergelijkbare hoeveelheid tijd en moeite als
               iemand die geen beperking heeft
+            </ListItem>
+            <ListItem>
+              Tijdens de uitvoering van een taak zijn vier cruciale voorwaarden
+              van belang: waarneembaarheid en begrijpbaarheid van informatie,
+              bedienbaarheid en robuustheid.
+            </ListItem>
+            <ListItem>
+              Producten en diensten moeten daarnaast afgestemd worden op
+              verschillende niveau’s van (functionele) vaardigheden van mensen
+              en op de omgevingen waarin deze gebruikt worden.
+            </ListItem>
+            <ListItem>
+              Door te ontwerpen voor toegankelijkheid, sluit je aan op
+              wetgeving, lever je een betere gebruikservaring voor elke
+              gebruiker en creëer je veel (extra) waarde voor je bedrijf.
             </ListItem>
           </KeyTakeawaysCollapsible>
           <BlogMarkdownContentLayout>
