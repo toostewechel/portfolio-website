@@ -174,7 +174,7 @@ export default function CollaborationAccordion() {
                 <Strong>When you need a second pair of eyes:</Strong> I have an
                 excellent eye for detail and consistency and don't mind
                 double-checking things or providing feedback on important
-                documents, presentations or other artefacts.
+                documents, presentations or other (design) artefacts.
               </ListItem>
             </TakeawaysList>
           </TakeawaysListContainer>
@@ -199,6 +199,17 @@ export default function CollaborationAccordion() {
                 challenge my work, but only when they do it without sufficient
                 argumentation or based on assumptions. I prefer people to be
                 clear and explicit rather than passive and presumptuous!
+              </ListItem>
+              <ListItem>
+                <Strong>Headstrong:</Strong> I can be quite stubborn in certain
+                situations. Stubbornness can be a double-edged sword in product
+                design and working in teams. On the one hand it helps me stay
+                focused and persistent in pursuing a vision for a product, even
+                in the face of obstacles or criticism to create unique products.
+                However, excessive stubbornness can lead to tunnel vision and
+                resistance to feedback and expert opinions of others. I'm doing
+                my best to be aware of how my behaviour affects others in the
+                team.
               </ListItem>
               <ListItem>
                 <Strong>Prone to taking on too much work:</Strong> Due to my
