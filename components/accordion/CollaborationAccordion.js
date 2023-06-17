@@ -194,22 +194,20 @@ export default function CollaborationAccordion() {
           <TakeawaysListContainer>
             <TakeawaysList>
               <ListItem>
-                <Strong>Sensitive to criticism:</Strong> as I always try to put
-                great effort into my work, I can become defensive when people
-                challenge my work, but only when they do it without sufficient
-                argumentation or based on assumptions. That is wy I prefer
-                people to be clear and explicit rather than passive and
-                presumptuous!
+                <Strong>Sensitive to criticism:</Strong> I put great effort into
+                my work and may become defensive when challenged, especially if
+                the criticism lacks sufficient argumentation or is based on
+                assumptions. Therefore, I prefer clear and explicit feedback
+                rather than passive and presumptuous remarks.
               </ListItem>
               <ListItem>
-                <Strong>Headstrong:</Strong> I can be quite stubborn in certain
-                situations. Stubbornness can be a double-edged sword in product
-                design and working in teams. On the one hand it helps me stay
-                focused and persistent in pursuing a vision for a product, even
-                in the face of obstacles or criticism to create unique products.
-                However, excessive stubbornness can lead to tunnel vision and
-                resistance to feedback and expert opinions of others. I'm doing
-                my best to be aware of how my behaviour affects others in the
+                <Strong>Stubbornness is a double edged sword:</Strong> My
+                tendency towards stubbornness can be both an asset and a
+                liability in product design and team collaboration. While it
+                helps me maintain focus and persistence in pursuing a product
+                vision, it can also result in tunnel vision and resistance to
+                feedback and expert opinions. I am actively working on being
+                more mindful of how this tendency might impacts others on the
                 team.
               </ListItem>
               <ListItem>

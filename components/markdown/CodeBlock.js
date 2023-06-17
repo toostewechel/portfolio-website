@@ -3,32 +3,21 @@ import Prism from "prismjs";
 import { styled } from "../../stitches.config.js";
 
 const StyledPre = styled("pre", {
-  fontFamily: "$mono",
-  background: "$mauve12 !important",
+  fontFamily: "$mono !important",
+  fontSize: "$xs",
+  overflow: "hidden",
+  "&::-webkit-scrollbar": {
+    height: "4px !important",
+  },
 });
 
 const StyledCode = styled("code", {
-  fontFamily: "$header",
+  fontFamily: "$mono",
 });
 
 const CodeBlockContainer = styled("div", {
-  mb: "$spacing-08",
-});
-
-const CodeLanguage = styled("p", {
-  color: "crimsonA6",
-  fontFamily: "$header",
-  fontsize: "$lg",
-  textAlign: "right",
-  padding: "4px 8px",
-  borderRadius: "4px",
-  background: "$crimsonA9",
-  display: "flex",
-});
-
-const FlexBox = styled("div", {
-  display: "flex",
-  justifyContent: "flex-end",
+  mb: "$spacing-06",
+  borderRadius: "2px",
 });
 
 export default function CodeBlock({ code, language }) {
@@ -38,9 +27,6 @@ export default function CodeBlock({ code, language }) {
   return (
     <CodeBlockContainer className="Code">
       <StyledPre>
-        <FlexBox>
-          <CodeLanguage>{language}</CodeLanguage>
-        </FlexBox>
         <StyledCode className={`language-${language}`}>{code}</StyledCode>
       </StyledPre>
     </CodeBlockContainer>

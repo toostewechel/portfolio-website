@@ -23,6 +23,23 @@ function BlogpostsBlock() {
         <Timeline>
           <TimelineItem id="timeline-item">
             <CardHeader
+              color="blue"
+              hasYear={true}
+              alignment="left"
+              year="2023"
+            />
+            <BlogTimelineCard
+              href="/blog/deploy-your-site-on-the-decentralised-cloud"
+              image="/blog/living-with-a-linear-mind-in-an-exponential-age/cover.png"
+              title="Deploy your Site on the Decentralised Cloud"
+              description="Decentralised cloud computing aims to create a more democratic and secure system, where users have greater control over their data and privacy."
+              meta="17 June 2023"
+              color="blue"
+              category="Tech"
+            />
+          </TimelineItem>
+          <TimelineItem>
+            <CardHeader
               color="teal"
               hasYear={true}
               alignment="left"

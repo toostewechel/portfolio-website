@@ -2,15 +2,18 @@ import { styled } from "../../stitches.config.js";
 
 const StyledCodeInline = styled("code", {
   backgroundColor: "$gray4",
-  padding: "4px 6px",
+  padding: "3px 6px",
   borderRadius: "4px",
   color: "$crimson11",
   fontFamily: "$mono",
   letterSpacing: "tracking-tight",
-  fontSize: "$lg",
+  fontSize: "$base",
 
   "@bp2": {
     fontSize: "$lg",
+  },
+  "@bp3": {
+    fontSize: "$base",
   },
 });
 

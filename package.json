@@ -41,6 +41,7 @@
     "react-feather": "^2.0.10",
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.9.0",
+    "react-syntax-highlighter": "^15.5.0",
     "rehype-prism": "^2.2.0",
     "remark-prism": "^1.3.6",
     "remixicon-react": "^1.0.0"

@@ -11,6 +11,10 @@ export default function Document() {
           content="Snapshot Labs | Portfolio Website"
         ></meta>
         <link
+          rel="stylesheet"
+          href="https://unpkg.com/prism-themes@1.6.0/themes/prism-nord.css"
+        />
+        <link
           rel="preload"
           href="/fonts/Vollkorn-SemiBold.woff"
           as="font"
