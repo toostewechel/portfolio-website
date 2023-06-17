@@ -197,8 +197,9 @@ export default function CollaborationAccordion() {
                 <Strong>Sensitive to criticism:</Strong> as I always try to put
                 great effort into my work, I can become defensive when people
                 challenge my work, but only when they do it without sufficient
-                argumentation or based on assumptions. I prefer people to be
-                clear and explicit rather than passive and presumptuous!
+                argumentation or based on assumptions. That is wy I prefer
+                people to be clear and explicit rather than passive and
+                presumptuous!
               </ListItem>
               <ListItem>
                 <Strong>Headstrong:</Strong> I can be quite stubborn in certain
