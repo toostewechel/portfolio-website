@@ -33,6 +33,15 @@ const IconLink = styled("a", {
           backgroundColor: "rgba(255,255,255, 0.05)",
           color: "$mauve6",
         },
+        "&:active": {
+          color: "$mauve5",
+        },
+        "&:focus": {
+          transition: "background 150ms ease-out",
+          backgroundColor: "rgba(0,0,0, 0.1)",
+          border: "2px solid $blue11",
+          color: "$mauve5 ",
+        },
       },
     },
   },
@@ -44,13 +53,13 @@ const IconLink = styled("a", {
     color: "$mauve12",
   },
   "&:active": {
-    backgroundColor: "$mauve3",
+    color: "$mauve12",
   },
   "&:focus": {
     transition: "background 150ms ease-out",
     backgroundColor: "rgba(0,0,0, 0.1)",
     border: "2px solid $blue11",
-    color: "$mauve5",
+    color: "$mauve12",
   },
 });
 

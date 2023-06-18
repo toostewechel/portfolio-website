@@ -6,12 +6,14 @@ import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 
 const StyledCommand = styled(Command, {
   boxSizing: "border-box",
-  background: "$mauve12",
+  background: "rgba(2,0,16, 0.70)",
   overflow: "hidden",
   fontFamily: "$default",
   transition: "transform 100ms ease",
   padding: "12px",
   borderRadius: "12px",
+  backdropFilter: "blur(6px)",
+  webkitBackdropFilter: "blur(6px)",
 });
 
 const StyledCommandInput = styled(Command.Input, {
@@ -57,6 +59,9 @@ const StyledCommandList = styled(Command.List, {
   overscrollBehaviour: "contain",
   transtition: "150ms ease",
   transitionProperty: "height",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 });
 
 const StyledItem = styled(Command.Item, {
@@ -119,7 +124,7 @@ const StyledBadge = styled("div", {
   alignItems: "center",
   padding: "4px",
   fontSize: "$sm",
-  color: "$crimson9",
+  color: "$crimson1",
   marginRight: "6px",
   userSelect: "none",
   textTransform: "capitalize",
@@ -153,7 +158,7 @@ const StyledShortcut = styled("kbd", {
   height: "24px",
   padding: "4px",
   borderRadius: "4px",
-  color: "$crimson11",
+  color: "$crimson3",
   background: "$mauveA5",
   display: "inline-flex",
   alignItems: "center",

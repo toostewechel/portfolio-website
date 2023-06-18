@@ -30,7 +30,7 @@ function BlogpostsBlock() {
             />
             <BlogTimelineCard
               href="/blog/deploy-your-site-on-the-decentralised-cloud"
-              image="/blog/living-with-a-linear-mind-in-an-exponential-age/cover.png"
+              image="/blog/deploy-your-site-on-the-decentralised-cloud/cover.png"
               title="Deploy your Site on the Decentralised Cloud"
               description="Decentralised cloud computing aims to create a more democratic and secure system, where users have greater control over their data and privacy."
               meta="17 June 2023"

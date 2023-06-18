@@ -18,15 +18,15 @@ const Wrapper = styled("div", {
     color: {
       crimson: {
         background: "linear-gradient(180.04deg, #F9E5F9 0.04%, #FCE5F0 99.96%)",
-        border: "2px solid $crimson6",
       },
       teal: {
         background: "linear-gradient(164.85deg, #E7F9F5 8.07%, #92CEAC 94.06%)",
-        border: "2px solid $teal7",
       },
       gray: {
         background: "linear-gradient(164.85deg, $bronze3, $slate7)",
-        border: "2px solid $slate8",
+      },
+      blue: {
+        background: "linear-gradient(164.85deg, $red3, $indigo5)",
       },
     },
   },

@@ -131,20 +131,20 @@ export default function BlogPostPage() {
       />
       <article>
         <Landing
-          accentColor="gray"
+          accentColor="blue"
           LandingContent={
             <LandingContent
               href="#blog-content"
               avatarImage="/avatar/avatar-tom-oostewechel.png"
               avatarLabel="Tom Oostewechel"
               avatarDescription="Author"
-              datePosted="31 March, 2023"
+              datePosted="20 June, 2023"
               blogTitle="Deploy your Site on the Decentralised Cloud"
-              blogDescription="Since the web came into existence in 1989, it has steadily evolved into an ecosystem of large, corporate-controlled, centralised mega-platforms."
+              blogDescription="Decentralised cloud computing aims to create a more democratic and secure system, where users have greater control over their data and privacy."
             />
           }
           LandingImage={
-            <LandingImage src="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/landing.png" />
+            <LandingImage src="/blog/deploy-your-site-on-the-decentralised-cloud/landing.png" />
           }
           HoverCardContent={<HoverCard />}
         />
@@ -226,18 +226,18 @@ export default function BlogPostPage() {
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
           <Chapter
-            accentColor="gray"
+            accentColor="blue"
             ChapterContent={
               <ChapterContent
                 href="#chapter-02"
                 chapterNumber="02"
                 accentColor="gray"
-                chapterTitle="The Value of Decentralisation"
+                chapterTitle="Getting Started "
                 chapterDescription="Decentralisation focuses on structural interventions that might realign power relationships between institutions and their end users. Properly designed decentralised systems strive to avoid any chokepoint where a single actor can constrain the use of the system. "
               />
             }
             ChapterImage={
-              <ChapterImage src="/blog/the-rise-of-the-unstoppable-decentralised-and-semantic-web/chapter-02.png" />
+              <ChapterImage src="/blog/deploy-your-site-on-the-decentralised-cloud/chapter-02.png" />
             }
             HoverCardContent={<HoverCard />}
           />

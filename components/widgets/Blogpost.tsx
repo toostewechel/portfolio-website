@@ -111,7 +111,10 @@ const ImageContainer = styled("div", {
       crimson: {
         background:
           "linear-gradient(166.69deg, rgba(249, 229, 249, 0.75) 3.84%, #FCE5F0 90.43%)",
-        border: "1px solid $crimson6",
+      },
+      blue: {
+        background: "linear-gradient(164.85deg, $red3, $indigo5)",
+        border: "1px solid $indigo5",
       },
     },
   },

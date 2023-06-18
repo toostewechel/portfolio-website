@@ -10,6 +10,7 @@ import {
   mauveA,
   mauveDarkA,
   orange,
+  indigo,
   plum,
   teal,
   violet,
@@ -57,6 +58,7 @@ export const {
       ...bronze,
       ...olive,
       ...red,
+      ...indigo,
     },
     space: {
       none: "0px",

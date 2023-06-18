@@ -68,13 +68,13 @@ export default function WidgetsGrid() {
             <Personality />
             <CoreCompetencies />
             <Blogpost
-              href="/blog/living-with-a-linear-mind-in-an-exponential-age/"
-              color="teal"
-              imageSrc="/widgets/cover-image-living-with-a-linear-mind-in-an-exponential-age.png"
-              title="Living With a Linear Mind in an Exponential Age"
-              description="How personal knowledge management can help you thrive in an exponential age."
-              datePosted="31 March 2023"
-              labelColor="teal"
+              href="/blog/deploy-your-site-on-the-decentralised-cloud/"
+              color="blue"
+              imageSrc="/widgets/cover-image-deploy-your-site-on-the-decentralised-cloud.png"
+              title="Deploy your Site on the Decentralised Cloud"
+              description="A step-by-step walkthrough of how to deploy your Next.JS site to the decentralised cloud."
+              datePosted="20 June 2023"
+              labelColor="blue"
             />
             <OperatingPrinciples />
             <Experience />
