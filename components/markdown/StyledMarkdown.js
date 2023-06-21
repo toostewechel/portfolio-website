@@ -97,7 +97,11 @@ function MDXCodeInline(props) {
 export const code = MDXCodeInline;
 
 function MDXCodeBlock(props) {
-  return <CodeBlock code={props.children} language="JavaScript" />;
+  // MDX seems to wrap a code block inside a span or something, but we really
+  // only want to have the children (string)
+  const code = props.children.props.children;
+
+  return <CodeBlock code={code} language={props.className} />;
 }
 
 export const pre = MDXCodeBlock;

@@ -63,7 +63,7 @@ You can use the [Akash Console](https://console.akash.network/new-deployment) to
 - Connect your digital wallet to the web application using the _"connect wallet"_ button and follow the steps to create a certificate. You need a valid on-chain certificate to deploy on the Akash Network.
 - Create a new deployment by clicking on the "add" button. You can choose to use a template or upload your own SDL file. The SDL file is a simple `manifest.yaml` file which is a human-readable format in which you specify the details of your deployment such as the name, version and compute resources you need. You can think of it like a recipe that lists all the ingredients and instructions needed to make a dish. If you use a SDL file you should specify your docker image, your domain name and select the amount of compute resources you need to run your site.
 
-```shell
+```yaml
  version: "2.0"
 
  services:
