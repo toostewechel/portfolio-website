@@ -60,11 +60,16 @@ docker push <docker-username>/<docker-repository-name>:<version-tag>
 
 You can use the [Akash Console](https://console.akash.network/new-deployment) to easily deploy your site onto the Akash Network in four simple steps. After your deployment is done, the Akash Console provides a dashboard to view the status and details of your deployment. You can perform administrative tasks including closing the deployment, updating the deployment, redeploying, and increasing the funding available to the deployment.
 
-- Connect your digital wallet to the web application using the _"connect wallet"_ button and follow the steps to create a certificate. You need a valid on-chain certificate to deploy on the Akash Network.
-- Create a new deployment by clicking on the "add" button. You can choose to use a template or upload your own SDL file. The SDL file is a simple `manifest.yaml` file which is a human-readable format in which you specify the details of your deployment such as the name, version and compute resources you need. You can think of it like a recipe that lists all the ingredients and instructions needed to make a dish. If you use a SDL file you should specify your docker image, your domain name and select the amount of compute resources you need to run your site.
+#### Step 1 - Connect your Wallet
+
+Connect your digital wallet to the web application using the _"connect wallet"_ button and follow the steps to create a certificate. You need a valid on-chain certificate to deploy on the Akash Network.
+
+#### Step 2 - Create a New Deployment
+
+Create a new deployment by clicking on the "add" button. You can choose to use a template or upload your own SDL file. The SDL file is a simple `manifest.yaml` file which is a human-readable format in which you specify the details of your deployment such as the name, version and compute resources you need. You can think of it like a recipe that lists all the ingredients and instructions needed to make a dish. If you use a SDL file you should specify your docker image, your domain name and select the amount of compute resources you need to run your site.
 
 ```yaml
- version: "2.0"
+  version: "2.0"
 
  services:
    site:
@@ -101,7 +106,12 @@ You can use the [Akash Console](https://console.akash.network/new-deployment) to
        count: 1
 ```
 
-- Create your deployment and wait for bids to come in. Once you have specified your deployment settings, cloud providers - _ranging from individuals to data centers_ - can bid to host your deployment. Within seconds, you will receive a list of bids from different providers. You can browse through the list and select the provider that best fits your needs, whether it's an enterprise-tier data center or a community-level contributor. Once you've made your choice, the provider will generate a URI endpoint where your site will be visible. After about 30 seconds, your deployment should be ready to go.
-- To complete the process, you need to map the generated URI endpoint to your domain name. This can be achieved by adding a CNAME record in your DNS settings. A CNAME record creates an alias or nickname for a domain, acting as a pointer that redirects traffic from one domain to another.
+#### Step 3 - Choose Cloud Provider
+
+Create your deployment and wait for bids to come in. Once you have specified your deployment settings, cloud providers - _ranging from individuals to data centers_ - can bid to host your deployment. Within seconds, you will receive a list of bids from different providers. You can browse through the list and select the provider that best fits your needs, whether it's an enterprise-tier data center or a community-level contributor. Once you've made your choice, the provider will generate a URI endpoint where your site will be visible. After about 30 seconds, your deployment should be ready to go.
+
+#### Step 4 - Add CNAME Record
+
+To complete the process, you need to map the generated URI endpoint to your domain name. This can be achieved by adding a CNAME record in your DNS settings. A CNAME record creates an alias or nickname for a domain, acting as a pointer that redirects traffic from one domain to another.
 
 </TableOfContentSection>

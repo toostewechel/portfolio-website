@@ -1,55 +1,50 @@
 import React, { useEffect } from "react";
-import { Highlight, themes } from "prism-react-renderer"
+import { Highlight, themes } from "prism-react-renderer";
 
 import { styled } from "../../stitches.config.js";
 
-const StyledPre = styled("pre", {
-  fontFamily: "$mono !important",
-  fontSize: "$xs",
-  overflow: "hidden",
+const CodeBlockContainer = styled("div", {
+  overflowY: "visible",
+  overflowX: "auto",
+  width: "100%",
+  maxWidth: "360px",
+  mb: "$spacing-06",
 
-  "&::-webkit-scrollbar": {
-    height: "4px !important",
+  "@bp1": {
+    maxWidth: "460px",
+  },
+  "@bp2": {
+    maxWidth: "640px",
+  },
+  "@bp3": {
+    maxWidth: "768px",
   },
 });
 
-const StyledCode = styled("code", {
-  fontFamily: "$mono",
-});
-
-const CodeBlockContainer = styled('div', {
-  overflowY: 'visible',
-  overflowX: 'auto',
-
-  width: '100%',
-})
-
 const CodeBlockContent = styled("div", {
   fontFamily: "$mono",
-  fontSize: "$xs",
-
+  fontSize: "$sm",
   borderRadius: "2px",
-
-  minWidth: 'fit-content',
-  width: '100%',
+  minWidth: "fit-content",
+  width: "100%",
 });
 
 const getLanguage = (className) => {
   if (className) {
-    const index = className.lastIndexOf('-');
+    const index = className.lastIndexOf("-");
 
     return className.slice(index + 1, className.lenght);
   }
 
-  return 'javascript';
-}
+  return "javascript";
+};
 
 export default function CodeBlock({ code, language }) {
   return (
     <CodeBlockContainer>
       <CodeBlockContent>
         <Highlight
-          theme={themes.nightOwl}
+          theme={themes.duotoneLight}
           code={code.trim()}
           language={getLanguage(language)}
         >
@@ -57,7 +52,7 @@ export default function CodeBlock({ code, language }) {
             <pre style={style}>
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line })}>
-                  <span>{i + 1}</span>
+                  <span style={{ paddingLeft: "8px" }}>{i + 1}</span>
                   {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token })} />
                   ))}
