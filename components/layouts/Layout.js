@@ -90,7 +90,7 @@ export const BlogContentLayout = styled("div", {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "$gray2",
+  backgroundColor: "$olive2",
 });
 
 export const BlogMarkdownContentLayout = styled("div", {
@@ -106,6 +106,7 @@ export const BlogMarkdownContentLayout = styled("div", {
   "@bp3": {
     pt: "$spacing-13",
     pb: "$spacing-13",
+    mt: "$spacing-08",
   },
 });
 

@@ -6,7 +6,7 @@ import { Twitter, Github, Linkedin, Smartphone, Mail } from "lucide-react";
 
 const StyledCommand = styled(Command, {
   boxSizing: "border-box",
-  background: "rgba(2,0,16, 0.70)",
+  background: "rgba(2,0,10, 0.80)",
   overflow: "hidden",
   fontFamily: "$default",
   transition: "transform 100ms ease",
@@ -78,7 +78,7 @@ const StyledItem = styled(Command.Item, {
   gap: "8px",
   padding: "12px 12px",
   marginTop: "4px",
-  color: "$mauve10",
+  color: "$mauve8",
   userSelect: "none",
   willChange: "background, color",
   transition: "all 150ms ease",
@@ -375,6 +375,14 @@ function BlogPosts() {
   return (
     <>
       <CommandGroup heading="2023">
+        <Item
+          onSelect={() =>
+            router.push("/blog/deploy-your-site-on-the-decentralised-cloud")
+          }
+        >
+          <BlogIcon />
+          Deploy your Site on the Decentralised Cloud
+        </Item>
         <Item
           onSelect={() =>
             router.push("/blog/living-with-a-linear-mind-in-an-exponential-age")

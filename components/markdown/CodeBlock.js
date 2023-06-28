@@ -9,6 +9,8 @@ const CodeBlockContainer = styled("div", {
   width: "100%",
   maxWidth: "360px",
   mb: "$spacing-06",
+  backgroundColor: "rgb(246, 248, 250)",
+  padding: "$spacing-04 $spacing-02",
 
   "@bp1": {
     maxWidth: "460px",
@@ -44,7 +46,7 @@ export default function CodeBlock({ code, language }) {
     <CodeBlockContainer>
       <CodeBlockContent>
         <Highlight
-          theme={themes.duotoneLight}
+          theme={themes.github}
           code={code.trim()}
           language={getLanguage(language)}
         >
@@ -52,7 +54,9 @@ export default function CodeBlock({ code, language }) {
             <pre style={style}>
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line })}>
-                  <span style={{ paddingLeft: "8px" }}>{i + 1}</span>
+                  <span style={{ paddingLeft: "8px", marginRight: "8px" }}>
+                    {i + 1}
+                  </span>
                   {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token })} />
                   ))}
