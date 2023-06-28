@@ -154,69 +154,6 @@ export default function BlogPostPage() {
           HoverCardContent={<HoverCard />}
         />
         <BlogContentLayout id="blog-content">
-          <KeyTakeawaysCollapsible accentColor="teal">
-            <ListItem>
-              There is an ever-growing gap between the increased pace of change
-              and our society’s ability to keep up
-            </ListItem>
-            <ListItem>
-              I believe every person needs some sort of personal knowledge
-              capture system that can adapt to our changing needs
-            </ListItem>
-            <ListItem>
-              Knowledge workers spend an average of 40% looking for information
-              and discretionary activities that offer little personal
-              satisfaction
-            </ListItem>
-            <ListItem>
-              To have a clear and focused mind, we need to externalise our
-              thoughts out of our heads and into our external memory system
-            </ListItem>
-            <ListItem>
-              Writing is, without question, the best facilitator for thinking,
-              reading, learning, understanding and generating ideas we have.
-              Write it down if you want to learn something in the long run.
-            </ListItem>
-            <ListItem>
-              At its core, PKM is about rethinking your relationship with
-              information and cultivating self-awareness and self-knowledge.
-            </ListItem>
-            <ListItem>
-              Tools and techniques should be embedded into a standardised
-              workflow to prevent falling back into old habits.
-            </ListItem>
-            <ListItem>
-              A good workflow that works for you should provide structure and
-              enables trust and a flow state.
-            </ListItem>
-            <ListItem>
-              Always decide your preferred workflow before choosing the tools
-              and techniques.
-            </ListItem>
-            <ListItem>
-              A PKM system can serve many different functions and capabilities,
-              so you should always start with why you need or want to use it in
-              the first place.
-            </ListItem>
-            <ListItem>
-              Your system can look chaotic to others, but it is right for you if
-              it brings you value and delight.
-            </ListItem>
-            <ListItem>
-              Organise by balancing structure and flexibility: apply a bottom-up
-              approach, augment your brain by choosing an application that uses
-              a knowledge graph database and reduce cognitive load by
-              standardising how and in which format you capture object types.
-            </ListItem>
-            <ListItem>
-              Organise your knowledge organically and according to your
-              interests by tagging or assigning keywords to your objects.
-            </ListItem>
-            <ListItem>
-              Being organised is a habit - a repeated set of actions you take as
-              you encounter, work with and put the information to use
-            </ListItem>
-          </KeyTakeawaysCollapsible>
           <BlogMarkdownContentLayout>
             <MarkdownContentBlock chapter="chapter-01" Content={Chapter1} />
           </BlogMarkdownContentLayout>
