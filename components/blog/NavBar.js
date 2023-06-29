@@ -11,12 +11,10 @@ const NavBarContainer = styled("div", {
   "@bp3": {
     display: "flex",
     padding: "$spacing-02 $spacing-04",
-
   },
 
   "@bp5": {
     padding: "$spacing-02 $spacing-04",
-
   },
   "@bp6": {
     top: 0,
